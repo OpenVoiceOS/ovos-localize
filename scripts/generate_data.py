@@ -1,0 +1,578 @@
+#!/usr/bin/env python3
+"""Generate static JSON data files from OVOS skill repositories.
+
+Reads ``skills.txt``, clones each repo (shallow), runs full
+scan + analysis + validation, and writes JSON files to ``data/``.
+
+Output files:
+- ``data/repos.json`` — index of all skills with coverage summaries
+- ``data/coverage.json`` — language × skill coverage matrix
+- ``data/validation.json`` — aggregated validation results
+- ``data/skills/{skill_id}.json`` — per-skill detail files
+"""
+
+import json
+import sys
+from dataclasses import asdict
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
+
+from ovos_localize.analyzers.context_builder import ContextCard, build_context_card
+from ovos_localize.enums import FileType
+from ovos_localize.lang_utils import lang_display_name, lang_display_name_native, merge_equivalent_langs
+from ovos_localize.parsers.base import ParsedFile
+from ovos_localize.sync.github import RepoScanner, ScanResult, ScannedFile
+from ovos_localize.validators.rules import ValidationIssue, validate_file
+
+# Repo root (where this script lives under scripts/)
+REPO_ROOT = Path(__file__).resolve().parent.parent
+SKILLS_FILE = REPO_ROOT / "skills.txt"
+DATA_DIR = REPO_ROOT / "data"
+SKILLS_DATA_DIR = DATA_DIR / "skills"
+
+
+def load_skills_list(path: Path = SKILLS_FILE) -> List[Tuple[str, str]]:
+    """Load org/repo pairs from skills.txt.
+
+    Args:
+        path: Path to skills.txt file.
+
+    Returns:
+        List of (org, repo) tuples.
+    """
+    skills: List[Tuple[str, str]] = []
+    if not path.exists():
+        print(f"WARNING: {path} not found", file=sys.stderr)
+        return skills
+    for line in path.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        parts = line.split("/", 1)
+        if len(parts) == 2:
+            skills.append((parts[0], parts[1]))
+    return skills
+
+
+def _serialize_parsed_file(parsed: Optional[ParsedFile]) -> Optional[Dict[str, Any]]:
+    """Serialize a ParsedFile to a JSON-safe dict.
+
+    Args:
+        parsed: Parsed file object.
+
+    Returns:
+        Dict or None.
+    """
+    if parsed is None:
+        return None
+    return {
+        "path": parsed.path,
+        "file_type": parsed.file_type,
+        "lines": [
+            {
+                "line_number": ln.line_number,
+                "text": ln.text,
+                "is_comment": ln.is_comment,
+                "is_blank": ln.is_blank,
+                "slots": ln.slots,
+            }
+            for ln in parsed.lines
+        ],
+        "all_slots": parsed.all_slots,
+        "line_count": parsed.line_count,
+        "errors": parsed.errors,
+    }
+
+
+def _serialize_context_card(card: ContextCard) -> Dict[str, Any]:
+    """Serialize a ContextCard to a JSON-safe dict.
+
+    Args:
+        card: Context card object.
+
+    Returns:
+        Dict representation.
+    """
+    return asdict(card)
+
+
+def _serialize_validation_issues(issues: List[ValidationIssue]) -> List[Dict[str, Any]]:
+    """Serialize validation issues to JSON-safe dicts.
+
+    Args:
+        issues: List of validation issue objects.
+
+    Returns:
+        List of dicts.
+    """
+    return [asdict(issue) for issue in issues]
+
+
+def _make_skill_id(repo: str) -> str:
+    """Derive a skill ID from the repo name.
+
+    Args:
+        repo: Repository name (e.g. ``ovos-skill-weather``).
+
+    Returns:
+        Skill ID string.
+    """
+    return repo
+
+
+def _make_edit_url(org: str, repo: str, relative_path: str, branch: str = "dev") -> str:
+    """Build a GitHub edit URL for a locale file.
+
+    Args:
+        org: GitHub organization.
+        repo: Repository name.
+        relative_path: File path relative to repo root.
+        branch: Git branch.
+
+    Returns:
+        GitHub edit URL string.
+    """
+    return f"https://github.com/{org}/{repo}/edit/{branch}/{relative_path}"
+
+
+def _compute_file_coverage(
+    files_by_lang: Dict[str, List[ScannedFile]],
+    file_type: FileType,
+    source_lang: str = "en-US",
+) -> Dict[str, float]:
+    """Compute per-language coverage for a file type.
+
+    Args:
+        files_by_lang: Scanned files grouped by language.
+        file_type: The file type to check.
+        source_lang: The source language.
+
+    Returns:
+        Dict mapping language to coverage percentage (0-100).
+    """
+    source_files = files_by_lang.get(source_lang, [])
+    source_names = {f.base_name for f in source_files if f.file_type == file_type}
+    if not source_names:
+        return {}
+
+    result: Dict[str, float] = {}
+    for lang, files in files_by_lang.items():
+        lang_names = {f.base_name for f in files if f.file_type == file_type}
+        result[lang] = round(len(lang_names & source_names) / len(source_names) * 100, 1)
+    return result
+
+
+def build_skill_json(
+    scan: ScanResult,
+    org: str,
+    repo: str,
+    branch: str = "dev",
+) -> Dict[str, Any]:
+    """Build per-skill JSON from a scan result.
+
+    Args:
+        scan: Scan result from RepoScanner.
+        org: GitHub organization.
+        repo: Repository name.
+        branch: Git branch.
+
+    Returns:
+        Dict representing the full skill detail JSON.
+    """
+    skill_id = _make_skill_id(repo)
+    en_files = [f for f in scan.locale_files if f.lang == "en-US"]
+
+    # Group files by base_name across languages
+    files_by_base: Dict[str, Dict[str, ScannedFile]] = {}
+    for f in scan.locale_files:
+        files_by_base.setdefault(f.base_name, {})[f.lang] = f
+
+    # Group by lang for coverage
+    files_by_lang: Dict[str, List[ScannedFile]] = {}
+    for f in scan.locale_files:
+        files_by_lang.setdefault(f.lang, []).append(f)
+
+    # Build source file lookup for validation
+    sources: Dict[str, ParsedFile] = {}
+    for f in scan.locale_files:
+        if f.lang == "en-US" and f.parsed:
+            sources[f.base_name] = f.parsed
+
+    # Build file entries
+    files_json: Dict[str, Any] = {}
+    for base_name, lang_map in sorted(files_by_base.items()):
+        # Use any file to determine type/system
+        sample = next(iter(lang_map.values()))
+        file_key = f"{base_name}.{sample.file_type.value}" if sample.file_type not in (
+            FileType.SKILL_JSON, FileType.SETTINGS_META
+        ) else sample.file_type.value
+
+        # Build context card from en-us file if available
+        en_file = lang_map.get("en-US", sample)
+        context_card = build_context_card(
+            en_file,
+            scan.skill_analysis,
+            scan.locale_files,
+        )
+
+        langs_json: Dict[str, Any] = {}
+        edit_urls: Dict[str, str] = {}
+        for lang, scanned in sorted(lang_map.items()):
+            # Validate
+            issues: List[ValidationIssue] = []
+            if scanned.parsed:
+                source = sources.get(base_name)
+                issues = validate_file(scanned.parsed, source if lang != "en-US" else None)
+
+            entries = []
+            for ln in (scanned.parsed.content_lines if scanned.parsed else []):
+                entry: Dict[str, Any] = {"line": ln.line_number, "text": ln.text}
+                # For skill.json / settingsmeta, include key metadata
+                if ln.metadata.get("key"):
+                    entry["key"] = ln.metadata["key"]
+                    entry["translatable"] = ln.metadata.get("translatable", True)
+                    if "index" in ln.metadata:
+                        entry["index"] = ln.metadata["index"]
+                entries.append(entry)
+
+            langs_json[lang] = {
+                "entries": entries,
+                "line_count": scanned.parsed.line_count if scanned.parsed else 0,
+                "slots": scanned.parsed.all_slots if scanned.parsed else [],
+                "validation": _serialize_validation_issues(issues),
+                "file_path": scanned.relative_path,
+            }
+            edit_urls[lang] = _make_edit_url(org, repo, scanned.relative_path, branch)
+
+        files_json[file_key] = {
+            "type": sample.file_type.value,
+            "intent_system": sample.intent_system.value,
+            "langs": langs_json,
+            "context": _serialize_context_card(context_card),
+            "edit_urls": edit_urls,
+        }
+
+    return {
+        "id": skill_id,
+        "repo": f"{org}/{repo}",
+        "skill_class": scan.skill_class_name,
+        "source_file": scan.skill_analysis.source_file if scan.skill_analysis else "",
+        "languages": scan.languages,
+        "files": files_json,
+    }
+
+
+def build_coverage_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Build coverage matrix JSON from all skill data.
+
+    Args:
+        all_skills: List of per-skill JSON dicts.
+
+    Returns:
+        Coverage matrix dict.
+    """
+    all_langs: set = set()
+    skill_ids: List[str] = []
+    matrix: Dict[str, Dict[str, Dict[str, float]]] = {}
+
+    for skill in all_skills:
+        sid = skill["id"]
+        skill_ids.append(sid)
+        all_langs.update(skill["languages"])
+
+        # Count files by type per language
+        type_counts: Dict[str, Dict[str, int]] = {}
+        source_counts: Dict[str, int] = {}
+        for file_key, file_data in skill["files"].items():
+            ft = file_data["type"]
+            for lang, lang_data in file_data["langs"].items():
+                type_counts.setdefault(ft, {}).setdefault(lang, 0)
+                type_counts[ft][lang] += 1
+                if lang == "en-US":
+                    source_counts[ft] = source_counts.get(ft, 0) + 1
+
+        # Compute per-language coverage
+        lang_coverage: Dict[str, Dict[str, float]] = {}
+        for lang in skill["languages"]:
+            cov: Dict[str, float] = {}
+            total_source = 0
+            total_translated = 0
+            for ft, sc in source_counts.items():
+                translated = type_counts.get(ft, {}).get(lang, 0)
+                pct = round(translated / sc * 100, 1) if sc else 0.0
+                cov[f"{ft}_pct"] = pct
+                total_source += sc
+                total_translated += translated
+            cov["combined_pct"] = round(total_translated / total_source * 100, 1) if total_source else 0.0
+            lang_coverage[lang] = cov
+
+        matrix[sid] = lang_coverage
+
+    # Merge equivalent language codes (e.g. "ca" + "ca-ES" → "ca-ES")
+    merge_map = merge_equivalent_langs(list(all_langs))
+    merged_langs = sorted(set(merge_map.values()))
+
+    # Merge matrix entries
+    for sid in skill_ids:
+        old = matrix.get(sid, {})
+        merged: Dict[str, Dict[str, float]] = {}
+        for raw_lang, cov in old.items():
+            canonical = merge_map.get(raw_lang, raw_lang)
+            if canonical not in merged:
+                merged[canonical] = cov
+            else:
+                # Keep the one with higher combined_pct
+                if cov.get("combined_pct", 0) > merged[canonical].get("combined_pct", 0):
+                    merged[canonical] = cov
+        matrix[sid] = merged
+
+    lang_meta: Dict[str, Dict[str, str]] = {}
+    for code in merged_langs:
+        lang_meta[code] = {
+            "display": lang_display_name(code),
+            "native": lang_display_name_native(code),
+        }
+
+    return {
+        "skills": skill_ids,
+        "languages": merged_langs,
+        "lang_meta": lang_meta,
+        "merge_map": merge_map,
+        "matrix": matrix,
+    }
+
+
+def build_repos_json(all_skills: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Build repos index JSON.
+
+    Args:
+        all_skills: List of per-skill JSON dicts.
+
+    Returns:
+        List of repo summary dicts.
+    """
+    repos: List[Dict[str, Any]] = []
+    for skill in all_skills:
+        file_count = sum(
+            len(fd["langs"])
+            for fd in skill["files"].values()
+        )
+        repos.append({
+            "id": skill["id"],
+            "repo": skill["repo"],
+            "skill_class": skill["skill_class"],
+            "languages": skill["languages"],
+            "file_count": file_count,
+        })
+    return repos
+
+
+def build_validation_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Build aggregated validation JSON.
+
+    Args:
+        all_skills: List of per-skill JSON dicts.
+
+    Returns:
+        Validation summary dict.
+    """
+    total_errors = 0
+    total_warnings = 0
+    by_rule: Dict[str, int] = {}
+    by_skill: List[Dict[str, Any]] = []
+
+    for skill in all_skills:
+        skill_errors = 0
+        skill_warnings = 0
+        for file_data in skill["files"].values():
+            for lang_data in file_data["langs"].values():
+                for issue in lang_data["validation"]:
+                    rule = issue["rule_name"]
+                    by_rule[rule] = by_rule.get(rule, 0) + 1
+                    if issue["severity"] == "error":
+                        total_errors += 1
+                        skill_errors += 1
+                    elif issue["severity"] == "warning":
+                        total_warnings += 1
+                        skill_warnings += 1
+
+        by_skill.append({
+            "id": skill["id"],
+            "errors": skill_errors,
+            "warnings": skill_warnings,
+        })
+
+    return {
+        "total_errors": total_errors,
+        "total_warnings": total_warnings,
+        "by_rule": by_rule,
+        "by_skill": by_skill,
+    }
+
+
+def build_stats_json(all_skills: List[Dict[str, Any]], coverage: Dict[str, Any]) -> Dict[str, Any]:
+    """Build aggregate language statistics (replaces lang-support-tracker metrics).
+
+    Computes per-language, per-filetype coverage across all skills.
+
+    Args:
+        all_skills: List of per-skill JSON dicts.
+        coverage: Coverage matrix from build_coverage_json.
+
+    Returns:
+        Stats dict with per-language breakdown.
+    """
+    file_types = ["intent", "voc", "dialog", "entity", "rx", "value", "skill.json"]
+    langs = [l for l in coverage.get("languages", []) if l != "en-US"]
+
+    # Count source (en-US) files per type
+    source_counts: Dict[str, int] = {}
+    for skill in all_skills:
+        for fd in skill["files"].values():
+            ft = fd["type"]
+            if "en-US" in fd["langs"]:
+                source_counts[ft] = source_counts.get(ft, 0) + 1
+
+    total_source = sum(source_counts.values())
+
+    # Per-language stats
+    lang_stats: Dict[str, Any] = {}
+    for lang in langs:
+        type_counts: Dict[str, int] = {}
+        skills_with_any = 0
+        skills_full_intent = 0
+
+        for skill in all_skills:
+            has_any = False
+            intent_total = 0
+            intent_have = 0
+            for fd in skill["files"].values():
+                ft = fd["type"]
+                if lang in fd["langs"]:
+                    type_counts[ft] = type_counts.get(ft, 0) + 1
+                    has_any = True
+                if ft == "intent" and "en-US" in fd["langs"]:
+                    intent_total += 1
+                    if lang in fd["langs"]:
+                        intent_have += 1
+            if has_any:
+                skills_with_any += 1
+            if intent_total > 0 and intent_have == intent_total:
+                skills_full_intent += 1
+
+        total_translated = sum(type_counts.values())
+        combined_pct = round(total_translated / total_source * 100, 1) if total_source else 0
+
+        per_type: Dict[str, Dict[str, Any]] = {}
+        for ft in file_types:
+            src = source_counts.get(ft, 0)
+            have = type_counts.get(ft, 0)
+            per_type[ft] = {
+                "source": src,
+                "translated": have,
+                "pct": round(have / src * 100, 1) if src else 0,
+            }
+
+        lang_stats[lang] = {
+            "total_files": total_translated,
+            "total_source": total_source,
+            "combined_pct": combined_pct,
+            "skills_any_coverage": skills_with_any,
+            "skills_full_intent": skills_full_intent,
+            "by_type": per_type,
+        }
+
+    return {
+        "generated": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(),
+        "total_skills": len(all_skills),
+        "total_source_files": total_source,
+        "source_by_type": source_counts,
+        "languages": lang_stats,
+    }
+
+
+def export_intent_dataset(all_skills: List[Dict[str, Any]], output_path: Path) -> int:
+    """Export a unified intent dataset TSV (like lang-support-tracker's gitlocalize_dataset.tsv).
+
+    Each row: lang, skill_id, file_key, utterance
+
+    Args:
+        all_skills: List of per-skill JSON dicts.
+        output_path: Path to write the TSV file.
+
+    Returns:
+        Number of rows written.
+    """
+    rows = 0
+    with output_path.open("w", encoding="utf-8") as f:
+        f.write("lang\tskill\tfile\tutterance\n")
+        for skill in all_skills:
+            for file_key, fd in skill["files"].items():
+                if fd["type"] not in ("intent", "dialog", "voc"):
+                    continue
+                for lang, ld in fd["langs"].items():
+                    for entry in ld.get("entries", []):
+                        text = entry["text"].strip()
+                        if text and not text.startswith("#"):
+                            f.write(f"{lang}\t{skill['id']}\t{file_key}\t{text}\n")
+                            rows += 1
+    return rows
+
+
+def main() -> None:
+    """Run data generation pipeline."""
+    skills_list = load_skills_list()
+    if not skills_list:
+        print("No skills found in skills.txt", file=sys.stderr)
+        sys.exit(1)
+
+    print(f"Processing {len(skills_list)} skills...")
+
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    SKILLS_DATA_DIR.mkdir(parents=True, exist_ok=True)
+
+    scanner = RepoScanner(str(REPO_ROOT / "repos"))
+    all_skills: List[Dict[str, Any]] = []
+
+    for i, (org, repo) in enumerate(skills_list, 1):
+        print(f"  [{i}/{len(skills_list)}] {org}/{repo}...", end=" ", flush=True)
+        try:
+            scan = scanner.full_sync(org, repo)
+            skill_json = build_skill_json(scan, org, repo)
+            all_skills.append(skill_json)
+
+            # Write per-skill JSON
+            skill_path = SKILLS_DATA_DIR / f"{skill_json['id']}.json"
+            skill_path.write_text(json.dumps(skill_json, indent=2, ensure_ascii=False))
+            print(f"{len(scan.languages)} langs, {len(scan.locale_files)} files")
+        except Exception as e:
+            print(f"FAILED: {e}", file=sys.stderr)
+            continue
+
+    # Write aggregate files
+    repos_path = DATA_DIR / "repos.json"
+    repos_path.write_text(json.dumps(build_repos_json(all_skills), indent=2, ensure_ascii=False))
+
+    coverage_data = build_coverage_json(all_skills)
+    coverage_path = DATA_DIR / "coverage.json"
+    coverage_path.write_text(json.dumps(coverage_data, indent=2, ensure_ascii=False))
+
+    validation_path = DATA_DIR / "validation.json"
+    validation_path.write_text(json.dumps(build_validation_json(all_skills), indent=2, ensure_ascii=False))
+
+    stats_data = build_stats_json(all_skills, coverage_data)
+    stats_path = DATA_DIR / "stats.json"
+    stats_path.write_text(json.dumps(stats_data, indent=2, ensure_ascii=False))
+
+    dataset_path = DATA_DIR / "dataset.tsv"
+    dataset_rows = export_intent_dataset(all_skills, dataset_path)
+
+    print(f"\nDone. {len(all_skills)} skills → data/")
+    print(f"  repos.json: {len(all_skills)} entries")
+    print(f"  coverage.json: {len(coverage_data['languages'])} languages")
+    print(f"  stats.json: {len(stats_data['languages'])} languages")
+    print(f"  dataset.tsv: {dataset_rows} rows")
+
+
+if __name__ == "__main__":
+    main()

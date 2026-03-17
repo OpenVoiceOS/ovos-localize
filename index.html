@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OVOS Localize — Help translate OpenVoiceOS skills</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ovos: { bg: '#0a0a0a', card: '#171717', accent: '#ef4444', text: '#e5e5e5', muted: '#737373', input: '#262626', hover: '#1f1f1f' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0a0a0a; color: #e5e5e5; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    a { color: #ef4444; }
+    a:hover { text-decoration: underline; }
+    code, .mono { font-family: ui-monospace, 'Cascadia Code', 'Fira Code', monospace; }
+    .slot { color: #fbbf24; font-weight: 600; font-family: ui-monospace, monospace; }
+    .badge { display: inline-flex; align-items: center; padding: 0.125rem 0.5rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+    .badge-green { background: #166534; color: #86efac; }
+    .badge-amber { background: #713f12; color: #fde047; }
+    .badge-red { background: #7f1d1d; color: #fca5a5; }
+    .badge-blue { background: #450a0a; color: #fca5a5; }
+    .badge-gray { background: #262626; color: #a3a3a3; }
+    textarea { tab-size: 4; }
+    textarea:focus { outline: 2px solid #ef4444; outline-offset: -1px; }
+    .toast {
+      position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 50;
+      padding: 0.75rem 1.25rem; border-radius: 0.5rem; font-size: 0.875rem;
+      animation: slideUp 0.25s ease-out; box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    }
+    @keyframes slideUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; } }
+    .spinner { display: inline-block; width: 1rem; height: 1rem; border: 2px solid #525252;
+      border-top-color: #ef4444; border-radius: 50%; animation: spin 0.6s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 40; display: flex; align-items: center; justify-content: center; }
+    .modal { background: #171717; border: 1px solid #262626; border-radius: 0.75rem; padding: 1.5rem; max-width: 32rem; width: 90%; box-shadow: 0 8px 32px rgba(0,0,0,0.6); }
+    /* Tooltip */
+    [data-tip] { position: relative; cursor: help; }
+    [data-tip]:hover::after {
+      content: attr(data-tip); position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%);
+      background: #0a0a0a; border: 1px solid #262626; color: #e5e5e5; padding: 0.375rem 0.625rem;
+      border-radius: 0.375rem; font-size: 0.75rem; white-space: nowrap; z-index: 30; max-width: 20rem;
+      white-space: normal; text-align: center; pointer-events: none;
+    }
+    /* Info callout */
+    .callout { background: #171717; border-left: 3px solid #ef4444; padding: 0.75rem 1rem; border-radius: 0 0.375rem 0.375rem 0; }
+    .callout-warn { border-left-color: #f59e0b; }
+    /* Progress bar */
+    .progress-bar { height: 0.375rem; border-radius: 9999px; background: #334155; overflow: hidden; }
+    .progress-fill { height: 100%; border-radius: 9999px; transition: width 0.3s; }
+    /* Hover cards */
+    .skill-card { transition: transform 0.15s, box-shadow 0.15s; }
+    .skill-card:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
+    /* Search */
+    .search-box { background: #171717; border: 1px solid #262626; border-radius: 0.5rem; }
+    .search-box:focus-within { border-color: #ef4444; }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- ===== HEADER ===== -->
+  <header class="border-b border-ovos-card px-6 py-3 flex items-center gap-4 sticky top-0 bg-ovos-bg z-20">
+    <a href="#/" class="flex items-center gap-2 hover:no-underline">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <span class="text-lg font-bold text-ovos-accent">OVOS Localize</span>
+    </a>
+    <nav class="hidden sm:flex gap-4 ml-4 text-sm">
+      <a href="#/" class="text-ovos-muted hover:text-ovos-text">Dashboard</a>
+      <a href="#/stats" class="text-ovos-muted hover:text-ovos-text">Stats</a>
+      <a href="#/how-it-works" class="text-ovos-muted hover:text-ovos-text">How it works</a>
+    </nav>
+    <div class="ml-auto flex items-center gap-2">
+      <button onclick="showOnboarding()" id="profile-btn" class="text-sm px-3 py-1.5 rounded-lg border border-ovos-card hover:bg-ovos-hover flex items-center gap-2" title="Your languages">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        Set languages
+      </button>
+      <button onclick="showAuthModal()" id="auth-btn" class="text-sm px-3 py-1.5 rounded-lg border border-ovos-card hover:bg-ovos-hover flex items-center gap-2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        Sign in
+      </button>
+    </div>
+  </header>
+
+  <main id="app" class="mx-auto px-4 sm:px-6 py-6"></main>
+  <div id="toast-container"></div>
+  <div id="modal-container"></div>
+
+  <script>
+    // =========================================================================
+    // AUTH
+    // =========================================================================
+    const GH_API = 'https://api.github.com';
+    function getToken() { return localStorage.getItem('ovos_gh_token'); }
+    function setToken(t) { localStorage.setItem('ovos_gh_token', t); updateAuthUI(); }
+    function clearToken() { localStorage.removeItem('ovos_gh_token'); localStorage.removeItem('ovos_gh_user'); updateAuthUI(); }
+    function getUser() { const u = localStorage.getItem('ovos_gh_user'); return u ? JSON.parse(u) : null; }
+
+    async function updateAuthUI() {
+      const btn = document.getElementById('auth-btn');
+      const token = getToken();
+      if (!token) {
+        btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Connect GitHub`;
+        btn.onclick = showAuthModal;
+        btn.className = 'text-sm px-3 py-1.5 rounded-lg border border-ovos-card hover:bg-ovos-hover flex items-center gap-2';
+        return;
+      }
+      // Try cached user first to avoid API call on every page load
+      const cached = getUser();
+      if (cached) {
+        btn.innerHTML = `<img src="${cached.avatar}" class="w-5 h-5 rounded-full"> ${cached.login}`;
+        btn.className = 'text-sm px-3 py-1.5 rounded-lg bg-ovos-card flex items-center gap-2';
+        btn.onclick = showAccountMenu;
+      }
+      // Validate in background
+      try {
+        const r = await ghFetch('/user');
+        if (r.login) {
+          localStorage.setItem('ovos_gh_user', JSON.stringify({ login: r.login, avatar: r.avatar_url }));
+          btn.innerHTML = `<img src="${r.avatar_url}" class="w-5 h-5 rounded-full"> ${r.login}`;
+          btn.onclick = showAccountMenu;
+        }
+      } catch {
+        btn.innerHTML = 'Token expired — reconnect';
+        btn.className = 'text-sm px-3 py-1.5 rounded-lg border border-red-500 text-red-400 hover:bg-ovos-hover flex items-center gap-2';
+        btn.onclick = showAuthModal;
+      }
+    }
+
+    function showAccountMenu() {
+      const user = getUser();
+      if (!user) return;
+      document.getElementById('modal-container').innerHTML = `
+        <div class="modal-backdrop" onclick="if(event.target===this)closeModal()">
+          <div class="modal" style="max-width:20rem">
+            <div class="flex items-center gap-3 mb-4">
+              <img src="${user.avatar}" class="w-10 h-10 rounded-full">
+              <div>
+                <div class="font-bold">${escapeHtml(user.login)}</div>
+                <div class="text-xs text-ovos-muted">Connected to GitHub</div>
+              </div>
+            </div>
+            <button onclick="clearToken();closeModal();route()" class="w-full px-4 py-2 text-sm rounded-lg border border-ovos-card hover:bg-ovos-hover text-left">
+              Disconnect
+            </button>
+          </div>
+        </div>`;
+    }
+
+    async function ghFetch(path, opts = {}) {
+      const token = getToken();
+      if (!token) throw new Error('Not authenticated — sign in first');
+      const url = path.startsWith('http') ? path : GH_API + path;
+      const r = await fetch(url, {
+        ...opts,
+        headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json', ...(opts.headers || {}) },
+      });
+      if (!r.ok) { const b = await r.json().catch(() => ({})); throw new Error(b.message || `GitHub API ${r.status}`); }
+      return r.status === 204 ? {} : r.json();
+    }
+
+    const GH_TOKEN_URL = 'https://github.com/settings/personal-access-tokens/new';
+
+    function showAuthModal() {
+      document.getElementById('modal-container').innerHTML = `
+        <div class="modal-backdrop" onclick="if(event.target===this)closeModal()">
+          <div class="modal" style="max-width:28rem">
+
+            <div class="text-center mb-5">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5" class="mx-auto mb-3"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              <h3 class="text-lg font-bold">Connect your GitHub account</h3>
+              <p class="text-sm text-ovos-muted mt-1">This lets you submit translations as pull requests directly from this page.</p>
+            </div>
+
+            <!-- Step indicator -->
+            <div id="auth-step-1">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-7 h-7 rounded-full bg-ovos-accent text-white flex items-center justify-center text-sm font-bold flex-shrink-0">1</div>
+                <div class="text-sm">Create a GitHub access token <span class="text-ovos-muted">(one-time setup)</span></div>
+              </div>
+
+              <a href="${GH_TOKEN_URL}" target="_blank" onclick="document.getElementById('auth-step-1').classList.add('hidden');document.getElementById('auth-step-2').classList.remove('hidden');setTimeout(()=>document.getElementById('token-input')?.focus(),200)"
+                class="block w-full text-center px-4 py-3 bg-ovos-card rounded-xl hover:bg-ovos-hover hover:no-underline text-sm border border-ovos-card mb-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="inline mr-2 -mt-0.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Open GitHub &rarr; Create token
+              </a>
+
+              <div class="text-xs text-ovos-muted space-y-1">
+                <p>On the GitHub page that opens:</p>
+                <ol class="list-decimal ml-4 space-y-0.5">
+                  <li>Give it a name like <strong>"OVOS Localize"</strong></li>
+                  <li>Set expiration (90 days is fine)</li>
+                  <li>Under <strong>Repository access</strong>, select <strong>"Only select repositories"</strong> and pick <strong>ovos-localize</strong></li>
+                  <li>Under <strong>Permissions → Actions</strong>, set to <strong>Read and write</strong></li>
+                  <li>Click <strong>"Generate token"</strong></li>
+                  <li>Copy the token that starts with <code class="text-ovos-accent">github_pat_</code></li>
+                </ol>
+              </div>
+
+              <div class="mt-4 text-center">
+                <button onclick="document.getElementById('auth-step-1').classList.add('hidden');document.getElementById('auth-step-2').classList.remove('hidden');setTimeout(()=>document.getElementById('token-input')?.focus(),100)"
+                  class="text-sm text-ovos-muted hover:text-ovos-text">I already have a token &rarr;</button>
+              </div>
+            </div>
+
+            <div id="auth-step-2" class="hidden">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-7 h-7 rounded-full bg-ovos-accent text-white flex items-center justify-center text-sm font-bold flex-shrink-0">2</div>
+                <div class="text-sm">Paste your token below</div>
+              </div>
+
+              <div class="relative mb-3">
+                <input id="token-input" type="password" placeholder="github_pat_... or ghp_..."
+                  class="w-full bg-ovos-input text-ovos-text px-3 py-3 rounded-xl border border-ovos-card text-sm mono pr-20"
+                  onkeydown="if(event.key==='Enter')submitToken()"
+                  oninput="document.getElementById('auth-submit').disabled=!this.value.trim()">
+                <button onclick="const i=document.getElementById('token-input');i.type=i.type==='password'?'text':'password'" class="absolute right-2 top-2.5 text-xs text-ovos-muted hover:text-ovos-text px-2 py-1 rounded">show</button>
+              </div>
+
+              <button id="auth-submit" onclick="submitToken()" disabled class="w-full px-4 py-2.5 text-sm rounded-xl bg-ovos-accent text-white font-bold hover:opacity-80 disabled:opacity-40 mb-3">
+                Connect
+              </button>
+
+              <div id="auth-error" class="hidden text-sm text-red-400 text-center mb-3"></div>
+
+              <div class="text-xs text-ovos-muted text-center space-y-1">
+                <p>Your token is stored only in this browser's local storage.</p>
+                <p>It is sent only to <code>api.github.com</code> — never to any other server.</p>
+              </div>
+
+              <div class="mt-3 text-center">
+                <button onclick="document.getElementById('auth-step-2').classList.add('hidden');document.getElementById('auth-step-1').classList.remove('hidden')"
+                  class="text-sm text-ovos-muted hover:text-ovos-text">&larr; Back to step 1</button>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-ovos-card text-center">
+              <button onclick="closeModal()" class="text-sm text-ovos-muted hover:text-ovos-text">Cancel</button>
+            </div>
+          </div>
+        </div>`;
+    }
+    function closeModal() { document.getElementById('modal-container').innerHTML = ''; }
+    async function submitToken() {
+      const input = document.getElementById('token-input');
+      const token = input.value.trim();
+      if (!token) return;
+
+      const errEl = document.getElementById('auth-error');
+      const btn = document.getElementById('auth-submit');
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner"></span> Verifying...';
+      errEl.classList.add('hidden');
+
+      // Verify the token works before saving
+      try {
+        const r = await fetch(GH_API + '/user', {
+          headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' }
+        });
+        if (!r.ok) throw new Error(r.status === 401 ? 'Invalid token — check that you copied it correctly' : `GitHub returned ${r.status}`);
+        const user = await r.json();
+        setToken(token);
+        localStorage.setItem('ovos_gh_user', JSON.stringify({ login: user.login, avatar: user.avatar_url }));
+        closeModal();
+        toast(`Connected as ${user.login}!`, 'green');
+        route();
+      } catch (e) {
+        errEl.textContent = e.message;
+        errEl.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = 'Connect';
+      }
+    }
+
+    // =========================================================================
+    // USER PROFILE (localStorage — languages, display name)
+    // =========================================================================
+    function getProfile() {
+      const p = localStorage.getItem('ovos_profile');
+      return p ? JSON.parse(p) : null;
+    }
+    function saveProfile(profile) {
+      localStorage.setItem('ovos_profile', JSON.stringify(profile));
+      updateProfileUI();
+    }
+    function getUserLangs() {
+      const p = getProfile();
+      return p?.languages || [];
+    }
+    function hasCompletedOnboarding() { return !!getProfile(); }
+
+    function updateProfileUI() {
+      const btn = document.getElementById('profile-btn');
+      if (!btn) return;
+      const p = getProfile();
+      if (p) {
+        const langCount = p.languages.length;
+        btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>${langCount} lang${langCount !== 1 ? 's' : ''}`;
+        btn.title = `Your languages: ${p.languages.join(', ')}`;
+      } else {
+        btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Set languages`;
+      }
+    }
+
+    async function showOnboarding() {
+      let langMeta = {};
+      try {
+        const coverage = await fetchJSON('data/coverage.json');
+        langMeta = coverage.lang_meta || {};
+      } catch {}
+
+      // Build language list (exclude en-US)
+      const allLangs = Object.keys(langMeta).filter(l => l !== 'en-US').sort((a, b) => {
+        const na = langMeta[a]?.native || a;
+        const nb = langMeta[b]?.native || b;
+        return na.localeCompare(nb);
+      });
+
+      const existing = getProfile();
+      const selectedSet = new Set(existing?.languages || []);
+
+      document.getElementById('modal-container').innerHTML = `
+        <div class="modal-backdrop">
+          <div class="modal" style="max-width:36rem">
+            <div class="text-center mb-4">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5" class="mx-auto mb-3"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <h2 class="text-xl font-bold">${existing ? 'Update your languages' : 'Welcome to OVOS Localize!'}</h2>
+              <p class="text-sm text-ovos-muted mt-1">${existing ? 'Change which languages you see.' : 'What languages do you speak? We\'ll only show skills that need help in your languages.'}</p>
+            </div>
+
+            <div class="mb-3">
+              <div class="search-box flex items-center px-3 py-2 gap-2 mb-3">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#737373" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                <input id="lang-search" type="text" placeholder="Search languages..." class="bg-transparent text-sm text-ovos-text w-full outline-none placeholder-ovos-muted" oninput="filterOnboardingLangs()">
+              </div>
+              <div id="lang-grid" class="grid grid-cols-2 gap-1.5 max-h-64 overflow-auto pr-1">
+                ${allLangs.map(code => {
+                  const m = langMeta[code] || {};
+                  const checked = selectedSet.has(code) ? 'checked' : '';
+                  return `<label class="lang-option flex items-center gap-2 p-2 rounded-lg hover:bg-ovos-hover cursor-pointer text-sm" data-code="${code}" data-search="${(m.native||'').toLowerCase()} ${(m.display||'').toLowerCase()} ${code.toLowerCase()}">
+                    <input type="checkbox" value="${code}" class="lang-cb accent-red-500 w-4 h-4" ${checked} onchange="updateOnboardingCount()">
+                    <div>
+                      <div class="font-medium">${escapeHtml(m.native || code)}</div>
+                      <div class="text-xs text-ovos-muted">${escapeHtml(m.display || code)}</div>
+                    </div>
+                  </label>`;
+                }).join('')}
+              </div>
+              <div class="mt-2 text-xs text-ovos-muted"><span id="onboarding-count">${selectedSet.size}</span> language${selectedSet.size !== 1 ? 's' : ''} selected</div>
+            </div>
+
+            <div class="flex gap-2 justify-end">
+              ${existing ? '<button onclick="closeModal()" class="px-4 py-2 text-sm rounded-lg border border-ovos-card hover:bg-ovos-hover">Cancel</button>' : ''}
+              <button onclick="saveOnboarding()" id="save-onboarding-btn" class="px-4 py-2 text-sm rounded-lg bg-ovos-accent text-ovos-bg font-bold hover:opacity-80 disabled:opacity-40" ${selectedSet.size === 0 && !existing ? 'disabled' : ''}>
+                ${existing ? 'Save' : 'Get started'}
+              </button>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    function filterOnboardingLangs() {
+      const q = (document.getElementById('lang-search')?.value || '').toLowerCase();
+      document.querySelectorAll('.lang-option').forEach(el => {
+        el.style.display = el.dataset.search.includes(q) ? '' : 'none';
+      });
+    }
+
+    function updateOnboardingCount() {
+      const count = document.querySelectorAll('.lang-cb:checked').length;
+      const el = document.getElementById('onboarding-count');
+      if (el) el.textContent = count;
+      const btn = document.getElementById('save-onboarding-btn');
+      if (btn) btn.disabled = count === 0;
+    }
+
+    function saveOnboarding() {
+      const selected = Array.from(document.querySelectorAll('.lang-cb:checked')).map(cb => cb.value);
+      if (selected.length === 0) { toast('Select at least one language', 'amber'); return; }
+      const isFirst = !hasCompletedOnboarding();
+      saveProfile({ languages: selected, createdAt: new Date().toISOString() });
+      closeModal();
+      toast(`Showing ${selected.length} language${selected.length > 1 ? 's' : ''}`, 'green');
+      if (isFirst) {
+        location.hash = '#/dashboard';
+      } else {
+        route();
+      }
+    }
+
+    // =========================================================================
+    // PR SUBMISSION
+    // =========================================================================
+    // The repo that hosts the submit_translation.yml workflow
+    const DISPATCH_REPO = 'OpenVoiceOS/ovos-localize';
+
+    async function submitTranslation(org, repo, filePath, newContent, lang, fileKey, branch = 'dev') {
+      if (!getToken()) { showAuthModal(); return; }
+      const user = getUser();
+      if (!user) { toast('Sign in first', 'red'); return; }
+
+      showProgress('Submitting translation...');
+
+      // Base64 encode the file content for safe transport through JSON
+      const b64Content = btoa(unescape(encodeURIComponent(newContent)));
+
+      // Trigger the GitHub Action via repository_dispatch
+      await ghFetch(`/repos/${DISPATCH_REPO}/dispatches`, {
+        method: 'POST',
+        body: JSON.stringify({
+          event_type: 'submit-translation',
+          client_payload: {
+            org,
+            repo,
+            file_path: filePath,
+            content: b64Content,
+            lang,
+            file_key: fileKey,
+            branch,
+            author: user.login,
+          },
+        }),
+      });
+
+      hideProgress();
+      toast('Translation submitted! A bot will open the PR shortly.', 'green', 6000);
+    }
+
+    // =========================================================================
+    // UI HELPERS
+    // =========================================================================
+    function toast(msg, color = 'blue', duration = 3000) {
+      const colors = { green: 'bg-green-800 text-green-200', red: 'bg-red-800 text-red-200', blue: 'bg-neutral-800 text-neutral-200', amber: 'bg-amber-800 text-amber-200' };
+      const id = 't' + Date.now();
+      document.getElementById('toast-container').innerHTML = `<div id="${id}" class="toast ${colors[color]||colors.blue}">${escapeHtml(msg)}</div>`;
+      if (duration > 0) setTimeout(() => document.getElementById(id)?.remove(), duration);
+    }
+    function showProgress(msg) {
+      document.getElementById('toast-container').innerHTML = `<div class="toast bg-neutral-800 text-neutral-200 flex items-center gap-2"><span class="spinner"></span>${escapeHtml(msg)}</div>`;
+    }
+    function hideProgress() { document.getElementById('toast-container').innerHTML = ''; }
+
+    const cache = {};
+    async function fetchJSON(url) {
+      if (cache[url]) return cache[url];
+      const r = await fetch(url);
+      if (!r.ok) throw new Error(`Failed to fetch ${url}: ${r.status}`);
+      const d = await r.json();
+      cache[url] = d;
+      return d;
+    }
+
+    // =========================================================================
+    // OVOS TRANSLATION API (auto-translate via community servers)
+    // =========================================================================
+    const TRANSLATE_SERVERS = [
+      { name: "NLLB - Smart'Gic", url: "https://translator.smartgic.io/nllb" },
+      { name: "NLLB - Ziggyai", url: "https://ovosnllb.ziggyai.online" },
+      { name: "NLLB - TigreGotico", url: "https://nllb.tigregotico.pt" },
+      { name: "Google Translate - TigreGotico", url: "https://google-translate.tigregotico.pt" },
+    ];
+
+    function getTranslateServer() {
+      return localStorage.getItem('ovos_tx_server') || TRANSLATE_SERVERS[0].url;
+    }
+    function setTranslateServer(url) {
+      localStorage.setItem('ovos_tx_server', url);
+    }
+
+    /** Check server status via GET /status */
+    async function checkTxServerStatus(serverUrl) {
+      try {
+        const r = await fetch(`${serverUrl}/status`, { signal: AbortSignal.timeout(8000) });
+        if (!r.ok) return { ok: false, error: `HTTP ${r.status}` };
+        const data = await r.json();
+        return {
+          ok: true,
+          plugin: data.translation_plugin || data.plugin_type || 'unknown',
+          langs: data.langs || data.languages || [],
+        };
+      } catch (e) {
+        return { ok: false, error: e.name === 'AbortError' ? 'Timeout (8s)' : (e.message || 'Connection failed') };
+      }
+    }
+
+    /** Update the status dot in the action bar */
+    async function updateTxStatusDot() {
+      const dot = document.getElementById('tx-server-status');
+      if (!dot) return;
+      dot.className = 'w-2 h-2 rounded-full bg-yellow-500 flex-shrink-0 animate-pulse';
+      const status = await checkTxServerStatus(getTranslateServer());
+      dot.className = `w-2 h-2 rounded-full ${status.ok ? 'bg-green-500' : 'bg-red-500'} flex-shrink-0`;
+      dot.title = status.ok ? `Online — ${status.plugin} (${status.langs.length} languages)` : `Offline — ${status.error}`;
+    }
+
+    function showTxServerModal() {
+      const current = getTranslateServer();
+      const isCustom = !TRANSLATE_SERVERS.some(s => s.url === current);
+
+      document.getElementById('modal-container').innerHTML = `
+        <div class="modal-backdrop" onclick="if(event.target===this)closeModal()">
+          <div class="modal" style="max-width:32rem">
+            <h3 class="text-lg font-bold mb-1">Translation server</h3>
+            <p class="text-sm text-ovos-muted mb-4">Choose a community server or enter your own <a href="https://github.com/OpenVoiceOS/ovos-localize-server" target="_blank">ovos-localize-server</a> URL.</p>
+
+            <div class="space-y-2 mb-4" id="tx-server-list">
+              ${TRANSLATE_SERVERS.map(s => `
+                <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-ovos-hover cursor-pointer ${s.url === current ? 'bg-ovos-hover ring-1 ring-ovos-accent' : 'bg-ovos-bg'}">
+                  <input type="radio" name="tx-server" value="${s.url}" ${s.url === current ? 'checked' : ''} class="accent-red-500" onchange="txServerSelected(this.value)">
+                  <div class="flex-1 min-w-0">
+                    <div class="text-sm font-medium">${escapeHtml(s.name)}</div>
+                    <div class="text-xs text-ovos-muted mono truncate">${escapeHtml(s.url)}</div>
+                  </div>
+                  <span class="tx-status-dot w-2.5 h-2.5 rounded-full bg-gray-500 flex-shrink-0" data-url="${s.url}"></span>
+                </label>
+              `).join('')}
+
+              <!-- Custom URL option -->
+              <label class="flex items-center gap-3 p-3 rounded-lg hover:bg-ovos-hover cursor-pointer ${isCustom ? 'bg-ovos-hover ring-1 ring-ovos-accent' : 'bg-ovos-bg'}">
+                <input type="radio" name="tx-server" value="__custom__" ${isCustom ? 'checked' : ''} class="accent-red-500" onchange="document.getElementById('custom-tx-url').focus()">
+                <div class="flex-1">
+                  <div class="text-sm font-medium">Custom server</div>
+                  <input id="custom-tx-url" type="url" placeholder="https://my-server.example.com"
+                    value="${isCustom ? escapeHtml(current) : ''}"
+                    class="mt-1 w-full bg-ovos-input text-ovos-text px-2 py-1.5 rounded border border-ovos-card text-xs mono"
+                    onfocus="document.querySelector('input[value=__custom__]').checked=true"
+                    oninput="txServerSelected(this.value)">
+                </div>
+                <span class="tx-status-dot w-2.5 h-2.5 rounded-full bg-gray-500 flex-shrink-0" data-url="__custom__"></span>
+              </label>
+            </div>
+
+            <div id="tx-status-detail" class="text-xs text-ovos-muted mb-4"></div>
+
+            <div class="flex gap-2 justify-between">
+              <button onclick="checkAllTxServers()" class="px-3 py-1.5 text-sm rounded-lg border border-ovos-card hover:bg-ovos-hover">Check all servers</button>
+              <button onclick="saveTxServer()" class="px-4 py-1.5 text-sm rounded-lg bg-ovos-accent text-white font-bold hover:opacity-80">Save</button>
+            </div>
+          </div>
+        </div>`;
+
+      // Auto-check the selected server
+      const selectedUrl = isCustom ? current : current;
+      checkSingleTxServer(selectedUrl);
+    }
+
+    function txServerSelected(url) {
+      if (url && url !== '__custom__') {
+        checkSingleTxServer(url);
+      }
+    }
+
+    async function checkSingleTxServer(url) {
+      const detail = document.getElementById('tx-status-detail');
+      const dot = document.querySelector(`.tx-status-dot[data-url="${url}"]`)
+        || document.querySelector('.tx-status-dot[data-url="__custom__"]');
+
+      if (dot) dot.className = 'tx-status-dot w-2.5 h-2.5 rounded-full bg-yellow-500 flex-shrink-0 animate-pulse';
+      if (detail) detail.innerHTML = '<span class="spinner"></span> Checking...';
+
+      const status = await checkTxServerStatus(url);
+
+      if (dot) dot.className = `tx-status-dot w-2.5 h-2.5 rounded-full ${status.ok ? 'bg-green-500' : 'bg-red-500'} flex-shrink-0`;
+      if (detail) {
+        if (status.ok) {
+          detail.innerHTML = `<span class="text-green-400">Online</span> — plugin: <strong>${escapeHtml(status.plugin)}</strong>, ${status.langs.length} languages supported`;
+        } else {
+          detail.innerHTML = `<span class="text-red-400">Offline</span> — ${escapeHtml(status.error)}. The server may be down or blocking cross-origin requests (CORS).`;
+        }
+      }
+    }
+
+    async function checkAllTxServers() {
+      const dots = document.querySelectorAll('.tx-status-dot');
+      dots.forEach(d => d.className = 'tx-status-dot w-2.5 h-2.5 rounded-full bg-yellow-500 flex-shrink-0 animate-pulse');
+
+      for (const s of TRANSLATE_SERVERS) {
+        const dot = document.querySelector(`.tx-status-dot[data-url="${s.url}"]`);
+        const status = await checkTxServerStatus(s.url);
+        if (dot) dot.className = `tx-status-dot w-2.5 h-2.5 rounded-full ${status.ok ? 'bg-green-500' : 'bg-red-500'} flex-shrink-0`;
+        if (dot) dot.title = status.ok ? `${status.plugin} — ${status.langs.length} langs` : status.error;
+      }
+
+      // Check custom if entered
+      const customInput = document.getElementById('custom-tx-url');
+      if (customInput?.value.trim()) {
+        const dot = document.querySelector('.tx-status-dot[data-url="__custom__"]');
+        const status = await checkTxServerStatus(customInput.value.trim());
+        if (dot) dot.className = `tx-status-dot w-2.5 h-2.5 rounded-full ${status.ok ? 'bg-green-500' : 'bg-red-500'} flex-shrink-0`;
+      }
+    }
+
+    function saveTxServer() {
+      const selected = document.querySelector('input[name="tx-server"]:checked')?.value;
+      if (!selected) return;
+
+      let url;
+      if (selected === '__custom__') {
+        url = document.getElementById('custom-tx-url')?.value.trim();
+        if (!url) { toast('Enter a server URL', 'amber'); return; }
+        // Strip trailing slash
+        url = url.replace(/\/+$/, '');
+      } else {
+        url = selected;
+      }
+
+      setTranslateServer(url);
+
+      // Update the label in the action bar
+      const label = document.getElementById('tx-server-label');
+      if (label) {
+        const preset = TRANSLATE_SERVERS.find(s => s.url === url);
+        label.textContent = preset ? preset.name : 'Custom';
+      }
+
+      closeModal();
+      toast('Translation server saved', 'green');
+      updateTxStatusDot();
+    }
+
+    /** Strip region from BCP-47 for the translate API (e.g. pt-BR → pt, en-US → en) */
+    function langToShort(code) {
+      return code.split('-')[0].toLowerCase();
+    }
+
+    /**
+     * Translate a single string via OVOS translate server.
+     * GET /translate/{src}/{tgt}/{text}
+     */
+    async function ovsTranslate(text, srcLang, tgtLang, serverUrl) {
+      const src = langToShort(srcLang);
+      const tgt = langToShort(tgtLang);
+      const url = `${serverUrl}/translate/${src}/${tgt}/${encodeURIComponent(text)}`;
+      const r = await fetch(url, { signal: AbortSignal.timeout(20000) });
+      if (!r.ok) throw new Error(`Translation server returned ${r.status}`);
+      const data = await r.json().catch(() => r.text());
+      return typeof data === 'string' ? data : (data.translation || data.translated || String(data));
+    }
+
+    /**
+     * Auto-translate all lines from English source to target language.
+     * Translates line-by-line to preserve structure.
+     */
+    async function autoTranslateLines(lines, tgtLang, serverUrl, onProgress) {
+      const results = [];
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (!line || line.startsWith('#')) {
+          results.push(line);
+          continue;
+        }
+        // Preserve {slots} — replace with placeholders before translating
+        const slots = [];
+        const cleaned = line.replace(/\{(\w+)\}/g, (match) => {
+          slots.push(match);
+          return `__SLOT${slots.length - 1}__`;
+        });
+        // Preserve (a|b) alternatives — translate each option separately
+        const altGroups = [];
+        const withoutAlts = cleaned.replace(/\(([^)]+)\)/g, (match, group) => {
+          altGroups.push(group);
+          return `__ALT${altGroups.length - 1}__`;
+        });
+
+        let translated;
+        try {
+          translated = await ovsTranslate(withoutAlts, 'en-US', tgtLang, serverUrl);
+        } catch {
+          translated = withoutAlts; // Keep original on failure
+        }
+
+        // Restore alternatives (translate each option)
+        for (let j = 0; j < altGroups.length; j++) {
+          const options = altGroups[j].split('|');
+          const translatedOpts = [];
+          for (const opt of options) {
+            if (!opt.trim()) { translatedOpts.push(''); continue; }
+            try {
+              translatedOpts.push(await ovsTranslate(opt.trim(), 'en-US', tgtLang, serverUrl));
+            } catch {
+              translatedOpts.push(opt);
+            }
+          }
+          translated = translated.replace(`__ALT${j}__`, `(${translatedOpts.join('|')})`);
+        }
+
+        // Restore slots
+        for (let j = 0; j < slots.length; j++) {
+          translated = translated.replace(`__SLOT${j}__`, slots[j]);
+        }
+
+        results.push(translated);
+        if (onProgress) onProgress(i + 1, lines.length);
+      }
+      return results;
+    }
+
+    function coverageBadge(pct) {
+      if (pct == null) return '<span class="badge badge-gray">missing</span>';
+      const cls = pct >= 80 ? 'badge-green' : pct >= 50 ? 'badge-amber' : 'badge-red';
+      return `<span class="badge ${cls}">${pct.toFixed(0)}%</span>`;
+    }
+    function highlightSlots(text) { return text.replace(/\{(\w+)\}/g, '<span class="slot">{$1}</span>'); }
+    function highlightCodeStrings(code) {
+      // Highlight string literals (single and double quoted)
+      return code
+        .replace(/((?:&quot;|")[^"]*(?:&quot;|"))/g, '<span style="color:#a5d6ff">$1</span>')
+        .replace(/(&#x27;[^']*&#x27;)/g, '<span style="color:#a5d6ff">$1</span>')
+        .replace(/('(?:[^'\\]|\\.)*')/g, '<span style="color:#a5d6ff">$1</span>')
+        .replace(/(self\.(speak_dialog|get_response|ask_yesno))/g, '<span style="color:#fbbf24;font-weight:600">$1</span>')
+        .replace(/(@intent_handler)/g, '<span style="color:#c084fc;font-weight:600">$1</span>')
+        .replace(/(def\s+\w+)/g, '<span style="color:#7dd3fc">$1</span>');
+    }
+    function escapeHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    function filePathFromEditUrl(u) { const m = u.match(/\/edit\/[^/]+\/(.+)$/); return m ? m[1] : ''; }
+
+    function progressBar(pct, size = 'sm') {
+      const h = size === 'sm' ? 'h-1.5' : 'h-2.5';
+      const color = pct >= 80 ? '#22c55e' : pct >= 50 ? '#f59e0b' : '#ef4444';
+      return `<div class="progress-bar ${h}"><div class="progress-fill" style="width:${pct}%;background:${color}"></div></div>`;
+    }
+
+    // =========================================================================
+    // TEMPLATE EXPANSION — port of ovos_utils.bracket_expansion.expand_template
+    // =========================================================================
+    function expandTemplate(template) {
+      // [optional] → (optional|)
+      let t = template.replace(/\[([^\[\]]+)\]/g, '($1|)');
+
+      function expandAlternatives(text) {
+        const parts = [];
+        const segments = text.split(/(\([^()]+\))/);
+        for (const seg of segments) {
+          if (seg.startsWith('(') && seg.endsWith(')')) {
+            parts.push(seg.slice(1, -1).split('|'));
+          } else {
+            parts.push([seg]);
+          }
+        }
+        // Cartesian product
+        return cartesian(parts).map(combo => combo.join('').replace(/\s+/g, ' ').trim());
+      }
+
+      function cartesian(arrays) {
+        return arrays.reduce((acc, arr) => {
+          const result = [];
+          for (const a of acc) for (const b of arr) result.push([...a, b]);
+          return result;
+        }, [['']]);  // Start with array containing empty string, not empty array
+      }
+
+      // Iteratively expand until stable
+      let result = new Set([t]);
+      for (let i = 0; i < 10; i++) { // safety limit
+        const expanded = new Set();
+        for (const text of result) {
+          for (const e of expandAlternatives(text)) expanded.add(e);
+        }
+        if (expanded.size === result.size && [...expanded].every(x => result.has(x))) break;
+        result = expanded;
+      }
+      return [...result].filter(s => s.trim()).sort();
+    }
+
+    /** Expand all lines and return total count + sample */
+    function expandAllLines(text, maxPerLine = 50, maxTotal = 200) {
+      const lines = text.split('\n').filter(l => l.trim() && !l.trim().startsWith('#'));
+      let total = 0;
+      const samples = [];
+      for (const line of lines) {
+        const expanded = expandTemplate(line);
+        total += expanded.length;
+        // Keep some samples
+        for (const e of expanded.slice(0, maxPerLine)) {
+          if (samples.length < maxTotal) samples.push(e);
+        }
+      }
+      return { total, samples, lineCount: lines.length };
+    }
+
+    // =========================================================================
+    // JSON SYNTAX HIGHLIGHTING
+    // =========================================================================
+    function highlightJson(jsonStr) {
+      return jsonStr
+        .replace(/("(?:[^"\\]|\\.)*")\s*:/g, '<span style="color:#fca5a5">$1</span>:')  // keys in red
+        .replace(/:\s*("(?:[^"\\]|\\.)*")/g, ': <span style="color:#86efac">$1</span>')  // string values in green
+        .replace(/:\s*(true|false|null)/g, ': <span style="color:#fde047">$1</span>')     // booleans in yellow
+        .replace(/:\s*(\d+(?:\.\d+)?)/g, ': <span style="color:#93c5fd">$1</span>');      // numbers in blue
+    }
+
+    // file type explanations for translators
+    const FILE_TYPE_HELP = {
+      intent: 'Training phrases for the voice assistant to recognize what the user wants. Add many natural variations.',
+      voc: 'Short keywords the voice assistant listens for. Keep them to 1-3 words.',
+      dialog: 'What the voice assistant says back to the user. Write naturally — these are spoken aloud.',
+      entity: 'Example values for a category (e.g. colors, cities). List real examples.',
+      rx: 'Regex patterns to extract information from speech. Keep named groups unchanged.',
+      value: 'Mapping of display names to system values. Only translate the left side.',
+      'skill.json': 'Skill metadata (name, description). Translate user-facing text.',
+      settingsmeta: 'Settings UI labels. Translate user-facing labels and descriptions.',
+    };
+
+    // =========================================================================
+    // ROUTER
+    // =========================================================================
+    async function route() {
+      const hash = location.hash || '#/';
+      const app = document.getElementById('app');
+      app.innerHTML = '<div class="flex items-center gap-2 py-12 justify-center text-ovos-muted"><span class="spinner"></span> Loading...</div>';
+
+      // Show onboarding on first visit (except on landing and how-it-works)
+      if (!hasCompletedOnboarding() && hash !== '#/' && hash !== '' && hash !== '#/how-it-works') {
+        await renderLanding(app);
+        return;
+      }
+
+      try {
+        if (hash === '#/' || hash === '') await renderLanding(app);
+        else if (hash === '#/how-it-works') renderHowItWorks(app);
+        else if (hash === '#/stats') await renderStats(app);
+        else if (hash === '#/dashboard') await renderDashboard(app);
+        else if (hash.match(/^#\/skill\/([^/]+)\/([^/]+)\/(.+)$/)) {
+          // Editor: #/skill/{id}/{file}/{lang}
+          const [, id, file, lang] = hash.match(/^#\/skill\/([^/]+)\/([^/]+)\/(.+)$/);
+          await renderEditor(app, id, decodeURIComponent(file), decodeURIComponent(lang));
+        } else if (hash.match(/^#\/skill\/([^/]+)\/(.+)$/)) {
+          // Skill detail for a specific language: #/skill/{id}/{lang}
+          const [, id, lang] = hash.match(/^#\/skill\/([^/]+)\/(.+)$/);
+          await renderSkillDetail(app, id, decodeURIComponent(lang));
+        } else if (hash.match(/^#\/skill\/([^/]+)$/)) {
+          // Skill detail without language — redirect to first user lang
+          const id = RegExp.$1;
+          const uLangs = getUserLangs();
+          const defaultLang = uLangs.length > 0 ? uLangs[0] : 'de-DE';
+          location.hash = `#/skill/${id}/${defaultLang}`;
+          return;
+        } else app.innerHTML = '<p>Page not found. <a href="#/">Go home</a></p>';
+      } catch(e) {
+        app.innerHTML = `<div class="py-12 text-center"><p class="text-red-400 text-lg mb-2">Something went wrong</p><p class="text-ovos-muted text-sm mb-4">${escapeHtml(e.message)}</p><a href="#/" class="text-sm">Go home</a></div>`;
+      }
+    }
+    window.addEventListener('hashchange', route);
+    window.addEventListener('load', () => { updateAuthUI(); updateProfileUI(); route(); });
+
+    // =========================================================================
+    // LANDING PAGE
+    // =========================================================================
+    async function renderLanding(el) {
+      let statsHtml = '';
+      try {
+        const [repos, coverage, validation] = await Promise.all([
+          fetchJSON('data/repos.json'), fetchJSON('data/coverage.json'), fetchJSON('data/validation.json'),
+        ]);
+        statsHtml = `
+          <div class="grid grid-cols-3 gap-4 mt-8 max-w-lg mx-auto">
+            <div class="text-center p-4 bg-ovos-card rounded-xl">
+              <div class="text-2xl font-bold text-ovos-accent">${repos.length}</div>
+              <div class="text-xs text-ovos-muted mt-1">skills</div>
+            </div>
+            <div class="text-center p-4 bg-ovos-card rounded-xl">
+              <div class="text-2xl font-bold text-ovos-accent">${coverage.languages.length}</div>
+              <div class="text-xs text-ovos-muted mt-1">languages</div>
+            </div>
+            <div class="text-center p-4 bg-ovos-card rounded-xl">
+              <div class="text-2xl font-bold text-yellow-400">${validation.total_errors + validation.total_warnings}</div>
+              <div class="text-xs text-ovos-muted mt-1">issues to fix</div>
+            </div>
+          </div>`;
+      } catch { /* data not generated yet, that's fine */ }
+
+      el.innerHTML = `
+        <div class="text-center py-12 max-w-2xl mx-auto">
+          <div class="mb-6">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-4"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <h1 class="text-3xl font-bold mb-3">Help translate OpenVoiceOS</h1>
+            <p class="text-ovos-muted text-lg leading-relaxed">
+              OVOS is an open-source voice assistant. You can help make it work in your language
+              by translating skill files — no coding required.
+            </p>
+          </div>
+
+          ${statsHtml}
+
+          <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="${hasCompletedOnboarding() ? '#/dashboard' : '#/'}" onclick="${hasCompletedOnboarding() ? '' : 'event.preventDefault();showOnboarding()'}" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-ovos-accent text-ovos-bg font-bold rounded-xl hover:opacity-90 hover:no-underline text-base">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+              ${hasCompletedOnboarding() ? 'Browse skills to translate' : 'Choose your languages'}
+            </a>
+            <a href="#/how-it-works" class="inline-flex items-center justify-center gap-2 px-6 py-3 border border-ovos-card text-ovos-text rounded-xl hover:bg-ovos-hover hover:no-underline text-base">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+              How does this work?
+            </a>
+          </div>
+
+          <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+            <div class="p-5 bg-ovos-card rounded-xl">
+              <div class="text-2xl mb-2">1.</div>
+              <h3 class="font-bold mb-1">Pick a skill</h3>
+              <p class="text-sm text-ovos-muted">Browse the dashboard and find a skill that needs translation in your language. Red = needs work.</p>
+            </div>
+            <div class="p-5 bg-ovos-card rounded-xl">
+              <div class="text-2xl mb-2">2.</div>
+              <h3 class="font-bold mb-1">Translate files</h3>
+              <p class="text-sm text-ovos-muted">See the English source on the left, type your translation in the editor. Context tips explain what each file does.</p>
+            </div>
+            <div class="p-5 bg-ovos-card rounded-xl">
+              <div class="text-2xl mb-2">3.</div>
+              <h3 class="font-bold mb-1">Submit a PR</h3>
+              <p class="text-sm text-ovos-muted">Click "Submit" and your translation becomes a GitHub pull request. The skill maintainer reviews and merges it.</p>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    // =========================================================================
+    // HOW IT WORKS
+    // =========================================================================
+    function renderHowItWorks(el) {
+      el.innerHTML = `
+        <div class="max-w-2xl mx-auto py-8">
+          <a href="#/" class="text-sm text-ovos-muted">&larr; Home</a>
+          <h1 class="text-2xl font-bold mt-4 mb-6">How OVOS Localize works</h1>
+
+          <div class="space-y-6 text-sm leading-relaxed">
+            <div class="callout">
+              <h3 class="font-bold mb-1">What is OVOS?</h3>
+              <p class="text-ovos-muted">OpenVoiceOS is an open-source voice assistant (like Alexa or Google Home, but private). It uses "skills" to answer questions, play music, tell the time, etc. Each skill has locale files that define what it understands and says.</p>
+            </div>
+
+            <h2 class="text-lg font-bold mt-8">File types explained</h2>
+
+            <div class="space-y-4">
+              <div class="p-4 bg-ovos-card rounded-xl">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="badge badge-blue mono">.intent</span>
+                  <span class="font-bold">Training phrases</span>
+                </div>
+                <p class="text-ovos-muted">These teach the voice assistant to recognize what the user says. For example, "what's the weather in {location}" or "tell me the weather forecast". <strong class="text-ovos-text">Write 10+ varied natural phrasings.</strong> Keep <span class="slot">{slots}</span> exactly as-is.</p>
+                <div class="mt-2 p-2 bg-ovos-bg rounded mono text-xs">
+what's the weather like<br>
+tell me the weather in {location}<br>
+how's the weather today<br>
+is it going to rain in {location}
+                </div>
+              </div>
+
+              <div class="p-4 bg-ovos-card rounded-xl">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="badge badge-blue mono">.voc</span>
+                  <span class="font-bold">Keywords</span>
+                </div>
+                <p class="text-ovos-muted">Short trigger words the assistant listens for. Keep them <strong class="text-ovos-text">1-3 words</strong>. One per line. Include synonyms.</p>
+                <div class="mt-2 p-2 bg-ovos-bg rounded mono text-xs">
+weather<br>forecast<br>temperature
+                </div>
+              </div>
+
+              <div class="p-4 bg-ovos-card rounded-xl">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="badge badge-blue mono">.dialog</span>
+                  <span class="font-bold">Spoken responses</span>
+                </div>
+                <p class="text-ovos-muted">What the assistant says back. <strong class="text-ovos-text">Written as natural speech</strong> — read it aloud to check. Add 2+ variants so it doesn't sound robotic. Keep <span class="slot">{variables}</span> exactly as-is.</p>
+                <div class="mt-2 p-2 bg-ovos-bg rounded mono text-xs">
+The weather in {location} is {condition}<br>
+Right now in {location} it's {condition}
+                </div>
+              </div>
+
+              <div class="p-4 bg-ovos-card rounded-xl">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="badge badge-blue mono">.entity</span>
+                  <span class="font-bold">Entity examples</span>
+                </div>
+                <p class="text-ovos-muted">Example values for a category. Provide 5+ real examples in your language.</p>
+              </div>
+
+              <div class="p-4 bg-ovos-card rounded-xl">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="badge badge-blue mono">.rx</span>
+                  <span class="font-bold">Regex patterns</span>
+                </div>
+                <p class="text-ovos-muted">Regular expressions to extract entities. <strong class="text-ovos-text text-red-400">Advanced</strong> — keep <code class="text-ovos-accent">(?P&lt;Name&gt;...)</code> group names unchanged. Only translate the surrounding words.</p>
+              </div>
+
+              <div class="p-4 bg-ovos-card rounded-xl">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="badge badge-blue mono">.value</span>
+                  <span class="font-bold">Display names</span>
+                </div>
+                <p class="text-ovos-muted">Comma-separated pairs: <code>Display Name,system_value</code>. Only translate the left side. The right side is a code identifier and must stay unchanged.</p>
+              </div>
+            </div>
+
+            <h2 class="text-lg font-bold mt-8">Golden rules</h2>
+            <ul class="space-y-2 text-ovos-muted">
+              <li class="flex gap-2"><span class="text-green-400">&#10003;</span> Keep all <span class="slot">{variables}</span> exactly as in the English source</li>
+              <li class="flex gap-2"><span class="text-green-400">&#10003;</span> Write naturally — these are spoken by a voice assistant</li>
+              <li class="flex gap-2"><span class="text-green-400">&#10003;</span> More variations = better recognition (especially for .intent files)</li>
+              <li class="flex gap-2"><span class="text-green-400">&#10003;</span> Read your translation aloud to check it sounds natural</li>
+              <li class="flex gap-2"><span class="text-red-400">&#10007;</span> Don't translate <span class="slot">{variable_names}</span> or regex group names</li>
+              <li class="flex gap-2"><span class="text-red-400">&#10007;</span> Don't translate the right column in .value files</li>
+            </ul>
+
+            <div class="mt-8 text-center">
+              <a href="#/dashboard" class="inline-flex items-center gap-2 px-6 py-3 bg-ovos-accent text-ovos-bg font-bold rounded-xl hover:opacity-90 hover:no-underline">
+                Start translating &rarr;
+              </a>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    // =========================================================================
+    // DASHBOARD
+    // =========================================================================
+    async function renderDashboard(el) {
+      const [repos, coverage, validation] = await Promise.all([
+        fetchJSON('data/repos.json'), fetchJSON('data/coverage.json'), fetchJSON('data/validation.json'),
+      ]);
+
+      const allLangs = coverage.languages.filter(l => l !== 'en-US');
+      const userLangs = getUserLangs();
+      // Default to user's languages, but allow seeing all via filter
+      const langs = userLangs.length > 0 ? allLangs.filter(l => userLangs.includes(l)) : allLangs;
+
+      el.innerHTML = `
+        <div class="mb-6">
+          <a href="#/" class="text-sm text-ovos-muted">&larr; Home</a>
+          <div class="flex items-center gap-3 mt-2">
+            <h1 class="text-xl font-bold">Translation Dashboard</h1>
+            ${userLangs.length > 0 ? `<span class="text-xs text-ovos-muted">Showing your ${userLangs.length} language${userLangs.length > 1 ? 's' : ''} &middot; <a href="#" onclick="event.preventDefault();showOnboarding()">change</a></span>` : ''}
+          </div>
+          <p class="text-sm text-ovos-muted mt-1">Pick a skill and language to start translating. <span class="badge badge-red">red</span> = needs the most help, <span class="badge badge-amber">amber</span> = partially done, <span class="badge badge-green">green</span> = mostly complete.</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="flex flex-wrap gap-3 mb-6 items-center">
+          <div class="search-box flex items-center px-3 py-2 gap-2 flex-1 max-w-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#737373" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input id="skill-search" type="text" placeholder="Search skills..." class="bg-transparent text-sm text-ovos-text w-full outline-none placeholder-ovos-muted" oninput="filterDashboard()">
+          </div>
+          <select id="lang-filter" class="bg-ovos-card text-ovos-text text-sm rounded-lg border border-ovos-card px-3 py-2" onchange="filterDashboard()">
+            <option value="">My languages (${langs.length})</option>
+            <option value="__all__">All languages (${allLangs.length})</option>
+            ${allLangs.map(l => {
+              const meta = coverage.lang_meta?.[l];
+              const label = meta ? `${meta.native || l} (${l})` : l;
+              const mine = userLangs.includes(l) ? ' *' : '';
+              return `<option value="${l}">${label}${mine}</option>`;
+            }).join('')}
+          </select>
+          <select id="status-filter" class="bg-ovos-card text-ovos-text text-sm rounded-lg border border-ovos-card px-3 py-2" onchange="filterDashboard()">
+            <option value="">Any status</option>
+            <option value="needs-work">Needs work (&lt;50%)</option>
+            <option value="partial">Partial (50-80%)</option>
+            <option value="good">Good (&gt;80%)</option>
+          </select>
+          <span class="text-xs text-ovos-muted" id="result-count"></span>
+        </div>
+
+        <!-- Skill cards -->
+        <div id="skill-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>`;
+
+      // Render skill cards
+      window._dashData = { repos, coverage, langs, allLangs };
+      filterDashboard();
+    }
+
+    function filterDashboard() {
+      const { repos, coverage, langs, allLangs } = window._dashData;
+      const search = (document.getElementById('skill-search')?.value || '').toLowerCase();
+      const langFilterRaw = document.getElementById('lang-filter')?.value || '';
+      const statusFilter = document.getElementById('status-filter')?.value || '';
+
+      // Determine which languages to consider
+      let langFilter = '';
+      let displayLangsForCard;
+      if (langFilterRaw === '__all__') {
+        displayLangsForCard = allLangs;
+      } else if (langFilterRaw) {
+        langFilter = langFilterRaw;
+        displayLangsForCard = [langFilterRaw];
+      } else {
+        displayLangsForCard = langs; // user's languages
+      }
+      const grid = document.getElementById('skill-grid');
+
+      let filtered = repos;
+      if (search) filtered = filtered.filter(r => r.id.includes(search) || (r.skill_class||'').toLowerCase().includes(search));
+
+      let html = '';
+      let count = 0;
+      for (const repo of filtered) {
+        const m = coverage.matrix[repo.id] || {};
+
+        // Compute overall coverage for this skill
+        let totalPct = 0, pctCount = 0;
+        for (const l of displayLangsForCard) {
+          if (m[l]?.combined_pct != null) { totalPct += m[l].combined_pct; pctCount++; }
+        }
+        const avgPct = pctCount > 0 ? totalPct / pctCount : 0;
+
+        if (statusFilter === 'needs-work' && avgPct >= 50) continue;
+        if (statusFilter === 'partial' && (avgPct < 50 || avgPct >= 80)) continue;
+        if (statusFilter === 'good' && avgPct < 80) continue;
+
+        // Find languages needing the most work
+        const needsWork = [];
+        for (const l of displayLangsForCard) {
+          const pct = m[l]?.combined_pct;
+          if (pct != null && pct < 80) needsWork.push({ lang: l, pct });
+        }
+        needsWork.sort((a, b) => a.pct - b.pct);
+
+        count++;
+        // Pick the best default language to link to
+        const defaultLang = needsWork.length > 0 ? needsWork[0].lang : (displayLangsForCard[0] || 'en-US');
+
+        html += `
+          <div class="skill-card p-4 bg-ovos-card rounded-xl">
+            <div class="flex items-start justify-between mb-2">
+              <a href="#/skill/${repo.id}/${defaultLang}" class="hover:no-underline">
+                <div class="font-bold text-ovos-text text-sm">${repo.id.replace('ovos-skill-', '')}</div>
+                <div class="text-xs text-ovos-muted">${repo.skill_class || 'Unknown'}</div>
+              </a>
+              ${coverageBadge(avgPct > 0 ? avgPct : null)}
+            </div>
+            ${progressBar(avgPct)}
+            <div class="mt-2 text-xs text-ovos-muted">${repo.languages.length} languages, ${repo.file_count} files</div>
+            <div class="mt-2 flex flex-wrap gap-1">
+              ${displayLangsForCard.map(l => {
+                const pct = m[l]?.combined_pct;
+                const cls = pct == null ? 'badge-gray' : pct >= 80 ? 'badge-green' : pct >= 50 ? 'badge-amber' : 'badge-red';
+                return `<a href="#/skill/${repo.id}/${l}" class="badge ${cls} hover:no-underline hover:opacity-80">${l} ${pct != null ? pct.toFixed(0)+'%' : 'new'}</a>`;
+              }).join('')}
+            </div>
+          </div>`;
+      }
+
+      grid.innerHTML = html || '<p class="text-ovos-muted col-span-3 text-center py-8">No skills match your filters.</p>';
+      document.getElementById('result-count').textContent = `${count} skill${count !== 1 ? 's' : ''}`;
+    }
+
+    // =========================================================================
+    // STATS PAGE
+    // =========================================================================
+    async function renderStats(el) {
+      const [stats, coverage, validation] = await Promise.all([
+        fetchJSON('data/stats.json'),
+        fetchJSON('data/coverage.json'),
+        fetchJSON('data/validation.json'),
+      ]);
+
+      const langs = Object.keys(stats.languages).sort((a, b) =>
+        stats.languages[b].combined_pct - stats.languages[a].combined_pct
+      );
+      const fileTypes = ['intent', 'dialog', 'voc', 'entity', 'rx', 'value', 'skill.json'];
+      const meta = coverage.lang_meta || {};
+
+      el.innerHTML = `
+        <div class="max-w-6xl mx-auto">
+          <div class="mb-6">
+            <a href="#/" class="text-sm text-ovos-muted">&larr; Home</a>
+            <h1 class="text-xl font-bold mt-2">Language Statistics</h1>
+            <p class="text-sm text-ovos-muted mt-1">Coverage across ${stats.total_skills} skills and ${langs.length} languages. Updated ${new Date(stats.generated).toLocaleDateString()}.</p>
+          </div>
+
+          <!-- Global summary -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+            <div class="p-4 bg-ovos-card rounded-xl text-center">
+              <div class="text-2xl font-bold text-ovos-accent">${stats.total_skills}</div>
+              <div class="text-xs text-ovos-muted mt-1">skills tracked</div>
+            </div>
+            <div class="p-4 bg-ovos-card rounded-xl text-center">
+              <div class="text-2xl font-bold">${langs.length}</div>
+              <div class="text-xs text-ovos-muted mt-1">languages</div>
+            </div>
+            <div class="p-4 bg-ovos-card rounded-xl text-center">
+              <div class="text-2xl font-bold">${stats.total_source_files}</div>
+              <div class="text-xs text-ovos-muted mt-1">source files (en-US)</div>
+            </div>
+            <div class="p-4 bg-ovos-card rounded-xl text-center">
+              <div class="text-2xl font-bold text-yellow-400">${validation.total_errors + validation.total_warnings}</div>
+              <div class="text-xs text-ovos-muted mt-1">validation issues</div>
+            </div>
+          </div>
+
+          <!-- Source files by type -->
+          <div class="mb-6 p-4 bg-ovos-card rounded-xl">
+            <h2 class="text-sm font-bold mb-3">English source files by type</h2>
+            <div class="flex flex-wrap gap-3">
+              ${fileTypes.filter(ft => stats.source_by_type[ft]).map(ft => `
+                <div class="text-center">
+                  <div class="text-lg font-bold">${stats.source_by_type[ft] || 0}</div>
+                  <div class="badge badge-blue mono">.${ft}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- Per-language coverage table -->
+          <h2 class="text-lg font-bold mb-3">Coverage by language</h2>
+          <p class="text-sm text-ovos-muted mb-3">Click a language to start translating. <a href="data/dataset.tsv" download class="text-ovos-accent">Download intent dataset (TSV)</a></p>
+
+          <div class="overflow-x-auto rounded-xl border border-ovos-card">
+          <table class="text-sm w-full">
+            <thead>
+              <tr class="text-ovos-muted text-left bg-ovos-card">
+                <th class="py-2.5 px-3 sticky left-0 bg-ovos-card z-10">Language</th>
+                <th class="py-2.5 px-2 text-right">Overall</th>
+                ${fileTypes.filter(ft => stats.source_by_type[ft]).map(ft => `<th class="py-2.5 px-2 text-right mono">.${ft}</th>`).join('')}
+                <th class="py-2.5 px-2 text-right">Skills</th>
+                <th class="py-2.5 px-2 text-right" title="Skills with 100% intent coverage">Full intent</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${langs.map(lang => {
+                const ls = stats.languages[lang];
+                const m = meta[lang] || {};
+                return `
+                <tr class="border-t border-ovos-card/50 hover:bg-ovos-hover/30">
+                  <td class="py-2 px-3 sticky left-0 bg-ovos-bg z-10">
+                    <a href="#/dashboard" class="hover:no-underline">
+                      <div class="font-medium">${escapeHtml(m.native || lang)}</div>
+                      <div class="text-xs text-ovos-muted">${lang}</div>
+                    </a>
+                  </td>
+                  <td class="py-2 px-2 text-right">
+                    ${coverageBadge(ls.combined_pct)}
+                    ${progressBar(ls.combined_pct)}
+                  </td>
+                  ${fileTypes.filter(ft => stats.source_by_type[ft]).map(ft => {
+                    const t = ls.by_type[ft] || { pct: 0, translated: 0, source: 0 };
+                    return `<td class="py-2 px-2 text-right text-xs">${t.pct > 0 ? `<span class="${t.pct >= 80 ? 'text-green-400' : t.pct >= 50 ? 'text-yellow-400' : 'text-red-400'}">${t.pct}%</span><br><span class="text-ovos-muted">${t.translated}/${t.source}</span>` : '<span class="text-ovos-muted">—</span>'}</td>`;
+                  }).join('')}
+                  <td class="py-2 px-2 text-right text-xs">${ls.skills_any_coverage}/${stats.total_skills}</td>
+                  <td class="py-2 px-2 text-right text-xs">${ls.skills_full_intent}</td>
+                </tr>`;
+              }).join('')}
+            </tbody>
+          </table>
+          </div>
+
+          <!-- Coverage heatmap -->
+          <h2 class="text-lg font-bold mt-8 mb-3">Coverage heatmap</h2>
+          <div class="overflow-x-auto rounded-xl border border-ovos-card p-3 bg-ovos-card">
+            <div class="flex gap-0.5 mb-1">
+              <div class="w-24 flex-shrink-0"></div>
+              ${(() => {
+                const skillIds = coverage.skills || [];
+                return skillIds.map(s => `<div class="w-5 flex-shrink-0 text-center" title="${s}"><span class="text-xs text-ovos-muted" style="writing-mode:vertical-lr;transform:rotate(180deg);font-size:0.6rem">${s.replace('ovos-skill-','').substring(0,8)}</span></div>`).join('');
+              })()}
+            </div>
+            ${langs.map(lang => {
+              const m = meta[lang] || {};
+              const skillIds = coverage.skills || [];
+              return `<div class="flex gap-0.5 mb-0.5">
+                <div class="w-24 flex-shrink-0 text-xs text-ovos-muted truncate" title="${m.display || lang}">${m.native || lang}</div>
+                ${skillIds.map(sid => {
+                  const pct = coverage.matrix?.[sid]?.[lang]?.combined_pct;
+                  const bg = pct == null ? '#1a1a1a' : pct >= 80 ? '#166534' : pct >= 50 ? '#713f12' : pct > 0 ? '#7f1d1d' : '#1a1a1a';
+                  return `<div class="w-5 h-4 rounded-sm flex-shrink-0" style="background:${bg}" title="${sid}: ${pct != null ? pct+'%' : 'none'}"></div>`;
+                }).join('')}
+              </div>`;
+            }).join('')}
+            <div class="flex gap-3 mt-3 text-xs text-ovos-muted">
+              <span><span class="inline-block w-3 h-3 rounded-sm" style="background:#166534"></span> ≥80%</span>
+              <span><span class="inline-block w-3 h-3 rounded-sm" style="background:#713f12"></span> 50-79%</span>
+              <span><span class="inline-block w-3 h-3 rounded-sm" style="background:#7f1d1d"></span> 1-49%</span>
+              <span><span class="inline-block w-3 h-3 rounded-sm" style="background:#1a1a1a"></span> none</span>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    // =========================================================================
+    // SKILL DETAIL
+    // =========================================================================
+    async function renderSkillDetail(el, skillId, activeLang) {
+      const skill = await fetchJSON(`data/skills/${skillId}.json`);
+      const allSkillLangs = skill.languages.filter(l => l !== 'en-US');
+      const userLangs = getUserLangs();
+      const tabLangs = userLangs.length > 0 ? allSkillLangs.filter(l => userLangs.includes(l)) : allSkillLangs;
+      if (!tabLangs.includes(activeLang) && allSkillLangs.includes(activeLang)) tabLangs.push(activeLang);
+
+      const enFileCount = Object.values(skill.files).filter(fd => fd.langs['en-US']).length;
+
+      // Stats for active language
+      const translated = Object.values(skill.files).filter(fd => fd.langs[activeLang]).length;
+      const missing = enFileCount - translated;
+      const pct = enFileCount ? (translated / enFileCount * 100) : 0;
+      const totalErrors = Object.values(skill.files).reduce((s, fd) =>
+        s + (fd.langs[activeLang]?.validation?.filter(v => v.severity === 'error').length || 0), 0);
+      const totalWarnings = Object.values(skill.files).reduce((s, fd) =>
+        s + (fd.langs[activeLang]?.validation?.filter(v => v.severity === 'warning').length || 0), 0);
+
+      el.innerHTML = `
+        <div class="max-w-4xl mx-auto">
+          <div class="mb-4">
+            <a href="#/dashboard" class="text-sm text-ovos-muted">&larr; Dashboard</a>
+          </div>
+          <div class="mb-6">
+            <h1 class="text-xl font-bold">${skill.id.replace('ovos-skill-', '')}</h1>
+            <p class="text-sm text-ovos-muted mt-0.5">
+              <a href="https://github.com/${skill.repo}" target="_blank">${skill.repo}</a>
+              ${skill.skill_class ? ` &mdash; <code>${skill.skill_class}</code>` : ''}
+            </p>
+          </div>
+
+          <!-- Language tabs -->
+          <div class="flex flex-wrap gap-1 mb-6 border-b border-ovos-card pb-3">
+            ${tabLangs.map(l => {
+              const lPct = enFileCount ? (Object.values(skill.files).filter(fd => fd.langs[l]).length / enFileCount * 100) : 0;
+              const isActive = l === activeLang;
+              return `<a href="#/skill/${skillId}/${l}" class="px-3 py-1.5 rounded-lg text-sm hover:no-underline ${isActive ? 'bg-ovos-accent text-white font-bold' : 'bg-ovos-card text-ovos-muted hover:bg-ovos-hover'}">${l} <span class="text-xs opacity-70">${lPct.toFixed(0)}%</span></a>`;
+            }).join('')}
+            ${tabLangs.length < allSkillLangs.length ? `<button onclick="showOnboarding()" class="px-3 py-1.5 rounded-lg text-sm bg-ovos-card text-ovos-muted hover:bg-ovos-hover">+ more</button>` : ''}
+          </div>
+
+          <!-- Coverage summary for this language -->
+          <div class="grid grid-cols-4 gap-3 mb-6">
+            <div class="p-3 bg-ovos-card rounded-xl text-center">
+              <div class="text-lg font-bold">${translated}/${enFileCount}</div>
+              <div class="text-xs text-ovos-muted">files translated</div>
+            </div>
+            <div class="p-3 bg-ovos-card rounded-xl text-center">
+              <div class="text-lg font-bold ${pct >= 80 ? 'text-green-400' : pct >= 50 ? 'text-yellow-400' : 'text-red-400'}">${pct.toFixed(0)}%</div>
+              <div class="text-xs text-ovos-muted">coverage</div>
+            </div>
+            <div class="p-3 bg-ovos-card rounded-xl text-center">
+              <div class="text-lg font-bold ${missing > 0 ? 'text-red-400' : 'text-green-400'}">${missing}</div>
+              <div class="text-xs text-ovos-muted">missing files</div>
+            </div>
+            <div class="p-3 bg-ovos-card rounded-xl text-center">
+              <div class="text-lg font-bold ${totalErrors > 0 ? 'text-red-400' : 'text-green-400'}">${totalErrors + totalWarnings}</div>
+              <div class="text-xs text-ovos-muted">issues</div>
+            </div>
+          </div>
+
+          <!-- File list for this language -->
+          <div class="space-y-2">
+            ${Object.entries(skill.files).map(([fileKey, fileData]) => {
+              const ld = fileData.langs[activeLang];
+              const enLd = fileData.langs['en-US'];
+              const exists = !!ld;
+              const errs = ld?.validation?.filter(v => v.severity === 'error').length || 0;
+              const warns = ld?.validation?.filter(v => v.severity === 'warning').length || 0;
+              const lineCount = ld?.line_count || 0;
+              const enLineCount = enLd?.line_count || 0;
+              const typeHelp = FILE_TYPE_HELP[fileData.type] || '';
+
+              // Status badge
+              let statusBadge;
+              if (!exists) statusBadge = '<span class="badge badge-red">missing — click to add</span>';
+              else if (errs > 0) statusBadge = `<span class="badge badge-red">${errs} error${errs>1?'s':''}</span>`;
+              else if (warns > 0) statusBadge = `<span class="badge badge-amber">${warns} warning${warns>1?'s':''}</span>`;
+              else statusBadge = '<span class="badge badge-green">ok</span>';
+
+              // For skill.json, show key preview
+              let preview = '';
+              if (fileData.type === 'skill.json' && ld?.entries) {
+                const nameEntry = ld.entries.find(e => e.key === 'name');
+                const descEntry = ld.entries.find(e => e.key === 'description');
+                if (nameEntry) preview += `<span class="text-ovos-text">${escapeHtml(nameEntry.text)}</span>`;
+                if (descEntry) preview += ` — <span class="text-ovos-muted">${escapeHtml(descEntry.text.substring(0, 60))}${descEntry.text.length > 60 ? '...' : ''}</span>`;
+              } else if (exists && ld.entries?.length) {
+                preview = `<span class="text-ovos-muted mono text-xs">${escapeHtml(ld.entries[0].text.substring(0, 50))}${ld.entries[0].text.length > 50 ? '...' : ''}</span>`;
+              }
+
+              return `
+              <a href="#/skill/${skillId}/${encodeURIComponent(fileKey)}/${encodeURIComponent(activeLang)}" class="block p-3 bg-ovos-card rounded-xl hover:bg-ovos-hover hover:no-underline">
+                <div class="flex items-center gap-3">
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2">
+                      <span class="font-medium mono text-sm">${fileKey}</span>
+                      <span class="badge badge-blue mono">.${fileData.type}</span>
+                      ${statusBadge}
+                    </div>
+                    <div class="text-xs text-ovos-muted mt-0.5">${escapeHtml(typeHelp.substring(0, 80))}</div>
+                    ${preview ? `<div class="mt-1 text-xs truncate">${preview}</div>` : ''}
+                  </div>
+                  <div class="text-right flex-shrink-0 text-xs text-ovos-muted">
+                    ${exists ? `${lineCount} lines` : ''}
+                    ${enLineCount ? `<br><span class="text-ovos-muted">en: ${enLineCount}</span>` : ''}
+                  </div>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#737373" stroke-width="2" class="flex-shrink-0"><path d="m9 18 6-6-6-6"/></svg>
+                </div>
+              </a>`;
+            }).join('')}
+          </div>
+        </div>`;
+    }
+
+    // =========================================================================
+    // TRANSLATION EDITOR
+    // =========================================================================
+    async function renderEditor(el, skillId, fileKey, lang) {
+      const skill = await fetchJSON(`data/skills/${skillId}.json`);
+      const fileData = skill.files[fileKey];
+      if (!fileData) { el.innerHTML = `<p>File not found: ${escapeHtml(fileKey)}. <a href="#/skill/${skillId}">Back to skill</a></p>`; return; }
+
+      const [org, repo] = skill.repo.split('/');
+      const enData = fileData.langs['en-US'];
+      const targetData = fileData.langs[lang];
+      const ctx = fileData.context;
+      const editUrl = (fileData.edit_urls || {})[lang] || '';
+      const filePath = targetData?.file_path || filePathFromEditUrl(editUrl);
+      const currentText = targetData?.entries?.length ? targetData.entries.map(e => e.text).join('\n') : '';
+      const isSignedIn = !!getToken();
+      const isNew = !targetData || targetData.entries.length === 0;
+      const fileHelp = FILE_TYPE_HELP[fileData.type] || 'Translate this file to your language.';
+      const isJsonFile = fileData.type === 'skill.json' || fileData.type === 'settingsmeta';
+      const hasExpansion = ['intent', 'voc', 'dialog'].includes(fileData.type);
+
+      // Compute en-us file path for new files
+      let newFilePath = filePath;
+      if (!filePath && enData?.file_path) {
+        // Replace en-us with target lang in the path
+        newFilePath = enData.file_path.replace(/\/en-us\//, `/${lang}/`);
+      }
+
+      el.innerHTML = `
+        <div class="mb-4">
+          <div class="flex items-center gap-2 text-sm text-ovos-muted mb-2">
+            <a href="#/dashboard">&larr; Dashboard</a>
+            <span>/</span>
+            <a href="#/skill/${skillId}/${lang}">${skillId.replace('ovos-skill-', '')} (${lang})</a>
+            <span>/</span>
+            <span class="mono text-ovos-text">${escapeHtml(fileKey)}</span>
+          </div>
+        </div>
+
+        <!-- Help callout -->
+        <div class="callout mb-4 flex items-start gap-3">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" class="flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          <div class="text-sm">
+            <strong>${isNew ? 'New translation' : 'Edit translation'}</strong> &mdash; ${escapeHtml(fileHelp)}
+            ${isNew ? '<br><span class="text-ovos-muted">This file doesn\'t exist yet in <strong>' + lang + '</strong>. Use the English source as reference and write your translation below.</span>' : ''}
+          </div>
+        </div>
+
+        <!-- Action bar -->
+        <div class="flex items-center gap-2 mb-4 flex-wrap">
+          <span id="editor-status" class="text-xs text-ovos-muted"></span>
+          <div class="ml-auto flex gap-2">
+            ${!isJsonFile ? `
+            <!-- Auto-translate button + server picker -->
+            <div class="flex items-center gap-0">
+              <button id="auto-tx-btn" onclick="handleAutoTranslate('${lang}')" class="text-xs px-3 py-1.5 rounded-l-lg border border-ovos-card hover:bg-ovos-hover flex items-center gap-1" title="Auto-translate English source using OVOS community translation servers">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+                Auto-translate
+              </button>
+              <button onclick="showTxServerModal()" class="text-xs py-1.5 px-2 rounded-r-lg border border-l-0 border-ovos-card bg-ovos-card text-ovos-muted hover:bg-ovos-hover flex items-center gap-1" title="Choose translation server">
+                <span id="tx-server-status" class="w-2 h-2 rounded-full bg-gray-500 flex-shrink-0"></span>
+                <span id="tx-server-label" class="max-w-[8rem] truncate">${(() => { const u = getTranslateServer(); const s = TRANSLATE_SERVERS.find(s => s.url === u); return s ? s.name : 'Custom'; })()}</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+            </div>
+            ` : ''}
+            ${editUrl ? `<a href="${editUrl}" target="_blank" class="text-xs px-3 py-1.5 rounded-lg border border-ovos-card hover:bg-ovos-hover hover:no-underline flex items-center gap-1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Edit on GitHub
+            </a>` : ''}
+            <button id="submit-pr-btn" onclick="handleSubmitPR()" class="text-xs px-4 py-1.5 rounded-lg bg-ovos-accent text-ovos-bg font-bold hover:opacity-80 disabled:opacity-40 flex items-center gap-1.5"
+              ${isSignedIn ? '' : 'disabled title="Connect GitHub first (top right) to submit"'}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M6 9v12"/></svg>
+              ${isSignedIn ? 'Submit translation' : 'Connect GitHub to submit'}
+            </button>
+          </div>
+        </div>
+
+        <!-- Editor: source | translation+preview | context+code -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-3" style="height: calc(100vh - 14rem);">
+
+          <!-- LEFT: English source (read-only) -->
+          <div class="lg:col-span-3 flex flex-col gap-3 overflow-hidden">
+            <div class="bg-ovos-card rounded-xl p-3 flex flex-col overflow-hidden ${hasExpansion ? '' : 'flex-1'}">
+              <div class="flex items-center gap-2 mb-2 flex-shrink-0">
+                <h3 class="text-sm font-bold">English source</h3>
+                <span class="badge badge-gray">read-only</span>
+              </div>
+              <div class="overflow-auto flex-1 text-sm mono leading-relaxed">
+                ${(() => {
+                  if (!enData || !enData.entries.length) return '<p class="text-ovos-muted">No English source file found.</p>';
+                  if (isJsonFile) {
+                    return enData.entries.map(e => {
+                      const key = e.key || '';
+                      const translatable = e.translatable !== false;
+                      return `<div class="flex gap-2 py-1 px-1 rounded ${translatable ? '' : 'opacity-50'}">
+                        <span class="text-red-400 flex-shrink-0">${escapeHtml(key)}${e.index != null ? `[${e.index}]` : ''}:</span>
+                        <span class="${translatable ? '' : 'line-through'}">${escapeHtml(e.text)}</span>
+                        ${!translatable ? '<span class="text-xs text-ovos-muted">(don\'t translate)</span>' : ''}
+                      </div>`;
+                    }).join('');
+                  }
+                  return enData.entries.map(e =>
+                    `<div class="flex hover:bg-ovos-bg/50 px-1 rounded"><span class="text-ovos-muted w-6 text-right mr-2 flex-shrink-0 select-none">${e.line}</span><span>${highlightSlots(escapeHtml(e.text))}</span></div>`
+                  ).join('');
+                })()}
+              </div>
+              ${enData ? `<div class="mt-2 text-xs text-ovos-muted flex-shrink-0">${enData.entries.length} line${enData.entries.length!==1?'s':''} &middot; ${(enData.slots||[]).length ? 'Slots: ' + enData.slots.map(s=>'<span class="slot">{'+s+'}</span>').join(', ') : 'No slots'}</div>` : ''}
+            </div>
+
+            ${hasExpansion && enData?.entries?.length ? `
+            <!-- English expanded sentences -->
+            <div class="bg-ovos-card rounded-xl p-3 flex-1 flex flex-col overflow-hidden min-h-0">
+              <div class="flex items-center gap-2 mb-2 flex-shrink-0">
+                <h3 class="text-xs font-bold text-ovos-muted">English expanded</h3>
+                <span id="en-expansion-count" class="badge badge-gray text-xs"></span>
+              </div>
+              <div id="en-expansion-list" class="overflow-auto flex-1 text-xs mono leading-relaxed space-y-0.5"></div>
+            </div>` : ''}
+          </div>
+
+          <!-- CENTER: Translation editor + expansion preview -->
+          <div class="lg:col-span-5 flex flex-col gap-3 overflow-hidden">
+            <div class="bg-ovos-card rounded-xl p-3 flex flex-col overflow-hidden ${hasExpansion ? 'flex-1' : 'flex-1'}">
+              <div class="flex items-center gap-2 mb-2 flex-shrink-0">
+                <h3 class="text-sm font-bold">${lang} translation</h3>
+                ${isNew ? '<span class="badge badge-amber">new</span>' : ''}
+                ${isJsonFile ? '<span class="badge badge-blue">JSON</span>' : ''}
+                ${ctx?.slots?.length ? `<div class="ml-auto flex gap-1 flex-shrink-0">${ctx.slots.map(s =>
+                  `<span class="slot cursor-pointer text-xs px-1 rounded hover:bg-ovos-bg" onclick="insertSlot('${s}')" title="Click to insert {${s}} at cursor">{${s}}</span>`
+                ).join('')}</div>` : ''}
+              </div>
+
+              ${targetData?.validation?.length ? `
+                <div class="mb-2 flex-shrink-0 max-h-16 overflow-auto space-y-0.5">
+                  ${targetData.validation.map(v => `
+                    <div class="text-xs flex items-start gap-1 ${v.severity === 'error' ? 'text-red-400' : 'text-yellow-400'}">
+                      <span class="flex-shrink-0">${v.severity === 'error' ? '&#9679;' : '&#9651;'}</span>
+                      <span><strong>${escapeHtml(v.rule_name)}:</strong> ${escapeHtml(v.message)}</span>
+                    </div>
+                  `).join('')}
+                </div>` : ''}
+
+              ${isJsonFile ? `
+                <!-- Structured JSON editor -->
+                <div class="flex-1 overflow-auto space-y-3" id="json-form">
+                  ${(() => {
+                    // Build form fields from en-US entries as template
+                    const sourceEntries = enData?.entries || [];
+                    const targetEntries = targetData?.entries || [];
+                    // Group by key
+                    const keys = [];
+                    const seen = new Set();
+                    for (const e of sourceEntries) {
+                      if (e.key && !seen.has(e.key)) { seen.add(e.key); keys.push(e.key); }
+                    }
+                    return keys.map(key => {
+                      const srcItems = sourceEntries.filter(e => e.key === key);
+                      const tgtItems = targetEntries.filter(e => e.key === key);
+                      const translatable = srcItems[0]?.translatable !== false;
+                      const isList = srcItems[0]?.index != null;
+                      if (!translatable) {
+                        // Non-translatable: show read-only
+                        return '<div class="p-2 bg-ovos-bg rounded-lg opacity-50"><div class="text-xs text-ovos-muted">' + escapeHtml(key) + ' <span>(not translatable — copied as-is)</span></div><div class="mono text-xs mt-1">' + escapeHtml(srcItems.map(e=>e.text).join(', ')) + '</div></div>';
+                      }
+                      if (isList) {
+                        // List field: textarea
+                        const tgtText = tgtItems.length ? tgtItems.map(e=>e.text).join('\\n') : '';
+                        const srcText = srcItems.map(e=>e.text).join('\\n');
+                        return '<div class="p-2 bg-ovos-bg rounded-lg"><label class="text-xs font-bold text-ovos-accent">' + escapeHtml(key) + ' <span class="text-ovos-muted font-normal">(one per line)</span></label><div class="text-xs text-ovos-muted mt-0.5 mb-1">English: ' + escapeHtml(srcText.substring(0,80)) + (srcText.length > 80 ? '...' : '') + '</div><textarea class="json-field w-full bg-ovos-input text-ovos-text p-2 rounded border border-ovos-card text-sm mono resize-none" rows="' + Math.max(3, srcItems.length) + '" data-key="' + escapeHtml(key) + '" data-list="1" spellcheck="true">' + escapeHtml(tgtText) + '</textarea></div>';
+                      } else {
+                        // Single field: input
+                        const tgtText = tgtItems.length ? tgtItems[0].text : '';
+                        const srcText = srcItems[0]?.text || '';
+                        const isLong = srcText.length > 80;
+                        if (isLong) {
+                          return '<div class="p-2 bg-ovos-bg rounded-lg"><label class="text-xs font-bold text-ovos-accent">' + escapeHtml(key) + '</label><div class="text-xs text-ovos-muted mt-0.5 mb-1">English: ' + escapeHtml(srcText.substring(0,120)) + (srcText.length > 120 ? '...' : '') + '</div><textarea class="json-field w-full bg-ovos-input text-ovos-text p-2 rounded border border-ovos-card text-sm" rows="3" data-key="' + escapeHtml(key) + '" spellcheck="true">' + escapeHtml(tgtText) + '</textarea></div>';
+                        }
+                        return '<div class="p-2 bg-ovos-bg rounded-lg"><label class="text-xs font-bold text-ovos-accent">' + escapeHtml(key) + '</label><div class="text-xs text-ovos-muted mt-0.5 mb-1">English: ' + escapeHtml(srcText) + '</div><input type="text" class="json-field w-full bg-ovos-input text-ovos-text p-2 rounded border border-ovos-card text-sm" data-key="' + escapeHtml(key) + '" value="' + escapeHtml(tgtText) + '" spellcheck="true"></div>';
+                      }
+                    }).join('');
+                  })()}
+                </div>
+                <!-- Hidden textarea that holds the actual JSON for submission -->
+                <textarea id="translation-editor" class="hidden">${escapeHtml(currentText)}</textarea>
+              ` : `
+                <textarea id="translation-editor"
+                  class="flex-1 w-full bg-ovos-input text-ovos-text p-3 rounded-lg border border-ovos-card text-sm resize-none leading-relaxed mono"
+                  placeholder="${isNew ? 'Type your translation here, one line per entry...\\n\\nLook at the English source on the left for reference.\\nKeep {variables} exactly as they are.' : 'Edit the translation...'}"
+                  spellcheck="true"
+                >${escapeHtml(currentText)}</textarea>
+              `}
+
+              <div class="mt-2 text-xs text-ovos-muted flex items-center gap-3 flex-shrink-0">
+                <span id="line-count">0 lines</span>
+                <span id="char-count">0 chars</span>
+                ${enData?.entries?.length ? `<span>(source: ${enData.entries.length} lines)</span>` : ''}
+              </div>
+            </div>
+
+            ${hasExpansion ? `
+            <!-- Expansion preview — always visible for .intent, toggleable for others -->
+            <div id="expansion-preview" class="bg-ovos-card rounded-xl p-3 overflow-hidden flex flex-col" style="min-height:8rem;max-height:40%">
+              <div class="flex items-center gap-2 mb-2 flex-shrink-0">
+                <h3 class="text-sm font-bold">Expanded sentences</h3>
+                <span class="text-xs text-ovos-muted">— what the voice assistant actually matches</span>
+                <span id="expansion-count" class="ml-auto badge badge-gray">0</span>
+              </div>
+              <div id="expansion-list" class="overflow-auto flex-1 text-xs mono leading-relaxed space-y-0.5"></div>
+            </div>` : ''}
+
+            ${isJsonFile ? `
+            <!-- JSON preview panel -->
+            <div class="bg-ovos-card rounded-xl p-3 overflow-auto" style="max-height:35%">
+              <div class="flex items-center gap-2 mb-2">
+                <h3 class="text-sm font-bold">JSON preview</h3>
+                <span id="json-status" class="text-xs"></span>
+              </div>
+              <pre id="json-preview" class="text-xs mono"></pre>
+            </div>` : ''}
+          </div>
+
+          <!-- RIGHT: Context + Source Code -->
+          <div class="lg:col-span-4 flex flex-col gap-3 overflow-hidden">
+
+            <!-- Context card (compact) -->
+            <div class="bg-ovos-card rounded-xl p-3 overflow-auto ${ctx?.handler_source ? 'max-h-[45%]' : 'flex-1'} flex-shrink-0">
+              <h3 class="text-sm font-bold mb-2">Translation help</h3>
+              <div class="space-y-2 text-sm">
+
+                <div class="p-2 bg-ovos-bg rounded-lg">
+                  <div class="font-medium text-xs">${ctx ? escapeHtml(ctx.file_type_label) : escapeHtml(fileData.type)}</div>
+                  <div class="text-xs text-ovos-muted mt-0.5">${escapeHtml(fileHelp)}</div>
+                </div>
+
+                ${ctx?.handler_method ? `
+                <div class="p-2 bg-ovos-bg rounded-lg">
+                  <div class="text-xs text-ovos-muted">Handler</div>
+                  <div class="mono text-xs">${ctx.handler_method}() <span class="text-ovos-muted">line ${ctx.handler_line || '?'}</span></div>
+                  ${ctx.triggers_dialog?.length ? `<div class="text-xs text-ovos-muted mt-0.5">Triggers: ${ctx.triggers_dialog.map(d=>`<code>${d}.dialog</code>`).join(', ')}</div>` : ''}
+                </div>` : ''}
+
+                ${ctx?.slots?.length ? `
+                <div class="p-2 bg-ovos-bg rounded-lg">
+                  <div class="text-xs text-red-400 font-bold mb-1">Keep these variables exactly as-is</div>
+                  ${ctx.slots.map(s => `
+                    <div class="flex items-center gap-2 cursor-pointer hover:bg-ovos-card/50 px-1 rounded" onclick="insertSlot('${s}')" title="Click to insert">
+                      <span class="slot text-xs">{${s}}</span>
+                      <span class="text-xs text-ovos-muted">${ctx.slot_descriptions?.[s] ? escapeHtml(ctx.slot_descriptions[s]) : ''}</span>
+                    </div>
+                  `).join('')}
+                </div>` : ''}
+
+                ${ctx?.builder_chain ? `
+                <div class="p-2 bg-ovos-bg rounded-lg">
+                  <div class="text-xs text-ovos-muted">IntentBuilder</div>
+                  <pre class="text-xs mono mt-0.5">require: [${(ctx.builder_chain.require||[]).join(', ')}]
+optionally: [${(ctx.builder_chain.optionally||[]).join(', ')}]</pre>
+                </div>` : ''}
+
+                ${ctx?.related_files?.length ? `<div class="text-xs text-ovos-muted">Related: ${ctx.related_files.join(', ')}</div>` : ''}
+                ${ctx?.used_by_intents?.length ? `<div class="text-xs text-ovos-muted">Used by: ${ctx.used_by_intents.join(', ')}</div>` : ''}
+
+                ${ctx?.tips?.length ? `
+                <div class="p-2 bg-ovos-bg rounded-lg border-l-2 border-red-500">
+                  <div class="text-xs font-bold text-ovos-accent mb-1">Tips</div>
+                  <ul class="space-y-0.5 text-xs text-ovos-muted list-disc ml-3">
+                    ${ctx.tips.map(t => `<li>${escapeHtml(t)}</li>`).join('')}
+                  </ul>
+                </div>` : ''}
+              </div>
+            </div>
+
+            <!-- Handler source code -->
+            ${ctx?.handler_source ? `
+            <div class="bg-ovos-card rounded-xl p-3 flex-1 flex flex-col overflow-hidden min-h-0">
+              <div class="flex items-center gap-2 mb-2 flex-shrink-0">
+                <h3 class="text-sm font-bold">Skill code</h3>
+                <span class="text-xs text-ovos-muted">where this file is used</span>
+              </div>
+              <pre class="flex-1 overflow-auto text-xs mono leading-relaxed p-3 bg-ovos-bg rounded-lg text-ovos-muted"><code>${highlightCodeStrings(escapeHtml(ctx.handler_source))}</code></pre>
+            </div>` : ''}
+
+          </div>
+        </div>`;
+
+      // Wire up editor
+      const editor = document.getElementById('translation-editor');
+      editor.dataset.org = org;
+      editor.dataset.repo = repo;
+      editor.dataset.filePath = newFilePath || filePath;
+      editor.dataset.lang = lang;
+      editor.dataset.fileKey = fileKey;
+      editor.dataset.skillId = skillId;
+      editor.dataset.originalText = currentText;
+
+      // Track file type for preview logic
+      editor.dataset.fileType = fileData.type;
+      editor.dataset.isJson = isJsonFile ? '1' : '';
+      editor.dataset.hasExpansion = hasExpansion ? '1' : '';
+
+      // For JSON form: sync form fields → hidden textarea
+      if (isJsonFile) {
+        const enEntries = enData?.entries || [];
+        function syncJsonForm() {
+          // Rebuild the file content from form fields + non-translatable source entries
+          const lines = [];
+          // Non-translatable entries come from source
+          for (const e of enEntries) {
+            if (e.translatable === false) {
+              lines.push(e.text);
+            }
+          }
+          // Translatable entries come from form
+          document.querySelectorAll('.json-field').forEach(field => {
+            const text = field.value.trim();
+            if (text) {
+              if (field.dataset.list) {
+                text.split('\n').forEach(l => { if (l.trim()) lines.push(l.trim()); });
+              } else {
+                lines.push(text);
+              }
+            }
+          });
+          editor.value = lines.join('\n');
+          editor.dispatchEvent(new Event('input'));
+        }
+        document.querySelectorAll('.json-field').forEach(field => {
+          field.addEventListener('input', syncJsonForm);
+        });
+        // Initial sync
+        syncJsonForm();
+      }
+
+      function updateCounts() {
+        const text = editor.value;
+        const lines = text ? text.split('\n').filter(l => l.trim()).length : 0;
+        document.getElementById('line-count').textContent = `${lines} line${lines!==1?'s':''}`;
+        document.getElementById('char-count').textContent = `${text.length} chars`;
+
+        const status = document.getElementById('editor-status');
+        if (text !== editor.dataset.originalText) {
+          status.innerHTML = '<span class="badge badge-amber">unsaved changes</span>';
+        } else {
+          status.textContent = '';
+        }
+
+        // Update JSON preview if applicable
+        if (editor.dataset.isJson) updateJsonPreview(text);
+
+        // Update expansion preview
+        if (editor.dataset.hasExpansion) updateExpansionPreview(text);
+      }
+      editor.addEventListener('input', updateCounts);
+      updateCounts();
+
+      // Populate English expansion preview (one-time, static)
+      if (hasExpansion && enData?.entries?.length) {
+        const enText = enData.entries.map(e => e.text).join('\n');
+        const { total, samples } = expandAllLines(enText, 30, 150);
+        const enCountEl = document.getElementById('en-expansion-count');
+        const enListEl = document.getElementById('en-expansion-list');
+        if (enCountEl) enCountEl.textContent = `${total} sentences`;
+        if (enListEl) {
+          enListEl.innerHTML = samples.map((s, i) =>
+            `<div class="px-1 rounded ${i % 2 ? '' : 'bg-ovos-bg/30'}">${highlightSlots(escapeHtml(s))}</div>`
+          ).join('') + (total > samples.length ? `<div class="text-ovos-muted mt-1">... and ${total - samples.length} more</div>` : '');
+        }
+      }
+      editor.focus();
+
+      // Check translation server status (background)
+      if (!isJsonFile) updateTxStatusDot();
+    }
+
+    // --- Expansion preview ---
+    let _previewDebounce = null;
+    function updateExpansionPreview(text) {
+      clearTimeout(_previewDebounce);
+      _previewDebounce = setTimeout(() => {
+        const { total, samples, lineCount } = expandAllLines(text, 30, 150);
+        const countEl = document.getElementById('expansion-count');
+        const listEl = document.getElementById('expansion-list');
+        if (!countEl || !listEl) return;
+
+        // Color the count based on how many expansions
+        const cls = total >= 10 ? 'badge-green' : total >= 5 ? 'badge-amber' : 'badge-red';
+        countEl.className = `badge ${cls} text-xs`;
+        countEl.textContent = `${total} sentence${total !== 1 ? 's' : ''}`;
+
+        if (!text.trim()) {
+          listEl.innerHTML = '<p class="text-ovos-muted">Your translated lines will expand here as you type.<br>Use <span class="mono">(option1|option2)</span> for alternatives and <span class="mono">[optional]</span> for optional words.</p>';
+        } else if (total === lineCount) {
+          // No expansion needed (no alternatives)
+          listEl.innerHTML = samples.map((s, i) =>
+            `<div class="px-1 rounded ${i % 2 ? '' : 'bg-ovos-bg/30'}">${highlightSlots(escapeHtml(s))}</div>`
+          ).join('') + '<div class="text-ovos-muted mt-2 text-xs">Tip: use <span class="mono">(word1|word2)</span> to add alternative phrasings.</div>';
+        } else {
+          listEl.innerHTML = `<div class="text-ovos-muted mb-1">${lineCount} template${lineCount>1?'s':''} → ${total} unique sentences</div>` +
+            samples.map((s, i) =>
+              `<div class="px-1 rounded ${i % 2 ? '' : 'bg-ovos-bg/30'}">${highlightSlots(escapeHtml(s))}</div>`
+            ).join('') + (total > samples.length ? `<div class="text-ovos-muted mt-1">... and ${total - samples.length} more</div>` : '');
+        }
+      }, 250);
+    }
+
+    // --- JSON preview ---
+    function updateJsonPreview(text) {
+      const preview = document.getElementById('json-preview');
+      const status = document.getElementById('json-status');
+      if (!preview || !status) return;
+      if (!text.trim()) {
+        preview.innerHTML = '<span class="text-ovos-muted">Empty</span>';
+        status.textContent = '';
+        return;
+      }
+      try {
+        const parsed = JSON.parse(text);
+        const formatted = JSON.stringify(parsed, null, 2);
+        preview.innerHTML = highlightJson(escapeHtml(formatted));
+        status.innerHTML = '<span class="text-green-400">valid JSON</span>';
+      } catch (e) {
+        preview.innerHTML = `<span class="text-red-400">${escapeHtml(e.message)}</span>`;
+        status.innerHTML = '<span class="text-red-400">invalid JSON</span>';
+      }
+    }
+
+    async function handleAutoTranslate(tgtLang) {
+      const editor = document.getElementById('translation-editor');
+      if (!editor) return;
+
+      // Get English source lines from the data
+      const { skillId, fileKey } = editor.dataset;
+      if (!skillId) { toast('Cannot determine skill', 'red'); return; }
+
+      let enLines;
+      try {
+        const skill = await fetchJSON(`data/skills/${skillId}.json`);
+        const fd = skill.files[fileKey];
+        const enData = fd?.langs?.['en-US'];
+        if (!enData?.entries?.length) { toast('No English source to translate from', 'red'); return; }
+        enLines = enData.entries.map(e => e.text);
+      } catch (e) {
+        toast(`Failed to load source: ${e.message}`, 'red'); return;
+      }
+
+      const hasExisting = editor.value.trim().length > 0;
+      if (hasExisting && !confirm('This will replace the current translation with an auto-translated version. Continue?')) return;
+
+      const serverUrl = getTranslateServer();
+      const btn = document.getElementById('auto-tx-btn');
+      const origText = btn.innerHTML;
+      btn.disabled = true;
+
+      try {
+        const translated = await autoTranslateLines(enLines, tgtLang, serverUrl, (done, total) => {
+          btn.innerHTML = `<span class="spinner"></span> ${done}/${total}`;
+        });
+
+        editor.value = translated.join('\n');
+        editor.dispatchEvent(new Event('input'));
+        toast(`Auto-translated ${translated.length} lines. Review and edit before submitting!`, 'green', 5000);
+      } catch (e) {
+        toast(`Translation failed: ${e.message}`, 'red', 5000);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = origText;
+      }
+    }
+
+    function insertSlot(name) {
+      const editor = document.getElementById('translation-editor');
+      if (!editor) return;
+      const s = editor.selectionStart, e = editor.selectionEnd;
+      const ins = `{${name}}`;
+      editor.value = editor.value.substring(0, s) + ins + editor.value.substring(e);
+      editor.selectionStart = editor.selectionEnd = s + ins.length;
+      editor.focus();
+      editor.dispatchEvent(new Event('input'));
+    }
+
+    async function handleSubmitPR() {
+      if (!getToken()) { showAuthModal(); return; }
+      const editor = document.getElementById('translation-editor');
+      const newContent = editor.value;
+      if (newContent === editor.dataset.originalText) { toast('No changes to submit', 'amber'); return; }
+      if (!newContent.trim()) { toast('Translation is empty', 'red'); return; }
+      const { org, repo, filePath, lang, fileKey } = editor.dataset;
+      if (!filePath) { toast('Cannot determine file path — use "Edit on GitHub" instead', 'red'); return; }
+      const lines = newContent.split('\n').filter(l => l.trim()).length;
+      if (!confirm(`Submit ${lines} line(s) for "${fileKey}" (${lang})?\n\nA bot will open a pull request to ${org}/${repo} on your behalf.`)) return;
+      const btn = document.getElementById('submit-pr-btn');
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner"></span> Submitting...';
+      try {
+        const content = newContent.endsWith('\n') ? newContent : newContent + '\n';
+        await submitTranslation(org, repo, filePath, content, lang, fileKey);
+        editor.dataset.originalText = editor.value;
+        document.getElementById('editor-status').innerHTML = '<span class="badge badge-green">submitted!</span>';
+      } catch (e) {
+        toast(`Failed: ${e.message}`, 'red', 5000);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Submit translation';
+      }
+    }
+  </script>
+</body>
+</html>

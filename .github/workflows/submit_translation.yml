@@ -1,0 +1,91 @@
+name: Submit Translation PR
+
+on:
+  repository_dispatch:
+    types: [submit-translation]
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Parse payload
+        id: payload
+        run: |
+          echo "org=${{ github.event.client_payload.org }}" >> "$GITHUB_OUTPUT"
+          echo "repo=${{ github.event.client_payload.repo }}" >> "$GITHUB_OUTPUT"
+          echo "file_path=${{ github.event.client_payload.file_path }}" >> "$GITHUB_OUTPUT"
+          echo "lang=${{ github.event.client_payload.lang }}" >> "$GITHUB_OUTPUT"
+          echo "file_key=${{ github.event.client_payload.file_key }}" >> "$GITHUB_OUTPUT"
+          echo "branch=${{ github.event.client_payload.branch }}" >> "$GITHUB_OUTPUT"
+          echo "author=${{ github.event.client_payload.author }}" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout target repo
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ steps.payload.outputs.org }}/${{ steps.payload.outputs.repo }}
+          ref: ${{ steps.payload.outputs.branch }}
+          token: ${{ secrets.BOT_TOKEN }}
+
+      - name: Create branch and commit
+        env:
+          FILE_PATH: ${{ steps.payload.outputs.file_path }}
+          LANG: ${{ steps.payload.outputs.lang }}
+          FILE_KEY: ${{ steps.payload.outputs.file_key }}
+          AUTHOR: ${{ steps.payload.outputs.author }}
+          CONTENT: ${{ github.event.client_payload.content }}
+        run: |
+          BRANCH_NAME="translate/${LANG}/${FILE_KEY//[^a-zA-Z0-9_.-]/_}-$(date +%s)"
+          git checkout -b "$BRANCH_NAME"
+
+          # Ensure parent directory exists
+          mkdir -p "$(dirname "$FILE_PATH")"
+
+          # Write content (base64 decoded)
+          echo "$CONTENT" | base64 -d > "$FILE_PATH"
+
+          git config user.name "OVOS Localize Bot"
+          git config user.email "noreply@openvoiceos.org"
+          git add "$FILE_PATH"
+          git commit -m "translate(${LANG}): update ${FILE_KEY}
+
+Submitted by @${AUTHOR} via OVOS Localize"
+
+          git push origin "$BRANCH_NAME"
+
+          echo "branch_name=$BRANCH_NAME" >> "$GITHUB_OUTPUT"
+        id: commit
+
+      - name: Create Pull Request
+        env:
+          GH_TOKEN: ${{ secrets.BOT_TOKEN }}
+          ORG: ${{ steps.payload.outputs.org }}
+          REPO: ${{ steps.payload.outputs.repo }}
+          BASE: ${{ steps.payload.outputs.branch }}
+          LANG: ${{ steps.payload.outputs.lang }}
+          FILE_KEY: ${{ steps.payload.outputs.file_key }}
+          FILE_PATH: ${{ steps.payload.outputs.file_path }}
+          AUTHOR: ${{ steps.payload.outputs.author }}
+          HEAD: ${{ steps.commit.outputs.branch_name }}
+        run: |
+          PR_URL=$(gh pr create \
+            --repo "${ORG}/${REPO}" \
+            --base "${BASE}" \
+            --head "${HEAD}" \
+            --title "translate(${LANG}): update ${FILE_KEY}" \
+            --body "$(cat <<EOF
+          ## Translation update
+
+          - **Language**: \`${LANG}\`
+          - **File**: \`${FILE_PATH}\`
+          - **Submitted by**: @${AUTHOR}
+
+          Submitted via [OVOS Localize](https://openvoiceos.github.io/ovos-localize/).
+          EOF
+          )")
+
+          echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
+        id: pr
+
+      - name: Report result
+        run: |
+          echo "PR created: ${{ steps.pr.outputs.pr_url }}"

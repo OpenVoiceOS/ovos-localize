@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-localize"
+dynamic = ["version"]
+description = "GitHub-native translation platform for OpenVoiceOS locale files with contextual cues from skill source code"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [
+    {name = "OpenVoiceOS", email = "devs@openvoiceos.org"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Localization",
+]
+dependencies = [
+    "langcodes>=3.3",
+]
+
+[project.optional-dependencies]
+server = [
+    "fastapi>=0.100",
+    "uvicorn[standard]>=0.20",
+    "sqlalchemy>=2.0",
+    "aiosqlite>=0.19",
+    "alembic>=1.12",
+    "httpx>=0.24",
+    "pydantic>=2.0",
+    "pydantic-settings>=2.0",
+    "python-multipart>=0.0.6",
+    "authlib>=1.2",
+    "itsdangerous>=2.1",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+
+[project.scripts]
+ovos-localize-cli = "ovos_localize.cli.validate:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "ovos_localize.version.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["ovos_localize*"]
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
