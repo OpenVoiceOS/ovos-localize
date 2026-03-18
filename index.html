@@ -109,7 +109,7 @@
   <main id="app" class="mx-auto px-4 sm:px-6 py-6"></main>
 
   <footer class="border-t border-ovos-card mt-12 py-6 px-6 text-center text-xs text-ovos-muted">
-    <p>Developed by <a href="https://github.com/TigreGoworkedtico" target="_blank" class="font-medium">TigreGoticoLda</a> with <span class="text-red-500">&hearts;</span> for the <a href="https://openvoiceos.org" target="_blank" class="font-medium">OpenVoiceOS</a> community</p>
+    <p>Developed by <a href="https://tigregotico.pt" target="_blank" class="font-medium">TigreGoticoLda</a> with <span class="text-red-500">&hearts;</span> for the <a href="https://openvoiceos.org" target="_blank" class="font-medium">OpenVoiceOS</a> community</p>
     <div class="mt-2 flex items-center justify-center gap-4">
       <a href="https://github.com/OpenVoiceOS/ovos-localize" target="_blank">GitHub</a>
       <a href="#/how-it-works">How it works</a>
@@ -1226,16 +1226,29 @@ Right now in {location} it's {condition}
       const fileTypes = ['intent', 'dialog', 'voc', 'entity', 'rx', 'value', 'skill.json'];
       const meta = coverage.lang_meta || {};
 
+      // Compute chart data
+      const topN = langs.slice(0, 15);
+      const usableLangs = langs.filter(l => stats.languages[l].skills_full_intent >= Math.floor(stats.total_skills * 0.5));
+      const barMax = Math.max(...langs.map(l => stats.languages[l].combined_pct), 1);
+
+      // Validation breakdown
+      const valRules = Object.entries(validation.by_rule || {}).sort((a,b) => b[1] - a[1]);
+      const valMax = valRules.length ? valRules[0][1] : 1;
+
       el.innerHTML = `
         <div class="max-w-6xl mx-auto">
           <div class="mb-6">
             <a href="#/" class="text-sm text-ovos-muted">&larr; Home</a>
             <h1 class="text-xl font-bold mt-2">Language Statistics</h1>
-            <p class="text-sm text-ovos-muted mt-1">Coverage across ${stats.total_skills} skills and ${langs.length} languages. Updated ${new Date(stats.generated).toLocaleDateString()}.</p>
+            <p class="text-sm text-ovos-muted mt-1">
+              Translation coverage across <strong class="text-ovos-text">${stats.total_skills} skills</strong> and
+              <strong class="text-ovos-text">${langs.length} languages</strong>.
+              Data refreshed daily. Last update: ${new Date(stats.generated).toLocaleDateString()}.
+            </p>
           </div>
 
           <!-- Global summary -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-8">
             <div class="p-4 bg-ovos-card rounded-xl text-center">
               <div class="text-2xl font-bold text-ovos-accent">${stats.total_skills}</div>
               <div class="text-xs text-ovos-muted mt-1">skills tracked</div>
@@ -1246,7 +1259,11 @@ Right now in {location} it's {condition}
             </div>
             <div class="p-4 bg-ovos-card rounded-xl text-center">
               <div class="text-2xl font-bold">${stats.total_source_files}</div>
-              <div class="text-xs text-ovos-muted mt-1">source files (en-US)</div>
+              <div class="text-xs text-ovos-muted mt-1">English source files</div>
+            </div>
+            <div class="p-4 bg-ovos-card rounded-xl text-center">
+              <div class="text-2xl font-bold text-green-400">${usableLangs.length}</div>
+              <div class="text-xs text-ovos-muted mt-1">fully usable languages</div>
             </div>
             <div class="p-4 bg-ovos-card rounded-xl text-center">
               <div class="text-2xl font-bold text-yellow-400">${validation.total_errors + validation.total_warnings}</div>
@@ -1254,32 +1271,128 @@ Right now in {location} it's {condition}
             </div>
           </div>
 
-          <!-- Source files by type -->
-          <div class="mb-6 p-4 bg-ovos-card rounded-xl">
-            <h2 class="text-sm font-bold mb-3">English source files by type</h2>
-            <div class="flex flex-wrap gap-3">
-              ${fileTypes.filter(ft => stats.source_by_type[ft]).map(ft => `
-                <div class="text-center">
-                  <div class="text-lg font-bold">${stats.source_by_type[ft] || 0}</div>
-                  <div class="badge badge-blue mono">.${ft}</div>
-                </div>
-              `).join('')}
+          <!-- Top languages bar chart -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="bg-ovos-card rounded-xl p-4">
+              <h2 class="text-sm font-bold mb-1">Overall coverage — top ${topN.length}</h2>
+              <p class="text-xs text-ovos-muted mb-3">Percentage of English source files that have a translation in each language.</p>
+              <div class="space-y-1.5">
+                ${topN.map(lang => {
+                  const ls = stats.languages[lang];
+                  const m = meta[lang] || {};
+                  const w = (ls.combined_pct / barMax * 100).toFixed(1);
+                  const color = ls.combined_pct >= 80 ? '#22c55e' : ls.combined_pct >= 50 ? '#f59e0b' : '#ef4444';
+                  return `<div class="flex items-center gap-2">
+                    <div class="w-16 text-xs text-right text-ovos-muted truncate" title="${m.display||lang}">${m.native||lang}</div>
+                    <div class="flex-1 progress-bar h-4 rounded">
+                      <div class="h-full rounded flex items-center pl-1.5" style="width:${w}%;background:${color};min-width:2rem">
+                        <span class="text-xs font-bold" style="color:#000">${ls.combined_pct.toFixed(0)}%</span>
+                      </div>
+                    </div>
+                  </div>`;
+                }).join('')}
+              </div>
+            </div>
+
+            <div class="bg-ovos-card rounded-xl p-4">
+              <h2 class="text-sm font-bold mb-1">Coverage by file type</h2>
+              <p class="text-xs text-ovos-muted mb-3">How each file type is covered across all languages. Dialog files are the most numerous.</p>
+              <div class="space-y-3">
+                ${fileTypes.filter(ft => stats.source_by_type[ft]).map(ft => {
+                  const src = stats.source_by_type[ft];
+                  // Average coverage across all languages for this type
+                  const avgPct = langs.length ? (langs.reduce((s,l) => s + (stats.languages[l].by_type[ft]?.pct || 0), 0) / langs.length) : 0;
+                  const bestLang = langs.reduce((best, l) => {
+                    const p = stats.languages[l].by_type[ft]?.pct || 0;
+                    return p > (stats.languages[best]?.by_type[ft]?.pct || 0) ? l : best;
+                  }, langs[0]);
+                  const bestPct = stats.languages[bestLang]?.by_type[ft]?.pct || 0;
+                  const color = avgPct >= 60 ? '#22c55e' : avgPct >= 30 ? '#f59e0b' : '#ef4444';
+                  return `<div>
+                    <div class="flex items-center justify-between text-xs mb-0.5">
+                      <span class="mono font-bold">.${ft} <span class="text-ovos-muted font-normal">(${src} files)</span></span>
+                      <span>avg ${avgPct.toFixed(0)}% &middot; best: ${(meta[bestLang]?.native||bestLang)} ${bestPct.toFixed(0)}%</span>
+                    </div>
+                    <div class="progress-bar h-2.5"><div class="progress-fill" style="width:${avgPct}%;background:${color}"></div></div>
+                  </div>`;
+                }).join('')}
+              </div>
             </div>
           </div>
 
-          <!-- Per-language coverage table -->
-          <h2 class="text-lg font-bold mb-3">Coverage by language</h2>
-          <p class="text-sm text-ovos-muted mb-3">Click a language to start translating. <a href="data/dataset.tsv" download class="text-ovos-accent">Download intent dataset (TSV)</a></p>
+          <!-- Validation issues breakdown -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="bg-ovos-card rounded-xl p-4">
+              <h2 class="text-sm font-bold mb-1">Validation issues by rule</h2>
+              <p class="text-xs text-ovos-muted mb-3">Most common issues found in translated files. Fix these to improve quality.</p>
+              <div class="space-y-1.5">
+                ${valRules.slice(0, 8).map(([rule, count]) => {
+                  const w = (count / valMax * 100).toFixed(1);
+                  const isError = rule.includes('missing') || rule.includes('compile');
+                  return `<div class="flex items-center gap-2">
+                    <div class="w-36 text-xs text-right text-ovos-muted truncate mono" title="${rule}">${rule}</div>
+                    <div class="flex-1 progress-bar h-3.5 rounded">
+                      <div class="h-full rounded flex items-center pl-1.5" style="width:${w}%;background:${isError ? '#ef4444' : '#f59e0b'};min-width:2rem">
+                        <span class="text-xs font-bold" style="color:#000">${count}</span>
+                      </div>
+                    </div>
+                  </div>`;
+                }).join('')}
+              </div>
+            </div>
 
-          <div class="overflow-x-auto rounded-xl border border-ovos-card">
+            <div class="bg-ovos-card rounded-xl p-4">
+              <h2 class="text-sm font-bold mb-1">Fully usable languages</h2>
+              <p class="text-xs text-ovos-muted mb-3">Languages where the voice assistant can understand users for most skills. "Fully usable" = intent files translated for 50%+ of skills.</p>
+              <div class="flex flex-wrap gap-2">
+                ${langs.map(lang => {
+                  const ls = stats.languages[lang];
+                  const m = meta[lang] || {};
+                  const ratio = ls.skills_full_intent / stats.total_skills;
+                  const cls = ratio >= 0.5 ? 'badge-green' : ratio >= 0.25 ? 'badge-amber' : 'badge-gray';
+                  return `<div class="badge ${cls}" title="${ls.skills_full_intent}/${stats.total_skills} skills with all intents translated">${m.native||lang} ${ls.skills_full_intent}/${stats.total_skills}</div>`;
+                }).join('')}
+              </div>
+            </div>
+          </div>
+
+          <!-- Coverage table -->
+          <h2 class="text-lg font-bold mb-2">Detailed coverage table</h2>
+          <div class="callout mb-4 text-xs">
+            <strong>How to read this table:</strong>
+            <ul class="mt-1 space-y-0.5 text-ovos-muted list-disc ml-4">
+              <li><strong class="text-ovos-text">Overall</strong> — percentage of all English source files that exist in this language</li>
+              <li><strong class="text-ovos-text mono">.intent</strong> — training phrases that teach the voice assistant to recognize user speech. Most critical for usability</li>
+              <li><strong class="text-ovos-text mono">.dialog</strong> — spoken responses (what the assistant says back). Important for natural interaction</li>
+              <li><strong class="text-ovos-text mono">.voc</strong> — short trigger keywords for the Adapt intent engine</li>
+              <li><strong class="text-ovos-text">Skills</strong> — how many skills have at least one translated file in this language (X/${stats.total_skills})</li>
+              <li><strong class="text-ovos-text">Full intent</strong> — how many skills have <em>all</em> their .intent files translated. A skill with full intent coverage can understand users in that language</li>
+            </ul>
+            <p class="mt-2 text-ovos-muted">
+              <a href="data/dataset.tsv" download class="text-ovos-accent">Download the full intent dataset</a> (TSV, all languages) for ML training or analysis.
+            </p>
+          </div>
+
+          <div class="overflow-x-auto rounded-xl border border-ovos-card mb-8">
           <table class="text-sm w-full">
             <thead>
               <tr class="text-ovos-muted text-left bg-ovos-card">
                 <th class="py-2.5 px-3 sticky left-0 bg-ovos-card z-10">Language</th>
-                <th class="py-2.5 px-2 text-right">Overall</th>
-                ${fileTypes.filter(ft => stats.source_by_type[ft]).map(ft => `<th class="py-2.5 px-2 text-right mono">.${ft}</th>`).join('')}
-                <th class="py-2.5 px-2 text-right">Skills</th>
-                <th class="py-2.5 px-2 text-right" title="Skills with 100% intent coverage">Full intent</th>
+                <th class="py-2.5 px-2 text-right" title="Percentage of all English source files translated">Overall</th>
+                ${fileTypes.filter(ft => stats.source_by_type[ft]).map(ft => {
+                  const titles = {
+                    intent: 'Training phrases — teaches the assistant to understand speech',
+                    dialog: 'Spoken responses — what the assistant says back',
+                    voc: 'Trigger keywords for Adapt intent matching',
+                    entity: 'Entity examples (slot values)',
+                    rx: 'Regex patterns for entity extraction',
+                    value: 'Display name → system value mapping',
+                    'skill.json': 'Skill metadata (name, description, examples)',
+                  };
+                  return `<th class="py-2.5 px-2 text-right mono" title="${titles[ft] || ft}">.${ft}</th>`;
+                }).join('')}
+                <th class="py-2.5 px-2 text-right" title="Skills with at least one translated file">Skills</th>
+                <th class="py-2.5 px-2 text-right" title="Skills where ALL .intent files are translated — the assistant can understand users for these skills">Full intent</th>
               </tr>
             </thead>
             <tbody>
@@ -1291,7 +1404,7 @@ Right now in {location} it's {condition}
                   <td class="py-2 px-3 sticky left-0 bg-ovos-bg z-10">
                     <a href="#/dashboard" class="hover:no-underline">
                       <div class="font-medium">${escapeHtml(m.native || lang)}</div>
-                      <div class="text-xs text-ovos-muted">${lang}</div>
+                      <div class="text-xs text-ovos-muted">${escapeHtml(m.display || lang)}</div>
                     </a>
                   </td>
                   <td class="py-2 px-2 text-right">
@@ -1303,7 +1416,7 @@ Right now in {location} it's {condition}
                     return `<td class="py-2 px-2 text-right text-xs">${t.pct > 0 ? `<span class="${t.pct >= 80 ? 'text-green-400' : t.pct >= 50 ? 'text-yellow-400' : 'text-red-400'}">${t.pct}%</span><br><span class="text-ovos-muted">${t.translated}/${t.source}</span>` : '<span class="text-ovos-muted">—</span>'}</td>`;
                   }).join('')}
                   <td class="py-2 px-2 text-right text-xs">${ls.skills_any_coverage}/${stats.total_skills}</td>
-                  <td class="py-2 px-2 text-right text-xs">${ls.skills_full_intent}</td>
+                  <td class="py-2 px-2 text-right text-xs font-medium ${ls.skills_full_intent >= stats.total_skills * 0.5 ? 'text-green-400' : ''}">${ls.skills_full_intent}/${stats.total_skills}</td>
                 </tr>`;
               }).join('')}
             </tbody>
@@ -1311,13 +1424,14 @@ Right now in {location} it's {condition}
           </div>
 
           <!-- Coverage heatmap -->
-          <h2 class="text-lg font-bold mt-8 mb-3">Coverage heatmap</h2>
+          <h2 class="text-lg font-bold mb-2">Coverage heatmap</h2>
+          <p class="text-sm text-ovos-muted mb-3">Each cell shows one skill's coverage in one language. Hover for details. Dark gaps are where translations are needed most.</p>
           <div class="overflow-x-auto rounded-xl border border-ovos-card p-3 bg-ovos-card">
             <div class="flex gap-0.5 mb-1">
               <div class="w-24 flex-shrink-0"></div>
               ${(() => {
                 const skillIds = coverage.skills || [];
-                return skillIds.map(s => `<div class="w-5 flex-shrink-0 text-center" title="${s}"><span class="text-xs text-ovos-muted" style="writing-mode:vertical-lr;transform:rotate(180deg);font-size:0.6rem">${s.replace('ovos-skill-','').substring(0,8)}</span></div>`).join('');
+                return skillIds.map(s => `<div class="w-5 flex-shrink-0 text-center" title="${s}"><span class="text-xs text-ovos-muted" style="writing-mode:vertical-lr;transform:rotate(180deg);font-size:0.6rem">${s.replace('ovos-skill-','').replace('ovos-','').substring(0,8)}</span></div>`).join('');
               })()}
             </div>
             ${langs.map(lang => {
@@ -1328,15 +1442,15 @@ Right now in {location} it's {condition}
                 ${skillIds.map(sid => {
                   const pct = coverage.matrix?.[sid]?.[lang]?.combined_pct;
                   const bg = pct == null ? '#1a1a1a' : pct >= 80 ? '#166534' : pct >= 50 ? '#713f12' : pct > 0 ? '#7f1d1d' : '#1a1a1a';
-                  return `<div class="w-5 h-4 rounded-sm flex-shrink-0" style="background:${bg}" title="${sid}: ${pct != null ? pct+'%' : 'none'}"></div>`;
+                  return `<div class="w-5 h-4 rounded-sm flex-shrink-0 cursor-default" style="background:${bg}" title="${sid}: ${pct != null ? pct.toFixed(0)+'%' : 'no translation'}"></div>`;
                 }).join('')}
               </div>`;
             }).join('')}
             <div class="flex gap-3 mt-3 text-xs text-ovos-muted">
-              <span><span class="inline-block w-3 h-3 rounded-sm" style="background:#166534"></span> ≥80%</span>
-              <span><span class="inline-block w-3 h-3 rounded-sm" style="background:#713f12"></span> 50-79%</span>
-              <span><span class="inline-block w-3 h-3 rounded-sm" style="background:#7f1d1d"></span> 1-49%</span>
-              <span><span class="inline-block w-3 h-3 rounded-sm" style="background:#1a1a1a"></span> none</span>
+              <span><span class="inline-block w-3 h-3 rounded-sm align-middle" style="background:#166534"></span> ≥80% (good)</span>
+              <span><span class="inline-block w-3 h-3 rounded-sm align-middle" style="background:#713f12"></span> 50-79% (partial)</span>
+              <span><span class="inline-block w-3 h-3 rounded-sm align-middle" style="background:#7f1d1d"></span> 1-49% (started)</span>
+              <span><span class="inline-block w-3 h-3 rounded-sm align-middle" style="background:#1a1a1a"></span> none (needs help!)</span>
             </div>
           </div>
         </div>`;
