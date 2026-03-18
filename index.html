@@ -1718,28 +1718,32 @@ Right now in {location} it's {condition}
 
       // For JSON form: sync form fields → hidden textarea
       if (isJsonFile) {
-        const enEntries = srcData?.entries || [];
+        const srcEntries = srcData?.entries || [];
         function syncJsonForm() {
-          // Rebuild the file content from form fields + non-translatable source entries
-          const lines = [];
-          // Non-translatable entries come from source
-          for (const e of enEntries) {
-            if (e.translatable === false) {
-              lines.push(e.text);
-            }
-          }
-          // Translatable entries come from form
-          document.querySelectorAll('.json-field').forEach(field => {
-            const text = field.value.trim();
-            if (text) {
-              if (field.dataset.list) {
-                text.split('\n').forEach(l => { if (l.trim()) lines.push(l.trim()); });
+          // Rebuild valid JSON from form fields + non-translatable source entries
+          const obj = {};
+          // Non-translatable entries from source
+          for (const e of srcEntries) {
+            if (e.translatable === false && e.key) {
+              if (e.index != null) {
+                if (!obj[e.key]) obj[e.key] = [];
+                obj[e.key].push(e.text);
               } else {
-                lines.push(text);
+                obj[e.key] = e.text;
               }
             }
+          }
+          // Translatable entries from form
+          document.querySelectorAll('.json-field').forEach(field => {
+            const key = field.dataset.key;
+            if (!key) return;
+            if (field.dataset.list) {
+              obj[key] = field.value.split('\n').filter(l => l.trim());
+            } else {
+              obj[key] = field.value;
+            }
           });
-          editor.value = lines.join('\n');
+          editor.value = JSON.stringify(obj, null, 2);
           editor.dispatchEvent(new Event('input'));
         }
         document.querySelectorAll('.json-field').forEach(field => {
@@ -1763,7 +1767,7 @@ Right now in {location} it's {condition}
         }
 
         // Update JSON preview if applicable
-        if (editor.dataset.isJson) updateJsonPreview(text);
+        if (editor.dataset.isJson) updateJsonPreview();
 
         // Update expansion preview
         if (editor.dataset.hasExpansion) updateExpansionPreview(text);
@@ -1822,24 +1826,47 @@ Right now in {location} it's {condition}
     }
 
     // --- JSON preview ---
-    function updateJsonPreview(text) {
+    function updateJsonPreview() {
       const preview = document.getElementById('json-preview');
       const status = document.getElementById('json-status');
       if (!preview || !status) return;
-      if (!text.trim()) {
+
+      // Reconstruct JSON from form fields
+      const fields = document.querySelectorAll('.json-field');
+      const srcEntries = window._editorFileData?.langs?.[document.getElementById('src-lang-select')?.value || 'en-US']?.entries || [];
+
+      const obj = {};
+      // Start with non-translatable fields from source
+      for (const e of srcEntries) {
+        if (e.translatable === false && e.key) {
+          if (e.index != null) {
+            if (!obj[e.key]) obj[e.key] = [];
+            obj[e.key].push(e.text);
+          } else {
+            obj[e.key] = e.text;
+          }
+        }
+      }
+      // Add translatable fields from form
+      fields.forEach(field => {
+        const key = field.dataset.key;
+        if (!key) return;
+        if (field.dataset.list) {
+          obj[key] = field.value.split('\n').filter(l => l.trim());
+        } else {
+          obj[key] = field.value;
+        }
+      });
+
+      if (Object.keys(obj).length === 0) {
         preview.innerHTML = '<span class="text-ovos-muted">Empty</span>';
         status.textContent = '';
         return;
       }
-      try {
-        const parsed = JSON.parse(text);
-        const formatted = JSON.stringify(parsed, null, 2);
-        preview.innerHTML = highlightJson(escapeHtml(formatted));
-        status.innerHTML = '<span class="text-green-400">valid JSON</span>';
-      } catch (e) {
-        preview.innerHTML = `<span class="text-red-400">${escapeHtml(e.message)}</span>`;
-        status.innerHTML = '<span class="text-red-400">invalid JSON</span>';
-      }
+
+      const formatted = JSON.stringify(obj, null, 2);
+      preview.innerHTML = highlightJson(escapeHtml(formatted));
+      status.innerHTML = '<span class="text-green-400">valid JSON</span>';
     }
 
     async function handleAutoTranslate(tgtLang) {

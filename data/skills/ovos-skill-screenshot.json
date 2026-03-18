@@ -101,6 +101,22 @@
           "validation": [],
           "file_path": "ovos-skill-screenshot/locale/es-es/screenshot.failed.dialog"
         },
+        "fr-FR": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Je n'ai pas pu prendre la capture d'écran."
+            },
+            {
+              "line": 2,
+              "text": "La capture d'écran a échoué."
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-screenshot/locale/fr-fr/screenshot.failed.dialog"
+        },
         "gl-ES": {
           "entries": [
             {
@@ -160,6 +176,7 @@
         "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/de-de/screenshot.failed.dialog",
         "en-US": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/en-us/screenshot.failed.dialog",
         "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/es-es/screenshot.failed.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/fr-fr/screenshot.failed.dialog",
         "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/gl-es/screenshot.failed.dialog",
         "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/pt-pt/screenshot.failed.dialog"
       }
@@ -263,6 +280,22 @@
           ],
           "file_path": "ovos-skill-screenshot/locale/es-es/screenshot.taken.dialog"
         },
+        "fr-FR": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Capture d'écran enregistrée."
+            },
+            {
+              "line": 2,
+              "text": "Capture d'écran prise."
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-screenshot/locale/fr-fr/screenshot.taken.dialog"
+        },
         "gl-ES": {
           "entries": [
             {
@@ -328,6 +361,7 @@
         "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/de-de/screenshot.taken.dialog",
         "en-US": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/en-us/screenshot.taken.dialog",
         "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/es-es/screenshot.taken.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/fr-fr/screenshot.taken.dialog",
         "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/gl-es/screenshot.taken.dialog",
         "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/pt-pt/screenshot.taken.dialog"
       }
@@ -586,6 +620,56 @@
           "validation": [],
           "file_path": "ovos-skill-screenshot/locale/es-es/skill.json"
         },
+        "fr-FR": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "prendre une capture d'écran",
+              "key": "examples",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 2,
+              "text": "faire une capture d'écran",
+              "key": "examples",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 3,
+              "text": "capturer l'écran",
+              "key": "examples",
+              "translatable": true,
+              "index": 2
+            },
+            {
+              "line": 4,
+              "text": "capture l'écran",
+              "key": "examples",
+              "translatable": true,
+              "index": 3
+            },
+            {
+              "line": 5,
+              "text": "enregistrer une capture d'écran",
+              "key": "examples",
+              "translatable": true,
+              "index": 4
+            },
+            {
+              "line": 6,
+              "text": "capture d'écran",
+              "key": "examples",
+              "translatable": true,
+              "index": 5
+            }
+          ],
+          "line_count": 6,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-screenshot/locale/fr-fr/skill.json"
+        },
         "gl-ES": {
           "entries": [
             {
@@ -709,6 +793,7 @@
         "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/de-de/skill.json",
         "en-US": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/en-us/skill.json",
         "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/es-es/skill.json",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/fr-fr/skill.json",
         "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/gl-es/skill.json",
         "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/pt-PT/skill.json"
       }
@@ -948,16 +1033,32 @@
             },
             {
               "line": 2,
+              "text": "capture l'écran"
+            },
+            {
+              "line": 3,
+              "text": "capturer l'écran"
+            },
+            {
+              "line": 4,
+              "text": "enregistrer une capture d'écran"
+            },
+            {
+              "line": 5,
+              "text": "faire une capture d'écran"
+            },
+            {
+              "line": 6,
               "text": "prendre une capture d'écran"
             }
           ],
-          "line_count": 2,
+          "line_count": 6,
           "slots": [],
           "validation": [
             {
               "rule_name": "intent.min_lines",
               "severity": "warning",
-              "message": "Intent file expands to 2 sentences (2 templates); 10+ recommended for Padatious accuracy.",
+              "message": "Intent file expands to 6 sentences (6 templates); 10+ recommended for Padatious accuracy.",
               "line_number": null
             }
           ],

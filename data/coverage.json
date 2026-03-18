@@ -16,12 +16,10 @@
     "ovos-skill-diagnostics",
     "ovos-skill-dictation",
     "ovos-skill-easter-eggs",
-    "ovos-skill-fallback-chatgpt",
     "ovos-skill-fallback-unknown",
     "ovos-skill-fuster-quotes",
     "ovos-skill-ggwave",
     "ovos-skill-hello-world",
-    "ovos-skill-homescreen",
     "ovos-skill-icanhazdadjokes",
     "ovos-skill-ip",
     "ovos-skill-iss-location",
@@ -34,15 +32,11 @@
     "ovos-skill-number-facts",
     "ovos-skill-parrot",
     "ovos-skill-personal",
-    "ovos-skill-pyradios",
     "ovos-skill-randomness",
     "ovos-skill-screenshot",
-    "ovos-skill-somafm",
     "ovos-skill-soundcloud",
     "ovos-skill-speedtest",
     "ovos-skill-spelling",
-    "ovos-skill-spotify",
-    "ovos-skill-tunein",
     "ovos-skill-volume",
     "ovos-skill-wallpapers",
     "ovos-skill-weather",
@@ -51,8 +45,6 @@
     "ovos-skill-wolfie",
     "ovos-skill-wordnet",
     "ovos-skill-word-of-the-day",
-    "ovos-skill-youtube",
-    "ovos-skill-youtube-music",
     "ovos-core",
     "ovos-ocp-pipeline-plugin",
     "ovos-common-query-pipeline-plugin",
@@ -234,6 +226,7 @@
     "cs": "cs-CZ",
     "da": "da-DK",
     "de": "de-DE",
+    "en": "en-US",
     "es": "es-ES",
     "eu": "eu",
     "fr": "fr-FR",
@@ -680,6 +673,12 @@
         "skill.json_pct": 0.0,
         "combined_pct": 33.3
       },
+      "fr-FR": {
+        "voc_pct": 100.0,
+        "dialog_pct": 100.0,
+        "skill.json_pct": 100.0,
+        "combined_pct": 100.0
+      },
       "gl-ES": {
         "voc_pct": 100.0,
         "dialog_pct": 100.0,
@@ -725,6 +724,12 @@
         "combined_pct": 100.0
       },
       "es-ES": {
+        "dialog_pct": 100.0,
+        "intent_pct": 100.0,
+        "skill.json_pct": 100.0,
+        "combined_pct": 100.0
+      },
+      "fr-FR": {
         "dialog_pct": 100.0,
         "intent_pct": 100.0,
         "skill.json_pct": 100.0,
@@ -1199,58 +1204,6 @@
         "combined_pct": 86.7
       }
     },
-    "ovos-skill-fallback-chatgpt": {
-      "ca-ES": {
-        "dialog_pct": 100.0,
-        "skill.json_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "da-DK": {
-        "dialog_pct": 100.0,
-        "skill.json_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "de-DE": {
-        "dialog_pct": 100.0,
-        "skill.json_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "en-US": {
-        "dialog_pct": 100.0,
-        "skill.json_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "eu": {
-        "dialog_pct": 100.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 66.7
-      },
-      "fr-FR": {
-        "dialog_pct": 100.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 66.7
-      },
-      "gl-ES": {
-        "dialog_pct": 100.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 66.7
-      },
-      "it-IT": {
-        "dialog_pct": 100.0,
-        "skill.json_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "nl-NL": {
-        "dialog_pct": 100.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 66.7
-      },
-      "pt-PT": {
-        "dialog_pct": 100.0,
-        "skill.json_pct": 100.0,
-        "combined_pct": 100.0
-      }
-    },
     "ovos-skill-fallback-unknown": {
       "ca-ES": {
         "voc_pct": 100.0,
@@ -1358,7 +1311,17 @@
         "combined_pct": 100.0
       }
     },
-    "ovos-skill-fuster-quotes": {},
+    "ovos-skill-fuster-quotes": {
+      "ca-ES": {
+        "combined_pct": 0.0
+      },
+      "en-US": {
+        "combined_pct": 0.0
+      },
+      "fr-FR": {
+        "combined_pct": 0.0
+      }
+    },
     "ovos-skill-ggwave": {
       "ca-ES": {
         "intent_pct": 100.0,
@@ -1580,7 +1543,6 @@
         "combined_pct": 66.7
       }
     },
-    "ovos-skill-homescreen": {},
     "ovos-skill-icanhazdadjokes": {
       "ca-ES": {
         "voc_pct": 100.0,
@@ -2077,11 +2039,11 @@
         "combined_pct": 43.9
       },
       "fr-FR": {
-        "voc_pct": 0.0,
+        "voc_pct": 100.0,
         "intent_pct": 100.0,
-        "dialog_pct": 93.3,
+        "dialog_pct": 100.0,
         "entity_pct": 100.0,
-        "combined_pct": 43.9
+        "combined_pct": 100.0
       },
       "gl-ES": {
         "voc_pct": 100.0,
@@ -2630,88 +2592,6 @@
         "combined_pct": 90.9
       }
     },
-    "ovos-skill-pyradios": {
-      "ca-ES": {
-        "voc_pct": 100.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 66.7
-      },
-      "cs-CZ": {
-        "voc_pct": 100.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 66.7
-      },
-      "da-DK": {
-        "voc_pct": 100.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 66.7
-      },
-      "de-DE": {
-        "voc_pct": 100.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 66.7
-      },
-      "en-US": {
-        "voc_pct": 100.0,
-        "skill.json_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "es-ES": {
-        "voc_pct": 100.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 66.7
-      },
-      "eu": {
-        "voc_pct": 50.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 33.3
-      },
-      "fr-FR": {
-        "voc_pct": 100.0,
-        "skill.json_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "hu-HU": {
-        "voc_pct": 100.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 66.7
-      },
-      "it-IT": {
-        "voc_pct": 100.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 66.7
-      },
-      "nl-NL": {
-        "voc_pct": 100.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 66.7
-      },
-      "pl-PL": {
-        "voc_pct": 100.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 66.7
-      },
-      "pt-PT": {
-        "voc_pct": 100.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 66.7
-      },
-      "ru-RU": {
-        "voc_pct": 100.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 66.7
-      },
-      "sv-FI": {
-        "voc_pct": 100.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 66.7
-      },
-      "sv-SE": {
-        "voc_pct": 100.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 66.7
-      }
-    },
     "ovos-skill-randomness": {
       "en-US": {
         "dialog_pct": 100.0,
@@ -2767,10 +2647,10 @@
         "combined_pct": 25.0
       },
       "fr-FR": {
-        "dialog_pct": 0.0,
-        "skill.json_pct": 0.0,
+        "dialog_pct": 100.0,
+        "skill.json_pct": 100.0,
         "intent_pct": 100.0,
-        "combined_pct": 25.0
+        "combined_pct": 100.0
       },
       "gl-ES": {
         "dialog_pct": 100.0,
@@ -2795,28 +2675,6 @@
         "skill.json_pct": 100.0,
         "intent_pct": 100.0,
         "combined_pct": 100.0
-      }
-    },
-    "ovos-skill-somafm": {
-      "en-US": {
-        "voc_pct": 100.0,
-        "skill.json_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "eu": {
-        "voc_pct": 66.7,
-        "skill.json_pct": 0.0,
-        "combined_pct": 50.0
-      },
-      "fr-FR": {
-        "voc_pct": 100.0,
-        "skill.json_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "gl-ES": {
-        "voc_pct": 66.7,
-        "skill.json_pct": 0.0,
-        "combined_pct": 50.0
       }
     },
     "ovos-skill-soundcloud": {
@@ -3009,137 +2867,6 @@
       },
       "pt-PT": {
         "intent_pct": 100.0,
-        "skill.json_pct": 0.0,
-        "combined_pct": 50.0
-      }
-    },
-    "ovos-skill-spotify": {
-      "ca-ES": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "da-DK": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "de-DE": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "en-US": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "es-ES": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "fr-FR": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "gl-ES": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "it-IT": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "nl-NL": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "pl-PL": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "pt-BR": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "ru-RU": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "sv-SE": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      }
-    },
-    "ovos-skill-tunein": {
-      "ca-ES": {
-        "voc_pct": 66.7,
-        "skill.json_pct": 0.0,
-        "combined_pct": 50.0
-      },
-      "cs-CZ": {
-        "voc_pct": 66.7,
-        "skill.json_pct": 0.0,
-        "combined_pct": 50.0
-      },
-      "da-DK": {
-        "voc_pct": 66.7,
-        "skill.json_pct": 0.0,
-        "combined_pct": 50.0
-      },
-      "de-DE": {
-        "voc_pct": 66.7,
-        "skill.json_pct": 0.0,
-        "combined_pct": 50.0
-      },
-      "en-US": {
-        "voc_pct": 100.0,
-        "skill.json_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "es-ES": {
-        "voc_pct": 66.7,
-        "skill.json_pct": 0.0,
-        "combined_pct": 50.0
-      },
-      "fr-FR": {
-        "voc_pct": 66.7,
-        "skill.json_pct": 0.0,
-        "combined_pct": 50.0
-      },
-      "hu-HU": {
-        "voc_pct": 66.7,
-        "skill.json_pct": 0.0,
-        "combined_pct": 50.0
-      },
-      "it-IT": {
-        "voc_pct": 66.7,
-        "skill.json_pct": 0.0,
-        "combined_pct": 50.0
-      },
-      "nl-NL": {
-        "voc_pct": 66.7,
-        "skill.json_pct": 0.0,
-        "combined_pct": 50.0
-      },
-      "pl-PL": {
-        "voc_pct": 66.7,
-        "skill.json_pct": 0.0,
-        "combined_pct": 50.0
-      },
-      "pt-PT": {
-        "voc_pct": 66.7,
-        "skill.json_pct": 0.0,
-        "combined_pct": 50.0
-      },
-      "ru-RU": {
-        "voc_pct": 66.7,
-        "skill.json_pct": 0.0,
-        "combined_pct": 50.0
-      },
-      "sv-FI": {
-        "voc_pct": 66.7,
-        "skill.json_pct": 0.0,
-        "combined_pct": 50.0
-      },
-      "sv-SE": {
-        "voc_pct": 66.7,
         "skill.json_pct": 0.0,
         "combined_pct": 50.0
       }
@@ -3770,50 +3497,6 @@
       "pt-PT": {
         "voc_pct": 100.0,
         "dialog_pct": 100.0,
-        "combined_pct": 100.0
-      }
-    },
-    "ovos-skill-youtube": {
-      "de-DE": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "en-US": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "es-ES": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "fr-FR": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "it-IT": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "pt-PT": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      }
-    },
-    "ovos-skill-youtube-music": {
-      "de-DE": {
-        "voc_pct": 50.0,
-        "combined_pct": 50.0
-      },
-      "en-US": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "fr-FR": {
-        "voc_pct": 100.0,
-        "combined_pct": 100.0
-      },
-      "it-IT": {
-        "voc_pct": 100.0,
         "combined_pct": 100.0
       }
     },
