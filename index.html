@@ -1087,7 +1087,7 @@ Right now in {location} it's {condition}
           const t = ls.by_type[ft];
           if (t) { src += t.source; have += t.translated; }
         }
-        return src > 0 && (have / src * 100) >= 70;
+        return src > 0 && (have / src * 100) >= 50;
       });
       const barMax = Math.max(...langs.map(l => stats.languages[l].combined_pct), 1);
 
@@ -1203,7 +1203,7 @@ Right now in {location} it's {condition}
 
             <div class="bg-ovos-card rounded-xl p-4">
               <h2 class="text-sm font-bold mb-1">Usable languages</h2>
-              <p class="text-xs text-ovos-muted mb-3">Languages with 70%+ coverage of core files (.intent, .voc, .dialog) — the voice assistant understands and responds in these languages.</p>
+              <p class="text-xs text-ovos-muted mb-3">Languages with 50%+ coverage of core files (.intent, .voc, .dialog) — the voice assistant understands and responds in these languages.</p>
               <div class="flex flex-wrap gap-2">
                 ${langs.map(lang => {
                   const ls = stats.languages[lang];
@@ -1216,7 +1216,7 @@ Right now in {location} it's {condition}
                     if (t) { coreSrc += t.source; coreHave += t.translated; }
                   }
                   const corePct = coreSrc > 0 ? (coreHave / coreSrc * 100) : 0;
-                  const cls = corePct >= 70 ? 'badge-green' : corePct >= 40 ? 'badge-amber' : 'badge-gray';
+                  const cls = corePct >= 50 ? 'badge-green' : corePct >= 25 ? 'badge-amber' : 'badge-gray';
                   return `<div class="badge ${cls}" title="${corePct.toFixed(0)}% core coverage (intent+dialog+voc)">${m.native||lang} ${corePct.toFixed(0)}%</div>`;
                 }).join('')}
               </div>
