@@ -1160,12 +1160,13 @@ Right now in {location} it's {condition}
               <div class="space-y-3">
                 ${fileTypes.filter(ft => stats.source_by_type[ft]).map(ft => {
                   const src = stats.source_by_type[ft];
-                  // Average coverage across all languages for this type
-                  const avgPct = langs.length ? (langs.reduce((s,l) => s + (stats.languages[l].by_type[ft]?.pct || 0), 0) / langs.length) : 0;
-                  const bestLang = langs.reduce((best, l) => {
+                  // Average coverage across non-English languages for this type
+                  const nonEnLangs = langs.filter(l => l !== 'en-US');
+                  const avgPct = nonEnLangs.length ? (nonEnLangs.reduce((s,l) => s + (stats.languages[l].by_type[ft]?.pct || 0), 0) / nonEnLangs.length) : 0;
+                  const bestLang = nonEnLangs.reduce((best, l) => {
                     const p = stats.languages[l].by_type[ft]?.pct || 0;
                     return p > (stats.languages[best]?.by_type[ft]?.pct || 0) ? l : best;
-                  }, langs[0]);
+                  }, nonEnLangs[0]);
                   const bestPct = stats.languages[bestLang]?.by_type[ft]?.pct || 0;
                   const color = avgPct >= 60 ? '#22c55e' : avgPct >= 30 ? '#f59e0b' : '#ef4444';
                   return `<div>
