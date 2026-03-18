@@ -1440,9 +1440,8 @@ Right now in {location} it's {condition}
               </div>
               <div class="flex flex-wrap gap-1.5">
                 ${displayLangs.map(lang => {
-                  const langDir = lang.toLowerCase();
-                  const ghUrl = `https://github.com/${entity.repo}/new/dev?filename=locale/${langDir}/${entityFileName}&value=${encodeURIComponent('# Add example values for {' + entity.name + '}, one per line\\n')}`;
-                  return `<a href="${ghUrl}" target="_blank" class="badge badge-gray hover:no-underline hover:opacity-80" title="Create ${entityFileName} for ${(meta[lang]?.native||lang)} on GitHub">${lang} <span class="font-normal">+ create</span></a>`;
+                  const href = `#/skill/${entity.skill}/${encodeURIComponent(entityFileName)}/${lang}`;
+                  return `<a href="${href}" class="badge badge-gray hover:no-underline hover:opacity-80" title="Create ${entityFileName} for ${(meta[lang]?.native||lang)}">${lang} <span class="font-normal">+ create</span></a>`;
                 }).join('')}
               </div>
             </div>`;
@@ -1614,34 +1613,48 @@ Right now in {location} it's {condition}
     async function renderEditor(el, skillId, fileKey, lang) {
       const skill = await fetchJSON(`data/skills/${skillId}.json`);
       const fileData = skill.files[fileKey];
-      if (!fileData) { el.innerHTML = `<p>File not found: ${escapeHtml(fileKey)}. <a href="#/skill/${skillId}">Back to skill</a></p>`; return; }
-
       const [org, repo] = skill.repo.split('/');
-      const targetData = fileData.langs[lang];
-      const ctx = fileData.context;
-      const editUrl = (fileData.edit_urls || {})[lang] || '';
-      const filePath = targetData?.file_path || filePathFromEditUrl(editUrl);
-      const currentText = targetData?.entries?.length ? targetData.entries.map(e => e.text).join('\n') : '';
-      // No auth required — submission opens a GitHub Issue
-      const isNew = !targetData || targetData.entries.length === 0;
-      const fileHelp = FILE_TYPE_HELP[fileData.type] || 'Translate this file to your language.';
-      const isJsonFile = fileData.type === 'skill.json' || fileData.type === 'settingsmeta';
-      const hasExpansion = ['intent', 'voc', 'dialog'].includes(fileData.type);
 
-      // Source language: prefer stored preference, then en-US, then first available
-      const availableSrcLangs = Object.keys(fileData.langs).filter(l => l !== lang);
+      // Handle creating a brand-new file (e.g. entity file that doesn't exist yet)
+      const isCreateMode = !fileData;
+      const fileType = isCreateMode ? (fileKey.endsWith('.entity') ? 'entity' : fileKey.split('.').pop()) : fileData.type;
+
+      const targetData = fileData?.langs?.[lang];
+      const ctx = isCreateMode ? null : fileData.context;
+      const editUrl = isCreateMode ? '' : ((fileData.edit_urls || {})[lang] || '');
+      const filePath = targetData?.file_path || (isCreateMode ? '' : filePathFromEditUrl(editUrl));
+      const currentText = targetData?.entries?.length ? targetData.entries.map(e => e.text).join('\n') : '';
+      const isNew = isCreateMode || !targetData || targetData.entries.length === 0;
+      const fileHelp = isCreateMode
+        ? `Create a new ${fileKey} file. Add example values, one per line.`
+        : (FILE_TYPE_HELP[fileData.type] || 'Translate this file to your language.');
+      const isJsonFile = !isCreateMode && (fileData.type === 'skill.json' || fileData.type === 'settingsmeta');
+      const hasExpansion = isCreateMode ? fileType === 'entity' : ['intent', 'voc', 'dialog'].includes(fileData.type);
+
+      // Source language
+      const availableSrcLangs = isCreateMode ? [] : Object.keys(fileData.langs).filter(l => l !== lang);
       const storedSrc = localStorage.getItem('ovos_src_lang');
       const defaultSrc = (storedSrc && availableSrcLangs.includes(storedSrc)) ? storedSrc
         : availableSrcLangs.includes('en-US') ? 'en-US'
         : availableSrcLangs[0] || lang;
       const srcLang = defaultSrc;
-      const srcData = fileData.langs[srcLang];
+      const srcData = isCreateMode ? null : fileData?.langs?.[srcLang];
 
-      // Compute file path for new files
+      // Compute file path for new files — guess from locale convention
       let newFilePath = filePath;
       if (!filePath && srcData?.file_path) {
-        // Replace source lang dir with target lang in the path
         newFilePath = srcData.file_path.replace(new RegExp(`/${srcLang.toLowerCase()}/|/${srcLang}/`, 'i'), `/${lang}/`);
+      }
+      if (!newFilePath && isCreateMode) {
+        // For brand-new files, guess path from other files in this skill
+        const anyFile = Object.values(skill.files)[0];
+        const anyPath = anyFile?.langs?.['en-US']?.file_path || anyFile?.langs?.[Object.keys(anyFile?.langs || {})[0]]?.file_path || '';
+        if (anyPath) {
+          // e.g. "locale/en-us/vocab/Test.voc" → "locale/{lang}/{fileKey}"
+          const localeMatch = anyPath.match(/^(.*\/locale\/)[^/]+\//);
+          if (localeMatch) newFilePath = localeMatch[1] + lang.toLowerCase() + '/' + fileKey;
+        }
+        if (!newFilePath) newFilePath = `locale/${lang.toLowerCase()}/${fileKey}`;
       }
 
       el.innerHTML = `
