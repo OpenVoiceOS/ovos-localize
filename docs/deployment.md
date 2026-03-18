@@ -82,7 +82,7 @@ User (browser)                    GitHub
 ### 5. User token permissions
 
 Users create a fine-grained PAT scoped to the `ovos-localize` repo only, with:
-- **Actions**: Read and write (to trigger `repository_dispatch`)
+- **Contents**: Read and write (required to trigger `repository_dispatch` events)
 
 This is the minimum permission needed. Users never get write access to skill repos.
 
