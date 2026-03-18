@@ -99,10 +99,6 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         Set languages
       </button>
-      <button onclick="showAuthModal()" id="auth-btn" class="text-sm px-3 py-1.5 rounded-lg border border-ovos-card hover:bg-ovos-hover flex items-center gap-2">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-        Sign in
-      </button>
     </div>
   </header>
 
@@ -122,443 +118,39 @@
 
   <script>
     // =========================================================================
-    // AUTH
+    // SUBMISSION (via GitHub Issues — zero auth required)
     // =========================================================================
-    const GH_API = 'https://api.github.com';
-    function getToken() { return localStorage.getItem('ovos_gh_token'); }
-    function setToken(t) { localStorage.setItem('ovos_gh_token', t); updateAuthUI(); }
-    function clearToken() { localStorage.removeItem('ovos_gh_token'); localStorage.removeItem('ovos_gh_user'); updateAuthUI(); }
-    function getUser() { const u = localStorage.getItem('ovos_gh_user'); return u ? JSON.parse(u) : null; }
+    const LOCALIZE_REPO = 'OpenVoiceOS/ovos-localize';
 
-    async function updateAuthUI() {
-      const btn = document.getElementById('auth-btn');
-      const token = getToken();
-      if (!token) {
-        btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Connect GitHub`;
-        btn.onclick = showAuthModal;
-        btn.className = 'text-sm px-3 py-1.5 rounded-lg border border-ovos-card hover:bg-ovos-hover flex items-center gap-2';
-        return;
-      }
-      // Try cached user first to avoid API call on every page load
-      const cached = getUser();
-      if (cached) {
-        btn.innerHTML = `<img src="${cached.avatar}" class="w-5 h-5 rounded-full"> ${cached.login}`;
-        btn.className = 'text-sm px-3 py-1.5 rounded-lg bg-ovos-card flex items-center gap-2';
-        btn.onclick = showAccountMenu;
-      }
-      // Validate in background
-      try {
-        const r = await ghFetch('/user');
-        if (r.login) {
-          localStorage.setItem('ovos_gh_user', JSON.stringify({ login: r.login, avatar: r.avatar_url }));
-          btn.innerHTML = `<img src="${r.avatar_url}" class="w-5 h-5 rounded-full"> ${r.login}`;
-          btn.onclick = showAccountMenu;
-        }
-      } catch {
-        btn.innerHTML = 'Token expired — reconnect';
-        btn.className = 'text-sm px-3 py-1.5 rounded-lg border border-red-500 text-red-400 hover:bg-ovos-hover flex items-center gap-2';
-        btn.onclick = showAuthModal;
-      }
-    }
-
-    function showAccountMenu() {
-      const user = getUser();
-      if (!user) return;
-      document.getElementById('modal-container').innerHTML = `
-        <div class="modal-backdrop" onclick="if(event.target===this)closeModal()">
-          <div class="modal" style="max-width:20rem">
-            <div class="flex items-center gap-3 mb-4">
-              <img src="${user.avatar}" class="w-10 h-10 rounded-full">
-              <div>
-                <div class="font-bold">${escapeHtml(user.login)}</div>
-                <div class="text-xs text-ovos-muted">Connected to GitHub</div>
-              </div>
-            </div>
-            <button onclick="clearToken();closeModal();route()" class="w-full px-4 py-2 text-sm rounded-lg border border-ovos-card hover:bg-ovos-hover text-left">
-              Disconnect
-            </button>
-          </div>
-        </div>`;
-    }
-
-    async function ghFetch(path, opts = {}) {
-      const token = getToken();
-      if (!token) throw new Error('Not authenticated — sign in first');
-      const url = path.startsWith('http') ? path : GH_API + path;
-      const r = await fetch(url, {
-        ...opts,
-        headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json', ...(opts.headers || {}) },
-      });
-      if (!r.ok) { const b = await r.json().catch(() => ({})); throw new Error(b.message || `GitHub API ${r.status}`); }
-      return r.status === 204 ? {} : r.json();
-    }
-
-    const GH_TOKEN_URL = 'https://github.com/settings/personal-access-tokens/new';
-
-    function showAuthModal() {
-      document.getElementById('modal-container').innerHTML = `
-        <div class="modal-backdrop" onclick="if(event.target===this)closeModal()">
-          <div class="modal" style="max-width:28rem">
-
-            <div class="text-center mb-5">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5" class="mx-auto mb-3"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              <h3 class="text-lg font-bold">Connect your GitHub account</h3>
-              <p class="text-sm text-ovos-muted mt-1">This lets you submit translations as pull requests directly from this page.</p>
-            </div>
-
-            <!-- Step indicator -->
-            <div id="auth-step-1">
-              <div class="flex items-center gap-3 mb-4">
-                <div class="w-7 h-7 rounded-full bg-ovos-accent text-white flex items-center justify-center text-sm font-bold flex-shrink-0">1</div>
-                <div class="text-sm">Create a GitHub access token <span class="text-ovos-muted">(one-time setup)</span></div>
-              </div>
-
-              <a href="${GH_TOKEN_URL}" target="_blank" onclick="document.getElementById('auth-step-1').classList.add('hidden');document.getElementById('auth-step-2').classList.remove('hidden');setTimeout(()=>document.getElementById('token-input')?.focus(),200)"
-                class="block w-full text-center px-4 py-3 bg-ovos-card rounded-xl hover:bg-ovos-hover hover:no-underline text-sm border border-ovos-card mb-3">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="inline mr-2 -mt-0.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                Open GitHub &rarr; Create token
-              </a>
-
-              <div class="text-xs text-ovos-muted space-y-1">
-                <p>On the GitHub page that opens:</p>
-                <ol class="list-decimal ml-4 space-y-0.5">
-                  <li>Give it a name like <strong>"OVOS Localize"</strong></li>
-                  <li>Set expiration (90 days is fine)</li>
-                  <li>Under <strong>Repository access</strong>, select <strong>"Only select repositories"</strong> and pick <strong>ovos-localize</strong></li>
-                  <li>Under <strong>Permissions → Contents</strong>, set to <strong>Read and write</strong></li>
-                  <li>Click <strong>"Generate token"</strong></li>
-                  <li>Copy the token that starts with <code class="text-ovos-accent">github_pat_</code></li>
-                </ol>
-              </div>
-
-              <div class="mt-4 text-center">
-                <button onclick="document.getElementById('auth-step-1').classList.add('hidden');document.getElementById('auth-step-2').classList.remove('hidden');setTimeout(()=>document.getElementById('token-input')?.focus(),100)"
-                  class="text-sm text-ovos-muted hover:text-ovos-text">I already have a token &rarr;</button>
-              </div>
-            </div>
-
-            <div id="auth-step-2" class="hidden">
-              <div class="flex items-center gap-3 mb-4">
-                <div class="w-7 h-7 rounded-full bg-ovos-accent text-white flex items-center justify-center text-sm font-bold flex-shrink-0">2</div>
-                <div class="text-sm">Paste your token below</div>
-              </div>
-
-              <div class="relative mb-3">
-                <input id="token-input" type="password" placeholder="github_pat_... or ghp_..."
-                  class="w-full bg-ovos-input text-ovos-text px-3 py-3 rounded-xl border border-ovos-card text-sm mono pr-20"
-                  onkeydown="if(event.key==='Enter')submitToken()"
-                  oninput="document.getElementById('auth-submit').disabled=!this.value.trim()">
-                <button onclick="const i=document.getElementById('token-input');i.type=i.type==='password'?'text':'password'" class="absolute right-2 top-2.5 text-xs text-ovos-muted hover:text-ovos-text px-2 py-1 rounded">show</button>
-              </div>
-
-              <button id="auth-submit" onclick="submitToken()" disabled class="w-full px-4 py-2.5 text-sm rounded-xl bg-ovos-accent text-white font-bold hover:opacity-80 disabled:opacity-40 mb-3">
-                Connect
-              </button>
-
-              <div id="auth-error" class="hidden text-sm text-red-400 text-center mb-3"></div>
-
-              <div class="text-xs text-ovos-muted text-center space-y-1">
-                <p>Your token is stored only in this browser's local storage.</p>
-                <p>It is sent only to <code>api.github.com</code> — never to any other server.</p>
-              </div>
-
-              <div class="mt-3 text-center">
-                <button onclick="document.getElementById('auth-step-2').classList.add('hidden');document.getElementById('auth-step-1').classList.remove('hidden')"
-                  class="text-sm text-ovos-muted hover:text-ovos-text">&larr; Back to step 1</button>
-              </div>
-            </div>
-
-            <div class="mt-4 pt-3 border-t border-ovos-card text-center">
-              <button onclick="closeModal()" class="text-sm text-ovos-muted hover:text-ovos-text">Cancel</button>
-            </div>
-          </div>
-        </div>`;
-    }
-    function closeModal() { document.getElementById('modal-container').innerHTML = ''; }
-
-    async function showReadme(repoFullName) {
-      const el = document.getElementById('modal-container');
-      el.innerHTML = `
-        <div class="modal-backdrop" onclick="if(event.target===this)closeModal()">
-          <div class="modal" style="max-width:48rem;max-height:85vh;display:flex;flex-direction:column">
-            <div class="flex items-center justify-between mb-3 flex-shrink-0">
-              <h3 class="text-lg font-bold">README — ${escapeHtml(repoFullName)}</h3>
-              <button onclick="closeModal()" class="text-ovos-muted hover:text-ovos-text px-2">&times;</button>
-            </div>
-            <div class="flex-1 overflow-auto text-sm text-ovos-muted flex items-center justify-center">
-              <span class="spinner"></span>&nbsp; Loading...
-            </div>
-          </div>
-        </div>`;
-
-      try {
-        // Fetch rendered README HTML from GitHub API
-        const r = await fetch('https://api.github.com/repos/' + repoFullName + '/readme', {
-          headers: { 'Accept': 'application/vnd.github.html+json' },
-          signal: AbortSignal.timeout(15000),
-        });
-        if (!r.ok) throw new Error(r.status === 404 ? 'No README found' : 'GitHub API ' + r.status);
-        const html = await r.text();
-
-        const content = el.querySelector('.overflow-auto');
-        content.className = 'flex-1 overflow-auto text-sm readme-content p-1';
-        content.innerHTML = html;
-      } catch (e) {
-        const content = el.querySelector('.overflow-auto');
-        content.innerHTML = '<p class="text-red-400">Failed to load README: ' + escapeHtml(e.message) + '</p><p class="mt-2"><a href="https://github.com/' + repoFullName + '#readme" target="_blank">View on GitHub</a></p>';
-      }
-    }
-    async function submitToken() {
-      const input = document.getElementById('token-input');
-      const token = input.value.trim();
-      if (!token) return;
-
-      const errEl = document.getElementById('auth-error');
-      const btn = document.getElementById('auth-submit');
-      btn.disabled = true;
-      btn.innerHTML = '<span class="spinner"></span> Verifying...';
-      errEl.classList.add('hidden');
-
-      // Verify the token works before saving
-      try {
-        const r = await fetch(GH_API + '/user', {
-          headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' }
-        });
-        if (!r.ok) throw new Error(r.status === 401 ? 'Invalid token — check that you copied it correctly' : `GitHub returned ${r.status}`);
-        const user = await r.json();
-        setToken(token);
-        localStorage.setItem('ovos_gh_user', JSON.stringify({ login: user.login, avatar: user.avatar_url }));
-        closeModal();
-        toast(`Connected as ${user.login}!`, 'green');
-        route();
-      } catch (e) {
-        errEl.textContent = e.message;
-        errEl.classList.remove('hidden');
-        btn.disabled = false;
-        btn.textContent = 'Connect';
-      }
-    }
-
-    // =========================================================================
-    // USER PROFILE (localStorage — languages, display name)
-    // =========================================================================
-    function getProfile() {
-      const p = localStorage.getItem('ovos_profile');
-      return p ? JSON.parse(p) : null;
-    }
-    function saveProfile(profile) {
-      localStorage.setItem('ovos_profile', JSON.stringify(profile));
-      updateProfileUI();
-    }
-    function getUserLangs() {
-      const p = getProfile();
-      return p?.languages || [];
-    }
-    function hasCompletedOnboarding() { return !!getProfile(); }
-
-    function updateProfileUI() {
-      const btn = document.getElementById('profile-btn');
-      if (!btn) return;
-      const p = getProfile();
-      if (p) {
-        const langCount = p.languages.length;
-        btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>${langCount} lang${langCount !== 1 ? 's' : ''}`;
-        btn.title = `Your languages: ${p.languages.join(', ')}`;
-      } else {
-        btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Set languages`;
-      }
-    }
-
-    async function showOnboarding() {
-      let langMeta = {};
-      try {
-        const coverage = await fetchJSON('data/coverage.json');
-        langMeta = coverage.lang_meta || {};
-      } catch {}
-
-      // Build language list (include all — en-US is a valid target for expanding source files)
-      const allLangs = Object.keys(langMeta).sort((a, b) => {
-        const na = langMeta[a]?.native || a;
-        const nb = langMeta[b]?.native || b;
-        return na.localeCompare(nb);
-      });
-
-      const existing = getProfile();
-      const selectedSet = new Set(existing?.languages || []);
-
-      document.getElementById('modal-container').innerHTML = `
-        <div class="modal-backdrop">
-          <div class="modal" style="max-width:36rem">
-            <div class="text-center mb-4">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5" class="mx-auto mb-3"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              <h2 class="text-xl font-bold">${existing ? 'Update your languages' : 'Welcome to OVOS Localize!'}</h2>
-              <p class="text-sm text-ovos-muted mt-1">${existing ? 'Change which languages you see.' : 'What languages do you speak? We\'ll only show skills that need help in your languages.'}</p>
-            </div>
-
-            <div class="mb-3">
-              <div class="search-box flex items-center px-3 py-2 gap-2 mb-3">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#737373" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                <input id="lang-search" type="text" placeholder="Search languages..." class="bg-transparent text-sm text-ovos-text w-full outline-none placeholder-ovos-muted" oninput="filterOnboardingLangs()">
-              </div>
-              <div id="lang-grid" class="grid grid-cols-2 gap-1.5 max-h-64 overflow-auto pr-1">
-                ${allLangs.map(code => {
-                  const m = langMeta[code] || {};
-                  const checked = selectedSet.has(code) ? 'checked' : '';
-                  return `<label class="lang-option flex items-center gap-2 p-2 rounded-lg hover:bg-ovos-hover cursor-pointer text-sm" data-code="${code}" data-search="${(m.native||'').toLowerCase()} ${(m.display||'').toLowerCase()} ${code.toLowerCase()}">
-                    <input type="checkbox" value="${code}" class="lang-cb accent-red-500 w-4 h-4" ${checked} onchange="updateOnboardingCount()">
-                    <div>
-                      <div class="font-medium">${escapeHtml(m.native || code)}</div>
-                      <div class="text-xs text-ovos-muted">${escapeHtml(m.display || code)}</div>
-                    </div>
-                  </label>`;
-                }).join('')}
-              </div>
-              <div class="mt-2 text-xs text-ovos-muted"><span id="onboarding-count">${selectedSet.size}</span> language${selectedSet.size !== 1 ? 's' : ''} selected</div>
-            </div>
-
-            <div class="flex items-center justify-between">
-              <button onclick="closeModal();showRequestLangModal()" class="text-xs text-ovos-muted hover:text-ovos-text">Can't find your language? Request it</button>
-              <div class="flex gap-2">
-                ${existing ? '<button onclick="closeModal()" class="px-4 py-2 text-sm rounded-lg border border-ovos-card hover:bg-ovos-hover">Cancel</button>' : ''}
-                <button onclick="saveOnboarding()" id="save-onboarding-btn" class="px-4 py-2 text-sm rounded-lg bg-ovos-accent text-ovos-bg font-bold hover:opacity-80 disabled:opacity-40" ${selectedSet.size === 0 && !existing ? 'disabled' : ''}>
-                  ${existing ? 'Save' : 'Get started'}
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>`;
-    }
-
-    function showRequestLangModal() {
-      document.getElementById('modal-container').innerHTML = `
-        <div class="modal-backdrop" onclick="if(event.target===this)closeModal()">
-          <div class="modal" style="max-width:28rem">
-            <div class="text-center mb-4">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5" class="mx-auto mb-3"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
-              <h3 class="text-lg font-bold">Request a new language</h3>
-              <p class="text-sm text-ovos-muted mt-1">If your language isn't listed, we can add it! Tell us which language you'd like to translate OVOS into.</p>
-            </div>
-
-            <div class="space-y-3 mb-4">
-              <div>
-                <label class="text-xs font-bold text-ovos-muted">Language name</label>
-                <input id="req-lang-name" type="text" placeholder="e.g. Hindi, Swahili, Korean..."
-                  class="mt-1 w-full bg-ovos-input text-ovos-text px-3 py-2 rounded-lg border border-ovos-card text-sm">
-              </div>
-              <div>
-                <label class="text-xs font-bold text-ovos-muted">Language code <span class="font-normal">(optional, e.g. hi-IN, sw, ko-KR)</span></label>
-                <input id="req-lang-code" type="text" placeholder="e.g. hi-IN"
-                  class="mt-1 w-full bg-ovos-input text-ovos-text px-3 py-2 rounded-lg border border-ovos-card text-sm mono">
-              </div>
-              <div>
-                <label class="text-xs font-bold text-ovos-muted">Your GitHub username <span class="font-normal">(optional — so we can tag you)</span></label>
-                <input id="req-lang-user" type="text" placeholder="@username"
-                  value="${getUser()?.login ? '@' + getUser().login : ''}"
-                  class="mt-1 w-full bg-ovos-input text-ovos-text px-3 py-2 rounded-lg border border-ovos-card text-sm mono">
-              </div>
-            </div>
-
-            <button onclick="submitLangRequest()" class="w-full px-4 py-2.5 text-sm rounded-lg bg-ovos-accent text-white font-bold hover:opacity-80 mb-3">
-              Open request on GitHub
-            </button>
-            <p class="text-xs text-ovos-muted text-center">This opens a pre-filled GitHub issue. You'll need a GitHub account.</p>
-            <div class="mt-3 text-center">
-              <button onclick="closeModal()" class="text-sm text-ovos-muted hover:text-ovos-text">Cancel</button>
-            </div>
-          </div>
-        </div>`;
-      setTimeout(() => document.getElementById('req-lang-name')?.focus(), 100);
-    }
-
-    function submitLangRequest() {
-      const name = document.getElementById('req-lang-name')?.value.trim();
-      const code = document.getElementById('req-lang-code')?.value.trim();
-      const user = document.getElementById('req-lang-user')?.value.trim();
-      if (!name) { toast('Enter a language name', 'amber'); return; }
-
-      const title = encodeURIComponent('Add language: ' + name + (code ? ' (' + code + ')' : ''));
-      const body = encodeURIComponent(
-        '## New language request\n\n' +
-        '- **Language**: ' + name + '\n' +
-        (code ? '- **Code**: `' + code + '`\n' : '') +
-        (user ? '- **Requester**: ' + user + '\n' : '') +
-        '\n### What this means\n\n' +
-        'Adding a new language requires creating locale directories in skill repos ' +
-        'and translating .intent, .dialog, .voc and other locale files.\n\n' +
-        'I am volunteering to help translate OVOS skills into this language.'
-      );
-
-      window.open('https://github.com/OpenVoiceOS/ovos-localize/issues/new?title=' + title + '&body=' + body + '&labels=new-language', '_blank');
-      closeModal();
-      toast('GitHub issue page opened — submit it to complete your request', 'green', 5000);
-    }
-
-    function filterOnboardingLangs() {
-      const q = (document.getElementById('lang-search')?.value || '').toLowerCase();
-      document.querySelectorAll('.lang-option').forEach(el => {
-        el.style.display = el.dataset.search.includes(q) ? '' : 'none';
-      });
-    }
-
-    function updateOnboardingCount() {
-      const count = document.querySelectorAll('.lang-cb:checked').length;
-      const el = document.getElementById('onboarding-count');
-      if (el) el.textContent = count;
-      const btn = document.getElementById('save-onboarding-btn');
-      if (btn) btn.disabled = count === 0;
-    }
-
-    function saveOnboarding() {
-      const selected = Array.from(document.querySelectorAll('.lang-cb:checked')).map(cb => cb.value);
-      if (selected.length === 0) { toast('Select at least one language', 'amber'); return; }
-      const isFirst = !hasCompletedOnboarding();
-      saveProfile({ languages: selected, createdAt: new Date().toISOString() });
-      closeModal();
-      toast(`Showing ${selected.length} language${selected.length > 1 ? 's' : ''}`, 'green');
-      if (isFirst) {
-        location.hash = '#/dashboard';
-      } else {
-        route();
-      }
-    }
-
-    // =========================================================================
-    // PR SUBMISSION
-    // =========================================================================
-    // The repo that hosts the submit_translation.yml workflow
-    const DISPATCH_REPO = 'OpenVoiceOS/ovos-localize';
-
-    async function submitTranslation(org, repo, filePath, newContent, lang, fileKey, branch = 'dev') {
-      if (!getToken()) { showAuthModal(); return; }
-      const user = getUser();
-      if (!user) { toast('Sign in first', 'red'); return; }
-
-      showProgress('Submitting translation...');
-
-      // Base64 encode the file content for safe transport through JSON
+    /**
+     * Submit a translation by opening a pre-filled GitHub Issue.
+     * A GitHub Action picks it up, creates a PR, and closes the issue.
+     * The user only needs to be logged into GitHub — zero tokens required.
+     */
+    function submitTranslation(org, repo, filePath, newContent, lang, fileKey, branch = 'dev') {
       const b64Content = btoa(unescape(encodeURIComponent(newContent)));
 
-      // Trigger the GitHub Action via repository_dispatch
-      await ghFetch(`/repos/${DISPATCH_REPO}/dispatches`, {
-        method: 'POST',
-        body: JSON.stringify({
-          event_type: 'submit-translation',
-          client_payload: {
-            org,
-            repo,
-            file_path: filePath,
-            content: b64Content,
-            lang,
-            file_key: fileKey,
-            branch,
-            author: user.login,
-          },
-        }),
-      });
+      const title = encodeURIComponent(`[translate] ${lang}: ${org}/${repo} — ${fileKey}`);
+      const body = encodeURIComponent(
+        `> Submitted via [OVOS Localize](https://openvoiceos.github.io/ovos-localize/). ` +
+        `A bot will create a PR automatically.\n\n` +
+        `<!-- TRANSLATION_META\n` +
+        `org: ${org}\n` +
+        `repo: ${repo}\n` +
+        `file_path: ${filePath}\n` +
+        `lang: ${lang}\n` +
+        `file_key: ${fileKey}\n` +
+        `branch: ${branch}\n` +
+        `-->\n\n` +
+        `<content>\n${b64Content}\n</content>`
+      );
 
-      hideProgress();
-      toast('Translation submitted! A bot will open the PR shortly.', 'green', 6000);
+      window.open(`https://github.com/${LOCALIZE_REPO}/issues/new?title=${title}&labels=translation&body=${body}`, '_blank');
+      toast('GitHub issue page opened — click "Submit new issue" to complete.', 'green', 6000);
     }
+
+    function closeModal() { document.getElementById('modal-container').innerHTML = ''; }
+
 
     // =========================================================================
     // UI HELPERS
@@ -975,7 +567,7 @@
       }
     }
     window.addEventListener('hashchange', route);
-    window.addEventListener('load', () => { updateAuthUI(); updateProfileUI(); route(); });
+    window.addEventListener('load', () => { updateProfileUI(); route(); });
 
     // =========================================================================
     // LANDING PAGE
@@ -1662,7 +1254,7 @@ Right now in {location} it's {condition}
       const editUrl = (fileData.edit_urls || {})[lang] || '';
       const filePath = targetData?.file_path || filePathFromEditUrl(editUrl);
       const currentText = targetData?.entries?.length ? targetData.entries.map(e => e.text).join('\n') : '';
-      const isSignedIn = !!getToken();
+      // No auth required — submission opens a GitHub Issue
       const isNew = !targetData || targetData.entries.length === 0;
       const fileHelp = FILE_TYPE_HELP[fileData.type] || 'Translate this file to your language.';
       const isJsonFile = fileData.type === 'skill.json' || fileData.type === 'settingsmeta';
@@ -1737,9 +1329,9 @@ Right now in {location} it's {condition}
               GitHub
             </a>` : ''}
             <button id="submit-pr-btn" onclick="handleSubmitPR()" class="text-xs px-4 py-1.5 rounded-lg bg-ovos-accent text-ovos-bg font-bold hover:opacity-80 disabled:opacity-40 flex items-center gap-1.5"
-              ${isSignedIn ? '' : 'disabled title="Connect GitHub first (top right) to submit"'}>
+              title="Submit translation via GitHub Issue — a bot creates the PR">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M6 9v12"/></svg>
-              ${isSignedIn ? 'Submit' : 'Sign in'}
+              Submit
             </button>
           </div>
         </div>
@@ -2306,7 +1898,6 @@ optionally: [${(ctx.builder_chain.optionally||[]).join(', ')}]</pre>
     }
 
     async function handleSubmitPR() {
-      if (!getToken()) { showAuthModal(); return; }
       const editor = document.getElementById('translation-editor');
       const newContent = editor.value;
       if (newContent === editor.dataset.originalText) { toast('No changes to submit', 'amber'); return; }

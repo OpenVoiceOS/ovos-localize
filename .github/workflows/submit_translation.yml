@@ -1,23 +1,42 @@
 name: Submit Translation PR
 
 on:
-  repository_dispatch:
-    types: [submit-translation]
+  issues:
+    types: [opened]
 
 jobs:
   create-pr:
+    if: contains(github.event.issue.labels.*.name, 'translation')
     runs-on: ubuntu-latest
     steps:
-      - name: Parse payload
-        id: payload
-        run: |
-          echo "org=${{ github.event.client_payload.org }}" >> "$GITHUB_OUTPUT"
-          echo "repo=${{ github.event.client_payload.repo }}" >> "$GITHUB_OUTPUT"
-          echo "file_path=${{ github.event.client_payload.file_path }}" >> "$GITHUB_OUTPUT"
-          echo "lang=${{ github.event.client_payload.lang }}" >> "$GITHUB_OUTPUT"
-          echo "file_key=${{ github.event.client_payload.file_key }}" >> "$GITHUB_OUTPUT"
-          echo "branch=${{ github.event.client_payload.branch }}" >> "$GITHUB_OUTPUT"
-          echo "author=${{ github.event.client_payload.author }}" >> "$GITHUB_OUTPUT"
+      - name: Parse issue body
+        id: parse
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body || '';
+            const meta = {};
+            // Parse <!-- TRANSLATION_META ... --> block
+            const match = body.match(/<!--\s*TRANSLATION_META\s+([\s\S]*?)-->/);
+            if (!match) {
+              core.setFailed('No TRANSLATION_META block found in issue body');
+              return;
+            }
+            for (const line of match[1].trim().split('\n')) {
+              const [key, ...rest] = line.split(':');
+              if (key && rest.length) meta[key.trim()] = rest.join(':').trim();
+            }
+            // Extract content between <content> tags
+            const contentMatch = body.match(/<content>([\s\S]*?)<\/content>/);
+            if (!contentMatch) {
+              core.setFailed('No <content> block found in issue body');
+              return;
+            }
+            for (const [k, v] of Object.entries(meta)) {
+              core.setOutput(k, v);
+            }
+            core.setOutput('content_b64', contentMatch[1].trim());
+            core.setOutput('author', context.payload.issue.user.login);
 
       - name: Generate GitHub App token
         id: app-token
@@ -25,73 +44,71 @@ jobs:
         with:
           app-id: ${{ vars.LOCALIZE_APP_ID }}
           private-key: ${{ secrets.LOCALIZE_APP_PRIVATE_KEY }}
-          owner: ${{ steps.payload.outputs.org }}
-          repositories: ${{ steps.payload.outputs.repo }}
+          owner: ${{ steps.parse.outputs.org }}
+          repositories: ${{ steps.parse.outputs.repo }}
 
       - name: Checkout target repo
         uses: actions/checkout@v4
         with:
-          repository: ${{ steps.payload.outputs.org }}/${{ steps.payload.outputs.repo }}
-          ref: ${{ steps.payload.outputs.branch }}
+          repository: ${{ steps.parse.outputs.org }}/${{ steps.parse.outputs.repo }}
+          ref: ${{ steps.parse.outputs.branch }}
           token: ${{ steps.app-token.outputs.token }}
 
       - name: Create branch and commit
+        id: commit
         env:
-          FILE_PATH: ${{ steps.payload.outputs.file_path }}
-          LANG: ${{ steps.payload.outputs.lang }}
-          FILE_KEY: ${{ steps.payload.outputs.file_key }}
-          AUTHOR: ${{ steps.payload.outputs.author }}
-          CONTENT: ${{ github.event.client_payload.content }}
+          FILE_PATH: ${{ steps.parse.outputs.file_path }}
+          LANG: ${{ steps.parse.outputs.lang }}
+          FILE_KEY: ${{ steps.parse.outputs.file_key }}
+          AUTHOR: ${{ steps.parse.outputs.author }}
+          CONTENT_B64: ${{ steps.parse.outputs.content_b64 }}
         run: |
           BRANCH_NAME="translate/${LANG}/${FILE_KEY//[^a-zA-Z0-9_.-]/_}-$(date +%s)"
           git checkout -b "$BRANCH_NAME"
-
-          # Ensure parent directory exists
           mkdir -p "$(dirname "$FILE_PATH")"
-
-          # Write content (base64 decoded)
-          echo "$CONTENT" | base64 -d > "$FILE_PATH"
-
+          echo "$CONTENT_B64" | base64 -d > "$FILE_PATH"
           git config user.name "ovos-localize[bot]"
           git config user.email "ovos-localize[bot]@users.noreply.github.com"
           git add "$FILE_PATH"
           git commit -m "translate(${LANG}): update ${FILE_KEY}" -m "Submitted by @${AUTHOR} via OVOS Localize"
-
           git push origin "$BRANCH_NAME"
-
           echo "branch_name=$BRANCH_NAME" >> "$GITHUB_OUTPUT"
-        id: commit
 
       - name: Create Pull Request
+        id: pr
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
-          ORG: ${{ steps.payload.outputs.org }}
-          REPO: ${{ steps.payload.outputs.repo }}
-          BASE: ${{ steps.payload.outputs.branch }}
-          LANG: ${{ steps.payload.outputs.lang }}
-          FILE_KEY: ${{ steps.payload.outputs.file_key }}
-          FILE_PATH: ${{ steps.payload.outputs.file_path }}
-          AUTHOR: ${{ steps.payload.outputs.author }}
-          HEAD: ${{ steps.commit.outputs.branch_name }}
         run: |
-          BODY="## Translation update
-
-          - **Language**: \`${LANG}\`
-          - **File**: \`${FILE_PATH}\`
-          - **Submitted by**: @${AUTHOR}
-
-          Submitted via [OVOS Localize](https://openvoiceos.github.io/ovos-localize/)."
-
           PR_URL=$(gh pr create \
-            --repo "${ORG}/${REPO}" \
-            --base "${BASE}" \
-            --head "${HEAD}" \
-            --title "translate(${LANG}): update ${FILE_KEY}" \
-            --body "${BODY}")
+            --repo "${{ steps.parse.outputs.org }}/${{ steps.parse.outputs.repo }}" \
+            --base "${{ steps.parse.outputs.branch }}" \
+            --head "${{ steps.commit.outputs.branch_name }}" \
+            --title "translate(${{ steps.parse.outputs.lang }}): update ${{ steps.parse.outputs.file_key }}" \
+            --body "## Translation update
 
+          - **Language**: \`${{ steps.parse.outputs.lang }}\`
+          - **File**: \`${{ steps.parse.outputs.file_path }}\`
+          - **Submitted by**: @${{ steps.parse.outputs.author }}
+
+          Submitted via [OVOS Localize](https://openvoiceos.github.io/ovos-localize/).
+          Triggered by #${{ github.event.issue.number }}.")
           echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
-        id: pr
 
-      - name: Report result
-        run: |
-          echo "PR created: ${{ steps.pr.outputs.pr_url }}"
+      - name: Close issue with PR link
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prUrl = '${{ steps.pr.outputs.pr_url }}';
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `✅ **Translation PR created!**\n\n${prUrl}\n\nThe skill maintainer will review and merge it. Thank you for contributing!`
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed',
+              state_reason: 'completed'
+            });

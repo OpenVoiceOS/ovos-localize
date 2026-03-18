@@ -1,0 +1,17 @@
+name: Translation Submission
+description: Automated translation submission from OVOS Localize
+labels: ["translation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > This issue was created automatically by [OVOS Localize](https://openvoiceos.github.io/ovos-localize/).
+        > A bot will process it and open a pull request on the target skill repo.
+        > **Do not edit the content below.**
+  - type: textarea
+    id: payload
+    attributes:
+      label: Translation payload
+      description: Machine-readable translation data
+    validations:
+      required: true

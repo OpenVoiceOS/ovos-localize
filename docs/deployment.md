@@ -50,26 +50,29 @@ User (browser)                    GitHub
 ──────────────                    ──────
 1. Edit translation
 2. Click "Submit"
-3. POST /repos/OpenVoiceOS/     ──→  repository_dispatch event
-   ovos-localize/dispatches          (event_type: submit-translation)
+3. Opens pre-filled           ──→  User clicks "Submit new issue"
+   github.com/.../issues/new       (just needs a GitHub account)
                                       │
                                       ▼
-                                 submit_translation.yml runs:
+                                 issues: opened event triggers
+                                 submit_translation.yml:
+                                 ├── Parses issue body (metadata + content)
                                  ├── actions/create-github-app-token
                                  │   generates a short-lived token
                                  │   scoped to the target skill repo
                                  ├── Checks out target skill repo
                                  ├── Creates translate/{lang}/{file} branch
                                  ├── Commits as ovos-localize[bot]
-                                 └── Opens PR to dev branch
-                                     (mentions @username in body)
+                                 ├── Opens PR to dev branch
+                                 └── Closes the issue with a PR link
 ```
 
 **Key properties:**
-- The GitHub App token is **short-lived** (expires in 1 hour) and scoped to the single target repo
+- **Zero auth for users** — submission opens a GitHub Issue (users only need a GitHub account)
+- The workflow triggers on `issues: opened` with the `translation` label
+- The GitHub App token is **short-lived** (1 hour) and scoped to the single target repo
 - PRs appear as authored by `ovos-localize[bot]` — not tied to any personal account
-- No personal tokens or service accounts needed for the bot side
-- The user's token only needs permission to trigger `repository_dispatch` on the ovos-localize repo
+- The issue is auto-closed with a link to the created PR
 
 ### 4. Daily data refresh
 
@@ -79,14 +82,7 @@ User (browser)                    GitHub
 - Commits updated JSON to `data/`
 - GitHub Pages auto-deploys
 
-### 5. User token permissions
-
-Users create a fine-grained PAT scoped to the `ovos-localize` repo only, with:
-- **Contents**: Read and write (required to trigger `repository_dispatch` events)
-
-This is the minimum permission needed. Users never get write access to skill repos.
-
-### 6. Summary of secrets/variables
+### 5. Summary of secrets/variables
 
 | Name | Type | Where | Purpose |
 |------|------|-------|---------|
