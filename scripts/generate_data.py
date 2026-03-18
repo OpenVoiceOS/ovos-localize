@@ -574,7 +574,7 @@ def build_entities_json(all_skills: List[Dict[str, Any]]) -> List[Dict[str, Any]
                 "skill": skill["id"],
                 "repo": skill["repo"],
                 "has_entity_file": True,
-                "used_in_intents": intent_slots.get(base, []),
+                "used_in_intents": sorted(set(intent_slots.get(base, []))),
                 "langs": lang_data,
             })
 
