@@ -30,7 +30,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-cmd/locale/ca-es/Run.voc"
+          "file_path": "locale/ca-es/Run.voc"
         },
         "da": {
           "entries": [
@@ -42,7 +42,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-cmd/locale/da/Run.voc"
+          "file_path": "locale/da/Run.voc"
         },
         "de-DE": {
           "entries": [
@@ -66,7 +66,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-cmd/locale/de-de/Run.voc"
+          "file_path": "locale/de-de/Run.voc"
         },
         "en-US": {
           "entries": [
@@ -78,7 +78,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-cmd/locale/en-us/Run.voc"
+          "file_path": "locale/en-us/Run.voc"
         },
         "es-ES": {
           "entries": [
@@ -90,7 +90,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-cmd/locale/es-es/Run.voc"
+          "file_path": "locale/es-es/Run.voc"
         },
         "eu": {
           "entries": [
@@ -102,7 +102,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-cmd/locale/eu/Run.voc"
+          "file_path": "locale/eu/Run.voc"
         },
         "fr-FR": {
           "entries": [
@@ -114,7 +114,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-cmd/locale/fr-fr/Run.voc"
+          "file_path": "locale/fr-fr/Run.voc"
         },
         "gl-ES": {
           "entries": [
@@ -126,7 +126,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-cmd/locale/gl-es/Run.voc"
+          "file_path": "locale/gl-es/Run.voc"
         },
         "it-IT": {
           "entries": [
@@ -138,7 +138,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-cmd/locale/it-it/Run.voc"
+          "file_path": "locale/it-it/Run.voc"
         },
         "pt-PT": {
           "entries": [
@@ -150,7 +150,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-cmd/locale/pt-pt/Run.voc"
+          "file_path": "locale/pt-pt/Run.voc"
         }
       },
       "context": {
@@ -184,16 +184,16 @@
         "handler_source": "@intent_handler(IntentBuilder('RunScriptCommandIntent')\n                .require('Script').require('Run'))\ndef run(self, message):\n    alias = message.data.get('Script')\n    self.speak_dialog(\"running\", {\"alias\": alias})\n    script = self.alias[alias]\n    LOG.info(f\"alias: {alias} | command: {script}\")\n    shell = self.settings.get('shell', True)\n    args = script if shell else shlex.split(script)\n    try:\n        LOG.info(f'Running {args}')\n        if self.uid and self.gid:\n            subprocess.Popen(args, preexec_fn=set_user(self.uid, self.gid), shell=shell)\n        else:\n            subprocess.Popen(args, shell=shell)\n    except Exception:\n        LOG.exception('Could not run script ' + script)\n        self.play_audio(\"snd/error.mp3\", instant=True)"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/ca-es/Run.voc",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/da/Run.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/de-de/Run.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/en-us/Run.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/es-es/Run.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/eu/Run.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/fr-fr/Run.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/gl-es/Run.voc",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/it-it/Run.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/pt-pt/Run.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/ca-es/Run.voc",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/da/Run.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/de-de/Run.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/en-us/Run.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/es-es/Run.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/eu/Run.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/fr-fr/Run.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/gl-es/Run.voc",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/it-it/Run.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/pt-pt/Run.voc"
       }
     },
     "running.dialog": {
@@ -219,7 +219,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-cmd/locale/ca-es/running.dialog"
+          "file_path": "locale/ca-es/running.dialog"
         },
         "da": {
           "entries": [
@@ -240,7 +240,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-cmd/locale/da/running.dialog"
+          "file_path": "locale/da/running.dialog"
         },
         "de-DE": {
           "entries": [
@@ -261,7 +261,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-cmd/locale/de-de/running.dialog"
+          "file_path": "locale/de-de/running.dialog"
         },
         "en-US": {
           "entries": [
@@ -282,7 +282,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-cmd/locale/en-us/running.dialog"
+          "file_path": "locale/en-us/running.dialog"
         },
         "es-ES": {
           "entries": [
@@ -303,7 +303,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-cmd/locale/es-es/running.dialog"
+          "file_path": "locale/es-es/running.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -324,7 +324,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-cmd/locale/fr-fr/running.dialog"
+          "file_path": "locale/fr-fr/running.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -345,7 +345,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-cmd/locale/gl-es/running.dialog"
+          "file_path": "locale/gl-es/running.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -366,7 +366,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-cmd/locale/pt-pt/running.dialog"
+          "file_path": "locale/pt-pt/running.dialog"
         }
       },
       "context": {
@@ -394,14 +394,14 @@
         "handler_source": "@intent_handler(IntentBuilder('RunScriptCommandIntent')\n                .require('Script').require('Run'))\ndef run(self, message):\n    alias = message.data.get('Script')\n    self.speak_dialog(\"running\", {\"alias\": alias})\n    script = self.alias[alias]\n    LOG.info(f\"alias: {alias} | command: {script}\")\n    shell = self.settings.get('shell', True)\n    args = script if shell else shlex.split(script)\n    try:\n        LOG.info(f'Running {args}')\n        if self.uid and self.gid:\n            subprocess.Popen(args, preexec_fn=set_user(self.uid, self.gid), shell=shell)\n        else:\n            subprocess.Popen(args, shell=shell)\n    except Exception:\n        LOG.exception('Could not run script ' + script)\n        self.play_audio(\"snd/error.mp3\", instant=True)"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/ca-es/running.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/da/running.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/de-de/running.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/en-us/running.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/es-es/running.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/fr-fr/running.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/gl-es/running.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/pt-pt/running.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/ca-es/running.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/da/running.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/de-de/running.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/en-us/running.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/es-es/running.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/fr-fr/running.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/gl-es/running.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/pt-pt/running.dialog"
       }
     },
     "skill.json": {
@@ -428,7 +428,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-cmd/locale/ca-es/skill.json"
+          "file_path": "locale/ca-es/skill.json"
         },
         "da": {
           "entries": [
@@ -450,7 +450,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-cmd/locale/da/skill.json"
+          "file_path": "locale/da/skill.json"
         },
         "de-DE": {
           "entries": [
@@ -472,7 +472,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-cmd/locale/de-de/skill.json"
+          "file_path": "locale/de-de/skill.json"
         },
         "en-US": {
           "entries": [
@@ -494,7 +494,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-cmd/locale/en-us/skill.json"
+          "file_path": "locale/en-us/skill.json"
         },
         "es-ES": {
           "entries": [
@@ -516,7 +516,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-cmd/locale/es-es/skill.json"
+          "file_path": "locale/es-es/skill.json"
         },
         "fr-FR": {
           "entries": [
@@ -538,7 +538,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-cmd/locale/fr-fr/skill.json"
+          "file_path": "locale/fr-fr/skill.json"
         },
         "gl-ES": {
           "entries": [
@@ -560,7 +560,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-cmd/locale/gl-es/skill.json"
+          "file_path": "locale/gl-es/skill.json"
         },
         "pt-PT": {
           "entries": [
@@ -582,7 +582,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-cmd/locale/pt-pt/skill.json"
+          "file_path": "locale/pt-pt/skill.json"
         }
       },
       "context": {
@@ -602,14 +602,14 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/ca-es/skill.json",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/da/skill.json",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/de-de/skill.json",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/en-us/skill.json",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/es-es/skill.json",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/fr-fr/skill.json",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/gl-es/skill.json",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/ovos-skill-cmd/locale/pt-pt/skill.json"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/ca-es/skill.json",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/da/skill.json",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/de-de/skill.json",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/en-us/skill.json",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/es-es/skill.json",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/fr-fr/skill.json",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/gl-es/skill.json",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-cmd/edit/dev/locale/pt-pt/skill.json"
       }
     }
   }

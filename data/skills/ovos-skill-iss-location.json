@@ -62,7 +62,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/ca-es/how_many.voc"
+          "file_path": "locale/ca-es/how_many.voc"
         },
         "da-DK": {
           "entries": [
@@ -82,7 +82,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/da-dk/how_many.voc"
+          "file_path": "locale/da-dk/how_many.voc"
         },
         "de-DE": {
           "entries": [
@@ -102,7 +102,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/de-de/how_many.voc"
+          "file_path": "locale/de-de/how_many.voc"
         },
         "en-US": {
           "entries": [
@@ -122,7 +122,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/en-us/how_many.voc"
+          "file_path": "locale/en-us/how_many.voc"
         },
         "es-ES": {
           "entries": [
@@ -146,7 +146,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/es-es/how_many.voc"
+          "file_path": "locale/es-es/how_many.voc"
         },
         "eu": {
           "entries": [
@@ -166,7 +166,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/eu/how_many.voc"
+          "file_path": "locale/eu/how_many.voc"
         },
         "fr-FR": {
           "entries": [
@@ -186,7 +186,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/fr-fr/how_many.voc"
+          "file_path": "locale/fr-fr/how_many.voc"
         },
         "gl-ES": {
           "entries": [
@@ -206,7 +206,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/gl-es/how_many.voc"
+          "file_path": "locale/gl-es/how_many.voc"
         },
         "it-IT": {
           "entries": [
@@ -238,7 +238,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/it-it/how_many.voc"
+          "file_path": "locale/it-it/how_many.voc"
         },
         "pt-PT": {
           "entries": [
@@ -258,7 +258,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/pt-pt/how_many.voc"
+          "file_path": "locale/pt-pt/how_many.voc"
         }
       },
       "context": {
@@ -293,16 +293,16 @@
         "handler_source": "@intent_handler(IntentBuilder(\"NumberISSIntent\").require(\"how_many\")\n                .require(\"onboard\").require(\"iss\"))\ndef handle_number(self, message):\n\n    toponym, lat, lon, astronauts = self.get_iss_data()\n    people = [\n        p[\"name\"] for p in astronauts\n        if p[\"craft\"] == \"ISS\"\n    ]\n    num = len(people)\n    people = \", \".join(people)\n    self.gui.show_image(self.settings[\"iss_bg\"],\n                        override_idle=True,\n                        fill='PreserveAspectFit',\n                        caption=people)\n    self.speak_dialog(\"number\", {\"number\": num}, wait=True)\n    sleep(1)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/ca-es/how_many.voc",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/da-dk/how_many.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/de-de/how_many.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/en-us/how_many.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/es-es/how_many.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/eu/how_many.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/fr-fr/how_many.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/gl-es/how_many.voc",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/it-it/how_many.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/pt-pt/how_many.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/ca-es/how_many.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/da-dk/how_many.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/de-de/how_many.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/en-us/how_many.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/es-es/how_many.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/eu/how_many.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/fr-fr/how_many.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/gl-es/how_many.voc",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/it-it/how_many.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/pt-pt/how_many.voc"
       }
     },
     "iss.voc": {
@@ -371,7 +371,7 @@
           "line_count": 14,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/ca-es/iss.voc"
+          "file_path": "locale/ca-es/iss.voc"
         },
         "da-DK": {
           "entries": [
@@ -395,7 +395,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/da-dk/iss.voc"
+          "file_path": "locale/da-dk/iss.voc"
         },
         "de-DE": {
           "entries": [
@@ -423,7 +423,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/de-de/iss.voc"
+          "file_path": "locale/de-de/iss.voc"
         },
         "en-US": {
           "entries": [
@@ -447,7 +447,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/en-us/iss.voc"
+          "file_path": "locale/en-us/iss.voc"
         },
         "es-ES": {
           "entries": [
@@ -471,7 +471,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/es-es/iss.voc"
+          "file_path": "locale/es-es/iss.voc"
         },
         "eu": {
           "entries": [
@@ -495,7 +495,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/eu/iss.voc"
+          "file_path": "locale/eu/iss.voc"
         },
         "fr-FR": {
           "entries": [
@@ -519,7 +519,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/fr-fr/iss.voc"
+          "file_path": "locale/fr-fr/iss.voc"
         },
         "gl-ES": {
           "entries": [
@@ -543,7 +543,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/gl-es/iss.voc"
+          "file_path": "locale/gl-es/iss.voc"
         },
         "it-IT": {
           "entries": [
@@ -567,7 +567,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/it-it/iss.voc"
+          "file_path": "locale/it-it/iss.voc"
         },
         "pt-PT": {
           "entries": [
@@ -591,7 +591,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/pt-pt/iss.voc"
+          "file_path": "locale/pt-pt/iss.voc"
         }
       },
       "context": {
@@ -627,16 +627,16 @@
         "handler_source": "@intent_handler(IntentBuilder(\"WhoISSIntent\").require(\"who\").\n                require(\"onboard\").require(\"iss\"))\ndef handle_who(self, message):\n    toponym, lat, lon, astronauts = self.get_iss_data()\n    people = [\n        p[\"name\"] for p in astronauts\n        if p[\"craft\"] == \"ISS\"\n    ]\n    people = \", \".join(people)\n    if self.use_gui:\n        self.update_picture(toponym, lat, lon, astronauts)\n        self.gui.show_image(self.settings[\"iss_bg\"],\n                            override_idle=True,\n                            fill='PreserveAspectFit',\n                            caption=people)\n    self.speak_dialog(\"who\", {\"people\": people}, wait=True)\n    sleep(1)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/ca-es/iss.voc",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/da-dk/iss.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/de-de/iss.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/en-us/iss.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/es-es/iss.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/eu/iss.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/fr-fr/iss.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/gl-es/iss.voc",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/it-it/iss.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/pt-pt/iss.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/ca-es/iss.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/da-dk/iss.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/de-de/iss.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/en-us/iss.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/es-es/iss.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/eu/iss.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/fr-fr/iss.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/gl-es/iss.voc",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/it-it/iss.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/pt-pt/iss.voc"
       }
     },
     "location.current.dialog": {
@@ -682,7 +682,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-iss-location/locale/ca-es/location.current.dialog"
+          "file_path": "locale/ca-es/location.current.dialog"
         },
         "da-DK": {
           "entries": [
@@ -714,7 +714,7 @@
             "toponym"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/da-dk/location.current.dialog"
+          "file_path": "locale/da-dk/location.current.dialog"
         },
         "de-DE": {
           "entries": [
@@ -754,7 +754,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-iss-location/locale/de-de/location.current.dialog"
+          "file_path": "locale/de-de/location.current.dialog"
         },
         "en-US": {
           "entries": [
@@ -786,7 +786,7 @@
             "toponym"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/en-us/location.current.dialog"
+          "file_path": "locale/en-us/location.current.dialog"
         },
         "es-ES": {
           "entries": [
@@ -822,7 +822,7 @@
             "toponym"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/es-es/location.current.dialog"
+          "file_path": "locale/es-es/location.current.dialog"
         },
         "eu": {
           "entries": [
@@ -854,7 +854,7 @@
             "toponym"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/eu/location.current.dialog"
+          "file_path": "locale/eu/location.current.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -878,7 +878,7 @@
             "toponym"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/fr-fr/location.current.dialog"
+          "file_path": "locale/fr-fr/location.current.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -910,7 +910,7 @@
             "toponym"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/gl-es/location.current.dialog"
+          "file_path": "locale/gl-es/location.current.dialog"
         },
         "it-IT": {
           "entries": [
@@ -942,7 +942,7 @@
             "toponym"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/it-it/location.current.dialog"
+          "file_path": "locale/it-it/location.current.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -974,7 +974,7 @@
             "toponym"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/pt-pt/location.current.dialog"
+          "file_path": "locale/pt-pt/location.current.dialog"
         }
       },
       "context": {
@@ -996,7 +996,7 @@
           "toponym": "Runtime value from handle_iss()"
         },
         "related_files": [
-          "ovos-skill-iss-location/locale/en-us/location.unknown.dialog"
+          "locale/en-us/location.unknown.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1008,16 +1008,16 @@
         "handler_source": "@intent_handler('where_iss.intent')\ndef handle_iss(self, message):\n    toponym, lat, lon, astronauts = self.get_iss_data()\n    if self.use_gui:\n        self.update_picture(toponym, lat, lon, astronauts)\n        self.gui.show_image(self.gui['imgLink'],\n                            caption=self.gui['caption'],\n                            fill='PreserveAspectFit')\n\n    if toponym == \"unknown\":\n        self.speak_dialog(\"location.unknown\", {\n            \"latitude\": lat,\n            \"longitude\": lon\n        }, wait=True)\n    else:\n        self.speak_dialog(\"location.current\", {\n            \"latitude\": lat,\n            \"longitude\":lon,\n            \"toponym\": toponym\n        }, wait=True)\n    sleep(1)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/ca-es/location.current.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/da-dk/location.current.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/de-de/location.current.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/en-us/location.current.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/es-es/location.current.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/eu/location.current.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/fr-fr/location.current.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/gl-es/location.current.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/it-it/location.current.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/pt-pt/location.current.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/ca-es/location.current.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/da-dk/location.current.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/de-de/location.current.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/en-us/location.current.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/es-es/location.current.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/eu/location.current.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/fr-fr/location.current.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/gl-es/location.current.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/it-it/location.current.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/pt-pt/location.current.dialog"
       }
     },
     "location.unknown.dialog": {
@@ -1041,7 +1041,7 @@
             "longitude"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/ca-es/location.unknown.dialog"
+          "file_path": "locale/ca-es/location.unknown.dialog"
         },
         "da-DK": {
           "entries": [
@@ -1060,7 +1060,7 @@
             "longitude"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/da-dk/location.unknown.dialog"
+          "file_path": "locale/da-dk/location.unknown.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1079,7 +1079,7 @@
             "longitude"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/de-de/location.unknown.dialog"
+          "file_path": "locale/de-de/location.unknown.dialog"
         },
         "en-US": {
           "entries": [
@@ -1098,7 +1098,7 @@
             "longitude"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/en-us/location.unknown.dialog"
+          "file_path": "locale/en-us/location.unknown.dialog"
         },
         "es-ES": {
           "entries": [
@@ -1121,7 +1121,7 @@
             "longitude"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/es-es/location.unknown.dialog"
+          "file_path": "locale/es-es/location.unknown.dialog"
         },
         "eu": {
           "entries": [
@@ -1140,7 +1140,7 @@
             "longitude"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/eu/location.unknown.dialog"
+          "file_path": "locale/eu/location.unknown.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1159,7 +1159,7 @@
             "longitude"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/fr-fr/location.unknown.dialog"
+          "file_path": "locale/fr-fr/location.unknown.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -1178,7 +1178,7 @@
             "longitude"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/gl-es/location.unknown.dialog"
+          "file_path": "locale/gl-es/location.unknown.dialog"
         },
         "it-IT": {
           "entries": [
@@ -1197,7 +1197,7 @@
             "longitude"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/it-it/location.unknown.dialog"
+          "file_path": "locale/it-it/location.unknown.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -1216,7 +1216,7 @@
             "longitude"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/pt-pt/location.unknown.dialog"
+          "file_path": "locale/pt-pt/location.unknown.dialog"
         }
       },
       "context": {
@@ -1236,7 +1236,7 @@
           "longitude": "Runtime value from handle_iss()"
         },
         "related_files": [
-          "ovos-skill-iss-location/locale/en-us/location.current.dialog"
+          "locale/en-us/location.current.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1248,16 +1248,16 @@
         "handler_source": "@intent_handler('where_iss.intent')\ndef handle_iss(self, message):\n    toponym, lat, lon, astronauts = self.get_iss_data()\n    if self.use_gui:\n        self.update_picture(toponym, lat, lon, astronauts)\n        self.gui.show_image(self.gui['imgLink'],\n                            caption=self.gui['caption'],\n                            fill='PreserveAspectFit')\n\n    if toponym == \"unknown\":\n        self.speak_dialog(\"location.unknown\", {\n            \"latitude\": lat,\n            \"longitude\": lon\n        }, wait=True)\n    else:\n        self.speak_dialog(\"location.current\", {\n            \"latitude\": lat,\n            \"longitude\":lon,\n            \"toponym\": toponym\n        }, wait=True)\n    sleep(1)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/ca-es/location.unknown.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/da-dk/location.unknown.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/de-de/location.unknown.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/en-us/location.unknown.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/es-es/location.unknown.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/eu/location.unknown.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/fr-fr/location.unknown.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/gl-es/location.unknown.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/it-it/location.unknown.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/pt-pt/location.unknown.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/ca-es/location.unknown.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/da-dk/location.unknown.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/de-de/location.unknown.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/en-us/location.unknown.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/es-es/location.unknown.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/eu/location.unknown.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/fr-fr/location.unknown.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/gl-es/location.unknown.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/it-it/location.unknown.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/pt-pt/location.unknown.dialog"
       }
     },
     "location.when.dialog": {
@@ -1285,7 +1285,7 @@
             "toponym"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/ca-es/location.when.dialog"
+          "file_path": "locale/ca-es/location.when.dialog"
         },
         "da-DK": {
           "entries": [
@@ -1308,7 +1308,7 @@
             "toponym"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/da-dk/location.when.dialog"
+          "file_path": "locale/da-dk/location.when.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1331,7 +1331,7 @@
             "toponym"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/de-de/location.when.dialog"
+          "file_path": "locale/de-de/location.when.dialog"
         },
         "en-US": {
           "entries": [
@@ -1354,7 +1354,7 @@
             "toponym"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/en-us/location.when.dialog"
+          "file_path": "locale/en-us/location.when.dialog"
         },
         "es-ES": {
           "entries": [
@@ -1381,7 +1381,7 @@
             "toponym"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/es-es/location.when.dialog"
+          "file_path": "locale/es-es/location.when.dialog"
         },
         "eu": {
           "entries": [
@@ -1412,7 +1412,7 @@
             "toponym"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/eu/location.when.dialog"
+          "file_path": "locale/eu/location.when.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1435,7 +1435,7 @@
             "toponym"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/fr-fr/location.when.dialog"
+          "file_path": "locale/fr-fr/location.when.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -1458,7 +1458,7 @@
             "toponym"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/gl-es/location.when.dialog"
+          "file_path": "locale/gl-es/location.when.dialog"
         },
         "it-IT": {
           "entries": [
@@ -1481,7 +1481,7 @@
             "toponym"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/it-it/location.when.dialog"
+          "file_path": "locale/it-it/location.when.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -1504,7 +1504,7 @@
             "toponym"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/pt-pt/location.when.dialog"
+          "file_path": "locale/pt-pt/location.when.dialog"
         }
       },
       "context": {
@@ -1524,7 +1524,7 @@
           "toponym": "Runtime value from handle_when()"
         },
         "related_files": [
-          "ovos-skill-iss-location/locale/en-us/visible_for.dialog"
+          "locale/en-us/visible_for.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1536,16 +1536,16 @@
         "handler_source": "@intent_handler('when_iss.intent')\ndef handle_when(self, message):\n    lat = self.location[\"coordinate\"][\"latitude\"]\n    lon = self.location[\"coordinate\"][\"longitude\"]\n\n    pred = SatellitePredictions(lat, lon, altitude=0, days=1).predict()\n    dt = pred[\"rise\"][\"time\"]  # in user timezone\n    delta = pred[\"length\"]\n    dur = dt - now_local()\n\n    duration = nice_duration(dur, lang=self.lang)\n    visible_dur = nice_duration(delta, lang=self.lang)\n    if self.use_gui:\n        caption = self.location_pretty + \" \" + dt.strftime(\"%m/%d/%Y, %H:%M:%S\")\n        image = self.generate_map(lat, lon)\n        self.gui.show_image(image, caption=caption, fill='PreserveAspectFit')\n\n    self.speak_dialog(\"location.when\", {\n        \"duration\": duration,\n        \"toponym\": self.location_pretty\n    }, wait=True)\n    self.speak_dialog(\"visible_for\", {\n        \"duration\": visible_dur\n    }, wait=True)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/ca-es/location.when.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/da-dk/location.when.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/de-de/location.when.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/en-us/location.when.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/es-es/location.when.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/eu/location.when.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/fr-fr/location.when.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/gl-es/location.when.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/it-it/location.when.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/pt-pt/location.when.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/ca-es/location.when.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/da-dk/location.when.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/de-de/location.when.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/en-us/location.when.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/es-es/location.when.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/eu/location.when.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/fr-fr/location.when.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/gl-es/location.when.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/it-it/location.when.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/pt-pt/location.when.dialog"
       }
     },
     "number.dialog": {
@@ -1592,7 +1592,7 @@
             "number"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/ca-es/number.dialog"
+          "file_path": "locale/ca-es/number.dialog"
         },
         "da-DK": {
           "entries": [
@@ -1642,7 +1642,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-iss-location/locale/da-dk/number.dialog"
+          "file_path": "locale/da-dk/number.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1684,7 +1684,7 @@
             "number"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/de-de/number.dialog"
+          "file_path": "locale/de-de/number.dialog"
         },
         "en-US": {
           "entries": [
@@ -1726,7 +1726,7 @@
             "number"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/en-us/number.dialog"
+          "file_path": "locale/en-us/number.dialog"
         },
         "es-ES": {
           "entries": [
@@ -1776,7 +1776,7 @@
             "number"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/es-es/number.dialog"
+          "file_path": "locale/es-es/number.dialog"
         },
         "eu": {
           "entries": [
@@ -1818,7 +1818,7 @@
             "number"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/eu/number.dialog"
+          "file_path": "locale/eu/number.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1840,7 +1840,7 @@
             "number"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/fr-fr/number.dialog"
+          "file_path": "locale/fr-fr/number.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -1882,7 +1882,7 @@
             "number"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/gl-es/number.dialog"
+          "file_path": "locale/gl-es/number.dialog"
         },
         "it-IT": {
           "entries": [
@@ -1903,7 +1903,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-iss-location/locale/it-it/number.dialog"
+          "file_path": "locale/it-it/number.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -1945,7 +1945,7 @@
             "number"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/pt-pt/number.dialog"
+          "file_path": "locale/pt-pt/number.dialog"
         }
       },
       "context": {
@@ -1973,16 +1973,16 @@
         "handler_source": "@intent_handler(IntentBuilder(\"NumberISSIntent\").require(\"how_many\")\n                .require(\"onboard\").require(\"iss\"))\ndef handle_number(self, message):\n\n    toponym, lat, lon, astronauts = self.get_iss_data()\n    people = [\n        p[\"name\"] for p in astronauts\n        if p[\"craft\"] == \"ISS\"\n    ]\n    num = len(people)\n    people = \", \".join(people)\n    self.gui.show_image(self.settings[\"iss_bg\"],\n                        override_idle=True,\n                        fill='PreserveAspectFit',\n                        caption=people)\n    self.speak_dialog(\"number\", {\"number\": num}, wait=True)\n    sleep(1)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/ca-es/number.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/da-dk/number.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/de-de/number.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/en-us/number.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/es-es/number.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/eu/number.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/fr-fr/number.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/gl-es/number.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/it-it/number.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/pt-pt/number.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/ca-es/number.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/da-dk/number.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/de-de/number.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/en-us/number.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/es-es/number.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/eu/number.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/fr-fr/number.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/gl-es/number.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/it-it/number.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/pt-pt/number.dialog"
       }
     },
     "onboard.voc": {
@@ -2015,7 +2015,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/ca-es/onboard.voc"
+          "file_path": "locale/ca-es/onboard.voc"
         },
         "da-DK": {
           "entries": [
@@ -2035,7 +2035,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/da-dk/onboard.voc"
+          "file_path": "locale/da-dk/onboard.voc"
         },
         "de-DE": {
           "entries": [
@@ -2059,7 +2059,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/de-de/onboard.voc"
+          "file_path": "locale/de-de/onboard.voc"
         },
         "en-US": {
           "entries": [
@@ -2083,7 +2083,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/en-us/onboard.voc"
+          "file_path": "locale/en-us/onboard.voc"
         },
         "es-ES": {
           "entries": [
@@ -2115,7 +2115,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/es-es/onboard.voc"
+          "file_path": "locale/es-es/onboard.voc"
         },
         "eu": {
           "entries": [
@@ -2143,7 +2143,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/eu/onboard.voc"
+          "file_path": "locale/eu/onboard.voc"
         },
         "fr-FR": {
           "entries": [
@@ -2163,7 +2163,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/fr-fr/onboard.voc"
+          "file_path": "locale/fr-fr/onboard.voc"
         },
         "gl-ES": {
           "entries": [
@@ -2183,7 +2183,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/gl-es/onboard.voc"
+          "file_path": "locale/gl-es/onboard.voc"
         },
         "it-IT": {
           "entries": [
@@ -2227,7 +2227,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/it-it/onboard.voc"
+          "file_path": "locale/it-it/onboard.voc"
         },
         "pt-PT": {
           "entries": [
@@ -2251,7 +2251,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/pt-pt/onboard.voc"
+          "file_path": "locale/pt-pt/onboard.voc"
         }
       },
       "context": {
@@ -2287,16 +2287,16 @@
         "handler_source": "@intent_handler(IntentBuilder(\"WhoISSIntent\").require(\"who\").\n                require(\"onboard\").require(\"iss\"))\ndef handle_who(self, message):\n    toponym, lat, lon, astronauts = self.get_iss_data()\n    people = [\n        p[\"name\"] for p in astronauts\n        if p[\"craft\"] == \"ISS\"\n    ]\n    people = \", \".join(people)\n    if self.use_gui:\n        self.update_picture(toponym, lat, lon, astronauts)\n        self.gui.show_image(self.settings[\"iss_bg\"],\n                            override_idle=True,\n                            fill='PreserveAspectFit',\n                            caption=people)\n    self.speak_dialog(\"who\", {\"people\": people}, wait=True)\n    sleep(1)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/ca-es/onboard.voc",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/da-dk/onboard.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/de-de/onboard.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/en-us/onboard.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/es-es/onboard.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/eu/onboard.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/fr-fr/onboard.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/gl-es/onboard.voc",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/it-it/onboard.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/pt-pt/onboard.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/ca-es/onboard.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/da-dk/onboard.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/de-de/onboard.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/en-us/onboard.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/es-es/onboard.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/eu/onboard.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/fr-fr/onboard.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/gl-es/onboard.voc",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/it-it/onboard.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/pt-pt/onboard.voc"
       }
     },
     "skill.json": {
@@ -2382,7 +2382,7 @@
           "line_count": 11,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/ca-es/skill.json"
+          "file_path": "locale/ca-es/skill.json"
         },
         "da-DK": {
           "entries": [
@@ -2463,7 +2463,7 @@
           "line_count": 11,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/da-dk/skill.json"
+          "file_path": "locale/da-dk/skill.json"
         },
         "de-DE": {
           "entries": [
@@ -2544,7 +2544,7 @@
           "line_count": 11,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/de-de/skill.json"
+          "file_path": "locale/de-de/skill.json"
         },
         "en-US": {
           "entries": [
@@ -2625,7 +2625,7 @@
           "line_count": 11,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/en-us/skill.json"
+          "file_path": "locale/en-us/skill.json"
         },
         "es-ES": {
           "entries": [
@@ -2706,7 +2706,7 @@
           "line_count": 11,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/es-es/skill.json"
+          "file_path": "locale/es-es/skill.json"
         },
         "fr-FR": {
           "entries": [
@@ -2787,7 +2787,7 @@
           "line_count": 11,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/fr-fr/skill.json"
+          "file_path": "locale/fr-fr/skill.json"
         },
         "gl-ES": {
           "entries": [
@@ -2868,7 +2868,7 @@
           "line_count": 11,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/gl-es/skill.json"
+          "file_path": "locale/gl-es/skill.json"
         }
       },
       "context": {
@@ -2888,13 +2888,13 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/ca-es/skill.json",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/da-dk/skill.json",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/de-de/skill.json",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/en-us/skill.json",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/es-es/skill.json",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/fr-fr/skill.json",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/gl-es/skill.json"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/ca-es/skill.json",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/da-dk/skill.json",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/de-de/skill.json",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/en-us/skill.json",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/es-es/skill.json",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/fr-fr/skill.json",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/gl-es/skill.json"
       }
     },
     "visible_for.dialog": {
@@ -2917,7 +2917,7 @@
             "duration"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/ca-es/visible_for.dialog"
+          "file_path": "locale/ca-es/visible_for.dialog"
         },
         "da-DK": {
           "entries": [
@@ -2935,7 +2935,7 @@
             "duration"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/da-dk/visible_for.dialog"
+          "file_path": "locale/da-dk/visible_for.dialog"
         },
         "de-DE": {
           "entries": [
@@ -2953,7 +2953,7 @@
             "duration"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/de-de/visible_for.dialog"
+          "file_path": "locale/de-de/visible_for.dialog"
         },
         "en-US": {
           "entries": [
@@ -2971,7 +2971,7 @@
             "duration"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/en-us/visible_for.dialog"
+          "file_path": "locale/en-us/visible_for.dialog"
         },
         "es-ES": {
           "entries": [
@@ -2989,7 +2989,7 @@
             "duration"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/es-es/visible_for.dialog"
+          "file_path": "locale/es-es/visible_for.dialog"
         },
         "eu": {
           "entries": [
@@ -3007,7 +3007,7 @@
             "duration"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/eu/visible_for.dialog"
+          "file_path": "locale/eu/visible_for.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -3025,7 +3025,7 @@
             "duration"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/fr-fr/visible_for.dialog"
+          "file_path": "locale/fr-fr/visible_for.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -3043,7 +3043,7 @@
             "duration"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/gl-es/visible_for.dialog"
+          "file_path": "locale/gl-es/visible_for.dialog"
         },
         "it-IT": {
           "entries": [
@@ -3061,7 +3061,7 @@
             "duration"
           ],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/it-it/visible_for.dialog"
+          "file_path": "locale/it-it/visible_for.dialog"
         }
       },
       "context": {
@@ -3079,7 +3079,7 @@
           "duration": "Runtime value from handle_when()"
         },
         "related_files": [
-          "ovos-skill-iss-location/locale/en-us/location.when.dialog"
+          "locale/en-us/location.when.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -3091,15 +3091,15 @@
         "handler_source": "@intent_handler('when_iss.intent')\ndef handle_when(self, message):\n    lat = self.location[\"coordinate\"][\"latitude\"]\n    lon = self.location[\"coordinate\"][\"longitude\"]\n\n    pred = SatellitePredictions(lat, lon, altitude=0, days=1).predict()\n    dt = pred[\"rise\"][\"time\"]  # in user timezone\n    delta = pred[\"length\"]\n    dur = dt - now_local()\n\n    duration = nice_duration(dur, lang=self.lang)\n    visible_dur = nice_duration(delta, lang=self.lang)\n    if self.use_gui:\n        caption = self.location_pretty + \" \" + dt.strftime(\"%m/%d/%Y, %H:%M:%S\")\n        image = self.generate_map(lat, lon)\n        self.gui.show_image(image, caption=caption, fill='PreserveAspectFit')\n\n    self.speak_dialog(\"location.when\", {\n        \"duration\": duration,\n        \"toponym\": self.location_pretty\n    }, wait=True)\n    self.speak_dialog(\"visible_for\", {\n        \"duration\": visible_dur\n    }, wait=True)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/ca-es/visible_for.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/da-dk/visible_for.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/de-de/visible_for.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/en-us/visible_for.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/es-es/visible_for.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/eu/visible_for.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/fr-fr/visible_for.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/gl-es/visible_for.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/it-it/visible_for.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/ca-es/visible_for.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/da-dk/visible_for.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/de-de/visible_for.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/en-us/visible_for.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/es-es/visible_for.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/eu/visible_for.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/fr-fr/visible_for.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/gl-es/visible_for.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/it-it/visible_for.dialog"
       }
     },
     "when_iss.intent": {
@@ -7399,7 +7399,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-iss-location/locale/ca-es/when_iss.intent"
+          "file_path": "locale/ca-es/when_iss.intent"
         },
         "da-DK": {
           "entries": [
@@ -7766,7 +7766,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-iss-location/locale/da-dk/when_iss.intent"
+          "file_path": "locale/da-dk/when_iss.intent"
         },
         "de-DE": {
           "entries": [
@@ -7902,7 +7902,7 @@
           "line_count": 32,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/de-de/when_iss.intent"
+          "file_path": "locale/de-de/when_iss.intent"
         },
         "en-US": {
           "entries": [
@@ -8157,7 +8157,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-iss-location/locale/en-us/when_iss.intent"
+          "file_path": "locale/en-us/when_iss.intent"
         },
         "es-ES": {
           "entries": [
@@ -8364,7 +8364,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-iss-location/locale/es-es/when_iss.intent"
+          "file_path": "locale/es-es/when_iss.intent"
         },
         "eu": {
           "entries": [
@@ -8619,7 +8619,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-iss-location/locale/eu/when_iss.intent"
+          "file_path": "locale/eu/when_iss.intent"
         },
         "fr-FR": {
           "entries": [
@@ -8670,7 +8670,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-iss-location/locale/fr-fr/when_iss.intent"
+          "file_path": "locale/fr-fr/when_iss.intent"
         },
         "gl-ES": {
           "entries": [
@@ -8845,7 +8845,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-iss-location/locale/gl-es/when_iss.intent"
+          "file_path": "locale/gl-es/when_iss.intent"
         },
         "it-IT": {
           "entries": [
@@ -11420,7 +11420,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-iss-location/locale/it-it/when_iss.intent"
+          "file_path": "locale/it-it/when_iss.intent"
         },
         "pt-PT": {
           "entries": [
@@ -11451,7 +11451,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-iss-location/locale/pt-pt/when_iss.intent"
+          "file_path": "locale/pt-pt/when_iss.intent"
         }
       },
       "context": {
@@ -11471,8 +11471,8 @@
           "toponym": "Variable passed to location.when.dialog"
         },
         "related_files": [
-          "ovos-skill-iss-location/locale/en-us/location.when.dialog",
-          "ovos-skill-iss-location/locale/en-us/visible_for.dialog"
+          "locale/en-us/location.when.dialog",
+          "locale/en-us/visible_for.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -11485,16 +11485,16 @@
         "handler_source": "@intent_handler('when_iss.intent')\ndef handle_when(self, message):\n    lat = self.location[\"coordinate\"][\"latitude\"]\n    lon = self.location[\"coordinate\"][\"longitude\"]\n\n    pred = SatellitePredictions(lat, lon, altitude=0, days=1).predict()\n    dt = pred[\"rise\"][\"time\"]  # in user timezone\n    delta = pred[\"length\"]\n    dur = dt - now_local()\n\n    duration = nice_duration(dur, lang=self.lang)\n    visible_dur = nice_duration(delta, lang=self.lang)\n    if self.use_gui:\n        caption = self.location_pretty + \" \" + dt.strftime(\"%m/%d/%Y, %H:%M:%S\")\n        image = self.generate_map(lat, lon)\n        self.gui.show_image(image, caption=caption, fill='PreserveAspectFit')\n\n    self.speak_dialog(\"location.when\", {\n        \"duration\": duration,\n        \"toponym\": self.location_pretty\n    }, wait=True)\n    self.speak_dialog(\"visible_for\", {\n        \"duration\": visible_dur\n    }, wait=True)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/ca-es/when_iss.intent",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/da-dk/when_iss.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/de-de/when_iss.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/en-us/when_iss.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/es-es/when_iss.intent",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/eu/when_iss.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/fr-fr/when_iss.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/gl-es/when_iss.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/it-it/when_iss.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/pt-pt/when_iss.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/ca-es/when_iss.intent",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/da-dk/when_iss.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/de-de/when_iss.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/en-us/when_iss.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/es-es/when_iss.intent",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/eu/when_iss.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/fr-fr/when_iss.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/gl-es/when_iss.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/it-it/when_iss.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/pt-pt/when_iss.intent"
       }
     },
     "where_iss.intent": {
@@ -12578,7 +12578,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-iss-location/locale/ca-es/where_iss.intent"
+          "file_path": "locale/ca-es/where_iss.intent"
         },
         "da-DK": {
           "entries": [
@@ -12682,7 +12682,7 @@
           "line_count": 24,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/da-dk/where_iss.intent"
+          "file_path": "locale/da-dk/where_iss.intent"
         },
         "de-DE": {
           "entries": [
@@ -12770,7 +12770,7 @@
           "line_count": 20,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/de-de/where_iss.intent"
+          "file_path": "locale/de-de/where_iss.intent"
         },
         "en-US": {
           "entries": [
@@ -12842,7 +12842,7 @@
           "line_count": 16,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/en-us/where_iss.intent"
+          "file_path": "locale/en-us/where_iss.intent"
         },
         "es-ES": {
           "entries": [
@@ -12906,7 +12906,7 @@
           "line_count": 14,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/es-es/where_iss.intent"
+          "file_path": "locale/es-es/where_iss.intent"
         },
         "eu": {
           "entries": [
@@ -12978,7 +12978,7 @@
           "line_count": 16,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/eu/where_iss.intent"
+          "file_path": "locale/eu/where_iss.intent"
         },
         "fr-FR": {
           "entries": [
@@ -13025,7 +13025,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-iss-location/locale/fr-fr/where_iss.intent"
+          "file_path": "locale/fr-fr/where_iss.intent"
         },
         "gl-ES": {
           "entries": [
@@ -13097,7 +13097,7 @@
           "line_count": 16,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/gl-es/where_iss.intent"
+          "file_path": "locale/gl-es/where_iss.intent"
         },
         "it-IT": {
           "entries": [
@@ -13752,7 +13752,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-iss-location/locale/it-it/where_iss.intent"
+          "file_path": "locale/it-it/where_iss.intent"
         },
         "pt-PT": {
           "entries": [
@@ -13799,7 +13799,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-iss-location/locale/pt-pt/where_iss.intent"
+          "file_path": "locale/pt-pt/where_iss.intent"
         }
       },
       "context": {
@@ -13820,8 +13820,8 @@
           "toponym": "Variable passed to location.current.dialog"
         },
         "related_files": [
-          "ovos-skill-iss-location/locale/en-us/location.unknown.dialog",
-          "ovos-skill-iss-location/locale/en-us/location.current.dialog"
+          "locale/en-us/location.unknown.dialog",
+          "locale/en-us/location.current.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -13834,16 +13834,16 @@
         "handler_source": "@intent_handler('where_iss.intent')\ndef handle_iss(self, message):\n    toponym, lat, lon, astronauts = self.get_iss_data()\n    if self.use_gui:\n        self.update_picture(toponym, lat, lon, astronauts)\n        self.gui.show_image(self.gui['imgLink'],\n                            caption=self.gui['caption'],\n                            fill='PreserveAspectFit')\n\n    if toponym == \"unknown\":\n        self.speak_dialog(\"location.unknown\", {\n            \"latitude\": lat,\n            \"longitude\": lon\n        }, wait=True)\n    else:\n        self.speak_dialog(\"location.current\", {\n            \"latitude\": lat,\n            \"longitude\":lon,\n            \"toponym\": toponym\n        }, wait=True)\n    sleep(1)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/ca-es/where_iss.intent",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/da-dk/where_iss.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/de-de/where_iss.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/en-us/where_iss.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/es-es/where_iss.intent",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/eu/where_iss.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/fr-fr/where_iss.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/gl-es/where_iss.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/it-it/where_iss.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/pt-pt/where_iss.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/ca-es/where_iss.intent",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/da-dk/where_iss.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/de-de/where_iss.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/en-us/where_iss.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/es-es/where_iss.intent",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/eu/where_iss.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/fr-fr/where_iss.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/gl-es/where_iss.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/it-it/where_iss.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/pt-pt/where_iss.intent"
       }
     },
     "who.voc": {
@@ -13908,7 +13908,7 @@
           "line_count": 13,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/ca-es/who.voc"
+          "file_path": "locale/ca-es/who.voc"
         },
         "da-DK": {
           "entries": [
@@ -13932,7 +13932,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/da-dk/who.voc"
+          "file_path": "locale/da-dk/who.voc"
         },
         "de-DE": {
           "entries": [
@@ -13964,7 +13964,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/de-de/who.voc"
+          "file_path": "locale/de-de/who.voc"
         },
         "en-US": {
           "entries": [
@@ -13988,7 +13988,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/en-us/who.voc"
+          "file_path": "locale/en-us/who.voc"
         },
         "es-ES": {
           "entries": [
@@ -14012,7 +14012,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/es-es/who.voc"
+          "file_path": "locale/es-es/who.voc"
         },
         "eu": {
           "entries": [
@@ -14040,7 +14040,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/eu/who.voc"
+          "file_path": "locale/eu/who.voc"
         },
         "fr-FR": {
           "entries": [
@@ -14064,7 +14064,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/fr-fr/who.voc"
+          "file_path": "locale/fr-fr/who.voc"
         },
         "gl-ES": {
           "entries": [
@@ -14088,7 +14088,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/gl-es/who.voc"
+          "file_path": "locale/gl-es/who.voc"
         },
         "it-IT": {
           "entries": [
@@ -14108,7 +14108,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/it-it/who.voc"
+          "file_path": "locale/it-it/who.voc"
         },
         "pt-PT": {
           "entries": [
@@ -14128,7 +14128,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-iss-location/locale/pt-pt/who.voc"
+          "file_path": "locale/pt-pt/who.voc"
         }
       },
       "context": {
@@ -14163,16 +14163,16 @@
         "handler_source": "@intent_handler(IntentBuilder(\"WhoISSIntent\").require(\"who\").\n                require(\"onboard\").require(\"iss\"))\ndef handle_who(self, message):\n    toponym, lat, lon, astronauts = self.get_iss_data()\n    people = [\n        p[\"name\"] for p in astronauts\n        if p[\"craft\"] == \"ISS\"\n    ]\n    people = \", \".join(people)\n    if self.use_gui:\n        self.update_picture(toponym, lat, lon, astronauts)\n        self.gui.show_image(self.settings[\"iss_bg\"],\n                            override_idle=True,\n                            fill='PreserveAspectFit',\n                            caption=people)\n    self.speak_dialog(\"who\", {\"people\": people}, wait=True)\n    sleep(1)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/ca-es/who.voc",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/da-dk/who.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/de-de/who.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/en-us/who.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/es-es/who.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/eu/who.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/fr-fr/who.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/gl-es/who.voc",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/it-it/who.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/ovos-skill-iss-location/locale/pt-pt/who.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/ca-es/who.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/da-dk/who.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/de-de/who.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/en-us/who.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/es-es/who.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/eu/who.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/fr-fr/who.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/gl-es/who.voc",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/it-it/who.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-iss-location/edit/dev/locale/pt-pt/who.voc"
       }
     }
   }

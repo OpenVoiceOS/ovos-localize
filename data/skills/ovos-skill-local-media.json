@@ -35,7 +35,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/en-us/local_media.voc"
+          "file_path": "locale/en-us/local_media.voc"
         },
         "fr-FR": {
           "entries": [
@@ -51,7 +51,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/fr-fr/local_media.voc"
+          "file_path": "locale/fr-fr/local_media.voc"
         }
       },
       "context": {
@@ -75,8 +75,8 @@
         "handler_source": null
       },
       "edit_urls": {
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/en-us/local_media.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/fr-fr/local_media.voc"
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/en-us/local_media.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/fr-fr/local_media.voc"
       }
     },
     "open.file.browser.intent": {
@@ -113,7 +113,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/ca-es/open.file.browser.intent"
+          "file_path": "locale/ca-es/open.file.browser.intent"
         },
         "da-DK": {
           "entries": [
@@ -145,7 +145,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/da-dk/open.file.browser.intent"
+          "file_path": "locale/da-dk/open.file.browser.intent"
         },
         "de-DE": {
           "entries": [
@@ -177,7 +177,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/de-de/open.file.browser.intent"
+          "file_path": "locale/de-de/open.file.browser.intent"
         },
         "en-US": {
           "entries": [
@@ -209,7 +209,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/en-us/open.file.browser.intent"
+          "file_path": "locale/en-us/open.file.browser.intent"
         },
         "es-ES": {
           "entries": [
@@ -321,7 +321,7 @@
           "line_count": 26,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/es-es/intents/open.file.browser.intent"
+          "file_path": "locale/es-es/intents/open.file.browser.intent"
         },
         "eu": {
           "entries": [
@@ -353,7 +353,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/eu/open.file.browser.intent"
+          "file_path": "locale/eu/open.file.browser.intent"
         },
         "fr-FR": {
           "entries": [
@@ -401,7 +401,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/fr-fr/open.file.browser.intent"
+          "file_path": "locale/fr-fr/open.file.browser.intent"
         },
         "gl-ES": {
           "entries": [
@@ -429,7 +429,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/gl-es/open.file.browser.intent"
+          "file_path": "locale/gl-es/open.file.browser.intent"
         },
         "it-IT": {
           "entries": [
@@ -541,7 +541,7 @@
           "line_count": 26,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/it-it/intents/open.file.browser.intent"
+          "file_path": "locale/it-it/intents/open.file.browser.intent"
         },
         "pt-BR": {
           "entries": [
@@ -573,7 +573,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/pt-br/open.file.browser.intent"
+          "file_path": "locale/pt-br/open.file.browser.intent"
         },
         "pt-PT": {
           "entries": [
@@ -685,7 +685,7 @@
           "line_count": 26,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/pt-pt/intents/open.file.browser.intent"
+          "file_path": "locale/pt-pt/intents/open.file.browser.intent"
         }
       },
       "context": {
@@ -710,17 +710,17 @@
         "handler_source": "@homescreen_app(icon=\"ovos-file-browser.svg\", name=\"File Browser\")\n@intent_handler(\"open.file.browser.intent\")\ndef show_home(self, message):\n    \"\"\"\n    Show the file browser home page\n    \"\"\"\n    self.gui.show_page(\"Browser\", override_idle=120)"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/ca-es/open.file.browser.intent",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/da-dk/open.file.browser.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/de-de/open.file.browser.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/en-us/open.file.browser.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/es-es/intents/open.file.browser.intent",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/eu/open.file.browser.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/fr-fr/open.file.browser.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/gl-es/open.file.browser.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/it-it/intents/open.file.browser.intent",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/pt-br/open.file.browser.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/pt-pt/intents/open.file.browser.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/ca-es/open.file.browser.intent",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/da-dk/open.file.browser.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/de-de/open.file.browser.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/en-us/open.file.browser.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/es-es/intents/open.file.browser.intent",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/eu/open.file.browser.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/fr-fr/open.file.browser.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/gl-es/open.file.browser.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/it-it/intents/open.file.browser.intent",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/pt-br/open.file.browser.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/pt-pt/intents/open.file.browser.intent"
       }
     },
     "skill.json": {
@@ -1000,7 +1000,7 @@
           "line_count": 39,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/ca-es/skill.json"
+          "file_path": "locale/ca-es/skill.json"
         },
         "da-DK": {
           "entries": [
@@ -1275,7 +1275,7 @@
           "line_count": 39,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/da-dk/skill.json"
+          "file_path": "locale/da-dk/skill.json"
         },
         "de-DE": {
           "entries": [
@@ -1550,7 +1550,7 @@
           "line_count": 39,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/de-de/skill.json"
+          "file_path": "locale/de-de/skill.json"
         },
         "en-US": {
           "entries": [
@@ -1825,7 +1825,7 @@
           "line_count": 39,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/en-us/skill.json"
+          "file_path": "locale/en-us/skill.json"
         },
         "fr-FR": {
           "entries": [
@@ -1939,7 +1939,7 @@
           "line_count": 16,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/fr-fr/skill.json"
+          "file_path": "locale/fr-fr/skill.json"
         },
         "gl-ES": {
           "entries": [
@@ -2214,7 +2214,7 @@
           "line_count": 39,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/gl-es/skill.json"
+          "file_path": "locale/gl-es/skill.json"
         },
         "it-IT": {
           "entries": [
@@ -2489,7 +2489,7 @@
           "line_count": 39,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/it-it/skill.json"
+          "file_path": "locale/it-it/skill.json"
         },
         "pt-BR": {
           "entries": [
@@ -2764,7 +2764,7 @@
           "line_count": 39,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-local-media/locale/pt-br/skill.json"
+          "file_path": "locale/pt-br/skill.json"
         }
       },
       "context": {
@@ -2784,14 +2784,14 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/ca-es/skill.json",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/da-dk/skill.json",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/de-de/skill.json",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/en-us/skill.json",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/fr-fr/skill.json",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/gl-es/skill.json",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/it-it/skill.json",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/ovos-skill-local-media/locale/pt-br/skill.json"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/ca-es/skill.json",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/da-dk/skill.json",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/de-de/skill.json",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/en-us/skill.json",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/fr-fr/skill.json",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/gl-es/skill.json",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/it-it/skill.json",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-local-media/edit/dev/locale/pt-br/skill.json"
       }
     }
   }

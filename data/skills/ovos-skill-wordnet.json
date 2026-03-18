@@ -40,7 +40,7 @@
             "query"
           ],
           "validation": [],
-          "file_path": "ovos-skill-wordnet/locale/ca-es/antonym.intent"
+          "file_path": "locale/ca-es/antonym.intent"
         },
         "da-DK": {
           "entries": [
@@ -69,7 +69,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/da-dk/antonym.intent"
+          "file_path": "locale/da-dk/antonym.intent"
         },
         "de-DE": {
           "entries": [
@@ -98,7 +98,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/de-de/antonym.intent"
+          "file_path": "locale/de-de/antonym.intent"
         },
         "en-US": {
           "entries": [
@@ -127,7 +127,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/en-us/antonym.intent"
+          "file_path": "locale/en-us/antonym.intent"
         },
         "es-ES": {
           "entries": [
@@ -156,7 +156,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/es-es/antonym.intent"
+          "file_path": "locale/es-es/antonym.intent"
         },
         "eu": {
           "entries": [
@@ -185,7 +185,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/eu/antonym.intent"
+          "file_path": "locale/eu/antonym.intent"
         },
         "fr-FR": {
           "entries": [
@@ -214,7 +214,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/fr-fr/antonym.intent"
+          "file_path": "locale/fr-fr/antonym.intent"
         },
         "gl-ES": {
           "entries": [
@@ -243,7 +243,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/gl-es/antonym.intent"
+          "file_path": "locale/gl-es/antonym.intent"
         },
         "it-IT": {
           "entries": [
@@ -272,7 +272,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/it-it/antonym.intent"
+          "file_path": "locale/it-it/antonym.intent"
         },
         "pt-PT": {
           "entries": [
@@ -297,7 +297,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/pt-pt/antonym.intent"
+          "file_path": "locale/pt-pt/antonym.intent"
         }
       },
       "context": {
@@ -315,7 +315,7 @@
         ],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-wordnet/locale/en-us/no_answer.dialog"
+          "locale/en-us/no_answer.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -328,16 +328,16 @@
         "handler_source": "@intent_handler(\"antonym.intent\")\ndef handle_antonym(self, message):\n    query = message.data[\"query\"]\n    res = self.solver.get_data(query, lang=self.lang).get(\"antonyms\")\n    if res:\n        self.speak(random.choice(res))\n    else:\n        self.speak_dialog(\"no_answer\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/ca-es/antonym.intent",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/da-dk/antonym.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/de-de/antonym.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/en-us/antonym.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/es-es/antonym.intent",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/eu/antonym.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/fr-fr/antonym.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/gl-es/antonym.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/it-it/antonym.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/pt-pt/antonym.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/ca-es/antonym.intent",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/da-dk/antonym.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/de-de/antonym.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/en-us/antonym.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/es-es/antonym.intent",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/eu/antonym.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/fr-fr/antonym.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/gl-es/antonym.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/it-it/antonym.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/pt-pt/antonym.intent"
       }
     },
     "definition.intent": {
@@ -367,7 +367,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/ca-es/definition.intent"
+          "file_path": "locale/ca-es/definition.intent"
         },
         "da-DK": {
           "entries": [
@@ -399,7 +399,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/da-dk/definition.intent"
+          "file_path": "locale/da-dk/definition.intent"
         },
         "de-DE": {
           "entries": [
@@ -424,7 +424,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/de-de/definition.intent"
+          "file_path": "locale/de-de/definition.intent"
         },
         "en-US": {
           "entries": [
@@ -449,7 +449,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/en-us/definition.intent"
+          "file_path": "locale/en-us/definition.intent"
         },
         "es-ES": {
           "entries": [
@@ -474,7 +474,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/es-es/definition.intent"
+          "file_path": "locale/es-es/definition.intent"
         },
         "eu": {
           "entries": [
@@ -499,7 +499,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/eu/definition.intent"
+          "file_path": "locale/eu/definition.intent"
         },
         "fr-FR": {
           "entries": [
@@ -524,7 +524,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/fr-fr/definition.intent"
+          "file_path": "locale/fr-fr/definition.intent"
         },
         "gl-ES": {
           "entries": [
@@ -549,7 +549,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/gl-es/definition.intent"
+          "file_path": "locale/gl-es/definition.intent"
         },
         "it-IT": {
           "entries": [
@@ -574,7 +574,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/it-it/definition.intent"
+          "file_path": "locale/it-it/definition.intent"
         },
         "pt-PT": {
           "entries": [
@@ -599,7 +599,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/pt-pt/definition.intent"
+          "file_path": "locale/pt-pt/definition.intent"
         }
       },
       "context": {
@@ -617,7 +617,7 @@
         ],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-wordnet/locale/en-us/no_answer.dialog"
+          "locale/en-us/no_answer.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -630,16 +630,16 @@
         "handler_source": "@intent_handler(\"definition.intent\")\ndef handle_definition(self, message):\n    query = message.data[\"query\"]\n    res = self.solver.get_data(query, lang=self.lang).get(\"definition\")\n    if res:\n        self.speak(res)\n    else:\n        self.speak_dialog(\"no_answer\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/ca-es/definition.intent",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/da-dk/definition.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/de-de/definition.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/en-us/definition.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/es-es/definition.intent",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/eu/definition.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/fr-fr/definition.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/gl-es/definition.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/it-it/definition.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/pt-pt/definition.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/ca-es/definition.intent",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/da-dk/definition.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/de-de/definition.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/en-us/definition.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/es-es/definition.intent",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/eu/definition.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/fr-fr/definition.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/gl-es/definition.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/it-it/definition.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/pt-pt/definition.intent"
       }
     },
     "holonym.intent": {
@@ -666,7 +666,7 @@
             "query"
           ],
           "validation": [],
-          "file_path": "ovos-skill-wordnet/locale/ca-es/holonym.intent"
+          "file_path": "locale/ca-es/holonym.intent"
         },
         "da-DK": {
           "entries": [
@@ -695,7 +695,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/da-dk/holonym.intent"
+          "file_path": "locale/da-dk/holonym.intent"
         },
         "de-DE": {
           "entries": [
@@ -728,7 +728,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/de-de/holonym.intent"
+          "file_path": "locale/de-de/holonym.intent"
         },
         "en-US": {
           "entries": [
@@ -757,7 +757,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/en-us/holonym.intent"
+          "file_path": "locale/en-us/holonym.intent"
         },
         "es-ES": {
           "entries": [
@@ -786,7 +786,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/es-es/holonym.intent"
+          "file_path": "locale/es-es/holonym.intent"
         },
         "eu": {
           "entries": [
@@ -815,7 +815,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/eu/holonym.intent"
+          "file_path": "locale/eu/holonym.intent"
         },
         "fr-FR": {
           "entries": [
@@ -844,7 +844,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/fr-fr/holonym.intent"
+          "file_path": "locale/fr-fr/holonym.intent"
         },
         "gl-ES": {
           "entries": [
@@ -873,7 +873,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/gl-es/holonym.intent"
+          "file_path": "locale/gl-es/holonym.intent"
         },
         "it-IT": {
           "entries": [
@@ -902,7 +902,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/it-it/holonym.intent"
+          "file_path": "locale/it-it/holonym.intent"
         },
         "pt-PT": {
           "entries": [
@@ -923,7 +923,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/pt-pt/holonym.intent"
+          "file_path": "locale/pt-pt/holonym.intent"
         }
       },
       "context": {
@@ -941,7 +941,7 @@
         ],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-wordnet/locale/en-us/no_answer.dialog"
+          "locale/en-us/no_answer.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -954,16 +954,16 @@
         "handler_source": "@intent_handler(\"holonym.intent\")\ndef handle_holonym(self, message):\n    query = message.data[\"query\"]\n    res = self.solver.get_data(query, lang=self.lang).get(\"holonyms\")\n    if res:\n        self.speak(random.choice(res))\n    else:\n        self.speak_dialog(\"no_answer\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/ca-es/holonym.intent",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/da-dk/holonym.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/de-de/holonym.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/en-us/holonym.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/es-es/holonym.intent",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/eu/holonym.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/fr-fr/holonym.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/gl-es/holonym.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/it-it/holonym.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/pt-pt/holonym.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/ca-es/holonym.intent",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/da-dk/holonym.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/de-de/holonym.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/en-us/holonym.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/es-es/holonym.intent",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/eu/holonym.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/fr-fr/holonym.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/gl-es/holonym.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/it-it/holonym.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/pt-pt/holonym.intent"
       }
     },
     "hypernym.intent": {
@@ -990,7 +990,7 @@
             "query"
           ],
           "validation": [],
-          "file_path": "ovos-skill-wordnet/locale/ca-es/hypernym.intent"
+          "file_path": "locale/ca-es/hypernym.intent"
         },
         "da-DK": {
           "entries": [
@@ -1026,7 +1026,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/da-dk/hypernym.intent"
+          "file_path": "locale/da-dk/hypernym.intent"
         },
         "de-DE": {
           "entries": [
@@ -1055,7 +1055,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/de-de/hypernym.intent"
+          "file_path": "locale/de-de/hypernym.intent"
         },
         "en-US": {
           "entries": [
@@ -1084,7 +1084,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/en-us/hypernym.intent"
+          "file_path": "locale/en-us/hypernym.intent"
         },
         "es-ES": {
           "entries": [
@@ -1113,7 +1113,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/es-es/hypernym.intent"
+          "file_path": "locale/es-es/hypernym.intent"
         },
         "eu": {
           "entries": [
@@ -1142,7 +1142,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/eu/hypernym.intent"
+          "file_path": "locale/eu/hypernym.intent"
         },
         "fr-FR": {
           "entries": [
@@ -1171,7 +1171,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/fr-fr/hypernym.intent"
+          "file_path": "locale/fr-fr/hypernym.intent"
         },
         "gl-ES": {
           "entries": [
@@ -1200,7 +1200,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/gl-es/hypernym.intent"
+          "file_path": "locale/gl-es/hypernym.intent"
         },
         "it-IT": {
           "entries": [
@@ -1229,7 +1229,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/it-it/hypernym.intent"
+          "file_path": "locale/it-it/hypernym.intent"
         },
         "pt-PT": {
           "entries": [
@@ -1250,7 +1250,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/pt-pt/hypernym.intent"
+          "file_path": "locale/pt-pt/hypernym.intent"
         }
       },
       "context": {
@@ -1268,7 +1268,7 @@
         ],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-wordnet/locale/en-us/no_answer.dialog"
+          "locale/en-us/no_answer.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1281,16 +1281,16 @@
         "handler_source": "@intent_handler(\"hypernym.intent\")\ndef handle_hypernym(self, message):\n    query = message.data[\"query\"]\n    res = self.solver.get_data(query, lang=self.lang).get(\"hypernyms\")\n    if res:\n        self.speak(random.choice(res))\n    else:\n        self.speak_dialog(\"no_answer\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/ca-es/hypernym.intent",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/da-dk/hypernym.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/de-de/hypernym.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/en-us/hypernym.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/es-es/hypernym.intent",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/eu/hypernym.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/fr-fr/hypernym.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/gl-es/hypernym.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/it-it/hypernym.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/pt-pt/hypernym.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/ca-es/hypernym.intent",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/da-dk/hypernym.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/de-de/hypernym.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/en-us/hypernym.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/es-es/hypernym.intent",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/eu/hypernym.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/fr-fr/hypernym.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/gl-es/hypernym.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/it-it/hypernym.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/pt-pt/hypernym.intent"
       }
     },
     "hyponym.intent": {
@@ -1317,7 +1317,7 @@
             "query"
           ],
           "validation": [],
-          "file_path": "ovos-skill-wordnet/locale/ca-es/hyponym.intent"
+          "file_path": "locale/ca-es/hyponym.intent"
         },
         "da-DK": {
           "entries": [
@@ -1353,7 +1353,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/da-dk/hyponym.intent"
+          "file_path": "locale/da-dk/hyponym.intent"
         },
         "de-DE": {
           "entries": [
@@ -1382,7 +1382,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/de-de/hyponym.intent"
+          "file_path": "locale/de-de/hyponym.intent"
         },
         "en-US": {
           "entries": [
@@ -1411,7 +1411,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/en-us/hyponym.intent"
+          "file_path": "locale/en-us/hyponym.intent"
         },
         "es-ES": {
           "entries": [
@@ -1440,7 +1440,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/es-es/hyponym.intent"
+          "file_path": "locale/es-es/hyponym.intent"
         },
         "eu": {
           "entries": [
@@ -1469,7 +1469,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/eu/hyponym.intent"
+          "file_path": "locale/eu/hyponym.intent"
         },
         "fr-FR": {
           "entries": [
@@ -1498,7 +1498,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/fr-fr/hyponym.intent"
+          "file_path": "locale/fr-fr/hyponym.intent"
         },
         "gl-ES": {
           "entries": [
@@ -1527,7 +1527,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/gl-es/hyponym.intent"
+          "file_path": "locale/gl-es/hyponym.intent"
         },
         "it-IT": {
           "entries": [
@@ -1556,7 +1556,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/it-it/hyponym.intent"
+          "file_path": "locale/it-it/hyponym.intent"
         },
         "pt-PT": {
           "entries": [
@@ -1577,7 +1577,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/pt-pt/hyponym.intent"
+          "file_path": "locale/pt-pt/hyponym.intent"
         }
       },
       "context": {
@@ -1595,7 +1595,7 @@
         ],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-wordnet/locale/en-us/no_answer.dialog"
+          "locale/en-us/no_answer.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1608,16 +1608,16 @@
         "handler_source": "@intent_handler(\"hyponym.intent\")\ndef handle_hyponym(self, message):\n    query = message.data[\"query\"]\n    res = self.solver.get_data(query, lang=self.lang).get(\"hyponyms\")\n    if res:\n        self.speak(random.choice(res))\n    else:\n        self.speak_dialog(\"no_answer\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/ca-es/hyponym.intent",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/da-dk/hyponym.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/de-de/hyponym.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/en-us/hyponym.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/es-es/hyponym.intent",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/eu/hyponym.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/fr-fr/hyponym.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/gl-es/hyponym.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/it-it/hyponym.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/pt-pt/hyponym.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/ca-es/hyponym.intent",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/da-dk/hyponym.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/de-de/hyponym.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/en-us/hyponym.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/es-es/hyponym.intent",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/eu/hyponym.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/fr-fr/hyponym.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/gl-es/hyponym.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/it-it/hyponym.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/pt-pt/hyponym.intent"
       }
     },
     "lemma.intent": {
@@ -1644,7 +1644,7 @@
             "query"
           ],
           "validation": [],
-          "file_path": "ovos-skill-wordnet/locale/ca-es/lemma.intent"
+          "file_path": "locale/ca-es/lemma.intent"
         },
         "da-DK": {
           "entries": [
@@ -1673,7 +1673,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/da-dk/lemma.intent"
+          "file_path": "locale/da-dk/lemma.intent"
         },
         "de-DE": {
           "entries": [
@@ -1702,7 +1702,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/de-de/lemma.intent"
+          "file_path": "locale/de-de/lemma.intent"
         },
         "en-US": {
           "entries": [
@@ -1731,7 +1731,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/en-us/lemma.intent"
+          "file_path": "locale/en-us/lemma.intent"
         },
         "es-ES": {
           "entries": [
@@ -1760,7 +1760,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/es-es/lemma.intent"
+          "file_path": "locale/es-es/lemma.intent"
         },
         "eu": {
           "entries": [
@@ -1789,7 +1789,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/eu/lemma.intent"
+          "file_path": "locale/eu/lemma.intent"
         },
         "fr-FR": {
           "entries": [
@@ -1818,7 +1818,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/fr-fr/lemma.intent"
+          "file_path": "locale/fr-fr/lemma.intent"
         },
         "gl-ES": {
           "entries": [
@@ -1847,7 +1847,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/gl-es/lemma.intent"
+          "file_path": "locale/gl-es/lemma.intent"
         },
         "it-IT": {
           "entries": [
@@ -1876,7 +1876,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/it-it/lemma.intent"
+          "file_path": "locale/it-it/lemma.intent"
         },
         "pt-PT": {
           "entries": [
@@ -1897,7 +1897,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/pt-pt/lemma.intent"
+          "file_path": "locale/pt-pt/lemma.intent"
         }
       },
       "context": {
@@ -1915,7 +1915,7 @@
         ],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-wordnet/locale/en-us/no_answer.dialog"
+          "locale/en-us/no_answer.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1928,16 +1928,16 @@
         "handler_source": "@intent_handler(\"lemma.intent\")\ndef handle_lemma(self, message):\n    query = message.data[\"query\"]\n    res = self.solver.get_data(query, lang=self.lang).get(\"lemmas\")\n    if res:\n        self.speak(random.choice(res))\n    else:\n        self.speak_dialog(\"no_answer\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/ca-es/lemma.intent",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/da-dk/lemma.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/de-de/lemma.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/en-us/lemma.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/es-es/lemma.intent",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/eu/lemma.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/fr-fr/lemma.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/gl-es/lemma.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/it-it/lemma.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/pt-pt/lemma.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/ca-es/lemma.intent",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/da-dk/lemma.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/de-de/lemma.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/en-us/lemma.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/es-es/lemma.intent",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/eu/lemma.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/fr-fr/lemma.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/gl-es/lemma.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/it-it/lemma.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/pt-pt/lemma.intent"
       }
     },
     "no_answer.dialog": {
@@ -1961,7 +1961,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/ca-es/no_answer.dialog"
+          "file_path": "locale/ca-es/no_answer.dialog"
         },
         "da-DK": {
           "entries": [
@@ -1980,7 +1980,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/da-dk/no_answer.dialog"
+          "file_path": "locale/da-dk/no_answer.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1999,7 +1999,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/de-de/no_answer.dialog"
+          "file_path": "locale/de-de/no_answer.dialog"
         },
         "en-US": {
           "entries": [
@@ -2018,7 +2018,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/en-us/no_answer.dialog"
+          "file_path": "locale/en-us/no_answer.dialog"
         },
         "es-ES": {
           "entries": [
@@ -2037,7 +2037,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/es-es/no_answer.dialog"
+          "file_path": "locale/es-es/no_answer.dialog"
         },
         "eu": {
           "entries": [
@@ -2056,7 +2056,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/eu/no_answer.dialog"
+          "file_path": "locale/eu/no_answer.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -2075,7 +2075,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/fr-fr/no_answer.dialog"
+          "file_path": "locale/fr-fr/no_answer.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -2094,7 +2094,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/gl-es/no_answer.dialog"
+          "file_path": "locale/gl-es/no_answer.dialog"
         },
         "it-IT": {
           "entries": [
@@ -2113,7 +2113,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/it-it/no_answer.dialog"
+          "file_path": "locale/it-it/no_answer.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -2132,7 +2132,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/pt-pt/no_answer.dialog"
+          "file_path": "locale/pt-pt/no_answer.dialog"
         }
       },
       "context": {
@@ -2156,16 +2156,16 @@
         "handler_source": "@intent_handler(\"definition.intent\")\ndef handle_definition(self, message):\n    query = message.data[\"query\"]\n    res = self.solver.get_data(query, lang=self.lang).get(\"definition\")\n    if res:\n        self.speak(res)\n    else:\n        self.speak_dialog(\"no_answer\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/ca-es/no_answer.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/da-dk/no_answer.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/de-de/no_answer.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/en-us/no_answer.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/es-es/no_answer.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/eu/no_answer.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/fr-fr/no_answer.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/gl-es/no_answer.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/it-it/no_answer.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/pt-pt/no_answer.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/ca-es/no_answer.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/da-dk/no_answer.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/de-de/no_answer.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/en-us/no_answer.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/es-es/no_answer.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/eu/no_answer.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/fr-fr/no_answer.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/gl-es/no_answer.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/it-it/no_answer.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/pt-pt/no_answer.dialog"
       }
     },
     "search_wordnet.intent": {
@@ -2204,7 +2204,7 @@
             "query"
           ],
           "validation": [],
-          "file_path": "ovos-skill-wordnet/locale/ca-es/search_wordnet.intent"
+          "file_path": "locale/ca-es/search_wordnet.intent"
         },
         "da-DK": {
           "entries": [
@@ -2245,7 +2245,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/da-dk/search_wordnet.intent"
+          "file_path": "locale/da-dk/search_wordnet.intent"
         },
         "de-DE": {
           "entries": [
@@ -2286,7 +2286,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/de-de/search_wordnet.intent"
+          "file_path": "locale/de-de/search_wordnet.intent"
         },
         "en-US": {
           "entries": [
@@ -2327,7 +2327,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/en-us/search_wordnet.intent"
+          "file_path": "locale/en-us/search_wordnet.intent"
         },
         "es-ES": {
           "entries": [
@@ -2368,7 +2368,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/es-es/search_wordnet.intent"
+          "file_path": "locale/es-es/search_wordnet.intent"
         },
         "eu": {
           "entries": [
@@ -2401,7 +2401,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/eu/search_wordnet.intent"
+          "file_path": "locale/eu/search_wordnet.intent"
         },
         "fr-FR": {
           "entries": [
@@ -2442,7 +2442,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/fr-fr/search_wordnet.intent"
+          "file_path": "locale/fr-fr/search_wordnet.intent"
         },
         "gl-ES": {
           "entries": [
@@ -2483,7 +2483,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/gl-es/search_wordnet.intent"
+          "file_path": "locale/gl-es/search_wordnet.intent"
         },
         "it-IT": {
           "entries": [
@@ -2524,7 +2524,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/it-it/search_wordnet.intent"
+          "file_path": "locale/it-it/search_wordnet.intent"
         },
         "pt-PT": {
           "entries": [
@@ -2545,7 +2545,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-wordnet/locale/pt-pt/search_wordnet.intent"
+          "file_path": "locale/pt-pt/search_wordnet.intent"
         }
       },
       "context": {
@@ -2572,16 +2572,16 @@
         "handler_source": "@intent_handler(\"search_wordnet.intent\")\ndef handle_search(self, message):\n    self.handle_definition(message)"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/ca-es/search_wordnet.intent",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/da-dk/search_wordnet.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/de-de/search_wordnet.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/en-us/search_wordnet.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/es-es/search_wordnet.intent",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/eu/search_wordnet.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/fr-fr/search_wordnet.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/gl-es/search_wordnet.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/it-it/search_wordnet.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/pt-pt/search_wordnet.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/ca-es/search_wordnet.intent",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/da-dk/search_wordnet.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/de-de/search_wordnet.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/en-us/search_wordnet.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/es-es/search_wordnet.intent",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/eu/search_wordnet.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/fr-fr/search_wordnet.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/gl-es/search_wordnet.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/it-it/search_wordnet.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/pt-pt/search_wordnet.intent"
       }
     },
     "skill.json": {
@@ -2653,7 +2653,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-wordnet/locale/ca-es/skill.json"
+          "file_path": "locale/ca-es/skill.json"
         },
         "da-DK": {
           "entries": [
@@ -2720,7 +2720,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-wordnet/locale/da-dk/skill.json"
+          "file_path": "locale/da-dk/skill.json"
         },
         "de-DE": {
           "entries": [
@@ -2787,7 +2787,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-wordnet/locale/de-de/skill.json"
+          "file_path": "locale/de-de/skill.json"
         },
         "en-US": {
           "entries": [
@@ -2854,7 +2854,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-wordnet/locale/en-us/skill.json"
+          "file_path": "locale/en-us/skill.json"
         },
         "es-ES": {
           "entries": [
@@ -2921,7 +2921,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-wordnet/locale/es-es/skill.json"
+          "file_path": "locale/es-es/skill.json"
         },
         "gl-ES": {
           "entries": [
@@ -2988,7 +2988,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-wordnet/locale/gl-es/skill.json"
+          "file_path": "locale/gl-es/skill.json"
         }
       },
       "context": {
@@ -3008,12 +3008,12 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/ca-es/skill.json",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/da-dk/skill.json",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/de-de/skill.json",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/en-us/skill.json",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/es-es/skill.json",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/ovos-skill-wordnet/locale/gl-es/skill.json"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/ca-es/skill.json",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/da-dk/skill.json",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/de-de/skill.json",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/en-us/skill.json",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/es-es/skill.json",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-wordnet/edit/dev/locale/gl-es/skill.json"
       }
     }
   }

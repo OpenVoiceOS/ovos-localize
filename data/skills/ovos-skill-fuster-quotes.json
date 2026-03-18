@@ -27,7 +27,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/ca/Fuster.voc"
+          "file_path": "locale/ca/Fuster.voc"
         },
         "en": {
           "entries": [
@@ -43,7 +43,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/en/Fuster.voc"
+          "file_path": "locale/en/Fuster.voc"
         },
         "fr-FR": {
           "entries": [
@@ -59,7 +59,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/fr-fr/Fuster.voc"
+          "file_path": "locale/fr-fr/Fuster.voc"
         }
       },
       "context": {
@@ -96,9 +96,9 @@
         "handler_source": "@intent_handler(IntentBuilder(\"FusterLive\").require('Fuster').require('when').require('live'))\ndef handle_live(self, message):\n    utterance = self.dialog_renderer.render(\"live\", {})\n    self.show_fuster(utterance)\n    self.speak(utterance, wait=True)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/ca/Fuster.voc",
-        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/en/Fuster.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/fr-fr/Fuster.voc"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/ca/Fuster.voc",
+        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/en/Fuster.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/fr-fr/Fuster.voc"
       }
     },
     "birth.voc": {
@@ -139,7 +139,7 @@
           "line_count": 7,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/ca/birth.voc"
+          "file_path": "locale/ca/birth.voc"
         },
         "en": {
           "entries": [
@@ -159,7 +159,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/en/birth.voc"
+          "file_path": "locale/en/birth.voc"
         },
         "fr-FR": {
           "entries": [
@@ -187,7 +187,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/fr-fr/birth.voc"
+          "file_path": "locale/fr-fr/birth.voc"
         }
       },
       "context": {
@@ -221,9 +221,9 @@
         "handler_source": "@intent_handler(IntentBuilder(\"FusterBirth\").require('Fuster').require('birth'))\ndef handle_birth(self, message):\n    utterance = self.dialog_renderer.render(\"when_was_joan_fuster_born\", {})\n    self.show_fuster(utterance)\n    self.speak(utterance, wait=True)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/ca/birth.voc",
-        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/en/birth.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/fr-fr/birth.voc"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/ca/birth.voc",
+        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/en/birth.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/fr-fr/birth.voc"
       }
     },
     "death.voc": {
@@ -256,7 +256,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/ca/death.voc"
+          "file_path": "locale/ca/death.voc"
         },
         "en": {
           "entries": [
@@ -272,7 +272,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/en/death.voc"
+          "file_path": "locale/en/death.voc"
         },
         "fr-FR": {
           "entries": [
@@ -292,7 +292,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/fr-fr/death.voc"
+          "file_path": "locale/fr-fr/death.voc"
         }
       },
       "context": {
@@ -326,9 +326,9 @@
         "handler_source": "@intent_handler(IntentBuilder(\"FusterDeath\").require('Fuster').require('death'))\ndef handle_death(self, message):\n    utterance = self.dialog_renderer.render(\"when_did_joan_fuster_die\", {})\n    self.show_fuster(utterance)\n    self.speak(utterance, wait=True)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/ca/death.voc",
-        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/en/death.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/fr-fr/death.voc"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/ca/death.voc",
+        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/en/death.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/fr-fr/death.voc"
       }
     },
     "fuster_quotes.intent": {
@@ -413,7 +413,7 @@
           "line_count": 18,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/ca/fuster_quotes.intent"
+          "file_path": "locale/ca/fuster_quotes.intent"
         },
         "en": {
           "entries": [
@@ -493,7 +493,7 @@
           "line_count": 18,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/en/fuster_quotes.intent"
+          "file_path": "locale/en/fuster_quotes.intent"
         },
         "fr-FR": {
           "entries": [
@@ -557,7 +557,7 @@
           "line_count": 14,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/fr-fr/fuster_quotes.intent"
+          "file_path": "locale/fr-fr/fuster_quotes.intent"
         }
       },
       "context": {
@@ -582,9 +582,9 @@
         "handler_source": "@intent_handler(\"fuster_quotes.intent\")\ndef handle_quote(self, message):\n    utterance = self.dialog_renderer.render(\"fuster_quotes\", {})\n    self.show_fuster(utterance)\n    self.speak(utterance, wait=True)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/ca/fuster_quotes.intent",
-        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/en/fuster_quotes.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/fr-fr/fuster_quotes.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/ca/fuster_quotes.intent",
+        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/en/fuster_quotes.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/fr-fr/fuster_quotes.intent"
       }
     },
     "live.voc": {
@@ -613,7 +613,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/ca/live.voc"
+          "file_path": "locale/ca/live.voc"
         },
         "en": {
           "entries": [
@@ -629,7 +629,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/en/live.voc"
+          "file_path": "locale/en/live.voc"
         },
         "fr-FR": {
           "entries": [
@@ -649,7 +649,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/fr-fr/live.voc"
+          "file_path": "locale/fr-fr/live.voc"
         }
       },
       "context": {
@@ -684,9 +684,9 @@
         "handler_source": "@intent_handler(IntentBuilder(\"FusterLive\").require('Fuster').require('when').require('live'))\ndef handle_live(self, message):\n    utterance = self.dialog_renderer.render(\"live\", {})\n    self.show_fuster(utterance)\n    self.speak(utterance, wait=True)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/ca/live.voc",
-        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/en/live.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/fr-fr/live.voc"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/ca/live.voc",
+        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/en/live.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/fr-fr/live.voc"
       }
     },
     "quote.voc": {
@@ -715,7 +715,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/ca/quote.voc"
+          "file_path": "locale/ca/quote.voc"
         },
         "en": {
           "entries": [
@@ -735,7 +735,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/en/quote.voc"
+          "file_path": "locale/en/quote.voc"
         },
         "fr-FR": {
           "entries": [
@@ -755,7 +755,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/fr-fr/quote.voc"
+          "file_path": "locale/fr-fr/quote.voc"
         }
       },
       "context": {
@@ -779,9 +779,9 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/ca/quote.voc",
-        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/en/quote.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/fr-fr/quote.voc"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/ca/quote.voc",
+        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/en/quote.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/fr-fr/quote.voc"
       }
     },
     "skill.json": {
@@ -895,7 +895,7 @@
           "line_count": 15,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/ca/skill.json"
+          "file_path": "locale/ca/skill.json"
         },
         "en": {
           "entries": [
@@ -969,7 +969,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/en/skill.json"
+          "file_path": "locale/en/skill.json"
         },
         "fr-FR": {
           "entries": [
@@ -1036,7 +1036,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/fr-fr/skill.json"
+          "file_path": "locale/fr-fr/skill.json"
         }
       },
       "context": {
@@ -1056,9 +1056,9 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/ca/skill.json",
-        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/en/skill.json",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/fr-fr/skill.json"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/ca/skill.json",
+        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/en/skill.json",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/fr-fr/skill.json"
       }
     },
     "when.voc": {
@@ -1075,7 +1075,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/ca/when.voc"
+          "file_path": "locale/ca/when.voc"
         },
         "en": {
           "entries": [
@@ -1087,7 +1087,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/en/when.voc"
+          "file_path": "locale/en/when.voc"
         },
         "fr-FR": {
           "entries": [
@@ -1099,7 +1099,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-fuster-quotes/locale/fr-fr/when.voc"
+          "file_path": "locale/fr-fr/when.voc"
         }
       },
       "context": {
@@ -1134,9 +1134,9 @@
         "handler_source": "@intent_handler(IntentBuilder(\"FusterLive\").require('Fuster').require('when').require('live'))\ndef handle_live(self, message):\n    utterance = self.dialog_renderer.render(\"live\", {})\n    self.show_fuster(utterance)\n    self.speak(utterance, wait=True)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/ca/when.voc",
-        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/en/when.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/fr-fr/when.voc"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/ca/when.voc",
+        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/en/when.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/fr-fr/when.voc"
       }
     },
     "when_did_joan_fuster_die.dialog": {
@@ -1160,7 +1160,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-fuster-quotes/locale/ca/when_did_joan_fuster_die.dialog"
+          "file_path": "locale/ca/when_did_joan_fuster_die.dialog"
         },
         "en": {
           "entries": [
@@ -1179,7 +1179,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-fuster-quotes/locale/en/when_did_joan_fuster_die.dialog"
+          "file_path": "locale/en/when_did_joan_fuster_die.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1198,7 +1198,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-fuster-quotes/locale/fr-fr/when_did_joan_fuster_die.dialog"
+          "file_path": "locale/fr-fr/when_did_joan_fuster_die.dialog"
         }
       },
       "context": {
@@ -1222,9 +1222,9 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/ca/when_did_joan_fuster_die.dialog",
-        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/en/when_did_joan_fuster_die.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/fr-fr/when_did_joan_fuster_die.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/ca/when_did_joan_fuster_die.dialog",
+        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/en/when_did_joan_fuster_die.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/fr-fr/when_did_joan_fuster_die.dialog"
       }
     },
     "when_was_joan_fuster_born.dialog": {
@@ -1248,7 +1248,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-fuster-quotes/locale/ca/when_was_joan_fuster_born.dialog"
+          "file_path": "locale/ca/when_was_joan_fuster_born.dialog"
         },
         "en": {
           "entries": [
@@ -1267,7 +1267,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-fuster-quotes/locale/en/when_was_joan_fuster_born.dialog"
+          "file_path": "locale/en/when_was_joan_fuster_born.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1286,7 +1286,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-fuster-quotes/locale/fr-fr/when_was_joan_fuster_born.dialog"
+          "file_path": "locale/fr-fr/when_was_joan_fuster_born.dialog"
         }
       },
       "context": {
@@ -1310,9 +1310,9 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/ca/when_was_joan_fuster_born.dialog",
-        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/en/when_was_joan_fuster_born.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/fr-fr/when_was_joan_fuster_born.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/ca/when_was_joan_fuster_born.dialog",
+        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/en/when_was_joan_fuster_born.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/fr-fr/when_was_joan_fuster_born.dialog"
       }
     },
     "who.intent": {
@@ -1340,7 +1340,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-fuster-quotes/locale/ca/who.intent"
+          "file_path": "locale/ca/who.intent"
         },
         "fr-FR": {
           "entries": [
@@ -1363,7 +1363,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-fuster-quotes/locale/fr-fr/who.intent"
+          "file_path": "locale/fr-fr/who.intent"
         }
       },
       "context": {
@@ -1388,8 +1388,8 @@
         "handler_source": "@intent_handler(\"who.intent\")\ndef handle_who(self, message):\n    utterance = self.dialog_renderer.render(\"who_was_joan_fuster\", {})\n    self.show_fuster(utterance)\n    self.speak(utterance, wait=True)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/ca/who.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/fr-fr/who.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/ca/who.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/fr-fr/who.intent"
       }
     },
     "who_was_joan_fuster.dialog": {
@@ -1413,7 +1413,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-fuster-quotes/locale/ca/who_was_joan_fuster.dialog"
+          "file_path": "locale/ca/who_was_joan_fuster.dialog"
         },
         "en": {
           "entries": [
@@ -1432,7 +1432,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-fuster-quotes/locale/en/who_was_joan_fuster.dialog"
+          "file_path": "locale/en/who_was_joan_fuster.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1451,7 +1451,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-fuster-quotes/locale/fr-fr/who_was_joan_fuster.dialog"
+          "file_path": "locale/fr-fr/who_was_joan_fuster.dialog"
         }
       },
       "context": {
@@ -1475,9 +1475,9 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/ca/who_was_joan_fuster.dialog",
-        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/en/who_was_joan_fuster.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/ovos-skill-fuster-quotes/locale/fr-fr/who_was_joan_fuster.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/ca/who_was_joan_fuster.dialog",
+        "en": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/en/who_was_joan_fuster.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fuster-quotes/edit/dev/locale/fr-fr/who_was_joan_fuster.dialog"
       }
     }
   }

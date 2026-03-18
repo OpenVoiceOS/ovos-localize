@@ -35,7 +35,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/ca/dialog/color-not-found.dialog"
+          "file_path": "locale/ca/dialog/color-not-found.dialog"
         },
         "da": {
           "entries": [
@@ -54,7 +54,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/da/dialog/color-not-found.dialog"
+          "file_path": "locale/da/dialog/color-not-found.dialog"
         },
         "de": {
           "entries": [
@@ -73,7 +73,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/de/dialog/color-not-found.dialog"
+          "file_path": "locale/de/dialog/color-not-found.dialog"
         },
         "en-US": {
           "entries": [
@@ -92,7 +92,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/en-us/dialog/color-not-found.dialog"
+          "file_path": "locale/en-us/dialog/color-not-found.dialog"
         },
         "es": {
           "entries": [
@@ -111,7 +111,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/es/dialog/color-not-found.dialog"
+          "file_path": "locale/es/dialog/color-not-found.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -130,7 +130,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/fr-fr/dialog/color-not-found.dialog"
+          "file_path": "locale/fr-fr/dialog/color-not-found.dialog"
         },
         "it": {
           "entries": [
@@ -149,7 +149,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/it/dialog/color-not-found.dialog"
+          "file_path": "locale/it/dialog/color-not-found.dialog"
         },
         "pt": {
           "entries": [
@@ -168,7 +168,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/pt/dialog/color-not-found.dialog"
+          "file_path": "locale/pt/dialog/color-not-found.dialog"
         }
       },
       "context": {
@@ -182,8 +182,8 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-color-picker/locale/en-us/dialog/report-color-by-hex-name-not-known.dialog",
-          "ovos-skill-color-picker/locale/en-us/dialog/report-color-by-hex-name-known.dialog"
+          "locale/en-us/dialog/report-color-by-hex-name-not-known.dialog",
+          "locale/en-us/dialog/report-color-by-hex-name-known.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -195,14 +195,14 @@
         "handler_source": "@intent_handler(\"request-color-by-hex.intent\")\ndef handle_request_color_by_hex(self, message: Message):\n    \"\"\"Handle named color requests.\n\n    Example: 'what color has a hex code of bada55'\n    \"\"\"\n    requested_hex_code = message.data.get(\"hex_code\").replace(\" \", \"\")\n    self.log.info(\"Requested color: %s\", requested_hex_code)\n    if not is_hex_code_valid(requested_hex_code):\n        self.speak_dialog(\"color-not-found\")\n        return\n\n    color = sRGBAColor.from_hex_str(requested_hex_code)\n    try:\n        color.name = lookup_name(color, lang=self.lang.split(\"-\")[0])\n    except ValueError:\n        # color is not named\n        pass\n\n    if color.name:\n        self.speak_dialog(\n            \"report-color-by-hex-name-known\",\n            data={\n                \"color_name\": color.name,\n                \"red_value\": color.r,\n                \"green_value\": color.g,\n                \"blue_value\": color.b,\n            }\n        )\n    else:\n        self.speak_dialog(\n            \"report-color-by-hex-name-not-known\",\n            data={\n                \"red_value\": color.r,\n                \"green_value\": color.g,\n                \"blue_value\": color.b,\n            }\n        )"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/ca/dialog/color-not-found.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/da/dialog/color-not-found.dialog",
-        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/de/dialog/color-not-found.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/en-us/dialog/color-not-found.dialog",
-        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/es/dialog/color-not-found.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/fr-fr/dialog/color-not-found.dialog",
-        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/it/dialog/color-not-found.dialog",
-        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/pt/dialog/color-not-found.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/ca/dialog/color-not-found.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/da/dialog/color-not-found.dialog",
+        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/de/dialog/color-not-found.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/en-us/dialog/color-not-found.dialog",
+        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/es/dialog/color-not-found.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/fr-fr/dialog/color-not-found.dialog",
+        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/it/dialog/color-not-found.dialog",
+        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/pt/dialog/color-not-found.dialog"
       }
     },
     "report-color-by-hex-name-known.dialog": {
@@ -231,7 +231,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/ca/dialog/report-color-by-hex-name-known.dialog"
+          "file_path": "locale/ca/dialog/report-color-by-hex-name-known.dialog"
         },
         "da": {
           "entries": [
@@ -255,7 +255,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/da/dialog/report-color-by-hex-name-known.dialog"
+          "file_path": "locale/da/dialog/report-color-by-hex-name-known.dialog"
         },
         "de": {
           "entries": [
@@ -279,7 +279,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/de/dialog/report-color-by-hex-name-known.dialog"
+          "file_path": "locale/de/dialog/report-color-by-hex-name-known.dialog"
         },
         "en-US": {
           "entries": [
@@ -303,7 +303,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/en-us/dialog/report-color-by-hex-name-known.dialog"
+          "file_path": "locale/en-us/dialog/report-color-by-hex-name-known.dialog"
         },
         "es": {
           "entries": [
@@ -327,7 +327,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/es/dialog/report-color-by-hex-name-known.dialog"
+          "file_path": "locale/es/dialog/report-color-by-hex-name-known.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -351,7 +351,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/fr-fr/dialog/report-color-by-hex-name-known.dialog"
+          "file_path": "locale/fr-fr/dialog/report-color-by-hex-name-known.dialog"
         },
         "it": {
           "entries": [
@@ -375,7 +375,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/it/dialog/report-color-by-hex-name-known.dialog"
+          "file_path": "locale/it/dialog/report-color-by-hex-name-known.dialog"
         },
         "pt": {
           "entries": [
@@ -399,7 +399,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/pt/dialog/report-color-by-hex-name-known.dialog"
+          "file_path": "locale/pt/dialog/report-color-by-hex-name-known.dialog"
         }
       },
       "context": {
@@ -423,8 +423,8 @@
           "blue_value": "Runtime value from handle_request_color_by_hex()"
         },
         "related_files": [
-          "ovos-skill-color-picker/locale/en-us/dialog/color-not-found.dialog",
-          "ovos-skill-color-picker/locale/en-us/dialog/report-color-by-hex-name-not-known.dialog"
+          "locale/en-us/dialog/color-not-found.dialog",
+          "locale/en-us/dialog/report-color-by-hex-name-not-known.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -436,14 +436,14 @@
         "handler_source": "@intent_handler(\"request-color-by-hex.intent\")\ndef handle_request_color_by_hex(self, message: Message):\n    \"\"\"Handle named color requests.\n\n    Example: 'what color has a hex code of bada55'\n    \"\"\"\n    requested_hex_code = message.data.get(\"hex_code\").replace(\" \", \"\")\n    self.log.info(\"Requested color: %s\", requested_hex_code)\n    if not is_hex_code_valid(requested_hex_code):\n        self.speak_dialog(\"color-not-found\")\n        return\n\n    color = sRGBAColor.from_hex_str(requested_hex_code)\n    try:\n        color.name = lookup_name(color, lang=self.lang.split(\"-\")[0])\n    except ValueError:\n        # color is not named\n        pass\n\n    if color.name:\n        self.speak_dialog(\n            \"report-color-by-hex-name-known\",\n            data={\n                \"color_name\": color.name,\n                \"red_value\": color.r,\n                \"green_value\": color.g,\n                \"blue_value\": color.b,\n            }\n        )\n    else:\n        self.speak_dialog(\n            \"report-color-by-hex-name-not-known\",\n            data={\n                \"red_value\": color.r,\n                \"green_value\": color.g,\n                \"blue_value\": color.b,\n            }\n        )"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/ca/dialog/report-color-by-hex-name-known.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/da/dialog/report-color-by-hex-name-known.dialog",
-        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/de/dialog/report-color-by-hex-name-known.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/en-us/dialog/report-color-by-hex-name-known.dialog",
-        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/es/dialog/report-color-by-hex-name-known.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/fr-fr/dialog/report-color-by-hex-name-known.dialog",
-        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/it/dialog/report-color-by-hex-name-known.dialog",
-        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/pt/dialog/report-color-by-hex-name-known.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/ca/dialog/report-color-by-hex-name-known.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/da/dialog/report-color-by-hex-name-known.dialog",
+        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/de/dialog/report-color-by-hex-name-known.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/en-us/dialog/report-color-by-hex-name-known.dialog",
+        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/es/dialog/report-color-by-hex-name-known.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/fr-fr/dialog/report-color-by-hex-name-known.dialog",
+        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/it/dialog/report-color-by-hex-name-known.dialog",
+        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/pt/dialog/report-color-by-hex-name-known.dialog"
       }
     },
     "report-color-by-hex-name-not-known.dialog": {
@@ -471,7 +471,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/ca/dialog/report-color-by-hex-name-not-known.dialog"
+          "file_path": "locale/ca/dialog/report-color-by-hex-name-not-known.dialog"
         },
         "da": {
           "entries": [
@@ -494,7 +494,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/da/dialog/report-color-by-hex-name-not-known.dialog"
+          "file_path": "locale/da/dialog/report-color-by-hex-name-not-known.dialog"
         },
         "de": {
           "entries": [
@@ -517,7 +517,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/de/dialog/report-color-by-hex-name-not-known.dialog"
+          "file_path": "locale/de/dialog/report-color-by-hex-name-not-known.dialog"
         },
         "en-US": {
           "entries": [
@@ -540,7 +540,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/en-us/dialog/report-color-by-hex-name-not-known.dialog"
+          "file_path": "locale/en-us/dialog/report-color-by-hex-name-not-known.dialog"
         },
         "es": {
           "entries": [
@@ -563,7 +563,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/es/dialog/report-color-by-hex-name-not-known.dialog"
+          "file_path": "locale/es/dialog/report-color-by-hex-name-not-known.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -586,7 +586,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/fr-fr/dialog/report-color-by-hex-name-not-known.dialog"
+          "file_path": "locale/fr-fr/dialog/report-color-by-hex-name-not-known.dialog"
         },
         "it": {
           "entries": [
@@ -609,7 +609,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/it/dialog/report-color-by-hex-name-not-known.dialog"
+          "file_path": "locale/it/dialog/report-color-by-hex-name-not-known.dialog"
         },
         "pt": {
           "entries": [
@@ -632,7 +632,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/pt/dialog/report-color-by-hex-name-not-known.dialog"
+          "file_path": "locale/pt/dialog/report-color-by-hex-name-not-known.dialog"
         }
       },
       "context": {
@@ -654,8 +654,8 @@
           "blue_value": "Runtime value from handle_request_color_by_hex()"
         },
         "related_files": [
-          "ovos-skill-color-picker/locale/en-us/dialog/color-not-found.dialog",
-          "ovos-skill-color-picker/locale/en-us/dialog/report-color-by-hex-name-known.dialog"
+          "locale/en-us/dialog/color-not-found.dialog",
+          "locale/en-us/dialog/report-color-by-hex-name-known.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -667,14 +667,14 @@
         "handler_source": "@intent_handler(\"request-color-by-hex.intent\")\ndef handle_request_color_by_hex(self, message: Message):\n    \"\"\"Handle named color requests.\n\n    Example: 'what color has a hex code of bada55'\n    \"\"\"\n    requested_hex_code = message.data.get(\"hex_code\").replace(\" \", \"\")\n    self.log.info(\"Requested color: %s\", requested_hex_code)\n    if not is_hex_code_valid(requested_hex_code):\n        self.speak_dialog(\"color-not-found\")\n        return\n\n    color = sRGBAColor.from_hex_str(requested_hex_code)\n    try:\n        color.name = lookup_name(color, lang=self.lang.split(\"-\")[0])\n    except ValueError:\n        # color is not named\n        pass\n\n    if color.name:\n        self.speak_dialog(\n            \"report-color-by-hex-name-known\",\n            data={\n                \"color_name\": color.name,\n                \"red_value\": color.r,\n                \"green_value\": color.g,\n                \"blue_value\": color.b,\n            }\n        )\n    else:\n        self.speak_dialog(\n            \"report-color-by-hex-name-not-known\",\n            data={\n                \"red_value\": color.r,\n                \"green_value\": color.g,\n                \"blue_value\": color.b,\n            }\n        )"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/ca/dialog/report-color-by-hex-name-not-known.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/da/dialog/report-color-by-hex-name-not-known.dialog",
-        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/de/dialog/report-color-by-hex-name-not-known.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/en-us/dialog/report-color-by-hex-name-not-known.dialog",
-        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/es/dialog/report-color-by-hex-name-not-known.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/fr-fr/dialog/report-color-by-hex-name-not-known.dialog",
-        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/it/dialog/report-color-by-hex-name-not-known.dialog",
-        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/pt/dialog/report-color-by-hex-name-not-known.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/ca/dialog/report-color-by-hex-name-not-known.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/da/dialog/report-color-by-hex-name-not-known.dialog",
+        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/de/dialog/report-color-by-hex-name-not-known.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/en-us/dialog/report-color-by-hex-name-not-known.dialog",
+        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/es/dialog/report-color-by-hex-name-not-known.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/fr-fr/dialog/report-color-by-hex-name-not-known.dialog",
+        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/it/dialog/report-color-by-hex-name-not-known.dialog",
+        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/pt/dialog/report-color-by-hex-name-not-known.dialog"
       }
     },
     "report-color-by-name.dialog": {
@@ -704,7 +704,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/ca/dialog/report-color-by-name.dialog"
+          "file_path": "locale/ca/dialog/report-color-by-name.dialog"
         },
         "da": {
           "entries": [
@@ -729,7 +729,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/da/dialog/report-color-by-name.dialog"
+          "file_path": "locale/da/dialog/report-color-by-name.dialog"
         },
         "de": {
           "entries": [
@@ -754,7 +754,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/de/dialog/report-color-by-name.dialog"
+          "file_path": "locale/de/dialog/report-color-by-name.dialog"
         },
         "en-US": {
           "entries": [
@@ -779,7 +779,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/en-us/dialog/report-color-by-name.dialog"
+          "file_path": "locale/en-us/dialog/report-color-by-name.dialog"
         },
         "es": {
           "entries": [
@@ -804,7 +804,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/es/dialog/report-color-by-name.dialog"
+          "file_path": "locale/es/dialog/report-color-by-name.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -829,7 +829,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/fr-fr/dialog/report-color-by-name.dialog"
+          "file_path": "locale/fr-fr/dialog/report-color-by-name.dialog"
         },
         "it": {
           "entries": [
@@ -859,7 +859,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/it/dialog/report-color-by-name.dialog"
+          "file_path": "locale/it/dialog/report-color-by-name.dialog"
         },
         "pt": {
           "entries": [
@@ -884,7 +884,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/pt/dialog/report-color-by-name.dialog"
+          "file_path": "locale/pt/dialog/report-color-by-name.dialog"
         }
       },
       "context": {
@@ -920,14 +920,14 @@
         "handler_source": "@intent_handler(\"request-color-by-name.intent\")\ndef handle_request_color_by_name(self, message: Message):\n    \"\"\"Handle named color requests.\n\n    Example: 'Show me the color burly wood'\n    \"\"\"\n    requested_color = message.data.get(\"color\")\n    self.log.info(\"Requested color: %s\", requested_color)\n    color = color_from_description(requested_color, lang=self.lang.split(\"-\")[0],\n                                   cast_to_palette=self.settings.get(\"cast_to_palette\", True),\n                                   fuzzy=self.settings.get(\"fuzzy\", True))\n\n    self.speak_dialog(\n        \"report-color-by-name\",\n        data={\n            \"color_name\": color.name,\n            \"hex_code\": color.hex_str,\n            \"red_value\": color.r,\n            \"green_value\": color.g,\n            \"blue_value\": color.b,\n        },\n    )\n    self.display_single_color(color)"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/ca/dialog/report-color-by-name.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/da/dialog/report-color-by-name.dialog",
-        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/de/dialog/report-color-by-name.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/en-us/dialog/report-color-by-name.dialog",
-        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/es/dialog/report-color-by-name.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/fr-fr/dialog/report-color-by-name.dialog",
-        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/it/dialog/report-color-by-name.dialog",
-        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/pt/dialog/report-color-by-name.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/ca/dialog/report-color-by-name.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/da/dialog/report-color-by-name.dialog",
+        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/de/dialog/report-color-by-name.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/en-us/dialog/report-color-by-name.dialog",
+        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/es/dialog/report-color-by-name.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/fr-fr/dialog/report-color-by-name.dialog",
+        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/it/dialog/report-color-by-name.dialog",
+        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/pt/dialog/report-color-by-name.dialog"
       }
     },
     "report-color-by-rgb-name-known.dialog": {
@@ -954,7 +954,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/ca/dialog/report-color-by-rgb-name-known.dialog"
+          "file_path": "locale/ca/dialog/report-color-by-rgb-name-known.dialog"
         },
         "da": {
           "entries": [
@@ -976,7 +976,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/da/dialog/report-color-by-rgb-name-known.dialog"
+          "file_path": "locale/da/dialog/report-color-by-rgb-name-known.dialog"
         },
         "de": {
           "entries": [
@@ -998,7 +998,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/de/dialog/report-color-by-rgb-name-known.dialog"
+          "file_path": "locale/de/dialog/report-color-by-rgb-name-known.dialog"
         },
         "en-US": {
           "entries": [
@@ -1020,7 +1020,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/en-us/dialog/report-color-by-rgb-name-known.dialog"
+          "file_path": "locale/en-us/dialog/report-color-by-rgb-name-known.dialog"
         },
         "es": {
           "entries": [
@@ -1042,7 +1042,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/es/dialog/report-color-by-rgb-name-known.dialog"
+          "file_path": "locale/es/dialog/report-color-by-rgb-name-known.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1064,7 +1064,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/fr-fr/dialog/report-color-by-rgb-name-known.dialog"
+          "file_path": "locale/fr-fr/dialog/report-color-by-rgb-name-known.dialog"
         },
         "it": {
           "entries": [
@@ -1086,7 +1086,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/it/dialog/report-color-by-rgb-name-known.dialog"
+          "file_path": "locale/it/dialog/report-color-by-rgb-name-known.dialog"
         },
         "pt": {
           "entries": [
@@ -1108,7 +1108,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/pt/dialog/report-color-by-rgb-name-known.dialog"
+          "file_path": "locale/pt/dialog/report-color-by-rgb-name-known.dialog"
         }
       },
       "context": {
@@ -1128,8 +1128,8 @@
           "hex_code": "Runtime value from handle_request_color_by_rgb()"
         },
         "related_files": [
-          "ovos-skill-color-picker/locale/en-us/dialog/color-not-found.dialog",
-          "ovos-skill-color-picker/locale/en-us/dialog/report-color-by-rgb-name-not-known.dialog"
+          "locale/en-us/dialog/color-not-found.dialog",
+          "locale/en-us/dialog/report-color-by-rgb-name-not-known.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1141,14 +1141,14 @@
         "handler_source": "@intent_handler(\"request-color-by-rgb.intent\")\ndef handle_request_color_by_rgb(self, message: Message):\n    \"\"\"\n    Handle RGB color requests\n\n    Example: what color has the RGB value of 172 172 172\n    \"\"\"\n    try:\n        r, g, b = message.data[\"rgb\"].split()\n        color = sRGBAColor(r, g, b)\n    except ValueError:\n        self.speak_dialog(\"color-not-found\")\n        return\n\n    try:\n        color.name = lookup_name(color, lang=self.lang.split(\"-\")[0])\n    except ValueError:\n        # color is not named\n        pass\n\n    if color.name is None:\n        self.speak_dialog(\n            \"report-color-by-rgb-name-not-known\",\n            data={\"red_value\": color.r,\n                  \"green_value\": color.g,\n                  \"blue_value\": color.b}\n        )\n    else:\n        speakable_hex_code = color.hex_str  # TODO\n        self.speak_dialog(\n            \"report-color-by-rgb-name-known\",\n            data={\n                \"color_name\": color.name,\n                \"hex_code\": speakable_hex_code\n            }\n        )"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/ca/dialog/report-color-by-rgb-name-known.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/da/dialog/report-color-by-rgb-name-known.dialog",
-        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/de/dialog/report-color-by-rgb-name-known.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/en-us/dialog/report-color-by-rgb-name-known.dialog",
-        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/es/dialog/report-color-by-rgb-name-known.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/fr-fr/dialog/report-color-by-rgb-name-known.dialog",
-        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/it/dialog/report-color-by-rgb-name-known.dialog",
-        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/pt/dialog/report-color-by-rgb-name-known.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/ca/dialog/report-color-by-rgb-name-known.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/da/dialog/report-color-by-rgb-name-known.dialog",
+        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/de/dialog/report-color-by-rgb-name-known.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/en-us/dialog/report-color-by-rgb-name-known.dialog",
+        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/es/dialog/report-color-by-rgb-name-known.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/fr-fr/dialog/report-color-by-rgb-name-known.dialog",
+        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/it/dialog/report-color-by-rgb-name-known.dialog",
+        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/pt/dialog/report-color-by-rgb-name-known.dialog"
       }
     },
     "report-color-by-rgb-name-not-known.dialog": {
@@ -1174,7 +1174,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/ca/dialog/report-color-by-rgb-name-not-known.dialog"
+          "file_path": "locale/ca/dialog/report-color-by-rgb-name-not-known.dialog"
         },
         "da": {
           "entries": [
@@ -1195,7 +1195,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/da/dialog/report-color-by-rgb-name-not-known.dialog"
+          "file_path": "locale/da/dialog/report-color-by-rgb-name-not-known.dialog"
         },
         "de": {
           "entries": [
@@ -1216,7 +1216,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/de/dialog/report-color-by-rgb-name-not-known.dialog"
+          "file_path": "locale/de/dialog/report-color-by-rgb-name-not-known.dialog"
         },
         "en-US": {
           "entries": [
@@ -1237,7 +1237,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/en-us/dialog/report-color-by-rgb-name-not-known.dialog"
+          "file_path": "locale/en-us/dialog/report-color-by-rgb-name-not-known.dialog"
         },
         "es": {
           "entries": [
@@ -1258,7 +1258,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/es/dialog/report-color-by-rgb-name-not-known.dialog"
+          "file_path": "locale/es/dialog/report-color-by-rgb-name-not-known.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1279,7 +1279,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/fr-fr/dialog/report-color-by-rgb-name-not-known.dialog"
+          "file_path": "locale/fr-fr/dialog/report-color-by-rgb-name-not-known.dialog"
         },
         "it": {
           "entries": [
@@ -1300,7 +1300,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/it/dialog/report-color-by-rgb-name-not-known.dialog"
+          "file_path": "locale/it/dialog/report-color-by-rgb-name-not-known.dialog"
         },
         "pt": {
           "entries": [
@@ -1321,7 +1321,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/pt/dialog/report-color-by-rgb-name-not-known.dialog"
+          "file_path": "locale/pt/dialog/report-color-by-rgb-name-not-known.dialog"
         }
       },
       "context": {
@@ -1341,8 +1341,8 @@
           "blue_value": "Runtime value from handle_request_color_by_rgb()"
         },
         "related_files": [
-          "ovos-skill-color-picker/locale/en-us/dialog/color-not-found.dialog",
-          "ovos-skill-color-picker/locale/en-us/dialog/report-color-by-rgb-name-known.dialog"
+          "locale/en-us/dialog/report-color-by-rgb-name-known.dialog",
+          "locale/en-us/dialog/color-not-found.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1354,14 +1354,14 @@
         "handler_source": "@intent_handler(\"request-color-by-rgb.intent\")\ndef handle_request_color_by_rgb(self, message: Message):\n    \"\"\"\n    Handle RGB color requests\n\n    Example: what color has the RGB value of 172 172 172\n    \"\"\"\n    try:\n        r, g, b = message.data[\"rgb\"].split()\n        color = sRGBAColor(r, g, b)\n    except ValueError:\n        self.speak_dialog(\"color-not-found\")\n        return\n\n    try:\n        color.name = lookup_name(color, lang=self.lang.split(\"-\")[0])\n    except ValueError:\n        # color is not named\n        pass\n\n    if color.name is None:\n        self.speak_dialog(\n            \"report-color-by-rgb-name-not-known\",\n            data={\"red_value\": color.r,\n                  \"green_value\": color.g,\n                  \"blue_value\": color.b}\n        )\n    else:\n        speakable_hex_code = color.hex_str  # TODO\n        self.speak_dialog(\n            \"report-color-by-rgb-name-known\",\n            data={\n                \"color_name\": color.name,\n                \"hex_code\": speakable_hex_code\n            }\n        )"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/ca/dialog/report-color-by-rgb-name-not-known.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/da/dialog/report-color-by-rgb-name-not-known.dialog",
-        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/de/dialog/report-color-by-rgb-name-not-known.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/en-us/dialog/report-color-by-rgb-name-not-known.dialog",
-        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/es/dialog/report-color-by-rgb-name-not-known.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/fr-fr/dialog/report-color-by-rgb-name-not-known.dialog",
-        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/it/dialog/report-color-by-rgb-name-not-known.dialog",
-        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/pt/dialog/report-color-by-rgb-name-not-known.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/ca/dialog/report-color-by-rgb-name-not-known.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/da/dialog/report-color-by-rgb-name-not-known.dialog",
+        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/de/dialog/report-color-by-rgb-name-not-known.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/en-us/dialog/report-color-by-rgb-name-not-known.dialog",
+        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/es/dialog/report-color-by-rgb-name-not-known.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/fr-fr/dialog/report-color-by-rgb-name-not-known.dialog",
+        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/it/dialog/report-color-by-rgb-name-not-known.dialog",
+        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/pt/dialog/report-color-by-rgb-name-not-known.dialog"
       }
     },
     "request-color.intent": {
@@ -1387,7 +1387,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/ca/intents/request-color.intent"
+          "file_path": "locale/ca/intents/request-color.intent"
         },
         "da": {
           "entries": [
@@ -1408,7 +1408,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/da/intents/request-color.intent"
+          "file_path": "locale/da/intents/request-color.intent"
         },
         "de": {
           "entries": [
@@ -1429,7 +1429,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/de/intents/request-color.intent"
+          "file_path": "locale/de/intents/request-color.intent"
         },
         "en-US": {
           "entries": [
@@ -1450,7 +1450,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/en-us/intents/request-color.intent"
+          "file_path": "locale/en-us/intents/request-color.intent"
         },
         "es": {
           "entries": [
@@ -1471,7 +1471,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/es/intents/request-color.intent"
+          "file_path": "locale/es/intents/request-color.intent"
         },
         "fr-FR": {
           "entries": [
@@ -1492,7 +1492,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/fr-fr/intents/request-color.intent"
+          "file_path": "locale/fr-fr/intents/request-color.intent"
         },
         "it": {
           "entries": [
@@ -1513,7 +1513,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/it/intents/request-color.intent"
+          "file_path": "locale/it/intents/request-color.intent"
         },
         "pt": {
           "entries": [
@@ -1534,7 +1534,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/pt/intents/request-color.intent"
+          "file_path": "locale/pt/intents/request-color.intent"
         }
       },
       "context": {
@@ -1561,14 +1561,14 @@
         "handler_source": "@intent_handler(\"request-color.intent\")\ndef handle_request_color(self, message: Message):\n    \"\"\"Handle requests for color where the color format is unknown.\n\n    Example: 'What color is _________'\n    \"\"\"\n    requested_color = message.data.get(\"requested_color\")\n    if is_hex_code_valid(requested_color.replace(\" \", \"\")):\n        message = message.forward(\"\", {\"hex_code\": requested_color.replace(\" \", \"\")})\n        self.handle_request_color_by_hex(message)\n        return\n\n    try:\n        r, g, b = requested_color.split()\n        message = message.forward(\"\", {\"rgb\": requested_color})\n        self.handle_request_color_by_rgb(message)\n        return\n    except:  # not rgb\n        pass\n\n    message = message.forward(\"\", {\"color\": requested_color})\n    self.handle_request_color_by_name(message)"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/ca/intents/request-color.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/da/intents/request-color.intent",
-        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/de/intents/request-color.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/en-us/intents/request-color.intent",
-        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/es/intents/request-color.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/fr-fr/intents/request-color.intent",
-        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/it/intents/request-color.intent",
-        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/pt/intents/request-color.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/ca/intents/request-color.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/da/intents/request-color.intent",
+        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/de/intents/request-color.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/en-us/intents/request-color.intent",
+        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/es/intents/request-color.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/fr-fr/intents/request-color.intent",
+        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/it/intents/request-color.intent",
+        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/pt/intents/request-color.intent"
       }
     },
     "request-color-by-hex.intent": {
@@ -1594,7 +1594,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/ca/intents/request-color-by-hex.intent"
+          "file_path": "locale/ca/intents/request-color-by-hex.intent"
         },
         "da": {
           "entries": [
@@ -1615,7 +1615,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/da/intents/request-color-by-hex.intent"
+          "file_path": "locale/da/intents/request-color-by-hex.intent"
         },
         "de": {
           "entries": [
@@ -1636,7 +1636,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/de/intents/request-color-by-hex.intent"
+          "file_path": "locale/de/intents/request-color-by-hex.intent"
         },
         "en-US": {
           "entries": [
@@ -1657,7 +1657,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/en-us/intents/request-color-by-hex.intent"
+          "file_path": "locale/en-us/intents/request-color-by-hex.intent"
         },
         "es": {
           "entries": [
@@ -1678,7 +1678,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/es/intents/request-color-by-hex.intent"
+          "file_path": "locale/es/intents/request-color-by-hex.intent"
         },
         "fr-FR": {
           "entries": [
@@ -1699,7 +1699,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/fr-fr/intents/request-color-by-hex.intent"
+          "file_path": "locale/fr-fr/intents/request-color-by-hex.intent"
         },
         "it": {
           "entries": [
@@ -1720,7 +1720,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/it/intents/request-color-by-hex.intent"
+          "file_path": "locale/it/intents/request-color-by-hex.intent"
         },
         "pt": {
           "entries": [
@@ -1741,7 +1741,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/pt/intents/request-color-by-hex.intent"
+          "file_path": "locale/pt/intents/request-color-by-hex.intent"
         }
       },
       "context": {
@@ -1766,9 +1766,9 @@
           "blue_value": "Variable passed to report-color-by-hex-name-not-known.dialog"
         },
         "related_files": [
-          "ovos-skill-color-picker/locale/en-us/dialog/color-not-found.dialog",
-          "ovos-skill-color-picker/locale/en-us/dialog/report-color-by-hex-name-not-known.dialog",
-          "ovos-skill-color-picker/locale/en-us/dialog/report-color-by-hex-name-known.dialog"
+          "locale/en-us/dialog/color-not-found.dialog",
+          "locale/en-us/dialog/report-color-by-hex-name-not-known.dialog",
+          "locale/en-us/dialog/report-color-by-hex-name-known.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1781,14 +1781,14 @@
         "handler_source": "@intent_handler(\"request-color-by-hex.intent\")\ndef handle_request_color_by_hex(self, message: Message):\n    \"\"\"Handle named color requests.\n\n    Example: 'what color has a hex code of bada55'\n    \"\"\"\n    requested_hex_code = message.data.get(\"hex_code\").replace(\" \", \"\")\n    self.log.info(\"Requested color: %s\", requested_hex_code)\n    if not is_hex_code_valid(requested_hex_code):\n        self.speak_dialog(\"color-not-found\")\n        return\n\n    color = sRGBAColor.from_hex_str(requested_hex_code)\n    try:\n        color.name = lookup_name(color, lang=self.lang.split(\"-\")[0])\n    except ValueError:\n        # color is not named\n        pass\n\n    if color.name:\n        self.speak_dialog(\n            \"report-color-by-hex-name-known\",\n            data={\n                \"color_name\": color.name,\n                \"red_value\": color.r,\n                \"green_value\": color.g,\n                \"blue_value\": color.b,\n            }\n        )\n    else:\n        self.speak_dialog(\n            \"report-color-by-hex-name-not-known\",\n            data={\n                \"red_value\": color.r,\n                \"green_value\": color.g,\n                \"blue_value\": color.b,\n            }\n        )"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/ca/intents/request-color-by-hex.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/da/intents/request-color-by-hex.intent",
-        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/de/intents/request-color-by-hex.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/en-us/intents/request-color-by-hex.intent",
-        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/es/intents/request-color-by-hex.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/fr-fr/intents/request-color-by-hex.intent",
-        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/it/intents/request-color-by-hex.intent",
-        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/pt/intents/request-color-by-hex.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/ca/intents/request-color-by-hex.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/da/intents/request-color-by-hex.intent",
+        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/de/intents/request-color-by-hex.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/en-us/intents/request-color-by-hex.intent",
+        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/es/intents/request-color-by-hex.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/fr-fr/intents/request-color-by-hex.intent",
+        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/it/intents/request-color-by-hex.intent",
+        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/pt/intents/request-color-by-hex.intent"
       }
     },
     "request-color-by-name.intent": {
@@ -1818,7 +1818,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/ca/intents/request-color-by-name.intent"
+          "file_path": "locale/ca/intents/request-color-by-name.intent"
         },
         "da": {
           "entries": [
@@ -1843,7 +1843,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/da/intents/request-color-by-name.intent"
+          "file_path": "locale/da/intents/request-color-by-name.intent"
         },
         "de": {
           "entries": [
@@ -1880,7 +1880,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/de/intents/request-color-by-name.intent"
+          "file_path": "locale/de/intents/request-color-by-name.intent"
         },
         "en-US": {
           "entries": [
@@ -1905,7 +1905,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/en-us/intents/request-color-by-name.intent"
+          "file_path": "locale/en-us/intents/request-color-by-name.intent"
         },
         "es": {
           "entries": [
@@ -1930,7 +1930,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/es/intents/request-color-by-name.intent"
+          "file_path": "locale/es/intents/request-color-by-name.intent"
         },
         "fr-FR": {
           "entries": [
@@ -1955,7 +1955,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/fr-fr/intents/request-color-by-name.intent"
+          "file_path": "locale/fr-fr/intents/request-color-by-name.intent"
         },
         "it": {
           "entries": [
@@ -1980,7 +1980,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/it/intents/request-color-by-name.intent"
+          "file_path": "locale/it/intents/request-color-by-name.intent"
         },
         "pt": {
           "entries": [
@@ -2017,7 +2017,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/pt/intents/request-color-by-name.intent"
+          "file_path": "locale/pt/intents/request-color-by-name.intent"
         }
       },
       "context": {
@@ -2041,7 +2041,7 @@
           "blue_value": "Variable passed to report-color-by-name.dialog"
         },
         "related_files": [
-          "ovos-skill-color-picker/locale/en-us/dialog/report-color-by-name.dialog"
+          "locale/en-us/dialog/report-color-by-name.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -2054,14 +2054,14 @@
         "handler_source": "@intent_handler(\"request-color-by-name.intent\")\ndef handle_request_color_by_name(self, message: Message):\n    \"\"\"Handle named color requests.\n\n    Example: 'Show me the color burly wood'\n    \"\"\"\n    requested_color = message.data.get(\"color\")\n    self.log.info(\"Requested color: %s\", requested_color)\n    color = color_from_description(requested_color, lang=self.lang.split(\"-\")[0],\n                                   cast_to_palette=self.settings.get(\"cast_to_palette\", True),\n                                   fuzzy=self.settings.get(\"fuzzy\", True))\n\n    self.speak_dialog(\n        \"report-color-by-name\",\n        data={\n            \"color_name\": color.name,\n            \"hex_code\": color.hex_str,\n            \"red_value\": color.r,\n            \"green_value\": color.g,\n            \"blue_value\": color.b,\n        },\n    )\n    self.display_single_color(color)"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/ca/intents/request-color-by-name.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/da/intents/request-color-by-name.intent",
-        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/de/intents/request-color-by-name.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/en-us/intents/request-color-by-name.intent",
-        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/es/intents/request-color-by-name.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/fr-fr/intents/request-color-by-name.intent",
-        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/it/intents/request-color-by-name.intent",
-        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/pt/intents/request-color-by-name.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/ca/intents/request-color-by-name.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/da/intents/request-color-by-name.intent",
+        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/de/intents/request-color-by-name.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/en-us/intents/request-color-by-name.intent",
+        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/es/intents/request-color-by-name.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/fr-fr/intents/request-color-by-name.intent",
+        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/it/intents/request-color-by-name.intent",
+        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/pt/intents/request-color-by-name.intent"
       }
     },
     "request-color-by-rgb.intent": {
@@ -2087,7 +2087,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/ca/intents/request-color-by-rgb.intent"
+          "file_path": "locale/ca/intents/request-color-by-rgb.intent"
         },
         "da": {
           "entries": [
@@ -2108,7 +2108,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/da/intents/request-color-by-rgb.intent"
+          "file_path": "locale/da/intents/request-color-by-rgb.intent"
         },
         "de": {
           "entries": [
@@ -2129,7 +2129,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/de/intents/request-color-by-rgb.intent"
+          "file_path": "locale/de/intents/request-color-by-rgb.intent"
         },
         "en-US": {
           "entries": [
@@ -2150,7 +2150,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/en-us/intents/request-color-by-rgb.intent"
+          "file_path": "locale/en-us/intents/request-color-by-rgb.intent"
         },
         "es": {
           "entries": [
@@ -2171,7 +2171,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/es/intents/request-color-by-rgb.intent"
+          "file_path": "locale/es/intents/request-color-by-rgb.intent"
         },
         "fr-FR": {
           "entries": [
@@ -2192,7 +2192,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/fr-fr/intents/request-color-by-rgb.intent"
+          "file_path": "locale/fr-fr/intents/request-color-by-rgb.intent"
         },
         "it": {
           "entries": [
@@ -2213,7 +2213,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/it/intents/request-color-by-rgb.intent"
+          "file_path": "locale/it/intents/request-color-by-rgb.intent"
         },
         "pt": {
           "entries": [
@@ -2234,7 +2234,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-color-picker/locale/pt/intents/request-color-by-rgb.intent"
+          "file_path": "locale/pt/intents/request-color-by-rgb.intent"
         }
       },
       "context": {
@@ -2260,9 +2260,9 @@
           "hex_code": "Variable passed to report-color-by-rgb-name-known.dialog"
         },
         "related_files": [
-          "ovos-skill-color-picker/locale/en-us/dialog/color-not-found.dialog",
-          "ovos-skill-color-picker/locale/en-us/dialog/report-color-by-rgb-name-known.dialog",
-          "ovos-skill-color-picker/locale/en-us/dialog/report-color-by-rgb-name-not-known.dialog"
+          "locale/en-us/dialog/report-color-by-rgb-name-known.dialog",
+          "locale/en-us/dialog/color-not-found.dialog",
+          "locale/en-us/dialog/report-color-by-rgb-name-not-known.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -2275,14 +2275,14 @@
         "handler_source": "@intent_handler(\"request-color-by-rgb.intent\")\ndef handle_request_color_by_rgb(self, message: Message):\n    \"\"\"\n    Handle RGB color requests\n\n    Example: what color has the RGB value of 172 172 172\n    \"\"\"\n    try:\n        r, g, b = message.data[\"rgb\"].split()\n        color = sRGBAColor(r, g, b)\n    except ValueError:\n        self.speak_dialog(\"color-not-found\")\n        return\n\n    try:\n        color.name = lookup_name(color, lang=self.lang.split(\"-\")[0])\n    except ValueError:\n        # color is not named\n        pass\n\n    if color.name is None:\n        self.speak_dialog(\n            \"report-color-by-rgb-name-not-known\",\n            data={\"red_value\": color.r,\n                  \"green_value\": color.g,\n                  \"blue_value\": color.b}\n        )\n    else:\n        speakable_hex_code = color.hex_str  # TODO\n        self.speak_dialog(\n            \"report-color-by-rgb-name-known\",\n            data={\n                \"color_name\": color.name,\n                \"hex_code\": speakable_hex_code\n            }\n        )"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/ca/intents/request-color-by-rgb.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/da/intents/request-color-by-rgb.intent",
-        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/de/intents/request-color-by-rgb.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/en-us/intents/request-color-by-rgb.intent",
-        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/es/intents/request-color-by-rgb.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/fr-fr/intents/request-color-by-rgb.intent",
-        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/it/intents/request-color-by-rgb.intent",
-        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/pt/intents/request-color-by-rgb.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/ca/intents/request-color-by-rgb.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/da/intents/request-color-by-rgb.intent",
+        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/de/intents/request-color-by-rgb.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/en-us/intents/request-color-by-rgb.intent",
+        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/es/intents/request-color-by-rgb.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/fr-fr/intents/request-color-by-rgb.intent",
+        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/it/intents/request-color-by-rgb.intent",
+        "pt": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/pt/intents/request-color-by-rgb.intent"
       }
     },
     "skill.json": {
@@ -2302,7 +2302,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-color-picker/locale/ca/skill.json"
+          "file_path": "locale/ca/skill.json"
         },
         "da": {
           "entries": [
@@ -2317,7 +2317,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-color-picker/locale/da/skill.json"
+          "file_path": "locale/da/skill.json"
         },
         "de": {
           "entries": [
@@ -2332,7 +2332,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-color-picker/locale/de/skill.json"
+          "file_path": "locale/de/skill.json"
         },
         "en-US": {
           "entries": [
@@ -2347,7 +2347,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-color-picker/locale/en-us/skill.json"
+          "file_path": "locale/en-us/skill.json"
         },
         "es": {
           "entries": [
@@ -2362,7 +2362,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-color-picker/locale/es/skill.json"
+          "file_path": "locale/es/skill.json"
         },
         "fr-FR": {
           "entries": [
@@ -2377,7 +2377,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-color-picker/locale/fr-fr/skill.json"
+          "file_path": "locale/fr-fr/skill.json"
         },
         "it": {
           "entries": [
@@ -2392,7 +2392,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-color-picker/locale/it/skill.json"
+          "file_path": "locale/it/skill.json"
         }
       },
       "context": {
@@ -2412,13 +2412,13 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/ca/skill.json",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/da/skill.json",
-        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/de/skill.json",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/en-us/skill.json",
-        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/es/skill.json",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/fr-fr/skill.json",
-        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/ovos-skill-color-picker/locale/it/skill.json"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/ca/skill.json",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/da/skill.json",
+        "de": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/de/skill.json",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/en-us/skill.json",
+        "es": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/es/skill.json",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/fr-fr/skill.json",
+        "it": "https://github.com/OpenVoiceOS/ovos-skill-color-picker/edit/dev/locale/it/skill.json"
       }
     }
   }

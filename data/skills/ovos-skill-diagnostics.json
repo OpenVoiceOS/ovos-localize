@@ -39,7 +39,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/ca/available_memory.dialog"
+          "file_path": "locale/ca/available_memory.dialog"
         },
         "da": {
           "entries": [
@@ -61,7 +61,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/available_memory.dialog"
+          "file_path": "locale/da/available_memory.dialog"
         },
         "de-DE": {
           "entries": [
@@ -83,7 +83,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/available_memory.dialog"
+          "file_path": "locale/de-de/available_memory.dialog"
         },
         "en-US": {
           "entries": [
@@ -105,7 +105,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/available_memory.dialog"
+          "file_path": "locale/en-us/available_memory.dialog"
         },
         "es-ES": {
           "entries": [
@@ -127,7 +127,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/available_memory.dialog"
+          "file_path": "locale/es-es/available_memory.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -149,7 +149,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/available_memory.dialog"
+          "file_path": "locale/fr-fr/available_memory.dialog"
         },
         "gl": {
           "entries": [
@@ -171,7 +171,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/available_memory.dialog"
+          "file_path": "locale/gl/available_memory.dialog"
         },
         "it-IT": {
           "entries": [
@@ -193,7 +193,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/available_memory.dialog"
+          "file_path": "locale/it-it/available_memory.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -215,7 +215,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/available_memory.dialog"
+          "file_path": "locale/pt-pt/available_memory.dialog"
         }
       },
       "context": {
@@ -235,7 +235,7 @@
           "total": "Runtime value from handle_get_memory()"
         },
         "related_files": [
-          "ovos-skill-diagnostics/locale/en-us/current_memory.dialog"
+          "locale/en-us/current_memory.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -247,15 +247,15 @@
         "handler_source": "@intent_handler(\"query_memory_usage.intent\")\ndef handle_get_memory(self, message):\n    m = psutil.virtual_memory()\n    memory = pronounce_number(m.percent, lang=self.lang)\n    self.speak_dialog(\"current_memory\", {\"memory\": memory})\n    memory = nice_bytes(m.available)\n    total = nice_bytes(m.total)\n    self.speak_dialog(\"available_memory\",\n                      {\"memory\": memory, \"total\": total})"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/available_memory.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/available_memory.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/available_memory.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/available_memory.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/available_memory.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/available_memory.dialog",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/available_memory.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/available_memory.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/available_memory.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/available_memory.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/available_memory.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/available_memory.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/available_memory.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/available_memory.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/available_memory.dialog",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/available_memory.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/available_memory.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/available_memory.dialog"
       }
     },
     "cpu_percent.dialog": {
@@ -281,7 +281,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/ca/cpu_percent.dialog"
+          "file_path": "locale/ca/cpu_percent.dialog"
         },
         "da": {
           "entries": [
@@ -302,7 +302,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/cpu_percent.dialog"
+          "file_path": "locale/da/cpu_percent.dialog"
         },
         "de-DE": {
           "entries": [
@@ -323,7 +323,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/cpu_percent.dialog"
+          "file_path": "locale/de-de/cpu_percent.dialog"
         },
         "en-US": {
           "entries": [
@@ -344,7 +344,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/cpu_percent.dialog"
+          "file_path": "locale/en-us/cpu_percent.dialog"
         },
         "es-ES": {
           "entries": [
@@ -365,7 +365,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/cpu_percent.dialog"
+          "file_path": "locale/es-es/cpu_percent.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -386,7 +386,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/cpu_percent.dialog"
+          "file_path": "locale/fr-fr/cpu_percent.dialog"
         },
         "gl": {
           "entries": [
@@ -407,7 +407,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/cpu_percent.dialog"
+          "file_path": "locale/gl/cpu_percent.dialog"
         },
         "it-IT": {
           "entries": [
@@ -428,7 +428,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/cpu_percent.dialog"
+          "file_path": "locale/it-it/cpu_percent.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -449,7 +449,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/cpu_percent.dialog"
+          "file_path": "locale/pt-pt/cpu_percent.dialog"
         }
       },
       "context": {
@@ -477,15 +477,15 @@
         "handler_source": "@intent_handler(\"query_cpu_usage.intent\")\ndef handle_get_cpu(self, message):\n    self.speak_dialog(\"cpu_percent\",\n                      {\"cpu\": pronounce_number(psutil.cpu_percent(), lang=self.lang)})"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/cpu_percent.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/cpu_percent.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/cpu_percent.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/cpu_percent.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/cpu_percent.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/cpu_percent.dialog",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/cpu_percent.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/cpu_percent.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/cpu_percent.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/cpu_percent.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/cpu_percent.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/cpu_percent.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/cpu_percent.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/cpu_percent.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/cpu_percent.dialog",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/cpu_percent.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/cpu_percent.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/cpu_percent.dialog"
       }
     },
     "current_lang.dialog": {
@@ -511,7 +511,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/ca/current_lang.dialog"
+          "file_path": "locale/ca/current_lang.dialog"
         },
         "da": {
           "entries": [
@@ -532,7 +532,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/current_lang.dialog"
+          "file_path": "locale/da/current_lang.dialog"
         },
         "de-DE": {
           "entries": [
@@ -553,7 +553,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/current_lang.dialog"
+          "file_path": "locale/de-de/current_lang.dialog"
         },
         "en-US": {
           "entries": [
@@ -574,7 +574,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/current_lang.dialog"
+          "file_path": "locale/en-us/current_lang.dialog"
         },
         "es-ES": {
           "entries": [
@@ -595,7 +595,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/current_lang.dialog"
+          "file_path": "locale/es-es/current_lang.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -616,7 +616,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/current_lang.dialog"
+          "file_path": "locale/fr-fr/current_lang.dialog"
         },
         "gl": {
           "entries": [
@@ -637,7 +637,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/current_lang.dialog"
+          "file_path": "locale/gl/current_lang.dialog"
         },
         "it-IT": {
           "entries": [
@@ -658,7 +658,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/current_lang.dialog"
+          "file_path": "locale/it-it/current_lang.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -679,7 +679,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/current_lang.dialog"
+          "file_path": "locale/pt-pt/current_lang.dialog"
         }
       },
       "context": {
@@ -707,15 +707,15 @@
         "handler_source": "@intent_handler(\"query_user_lang.intent\")\ndef handle_what_lang_am_i_speaking(self, message):\n    lang = pronounce_lang(self.lang, self.lang)\n    self.speak_dialog(\"current_lang\", {\"lang\": lang})"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/current_lang.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/current_lang.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/current_lang.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/current_lang.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/current_lang.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/current_lang.dialog",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/current_lang.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/current_lang.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/current_lang.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/current_lang.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/current_lang.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/current_lang.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/current_lang.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/current_lang.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/current_lang.dialog",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/current_lang.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/current_lang.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/current_lang.dialog"
       }
     },
     "current_memory.dialog": {
@@ -741,7 +741,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/ca/current_memory.dialog"
+          "file_path": "locale/ca/current_memory.dialog"
         },
         "da": {
           "entries": [
@@ -762,7 +762,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/current_memory.dialog"
+          "file_path": "locale/da/current_memory.dialog"
         },
         "de-DE": {
           "entries": [
@@ -783,7 +783,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/current_memory.dialog"
+          "file_path": "locale/de-de/current_memory.dialog"
         },
         "en-US": {
           "entries": [
@@ -804,7 +804,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/current_memory.dialog"
+          "file_path": "locale/en-us/current_memory.dialog"
         },
         "es-ES": {
           "entries": [
@@ -825,7 +825,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/current_memory.dialog"
+          "file_path": "locale/es-es/current_memory.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -846,7 +846,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/current_memory.dialog"
+          "file_path": "locale/fr-fr/current_memory.dialog"
         },
         "gl": {
           "entries": [
@@ -867,7 +867,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/current_memory.dialog"
+          "file_path": "locale/gl/current_memory.dialog"
         },
         "it-IT": {
           "entries": [
@@ -888,7 +888,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/current_memory.dialog"
+          "file_path": "locale/it-it/current_memory.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -909,7 +909,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/current_memory.dialog"
+          "file_path": "locale/pt-pt/current_memory.dialog"
         }
       },
       "context": {
@@ -927,7 +927,7 @@
           "memory": "Runtime value from handle_get_memory()"
         },
         "related_files": [
-          "ovos-skill-diagnostics/locale/en-us/available_memory.dialog"
+          "locale/en-us/available_memory.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -939,15 +939,15 @@
         "handler_source": "@intent_handler(\"query_memory_usage.intent\")\ndef handle_get_memory(self, message):\n    m = psutil.virtual_memory()\n    memory = pronounce_number(m.percent, lang=self.lang)\n    self.speak_dialog(\"current_memory\", {\"memory\": memory})\n    memory = nice_bytes(m.available)\n    total = nice_bytes(m.total)\n    self.speak_dialog(\"available_memory\",\n                      {\"memory\": memory, \"total\": total})"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/current_memory.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/current_memory.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/current_memory.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/current_memory.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/current_memory.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/current_memory.dialog",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/current_memory.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/current_memory.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/current_memory.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/current_memory.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/current_memory.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/current_memory.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/current_memory.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/current_memory.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/current_memory.dialog",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/current_memory.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/current_memory.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/current_memory.dialog"
       }
     },
     "has_gpu.dialog": {
@@ -971,7 +971,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/ca/has_gpu.dialog"
+          "file_path": "locale/ca/has_gpu.dialog"
         },
         "da": {
           "entries": [
@@ -990,7 +990,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/has_gpu.dialog"
+          "file_path": "locale/da/has_gpu.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1009,7 +1009,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/has_gpu.dialog"
+          "file_path": "locale/de-de/has_gpu.dialog"
         },
         "en-US": {
           "entries": [
@@ -1028,7 +1028,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/has_gpu.dialog"
+          "file_path": "locale/en-us/has_gpu.dialog"
         },
         "es-ES": {
           "entries": [
@@ -1047,7 +1047,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/has_gpu.dialog"
+          "file_path": "locale/es-es/has_gpu.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1066,7 +1066,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/has_gpu.dialog"
+          "file_path": "locale/fr-fr/has_gpu.dialog"
         },
         "gl": {
           "entries": [
@@ -1085,7 +1085,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/has_gpu.dialog"
+          "file_path": "locale/gl/has_gpu.dialog"
         },
         "it-IT": {
           "entries": [
@@ -1104,7 +1104,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/has_gpu.dialog"
+          "file_path": "locale/it-it/has_gpu.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -1123,7 +1123,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/has_gpu.dialog"
+          "file_path": "locale/pt-pt/has_gpu.dialog"
         }
       },
       "context": {
@@ -1137,7 +1137,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-diagnostics/locale/en-us/no_gpu.dialog"
+          "locale/en-us/no_gpu.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1149,15 +1149,15 @@
         "handler_source": "@intent_handler(\"query_gpu.intent\")\ndef handle_get_gpu(self, message):\n    try:\n        import torch\n        gpu = torch.cuda.is_available()\n    except ImportError:\n        gpu = has_nvidia_gpu()\n    if gpu:\n        self.speak_dialog(\"has_gpu\")\n    else:\n        self.speak_dialog(\"no_gpu\")"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/has_gpu.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/has_gpu.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/has_gpu.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/has_gpu.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/has_gpu.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/has_gpu.dialog",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/has_gpu.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/has_gpu.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/has_gpu.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/has_gpu.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/has_gpu.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/has_gpu.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/has_gpu.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/has_gpu.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/has_gpu.dialog",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/has_gpu.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/has_gpu.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/has_gpu.dialog"
       }
     },
     "kernel_version.dialog": {
@@ -1183,7 +1183,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/ca/kernel_version.dialog"
+          "file_path": "locale/ca/kernel_version.dialog"
         },
         "da": {
           "entries": [
@@ -1204,7 +1204,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/kernel_version.dialog"
+          "file_path": "locale/da/kernel_version.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1225,7 +1225,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/kernel_version.dialog"
+          "file_path": "locale/de-de/kernel_version.dialog"
         },
         "en-US": {
           "entries": [
@@ -1246,7 +1246,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/kernel_version.dialog"
+          "file_path": "locale/en-us/kernel_version.dialog"
         },
         "es-ES": {
           "entries": [
@@ -1267,7 +1267,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/kernel_version.dialog"
+          "file_path": "locale/es-es/kernel_version.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1288,7 +1288,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/kernel_version.dialog"
+          "file_path": "locale/fr-fr/kernel_version.dialog"
         },
         "gl": {
           "entries": [
@@ -1309,7 +1309,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/kernel_version.dialog"
+          "file_path": "locale/gl/kernel_version.dialog"
         },
         "it-IT": {
           "entries": [
@@ -1330,7 +1330,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/kernel_version.dialog"
+          "file_path": "locale/it-it/kernel_version.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -1351,7 +1351,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/kernel_version.dialog"
+          "file_path": "locale/pt-pt/kernel_version.dialog"
         }
       },
       "context": {
@@ -1379,15 +1379,15 @@
         "handler_source": "@intent_handler(\"query_kernel_version.intent\")\ndef handle_get_os(self, message):\n    kernel = platform.release().split(\"-\")[0]  # simplify version number\n    self.speak_dialog(\"kernel_version\",\n                      {\"os_info\": f\"{platform.system()} {kernel}\"})"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/kernel_version.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/kernel_version.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/kernel_version.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/kernel_version.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/kernel_version.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/kernel_version.dialog",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/kernel_version.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/kernel_version.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/kernel_version.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/kernel_version.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/kernel_version.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/kernel_version.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/kernel_version.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/kernel_version.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/kernel_version.dialog",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/kernel_version.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/kernel_version.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/kernel_version.dialog"
       }
     },
     "no_gpu.dialog": {
@@ -1411,7 +1411,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/ca/no_gpu.dialog"
+          "file_path": "locale/ca/no_gpu.dialog"
         },
         "da": {
           "entries": [
@@ -1430,7 +1430,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/no_gpu.dialog"
+          "file_path": "locale/da/no_gpu.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1449,7 +1449,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/no_gpu.dialog"
+          "file_path": "locale/de-de/no_gpu.dialog"
         },
         "en-US": {
           "entries": [
@@ -1468,7 +1468,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/no_gpu.dialog"
+          "file_path": "locale/en-us/no_gpu.dialog"
         },
         "es-ES": {
           "entries": [
@@ -1487,7 +1487,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/no_gpu.dialog"
+          "file_path": "locale/es-es/no_gpu.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1506,7 +1506,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/no_gpu.dialog"
+          "file_path": "locale/fr-fr/no_gpu.dialog"
         },
         "gl": {
           "entries": [
@@ -1525,7 +1525,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/no_gpu.dialog"
+          "file_path": "locale/gl/no_gpu.dialog"
         },
         "it-IT": {
           "entries": [
@@ -1544,7 +1544,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/no_gpu.dialog"
+          "file_path": "locale/it-it/no_gpu.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -1563,7 +1563,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/no_gpu.dialog"
+          "file_path": "locale/pt-pt/no_gpu.dialog"
         }
       },
       "context": {
@@ -1577,7 +1577,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-diagnostics/locale/en-us/has_gpu.dialog"
+          "locale/en-us/has_gpu.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1589,15 +1589,15 @@
         "handler_source": "@intent_handler(\"query_gpu.intent\")\ndef handle_get_gpu(self, message):\n    try:\n        import torch\n        gpu = torch.cuda.is_available()\n    except ImportError:\n        gpu = has_nvidia_gpu()\n    if gpu:\n        self.speak_dialog(\"has_gpu\")\n    else:\n        self.speak_dialog(\"no_gpu\")"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/no_gpu.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/no_gpu.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/no_gpu.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/no_gpu.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/no_gpu.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/no_gpu.dialog",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/no_gpu.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/no_gpu.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/no_gpu.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/no_gpu.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/no_gpu.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/no_gpu.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/no_gpu.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/no_gpu.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/no_gpu.dialog",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/no_gpu.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/no_gpu.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/no_gpu.dialog"
       }
     },
     "no_secondary_langs.dialog": {
@@ -1621,7 +1621,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/ca/no_secondary_langs.dialog"
+          "file_path": "locale/ca/no_secondary_langs.dialog"
         },
         "da": {
           "entries": [
@@ -1640,7 +1640,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/no_secondary_langs.dialog"
+          "file_path": "locale/da/no_secondary_langs.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1659,7 +1659,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/no_secondary_langs.dialog"
+          "file_path": "locale/de-de/no_secondary_langs.dialog"
         },
         "en-US": {
           "entries": [
@@ -1678,7 +1678,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/no_secondary_langs.dialog"
+          "file_path": "locale/en-us/no_secondary_langs.dialog"
         },
         "es-ES": {
           "entries": [
@@ -1697,7 +1697,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/no_secondary_langs.dialog"
+          "file_path": "locale/es-es/no_secondary_langs.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1716,7 +1716,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/no_secondary_langs.dialog"
+          "file_path": "locale/fr-fr/no_secondary_langs.dialog"
         },
         "gl": {
           "entries": [
@@ -1735,7 +1735,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/no_secondary_langs.dialog"
+          "file_path": "locale/gl/no_secondary_langs.dialog"
         },
         "it-IT": {
           "entries": [
@@ -1754,7 +1754,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/no_secondary_langs.dialog"
+          "file_path": "locale/it-it/no_secondary_langs.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -1773,7 +1773,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/no_secondary_langs.intent"
+          "file_path": "locale/pt-pt/no_secondary_langs.intent"
         }
       },
       "context": {
@@ -1787,7 +1787,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-diagnostics/locale/en-us/secondary_langs.dialog"
+          "locale/en-us/secondary_langs.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1799,15 +1799,15 @@
         "handler_source": "@intent_handler(\"query_extra_langs.intent\")\ndef handle_secondary_langs(self, message):\n    if self.secondary_langs:\n        langs = ', '.join([pronounce_lang(l, self.lang) for l in self.secondary_langs])\n        self.speak_dialog(\"secondary_langs\", {\"langs\": langs})\n    else:\n        self.speak_dialog(\"no_secondary_langs\")"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/no_secondary_langs.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/no_secondary_langs.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/no_secondary_langs.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/no_secondary_langs.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/no_secondary_langs.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/no_secondary_langs.dialog",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/no_secondary_langs.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/no_secondary_langs.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/no_secondary_langs.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/no_secondary_langs.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/no_secondary_langs.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/no_secondary_langs.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/no_secondary_langs.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/no_secondary_langs.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/no_secondary_langs.dialog",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/no_secondary_langs.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/no_secondary_langs.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/no_secondary_langs.intent"
       }
     },
     "primary_lang.dialog": {
@@ -1833,7 +1833,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/ca/primary_lang.dialog"
+          "file_path": "locale/ca/primary_lang.dialog"
         },
         "da": {
           "entries": [
@@ -1854,7 +1854,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/primary_lang.dialog"
+          "file_path": "locale/da/primary_lang.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1872,7 +1872,7 @@
             "lang"
           ],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/primary_lang.dialog"
+          "file_path": "locale/de-de/primary_lang.dialog"
         },
         "en-US": {
           "entries": [
@@ -1893,7 +1893,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/primary_lang.dialog"
+          "file_path": "locale/en-us/primary_lang.dialog"
         },
         "es-ES": {
           "entries": [
@@ -1914,7 +1914,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/primary_lang.dialog"
+          "file_path": "locale/es-es/primary_lang.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1935,7 +1935,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/primary_lang.dialog"
+          "file_path": "locale/fr-fr/primary_lang.dialog"
         },
         "gl": {
           "entries": [
@@ -1956,7 +1956,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/primary_lang.dialog"
+          "file_path": "locale/gl/primary_lang.dialog"
         },
         "it-IT": {
           "entries": [
@@ -1977,7 +1977,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/primary_lang.dialog"
+          "file_path": "locale/it-it/primary_lang.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -1998,7 +1998,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/primary_lang.dialog"
+          "file_path": "locale/pt-pt/primary_lang.dialog"
         }
       },
       "context": {
@@ -2026,15 +2026,15 @@
         "handler_source": "@intent_handler(\"query_primary_lang.intent\")\ndef handle_primary_lang(self, message):\n    lang = pronounce_lang(self.core_lang, self.lang)\n    self.speak_dialog(\"primary_lang\", {\"lang\": lang})"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/primary_lang.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/primary_lang.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/primary_lang.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/primary_lang.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/primary_lang.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/primary_lang.dialog",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/primary_lang.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/primary_lang.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/primary_lang.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/primary_lang.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/primary_lang.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/primary_lang.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/primary_lang.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/primary_lang.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/primary_lang.dialog",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/primary_lang.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/primary_lang.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/primary_lang.dialog"
       }
     },
     "query_cpu_usage.intent": {
@@ -2082,7 +2082,7 @@
               "line_number": 6
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/ca/query_cpu_usage.intent"
+          "file_path": "locale/ca/query_cpu_usage.intent"
         },
         "da": {
           "entries": [
@@ -2125,7 +2125,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/query_cpu_usage.intent"
+          "file_path": "locale/da/query_cpu_usage.intent"
         },
         "de-DE": {
           "entries": [
@@ -2168,7 +2168,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/query_cpu_usage.intent"
+          "file_path": "locale/de-de/query_cpu_usage.intent"
         },
         "en-US": {
           "entries": [
@@ -2211,7 +2211,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/query_cpu_usage.intent"
+          "file_path": "locale/en-us/query_cpu_usage.intent"
         },
         "es-ES": {
           "entries": [
@@ -2254,7 +2254,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/query_cpu_usage.intent"
+          "file_path": "locale/es-es/query_cpu_usage.intent"
         },
         "fr-FR": {
           "entries": [
@@ -2289,7 +2289,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/query_cpu_usage.intent"
+          "file_path": "locale/fr-fr/query_cpu_usage.intent"
         },
         "gl": {
           "entries": [
@@ -2332,7 +2332,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/query_cpu_usage.intent"
+          "file_path": "locale/gl/query_cpu_usage.intent"
         },
         "it-IT": {
           "entries": [
@@ -2368,7 +2368,7 @@
           "line_count": 7,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/query_cpu_usage.intent"
+          "file_path": "locale/it-it/query_cpu_usage.intent"
         },
         "pt-PT": {
           "entries": [
@@ -2411,7 +2411,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/query_cpu_usage.intent"
+          "file_path": "locale/pt-pt/query_cpu_usage.intent"
         }
       },
       "context": {
@@ -2429,7 +2429,7 @@
           "cpu": "Variable passed to cpu_percent.dialog"
         },
         "related_files": [
-          "ovos-skill-diagnostics/locale/en-us/cpu_percent.dialog"
+          "locale/en-us/cpu_percent.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -2442,15 +2442,15 @@
         "handler_source": "@intent_handler(\"query_cpu_usage.intent\")\ndef handle_get_cpu(self, message):\n    self.speak_dialog(\"cpu_percent\",\n                      {\"cpu\": pronounce_number(psutil.cpu_percent(), lang=self.lang)})"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/query_cpu_usage.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/query_cpu_usage.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/query_cpu_usage.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/query_cpu_usage.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/query_cpu_usage.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/query_cpu_usage.intent",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/query_cpu_usage.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/query_cpu_usage.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/query_cpu_usage.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/query_cpu_usage.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/query_cpu_usage.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/query_cpu_usage.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/query_cpu_usage.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/query_cpu_usage.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/query_cpu_usage.intent",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/query_cpu_usage.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/query_cpu_usage.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/query_cpu_usage.intent"
       }
     },
     "query_extra_langs.intent": {
@@ -2483,7 +2483,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/ca/query_extra_langs.intent"
+          "file_path": "locale/ca/query_extra_langs.intent"
         },
         "da": {
           "entries": [
@@ -2518,7 +2518,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/query_extra_langs.intent"
+          "file_path": "locale/da/query_extra_langs.intent"
         },
         "de-DE": {
           "entries": [
@@ -2553,7 +2553,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/query_extra_langs.intent"
+          "file_path": "locale/de-de/query_extra_langs.intent"
         },
         "en-US": {
           "entries": [
@@ -2588,7 +2588,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/query_extra_langs.intent"
+          "file_path": "locale/en-us/query_extra_langs.intent"
         },
         "es-ES": {
           "entries": [
@@ -2623,7 +2623,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/query_extra_langs.intent"
+          "file_path": "locale/es-es/query_extra_langs.intent"
         },
         "fr-FR": {
           "entries": [
@@ -2654,7 +2654,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/query_extra_langs.intent"
+          "file_path": "locale/fr-fr/query_extra_langs.intent"
         },
         "gl": {
           "entries": [
@@ -2689,7 +2689,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/query_extra_langs.intent"
+          "file_path": "locale/gl/query_extra_langs.intent"
         },
         "it-IT": {
           "entries": [
@@ -2724,7 +2724,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/query_extra_langs.intent"
+          "file_path": "locale/it-it/query_extra_langs.intent"
         },
         "pt-PT": {
           "entries": [
@@ -2752,7 +2752,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/query_extra_langs.intent"
+          "file_path": "locale/pt-pt/query_extra_langs.intent"
         }
       },
       "context": {
@@ -2771,8 +2771,8 @@
           "langs": "Variable passed to secondary_langs.dialog"
         },
         "related_files": [
-          "ovos-skill-diagnostics/locale/en-us/no_secondary_langs.dialog",
-          "ovos-skill-diagnostics/locale/en-us/secondary_langs.dialog"
+          "locale/en-us/secondary_langs.dialog",
+          "locale/en-us/no_secondary_langs.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -2785,15 +2785,15 @@
         "handler_source": "@intent_handler(\"query_extra_langs.intent\")\ndef handle_secondary_langs(self, message):\n    if self.secondary_langs:\n        langs = ', '.join([pronounce_lang(l, self.lang) for l in self.secondary_langs])\n        self.speak_dialog(\"secondary_langs\", {\"langs\": langs})\n    else:\n        self.speak_dialog(\"no_secondary_langs\")"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/query_extra_langs.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/query_extra_langs.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/query_extra_langs.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/query_extra_langs.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/query_extra_langs.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/query_extra_langs.intent",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/query_extra_langs.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/query_extra_langs.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/query_extra_langs.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/query_extra_langs.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/query_extra_langs.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/query_extra_langs.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/query_extra_langs.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/query_extra_langs.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/query_extra_langs.intent",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/query_extra_langs.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/query_extra_langs.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/query_extra_langs.intent"
       }
     },
     "query_gpu.intent": {
@@ -2822,7 +2822,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/ca/query_gpu.intent"
+          "file_path": "locale/ca/query_gpu.intent"
         },
         "da": {
           "entries": [
@@ -2853,7 +2853,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/query_gpu.intent"
+          "file_path": "locale/da/query_gpu.intent"
         },
         "de-DE": {
           "entries": [
@@ -2884,7 +2884,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/query_gpu.intent"
+          "file_path": "locale/de-de/query_gpu.intent"
         },
         "en-US": {
           "entries": [
@@ -2915,7 +2915,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/query_gpu.intent"
+          "file_path": "locale/en-us/query_gpu.intent"
         },
         "es-ES": {
           "entries": [
@@ -2946,7 +2946,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/query_gpu.intent"
+          "file_path": "locale/es-es/query_gpu.intent"
         },
         "fr-FR": {
           "entries": [
@@ -2977,7 +2977,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/query_gpu.intent"
+          "file_path": "locale/fr-fr/query_gpu.intent"
         },
         "gl": {
           "entries": [
@@ -3008,7 +3008,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/query_gpu.intent"
+          "file_path": "locale/gl/query_gpu.intent"
         },
         "it-IT": {
           "entries": [
@@ -3039,7 +3039,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/query_gpu.intent"
+          "file_path": "locale/it-it/query_gpu.intent"
         },
         "pt-PT": {
           "entries": [
@@ -3070,7 +3070,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/query_gpu.intent"
+          "file_path": "locale/pt-pt/query_gpu.intent"
         }
       },
       "context": {
@@ -3087,8 +3087,8 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-diagnostics/locale/en-us/has_gpu.dialog",
-          "ovos-skill-diagnostics/locale/en-us/no_gpu.dialog"
+          "locale/en-us/no_gpu.dialog",
+          "locale/en-us/has_gpu.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -3101,15 +3101,15 @@
         "handler_source": "@intent_handler(\"query_gpu.intent\")\ndef handle_get_gpu(self, message):\n    try:\n        import torch\n        gpu = torch.cuda.is_available()\n    except ImportError:\n        gpu = has_nvidia_gpu()\n    if gpu:\n        self.speak_dialog(\"has_gpu\")\n    else:\n        self.speak_dialog(\"no_gpu\")"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/query_gpu.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/query_gpu.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/query_gpu.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/query_gpu.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/query_gpu.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/query_gpu.intent",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/query_gpu.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/query_gpu.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/query_gpu.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/query_gpu.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/query_gpu.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/query_gpu.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/query_gpu.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/query_gpu.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/query_gpu.intent",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/query_gpu.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/query_gpu.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/query_gpu.intent"
       }
     },
     "query_kernel_version.intent": {
@@ -3138,7 +3138,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/ca/query_kernel_version.intent"
+          "file_path": "locale/ca/query_kernel_version.intent"
         },
         "da": {
           "entries": [
@@ -3169,7 +3169,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/query_kernel_version.intent"
+          "file_path": "locale/da/query_kernel_version.intent"
         },
         "de-DE": {
           "entries": [
@@ -3200,7 +3200,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/query_kernel_version.intent"
+          "file_path": "locale/de-de/query_kernel_version.intent"
         },
         "en-US": {
           "entries": [
@@ -3231,7 +3231,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/query_kernel_version.intent"
+          "file_path": "locale/en-us/query_kernel_version.intent"
         },
         "es-ES": {
           "entries": [
@@ -3262,7 +3262,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/query_kernel_version.intent"
+          "file_path": "locale/es-es/query_kernel_version.intent"
         },
         "fr-FR": {
           "entries": [
@@ -3289,7 +3289,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/query_kernel_version.intent"
+          "file_path": "locale/fr-fr/query_kernel_version.intent"
         },
         "gl": {
           "entries": [
@@ -3320,7 +3320,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/query_kernel_version.intent"
+          "file_path": "locale/gl/query_kernel_version.intent"
         },
         "it-IT": {
           "entries": [
@@ -3351,7 +3351,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/query_kernel_version.intent"
+          "file_path": "locale/it-it/query_kernel_version.intent"
         },
         "pt-PT": {
           "entries": [
@@ -3382,7 +3382,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/query_kernel_version.intent"
+          "file_path": "locale/pt-pt/query_kernel_version.intent"
         }
       },
       "context": {
@@ -3400,7 +3400,7 @@
           "os_info": "Variable passed to kernel_version.dialog"
         },
         "related_files": [
-          "ovos-skill-diagnostics/locale/en-us/kernel_version.dialog"
+          "locale/en-us/kernel_version.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -3413,15 +3413,15 @@
         "handler_source": "@intent_handler(\"query_kernel_version.intent\")\ndef handle_get_os(self, message):\n    kernel = platform.release().split(\"-\")[0]  # simplify version number\n    self.speak_dialog(\"kernel_version\",\n                      {\"os_info\": f\"{platform.system()} {kernel}\"})"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/query_kernel_version.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/query_kernel_version.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/query_kernel_version.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/query_kernel_version.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/query_kernel_version.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/query_kernel_version.intent",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/query_kernel_version.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/query_kernel_version.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/query_kernel_version.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/query_kernel_version.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/query_kernel_version.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/query_kernel_version.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/query_kernel_version.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/query_kernel_version.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/query_kernel_version.intent",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/query_kernel_version.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/query_kernel_version.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/query_kernel_version.intent"
       }
     },
     "query_langs.intent": {
@@ -3462,7 +3462,7 @@
           "line_count": 7,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/ca/query_langs.intent"
+          "file_path": "locale/ca/query_langs.intent"
         },
         "da": {
           "entries": [
@@ -3498,7 +3498,7 @@
           "line_count": 7,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/da/query_langs.intent"
+          "file_path": "locale/da/query_langs.intent"
         },
         "de-DE": {
           "entries": [
@@ -3534,7 +3534,7 @@
           "line_count": 7,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/query_langs.intent"
+          "file_path": "locale/de-de/query_langs.intent"
         },
         "en-US": {
           "entries": [
@@ -3570,7 +3570,7 @@
           "line_count": 7,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/query_langs.intent"
+          "file_path": "locale/en-us/query_langs.intent"
         },
         "es-ES": {
           "entries": [
@@ -3613,7 +3613,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/query_langs.intent"
+          "file_path": "locale/es-es/query_langs.intent"
         },
         "fr-FR": {
           "entries": [
@@ -3644,7 +3644,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/query_langs.intent"
+          "file_path": "locale/fr-fr/query_langs.intent"
         },
         "gl": {
           "entries": [
@@ -3680,7 +3680,7 @@
           "line_count": 7,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/gl/query_langs.intent"
+          "file_path": "locale/gl/query_langs.intent"
         },
         "it-IT": {
           "entries": [
@@ -3716,7 +3716,7 @@
           "line_count": 7,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/query_langs.intent"
+          "file_path": "locale/it-it/query_langs.intent"
         },
         "pt-PT": {
           "entries": [
@@ -3752,7 +3752,7 @@
           "line_count": 7,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/query_langs.intent"
+          "file_path": "locale/pt-pt/query_langs.intent"
         }
       },
       "context": {
@@ -3777,15 +3777,15 @@
         "handler_source": "@intent_handler(\"query_langs.intent\")\ndef handle_get_languages(self, message):\n    if self.core_lang != self.lang:\n        self.handle_what_lang_am_i_speaking(message)\n    self.handle_primary_lang(message)\n    if self.secondary_langs:\n        self.handle_secondary_langs(message)"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/query_langs.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/query_langs.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/query_langs.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/query_langs.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/query_langs.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/query_langs.intent",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/query_langs.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/query_langs.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/query_langs.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/query_langs.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/query_langs.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/query_langs.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/query_langs.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/query_langs.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/query_langs.intent",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/query_langs.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/query_langs.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/query_langs.intent"
       }
     },
     "query_memory_usage.intent": {
@@ -3822,7 +3822,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/ca/query_memory_usage.intent"
+          "file_path": "locale/ca/query_memory_usage.intent"
         },
         "da": {
           "entries": [
@@ -3861,7 +3861,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/query_memory_usage.intent"
+          "file_path": "locale/da/query_memory_usage.intent"
         },
         "de-DE": {
           "entries": [
@@ -3900,7 +3900,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/query_memory_usage.intent"
+          "file_path": "locale/de-de/query_memory_usage.intent"
         },
         "en-US": {
           "entries": [
@@ -3939,7 +3939,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/query_memory_usage.intent"
+          "file_path": "locale/en-us/query_memory_usage.intent"
         },
         "es-ES": {
           "entries": [
@@ -3978,7 +3978,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/query_memory_usage.intent"
+          "file_path": "locale/es-es/query_memory_usage.intent"
         },
         "fr-FR": {
           "entries": [
@@ -4013,7 +4013,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/query_memory_usage.intent"
+          "file_path": "locale/fr-fr/query_memory_usage.intent"
         },
         "gl": {
           "entries": [
@@ -4052,7 +4052,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/query_memory_usage.intent"
+          "file_path": "locale/gl/query_memory_usage.intent"
         },
         "it-IT": {
           "entries": [
@@ -4091,7 +4091,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/query_memory_usage.intent"
+          "file_path": "locale/it-it/query_memory_usage.intent"
         },
         "pt-PT": {
           "entries": [
@@ -4130,7 +4130,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/query_memory_usage.intent"
+          "file_path": "locale/pt-pt/query_memory_usage.intent"
         }
       },
       "context": {
@@ -4150,8 +4150,8 @@
           "total": "Variable passed to available_memory.dialog"
         },
         "related_files": [
-          "ovos-skill-diagnostics/locale/en-us/available_memory.dialog",
-          "ovos-skill-diagnostics/locale/en-us/current_memory.dialog"
+          "locale/en-us/current_memory.dialog",
+          "locale/en-us/available_memory.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -4164,15 +4164,15 @@
         "handler_source": "@intent_handler(\"query_memory_usage.intent\")\ndef handle_get_memory(self, message):\n    m = psutil.virtual_memory()\n    memory = pronounce_number(m.percent, lang=self.lang)\n    self.speak_dialog(\"current_memory\", {\"memory\": memory})\n    memory = nice_bytes(m.available)\n    total = nice_bytes(m.total)\n    self.speak_dialog(\"available_memory\",\n                      {\"memory\": memory, \"total\": total})"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/query_memory_usage.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/query_memory_usage.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/query_memory_usage.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/query_memory_usage.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/query_memory_usage.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/query_memory_usage.intent",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/query_memory_usage.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/query_memory_usage.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/query_memory_usage.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/query_memory_usage.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/query_memory_usage.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/query_memory_usage.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/query_memory_usage.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/query_memory_usage.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/query_memory_usage.intent",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/query_memory_usage.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/query_memory_usage.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/query_memory_usage.intent"
       }
     },
     "query_ovos_location.intent": {
@@ -4201,7 +4201,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/ca/query_ovos_location.intent"
+          "file_path": "locale/ca/query_ovos_location.intent"
         },
         "da": {
           "entries": [
@@ -4232,7 +4232,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/query_ovos_location.intent"
+          "file_path": "locale/da/query_ovos_location.intent"
         },
         "de-DE": {
           "entries": [
@@ -4263,7 +4263,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/query_ovos_location.intent"
+          "file_path": "locale/de-de/query_ovos_location.intent"
         },
         "en-US": {
           "entries": [
@@ -4294,7 +4294,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/query_ovos_location.intent"
+          "file_path": "locale/en-us/query_ovos_location.intent"
         },
         "es-ES": {
           "entries": [
@@ -4325,7 +4325,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/query_ovos_location.intent"
+          "file_path": "locale/es-es/query_ovos_location.intent"
         },
         "fr-FR": {
           "entries": [
@@ -4352,7 +4352,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/query_ovos_location.intent"
+          "file_path": "locale/fr-fr/query_ovos_location.intent"
         },
         "gl": {
           "entries": [
@@ -4383,7 +4383,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/query_ovos_location.intent"
+          "file_path": "locale/gl/query_ovos_location.intent"
         },
         "it-IT": {
           "entries": [
@@ -4414,7 +4414,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/query_ovos_location.intent"
+          "file_path": "locale/it-it/query_ovos_location.intent"
         },
         "pt-PT": {
           "entries": [
@@ -4445,7 +4445,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/query_ovos_location.intent"
+          "file_path": "locale/pt-pt/query_ovos_location.intent"
         }
       },
       "context": {
@@ -4463,7 +4463,7 @@
           "location": "Variable passed to system_location.dialog"
         },
         "related_files": [
-          "ovos-skill-diagnostics/locale/en-us/system_location.dialog"
+          "locale/en-us/system_location.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -4476,15 +4476,15 @@
         "handler_source": "@intent_handler(\"query_ovos_location.intent\")\ndef handle_default_location(self, message):\n    loc = Configuration().get(\"location\", {}).get(\"city\", {}).get(\"name\")\n    self.speak_dialog(\"system_location\", {\"location\": loc})"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/query_ovos_location.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/query_ovos_location.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/query_ovos_location.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/query_ovos_location.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/query_ovos_location.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/query_ovos_location.intent",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/query_ovos_location.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/query_ovos_location.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/query_ovos_location.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/query_ovos_location.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/query_ovos_location.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/query_ovos_location.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/query_ovos_location.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/query_ovos_location.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/query_ovos_location.intent",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/query_ovos_location.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/query_ovos_location.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/query_ovos_location.intent"
       }
     },
     "query_primary_lang.intent": {
@@ -4529,7 +4529,7 @@
           "line_count": 8,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/ca/query_primary_lang.intent"
+          "file_path": "locale/ca/query_primary_lang.intent"
         },
         "da": {
           "entries": [
@@ -4576,7 +4576,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/query_primary_lang.intent"
+          "file_path": "locale/da/query_primary_lang.intent"
         },
         "de-DE": {
           "entries": [
@@ -4623,7 +4623,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/query_primary_lang.intent"
+          "file_path": "locale/de-de/query_primary_lang.intent"
         },
         "en-US": {
           "entries": [
@@ -4670,7 +4670,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/query_primary_lang.intent"
+          "file_path": "locale/en-us/query_primary_lang.intent"
         },
         "es-ES": {
           "entries": [
@@ -4717,7 +4717,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/query_primary_lang.intent"
+          "file_path": "locale/es-es/query_primary_lang.intent"
         },
         "fr-FR": {
           "entries": [
@@ -4748,7 +4748,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/query_primary_lang.intent"
+          "file_path": "locale/fr-fr/query_primary_lang.intent"
         },
         "gl": {
           "entries": [
@@ -4788,7 +4788,7 @@
           "line_count": 8,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/gl/query_primary_lang.intent"
+          "file_path": "locale/gl/query_primary_lang.intent"
         },
         "it-IT": {
           "entries": [
@@ -4835,7 +4835,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/query_primary_lang.intent"
+          "file_path": "locale/it-it/query_primary_lang.intent"
         },
         "pt-PT": {
           "entries": [
@@ -4875,7 +4875,7 @@
           "line_count": 8,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/query_primary_lang.intent"
+          "file_path": "locale/pt-pt/query_primary_lang.intent"
         }
       },
       "context": {
@@ -4893,7 +4893,7 @@
           "lang": "Variable passed to primary_lang.dialog"
         },
         "related_files": [
-          "ovos-skill-diagnostics/locale/en-us/primary_lang.dialog"
+          "locale/en-us/primary_lang.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -4906,15 +4906,15 @@
         "handler_source": "@intent_handler(\"query_primary_lang.intent\")\ndef handle_primary_lang(self, message):\n    lang = pronounce_lang(self.core_lang, self.lang)\n    self.speak_dialog(\"primary_lang\", {\"lang\": lang})"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/query_primary_lang.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/query_primary_lang.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/query_primary_lang.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/query_primary_lang.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/query_primary_lang.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/query_primary_lang.intent",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/query_primary_lang.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/query_primary_lang.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/query_primary_lang.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/query_primary_lang.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/query_primary_lang.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/query_primary_lang.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/query_primary_lang.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/query_primary_lang.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/query_primary_lang.intent",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/query_primary_lang.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/query_primary_lang.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/query_primary_lang.intent"
       }
     },
     "query_user_lang.intent": {
@@ -4935,7 +4935,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/ca/query_user_lang.intent"
+          "file_path": "locale/ca/query_user_lang.intent"
         },
         "da": {
           "entries": [
@@ -4958,7 +4958,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/query_user_lang.intent"
+          "file_path": "locale/da/query_user_lang.intent"
         },
         "de-DE": {
           "entries": [
@@ -4981,7 +4981,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/query_user_lang.intent"
+          "file_path": "locale/de-de/query_user_lang.intent"
         },
         "en-US": {
           "entries": [
@@ -5004,7 +5004,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/query_user_lang.intent"
+          "file_path": "locale/en-us/query_user_lang.intent"
         },
         "es-ES": {
           "entries": [
@@ -5027,7 +5027,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/query_user_lang.intent"
+          "file_path": "locale/es-es/query_user_lang.intent"
         },
         "fr-FR": {
           "entries": [
@@ -5054,7 +5054,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/query_user_lang.intent"
+          "file_path": "locale/fr-fr/query_user_lang.intent"
         },
         "gl": {
           "entries": [
@@ -5077,7 +5077,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/query_user_lang.intent"
+          "file_path": "locale/gl/query_user_lang.intent"
         },
         "it-IT": {
           "entries": [
@@ -5100,7 +5100,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/query_user_lang.intent"
+          "file_path": "locale/it-it/query_user_lang.intent"
         },
         "pt-PT": {
           "entries": [
@@ -5123,7 +5123,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/query_user_lang.intent"
+          "file_path": "locale/pt-pt/query_user_lang.intent"
         }
       },
       "context": {
@@ -5141,7 +5141,7 @@
           "lang": "Variable passed to current_lang.dialog"
         },
         "related_files": [
-          "ovos-skill-diagnostics/locale/en-us/current_lang.dialog"
+          "locale/en-us/current_lang.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -5154,15 +5154,15 @@
         "handler_source": "@intent_handler(\"query_user_lang.intent\")\ndef handle_what_lang_am_i_speaking(self, message):\n    lang = pronounce_lang(self.lang, self.lang)\n    self.speak_dialog(\"current_lang\", {\"lang\": lang})"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/query_user_lang.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/query_user_lang.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/query_user_lang.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/query_user_lang.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/query_user_lang.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/query_user_lang.intent",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/query_user_lang.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/query_user_lang.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/query_user_lang.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/query_user_lang.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/query_user_lang.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/query_user_lang.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/query_user_lang.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/query_user_lang.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/query_user_lang.intent",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/query_user_lang.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/query_user_lang.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/query_user_lang.intent"
       }
     },
     "query_user_location.intent": {
@@ -5191,7 +5191,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-diagnostics/locale/ca/query_user_location.intent"
+          "file_path": "locale/ca/query_user_location.intent"
         },
         "da": {
           "entries": [
@@ -5222,7 +5222,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/query_user_location.intent"
+          "file_path": "locale/da/query_user_location.intent"
         },
         "de-DE": {
           "entries": [
@@ -5253,7 +5253,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/query_user_location.intent"
+          "file_path": "locale/de-de/query_user_location.intent"
         },
         "en-US": {
           "entries": [
@@ -5284,7 +5284,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/query_user_location.intent"
+          "file_path": "locale/en-us/query_user_location.intent"
         },
         "es-ES": {
           "entries": [
@@ -5315,7 +5315,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/query_user_location.intent"
+          "file_path": "locale/es-es/query_user_location.intent"
         },
         "fr-FR": {
           "entries": [
@@ -5342,7 +5342,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/query_user_location.intent"
+          "file_path": "locale/fr-fr/query_user_location.intent"
         },
         "gl": {
           "entries": [
@@ -5373,7 +5373,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/query_user_location.intent"
+          "file_path": "locale/gl/query_user_location.intent"
         },
         "it-IT": {
           "entries": [
@@ -5404,7 +5404,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/query_user_location.intent"
+          "file_path": "locale/it-it/query_user_location.intent"
         },
         "pt-PT": {
           "entries": [
@@ -5435,7 +5435,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/query_user_location.intent"
+          "file_path": "locale/pt-pt/query_user_location.intent"
         }
       },
       "context": {
@@ -5453,7 +5453,7 @@
           "location": "Variable passed to user_location.dialog"
         },
         "related_files": [
-          "ovos-skill-diagnostics/locale/en-us/user_location.dialog"
+          "locale/en-us/user_location.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -5466,15 +5466,15 @@
         "handler_source": "@intent_handler(\"query_user_location.intent\")\ndef handle_user_location(self, message):\n    location = self.location_pretty\n    self.speak_dialog(\"user_location\", {\"location\": location})"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/query_user_location.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/query_user_location.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/query_user_location.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/query_user_location.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/query_user_location.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/query_user_location.intent",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/query_user_location.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/query_user_location.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/query_user_location.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/query_user_location.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/query_user_location.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/query_user_location.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/query_user_location.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/query_user_location.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/query_user_location.intent",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/query_user_location.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/query_user_location.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/query_user_location.intent"
       }
     },
     "secondary_langs.dialog": {
@@ -5500,7 +5500,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/ca/secondary_langs.dialog"
+          "file_path": "locale/ca/secondary_langs.dialog"
         },
         "da": {
           "entries": [
@@ -5521,7 +5521,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/secondary_langs.dialog"
+          "file_path": "locale/da/secondary_langs.dialog"
         },
         "de-DE": {
           "entries": [
@@ -5542,7 +5542,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/secondary_langs.dialog"
+          "file_path": "locale/de-de/secondary_langs.dialog"
         },
         "en-US": {
           "entries": [
@@ -5563,7 +5563,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/secondary_langs.dialog"
+          "file_path": "locale/en-us/secondary_langs.dialog"
         },
         "es-ES": {
           "entries": [
@@ -5584,7 +5584,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/secondary_langs.dialog"
+          "file_path": "locale/es-es/secondary_langs.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -5605,7 +5605,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/secondary_langs.dialog"
+          "file_path": "locale/fr-fr/secondary_langs.dialog"
         },
         "gl": {
           "entries": [
@@ -5626,7 +5626,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/secondary_langs.dialog"
+          "file_path": "locale/gl/secondary_langs.dialog"
         },
         "it-IT": {
           "entries": [
@@ -5647,7 +5647,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/secondary_langs.dialog"
+          "file_path": "locale/it-it/secondary_langs.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -5668,7 +5668,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/secondary_langs.dialog"
+          "file_path": "locale/pt-pt/secondary_langs.dialog"
         }
       },
       "context": {
@@ -5686,7 +5686,7 @@
           "langs": "Runtime value from handle_secondary_langs()"
         },
         "related_files": [
-          "ovos-skill-diagnostics/locale/en-us/no_secondary_langs.dialog"
+          "locale/en-us/no_secondary_langs.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -5698,15 +5698,15 @@
         "handler_source": "@intent_handler(\"query_extra_langs.intent\")\ndef handle_secondary_langs(self, message):\n    if self.secondary_langs:\n        langs = ', '.join([pronounce_lang(l, self.lang) for l in self.secondary_langs])\n        self.speak_dialog(\"secondary_langs\", {\"langs\": langs})\n    else:\n        self.speak_dialog(\"no_secondary_langs\")"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/secondary_langs.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/secondary_langs.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/secondary_langs.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/secondary_langs.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/secondary_langs.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/secondary_langs.dialog",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/secondary_langs.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/secondary_langs.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/secondary_langs.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/secondary_langs.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/secondary_langs.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/secondary_langs.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/secondary_langs.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/secondary_langs.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/secondary_langs.dialog",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/secondary_langs.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/secondary_langs.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/secondary_langs.dialog"
       }
     },
     "system_location.dialog": {
@@ -5732,7 +5732,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/ca/system_location.dialog"
+          "file_path": "locale/ca/system_location.dialog"
         },
         "da": {
           "entries": [
@@ -5753,7 +5753,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/system_location.dialog"
+          "file_path": "locale/da/system_location.dialog"
         },
         "de-DE": {
           "entries": [
@@ -5774,7 +5774,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/system_location.dialog"
+          "file_path": "locale/de-de/system_location.dialog"
         },
         "en-US": {
           "entries": [
@@ -5795,7 +5795,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/system_location.dialog"
+          "file_path": "locale/en-us/system_location.dialog"
         },
         "es-ES": {
           "entries": [
@@ -5816,7 +5816,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/system_location.dialog"
+          "file_path": "locale/es-es/system_location.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -5837,7 +5837,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/system_location.dialog"
+          "file_path": "locale/fr-fr/system_location.dialog"
         },
         "gl": {
           "entries": [
@@ -5858,7 +5858,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/system_location.dialog"
+          "file_path": "locale/gl/system_location.dialog"
         },
         "it-IT": {
           "entries": [
@@ -5879,7 +5879,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/system_location.dialog"
+          "file_path": "locale/it-it/system_location.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -5900,7 +5900,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/system_location.dialog"
+          "file_path": "locale/pt-pt/system_location.dialog"
         }
       },
       "context": {
@@ -5928,15 +5928,15 @@
         "handler_source": "@intent_handler(\"query_ovos_location.intent\")\ndef handle_default_location(self, message):\n    loc = Configuration().get(\"location\", {}).get(\"city\", {}).get(\"name\")\n    self.speak_dialog(\"system_location\", {\"location\": loc})"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/system_location.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/system_location.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/system_location.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/system_location.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/system_location.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/system_location.dialog",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/system_location.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/system_location.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/system_location.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/system_location.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/system_location.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/system_location.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/system_location.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/system_location.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/system_location.dialog",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/system_location.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/system_location.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/system_location.dialog"
       }
     },
     "user_location.dialog": {
@@ -5962,7 +5962,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/ca/user_location.dialog"
+          "file_path": "locale/ca/user_location.dialog"
         },
         "da": {
           "entries": [
@@ -5983,7 +5983,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/da/user_location.dialog"
+          "file_path": "locale/da/user_location.dialog"
         },
         "de-DE": {
           "entries": [
@@ -6004,7 +6004,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/de-de/user_location.dialog"
+          "file_path": "locale/de-de/user_location.dialog"
         },
         "en-US": {
           "entries": [
@@ -6025,7 +6025,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/en-us/user_location.dialog"
+          "file_path": "locale/en-us/user_location.dialog"
         },
         "es-ES": {
           "entries": [
@@ -6046,7 +6046,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/es-es/user_location.dialog"
+          "file_path": "locale/es-es/user_location.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -6067,7 +6067,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/fr-fr/user_location.dialog"
+          "file_path": "locale/fr-fr/user_location.dialog"
         },
         "gl": {
           "entries": [
@@ -6088,7 +6088,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/gl/user_location.dialog"
+          "file_path": "locale/gl/user_location.dialog"
         },
         "it-IT": {
           "entries": [
@@ -6109,7 +6109,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/it-it/user_location.dialog"
+          "file_path": "locale/it-it/user_location.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -6130,7 +6130,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-diagnostics/locale/pt-pt/user_location.dialog"
+          "file_path": "locale/pt-pt/user_location.dialog"
         }
       },
       "context": {
@@ -6158,15 +6158,15 @@
         "handler_source": "@intent_handler(\"query_user_location.intent\")\ndef handle_user_location(self, message):\n    location = self.location_pretty\n    self.speak_dialog(\"user_location\", {\"location\": location})"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/ca/user_location.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/da/user_location.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/de-de/user_location.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/en-us/user_location.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/es-es/user_location.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/fr-fr/user_location.dialog",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/gl/user_location.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/it-it/user_location.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/ovos-skill-diagnostics/locale/pt-pt/user_location.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/ca/user_location.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/da/user_location.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/de-de/user_location.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/en-us/user_location.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/es-es/user_location.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/fr-fr/user_location.dialog",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/gl/user_location.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/it-it/user_location.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-diagnostics/edit/dev/locale/pt-pt/user_location.dialog"
       }
     }
   }

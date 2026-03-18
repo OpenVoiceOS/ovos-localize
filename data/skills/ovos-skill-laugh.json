@@ -168,7 +168,7 @@
           "line_count": 34,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/ca-es/vocab/Laugh.intent"
+          "file_path": "locale/ca-es/vocab/Laugh.intent"
         },
         "da-DK": {
           "entries": [
@@ -192,7 +192,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/da-dk/vocab/Laugh.voc"
+          "file_path": "locale/da-dk/vocab/Laugh.voc"
         },
         "de-DE": {
           "entries": [
@@ -212,7 +212,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/de-de/vocab/Laugh.voc"
+          "file_path": "locale/de-de/vocab/Laugh.voc"
         },
         "el-GR": {
           "entries": [
@@ -232,7 +232,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/el-gr/vocab/Laugh.voc"
+          "file_path": "locale/el-gr/vocab/Laugh.voc"
         },
         "en-US": {
           "entries": [
@@ -316,7 +316,7 @@
           "line_count": 19,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/en-us/vocab/Laugh.intent"
+          "file_path": "locale/en-us/vocab/Laugh.intent"
         },
         "es-ES": {
           "entries": [
@@ -336,7 +336,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/es-es/vocab/Laugh.voc"
+          "file_path": "locale/es-es/vocab/Laugh.voc"
         },
         "es-LM": {
           "entries": [
@@ -356,7 +356,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/es-lm/vocab/Laugh.voc"
+          "file_path": "locale/es-lm/vocab/Laugh.voc"
         },
         "eu": {
           "entries": [
@@ -395,7 +395,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/eu/vocab/Laugh.intent"
+          "file_path": "locale/eu/vocab/Laugh.intent"
         },
         "fa-IR": {
           "entries": [
@@ -419,7 +419,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/fa-ir/vocab/Laugh.voc"
+          "file_path": "locale/fa-ir/vocab/Laugh.voc"
         },
         "fr-FR": {
           "entries": [
@@ -443,7 +443,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/fr-fr/vocab/Laugh.voc"
+          "file_path": "locale/fr-fr/vocab/Laugh.voc"
         },
         "gl-ES": {
           "entries": [
@@ -559,7 +559,7 @@
           "line_count": 27,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/gl-es/vocab/Laugh.intent"
+          "file_path": "locale/gl-es/vocab/Laugh.intent"
         },
         "it-IT": {
           "entries": [
@@ -583,7 +583,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/it-it/vocab/Laugh.voc"
+          "file_path": "locale/it-it/vocab/Laugh.voc"
         },
         "nl-NL": {
           "entries": [
@@ -603,7 +603,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/nl-nl/vocab/Laugh.voc"
+          "file_path": "locale/nl-nl/vocab/Laugh.voc"
         },
         "pt-BR": {
           "entries": [
@@ -627,7 +627,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/pt-br/vocab/Laugh.voc"
+          "file_path": "locale/pt-br/vocab/Laugh.voc"
         },
         "pt-PT": {
           "entries": [
@@ -647,7 +647,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/pt-pt/vocab/Laugh.voc"
+          "file_path": "locale/pt-pt/vocab/Laugh.voc"
         },
         "sv-SE": {
           "entries": [
@@ -667,7 +667,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/sv-se/vocab/Laugh.voc"
+          "file_path": "locale/sv-se/vocab/Laugh.voc"
         }
       },
       "context": {
@@ -692,22 +692,22 @@
         "handler_source": "@intent_handler(\"Laugh.intent\")\ndef handle_laugh_intent(self, message: Message) -> None:  # noqa\n    \"\"\"Handle the laugh intent.\"\"\"\n    self.laugh()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/ca-es/vocab/Laugh.intent",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/da-dk/vocab/Laugh.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/de-de/vocab/Laugh.voc",
-        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/el-gr/vocab/Laugh.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/en-us/vocab/Laugh.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/es-es/vocab/Laugh.voc",
-        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/es-lm/vocab/Laugh.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/eu/vocab/Laugh.intent",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/fa-ir/vocab/Laugh.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/fr-fr/vocab/Laugh.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/gl-es/vocab/Laugh.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/it-it/vocab/Laugh.voc",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/nl-nl/vocab/Laugh.voc",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/pt-br/vocab/Laugh.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/pt-pt/vocab/Laugh.voc",
-        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/sv-se/vocab/Laugh.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/ca-es/vocab/Laugh.intent",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/da-dk/vocab/Laugh.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/de-de/vocab/Laugh.voc",
+        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/el-gr/vocab/Laugh.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/en-us/vocab/Laugh.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/es-es/vocab/Laugh.voc",
+        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/es-lm/vocab/Laugh.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/eu/vocab/Laugh.intent",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/fa-ir/vocab/Laugh.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/fr-fr/vocab/Laugh.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/gl-es/vocab/Laugh.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/it-it/vocab/Laugh.voc",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/nl-nl/vocab/Laugh.voc",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/pt-br/vocab/Laugh.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/pt-pt/vocab/Laugh.voc",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/sv-se/vocab/Laugh.voc"
       }
     },
     "RandomLaugh.intent": {
@@ -812,7 +812,7 @@
           "line_count": 23,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/ca-es/vocab/RandomLaugh.intent"
+          "file_path": "locale/ca-es/vocab/RandomLaugh.intent"
         },
         "da-DK": {
           "entries": [
@@ -859,7 +859,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/da-dk/vocab/RandomLaugh.intent"
+          "file_path": "locale/da-dk/vocab/RandomLaugh.intent"
         },
         "de-DE": {
           "entries": [
@@ -906,7 +906,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/de-de/vocab/RandomLaugh.intent"
+          "file_path": "locale/de-de/vocab/RandomLaugh.intent"
         },
         "el-GR": {
           "entries": [
@@ -941,7 +941,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/el-gr/vocab/RandomLaugh.intent"
+          "file_path": "locale/el-gr/vocab/RandomLaugh.intent"
         },
         "en-US": {
           "entries": [
@@ -997,7 +997,7 @@
           "line_count": 12,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/en-us/vocab/RandomLaugh.intent"
+          "file_path": "locale/en-us/vocab/RandomLaugh.intent"
         },
         "es-ES": {
           "entries": [
@@ -1061,7 +1061,7 @@
           "line_count": 14,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/es-es/vocab/RandomLaugh.intent"
+          "file_path": "locale/es-es/vocab/RandomLaugh.intent"
         },
         "es-LM": {
           "entries": [
@@ -1112,7 +1112,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/es-lm/vocab/RandomLaugh.intent"
+          "file_path": "locale/es-lm/vocab/RandomLaugh.intent"
         },
         "eu": {
           "entries": [
@@ -1163,7 +1163,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/eu/vocab/RandomLaugh.intent"
+          "file_path": "locale/eu/vocab/RandomLaugh.intent"
         },
         "fa-IR": {
           "entries": [
@@ -1190,7 +1190,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/fa-ir/vocab/RandomLaugh.intent"
+          "file_path": "locale/fa-ir/vocab/RandomLaugh.intent"
         },
         "fr-FR": {
           "entries": [
@@ -1221,7 +1221,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/fr-fr/vocab/RandomLaugh.intent"
+          "file_path": "locale/fr-fr/vocab/RandomLaugh.intent"
         },
         "gl-ES": {
           "entries": [
@@ -1277,7 +1277,7 @@
           "line_count": 12,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/gl-es/vocab/RandomLaugh.intent"
+          "file_path": "locale/gl-es/vocab/RandomLaugh.intent"
         },
         "it-IT": {
           "entries": [
@@ -1316,7 +1316,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/it-it/vocab/RandomLaugh.intent"
+          "file_path": "locale/it-it/vocab/RandomLaugh.intent"
         },
         "nl-NL": {
           "entries": [
@@ -1359,7 +1359,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/nl-nl/vocab/RandomLaugh.intent"
+          "file_path": "locale/nl-nl/vocab/RandomLaugh.intent"
         },
         "pt-BR": {
           "entries": [
@@ -1407,7 +1407,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/pt-br/vocab/RandomLaugh.intent"
+          "file_path": "locale/pt-br/vocab/RandomLaugh.intent"
         },
         "pt-PT": {
           "entries": [
@@ -1475,7 +1475,7 @@
           "line_count": 15,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/pt-pt/vocab/RandomLaugh.intent"
+          "file_path": "locale/pt-pt/vocab/RandomLaugh.intent"
         },
         "sv-SE": {
           "entries": [
@@ -1518,7 +1518,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/sv-se/vocab/RandomLaugh.intent"
+          "file_path": "locale/sv-se/vocab/RandomLaugh.intent"
         }
       },
       "context": {
@@ -1543,22 +1543,22 @@
         "handler_source": "@intent_handler(\"RandomLaugh.intent\")\ndef handle_random_intent(self, message: Message) -> None:  # noqa\n    \"\"\"Initiate random laughing.\"\"\"\n    self.log.info(\"Laughing skill: Triggering random laughing\")\n    self.random_laugh = True\n    self.handle_laugh_event(message)"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/ca-es/vocab/RandomLaugh.intent",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/da-dk/vocab/RandomLaugh.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/de-de/vocab/RandomLaugh.intent",
-        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/el-gr/vocab/RandomLaugh.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/en-us/vocab/RandomLaugh.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/es-es/vocab/RandomLaugh.intent",
-        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/es-lm/vocab/RandomLaugh.intent",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/eu/vocab/RandomLaugh.intent",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/fa-ir/vocab/RandomLaugh.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/fr-fr/vocab/RandomLaugh.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/gl-es/vocab/RandomLaugh.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/it-it/vocab/RandomLaugh.intent",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/nl-nl/vocab/RandomLaugh.intent",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/pt-br/vocab/RandomLaugh.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/pt-pt/vocab/RandomLaugh.intent",
-        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/sv-se/vocab/RandomLaugh.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/ca-es/vocab/RandomLaugh.intent",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/da-dk/vocab/RandomLaugh.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/de-de/vocab/RandomLaugh.intent",
+        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/el-gr/vocab/RandomLaugh.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/en-us/vocab/RandomLaugh.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/es-es/vocab/RandomLaugh.intent",
+        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/es-lm/vocab/RandomLaugh.intent",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/eu/vocab/RandomLaugh.intent",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/fa-ir/vocab/RandomLaugh.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/fr-fr/vocab/RandomLaugh.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/gl-es/vocab/RandomLaugh.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/it-it/vocab/RandomLaugh.intent",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/nl-nl/vocab/RandomLaugh.intent",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/pt-br/vocab/RandomLaugh.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/pt-pt/vocab/RandomLaugh.intent",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/sv-se/vocab/RandomLaugh.intent"
       }
     },
     "Stop.voc": {
@@ -1587,7 +1587,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/ca-es/vocab/Stop.voc"
+          "file_path": "locale/ca-es/vocab/Stop.voc"
         },
         "da-DK": {
           "entries": [
@@ -1607,7 +1607,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/da-dk/vocab/Stop.voc"
+          "file_path": "locale/da-dk/vocab/Stop.voc"
         },
         "de-DE": {
           "entries": [
@@ -1627,7 +1627,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/de-de/vocab/Stop.voc"
+          "file_path": "locale/de-de/vocab/Stop.voc"
         },
         "el-GR": {
           "entries": [
@@ -1643,7 +1643,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/el-gr/vocab/Stop.voc"
+          "file_path": "locale/el-gr/vocab/Stop.voc"
         },
         "en-US": {
           "entries": [
@@ -1663,7 +1663,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/en-us/vocab/Stop.voc"
+          "file_path": "locale/en-us/vocab/Stop.voc"
         },
         "es-ES": {
           "entries": [
@@ -1683,7 +1683,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/es-es/vocab/Stop.voc"
+          "file_path": "locale/es-es/vocab/Stop.voc"
         },
         "es-LM": {
           "entries": [
@@ -1703,7 +1703,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/es-lm/vocab/Stop.voc"
+          "file_path": "locale/es-lm/vocab/Stop.voc"
         },
         "eu": {
           "entries": [
@@ -1723,7 +1723,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/eu/vocab/Stop.voc"
+          "file_path": "locale/eu/vocab/Stop.voc"
         },
         "fa-IR": {
           "entries": [
@@ -1743,7 +1743,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/fa-ir/vocab/Stop.voc"
+          "file_path": "locale/fa-ir/vocab/Stop.voc"
         },
         "fr-FR": {
           "entries": [
@@ -1771,7 +1771,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/fr-fr/vocab/Stop.voc"
+          "file_path": "locale/fr-fr/vocab/Stop.voc"
         },
         "gl-ES": {
           "entries": [
@@ -1791,7 +1791,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/gl-es/vocab/Stop.voc"
+          "file_path": "locale/gl-es/vocab/Stop.voc"
         },
         "it-IT": {
           "entries": [
@@ -1811,7 +1811,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/it-it/vocab/Stop.voc"
+          "file_path": "locale/it-it/vocab/Stop.voc"
         },
         "nl-NL": {
           "entries": [
@@ -1831,7 +1831,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/nl-nl/vocab/Stop.voc"
+          "file_path": "locale/nl-nl/vocab/Stop.voc"
         },
         "pt-BR": {
           "entries": [
@@ -1851,7 +1851,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/pt-br/vocab/Stop.voc"
+          "file_path": "locale/pt-br/vocab/Stop.voc"
         },
         "pt-PT": {
           "entries": [
@@ -1871,7 +1871,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/pt-pt/vocab/Stop.voc"
+          "file_path": "locale/pt-pt/vocab/Stop.voc"
         },
         "sv-SE": {
           "entries": [
@@ -1887,7 +1887,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/sv-se/vocab/Stop.voc"
+          "file_path": "locale/sv-se/vocab/Stop.voc"
         }
       },
       "context": {
@@ -1921,22 +1921,22 @@
         "handler_source": "@intent_handler(IntentBuilder(\"StopLaughing\").require(\"Stop\").require(\"Laugh\"))\ndef halt_laughing(self, message: Message) -> None:\n    \"\"\"Stop the random laughing.\"\"\"\n    self.log.info(\"Laughing skill: Stopping\")\n    # if in random laugh mode, cancel the scheduled event\n    if self.random_laugh and not self.special_day():\n        self.log.info(\"Laughing skill: Stopping random laugh event\")\n        self.random_laugh = False\n        self.cancel_scheduled_event(\"random_laugh\")\n        self.speak_dialog(\"cancel\")\n        # if haunted == True it will be back on reboot ;)\n    else:\n        self.speak_dialog(\"cancel_fail\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/ca-es/vocab/Stop.voc",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/da-dk/vocab/Stop.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/de-de/vocab/Stop.voc",
-        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/el-gr/vocab/Stop.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/en-us/vocab/Stop.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/es-es/vocab/Stop.voc",
-        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/es-lm/vocab/Stop.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/eu/vocab/Stop.voc",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/fa-ir/vocab/Stop.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/fr-fr/vocab/Stop.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/gl-es/vocab/Stop.voc",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/it-it/vocab/Stop.voc",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/nl-nl/vocab/Stop.voc",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/pt-br/vocab/Stop.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/pt-pt/vocab/Stop.voc",
-        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/sv-se/vocab/Stop.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/ca-es/vocab/Stop.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/da-dk/vocab/Stop.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/de-de/vocab/Stop.voc",
+        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/el-gr/vocab/Stop.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/en-us/vocab/Stop.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/es-es/vocab/Stop.voc",
+        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/es-lm/vocab/Stop.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/eu/vocab/Stop.voc",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/fa-ir/vocab/Stop.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/fr-fr/vocab/Stop.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/gl-es/vocab/Stop.voc",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/it-it/vocab/Stop.voc",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/nl-nl/vocab/Stop.voc",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/pt-br/vocab/Stop.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/pt-pt/vocab/Stop.voc",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/sv-se/vocab/Stop.voc"
       }
     },
     "cancel.dialog": {
@@ -1965,7 +1965,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/ca-es/dialog/cancel.dialog"
+          "file_path": "locale/ca-es/dialog/cancel.dialog"
         },
         "da-DK": {
           "entries": [
@@ -1981,7 +1981,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/da-dk/dialog/cancel.dialog"
+          "file_path": "locale/da-dk/dialog/cancel.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1997,7 +1997,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/de-de/dialog/cancel.dialog"
+          "file_path": "locale/de-de/dialog/cancel.dialog"
         },
         "el-GR": {
           "entries": [
@@ -2013,7 +2013,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/el-gr/dialog/cancel.dialog"
+          "file_path": "locale/el-gr/dialog/cancel.dialog"
         },
         "en-US": {
           "entries": [
@@ -2029,7 +2029,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/en-us/dialog/cancel.dialog"
+          "file_path": "locale/en-us/dialog/cancel.dialog"
         },
         "es-ES": {
           "entries": [
@@ -2045,7 +2045,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/es-es/dialog/cancel.dialog"
+          "file_path": "locale/es-es/dialog/cancel.dialog"
         },
         "es-LM": {
           "entries": [
@@ -2061,7 +2061,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/es-lm/dialog/cancel.dialog"
+          "file_path": "locale/es-lm/dialog/cancel.dialog"
         },
         "eu": {
           "entries": [
@@ -2077,7 +2077,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/eu/dialog/cancel.dialog"
+          "file_path": "locale/eu/dialog/cancel.dialog"
         },
         "fa-IR": {
           "entries": [
@@ -2093,7 +2093,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/fa-ir/dialog/cancel.dialog"
+          "file_path": "locale/fa-ir/dialog/cancel.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -2109,7 +2109,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/fr-fr/dialog/cancel.dialog"
+          "file_path": "locale/fr-fr/dialog/cancel.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -2125,7 +2125,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/gl-es/dialog/cancel.dialog"
+          "file_path": "locale/gl-es/dialog/cancel.dialog"
         },
         "it-IT": {
           "entries": [
@@ -2145,7 +2145,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/it-it/dialog/cancel.dialog"
+          "file_path": "locale/it-it/dialog/cancel.dialog"
         },
         "nl-NL": {
           "entries": [
@@ -2161,7 +2161,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/nl-nl/dialog/cancel.dialog"
+          "file_path": "locale/nl-nl/dialog/cancel.dialog"
         },
         "pt-BR": {
           "entries": [
@@ -2177,7 +2177,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/pt-br/dialog/cancel.dialog"
+          "file_path": "locale/pt-br/dialog/cancel.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -2193,7 +2193,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/pt-pt/dialog/cancel.dialog"
+          "file_path": "locale/pt-pt/dialog/cancel.dialog"
         },
         "sv-SE": {
           "entries": [
@@ -2209,7 +2209,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/sv-se/dialog/cancel.dialog"
+          "file_path": "locale/sv-se/dialog/cancel.dialog"
         }
       },
       "context": {
@@ -2223,7 +2223,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-laugh/locale/en-us/dialog/cancel_fail.dialog"
+          "locale/en-us/dialog/cancel_fail.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -2235,22 +2235,22 @@
         "handler_source": "@intent_handler(IntentBuilder(\"StopLaughing\").require(\"Stop\").require(\"Laugh\"))\ndef halt_laughing(self, message: Message) -> None:\n    \"\"\"Stop the random laughing.\"\"\"\n    self.log.info(\"Laughing skill: Stopping\")\n    # if in random laugh mode, cancel the scheduled event\n    if self.random_laugh and not self.special_day():\n        self.log.info(\"Laughing skill: Stopping random laugh event\")\n        self.random_laugh = False\n        self.cancel_scheduled_event(\"random_laugh\")\n        self.speak_dialog(\"cancel\")\n        # if haunted == True it will be back on reboot ;)\n    else:\n        self.speak_dialog(\"cancel_fail\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/ca-es/dialog/cancel.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/da-dk/dialog/cancel.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/de-de/dialog/cancel.dialog",
-        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/el-gr/dialog/cancel.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/en-us/dialog/cancel.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/es-es/dialog/cancel.dialog",
-        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/es-lm/dialog/cancel.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/eu/dialog/cancel.dialog",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/fa-ir/dialog/cancel.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/fr-fr/dialog/cancel.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/gl-es/dialog/cancel.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/it-it/dialog/cancel.dialog",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/nl-nl/dialog/cancel.dialog",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/pt-br/dialog/cancel.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/pt-pt/dialog/cancel.dialog",
-        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/sv-se/dialog/cancel.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/ca-es/dialog/cancel.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/da-dk/dialog/cancel.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/de-de/dialog/cancel.dialog",
+        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/el-gr/dialog/cancel.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/en-us/dialog/cancel.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/es-es/dialog/cancel.dialog",
+        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/es-lm/dialog/cancel.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/eu/dialog/cancel.dialog",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/fa-ir/dialog/cancel.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/fr-fr/dialog/cancel.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/gl-es/dialog/cancel.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/it-it/dialog/cancel.dialog",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/nl-nl/dialog/cancel.dialog",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/pt-br/dialog/cancel.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/pt-pt/dialog/cancel.dialog",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/sv-se/dialog/cancel.dialog"
       }
     },
     "cancel_fail.dialog": {
@@ -2279,7 +2279,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/ca-es/dialog/cancel_fail.dialog"
+          "file_path": "locale/ca-es/dialog/cancel_fail.dialog"
         },
         "da-DK": {
           "entries": [
@@ -2298,7 +2298,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/da-dk/dialog/cancel_fail.dialog"
+          "file_path": "locale/da-dk/dialog/cancel_fail.dialog"
         },
         "de-DE": {
           "entries": [
@@ -2317,7 +2317,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/de-de/dialog/cancel_fail.dialog"
+          "file_path": "locale/de-de/dialog/cancel_fail.dialog"
         },
         "el-GR": {
           "entries": [
@@ -2336,7 +2336,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/el-gr/dialog/cancel_fail.dialog"
+          "file_path": "locale/el-gr/dialog/cancel_fail.dialog"
         },
         "en-US": {
           "entries": [
@@ -2355,7 +2355,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/en-us/dialog/cancel_fail.dialog"
+          "file_path": "locale/en-us/dialog/cancel_fail.dialog"
         },
         "es-ES": {
           "entries": [
@@ -2374,7 +2374,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/es-es/dialog/cancel_fail.dialog"
+          "file_path": "locale/es-es/dialog/cancel_fail.dialog"
         },
         "es-LM": {
           "entries": [
@@ -2393,7 +2393,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/es-lm/dialog/cancel_fail.dialog"
+          "file_path": "locale/es-lm/dialog/cancel_fail.dialog"
         },
         "eu": {
           "entries": [
@@ -2412,7 +2412,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/eu/dialog/cancel_fail.dialog"
+          "file_path": "locale/eu/dialog/cancel_fail.dialog"
         },
         "fa-IR": {
           "entries": [
@@ -2431,7 +2431,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/fa-ir/dialog/cancel_fail.dialog"
+          "file_path": "locale/fa-ir/dialog/cancel_fail.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -2450,7 +2450,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/fr-fr/dialog/cancel_fail.dialog"
+          "file_path": "locale/fr-fr/dialog/cancel_fail.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -2469,7 +2469,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/gl-es/dialog/cancel_fail.dialog"
+          "file_path": "locale/gl-es/dialog/cancel_fail.dialog"
         },
         "it-IT": {
           "entries": [
@@ -2488,7 +2488,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/it-it/dialog/cancel_fail.dialog"
+          "file_path": "locale/it-it/dialog/cancel_fail.dialog"
         },
         "nl-NL": {
           "entries": [
@@ -2507,7 +2507,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/nl-nl/dialog/cancel_fail.dialog"
+          "file_path": "locale/nl-nl/dialog/cancel_fail.dialog"
         },
         "pt-BR": {
           "entries": [
@@ -2526,7 +2526,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/pt-br/dialog/cancel_fail.dialog"
+          "file_path": "locale/pt-br/dialog/cancel_fail.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -2545,7 +2545,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/pt-pt/dialog/cancel_fail.dialog"
+          "file_path": "locale/pt-pt/dialog/cancel_fail.dialog"
         },
         "sv-SE": {
           "entries": [
@@ -2564,7 +2564,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/sv-se/dialog/cancel_fail.dialog"
+          "file_path": "locale/sv-se/dialog/cancel_fail.dialog"
         }
       },
       "context": {
@@ -2578,7 +2578,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-laugh/locale/en-us/dialog/cancel.dialog"
+          "locale/en-us/dialog/cancel.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -2590,22 +2590,22 @@
         "handler_source": "@intent_handler(IntentBuilder(\"StopLaughing\").require(\"Stop\").require(\"Laugh\"))\ndef halt_laughing(self, message: Message) -> None:\n    \"\"\"Stop the random laughing.\"\"\"\n    self.log.info(\"Laughing skill: Stopping\")\n    # if in random laugh mode, cancel the scheduled event\n    if self.random_laugh and not self.special_day():\n        self.log.info(\"Laughing skill: Stopping random laugh event\")\n        self.random_laugh = False\n        self.cancel_scheduled_event(\"random_laugh\")\n        self.speak_dialog(\"cancel\")\n        # if haunted == True it will be back on reboot ;)\n    else:\n        self.speak_dialog(\"cancel_fail\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/ca-es/dialog/cancel_fail.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/da-dk/dialog/cancel_fail.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/de-de/dialog/cancel_fail.dialog",
-        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/el-gr/dialog/cancel_fail.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/en-us/dialog/cancel_fail.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/es-es/dialog/cancel_fail.dialog",
-        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/es-lm/dialog/cancel_fail.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/eu/dialog/cancel_fail.dialog",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/fa-ir/dialog/cancel_fail.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/fr-fr/dialog/cancel_fail.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/gl-es/dialog/cancel_fail.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/it-it/dialog/cancel_fail.dialog",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/nl-nl/dialog/cancel_fail.dialog",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/pt-br/dialog/cancel_fail.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/pt-pt/dialog/cancel_fail.dialog",
-        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/sv-se/dialog/cancel_fail.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/ca-es/dialog/cancel_fail.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/da-dk/dialog/cancel_fail.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/de-de/dialog/cancel_fail.dialog",
+        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/el-gr/dialog/cancel_fail.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/en-us/dialog/cancel_fail.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/es-es/dialog/cancel_fail.dialog",
+        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/es-lm/dialog/cancel_fail.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/eu/dialog/cancel_fail.dialog",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/fa-ir/dialog/cancel_fail.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/fr-fr/dialog/cancel_fail.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/gl-es/dialog/cancel_fail.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/it-it/dialog/cancel_fail.dialog",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/nl-nl/dialog/cancel_fail.dialog",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/pt-br/dialog/cancel_fail.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/pt-pt/dialog/cancel_fail.dialog",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/sv-se/dialog/cancel_fail.dialog"
       }
     },
     "haunted.intent": {
@@ -2658,7 +2658,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/ca-es/vocab/haunted.intent"
+          "file_path": "locale/ca-es/vocab/haunted.intent"
         },
         "da-DK": {
           "entries": [
@@ -2685,7 +2685,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/da-dk/vocab/haunted.intent"
+          "file_path": "locale/da-dk/vocab/haunted.intent"
         },
         "de-DE": {
           "entries": [
@@ -2712,7 +2712,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/de-de/vocab/haunted.intent"
+          "file_path": "locale/de-de/vocab/haunted.intent"
         },
         "en-US": {
           "entries": [
@@ -2739,7 +2739,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/en-us/vocab/haunted.intent"
+          "file_path": "locale/en-us/vocab/haunted.intent"
         },
         "es-ES": {
           "entries": [
@@ -2782,7 +2782,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/es-es/vocab/haunted.intent"
+          "file_path": "locale/es-es/vocab/haunted.intent"
         },
         "eu": {
           "entries": [
@@ -2805,7 +2805,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/eu/vocab/haunted.intent"
+          "file_path": "locale/eu/vocab/haunted.intent"
         },
         "fr-FR": {
           "entries": [
@@ -2828,7 +2828,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/fr-fr/vocab/haunted.intent"
+          "file_path": "locale/fr-fr/vocab/haunted.intent"
         },
         "gl-ES": {
           "entries": [
@@ -2851,7 +2851,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/gl-es/vocab/haunted.intent"
+          "file_path": "locale/gl-es/vocab/haunted.intent"
         },
         "it-IT": {
           "entries": [
@@ -2882,7 +2882,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/it-it/vocab/haunted.intent"
+          "file_path": "locale/it-it/vocab/haunted.intent"
         },
         "pt-PT": {
           "entries": [
@@ -2909,7 +2909,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/pt-pt/vocab/haunted.intent"
+          "file_path": "locale/pt-pt/vocab/haunted.intent"
         }
       },
       "context": {
@@ -2926,8 +2926,8 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-laugh/locale/en-us/dialog/yes.dialog",
-          "ovos-skill-laugh/locale/en-us/dialog/maybe.dialog"
+          "locale/en-us/dialog/yes.dialog",
+          "locale/en-us/dialog/maybe.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -2940,16 +2940,16 @@
         "handler_source": "@intent_handler(\"haunted.intent\")\ndef handle_haunted_intent(self, message: Message) -> None:\n    \"\"\"Handle the haunted intent.\"\"\"\n    if self.haunted:\n        self.speak_dialog(\"yes\")\n    else:\n        self.speak_dialog(\"maybe\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/ca-es/vocab/haunted.intent",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/da-dk/vocab/haunted.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/de-de/vocab/haunted.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/en-us/vocab/haunted.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/es-es/vocab/haunted.intent",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/eu/vocab/haunted.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/fr-fr/vocab/haunted.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/gl-es/vocab/haunted.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/it-it/vocab/haunted.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/pt-pt/vocab/haunted.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/ca-es/vocab/haunted.intent",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/da-dk/vocab/haunted.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/de-de/vocab/haunted.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/en-us/vocab/haunted.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/es-es/vocab/haunted.intent",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/eu/vocab/haunted.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/fr-fr/vocab/haunted.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/gl-es/vocab/haunted.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/it-it/vocab/haunted.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/pt-pt/vocab/haunted.intent"
       }
     },
     "maybe.dialog": {
@@ -2978,7 +2978,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/ca-es/dialog/maybe.dialog"
+          "file_path": "locale/ca-es/dialog/maybe.dialog"
         },
         "da-DK": {
           "entries": [
@@ -2998,7 +2998,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/da-dk/dialog/maybe.dialog"
+          "file_path": "locale/da-dk/dialog/maybe.dialog"
         },
         "de-DE": {
           "entries": [
@@ -3018,7 +3018,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/de-de/dialog/maybe.dialog"
+          "file_path": "locale/de-de/dialog/maybe.dialog"
         },
         "en-US": {
           "entries": [
@@ -3038,7 +3038,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/en-us/dialog/maybe.dialog"
+          "file_path": "locale/en-us/dialog/maybe.dialog"
         },
         "es-ES": {
           "entries": [
@@ -3058,7 +3058,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/es-es/dialog/maybe.dialog"
+          "file_path": "locale/es-es/dialog/maybe.dialog"
         },
         "eu": {
           "entries": [
@@ -3078,7 +3078,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/eu/dialog/maybe.dialog"
+          "file_path": "locale/eu/dialog/maybe.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -3098,7 +3098,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/fr-fr/dialog/maybe.dialog"
+          "file_path": "locale/fr-fr/dialog/maybe.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -3118,7 +3118,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/gl-es/dialog/maybe.dialog"
+          "file_path": "locale/gl-es/dialog/maybe.dialog"
         },
         "it-IT": {
           "entries": [
@@ -3146,7 +3146,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/it-it/dialog/maybe.dialog"
+          "file_path": "locale/it-it/dialog/maybe.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -3166,7 +3166,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/pt-pt/dialog/maybe.dialog"
+          "file_path": "locale/pt-pt/dialog/maybe.dialog"
         }
       },
       "context": {
@@ -3180,7 +3180,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-laugh/locale/en-us/dialog/yes.dialog"
+          "locale/en-us/dialog/yes.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -3192,16 +3192,16 @@
         "handler_source": "@intent_handler(\"haunted.intent\")\ndef handle_haunted_intent(self, message: Message) -> None:\n    \"\"\"Handle the haunted intent.\"\"\"\n    if self.haunted:\n        self.speak_dialog(\"yes\")\n    else:\n        self.speak_dialog(\"maybe\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/ca-es/dialog/maybe.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/da-dk/dialog/maybe.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/de-de/dialog/maybe.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/en-us/dialog/maybe.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/es-es/dialog/maybe.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/eu/dialog/maybe.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/fr-fr/dialog/maybe.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/gl-es/dialog/maybe.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/it-it/dialog/maybe.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/pt-pt/dialog/maybe.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/ca-es/dialog/maybe.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/da-dk/dialog/maybe.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/de-de/dialog/maybe.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/en-us/dialog/maybe.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/es-es/dialog/maybe.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/eu/dialog/maybe.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/fr-fr/dialog/maybe.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/gl-es/dialog/maybe.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/it-it/dialog/maybe.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/pt-pt/dialog/maybe.dialog"
       }
     },
     "skill.json": {
@@ -3274,7 +3274,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-laugh/locale/ca-es/skill.json"
+          "file_path": "locale/ca-es/skill.json"
         }
       },
       "context": {
@@ -3294,7 +3294,7 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/ca-es/skill.json"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/ca-es/skill.json"
       }
     },
     "yes.dialog": {
@@ -3318,7 +3318,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/ca-es/dialog/yes.dialog"
+          "file_path": "locale/ca-es/dialog/yes.dialog"
         },
         "da-DK": {
           "entries": [
@@ -3337,7 +3337,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/da-dk/dialog/yes.dialog"
+          "file_path": "locale/da-dk/dialog/yes.dialog"
         },
         "de-DE": {
           "entries": [
@@ -3356,7 +3356,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/de-de/dialog/yes.dialog"
+          "file_path": "locale/de-de/dialog/yes.dialog"
         },
         "en-US": {
           "entries": [
@@ -3375,7 +3375,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/en-us/dialog/yes.dialog"
+          "file_path": "locale/en-us/dialog/yes.dialog"
         },
         "es-ES": {
           "entries": [
@@ -3394,7 +3394,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/es-es/dialog/yes.dialog"
+          "file_path": "locale/es-es/dialog/yes.dialog"
         },
         "eu": {
           "entries": [
@@ -3413,7 +3413,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/eu/dialog/yes.dialog"
+          "file_path": "locale/eu/dialog/yes.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -3432,7 +3432,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/fr-fr/dialog/yes.dialog"
+          "file_path": "locale/fr-fr/dialog/yes.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -3451,7 +3451,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/gl-es/dialog/yes.dialog"
+          "file_path": "locale/gl-es/dialog/yes.dialog"
         },
         "it-IT": {
           "entries": [
@@ -3470,7 +3470,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/it-it/dialog/yes.dialog"
+          "file_path": "locale/it-it/dialog/yes.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -3489,7 +3489,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-laugh/locale/pt-pt/dialog/yes.dialog"
+          "file_path": "locale/pt-pt/dialog/yes.dialog"
         }
       },
       "context": {
@@ -3503,7 +3503,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-laugh/locale/en-us/dialog/maybe.dialog"
+          "locale/en-us/dialog/maybe.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -3515,16 +3515,16 @@
         "handler_source": "@intent_handler(\"haunted.intent\")\ndef handle_haunted_intent(self, message: Message) -> None:\n    \"\"\"Handle the haunted intent.\"\"\"\n    if self.haunted:\n        self.speak_dialog(\"yes\")\n    else:\n        self.speak_dialog(\"maybe\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/ca-es/dialog/yes.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/da-dk/dialog/yes.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/de-de/dialog/yes.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/en-us/dialog/yes.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/es-es/dialog/yes.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/eu/dialog/yes.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/fr-fr/dialog/yes.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/gl-es/dialog/yes.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/it-it/dialog/yes.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/ovos-skill-laugh/locale/pt-pt/dialog/yes.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/ca-es/dialog/yes.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/da-dk/dialog/yes.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/de-de/dialog/yes.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/en-us/dialog/yes.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/es-es/dialog/yes.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/eu/dialog/yes.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/fr-fr/dialog/yes.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/gl-es/dialog/yes.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/it-it/dialog/yes.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-laugh/edit/dev/locale/pt-pt/dialog/yes.dialog"
       }
     }
   }

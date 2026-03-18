@@ -36,7 +36,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/ca/camera_error.dialog"
+          "file_path": "locale/ca/camera_error.dialog"
         },
         "da": {
           "entries": [
@@ -55,7 +55,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/da/camera_error.dialog"
+          "file_path": "locale/da/camera_error.dialog"
         },
         "de-DE": {
           "entries": [
@@ -74,7 +74,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/de-de/camera_error.dialog"
+          "file_path": "locale/de-de/camera_error.dialog"
         },
         "en-US": {
           "entries": [
@@ -93,7 +93,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/en-us/camera_error.dialog"
+          "file_path": "locale/en-us/camera_error.dialog"
         },
         "es-ES": {
           "entries": [
@@ -112,7 +112,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/es-es/camera_error.dialog"
+          "file_path": "locale/es-es/camera_error.dialog"
         },
         "fa-IR": {
           "entries": [
@@ -131,7 +131,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/fa-ir/camera_error.dialog"
+          "file_path": "locale/fa-ir/camera_error.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -150,7 +150,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/fr-fr/camera_error.dialog"
+          "file_path": "locale/fr-fr/camera_error.dialog"
         },
         "gl": {
           "entries": [
@@ -169,7 +169,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/gl/camera_error.dialog"
+          "file_path": "locale/gl/camera_error.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -188,7 +188,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/pt-pt/camera_error.dialog"
+          "file_path": "locale/pt-pt/camera_error.dialog"
         }
       },
       "context": {
@@ -202,7 +202,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-camera/locale/en-us/camera_yes.dialog"
+          "locale/en-us/camera_yes.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -214,15 +214,15 @@
         "handler_source": "@intent_handler(\"have_camera.intent\")\ndef handle_camera_check(self, message):\n    if self.sess_has_camera(message):\n        self.speak_dialog(\"camera_yes\")\n    else:\n        self.speak_dialog(\"camera_error\")"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/ca/camera_error.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/da/camera_error.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/de-de/camera_error.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/en-us/camera_error.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/es-es/camera_error.dialog",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/fa-ir/camera_error.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/fr-fr/camera_error.dialog",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/gl/camera_error.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/pt-pt/camera_error.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/ca/camera_error.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/da/camera_error.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/de-de/camera_error.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/en-us/camera_error.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/es-es/camera_error.dialog",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/fa-ir/camera_error.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/fr-fr/camera_error.dialog",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/gl/camera_error.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/pt-pt/camera_error.dialog"
       }
     },
     "camera_yes.dialog": {
@@ -247,7 +247,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/ca/camera_yes.dialog"
+          "file_path": "locale/ca/camera_yes.dialog"
         },
         "da": {
           "entries": [
@@ -267,7 +267,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/da/camera_yes.dialog"
+          "file_path": "locale/da/camera_yes.dialog"
         },
         "de-DE": {
           "entries": [
@@ -287,7 +287,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/de-de/camera_yes.dialog"
+          "file_path": "locale/de-de/camera_yes.dialog"
         },
         "en-US": {
           "entries": [
@@ -307,7 +307,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/en-us/camera_yes.dialog"
+          "file_path": "locale/en-us/camera_yes.dialog"
         },
         "es-ES": {
           "entries": [
@@ -327,7 +327,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/es-es/camera_yes.dialog"
+          "file_path": "locale/es-es/camera_yes.dialog"
         },
         "fa-IR": {
           "entries": [
@@ -347,7 +347,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/fa-ir/camera_yes.dialog"
+          "file_path": "locale/fa-ir/camera_yes.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -367,7 +367,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/fr-fr/camera_yes.dialog"
+          "file_path": "locale/fr-fr/camera_yes.dialog"
         },
         "gl": {
           "entries": [
@@ -387,7 +387,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/gl/camera_yes.dialog"
+          "file_path": "locale/gl/camera_yes.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -407,7 +407,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/pt-pt/camera_yes.dialog"
+          "file_path": "locale/pt-pt/camera_yes.dialog"
         }
       },
       "context": {
@@ -421,7 +421,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-camera/locale/en-us/camera_error.dialog"
+          "locale/en-us/camera_error.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -433,15 +433,15 @@
         "handler_source": "@intent_handler(\"have_camera.intent\")\ndef handle_camera_check(self, message):\n    if self.sess_has_camera(message):\n        self.speak_dialog(\"camera_yes\")\n    else:\n        self.speak_dialog(\"camera_error\")"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/ca/camera_yes.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/da/camera_yes.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/de-de/camera_yes.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/en-us/camera_yes.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/es-es/camera_yes.dialog",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/fa-ir/camera_yes.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/fr-fr/camera_yes.dialog",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/gl/camera_yes.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/pt-pt/camera_yes.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/ca/camera_yes.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/da/camera_yes.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/de-de/camera_yes.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/en-us/camera_yes.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/es-es/camera_yes.dialog",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/fa-ir/camera_yes.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/fr-fr/camera_yes.dialog",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/gl/camera_yes.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/pt-pt/camera_yes.dialog"
       }
     },
     "get_ready.dialog": {
@@ -465,7 +465,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/ca/get_ready.dialog"
+          "file_path": "locale/ca/get_ready.dialog"
         },
         "da": {
           "entries": [
@@ -484,7 +484,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/da/get_ready.dialog"
+          "file_path": "locale/da/get_ready.dialog"
         },
         "de-DE": {
           "entries": [
@@ -503,7 +503,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/de-de/get_ready.dialog"
+          "file_path": "locale/de-de/get_ready.dialog"
         },
         "en-US": {
           "entries": [
@@ -522,7 +522,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/en-us/get_ready.dialog"
+          "file_path": "locale/en-us/get_ready.dialog"
         },
         "es-ES": {
           "entries": [
@@ -541,7 +541,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/es-es/get_ready.dialog"
+          "file_path": "locale/es-es/get_ready.dialog"
         },
         "fa-IR": {
           "entries": [
@@ -560,7 +560,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/fa-ir/get_ready.dialog"
+          "file_path": "locale/fa-ir/get_ready.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -579,7 +579,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/fr-fr/get_ready.dialog"
+          "file_path": "locale/fr-fr/get_ready.dialog"
         },
         "gl": {
           "entries": [
@@ -598,7 +598,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/gl/get_ready.dialog"
+          "file_path": "locale/gl/get_ready.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -617,7 +617,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/pt-pt/get_ready.dialog"
+          "file_path": "locale/pt-pt/get_ready.dialog"
         }
       },
       "context": {
@@ -631,8 +631,8 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-camera/locale/en-us/picture.dialog",
-          "ovos-skill-camera/locale/en-us/camera_error.dialog"
+          "locale/en-us/camera_error.dialog",
+          "locale/en-us/picture.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -644,15 +644,15 @@
         "handler_source": "@intent_handler(\"take_picture.intent\")\ndef handle_take_picture(self, message):\n    if not self.sess_has_camera(message):\n        self.speak_dialog(\"camera_error\")\n        return\n\n    self.speak_dialog(\"get_ready\", wait=True)\n\n    if self.settings.get(\"countdown\"):\n        # need time to Allow sensor to stabilize\n        self.gui.show_text(\"3\")\n        self.speak(\"3\", wait=True)\n        self.gui.show_text(\"2\")\n        self.speak(\"2\", wait=True)\n        self.gui.show_text(\"1\")\n        self.speak(\"1\", wait=True)\n\n    pic_path = join(self.pictures_folder, time.strftime(\"%Y-%m-%d_%H-%M-%S\") + \".jpg\")\n    self.bus.emit(message.forward(\"ovos.phal.camera.get\", {\"path\": pic_path}))\n\n    self.play_camera_sound()\n\n    self.gui.clear()\n    self.gui.show_image(os.path.expanduser(pic_path))\n    if random.choice([True, False]):\n        self.speak_dialog(\"picture\")"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/ca/get_ready.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/da/get_ready.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/de-de/get_ready.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/en-us/get_ready.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/es-es/get_ready.dialog",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/fa-ir/get_ready.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/fr-fr/get_ready.dialog",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/gl/get_ready.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/pt-pt/get_ready.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/ca/get_ready.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/da/get_ready.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/de-de/get_ready.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/en-us/get_ready.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/es-es/get_ready.dialog",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/fa-ir/get_ready.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/fr-fr/get_ready.dialog",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/gl/get_ready.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/pt-pt/get_ready.dialog"
       }
     },
     "have_camera.intent": {
@@ -696,7 +696,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/ca/have_camera.intent"
+          "file_path": "locale/ca/have_camera.intent"
         },
         "da": {
           "entries": [
@@ -735,7 +735,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/da/have_camera.intent"
+          "file_path": "locale/da/have_camera.intent"
         },
         "de-DE": {
           "entries": [
@@ -774,7 +774,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/de-de/have_camera.intent"
+          "file_path": "locale/de-de/have_camera.intent"
         },
         "en-US": {
           "entries": [
@@ -813,7 +813,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/en-us/have_camera.intent"
+          "file_path": "locale/en-us/have_camera.intent"
         },
         "es-ES": {
           "entries": [
@@ -852,7 +852,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/es-es/have_camera.intent"
+          "file_path": "locale/es-es/have_camera.intent"
         },
         "fa-IR": {
           "entries": [
@@ -891,7 +891,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/fa-ir/have_camera.intent"
+          "file_path": "locale/fa-ir/have_camera.intent"
         },
         "fr-FR": {
           "entries": [
@@ -930,7 +930,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/fr-fr/have_camera.intent"
+          "file_path": "locale/fr-fr/have_camera.intent"
         },
         "gl": {
           "entries": [
@@ -969,7 +969,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/gl/have_camera.intent"
+          "file_path": "locale/gl/have_camera.intent"
         },
         "pt-PT": {
           "entries": [
@@ -1008,7 +1008,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/pt-pt/have_camera.intent"
+          "file_path": "locale/pt-pt/have_camera.intent"
         }
       },
       "context": {
@@ -1025,8 +1025,8 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-camera/locale/en-us/camera_error.dialog",
-          "ovos-skill-camera/locale/en-us/camera_yes.dialog"
+          "locale/en-us/camera_error.dialog",
+          "locale/en-us/camera_yes.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1039,15 +1039,15 @@
         "handler_source": "@intent_handler(\"have_camera.intent\")\ndef handle_camera_check(self, message):\n    if self.sess_has_camera(message):\n        self.speak_dialog(\"camera_yes\")\n    else:\n        self.speak_dialog(\"camera_error\")"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/ca/have_camera.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/da/have_camera.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/de-de/have_camera.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/en-us/have_camera.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/es-es/have_camera.intent",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/fa-ir/have_camera.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/fr-fr/have_camera.intent",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/gl/have_camera.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/pt-pt/have_camera.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/ca/have_camera.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/da/have_camera.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/de-de/have_camera.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/en-us/have_camera.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/es-es/have_camera.intent",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/fa-ir/have_camera.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/fr-fr/have_camera.intent",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/gl/have_camera.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/pt-pt/have_camera.intent"
       }
     },
     "picture.dialog": {
@@ -1068,7 +1068,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/ca/picture.dialog"
+          "file_path": "locale/ca/picture.dialog"
         },
         "da": {
           "entries": [
@@ -1084,7 +1084,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/da/picture.dialog"
+          "file_path": "locale/da/picture.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1100,7 +1100,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/de-de/picture.dialog"
+          "file_path": "locale/de-de/picture.dialog"
         },
         "en-US": {
           "entries": [
@@ -1116,7 +1116,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/en-us/picture.dialog"
+          "file_path": "locale/en-us/picture.dialog"
         },
         "es-ES": {
           "entries": [
@@ -1132,7 +1132,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/es-es/picture.dialog"
+          "file_path": "locale/es-es/picture.dialog"
         },
         "fa-IR": {
           "entries": [
@@ -1148,7 +1148,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/fa-ir/picture.dialog"
+          "file_path": "locale/fa-ir/picture.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1164,7 +1164,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/fr-fr/picture.dialog"
+          "file_path": "locale/fr-fr/picture.dialog"
         },
         "gl": {
           "entries": [
@@ -1180,7 +1180,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/gl/picture.dialog"
+          "file_path": "locale/gl/picture.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -1196,7 +1196,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/pt-pt/picture.dialog"
+          "file_path": "locale/pt-pt/picture.dialog"
         }
       },
       "context": {
@@ -1210,8 +1210,8 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-camera/locale/en-us/get_ready.dialog",
-          "ovos-skill-camera/locale/en-us/camera_error.dialog"
+          "locale/en-us/camera_error.dialog",
+          "locale/en-us/get_ready.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1223,15 +1223,15 @@
         "handler_source": "@intent_handler(\"take_picture.intent\")\ndef handle_take_picture(self, message):\n    if not self.sess_has_camera(message):\n        self.speak_dialog(\"camera_error\")\n        return\n\n    self.speak_dialog(\"get_ready\", wait=True)\n\n    if self.settings.get(\"countdown\"):\n        # need time to Allow sensor to stabilize\n        self.gui.show_text(\"3\")\n        self.speak(\"3\", wait=True)\n        self.gui.show_text(\"2\")\n        self.speak(\"2\", wait=True)\n        self.gui.show_text(\"1\")\n        self.speak(\"1\", wait=True)\n\n    pic_path = join(self.pictures_folder, time.strftime(\"%Y-%m-%d_%H-%M-%S\") + \".jpg\")\n    self.bus.emit(message.forward(\"ovos.phal.camera.get\", {\"path\": pic_path}))\n\n    self.play_camera_sound()\n\n    self.gui.clear()\n    self.gui.show_image(os.path.expanduser(pic_path))\n    if random.choice([True, False]):\n        self.speak_dialog(\"picture\")"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/ca/picture.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/da/picture.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/de-de/picture.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/en-us/picture.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/es-es/picture.dialog",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/fa-ir/picture.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/fr-fr/picture.dialog",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/gl/picture.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/pt-pt/picture.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/ca/picture.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/da/picture.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/de-de/picture.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/en-us/picture.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/es-es/picture.dialog",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/fa-ir/picture.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/fr-fr/picture.dialog",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/gl/picture.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/pt-pt/picture.dialog"
       }
     },
     "take_picture.intent": {
@@ -1259,7 +1259,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/ca/take_picture.intent"
+          "file_path": "locale/ca/take_picture.intent"
         },
         "da": {
           "entries": [
@@ -1282,7 +1282,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/da/take_picture.intent"
+          "file_path": "locale/da/take_picture.intent"
         },
         "de-DE": {
           "entries": [
@@ -1305,7 +1305,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/de-de/take_picture.intent"
+          "file_path": "locale/de-de/take_picture.intent"
         },
         "en-US": {
           "entries": [
@@ -1328,7 +1328,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/en-us/take_picture.intent"
+          "file_path": "locale/en-us/take_picture.intent"
         },
         "es-ES": {
           "entries": [
@@ -1351,7 +1351,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/es-es/take_picture.intent"
+          "file_path": "locale/es-es/take_picture.intent"
         },
         "fa-IR": {
           "entries": [
@@ -1374,7 +1374,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/fa-ir/take_picture.intent"
+          "file_path": "locale/fa-ir/take_picture.intent"
         },
         "fr-FR": {
           "entries": [
@@ -1397,7 +1397,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/fr-fr/take_picture.intent"
+          "file_path": "locale/fr-fr/take_picture.intent"
         },
         "gl": {
           "entries": [
@@ -1413,7 +1413,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-camera/locale/gl/take_picture.intent"
+          "file_path": "locale/gl/take_picture.intent"
         },
         "pt-PT": {
           "entries": [
@@ -1436,7 +1436,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-camera/locale/pt-pt/take_picture.intent"
+          "file_path": "locale/pt-pt/take_picture.intent"
         }
       },
       "context": {
@@ -1454,9 +1454,9 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-camera/locale/en-us/picture.dialog",
-          "ovos-skill-camera/locale/en-us/get_ready.dialog",
-          "ovos-skill-camera/locale/en-us/camera_error.dialog"
+          "locale/en-us/camera_error.dialog",
+          "locale/en-us/get_ready.dialog",
+          "locale/en-us/picture.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1469,15 +1469,15 @@
         "handler_source": "@intent_handler(\"take_picture.intent\")\ndef handle_take_picture(self, message):\n    if not self.sess_has_camera(message):\n        self.speak_dialog(\"camera_error\")\n        return\n\n    self.speak_dialog(\"get_ready\", wait=True)\n\n    if self.settings.get(\"countdown\"):\n        # need time to Allow sensor to stabilize\n        self.gui.show_text(\"3\")\n        self.speak(\"3\", wait=True)\n        self.gui.show_text(\"2\")\n        self.speak(\"2\", wait=True)\n        self.gui.show_text(\"1\")\n        self.speak(\"1\", wait=True)\n\n    pic_path = join(self.pictures_folder, time.strftime(\"%Y-%m-%d_%H-%M-%S\") + \".jpg\")\n    self.bus.emit(message.forward(\"ovos.phal.camera.get\", {\"path\": pic_path}))\n\n    self.play_camera_sound()\n\n    self.gui.clear()\n    self.gui.show_image(os.path.expanduser(pic_path))\n    if random.choice([True, False]):\n        self.speak_dialog(\"picture\")"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/ca/take_picture.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/da/take_picture.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/de-de/take_picture.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/en-us/take_picture.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/es-es/take_picture.intent",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/fa-ir/take_picture.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/fr-fr/take_picture.intent",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/gl/take_picture.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/ovos-skill-camera/locale/pt-pt/take_picture.intent"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/ca/take_picture.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/da/take_picture.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/de-de/take_picture.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/en-us/take_picture.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/es-es/take_picture.intent",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/fa-ir/take_picture.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/fr-fr/take_picture.intent",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/gl/take_picture.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-camera/edit/dev/locale/pt-pt/take_picture.intent"
       }
     }
   }

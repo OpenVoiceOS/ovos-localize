@@ -126,7 +126,7 @@
             "word"
           ],
           "validation": [],
-          "file_path": "ovos-skill-spelling/locale/ca-es/Spell.intent"
+          "file_path": "locale/ca-es/Spell.intent"
         },
         "en-US": {
           "entries": [
@@ -212,7 +212,7 @@
             "word"
           ],
           "validation": [],
-          "file_path": "ovos-skill-spelling/locale/en-us/Spell.intent"
+          "file_path": "locale/en-us/Spell.intent"
         },
         "es-ES": {
           "entries": [
@@ -298,7 +298,7 @@
             "word"
           ],
           "validation": [],
-          "file_path": "ovos-skill-spelling/locale/es-es/Spell.intent"
+          "file_path": "locale/es-es/Spell.intent"
         },
         "eu-EU": {
           "entries": [
@@ -376,7 +376,7 @@
             "word"
           ],
           "validation": [],
-          "file_path": "ovos-skill-spelling/locale/eu-eu/Spell.intent"
+          "file_path": "locale/eu-eu/Spell.intent"
         },
         "gl-ES": {
           "entries": [
@@ -462,7 +462,7 @@
             "word"
           ],
           "validation": [],
-          "file_path": "ovos-skill-spelling/locale/gl-es/Spell.intent"
+          "file_path": "locale/gl-es/Spell.intent"
         },
         "pt-PT": {
           "entries": [
@@ -536,7 +536,7 @@
             "word"
           ],
           "validation": [],
-          "file_path": "ovos-skill-spelling/locale/pt-pt/Spell.intent"
+          "file_path": "locale/pt-pt/Spell.intent"
         }
       },
       "context": {
@@ -563,12 +563,12 @@
         "handler_source": "@intent_handler(\"Spell.intent\")\ndef handle_spell(self, message):\n    word = message.data.get(\"word\")\n    spelled_word = '; '.join(word).upper()\n\n    # Pause mouth shapes appearing on screen for at least enough time\n    # for the word to scroll by on the Mark 1 screen.  Pad with blanks\n    # to prevent re-starting the scroll action if the timing is slightly\n    # off.\n    self.enclosure.deactivate_mouth_events()\n    self.enclosure.mouth_text(word + \"          \")\n\n    self.speak(spelled_word, wait=True)\n\n    # allow mouth movements again\n    self.enclosure.activate_mouth_events()\n    self.enclosure.mouth_reset()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/ca-es/Spell.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/en-us/Spell.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/es-es/Spell.intent",
-        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/eu-eu/Spell.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/gl-es/Spell.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/pt-pt/Spell.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/locale/ca-es/Spell.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/locale/en-us/Spell.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/locale/es-es/Spell.intent",
+        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/locale/eu-eu/Spell.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/locale/gl-es/Spell.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/locale/pt-pt/Spell.intent"
       }
     },
     "skill.json": {
@@ -615,7 +615,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-spelling/locale/ca-es/skill.json"
+          "file_path": "locale/ca-es/skill.json"
         },
         "da-DK": {
           "entries": [
@@ -657,7 +657,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-spelling/locale/da-dk/skill.json"
+          "file_path": "locale/da-dk/skill.json"
         },
         "de-DE": {
           "entries": [
@@ -699,7 +699,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-spelling/locale/de-de/skill.json"
+          "file_path": "locale/de-de/skill.json"
         },
         "en-US": {
           "entries": [
@@ -741,7 +741,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-spelling/locale/en-us/skill.json"
+          "file_path": "locale/en-us/skill.json"
         },
         "gl-ES": {
           "entries": [
@@ -783,7 +783,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-spelling/locale/gl-es/skill.json"
+          "file_path": "locale/gl-es/skill.json"
         }
       },
       "context": {
@@ -803,11 +803,11 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/ca-es/skill.json",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/da-dk/skill.json",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/de-de/skill.json",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/en-us/skill.json",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/gl-es/skill.json"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/locale/ca-es/skill.json",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/locale/da-dk/skill.json",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/locale/de-de/skill.json",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/locale/en-us/skill.json",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/locale/gl-es/skill.json"
       }
     }
   }

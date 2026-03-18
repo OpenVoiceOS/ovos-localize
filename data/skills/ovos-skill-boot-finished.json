@@ -68,7 +68,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/ca-es/intent/are_you_ready.intent"
+          "file_path": "locale/ca-es/intent/are_you_ready.intent"
         },
         "da-DK": {
           "entries": [
@@ -116,7 +116,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/da-dk/intent/are_you_ready.intent"
+          "file_path": "locale/da-dk/intent/are_you_ready.intent"
         },
         "de-DE": {
           "entries": [
@@ -164,7 +164,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/de-de/intent/are_you_ready.intent"
+          "file_path": "locale/de-de/intent/are_you_ready.intent"
         },
         "en-US": {
           "entries": [
@@ -212,7 +212,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/en-us/intent/are_you_ready.intent"
+          "file_path": "locale/en-us/intent/are_you_ready.intent"
         },
         "es-ES": {
           "entries": [
@@ -279,7 +279,7 @@
               "line_number": 9
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/es-es/intent/are_you_ready.intent"
+          "file_path": "locale/es-es/intent/are_you_ready.intent"
         },
         "gl-ES": {
           "entries": [
@@ -327,7 +327,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/gl-es/intent/are_you_ready.intent"
+          "file_path": "locale/gl-es/intent/are_you_ready.intent"
         },
         "nl-NL": {
           "entries": [
@@ -375,7 +375,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/nl-nl/intent/are_you_ready.intent"
+          "file_path": "locale/nl-nl/intent/are_you_ready.intent"
         },
         "pt-BR": {
           "entries": [
@@ -423,7 +423,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/pt-br/intent/are_you_ready.intent"
+          "file_path": "locale/pt-br/intent/are_you_ready.intent"
         }
       },
       "context": {
@@ -440,8 +440,8 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-boot-finished/locale/en-us/dialog/deny_ready.dialog",
-          "ovos-skill-boot-finished/locale/en-us/dialog/confirm_ready.dialog"
+          "locale/en-us/dialog/confirm_ready.dialog",
+          "locale/en-us/dialog/deny_ready.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -454,14 +454,14 @@
         "handler_source": "@intent_handler(\"are_you_ready.intent\")\ndef handle_are_you_ready(self, message: Message):\n    \"\"\"\n    Handle a user's inquiry about device readiness.\n    \"\"\"\n    if self.is_device_ready():\n        self.speak_dialog(\"confirm_ready\")\n    else:\n        self.speak_dialog(\"deny_ready\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/ca-es/intent/are_you_ready.intent",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/da-dk/intent/are_you_ready.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/de-de/intent/are_you_ready.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/en-us/intent/are_you_ready.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/es-es/intent/are_you_ready.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/gl-es/intent/are_you_ready.intent",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/nl-nl/intent/are_you_ready.intent",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/pt-br/intent/are_you_ready.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/ca-es/intent/are_you_ready.intent",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/da-dk/intent/are_you_ready.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/de-de/intent/are_you_ready.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/en-us/intent/are_you_ready.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/es-es/intent/are_you_ready.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/gl-es/intent/are_you_ready.intent",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/nl-nl/intent/are_you_ready.intent",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/pt-br/intent/are_you_ready.intent"
       }
     },
     "confirm_no_speak_ready.dialog": {
@@ -485,7 +485,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/ca-es/dialog/confirm_no_speak_ready.dialog"
+          "file_path": "locale/ca-es/dialog/confirm_no_speak_ready.dialog"
         },
         "da-DK": {
           "entries": [
@@ -504,7 +504,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/da-dk/dialog/confirm_no_speak_ready.dialog"
+          "file_path": "locale/da-dk/dialog/confirm_no_speak_ready.dialog"
         },
         "de-DE": {
           "entries": [
@@ -523,7 +523,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/de-de/dialog/confirm_no_speak_ready.dialog"
+          "file_path": "locale/de-de/dialog/confirm_no_speak_ready.dialog"
         },
         "en-US": {
           "entries": [
@@ -542,7 +542,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/en-us/dialog/confirm_no_speak_ready.dialog"
+          "file_path": "locale/en-us/dialog/confirm_no_speak_ready.dialog"
         },
         "es-ES": {
           "entries": [
@@ -561,7 +561,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/es-es/dialog/confirm_no_speak_ready.dialog"
+          "file_path": "locale/es-es/dialog/confirm_no_speak_ready.dialog"
         },
         "eu": {
           "entries": [
@@ -580,7 +580,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/eu/dialog/confirm_no_speak_ready.dialog"
+          "file_path": "locale/eu/dialog/confirm_no_speak_ready.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -599,7 +599,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/fr-fr/dialog/confirm_no_speak_ready.dialog"
+          "file_path": "locale/fr-fr/dialog/confirm_no_speak_ready.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -618,7 +618,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/gl-es/dialog/confirm_no_speak_ready.dialog"
+          "file_path": "locale/gl-es/dialog/confirm_no_speak_ready.dialog"
         },
         "it-IT": {
           "entries": [
@@ -637,7 +637,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/it-it/dialog/confirm_no_speak_ready.dialog"
+          "file_path": "locale/it-it/dialog/confirm_no_speak_ready.dialog"
         },
         "nl-NL": {
           "entries": [
@@ -656,7 +656,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/nl-nl/dialog/confirm_no_speak_ready.dialog"
+          "file_path": "locale/nl-nl/dialog/confirm_no_speak_ready.dialog"
         },
         "pt-BR": {
           "entries": [
@@ -675,7 +675,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/pt-br/dialog/confirm_no_speak_ready.dialog"
+          "file_path": "locale/pt-br/dialog/confirm_no_speak_ready.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -694,7 +694,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/pt-pt/dialog/confirm_no_speak_ready.dialog"
+          "file_path": "locale/pt-pt/dialog/confirm_no_speak_ready.dialog"
         }
       },
       "context": {
@@ -718,18 +718,18 @@
         "handler_source": "@intent_handler(\"disable_ready_notification.intent\")\ndef handle_disable_notification(self, message: Message):\n    \"\"\"\n    Handle a request to disable ready announcements\n    \"\"\"\n    self.settings[\"speak_ready\"] = False\n    self.speak_dialog(\"confirm_no_speak_ready\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/ca-es/dialog/confirm_no_speak_ready.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/da-dk/dialog/confirm_no_speak_ready.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/de-de/dialog/confirm_no_speak_ready.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/en-us/dialog/confirm_no_speak_ready.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/es-es/dialog/confirm_no_speak_ready.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/eu/dialog/confirm_no_speak_ready.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/fr-fr/dialog/confirm_no_speak_ready.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/gl-es/dialog/confirm_no_speak_ready.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/it-it/dialog/confirm_no_speak_ready.dialog",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/nl-nl/dialog/confirm_no_speak_ready.dialog",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/pt-br/dialog/confirm_no_speak_ready.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/pt-pt/dialog/confirm_no_speak_ready.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/ca-es/dialog/confirm_no_speak_ready.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/da-dk/dialog/confirm_no_speak_ready.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/de-de/dialog/confirm_no_speak_ready.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/en-us/dialog/confirm_no_speak_ready.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/es-es/dialog/confirm_no_speak_ready.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/eu/dialog/confirm_no_speak_ready.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/fr-fr/dialog/confirm_no_speak_ready.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/gl-es/dialog/confirm_no_speak_ready.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/it-it/dialog/confirm_no_speak_ready.dialog",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/nl-nl/dialog/confirm_no_speak_ready.dialog",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/pt-br/dialog/confirm_no_speak_ready.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/pt-pt/dialog/confirm_no_speak_ready.dialog"
       }
     },
     "confirm_ready.dialog": {
@@ -762,7 +762,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/ca-es/dialog/confirm_ready.dialog"
+          "file_path": "locale/ca-es/dialog/confirm_ready.dialog"
         },
         "da-DK": {
           "entries": [
@@ -790,7 +790,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/da-dk/dialog/confirm_ready.dialog"
+          "file_path": "locale/da-dk/dialog/confirm_ready.dialog"
         },
         "de-DE": {
           "entries": [
@@ -818,7 +818,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/de-de/dialog/confirm_ready.dialog"
+          "file_path": "locale/de-de/dialog/confirm_ready.dialog"
         },
         "en-US": {
           "entries": [
@@ -846,7 +846,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/en-us/dialog/confirm_ready.dialog"
+          "file_path": "locale/en-us/dialog/confirm_ready.dialog"
         },
         "es-ES": {
           "entries": [
@@ -874,7 +874,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/es-es/dialog/confirm_ready.dialog"
+          "file_path": "locale/es-es/dialog/confirm_ready.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -902,7 +902,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/gl-es/dialog/confirm_ready.dialog"
+          "file_path": "locale/gl-es/dialog/confirm_ready.dialog"
         },
         "it-IT": {
           "entries": [
@@ -930,7 +930,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/it-it/dialog/confirm_ready.dialog"
+          "file_path": "locale/it-it/dialog/confirm_ready.dialog"
         },
         "nl-NL": {
           "entries": [
@@ -958,7 +958,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/nl-nl/dialog/confirm_ready.dialog"
+          "file_path": "locale/nl-nl/dialog/confirm_ready.dialog"
         },
         "pt-BR": {
           "entries": [
@@ -986,7 +986,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/pt-br/dialog/confirm_ready.dialog"
+          "file_path": "locale/pt-br/dialog/confirm_ready.dialog"
         }
       },
       "context": {
@@ -1000,7 +1000,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-boot-finished/locale/en-us/dialog/deny_ready.dialog"
+          "locale/en-us/dialog/deny_ready.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1012,15 +1012,15 @@
         "handler_source": "@intent_handler(\"are_you_ready.intent\")\ndef handle_are_you_ready(self, message: Message):\n    \"\"\"\n    Handle a user's inquiry about device readiness.\n    \"\"\"\n    if self.is_device_ready():\n        self.speak_dialog(\"confirm_ready\")\n    else:\n        self.speak_dialog(\"deny_ready\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/ca-es/dialog/confirm_ready.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/da-dk/dialog/confirm_ready.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/de-de/dialog/confirm_ready.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/en-us/dialog/confirm_ready.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/es-es/dialog/confirm_ready.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/gl-es/dialog/confirm_ready.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/it-it/dialog/confirm_ready.dialog",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/nl-nl/dialog/confirm_ready.dialog",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/pt-br/dialog/confirm_ready.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/ca-es/dialog/confirm_ready.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/da-dk/dialog/confirm_ready.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/de-de/dialog/confirm_ready.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/en-us/dialog/confirm_ready.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/es-es/dialog/confirm_ready.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/gl-es/dialog/confirm_ready.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/it-it/dialog/confirm_ready.dialog",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/nl-nl/dialog/confirm_ready.dialog",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/pt-br/dialog/confirm_ready.dialog"
       }
     },
     "confirm_speak_ready.dialog": {
@@ -1044,7 +1044,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/ca-es/dialog/confirm_speak_ready.dialog"
+          "file_path": "locale/ca-es/dialog/confirm_speak_ready.dialog"
         },
         "da-DK": {
           "entries": [
@@ -1063,7 +1063,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/da-dk/dialog/confirm_speak_ready.dialog"
+          "file_path": "locale/da-dk/dialog/confirm_speak_ready.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1082,7 +1082,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/de-de/dialog/confirm_speak_ready.dialog"
+          "file_path": "locale/de-de/dialog/confirm_speak_ready.dialog"
         },
         "en-US": {
           "entries": [
@@ -1101,7 +1101,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/en-us/dialog/confirm_speak_ready.dialog"
+          "file_path": "locale/en-us/dialog/confirm_speak_ready.dialog"
         },
         "es-ES": {
           "entries": [
@@ -1120,7 +1120,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/es-es/dialog/confirm_speak_ready.dialog"
+          "file_path": "locale/es-es/dialog/confirm_speak_ready.dialog"
         },
         "eu": {
           "entries": [
@@ -1139,7 +1139,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/eu/dialog/confirm_speak_ready.dialog"
+          "file_path": "locale/eu/dialog/confirm_speak_ready.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1158,7 +1158,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/fr-fr/dialog/confirm_speak_ready.dialog"
+          "file_path": "locale/fr-fr/dialog/confirm_speak_ready.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -1177,7 +1177,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/gl-es/dialog/confirm_speak_ready.dialog"
+          "file_path": "locale/gl-es/dialog/confirm_speak_ready.dialog"
         },
         "it-IT": {
           "entries": [
@@ -1196,7 +1196,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/it-it/dialog/confirm_speak_ready.dialog"
+          "file_path": "locale/it-it/dialog/confirm_speak_ready.dialog"
         },
         "nl-NL": {
           "entries": [
@@ -1215,7 +1215,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/nl-nl/dialog/confirm_speak_ready.dialog"
+          "file_path": "locale/nl-nl/dialog/confirm_speak_ready.dialog"
         },
         "pt-BR": {
           "entries": [
@@ -1234,7 +1234,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/pt-br/dialog/confirm_speak_ready.dialog"
+          "file_path": "locale/pt-br/dialog/confirm_speak_ready.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -1253,7 +1253,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/pt-pt/dialog/confirm_speak_ready.dialog"
+          "file_path": "locale/pt-pt/dialog/confirm_speak_ready.dialog"
         }
       },
       "context": {
@@ -1277,18 +1277,18 @@
         "handler_source": "@intent_handler(\"enable_ready_notification.intent\")\ndef handle_enable_notification(self, message: Message):\n    \"\"\"\n    Handle a request to enable ready announcements\n    \"\"\"\n    self.settings[\"speak_ready\"] = True\n    self.speak_dialog(\"confirm_speak_ready\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/ca-es/dialog/confirm_speak_ready.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/da-dk/dialog/confirm_speak_ready.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/de-de/dialog/confirm_speak_ready.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/en-us/dialog/confirm_speak_ready.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/es-es/dialog/confirm_speak_ready.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/eu/dialog/confirm_speak_ready.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/fr-fr/dialog/confirm_speak_ready.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/gl-es/dialog/confirm_speak_ready.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/it-it/dialog/confirm_speak_ready.dialog",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/nl-nl/dialog/confirm_speak_ready.dialog",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/pt-br/dialog/confirm_speak_ready.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/pt-pt/dialog/confirm_speak_ready.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/ca-es/dialog/confirm_speak_ready.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/da-dk/dialog/confirm_speak_ready.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/de-de/dialog/confirm_speak_ready.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/en-us/dialog/confirm_speak_ready.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/es-es/dialog/confirm_speak_ready.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/eu/dialog/confirm_speak_ready.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/fr-fr/dialog/confirm_speak_ready.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/gl-es/dialog/confirm_speak_ready.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/it-it/dialog/confirm_speak_ready.dialog",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/nl-nl/dialog/confirm_speak_ready.dialog",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/pt-br/dialog/confirm_speak_ready.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/pt-pt/dialog/confirm_speak_ready.dialog"
       }
     },
     "deny_ready.dialog": {
@@ -1321,7 +1321,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/ca-es/dialog/deny_ready.dialog"
+          "file_path": "locale/ca-es/dialog/deny_ready.dialog"
         },
         "da-DK": {
           "entries": [
@@ -1349,7 +1349,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/da-dk/dialog/deny_ready.dialog"
+          "file_path": "locale/da-dk/dialog/deny_ready.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1377,7 +1377,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/de-de/dialog/deny_ready.dialog"
+          "file_path": "locale/de-de/dialog/deny_ready.dialog"
         },
         "en-US": {
           "entries": [
@@ -1405,7 +1405,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/en-us/dialog/deny_ready.dialog"
+          "file_path": "locale/en-us/dialog/deny_ready.dialog"
         },
         "es-ES": {
           "entries": [
@@ -1433,7 +1433,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/es-es/dialog/deny_ready.dialog"
+          "file_path": "locale/es-es/dialog/deny_ready.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -1461,7 +1461,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/gl-es/dialog/deny_ready.dialog"
+          "file_path": "locale/gl-es/dialog/deny_ready.dialog"
         },
         "it-IT": {
           "entries": [
@@ -1489,7 +1489,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/it-it/dialog/deny_ready.dialog"
+          "file_path": "locale/it-it/dialog/deny_ready.dialog"
         },
         "nl-NL": {
           "entries": [
@@ -1517,7 +1517,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/nl-nl/dialog/deny_ready.dialog"
+          "file_path": "locale/nl-nl/dialog/deny_ready.dialog"
         },
         "pt-BR": {
           "entries": [
@@ -1545,7 +1545,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/pt-br/dialog/deny_ready.dialog"
+          "file_path": "locale/pt-br/dialog/deny_ready.dialog"
         }
       },
       "context": {
@@ -1559,7 +1559,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-boot-finished/locale/en-us/dialog/confirm_ready.dialog"
+          "locale/en-us/dialog/confirm_ready.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1571,15 +1571,15 @@
         "handler_source": "@intent_handler(\"are_you_ready.intent\")\ndef handle_are_you_ready(self, message: Message):\n    \"\"\"\n    Handle a user's inquiry about device readiness.\n    \"\"\"\n    if self.is_device_ready():\n        self.speak_dialog(\"confirm_ready\")\n    else:\n        self.speak_dialog(\"deny_ready\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/ca-es/dialog/deny_ready.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/da-dk/dialog/deny_ready.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/de-de/dialog/deny_ready.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/en-us/dialog/deny_ready.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/es-es/dialog/deny_ready.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/gl-es/dialog/deny_ready.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/it-it/dialog/deny_ready.dialog",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/nl-nl/dialog/deny_ready.dialog",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/pt-br/dialog/deny_ready.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/ca-es/dialog/deny_ready.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/da-dk/dialog/deny_ready.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/de-de/dialog/deny_ready.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/en-us/dialog/deny_ready.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/es-es/dialog/deny_ready.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/gl-es/dialog/deny_ready.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/it-it/dialog/deny_ready.dialog",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/nl-nl/dialog/deny_ready.dialog",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/pt-br/dialog/deny_ready.dialog"
       }
     },
     "disable_ready_notification.intent": {
@@ -1596,7 +1596,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/ca-es/intent/disable_ready_notification.intent"
+          "file_path": "locale/ca-es/intent/disable_ready_notification.intent"
         },
         "da-DK": {
           "entries": [
@@ -1608,7 +1608,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/da-dk/intent/disable_ready_notification.intent"
+          "file_path": "locale/da-dk/intent/disable_ready_notification.intent"
         },
         "de-DE": {
           "entries": [
@@ -1627,7 +1627,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/de-de/intent/disable_ready_notification.intent"
+          "file_path": "locale/de-de/intent/disable_ready_notification.intent"
         },
         "en-US": {
           "entries": [
@@ -1639,7 +1639,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/en-us/intent/disable_ready_notification.intent"
+          "file_path": "locale/en-us/intent/disable_ready_notification.intent"
         },
         "es-ES": {
           "entries": [
@@ -1658,7 +1658,7 @@
               "line_number": 1
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/es-es/intent/disable_ready_notification.intent"
+          "file_path": "locale/es-es/intent/disable_ready_notification.intent"
         },
         "eu": {
           "entries": [
@@ -1670,7 +1670,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/eu/intent/disable_ready_notification.intent"
+          "file_path": "locale/eu/intent/disable_ready_notification.intent"
         },
         "fr-FR": {
           "entries": [
@@ -1682,7 +1682,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/fr-fr/intent/disable_ready_notification.intent"
+          "file_path": "locale/fr-fr/intent/disable_ready_notification.intent"
         },
         "gl-ES": {
           "entries": [
@@ -1694,7 +1694,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/gl-es/intent/disable_ready_notification.intent"
+          "file_path": "locale/gl-es/intent/disable_ready_notification.intent"
         },
         "it-IT": {
           "entries": [
@@ -1706,7 +1706,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/it-it/intent/disable_ready_notification.intent"
+          "file_path": "locale/it-it/intent/disable_ready_notification.intent"
         },
         "nl-NL": {
           "entries": [
@@ -1725,7 +1725,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/nl-nl/intent/disable_ready_notification.intent"
+          "file_path": "locale/nl-nl/intent/disable_ready_notification.intent"
         },
         "pt-BR": {
           "entries": [
@@ -1737,7 +1737,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/pt-br/intent/disable_ready_notification.intent"
+          "file_path": "locale/pt-br/intent/disable_ready_notification.intent"
         },
         "pt-PT": {
           "entries": [
@@ -1749,7 +1749,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/pt-pt/intent/disable_ready_notification.intent"
+          "file_path": "locale/pt-pt/intent/disable_ready_notification.intent"
         }
       },
       "context": {
@@ -1765,7 +1765,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-boot-finished/locale/en-us/dialog/confirm_no_speak_ready.dialog"
+          "locale/en-us/dialog/confirm_no_speak_ready.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1778,18 +1778,18 @@
         "handler_source": "@intent_handler(\"disable_ready_notification.intent\")\ndef handle_disable_notification(self, message: Message):\n    \"\"\"\n    Handle a request to disable ready announcements\n    \"\"\"\n    self.settings[\"speak_ready\"] = False\n    self.speak_dialog(\"confirm_no_speak_ready\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/ca-es/intent/disable_ready_notification.intent",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/da-dk/intent/disable_ready_notification.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/de-de/intent/disable_ready_notification.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/en-us/intent/disable_ready_notification.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/es-es/intent/disable_ready_notification.intent",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/eu/intent/disable_ready_notification.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/fr-fr/intent/disable_ready_notification.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/gl-es/intent/disable_ready_notification.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/it-it/intent/disable_ready_notification.intent",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/nl-nl/intent/disable_ready_notification.intent",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/pt-br/intent/disable_ready_notification.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/pt-pt/intent/disable_ready_notification.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/ca-es/intent/disable_ready_notification.intent",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/da-dk/intent/disable_ready_notification.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/de-de/intent/disable_ready_notification.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/en-us/intent/disable_ready_notification.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/es-es/intent/disable_ready_notification.intent",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/eu/intent/disable_ready_notification.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/fr-fr/intent/disable_ready_notification.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/gl-es/intent/disable_ready_notification.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/it-it/intent/disable_ready_notification.intent",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/nl-nl/intent/disable_ready_notification.intent",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/pt-br/intent/disable_ready_notification.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/pt-pt/intent/disable_ready_notification.intent"
       }
     },
     "enable_ready_notification.intent": {
@@ -1806,7 +1806,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/ca-es/intent/enable_ready_notification.intent"
+          "file_path": "locale/ca-es/intent/enable_ready_notification.intent"
         },
         "da-DK": {
           "entries": [
@@ -1818,7 +1818,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/da-dk/intent/enable_ready_notification.intent"
+          "file_path": "locale/da-dk/intent/enable_ready_notification.intent"
         },
         "de-DE": {
           "entries": [
@@ -1837,7 +1837,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/de-de/intent/enable_ready_notification.intent"
+          "file_path": "locale/de-de/intent/enable_ready_notification.intent"
         },
         "en-US": {
           "entries": [
@@ -1849,7 +1849,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/en-us/intent/enable_ready_notification.intent"
+          "file_path": "locale/en-us/intent/enable_ready_notification.intent"
         },
         "es-ES": {
           "entries": [
@@ -1868,7 +1868,7 @@
               "line_number": 1
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/es-es/intent/enable_ready_notification.intent"
+          "file_path": "locale/es-es/intent/enable_ready_notification.intent"
         },
         "eu": {
           "entries": [
@@ -1880,7 +1880,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/eu/intent/enable_ready_notification.intent"
+          "file_path": "locale/eu/intent/enable_ready_notification.intent"
         },
         "fr-FR": {
           "entries": [
@@ -1892,7 +1892,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/fr-fr/intent/enable_ready_notification.intent"
+          "file_path": "locale/fr-fr/intent/enable_ready_notification.intent"
         },
         "gl-ES": {
           "entries": [
@@ -1904,7 +1904,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/gl-es/intent/enable_ready_notification.intent"
+          "file_path": "locale/gl-es/intent/enable_ready_notification.intent"
         },
         "it-IT": {
           "entries": [
@@ -1916,7 +1916,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/it-it/intent/enable_ready_notification.intent"
+          "file_path": "locale/it-it/intent/enable_ready_notification.intent"
         },
         "nl-NL": {
           "entries": [
@@ -1935,7 +1935,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/nl-nl/intent/enable_ready_notification.intent"
+          "file_path": "locale/nl-nl/intent/enable_ready_notification.intent"
         },
         "pt-BR": {
           "entries": [
@@ -1947,7 +1947,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/pt-br/intent/enable_ready_notification.intent"
+          "file_path": "locale/pt-br/intent/enable_ready_notification.intent"
         },
         "pt-PT": {
           "entries": [
@@ -1959,7 +1959,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/pt-pt/intent/enable_ready_notification.intent"
+          "file_path": "locale/pt-pt/intent/enable_ready_notification.intent"
         }
       },
       "context": {
@@ -1975,7 +1975,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-boot-finished/locale/en-us/dialog/confirm_speak_ready.dialog"
+          "locale/en-us/dialog/confirm_speak_ready.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1988,18 +1988,18 @@
         "handler_source": "@intent_handler(\"enable_ready_notification.intent\")\ndef handle_enable_notification(self, message: Message):\n    \"\"\"\n    Handle a request to enable ready announcements\n    \"\"\"\n    self.settings[\"speak_ready\"] = True\n    self.speak_dialog(\"confirm_speak_ready\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/ca-es/intent/enable_ready_notification.intent",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/da-dk/intent/enable_ready_notification.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/de-de/intent/enable_ready_notification.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/en-us/intent/enable_ready_notification.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/es-es/intent/enable_ready_notification.intent",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/eu/intent/enable_ready_notification.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/fr-fr/intent/enable_ready_notification.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/gl-es/intent/enable_ready_notification.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/it-it/intent/enable_ready_notification.intent",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/nl-nl/intent/enable_ready_notification.intent",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/pt-br/intent/enable_ready_notification.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/pt-pt/intent/enable_ready_notification.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/ca-es/intent/enable_ready_notification.intent",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/da-dk/intent/enable_ready_notification.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/de-de/intent/enable_ready_notification.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/en-us/intent/enable_ready_notification.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/es-es/intent/enable_ready_notification.intent",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/eu/intent/enable_ready_notification.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/fr-fr/intent/enable_ready_notification.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/gl-es/intent/enable_ready_notification.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/it-it/intent/enable_ready_notification.intent",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/nl-nl/intent/enable_ready_notification.intent",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/pt-br/intent/enable_ready_notification.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/pt-pt/intent/enable_ready_notification.intent"
       }
     },
     "ready.dialog": {
@@ -2023,7 +2023,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/ca-es/dialog/ready.dialog"
+          "file_path": "locale/ca-es/dialog/ready.dialog"
         },
         "da-DK": {
           "entries": [
@@ -2042,7 +2042,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/da-dk/dialog/ready.dialog"
+          "file_path": "locale/da-dk/dialog/ready.dialog"
         },
         "de-DE": {
           "entries": [
@@ -2061,7 +2061,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/de-de/dialog/ready.dialog"
+          "file_path": "locale/de-de/dialog/ready.dialog"
         },
         "en-US": {
           "entries": [
@@ -2080,7 +2080,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/en-us/dialog/ready.dialog"
+          "file_path": "locale/en-us/dialog/ready.dialog"
         },
         "es-ES": {
           "entries": [
@@ -2099,7 +2099,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/es-es/dialog/ready.dialog"
+          "file_path": "locale/es-es/dialog/ready.dialog"
         },
         "eu": {
           "entries": [
@@ -2118,7 +2118,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/eu/dialog/ready.dialog"
+          "file_path": "locale/eu/dialog/ready.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -2137,7 +2137,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/fr-fr/dialog/ready.dialog"
+          "file_path": "locale/fr-fr/dialog/ready.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -2156,7 +2156,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/gl-es/dialog/ready.dialog"
+          "file_path": "locale/gl-es/dialog/ready.dialog"
         },
         "it-IT": {
           "entries": [
@@ -2175,7 +2175,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/it-it/dialog/ready.dialog"
+          "file_path": "locale/it-it/dialog/ready.dialog"
         },
         "nl-NL": {
           "entries": [
@@ -2194,7 +2194,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/nl-nl/dialog/ready.dialog"
+          "file_path": "locale/nl-nl/dialog/ready.dialog"
         },
         "pt-BR": {
           "entries": [
@@ -2213,7 +2213,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/pt-br/dialog/ready.dialog"
+          "file_path": "locale/pt-br/dialog/ready.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -2232,7 +2232,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-boot-finished/locale/pt-pt/dialog/ready.dialog"
+          "file_path": "locale/pt-pt/dialog/ready.dialog"
         }
       },
       "context": {
@@ -2256,18 +2256,18 @@
         "handler_source": "def handle_ready(self, message: Message):\n    \"\"\"Handle the mycroft.ready event to notify the user when all services are ready.\n\n    Args:\n        message (Message): Message indicating system readiness status.\n    \"\"\"\n    if self.ready_sound:\n        self.acknowledge()\n    self.enclosure.eyes_on()\n    if self.speak_ready:\n        self.speak_dialog(\"ready\")\n    else:\n        LOG.debug(\"Ready notification disabled in settings\")\n    self.enclosure.eyes_blink(\"b\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/ca-es/dialog/ready.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/da-dk/dialog/ready.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/de-de/dialog/ready.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/en-us/dialog/ready.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/es-es/dialog/ready.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/eu/dialog/ready.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/fr-fr/dialog/ready.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/gl-es/dialog/ready.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/it-it/dialog/ready.dialog",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/nl-nl/dialog/ready.dialog",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/pt-br/dialog/ready.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/pt-pt/dialog/ready.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/ca-es/dialog/ready.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/da-dk/dialog/ready.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/de-de/dialog/ready.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/en-us/dialog/ready.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/es-es/dialog/ready.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/eu/dialog/ready.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/fr-fr/dialog/ready.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/gl-es/dialog/ready.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/it-it/dialog/ready.dialog",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/nl-nl/dialog/ready.dialog",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/pt-br/dialog/ready.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/pt-pt/dialog/ready.dialog"
       }
     },
     "skill.json": {
@@ -2339,7 +2339,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/ca-es/skill.json"
+          "file_path": "locale/ca-es/skill.json"
         },
         "da-DK": {
           "entries": [
@@ -2406,7 +2406,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/da-dk/skill.json"
+          "file_path": "locale/da-dk/skill.json"
         },
         "de-DE": {
           "entries": [
@@ -2473,7 +2473,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/de-de/skill.json"
+          "file_path": "locale/de-de/skill.json"
         },
         "en-US": {
           "entries": [
@@ -2540,7 +2540,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/en-us/skill.json"
+          "file_path": "locale/en-us/skill.json"
         },
         "es-ES": {
           "entries": [
@@ -2607,7 +2607,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/es-es/skill.json"
+          "file_path": "locale/es-es/skill.json"
         },
         "gl-ES": {
           "entries": [
@@ -2674,7 +2674,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/gl-es/skill.json"
+          "file_path": "locale/gl-es/skill.json"
         },
         "it-IT": {
           "entries": [
@@ -2741,7 +2741,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/it-it/skill.json"
+          "file_path": "locale/it-it/skill.json"
         },
         "nl-NL": {
           "entries": [
@@ -2808,7 +2808,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/nl-nl/skill.json"
+          "file_path": "locale/nl-nl/skill.json"
         },
         "pt-BR": {
           "entries": [
@@ -2875,7 +2875,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-boot-finished/locale/pt-br/skill.json"
+          "file_path": "locale/pt-br/skill.json"
         }
       },
       "context": {
@@ -2895,15 +2895,15 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/ca-es/skill.json",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/da-dk/skill.json",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/de-de/skill.json",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/en-us/skill.json",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/es-es/skill.json",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/gl-es/skill.json",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/it-it/skill.json",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/nl-nl/skill.json",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/ovos-skill-boot-finished/locale/pt-br/skill.json"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/ca-es/skill.json",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/da-dk/skill.json",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/de-de/skill.json",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/en-us/skill.json",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/es-es/skill.json",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/gl-es/skill.json",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/it-it/skill.json",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/nl-nl/skill.json",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-boot-finished/edit/dev/locale/pt-br/skill.json"
       }
     }
   }

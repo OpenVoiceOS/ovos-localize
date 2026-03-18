@@ -52,7 +52,7 @@
           "line_count": 7,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/ca-es/birth.voc"
+          "file_path": "locale/ca-es/birth.voc"
         },
         "da": {
           "entries": [
@@ -72,7 +72,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/da/birth.voc"
+          "file_path": "locale/da/birth.voc"
         },
         "de-DE": {
           "entries": [
@@ -92,7 +92,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/de-de/birth.voc"
+          "file_path": "locale/de-de/birth.voc"
         },
         "en-US": {
           "entries": [
@@ -112,7 +112,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/en-us/birth.voc"
+          "file_path": "locale/en-us/birth.voc"
         },
         "es-ES": {
           "entries": [
@@ -132,7 +132,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/es-es/birth.voc"
+          "file_path": "locale/es-es/birth.voc"
         },
         "eu": {
           "entries": [
@@ -152,7 +152,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/eu/birth.voc"
+          "file_path": "locale/eu/birth.voc"
         },
         "fr-FR": {
           "entries": [
@@ -172,7 +172,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/fr-fr/birth.voc"
+          "file_path": "locale/fr-fr/birth.voc"
         },
         "pt-PT": {
           "entries": [
@@ -192,7 +192,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/pt-pt/birth.voc"
+          "file_path": "locale/pt-pt/birth.voc"
         }
       },
       "context": {
@@ -226,14 +226,14 @@
         "handler_source": "@intent_handler(IntentBuilder(\"ConfuciusBirth\").require('confucius').require('birth'))\ndef handle_birth(self, message):\n    utterance = self.dialog_renderer.render(\"birth\", {})\n    self.show_confucius(utterance)\n    self.speak(utterance, wait=True)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/ca-es/birth.voc",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/da/birth.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/de-de/birth.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/en-us/birth.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/es-es/birth.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/eu/birth.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/fr-fr/birth.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/pt-pt/birth.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/ca-es/birth.voc",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/da/birth.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/de-de/birth.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/en-us/birth.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/es-es/birth.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/eu/birth.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/fr-fr/birth.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/pt-pt/birth.voc"
       }
     },
     "confucius.voc": {
@@ -250,7 +250,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/ca-es/confucius.voc"
+          "file_path": "locale/ca-es/confucius.voc"
         },
         "da": {
           "entries": [
@@ -262,7 +262,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/da/confucius.voc"
+          "file_path": "locale/da/confucius.voc"
         },
         "de-DE": {
           "entries": [
@@ -274,7 +274,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/de-de/confucius.voc"
+          "file_path": "locale/de-de/confucius.voc"
         },
         "en-US": {
           "entries": [
@@ -286,7 +286,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/en-us/confucius.voc"
+          "file_path": "locale/en-us/confucius.voc"
         },
         "es-ES": {
           "entries": [
@@ -298,7 +298,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/es-es/confucius.voc"
+          "file_path": "locale/es-es/confucius.voc"
         },
         "eu": {
           "entries": [
@@ -310,7 +310,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/eu/confucius.voc"
+          "file_path": "locale/eu/confucius.voc"
         },
         "fr-FR": {
           "entries": [
@@ -322,7 +322,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/fr-fr/confucius.voc"
+          "file_path": "locale/fr-fr/confucius.voc"
         },
         "pt-PT": {
           "entries": [
@@ -334,7 +334,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/pt-pt/confucius.voc"
+          "file_path": "locale/pt-pt/confucius.voc"
         }
       },
       "context": {
@@ -371,14 +371,14 @@
         "handler_source": "@intent_handler(IntentBuilder(\"ConfuciusQuote\").require('confucius').require('quote'))\ndef handle_quote(self, message):\n    utterance = self.dialog_renderer.render(\"quote\", {})\n    self.show_confucius(utterance)\n    self.speak(utterance, wait=True)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/ca-es/confucius.voc",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/da/confucius.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/de-de/confucius.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/en-us/confucius.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/es-es/confucius.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/eu/confucius.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/fr-fr/confucius.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/pt-pt/confucius.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/ca-es/confucius.voc",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/da/confucius.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/de-de/confucius.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/en-us/confucius.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/es-es/confucius.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/eu/confucius.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/fr-fr/confucius.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/pt-pt/confucius.voc"
       }
     },
     "death.voc": {
@@ -411,7 +411,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/ca-es/death.voc"
+          "file_path": "locale/ca-es/death.voc"
         },
         "da": {
           "entries": [
@@ -427,7 +427,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/da/death.voc"
+          "file_path": "locale/da/death.voc"
         },
         "de-DE": {
           "entries": [
@@ -443,7 +443,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/de-de/death.voc"
+          "file_path": "locale/de-de/death.voc"
         },
         "en-US": {
           "entries": [
@@ -459,7 +459,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/en-us/death.voc"
+          "file_path": "locale/en-us/death.voc"
         },
         "es-ES": {
           "entries": [
@@ -475,7 +475,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/es-es/death.voc"
+          "file_path": "locale/es-es/death.voc"
         },
         "eu": {
           "entries": [
@@ -491,7 +491,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/eu/death.voc"
+          "file_path": "locale/eu/death.voc"
         },
         "fr-FR": {
           "entries": [
@@ -515,7 +515,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/fr-fr/death.voc"
+          "file_path": "locale/fr-fr/death.voc"
         },
         "pt-PT": {
           "entries": [
@@ -531,7 +531,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/pt-pt/death.voc"
+          "file_path": "locale/pt-pt/death.voc"
         }
       },
       "context": {
@@ -565,14 +565,14 @@
         "handler_source": "@intent_handler(IntentBuilder(\"ConfuciusDeath\").require('confucius').require('death'))\ndef handle_death(self, message):\n    utterance = self.dialog_renderer.render(\"death\", {})\n    self.show_confucius(utterance)\n    self.speak(utterance, wait=True)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/ca-es/death.voc",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/da/death.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/de-de/death.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/en-us/death.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/es-es/death.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/eu/death.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/fr-fr/death.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/pt-pt/death.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/ca-es/death.voc",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/da/death.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/de-de/death.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/en-us/death.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/es-es/death.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/eu/death.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/fr-fr/death.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/pt-pt/death.voc"
       }
     },
     "live.voc": {
@@ -601,7 +601,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/ca-es/live.voc"
+          "file_path": "locale/ca-es/live.voc"
         },
         "da": {
           "entries": [
@@ -617,7 +617,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/da/live.voc"
+          "file_path": "locale/da/live.voc"
         },
         "de-DE": {
           "entries": [
@@ -633,7 +633,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/de-de/live.voc"
+          "file_path": "locale/de-de/live.voc"
         },
         "en-US": {
           "entries": [
@@ -649,7 +649,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/en-us/live.voc"
+          "file_path": "locale/en-us/live.voc"
         },
         "es-ES": {
           "entries": [
@@ -665,7 +665,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/es-es/live.voc"
+          "file_path": "locale/es-es/live.voc"
         },
         "eu": {
           "entries": [
@@ -681,7 +681,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/eu/live.voc"
+          "file_path": "locale/eu/live.voc"
         },
         "fr-FR": {
           "entries": [
@@ -701,7 +701,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/fr-fr/live.voc"
+          "file_path": "locale/fr-fr/live.voc"
         },
         "pt-PT": {
           "entries": [
@@ -717,7 +717,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/pt-pt/live.voc"
+          "file_path": "locale/pt-pt/live.voc"
         }
       },
       "context": {
@@ -752,14 +752,14 @@
         "handler_source": "@intent_handler(IntentBuilder(\"ConfuciusLive\").require('confucius').require('when').require('live'))\ndef handle_live(self, message):\n    utterance = self.dialog_renderer.render(\"live\", {})\n    self.show_confucius(utterance)\n    self.speak(utterance, wait=True)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/ca-es/live.voc",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/da/live.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/de-de/live.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/en-us/live.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/es-es/live.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/eu/live.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/fr-fr/live.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/pt-pt/live.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/ca-es/live.voc",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/da/live.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/de-de/live.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/en-us/live.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/es-es/live.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/eu/live.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/fr-fr/live.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/pt-pt/live.voc"
       }
     },
     "quote.voc": {
@@ -788,7 +788,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/ca-es/quote.voc"
+          "file_path": "locale/ca-es/quote.voc"
         },
         "da": {
           "entries": [
@@ -808,7 +808,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/da/quote.voc"
+          "file_path": "locale/da/quote.voc"
         },
         "de-DE": {
           "entries": [
@@ -828,7 +828,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/de-de/quote.voc"
+          "file_path": "locale/de-de/quote.voc"
         },
         "en-US": {
           "entries": [
@@ -848,7 +848,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/en-us/quote.voc"
+          "file_path": "locale/en-us/quote.voc"
         },
         "es-ES": {
           "entries": [
@@ -868,7 +868,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/es-es/quote.voc"
+          "file_path": "locale/es-es/quote.voc"
         },
         "eu": {
           "entries": [
@@ -888,7 +888,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/eu/quote.voc"
+          "file_path": "locale/eu/quote.voc"
         },
         "fr-FR": {
           "entries": [
@@ -908,7 +908,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/fr-fr/quote.voc"
+          "file_path": "locale/fr-fr/quote.voc"
         },
         "pt-PT": {
           "entries": [
@@ -928,7 +928,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/pt-pt/quote.voc"
+          "file_path": "locale/pt-pt/quote.voc"
         }
       },
       "context": {
@@ -962,14 +962,14 @@
         "handler_source": "@intent_handler(IntentBuilder(\"ConfuciusQuote\").require('confucius').require('quote'))\ndef handle_quote(self, message):\n    utterance = self.dialog_renderer.render(\"quote\", {})\n    self.show_confucius(utterance)\n    self.speak(utterance, wait=True)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/ca-es/quote.voc",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/da/quote.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/de-de/quote.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/en-us/quote.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/es-es/quote.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/eu/quote.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/fr-fr/quote.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/pt-pt/quote.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/ca-es/quote.voc",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/da/quote.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/de-de/quote.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/en-us/quote.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/es-es/quote.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/eu/quote.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/fr-fr/quote.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/pt-pt/quote.voc"
       }
     },
     "skill.json": {
@@ -1046,7 +1046,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/ca-es/skill.json"
+          "file_path": "locale/ca-es/skill.json"
         },
         "da": {
           "entries": [
@@ -1118,7 +1118,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/da/skill.json"
+          "file_path": "locale/da/skill.json"
         },
         "de-DE": {
           "entries": [
@@ -1190,7 +1190,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/de-de/skill.json"
+          "file_path": "locale/de-de/skill.json"
         },
         "en-US": {
           "entries": [
@@ -1262,7 +1262,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/en-us/skill.json"
+          "file_path": "locale/en-us/skill.json"
         },
         "fr-FR": {
           "entries": [
@@ -1334,7 +1334,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/fr-fr/skill.json"
+          "file_path": "locale/fr-fr/skill.json"
         }
       },
       "context": {
@@ -1354,11 +1354,11 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/ca-es/skill.json",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/da/skill.json",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/de-de/skill.json",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/en-us/skill.json",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/fr-fr/skill.json"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/ca-es/skill.json",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/da/skill.json",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/de-de/skill.json",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/en-us/skill.json",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/fr-fr/skill.json"
       }
     },
     "when.voc": {
@@ -1375,7 +1375,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/ca-es/when.voc"
+          "file_path": "locale/ca-es/when.voc"
         },
         "da": {
           "entries": [
@@ -1387,7 +1387,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/da/when.voc"
+          "file_path": "locale/da/when.voc"
         },
         "de-DE": {
           "entries": [
@@ -1399,7 +1399,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/de-de/when.voc"
+          "file_path": "locale/de-de/when.voc"
         },
         "en-US": {
           "entries": [
@@ -1411,7 +1411,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/en-us/when.voc"
+          "file_path": "locale/en-us/when.voc"
         },
         "es-ES": {
           "entries": [
@@ -1423,7 +1423,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/es-es/when.voc"
+          "file_path": "locale/es-es/when.voc"
         },
         "eu": {
           "entries": [
@@ -1435,7 +1435,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/eu/when.voc"
+          "file_path": "locale/eu/when.voc"
         },
         "fr-FR": {
           "entries": [
@@ -1447,7 +1447,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/fr-fr/when.voc"
+          "file_path": "locale/fr-fr/when.voc"
         },
         "pt-PT": {
           "entries": [
@@ -1459,7 +1459,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-confucius-quotes/locale/pt-pt/when.voc"
+          "file_path": "locale/pt-pt/when.voc"
         }
       },
       "context": {
@@ -1494,14 +1494,14 @@
         "handler_source": "@intent_handler(IntentBuilder(\"ConfuciusLive\").require('confucius').require('when').require('live'))\ndef handle_live(self, message):\n    utterance = self.dialog_renderer.render(\"live\", {})\n    self.show_confucius(utterance)\n    self.speak(utterance, wait=True)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/ca-es/when.voc",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/da/when.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/de-de/when.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/en-us/when.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/es-es/when.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/eu/when.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/fr-fr/when.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/pt-pt/when.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/ca-es/when.voc",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/da/when.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/de-de/when.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/en-us/when.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/es-es/when.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/eu/when.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/fr-fr/when.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/pt-pt/when.voc"
       }
     },
     "who.intent": {
@@ -1529,7 +1529,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-confucius-quotes/locale/ca-es/who.intent"
+          "file_path": "locale/ca-es/who.intent"
         },
         "da": {
           "entries": [
@@ -1552,7 +1552,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-confucius-quotes/locale/da/who.intent"
+          "file_path": "locale/da/who.intent"
         },
         "de-DE": {
           "entries": [
@@ -1583,7 +1583,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-confucius-quotes/locale/de-de/who.intent"
+          "file_path": "locale/de-de/who.intent"
         },
         "en-US": {
           "entries": [
@@ -1606,7 +1606,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-confucius-quotes/locale/en-us/who.intent"
+          "file_path": "locale/en-us/who.intent"
         },
         "es-ES": {
           "entries": [
@@ -1629,7 +1629,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-confucius-quotes/locale/es-es/who.intent"
+          "file_path": "locale/es-es/who.intent"
         },
         "eu": {
           "entries": [
@@ -1652,7 +1652,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-confucius-quotes/locale/eu/who.intent"
+          "file_path": "locale/eu/who.intent"
         },
         "fr-FR": {
           "entries": [
@@ -1679,7 +1679,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-confucius-quotes/locale/fr-fr/who.intent"
+          "file_path": "locale/fr-fr/who.intent"
         },
         "pt-PT": {
           "entries": [
@@ -1702,7 +1702,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-confucius-quotes/locale/pt-pt/who.intent"
+          "file_path": "locale/pt-pt/who.intent"
         }
       },
       "context": {
@@ -1727,14 +1727,14 @@
         "handler_source": "@intent_handler(\"who.intent\")\ndef handle_who(self, message):\n    utterance = self.dialog_renderer.render(\"confucius\", {})\n    self.show_confucius(utterance)\n    self.speak(utterance, wait=True)\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/ca-es/who.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/da/who.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/de-de/who.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/en-us/who.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/es-es/who.intent",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/eu/who.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/fr-fr/who.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/ovos-skill-confucius-quotes/locale/pt-pt/who.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/ca-es/who.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/da/who.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/de-de/who.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/en-us/who.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/es-es/who.intent",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/eu/who.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/fr-fr/who.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-confucius-quotes/edit/dev/locale/pt-pt/who.intent"
       }
     }
   }

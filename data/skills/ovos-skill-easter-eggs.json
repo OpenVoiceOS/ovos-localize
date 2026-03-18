@@ -27,7 +27,7 @@
             "LawOfRobotics"
           ],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/regex/Law.rx"
+          "file_path": "locale/de-de/regex/Law.rx"
         }
       },
       "context": {
@@ -53,7 +53,7 @@
         "handler_source": null
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/regex/Law.rx"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/regex/Law.rx"
       }
     },
     "adult_mode_keyword.voc": {
@@ -70,7 +70,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/vocab/adult_mode_keyword.voc"
+          "file_path": "locale/de-de/vocab/adult_mode_keyword.voc"
         },
         "en-US": {
           "entries": [
@@ -82,7 +82,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/vocab/adult_mode_keyword.voc"
+          "file_path": "locale/en-us/vocab/adult_mode_keyword.voc"
         },
         "eu": {
           "entries": [
@@ -94,7 +94,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/vocab/adult_mode_keyword.voc"
+          "file_path": "locale/eu/vocab/adult_mode_keyword.voc"
         },
         "fr-FR": {
           "entries": [
@@ -110,7 +110,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/vocab/adult_mode_keyword.voc"
+          "file_path": "locale/fr-fr/vocab/adult_mode_keyword.voc"
         },
         "gl-ES": {
           "entries": [
@@ -122,7 +122,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/vocab/adult_mode_keyword.voc"
+          "file_path": "locale/gl-es/vocab/adult_mode_keyword.voc"
         }
       },
       "context": {
@@ -155,11 +155,11 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"adult_mode_intent\").require(\"adult_mode_keyword\").build()\n)\ndef handle_adult_mode(self, _):\n    self.settings[\"grandma_mode_enabled\"] = False\n    self.speak(\"Do you feel lucky, punk?\")"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/vocab/adult_mode_keyword.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/vocab/adult_mode_keyword.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/vocab/adult_mode_keyword.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/vocab/adult_mode_keyword.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/vocab/adult_mode_keyword.voc"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/vocab/adult_mode_keyword.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/vocab/adult_mode_keyword.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/vocab/adult_mode_keyword.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/vocab/adult_mode_keyword.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/vocab/adult_mode_keyword.voc"
       }
     },
     "arnold_keyword.voc": {
@@ -184,7 +184,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/vocab/arnold_keyword.voc"
+          "file_path": "locale/de-de/vocab/arnold_keyword.voc"
         },
         "en-US": {
           "entries": [
@@ -204,7 +204,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/vocab/arnold_keyword.voc"
+          "file_path": "locale/en-us/vocab/arnold_keyword.voc"
         },
         "eu": {
           "entries": [
@@ -224,7 +224,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/vocab/arnold_keyword.voc"
+          "file_path": "locale/eu/vocab/arnold_keyword.voc"
         },
         "fr-FR": {
           "entries": [
@@ -248,7 +248,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/vocab/arnold_keyword.voc"
+          "file_path": "locale/fr-fr/vocab/arnold_keyword.voc"
         },
         "gl-ES": {
           "entries": [
@@ -268,7 +268,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/vocab/arnold_keyword.voc"
+          "file_path": "locale/gl-es/vocab/arnold_keyword.voc"
         }
       },
       "context": {
@@ -301,11 +301,11 @@
         "handler_source": "@intent_handler(IntentBuilder(\"arnold_intent\").require(\"arnold_keyword\").build())\ndef handle_arnold_intent(self, _):\n    path, files = self.get_reference_files(\"sounds/arnold\", \"wav\")\n    if len(files):\n        wav = path + \"/\" + random.choice(files)\n        self.play_audio(wav)\n    else:\n        self.speak_dialog(\"bad_file\")"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/vocab/arnold_keyword.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/vocab/arnold_keyword.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/vocab/arnold_keyword.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/vocab/arnold_keyword.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/vocab/arnold_keyword.voc"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/vocab/arnold_keyword.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/vocab/arnold_keyword.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/vocab/arnold_keyword.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/vocab/arnold_keyword.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/vocab/arnold_keyword.voc"
       }
     },
     "bad_file.dialog": {
@@ -329,7 +329,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/dialog/bad_file.dialog"
+          "file_path": "locale/de-de/dialog/bad_file.dialog"
         },
         "en-US": {
           "entries": [
@@ -348,7 +348,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/dialog/bad_file.dialog"
+          "file_path": "locale/en-us/dialog/bad_file.dialog"
         },
         "eu": {
           "entries": [
@@ -367,7 +367,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/dialog/bad_file.dialog"
+          "file_path": "locale/eu/dialog/bad_file.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -386,7 +386,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/dialog/bad_file.dialog"
+          "file_path": "locale/fr-fr/dialog/bad_file.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -405,7 +405,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/dialog/bad_file.dialog"
+          "file_path": "locale/gl-es/dialog/bad_file.dialog"
         }
       },
       "context": {
@@ -429,11 +429,11 @@
         "handler_source": "@intent_handler(IntentBuilder(\"portal_intent\").require(\"portal_keyword\").build())\ndef handle_portal_intent(self, _):\n    path, files = self.get_reference_files(\"sounds/portal\", \"mp3\")\n    if len(files):\n        mp3 = path + \"/\" + random.choice(files)\n        self._play_in_ocp(mp3, title=\"Portal Easter Egg\")\n    else:\n        self.speak_dialog(\"bad_file\")"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/dialog/bad_file.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/dialog/bad_file.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/dialog/bad_file.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/dialog/bad_file.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/dialog/bad_file.dialog"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/dialog/bad_file.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/dialog/bad_file.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/dialog/bad_file.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/dialog/bad_file.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/dialog/bad_file.dialog"
       }
     },
     "bender_keyword.voc": {
@@ -454,7 +454,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/vocab/bender_keyword.voc"
+          "file_path": "locale/de-de/vocab/bender_keyword.voc"
         },
         "en-US": {
           "entries": [
@@ -466,7 +466,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/vocab/bender_keyword.voc"
+          "file_path": "locale/en-us/vocab/bender_keyword.voc"
         },
         "eu": {
           "entries": [
@@ -478,7 +478,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/vocab/bender_keyword.voc"
+          "file_path": "locale/eu/vocab/bender_keyword.voc"
         },
         "fr-FR": {
           "entries": [
@@ -494,7 +494,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/vocab/bender_keyword.voc"
+          "file_path": "locale/fr-fr/vocab/bender_keyword.voc"
         },
         "gl-ES": {
           "entries": [
@@ -506,7 +506,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/vocab/bender_keyword.voc"
+          "file_path": "locale/gl-es/vocab/bender_keyword.voc"
         }
       },
       "context": {
@@ -539,11 +539,11 @@
         "handler_source": "@intent_handler(IntentBuilder(\"bender_intent\").require(\"bender_keyword\").build())\ndef handle_bender_intent(self, _):\n    path, files = self.get_reference_files(\"sounds/bender\", \"mp3\")\n    if len(files):\n        mp3 = path + \"/\" + random.choice(files)\n        self.play_audio(mp3)\n    else:\n        self.speak_dialog(\"bad_file\")"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/vocab/bender_keyword.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/vocab/bender_keyword.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/vocab/bender_keyword.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/vocab/bender_keyword.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/vocab/bender_keyword.voc"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/vocab/bender_keyword.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/vocab/bender_keyword.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/vocab/bender_keyword.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/vocab/bender_keyword.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/vocab/bender_keyword.voc"
       }
     },
     "bill_and_ted_keyword.voc": {
@@ -572,7 +572,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/vocab/bill_and_ted_keyword.voc"
+          "file_path": "locale/en-us/vocab/bill_and_ted_keyword.voc"
         },
         "eu": {
           "entries": [
@@ -596,7 +596,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/vocab/bill_and_ted_keyword.voc"
+          "file_path": "locale/eu/vocab/bill_and_ted_keyword.voc"
         },
         "fr-FR": {
           "entries": [
@@ -620,7 +620,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/vocab/bill_and_ted_keyword.voc"
+          "file_path": "locale/fr-fr/vocab/bill_and_ted_keyword.voc"
         },
         "gl-ES": {
           "entries": [
@@ -644,7 +644,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/vocab/bill_and_ted_keyword.voc"
+          "file_path": "locale/gl-es/vocab/bill_and_ted_keyword.voc"
         }
       },
       "context": {
@@ -677,10 +677,10 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"bill_and_ted_intent\").require(\"bill_and_ted_keyword\").build()\n)\ndef handle_bill_and_ted_intent(self, _):\n    path, files = self.get_reference_files(\"sounds/billandted\", \"mp3\")\n    if len(files):\n        mp3 = path + \"/\" + random.choice(files)\n        self.play_audio(filename=mp3)\n    else:\n        self.speak_dialog(\"bad_file\")"
       },
       "edit_urls": {
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/vocab/bill_and_ted_keyword.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/vocab/bill_and_ted_keyword.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/vocab/bill_and_ted_keyword.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/vocab/bill_and_ted_keyword.voc"
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/vocab/bill_and_ted_keyword.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/vocab/bill_and_ted_keyword.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/vocab/bill_and_ted_keyword.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/vocab/bill_and_ted_keyword.voc"
       }
     },
     "conan_keyword.voc": {
@@ -697,7 +697,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/vocab/conan_keyword.voc"
+          "file_path": "locale/en-us/vocab/conan_keyword.voc"
         },
         "eu": {
           "entries": [
@@ -709,7 +709,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/vocab/conan_keyword.voc"
+          "file_path": "locale/eu/vocab/conan_keyword.voc"
         },
         "fr-FR": {
           "entries": [
@@ -728,7 +728,7 @@
               "line_number": 1
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/vocab/conan_keyword.voc"
+          "file_path": "locale/fr-fr/vocab/conan_keyword.voc"
         },
         "gl-ES": {
           "entries": [
@@ -747,7 +747,7 @@
               "line_number": 1
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/vocab/conan_keyword.voc"
+          "file_path": "locale/gl-es/vocab/conan_keyword.voc"
         }
       },
       "context": {
@@ -780,10 +780,10 @@
         "handler_source": "@intent_handler(IntentBuilder(\"conan_intent\").require(\"conan_keyword\").build())\ndef handle_conan_intent(self, _):\n    path, files = self.get_reference_files(\"sounds/conan\", \"mp3\")\n    if len(files):\n        mp3 = path + \"/\" + random.choice(files)\n        self.play_audio(filename=mp3)\n    else:\n        self.speak_dialog(\"bad_file\")"
       },
       "edit_urls": {
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/vocab/conan_keyword.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/vocab/conan_keyword.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/vocab/conan_keyword.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/vocab/conan_keyword.voc"
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/vocab/conan_keyword.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/vocab/conan_keyword.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/vocab/conan_keyword.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/vocab/conan_keyword.voc"
       }
     },
     "duke_nukem_keyword.voc": {
@@ -816,7 +816,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/vocab/duke_nukem_keyword.voc"
+          "file_path": "locale/de-de/vocab/duke_nukem_keyword.voc"
         },
         "en-US": {
           "entries": [
@@ -844,7 +844,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/vocab/duke_nukem_keyword.voc"
+          "file_path": "locale/en-us/vocab/duke_nukem_keyword.voc"
         },
         "eu": {
           "entries": [
@@ -872,7 +872,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/vocab/duke_nukem_keyword.voc"
+          "file_path": "locale/eu/vocab/duke_nukem_keyword.voc"
         },
         "fr-FR": {
           "entries": [
@@ -888,7 +888,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/vocab/duke_nukem_keyword.voc"
+          "file_path": "locale/fr-fr/vocab/duke_nukem_keyword.voc"
         },
         "gl-ES": {
           "entries": [
@@ -916,7 +916,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/vocab/duke_nukem_keyword.voc"
+          "file_path": "locale/gl-es/vocab/duke_nukem_keyword.voc"
         }
       },
       "context": {
@@ -949,11 +949,11 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"duke_nukem_intent\").require(\"duke_nukem_keyword\").build()\n)\ndef handle_dukenukem_intent(self, _):\n    if not self.grandma_mode:\n        path, files = self.get_reference_files(\"sounds/dukenukem\", \"wav\")\n        if len(files):\n            wav = path + \"/\" + random.choice(files)\n            self.play_audio(wav)\n        else:\n            self.speak_dialog(\"bad_file\")\n    else:\n        self.speak(\"Duke Who-Kem?\")"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/vocab/duke_nukem_keyword.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/vocab/duke_nukem_keyword.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/vocab/duke_nukem_keyword.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/vocab/duke_nukem_keyword.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/vocab/duke_nukem_keyword.voc"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/vocab/duke_nukem_keyword.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/vocab/duke_nukem_keyword.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/vocab/duke_nukem_keyword.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/vocab/duke_nukem_keyword.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/vocab/duke_nukem_keyword.voc"
       }
     },
     "glados_keyword.voc": {
@@ -974,7 +974,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/vocab/glados_keyword.voc"
+          "file_path": "locale/de-de/vocab/glados_keyword.voc"
         },
         "en-US": {
           "entries": [
@@ -998,7 +998,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/vocab/glados_keyword.voc"
+          "file_path": "locale/en-us/vocab/glados_keyword.voc"
         },
         "eu": {
           "entries": [
@@ -1022,7 +1022,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/vocab/glados_keyword.voc"
+          "file_path": "locale/eu/vocab/glados_keyword.voc"
         },
         "fr-FR": {
           "entries": [
@@ -1038,7 +1038,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/vocab/glados_keyword.voc"
+          "file_path": "locale/fr-fr/vocab/glados_keyword.voc"
         },
         "gl-ES": {
           "entries": [
@@ -1062,7 +1062,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/vocab/glados_keyword.voc"
+          "file_path": "locale/gl-es/vocab/glados_keyword.voc"
         }
       },
       "context": {
@@ -1095,11 +1095,11 @@
         "handler_source": "@intent_handler(IntentBuilder(\"glados_intent\").require(\"glados_keyword\").build())\ndef handle_glados_intent(self, _):\n    path, files = self.get_reference_files(\"sounds/glados\", \"mp3\")\n    if len(files):\n        mp3 = path + \"/\" + random.choice(files)\n        self._play_in_ocp(mp3, title=\"GlaDOS says...\")\n    else:\n        self.speak_dialog(\"bad_file\")"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/vocab/glados_keyword.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/vocab/glados_keyword.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/vocab/glados_keyword.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/vocab/glados_keyword.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/vocab/glados_keyword.voc"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/vocab/glados_keyword.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/vocab/glados_keyword.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/vocab/glados_keyword.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/vocab/glados_keyword.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/vocab/glados_keyword.voc"
       }
     },
     "grandma_mode_keyword.voc": {
@@ -1116,7 +1116,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/vocab/grandma_mode_keyword.voc"
+          "file_path": "locale/de-de/vocab/grandma_mode_keyword.voc"
         },
         "en-US": {
           "entries": [
@@ -1128,7 +1128,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/vocab/grandma_mode_keyword.voc"
+          "file_path": "locale/en-us/vocab/grandma_mode_keyword.voc"
         },
         "eu": {
           "entries": [
@@ -1140,7 +1140,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/vocab/grandma_mode_keyword.voc"
+          "file_path": "locale/eu/vocab/grandma_mode_keyword.voc"
         },
         "fr-FR": {
           "entries": [
@@ -1156,7 +1156,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/vocab/grandma_mode_keyword.voc"
+          "file_path": "locale/fr-fr/vocab/grandma_mode_keyword.voc"
         },
         "gl-ES": {
           "entries": [
@@ -1168,7 +1168,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/vocab/grandma_mode_keyword.voc"
+          "file_path": "locale/gl-es/vocab/grandma_mode_keyword.voc"
         }
       },
       "context": {
@@ -1201,11 +1201,11 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"grandma_mode_intent\").require(\"grandma_mode_keyword\").build()\n)\ndef handle_grandma_mode(self, _):\n    self.settings[\"grandma_mode_enabled\"] = True\n    self.speak(\"Ok, we'll tone it down a bit.\")"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/vocab/grandma_mode_keyword.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/vocab/grandma_mode_keyword.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/vocab/grandma_mode_keyword.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/vocab/grandma_mode_keyword.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/vocab/grandma_mode_keyword.voc"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/vocab/grandma_mode_keyword.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/vocab/grandma_mode_keyword.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/vocab/grandma_mode_keyword.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/vocab/grandma_mode_keyword.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/vocab/grandma_mode_keyword.voc"
       }
     },
     "hal_keyword.voc": {
@@ -1234,7 +1234,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/vocab/hal_keyword.voc"
+          "file_path": "locale/de-de/vocab/hal_keyword.voc"
         },
         "en-US": {
           "entries": [
@@ -1274,7 +1274,7 @@
           "line_count": 8,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/vocab/hal_keyword.voc"
+          "file_path": "locale/en-us/vocab/hal_keyword.voc"
         },
         "eu": {
           "entries": [
@@ -1314,7 +1314,7 @@
           "line_count": 8,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/vocab/hal_keyword.voc"
+          "file_path": "locale/eu/vocab/hal_keyword.voc"
         },
         "fr-FR": {
           "entries": [
@@ -1330,7 +1330,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/vocab/hal_keyword.voc"
+          "file_path": "locale/fr-fr/vocab/hal_keyword.voc"
         },
         "gl-ES": {
           "entries": [
@@ -1370,7 +1370,7 @@
           "line_count": 8,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/vocab/hal_keyword.voc"
+          "file_path": "locale/gl-es/vocab/hal_keyword.voc"
         }
       },
       "context": {
@@ -1403,11 +1403,11 @@
         "handler_source": "@intent_handler(IntentBuilder(\"hal_intent\").require(\"hal_keyword\").build())\ndef handle_hal_intent(self, _):\n    path, files = self.get_reference_files(\"sounds/hal\", \"mp3\")\n    if len(files):\n        mp3 = path + \"/\" + random.choice(files)\n        self.play_audio(mp3)\n    else:\n        self.speak_dialog(\"bad_file\")"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/vocab/hal_keyword.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/vocab/hal_keyword.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/vocab/hal_keyword.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/vocab/hal_keyword.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/vocab/hal_keyword.voc"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/vocab/hal_keyword.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/vocab/hal_keyword.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/vocab/hal_keyword.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/vocab/hal_keyword.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/vocab/hal_keyword.voc"
       }
     },
     "invalid_law.dialog": {
@@ -1431,7 +1431,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/dialog/invalid_law.dialog"
+          "file_path": "locale/en-us/dialog/invalid_law.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1450,7 +1450,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/dialog/invalid_law.dialog"
+          "file_path": "locale/fr-fr/dialog/invalid_law.dialog"
         }
       },
       "context": {
@@ -1464,9 +1464,9 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule2.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule3.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule1.dialog"
+          "locale/en-us/dialog/rule2.dialog",
+          "locale/en-us/dialog/rule3.dialog",
+          "locale/en-us/dialog/rule1.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1478,8 +1478,8 @@
         "handler_source": "@intent_handler(\"law_of_robotics.intent\")\ndef handle_robotic_laws_intent(self, message: Message):\n    law = str(message.data.get(\"ordinal\", \"\"))\n    law = extract_number(law, ordinals=True, lang=self.lang)\n    self.log.debug(\"law: %s\", law)\n    if not law:\n        self.log.debug(\"No specific law detected, reciting all three\")\n        self.speak_dialog(\"rule1\")\n        self.speak_dialog(\"rule2\")\n        self.speak_dialog(\"rule3\")\n        return\n    # lingua-franca currently returns a number, but let's not trust, let's ensure\n    law = str(law)\n    if law == \"1\":\n        self.log.debug(\"First law of robotics requested\")\n        self.speak_dialog(\"rule1\")\n    elif law == \"2\":\n        self.log.debug(\"Second law of robotics requested\")\n        self.speak_dialog(\"rule2\")\n    elif law == \"3\":\n        self.log.debug(\"Third law of robotics requested\")\n        self.speak_dialog(\"rule3\")\n    else:\n        self.log.debug(\"Invalid law requested\")\n        self.speak_dialog(\"invalid_law\")"
       },
       "edit_urls": {
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/dialog/invalid_law.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/dialog/invalid_law.dialog"
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/dialog/invalid_law.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/dialog/invalid_law.dialog"
       }
     },
     "languages.dialog": {
@@ -1503,7 +1503,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/dialog/languages.dialog"
+          "file_path": "locale/de-de/dialog/languages.dialog"
         },
         "en-US": {
           "entries": [
@@ -1522,7 +1522,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/dialog/languages.dialog"
+          "file_path": "locale/en-us/dialog/languages.dialog"
         },
         "eu": {
           "entries": [
@@ -1541,7 +1541,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/dialog/languages.dialog"
+          "file_path": "locale/eu/dialog/languages.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1560,7 +1560,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/dialog/languages.dialog"
+          "file_path": "locale/fr-fr/dialog/languages.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -1579,7 +1579,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/dialog/languages.dialog"
+          "file_path": "locale/gl-es/dialog/languages.dialog"
         }
       },
       "context": {
@@ -1603,11 +1603,11 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"languages_you_speak_intent\")\n    .require(\"languages_you_speak_keyword\")\n    .build()\n)\ndef handle_number_of_languages_intent(self, _):\n    self.speak_dialog(\"languages\")"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/dialog/languages.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/dialog/languages.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/dialog/languages.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/dialog/languages.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/dialog/languages.dialog"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/dialog/languages.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/dialog/languages.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/dialog/languages.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/dialog/languages.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/dialog/languages.dialog"
       }
     },
     "languages_you_speak_keyword.voc": {
@@ -1628,7 +1628,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/vocab/languages_you_speak_keyword.voc"
+          "file_path": "locale/de-de/vocab/languages_you_speak_keyword.voc"
         },
         "en-US": {
           "entries": [
@@ -1644,7 +1644,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/vocab/languages_you_speak_keyword.voc"
+          "file_path": "locale/en-us/vocab/languages_you_speak_keyword.voc"
         },
         "eu": {
           "entries": [
@@ -1660,7 +1660,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/vocab/languages_you_speak_keyword.voc"
+          "file_path": "locale/eu/vocab/languages_you_speak_keyword.voc"
         },
         "fr-FR": {
           "entries": [
@@ -1676,7 +1676,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/vocab/languages_you_speak_keyword.voc"
+          "file_path": "locale/fr-fr/vocab/languages_you_speak_keyword.voc"
         },
         "gl-ES": {
           "entries": [
@@ -1692,7 +1692,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/vocab/languages_you_speak_keyword.voc"
+          "file_path": "locale/gl-es/vocab/languages_you_speak_keyword.voc"
         }
       },
       "context": {
@@ -1725,11 +1725,11 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"languages_you_speak_intent\")\n    .require(\"languages_you_speak_keyword\")\n    .build()\n)\ndef handle_number_of_languages_intent(self, _):\n    self.speak_dialog(\"languages\")"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/vocab/languages_you_speak_keyword.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/vocab/languages_you_speak_keyword.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/vocab/languages_you_speak_keyword.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/vocab/languages_you_speak_keyword.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/vocab/languages_you_speak_keyword.voc"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/vocab/languages_you_speak_keyword.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/vocab/languages_you_speak_keyword.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/vocab/languages_you_speak_keyword.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/vocab/languages_you_speak_keyword.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/vocab/languages_you_speak_keyword.voc"
       }
     },
     "law_keyword.voc": {
@@ -1758,7 +1758,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/vocab/law_keyword.voc"
+          "file_path": "locale/de-de/vocab/law_keyword.voc"
         },
         "eu": {
           "entries": [
@@ -1774,7 +1774,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/vocab/law_keyword.voc"
+          "file_path": "locale/eu/vocab/law_keyword.voc"
         },
         "gl-ES": {
           "entries": [
@@ -1790,7 +1790,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/vocab/law_keyword.voc"
+          "file_path": "locale/gl-es/vocab/law_keyword.voc"
         }
       },
       "context": {
@@ -1814,9 +1814,9 @@
         "handler_source": null
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/vocab/law_keyword.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/vocab/law_keyword.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/vocab/law_keyword.voc"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/vocab/law_keyword.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/vocab/law_keyword.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/vocab/law_keyword.voc"
       }
     },
     "law_of_robotics.intent": {
@@ -1863,7 +1863,7 @@
             "ordinal"
           ],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/vocab/law_of_robotics.intent"
+          "file_path": "locale/en-us/vocab/law_of_robotics.intent"
         },
         "fr-FR": {
           "entries": [
@@ -1912,7 +1912,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/vocab/law_of_robotics.intent"
+          "file_path": "locale/fr-fr/vocab/law_of_robotics.intent"
         }
       },
       "context": {
@@ -1936,10 +1936,10 @@
         ],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule2.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/invalid_law.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule3.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule1.dialog"
+          "locale/en-us/dialog/invalid_law.dialog",
+          "locale/en-us/dialog/rule2.dialog",
+          "locale/en-us/dialog/rule3.dialog",
+          "locale/en-us/dialog/rule1.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1952,8 +1952,8 @@
         "handler_source": "@intent_handler(\"law_of_robotics.intent\")\ndef handle_robotic_laws_intent(self, message: Message):\n    law = str(message.data.get(\"ordinal\", \"\"))\n    law = extract_number(law, ordinals=True, lang=self.lang)\n    self.log.debug(\"law: %s\", law)\n    if not law:\n        self.log.debug(\"No specific law detected, reciting all three\")\n        self.speak_dialog(\"rule1\")\n        self.speak_dialog(\"rule2\")\n        self.speak_dialog(\"rule3\")\n        return\n    # lingua-franca currently returns a number, but let's not trust, let's ensure\n    law = str(law)\n    if law == \"1\":\n        self.log.debug(\"First law of robotics requested\")\n        self.speak_dialog(\"rule1\")\n    elif law == \"2\":\n        self.log.debug(\"Second law of robotics requested\")\n        self.speak_dialog(\"rule2\")\n    elif law == \"3\":\n        self.log.debug(\"Third law of robotics requested\")\n        self.speak_dialog(\"rule3\")\n    else:\n        self.log.debug(\"Invalid law requested\")\n        self.speak_dialog(\"invalid_law\")"
       },
       "edit_urls": {
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/vocab/law_of_robotics.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/vocab/law_of_robotics.intent"
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/vocab/law_of_robotics.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/vocab/law_of_robotics.intent"
       }
     },
     "malibu_stacey_keyword.voc": {
@@ -2003,7 +2003,7 @@
               "line_number": 6
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/vocab/malibu_stacey_keyword.voc"
+          "file_path": "locale/en-us/vocab/malibu_stacey_keyword.voc"
         },
         "eu": {
           "entries": [
@@ -2048,7 +2048,7 @@
               "line_number": 6
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/vocab/malibu_stacey_keyword.voc"
+          "file_path": "locale/eu/vocab/malibu_stacey_keyword.voc"
         },
         "fr-FR": {
           "entries": [
@@ -2064,7 +2064,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/vocab/malibu_stacey_keyword.voc"
+          "file_path": "locale/fr-fr/vocab/malibu_stacey_keyword.voc"
         },
         "gl-ES": {
           "entries": [
@@ -2109,7 +2109,7 @@
               "line_number": 6
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/vocab/malibu_stacey_keyword.voc"
+          "file_path": "locale/gl-es/vocab/malibu_stacey_keyword.voc"
         }
       },
       "context": {
@@ -2142,10 +2142,10 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"malibu_stacey_intent\").require(\"malibu_stacey_keyword\").build()\n)\ndef handle_malibu_stacey_intent(self, _):\n    path, files = self.get_reference_files(\"sounds/malibustacey\", \"mp3\")\n    if len(files):\n        mp3 = path + \"/\" + random.choice(files)\n        self.play_audio(filename=mp3)\n    else:\n        self.speak_dialog(\"bad_file\")"
       },
       "edit_urls": {
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/vocab/malibu_stacey_keyword.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/vocab/malibu_stacey_keyword.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/vocab/malibu_stacey_keyword.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/vocab/malibu_stacey_keyword.voc"
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/vocab/malibu_stacey_keyword.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/vocab/malibu_stacey_keyword.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/vocab/malibu_stacey_keyword.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/vocab/malibu_stacey_keyword.voc"
       }
     },
     "pod.dialog": {
@@ -2169,7 +2169,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/dialog/pod.dialog"
+          "file_path": "locale/de-de/dialog/pod.dialog"
         },
         "en-US": {
           "entries": [
@@ -2188,7 +2188,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/dialog/pod.dialog"
+          "file_path": "locale/en-us/dialog/pod.dialog"
         },
         "eu": {
           "entries": [
@@ -2207,7 +2207,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/dialog/pod.dialog"
+          "file_path": "locale/eu/dialog/pod.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -2226,7 +2226,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/dialog/pod.dialog"
+          "file_path": "locale/fr-fr/dialog/pod.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -2245,7 +2245,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/dialog/pod.dialog"
+          "file_path": "locale/gl-es/dialog/pod.dialog"
         }
       },
       "context": {
@@ -2269,11 +2269,11 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"pod_bay_doors_intent\").require(\"pod_bay_doors_keyword\").build()\n)\ndef handle_pod_intent(self, _):\n    self.speak_dialog(\"pod\")"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/dialog/pod.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/dialog/pod.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/dialog/pod.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/dialog/pod.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/dialog/pod.dialog"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/dialog/pod.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/dialog/pod.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/dialog/pod.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/dialog/pod.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/dialog/pod.dialog"
       }
     },
     "pod_bay_doors_keyword.voc": {
@@ -2294,7 +2294,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/vocab/pod_bay_doors_keyword.voc"
+          "file_path": "locale/de-de/vocab/pod_bay_doors_keyword.voc"
         },
         "en-US": {
           "entries": [
@@ -2310,7 +2310,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/vocab/pod_bay_doors_keyword.voc"
+          "file_path": "locale/en-us/vocab/pod_bay_doors_keyword.voc"
         },
         "eu": {
           "entries": [
@@ -2326,7 +2326,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/vocab/pod_bay_doors_keyword.voc"
+          "file_path": "locale/eu/vocab/pod_bay_doors_keyword.voc"
         },
         "fr-FR": {
           "entries": [
@@ -2355,7 +2355,7 @@
               "line_number": 2
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/vocab/pod_bay_doors_keyword.voc"
+          "file_path": "locale/fr-fr/vocab/pod_bay_doors_keyword.voc"
         },
         "gl-ES": {
           "entries": [
@@ -2384,7 +2384,7 @@
               "line_number": 2
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/vocab/pod_bay_doors_keyword.voc"
+          "file_path": "locale/gl-es/vocab/pod_bay_doors_keyword.voc"
         }
       },
       "context": {
@@ -2417,11 +2417,11 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"pod_bay_doors_intent\").require(\"pod_bay_doors_keyword\").build()\n)\ndef handle_pod_intent(self, _):\n    self.speak_dialog(\"pod\")"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/vocab/pod_bay_doors_keyword.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/vocab/pod_bay_doors_keyword.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/vocab/pod_bay_doors_keyword.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/vocab/pod_bay_doors_keyword.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/vocab/pod_bay_doors_keyword.voc"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/vocab/pod_bay_doors_keyword.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/vocab/pod_bay_doors_keyword.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/vocab/pod_bay_doors_keyword.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/vocab/pod_bay_doors_keyword.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/vocab/pod_bay_doors_keyword.voc"
       }
     },
     "portal_keyword.voc": {
@@ -2474,7 +2474,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/vocab/portal_keyword.voc"
+          "file_path": "locale/de-de/vocab/portal_keyword.voc"
         },
         "en-US": {
           "entries": [
@@ -2526,7 +2526,7 @@
           "line_count": 11,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/vocab/portal_keyword.voc"
+          "file_path": "locale/en-us/vocab/portal_keyword.voc"
         },
         "eu": {
           "entries": [
@@ -2578,7 +2578,7 @@
           "line_count": 11,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/vocab/portal_keyword.voc"
+          "file_path": "locale/eu/vocab/portal_keyword.voc"
         },
         "fr-FR": {
           "entries": [
@@ -2602,7 +2602,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/vocab/portal_keyword.voc"
+          "file_path": "locale/fr-fr/vocab/portal_keyword.voc"
         },
         "gl-ES": {
           "entries": [
@@ -2654,7 +2654,7 @@
           "line_count": 11,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/vocab/portal_keyword.voc"
+          "file_path": "locale/gl-es/vocab/portal_keyword.voc"
         }
       },
       "context": {
@@ -2687,11 +2687,11 @@
         "handler_source": "@intent_handler(IntentBuilder(\"portal_intent\").require(\"portal_keyword\").build())\ndef handle_portal_intent(self, _):\n    path, files = self.get_reference_files(\"sounds/portal\", \"mp3\")\n    if len(files):\n        mp3 = path + \"/\" + random.choice(files)\n        self._play_in_ocp(mp3, title=\"Portal Easter Egg\")\n    else:\n        self.speak_dialog(\"bad_file\")"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/vocab/portal_keyword.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/vocab/portal_keyword.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/vocab/portal_keyword.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/vocab/portal_keyword.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/vocab/portal_keyword.voc"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/vocab/portal_keyword.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/vocab/portal_keyword.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/vocab/portal_keyword.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/vocab/portal_keyword.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/vocab/portal_keyword.voc"
       }
     },
     "robotics_keyword.voc": {
@@ -2712,7 +2712,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/vocab/robotics_keyword.voc"
+          "file_path": "locale/de-de/vocab/robotics_keyword.voc"
         },
         "eu": {
           "entries": [
@@ -2728,7 +2728,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/vocab/robotics_keyword.voc"
+          "file_path": "locale/eu/vocab/robotics_keyword.voc"
         },
         "gl-ES": {
           "entries": [
@@ -2744,7 +2744,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/vocab/robotics_keyword.voc"
+          "file_path": "locale/gl-es/vocab/robotics_keyword.voc"
         }
       },
       "context": {
@@ -2768,9 +2768,9 @@
         "handler_source": null
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/vocab/robotics_keyword.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/vocab/robotics_keyword.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/vocab/robotics_keyword.voc"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/vocab/robotics_keyword.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/vocab/robotics_keyword.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/vocab/robotics_keyword.voc"
       }
     },
     "rock_paper_scissors_lizard_spock.dialog": {
@@ -2794,7 +2794,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/dialog/rock_paper_scissors_lizard_spock.dialog"
+          "file_path": "locale/de-de/dialog/rock_paper_scissors_lizard_spock.dialog"
         },
         "en-US": {
           "entries": [
@@ -2813,7 +2813,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/dialog/rock_paper_scissors_lizard_spock.dialog"
+          "file_path": "locale/en-us/dialog/rock_paper_scissors_lizard_spock.dialog"
         },
         "eu": {
           "entries": [
@@ -2832,7 +2832,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/dialog/rock_paper_scissors_lizard_spock.dialog"
+          "file_path": "locale/eu/dialog/rock_paper_scissors_lizard_spock.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -2851,7 +2851,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/dialog/rock_paper_scissors_lizard_spock.dialog"
+          "file_path": "locale/fr-fr/dialog/rock_paper_scissors_lizard_spock.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -2870,7 +2870,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/dialog/rock_paper_scissors_lizard_spock.dialog"
+          "file_path": "locale/gl-es/dialog/rock_paper_scissors_lizard_spock.dialog"
         }
       },
       "context": {
@@ -2894,11 +2894,11 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"rock_paper_scissors_lizard_spock_intent\")\n    .require(\"rock_paper_scissors_lizard_spock_keyword\")\n    .build()\n)\ndef handle_rock_paper_scissors_lizard_spock_intent(self, _):\n    self.speak_dialog(\"rock_paper_scissors_lizard_spock\")"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/dialog/rock_paper_scissors_lizard_spock.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/dialog/rock_paper_scissors_lizard_spock.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/dialog/rock_paper_scissors_lizard_spock.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/dialog/rock_paper_scissors_lizard_spock.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/dialog/rock_paper_scissors_lizard_spock.dialog"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/dialog/rock_paper_scissors_lizard_spock.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/dialog/rock_paper_scissors_lizard_spock.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/dialog/rock_paper_scissors_lizard_spock.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/dialog/rock_paper_scissors_lizard_spock.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/dialog/rock_paper_scissors_lizard_spock.dialog"
       }
     },
     "rock_paper_scissors_lizard_spock_keyword.voc": {
@@ -2915,7 +2915,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/vocab/rock_paper_scissors_lizard_spock_keyword.voc"
+          "file_path": "locale/de-de/vocab/rock_paper_scissors_lizard_spock_keyword.voc"
         },
         "en-US": {
           "entries": [
@@ -2927,7 +2927,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/vocab/rock_paper_scissors_lizard_spock_keyword.voc"
+          "file_path": "locale/en-us/vocab/rock_paper_scissors_lizard_spock_keyword.voc"
         },
         "eu": {
           "entries": [
@@ -2939,7 +2939,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/vocab/rock_paper_scissors_lizard_spock_keyword.voc"
+          "file_path": "locale/eu/vocab/rock_paper_scissors_lizard_spock_keyword.voc"
         },
         "fr-FR": {
           "entries": [
@@ -2951,7 +2951,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/vocab/rock_paper_scissors_lizard_spock_keyword.voc"
+          "file_path": "locale/fr-fr/vocab/rock_paper_scissors_lizard_spock_keyword.voc"
         },
         "gl-ES": {
           "entries": [
@@ -2963,7 +2963,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/vocab/rock_paper_scissors_lizard_spock_keyword.voc"
+          "file_path": "locale/gl-es/vocab/rock_paper_scissors_lizard_spock_keyword.voc"
         }
       },
       "context": {
@@ -2996,11 +2996,11 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"rock_paper_scissors_lizard_spock_intent\")\n    .require(\"rock_paper_scissors_lizard_spock_keyword\")\n    .build()\n)\ndef handle_rock_paper_scissors_lizard_spock_intent(self, _):\n    self.speak_dialog(\"rock_paper_scissors_lizard_spock\")"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/vocab/rock_paper_scissors_lizard_spock_keyword.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/vocab/rock_paper_scissors_lizard_spock_keyword.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/vocab/rock_paper_scissors_lizard_spock_keyword.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/vocab/rock_paper_scissors_lizard_spock_keyword.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/vocab/rock_paper_scissors_lizard_spock_keyword.voc"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/vocab/rock_paper_scissors_lizard_spock_keyword.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/vocab/rock_paper_scissors_lizard_spock_keyword.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/vocab/rock_paper_scissors_lizard_spock_keyword.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/vocab/rock_paper_scissors_lizard_spock_keyword.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/vocab/rock_paper_scissors_lizard_spock_keyword.voc"
       }
     },
     "rule0.dialog": {
@@ -3024,7 +3024,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/dialog/rule0.dialog"
+          "file_path": "locale/en-us/dialog/rule0.dialog"
         },
         "eu": {
           "entries": [
@@ -3043,7 +3043,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/dialog/rule0.dialog"
+          "file_path": "locale/eu/dialog/rule0.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -3062,7 +3062,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/dialog/rule0.dialog"
+          "file_path": "locale/fr-fr/dialog/rule0.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -3081,7 +3081,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/dialog/rule0.dialog"
+          "file_path": "locale/gl-es/dialog/rule0.dialog"
         }
       },
       "context": {
@@ -3105,10 +3105,10 @@
         "handler_source": null
       },
       "edit_urls": {
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/dialog/rule0.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/dialog/rule0.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/dialog/rule0.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/dialog/rule0.dialog"
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/dialog/rule0.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/dialog/rule0.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/dialog/rule0.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/dialog/rule0.dialog"
       }
     },
     "rule1.dialog": {
@@ -3132,7 +3132,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/dialog/rule1.dialog"
+          "file_path": "locale/de-de/dialog/rule1.dialog"
         },
         "en-US": {
           "entries": [
@@ -3151,7 +3151,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/dialog/rule1.dialog"
+          "file_path": "locale/en-us/dialog/rule1.dialog"
         },
         "eu": {
           "entries": [
@@ -3170,7 +3170,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/dialog/rule1.dialog"
+          "file_path": "locale/eu/dialog/rule1.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -3189,7 +3189,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/dialog/rule1.dialog"
+          "file_path": "locale/fr-fr/dialog/rule1.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -3208,7 +3208,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/dialog/rule1.dialog"
+          "file_path": "locale/gl-es/dialog/rule1.dialog"
         }
       },
       "context": {
@@ -3222,9 +3222,9 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule2.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/invalid_law.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule3.dialog"
+          "locale/en-us/dialog/invalid_law.dialog",
+          "locale/en-us/dialog/rule2.dialog",
+          "locale/en-us/dialog/rule3.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -3236,11 +3236,11 @@
         "handler_source": "@intent_handler(\"law_of_robotics.intent\")\ndef handle_robotic_laws_intent(self, message: Message):\n    law = str(message.data.get(\"ordinal\", \"\"))\n    law = extract_number(law, ordinals=True, lang=self.lang)\n    self.log.debug(\"law: %s\", law)\n    if not law:\n        self.log.debug(\"No specific law detected, reciting all three\")\n        self.speak_dialog(\"rule1\")\n        self.speak_dialog(\"rule2\")\n        self.speak_dialog(\"rule3\")\n        return\n    # lingua-franca currently returns a number, but let's not trust, let's ensure\n    law = str(law)\n    if law == \"1\":\n        self.log.debug(\"First law of robotics requested\")\n        self.speak_dialog(\"rule1\")\n    elif law == \"2\":\n        self.log.debug(\"Second law of robotics requested\")\n        self.speak_dialog(\"rule2\")\n    elif law == \"3\":\n        self.log.debug(\"Third law of robotics requested\")\n        self.speak_dialog(\"rule3\")\n    else:\n        self.log.debug(\"Invalid law requested\")\n        self.speak_dialog(\"invalid_law\")"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/dialog/rule1.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/dialog/rule1.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/dialog/rule1.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/dialog/rule1.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/dialog/rule1.dialog"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/dialog/rule1.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/dialog/rule1.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/dialog/rule1.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/dialog/rule1.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/dialog/rule1.dialog"
       }
     },
     "rule2.dialog": {
@@ -3264,7 +3264,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/dialog/rule2.dialog"
+          "file_path": "locale/de-de/dialog/rule2.dialog"
         },
         "en-US": {
           "entries": [
@@ -3283,7 +3283,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/dialog/rule2.dialog"
+          "file_path": "locale/en-us/dialog/rule2.dialog"
         },
         "eu": {
           "entries": [
@@ -3302,7 +3302,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/dialog/rule2.dialog"
+          "file_path": "locale/eu/dialog/rule2.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -3321,7 +3321,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/dialog/rule2.dialog"
+          "file_path": "locale/fr-fr/dialog/rule2.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -3340,7 +3340,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/dialog/rule2.dialog"
+          "file_path": "locale/gl-es/dialog/rule2.dialog"
         }
       },
       "context": {
@@ -3354,9 +3354,9 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-easter-eggs/locale/en-us/dialog/invalid_law.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule3.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule1.dialog"
+          "locale/en-us/dialog/invalid_law.dialog",
+          "locale/en-us/dialog/rule3.dialog",
+          "locale/en-us/dialog/rule1.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -3368,11 +3368,11 @@
         "handler_source": "@intent_handler(\"law_of_robotics.intent\")\ndef handle_robotic_laws_intent(self, message: Message):\n    law = str(message.data.get(\"ordinal\", \"\"))\n    law = extract_number(law, ordinals=True, lang=self.lang)\n    self.log.debug(\"law: %s\", law)\n    if not law:\n        self.log.debug(\"No specific law detected, reciting all three\")\n        self.speak_dialog(\"rule1\")\n        self.speak_dialog(\"rule2\")\n        self.speak_dialog(\"rule3\")\n        return\n    # lingua-franca currently returns a number, but let's not trust, let's ensure\n    law = str(law)\n    if law == \"1\":\n        self.log.debug(\"First law of robotics requested\")\n        self.speak_dialog(\"rule1\")\n    elif law == \"2\":\n        self.log.debug(\"Second law of robotics requested\")\n        self.speak_dialog(\"rule2\")\n    elif law == \"3\":\n        self.log.debug(\"Third law of robotics requested\")\n        self.speak_dialog(\"rule3\")\n    else:\n        self.log.debug(\"Invalid law requested\")\n        self.speak_dialog(\"invalid_law\")"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/dialog/rule2.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/dialog/rule2.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/dialog/rule2.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/dialog/rule2.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/dialog/rule2.dialog"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/dialog/rule2.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/dialog/rule2.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/dialog/rule2.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/dialog/rule2.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/dialog/rule2.dialog"
       }
     },
     "rule3.dialog": {
@@ -3396,7 +3396,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/dialog/rule3.dialog"
+          "file_path": "locale/de-de/dialog/rule3.dialog"
         },
         "en-US": {
           "entries": [
@@ -3415,7 +3415,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/dialog/rule3.dialog"
+          "file_path": "locale/en-us/dialog/rule3.dialog"
         },
         "eu": {
           "entries": [
@@ -3434,7 +3434,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/dialog/rule3.dialog"
+          "file_path": "locale/eu/dialog/rule3.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -3453,7 +3453,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/dialog/rule3.dialog"
+          "file_path": "locale/fr-fr/dialog/rule3.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -3472,7 +3472,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/dialog/rule3.dialog"
+          "file_path": "locale/gl-es/dialog/rule3.dialog"
         }
       },
       "context": {
@@ -3486,9 +3486,9 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule2.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/invalid_law.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule1.dialog"
+          "locale/en-us/dialog/invalid_law.dialog",
+          "locale/en-us/dialog/rule2.dialog",
+          "locale/en-us/dialog/rule1.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -3500,11 +3500,11 @@
         "handler_source": "@intent_handler(\"law_of_robotics.intent\")\ndef handle_robotic_laws_intent(self, message: Message):\n    law = str(message.data.get(\"ordinal\", \"\"))\n    law = extract_number(law, ordinals=True, lang=self.lang)\n    self.log.debug(\"law: %s\", law)\n    if not law:\n        self.log.debug(\"No specific law detected, reciting all three\")\n        self.speak_dialog(\"rule1\")\n        self.speak_dialog(\"rule2\")\n        self.speak_dialog(\"rule3\")\n        return\n    # lingua-franca currently returns a number, but let's not trust, let's ensure\n    law = str(law)\n    if law == \"1\":\n        self.log.debug(\"First law of robotics requested\")\n        self.speak_dialog(\"rule1\")\n    elif law == \"2\":\n        self.log.debug(\"Second law of robotics requested\")\n        self.speak_dialog(\"rule2\")\n    elif law == \"3\":\n        self.log.debug(\"Third law of robotics requested\")\n        self.speak_dialog(\"rule3\")\n    else:\n        self.log.debug(\"Invalid law requested\")\n        self.speak_dialog(\"invalid_law\")"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/dialog/rule3.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/dialog/rule3.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/dialog/rule3.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/dialog/rule3.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/dialog/rule3.dialog"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/dialog/rule3.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/dialog/rule3.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/dialog/rule3.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/dialog/rule3.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/dialog/rule3.dialog"
       }
     },
     "santa.dialog": {
@@ -3525,7 +3525,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/dialog/santa.dialog"
+          "file_path": "locale/en-us/dialog/santa.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -3541,7 +3541,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/dialog/santa.dialog"
+          "file_path": "locale/fr-fr/dialog/santa.dialog"
         }
       },
       "context": {
@@ -3565,8 +3565,8 @@
         "handler_source": "def handle_christmas_day(self, _: Message):\n    # Mark 1\n    FallingDots(bus=self.bus).run()\n    # GUI\n    if self.gui:\n        self.gui.show_text(ASCII_SNOW)\n    self.speak_dialog(\"santa\")"
       },
       "edit_urls": {
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/dialog/santa.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/dialog/santa.dialog"
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/dialog/santa.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/dialog/santa.dialog"
       }
     },
     "sing_keyword.voc": {
@@ -3587,7 +3587,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/vocab/sing_keyword.voc"
+          "file_path": "locale/en-us/vocab/sing_keyword.voc"
         },
         "fr-FR": {
           "entries": [
@@ -3603,7 +3603,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/vocab/sing_keyword.voc"
+          "file_path": "locale/fr-fr/vocab/sing_keyword.voc"
         }
       },
       "context": {
@@ -3636,8 +3636,8 @@
         "handler_source": "@intent_handler(IntentBuilder(\"sing_intent\").require(\"sing_keyword\").build())\ndef handle_sing_intent(self, _):\n    if not self._sounds_like_popey():\n        confirm = self.ask_yesno(\"too_shy\")\n        if confirm == \"no\":\n            return\n    self.speak_dialog(\"singing\", wait=5)\n    path, files = self.get_reference_files(\"sounds/sing\", \"mp3\")\n    if len(files):\n        mp3 = path + \"/\" + random.choice(files)\n        self.play_audio(filename=mp3)\n    else:\n        self.speak_dialog(\"bad_file\")"
       },
       "edit_urls": {
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/vocab/sing_keyword.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/vocab/sing_keyword.voc"
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/vocab/sing_keyword.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/vocab/sing_keyword.voc"
       }
     },
     "singing.dialog": {
@@ -3662,7 +3662,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/dialog/singing.dialog"
+          "file_path": "locale/en-us/dialog/singing.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -3682,7 +3682,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/dialog/singing.dialog"
+          "file_path": "locale/fr-fr/dialog/singing.dialog"
         }
       },
       "context": {
@@ -3696,7 +3696,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-easter-eggs/locale/en-us/dialog/bad_file.dialog"
+          "locale/en-us/dialog/bad_file.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -3708,8 +3708,8 @@
         "handler_source": "@intent_handler(IntentBuilder(\"sing_intent\").require(\"sing_keyword\").build())\ndef handle_sing_intent(self, _):\n    if not self._sounds_like_popey():\n        confirm = self.ask_yesno(\"too_shy\")\n        if confirm == \"no\":\n            return\n    self.speak_dialog(\"singing\", wait=5)\n    path, files = self.get_reference_files(\"sounds/sing\", \"mp3\")\n    if len(files):\n        mp3 = path + \"/\" + random.choice(files)\n        self.play_audio(filename=mp3)\n    else:\n        self.speak_dialog(\"bad_file\")"
       },
       "edit_urls": {
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/dialog/singing.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/dialog/singing.dialog"
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/dialog/singing.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/dialog/singing.dialog"
       }
     },
     "stardate.dialog": {
@@ -3734,7 +3734,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/dialog/stardate.dialog"
+          "file_path": "locale/de-de/dialog/stardate.dialog"
         },
         "en-US": {
           "entries": [
@@ -3754,7 +3754,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/dialog/stardate.dialog"
+          "file_path": "locale/en-us/dialog/stardate.dialog"
         },
         "eu": {
           "entries": [
@@ -3774,7 +3774,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/dialog/stardate.dialog"
+          "file_path": "locale/eu/dialog/stardate.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -3794,7 +3794,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/dialog/stardate.dialog"
+          "file_path": "locale/fr-fr/dialog/stardate.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -3814,7 +3814,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/dialog/stardate.dialog"
+          "file_path": "locale/gl-es/dialog/stardate.dialog"
         }
       },
       "context": {
@@ -3840,11 +3840,11 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"stardate_intent\").require(\"stardate_keyword\").build()\n)\ndef handle_stardate_intent(self, _):\n    spoken_stardate = self._create_spoken_stardate()\n    self.speak_dialog(\"stardate\", {\"stardate\": spoken_stardate})"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/dialog/stardate.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/dialog/stardate.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/dialog/stardate.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/dialog/stardate.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/dialog/stardate.dialog"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/dialog/stardate.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/dialog/stardate.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/dialog/stardate.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/dialog/stardate.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/dialog/stardate.dialog"
       }
     },
     "stardate_keyword.voc": {
@@ -3865,7 +3865,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/de-de/vocab/stardate_keyword.voc"
+          "file_path": "locale/de-de/vocab/stardate_keyword.voc"
         },
         "en-US": {
           "entries": [
@@ -3905,7 +3905,7 @@
           "line_count": 8,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/vocab/stardate_keyword.voc"
+          "file_path": "locale/en-us/vocab/stardate_keyword.voc"
         },
         "eu": {
           "entries": [
@@ -3945,7 +3945,7 @@
           "line_count": 8,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/eu/vocab/stardate_keyword.voc"
+          "file_path": "locale/eu/vocab/stardate_keyword.voc"
         },
         "fr-FR": {
           "entries": [
@@ -3961,7 +3961,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/vocab/stardate_keyword.voc"
+          "file_path": "locale/fr-fr/vocab/stardate_keyword.voc"
         },
         "gl-ES": {
           "entries": [
@@ -4001,7 +4001,7 @@
           "line_count": 8,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-easter-eggs/locale/gl-es/vocab/stardate_keyword.voc"
+          "file_path": "locale/gl-es/vocab/stardate_keyword.voc"
         }
       },
       "context": {
@@ -4034,11 +4034,11 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"stardate_intent\").require(\"stardate_keyword\").build()\n)\ndef handle_stardate_intent(self, _):\n    spoken_stardate = self._create_spoken_stardate()\n    self.speak_dialog(\"stardate\", {\"stardate\": spoken_stardate})"
       },
       "edit_urls": {
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/de-de/vocab/stardate_keyword.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/vocab/stardate_keyword.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/eu/vocab/stardate_keyword.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/vocab/stardate_keyword.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/gl-es/vocab/stardate_keyword.voc"
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/de-de/vocab/stardate_keyword.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/vocab/stardate_keyword.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/eu/vocab/stardate_keyword.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/vocab/stardate_keyword.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/gl-es/vocab/stardate_keyword.voc"
       }
     },
     "too_shy.dialog": {
@@ -4062,7 +4062,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/en-us/dialog/too_shy.dialog"
+          "file_path": "locale/en-us/dialog/too_shy.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -4081,7 +4081,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-easter-eggs/locale/fr-fr/dialog/too_shy.dialog"
+          "file_path": "locale/fr-fr/dialog/too_shy.dialog"
         }
       },
       "context": {
@@ -4095,8 +4095,8 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-easter-eggs/locale/en-us/dialog/bad_file.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/singing.dialog"
+          "locale/en-us/dialog/bad_file.dialog",
+          "locale/en-us/dialog/singing.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -4108,8 +4108,8 @@
         "handler_source": "@intent_handler(IntentBuilder(\"sing_intent\").require(\"sing_keyword\").build())\ndef handle_sing_intent(self, _):\n    if not self._sounds_like_popey():\n        confirm = self.ask_yesno(\"too_shy\")\n        if confirm == \"no\":\n            return\n    self.speak_dialog(\"singing\", wait=5)\n    path, files = self.get_reference_files(\"sounds/sing\", \"mp3\")\n    if len(files):\n        mp3 = path + \"/\" + random.choice(files)\n        self.play_audio(filename=mp3)\n    else:\n        self.speak_dialog(\"bad_file\")"
       },
       "edit_urls": {
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/en-us/dialog/too_shy.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/ovos-skill-easter-eggs/locale/fr-fr/dialog/too_shy.dialog"
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/en-us/dialog/too_shy.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-easter-eggs/edit/dev/locale/fr-fr/dialog/too_shy.dialog"
       }
     }
   }

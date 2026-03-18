@@ -41,7 +41,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/ca-es/IP.voc"
+          "file_path": "locale/ca-es/IP.voc"
         },
         "cs-CZ": {
           "entries": [
@@ -69,7 +69,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/cs-cz/IP.voc"
+          "file_path": "locale/cs-cz/IP.voc"
         },
         "da-DK": {
           "entries": [
@@ -89,7 +89,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/da-dk/IP.voc"
+          "file_path": "locale/da-dk/IP.voc"
         },
         "de-DE": {
           "entries": [
@@ -121,7 +121,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/de-de/IP.voc"
+          "file_path": "locale/de-de/IP.voc"
         },
         "en-US": {
           "entries": [
@@ -141,7 +141,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/en-us/IP.voc"
+          "file_path": "locale/en-us/IP.voc"
         },
         "es-ES": {
           "entries": [
@@ -161,7 +161,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/es-es/IP.voc"
+          "file_path": "locale/es-es/IP.voc"
         },
         "eu-EU": {
           "entries": [
@@ -181,7 +181,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/eu-eu/IP.voc"
+          "file_path": "locale/eu-eu/IP.voc"
         },
         "gl-ES": {
           "entries": [
@@ -201,7 +201,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/gl-es/IP.voc"
+          "file_path": "locale/gl-es/IP.voc"
         },
         "it-IT": {
           "entries": [
@@ -221,7 +221,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/it-it/IP.voc"
+          "file_path": "locale/it-it/IP.voc"
         },
         "pl-PL": {
           "entries": [
@@ -249,7 +249,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pl-pl/IP.voc"
+          "file_path": "locale/pl-pl/IP.voc"
         },
         "pt-BR": {
           "entries": [
@@ -269,7 +269,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pt-br/IP.voc"
+          "file_path": "locale/pt-br/IP.voc"
         },
         "pt-PT": {
           "entries": [
@@ -289,7 +289,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pt-pt/IP.voc"
+          "file_path": "locale/pt-pt/IP.voc"
         },
         "sv-SE": {
           "entries": [
@@ -309,7 +309,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/sv-se/IP.voc"
+          "file_path": "locale/sv-se/IP.voc"
         }
       },
       "context": {
@@ -344,19 +344,19 @@
         "handler_source": "@intent_handler(IntentBuilder(\"IPIntent\").require(\"query\").require(\"IP\"))\ndef handle_query_IP(self, message):\n    addr = get_ifaces()\n    dot = self.dialog_renderer.render(\"dot\")\n\n    if len(addr) == 0:\n        self.speak_dialog(\"no network connection\")\n        return\n    elif len(addr) == 1:\n        self.enclosure.deactivate_mouth_events()\n        iface, ip = addr.popitem()\n        self.gui_show(ip)\n        ip_spoken = ip.replace(\".\", \" \" + dot + \" \")\n        self.speak_dialog(\"my address is\",\n                          {'ip': ip_spoken}, wait=True)\n    else:\n        self.enclosure.deactivate_mouth_events()\n        for iface in addr:\n            ip = addr[iface]\n            self.gui_show(ip)\n            ip_spoken = ip.replace(\".\", \" \" + dot + \" \")\n            self.speak_dialog(\"my address on X is Y\",\n                              {'interface': iface, 'ip': ip_spoken},\n                              wait=True)\n\n    self.enclosure.activate_mouth_events()\n    self.enclosure.mouth_reset()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/ca-es/IP.voc",
-        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/cs-cz/IP.voc",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/da-dk/IP.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/de-de/IP.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/en-us/IP.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/es-es/IP.voc",
-        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/eu-eu/IP.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/gl-es/IP.voc",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/it-it/IP.voc",
-        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pl-pl/IP.voc",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pt-br/IP.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pt-pt/IP.voc",
-        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/sv-se/IP.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/ca-es/IP.voc",
+        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/cs-cz/IP.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/da-dk/IP.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/de-de/IP.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/en-us/IP.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/es-es/IP.voc",
+        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/eu-eu/IP.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/gl-es/IP.voc",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/it-it/IP.voc",
+        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pl-pl/IP.voc",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pt-br/IP.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pt-pt/IP.voc",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/sv-se/IP.voc"
       }
     },
     "digits.voc": {
@@ -389,7 +389,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/ca-es/digits.voc"
+          "file_path": "locale/ca-es/digits.voc"
         },
         "cs-CZ": {
           "entries": [
@@ -413,7 +413,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/cs-cz/digits.voc"
+          "file_path": "locale/cs-cz/digits.voc"
         },
         "da-DK": {
           "entries": [
@@ -441,7 +441,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/da-dk/digits.voc"
+          "file_path": "locale/da-dk/digits.voc"
         },
         "de-DE": {
           "entries": [
@@ -501,7 +501,7 @@
           "line_count": 13,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/de-de/digits.voc"
+          "file_path": "locale/de-de/digits.voc"
         },
         "en-US": {
           "entries": [
@@ -529,7 +529,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/en-us/digits.voc"
+          "file_path": "locale/en-us/digits.voc"
         },
         "es-ES": {
           "entries": [
@@ -557,7 +557,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/es-es/digits.voc"
+          "file_path": "locale/es-es/digits.voc"
         },
         "eu-EU": {
           "entries": [
@@ -585,7 +585,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/eu-eu/digits.voc"
+          "file_path": "locale/eu-eu/digits.voc"
         },
         "gl-ES": {
           "entries": [
@@ -613,7 +613,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/gl-es/digits.voc"
+          "file_path": "locale/gl-es/digits.voc"
         },
         "pl-PL": {
           "entries": [
@@ -641,7 +641,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pl-pl/digits.voc"
+          "file_path": "locale/pl-pl/digits.voc"
         },
         "pt-BR": {
           "entries": [
@@ -669,7 +669,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pt-br/digits.voc"
+          "file_path": "locale/pt-br/digits.voc"
         },
         "pt-PT": {
           "entries": [
@@ -697,7 +697,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pt-pt/digits.voc"
+          "file_path": "locale/pt-pt/digits.voc"
         }
       },
       "context": {
@@ -734,17 +734,17 @@
         "handler_source": "@intent_handler(IntentBuilder(\"LastIPDigitsIntent\").require(\"query\").require(\"IP\")\n                .require(\"last\").optionally(\"digits\"))\ndef handle_query_last_part_IP(self, message):\n    ip = None\n    addr = get_ifaces()\n    if len(addr) == 0:\n        self.speak_dialog(\"no network connection\")\n        return\n\n    self.enclosure.deactivate_mouth_events()\n    if \"wlan0\" in addr:\n        # Wifi is probably the one we're looking for\n        ip = addr['wlan0']\n    elif \"eth0\" in addr:\n        # If there's no wifi report the eth0\n        ip = addr['eth0']\n    elif len(addr) == 1:\n        # If none of the above matches and there's only one device\n        ip = list(addr.values())[0]\n\n    if ip:\n        self.gui_show(ip)\n        self.speak_last_digits(ip)\n    else:\n        # Ok now I don't know, I'll just report them all\n        self.speak_multiple_last_digits(addr)\n\n    self.enclosure.activate_mouth_events()\n    self.enclosure.mouth_reset()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/ca-es/digits.voc",
-        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/cs-cz/digits.voc",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/da-dk/digits.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/de-de/digits.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/en-us/digits.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/es-es/digits.voc",
-        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/eu-eu/digits.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/gl-es/digits.voc",
-        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pl-pl/digits.voc",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pt-br/digits.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pt-pt/digits.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/ca-es/digits.voc",
+        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/cs-cz/digits.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/da-dk/digits.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/de-de/digits.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/en-us/digits.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/es-es/digits.voc",
+        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/eu-eu/digits.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/gl-es/digits.voc",
+        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pl-pl/digits.voc",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pt-br/digits.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pt-pt/digits.voc"
       }
     },
     "dot.dialog": {
@@ -768,7 +768,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/ca-es/dot.dialog"
+          "file_path": "locale/ca-es/dot.dialog"
         },
         "cs-CZ": {
           "entries": [
@@ -787,7 +787,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/cs-cz/dot.dialog"
+          "file_path": "locale/cs-cz/dot.dialog"
         },
         "da-DK": {
           "entries": [
@@ -806,7 +806,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/da-dk/dot.dialog"
+          "file_path": "locale/da-dk/dot.dialog"
         },
         "de-DE": {
           "entries": [
@@ -825,7 +825,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/de-de/dot.dialog"
+          "file_path": "locale/de-de/dot.dialog"
         },
         "en-US": {
           "entries": [
@@ -844,7 +844,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/en-us/dot.dialog"
+          "file_path": "locale/en-us/dot.dialog"
         },
         "es-ES": {
           "entries": [
@@ -863,7 +863,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/es-es/dot.dialog"
+          "file_path": "locale/es-es/dot.dialog"
         },
         "eu-EU": {
           "entries": [
@@ -882,7 +882,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/eu-eu/dot.dialog"
+          "file_path": "locale/eu-eu/dot.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -901,7 +901,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/gl-es/dot.dialog"
+          "file_path": "locale/gl-es/dot.dialog"
         },
         "it-IT": {
           "entries": [
@@ -920,7 +920,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/it-it/dot.dialog"
+          "file_path": "locale/it-it/dot.dialog"
         },
         "pl-PL": {
           "entries": [
@@ -939,7 +939,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/pl-pl/dot.dialog"
+          "file_path": "locale/pl-pl/dot.dialog"
         },
         "pt-BR": {
           "entries": [
@@ -958,7 +958,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/pt-br/dot.dialog"
+          "file_path": "locale/pt-br/dot.dialog"
         },
         "sv-SE": {
           "entries": [
@@ -977,7 +977,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/sv-se/dot.dialog"
+          "file_path": "locale/sv-se/dot.dialog"
         }
       },
       "context": {
@@ -1001,18 +1001,18 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/ca-es/dot.dialog",
-        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/cs-cz/dot.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/da-dk/dot.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/de-de/dot.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/en-us/dot.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/es-es/dot.dialog",
-        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/eu-eu/dot.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/gl-es/dot.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/it-it/dot.dialog",
-        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pl-pl/dot.dialog",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pt-br/dot.dialog",
-        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/sv-se/dot.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/ca-es/dot.dialog",
+        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/cs-cz/dot.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/da-dk/dot.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/de-de/dot.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/en-us/dot.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/es-es/dot.dialog",
+        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/eu-eu/dot.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/gl-es/dot.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/it-it/dot.dialog",
+        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pl-pl/dot.dialog",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pt-br/dot.dialog",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/sv-se/dot.dialog"
       }
     },
     "ethernet.connection.dialog": {
@@ -1036,7 +1036,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/ca-es/ethernet.connection.dialog"
+          "file_path": "locale/ca-es/ethernet.connection.dialog"
         },
         "cs-CZ": {
           "entries": [
@@ -1055,7 +1055,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/cs-cz/ethernet.connection.dialog"
+          "file_path": "locale/cs-cz/ethernet.connection.dialog"
         },
         "da-DK": {
           "entries": [
@@ -1074,7 +1074,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/da-dk/ethernet.connection.dialog"
+          "file_path": "locale/da-dk/ethernet.connection.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1090,7 +1090,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/de-de/ethernet.connection.dialog"
+          "file_path": "locale/de-de/ethernet.connection.dialog"
         },
         "en-US": {
           "entries": [
@@ -1109,7 +1109,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/en-us/ethernet.connection.dialog"
+          "file_path": "locale/en-us/ethernet.connection.dialog"
         },
         "es-ES": {
           "entries": [
@@ -1128,7 +1128,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/es-es/ethernet.connection.dialog"
+          "file_path": "locale/es-es/ethernet.connection.dialog"
         },
         "eu-EU": {
           "entries": [
@@ -1147,7 +1147,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/eu-eu/ethernet.connection.dialog"
+          "file_path": "locale/eu-eu/ethernet.connection.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -1166,7 +1166,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/gl-es/ethernet.connection.dialog"
+          "file_path": "locale/gl-es/ethernet.connection.dialog"
         },
         "pl-PL": {
           "entries": [
@@ -1185,7 +1185,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/pl-pl/ethernet.connection.dialog"
+          "file_path": "locale/pl-pl/ethernet.connection.dialog"
         },
         "pt-BR": {
           "entries": [
@@ -1204,7 +1204,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/pt-br/ethernet.connection.dialog"
+          "file_path": "locale/pt-br/ethernet.connection.dialog"
         }
       },
       "context": {
@@ -1218,7 +1218,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-ip/locale/en-us/no network connection.dialog"
+          "locale/en-us/no network connection.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1230,16 +1230,16 @@
         "handler_source": "def handle_SSID_query(self, message):\n    addr = get_ifaces()\n    ssid = None\n    if len(addr) == 0:\n        self.speak_dialog(\"no network connection\")\n        return\n\n    # TODO - use bus api for PHAL network manager that reports this instead\n    try:\n        scanoutput = check_output([\"iwlist\", \"wlan0\", \"scan\"])\n\n        for line in scanoutput.split():\n            line = line.decode(\"utf-8\")\n            if line[:5] == \"ESSID\":\n                ssid = line.split('\"')[1]\n    except CalledProcessError:\n        # Computer has no wlan0\n        pass\n    finally:\n        if ssid:\n            self.speak(ssid)\n        else:\n            self.speak_dialog(\"ethernet.connection\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/ca-es/ethernet.connection.dialog",
-        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/cs-cz/ethernet.connection.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/da-dk/ethernet.connection.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/de-de/ethernet.connection.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/en-us/ethernet.connection.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/es-es/ethernet.connection.dialog",
-        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/eu-eu/ethernet.connection.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/gl-es/ethernet.connection.dialog",
-        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pl-pl/ethernet.connection.dialog",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pt-br/ethernet.connection.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/ca-es/ethernet.connection.dialog",
+        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/cs-cz/ethernet.connection.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/da-dk/ethernet.connection.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/de-de/ethernet.connection.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/en-us/ethernet.connection.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/es-es/ethernet.connection.dialog",
+        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/eu-eu/ethernet.connection.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/gl-es/ethernet.connection.dialog",
+        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pl-pl/ethernet.connection.dialog",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pt-br/ethernet.connection.dialog"
       }
     },
     "last.voc": {
@@ -1260,7 +1260,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/ca-es/last.voc"
+          "file_path": "locale/ca-es/last.voc"
         },
         "cs-CZ": {
           "entries": [
@@ -1272,7 +1272,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/cs-cz/last.voc"
+          "file_path": "locale/cs-cz/last.voc"
         },
         "da-DK": {
           "entries": [
@@ -1288,7 +1288,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/da-dk/last.voc"
+          "file_path": "locale/da-dk/last.voc"
         },
         "de-DE": {
           "entries": [
@@ -1428,7 +1428,7 @@
           "line_count": 33,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/de-de/last.voc"
+          "file_path": "locale/de-de/last.voc"
         },
         "en-US": {
           "entries": [
@@ -1444,7 +1444,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/en-us/last.voc"
+          "file_path": "locale/en-us/last.voc"
         },
         "es-ES": {
           "entries": [
@@ -1460,7 +1460,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/es-es/last.voc"
+          "file_path": "locale/es-es/last.voc"
         },
         "eu-EU": {
           "entries": [
@@ -1476,7 +1476,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/eu-eu/last.voc"
+          "file_path": "locale/eu-eu/last.voc"
         },
         "gl-ES": {
           "entries": [
@@ -1492,7 +1492,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/gl-es/last.voc"
+          "file_path": "locale/gl-es/last.voc"
         },
         "pl-PL": {
           "entries": [
@@ -1516,7 +1516,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pl-pl/last.voc"
+          "file_path": "locale/pl-pl/last.voc"
         },
         "pt-BR": {
           "entries": [
@@ -1532,7 +1532,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pt-br/last.voc"
+          "file_path": "locale/pt-br/last.voc"
         },
         "pt-PT": {
           "entries": [
@@ -1548,7 +1548,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pt-pt/last.voc"
+          "file_path": "locale/pt-pt/last.voc"
         }
       },
       "context": {
@@ -1585,17 +1585,17 @@
         "handler_source": "@intent_handler(IntentBuilder(\"LastIPDigitsIntent\").require(\"query\").require(\"IP\")\n                .require(\"last\").optionally(\"digits\"))\ndef handle_query_last_part_IP(self, message):\n    ip = None\n    addr = get_ifaces()\n    if len(addr) == 0:\n        self.speak_dialog(\"no network connection\")\n        return\n\n    self.enclosure.deactivate_mouth_events()\n    if \"wlan0\" in addr:\n        # Wifi is probably the one we're looking for\n        ip = addr['wlan0']\n    elif \"eth0\" in addr:\n        # If there's no wifi report the eth0\n        ip = addr['eth0']\n    elif len(addr) == 1:\n        # If none of the above matches and there's only one device\n        ip = list(addr.values())[0]\n\n    if ip:\n        self.gui_show(ip)\n        self.speak_last_digits(ip)\n    else:\n        # Ok now I don't know, I'll just report them all\n        self.speak_multiple_last_digits(addr)\n\n    self.enclosure.activate_mouth_events()\n    self.enclosure.mouth_reset()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/ca-es/last.voc",
-        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/cs-cz/last.voc",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/da-dk/last.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/de-de/last.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/en-us/last.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/es-es/last.voc",
-        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/eu-eu/last.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/gl-es/last.voc",
-        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pl-pl/last.voc",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pt-br/last.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pt-pt/last.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/ca-es/last.voc",
+        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/cs-cz/last.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/da-dk/last.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/de-de/last.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/en-us/last.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/es-es/last.voc",
+        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/eu-eu/last.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/gl-es/last.voc",
+        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pl-pl/last.voc",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pt-br/last.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pt-pt/last.voc"
       }
     },
     "last digits.dialog": {
@@ -1628,7 +1628,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/ca-es/last digits.dialog"
+          "file_path": "locale/ca-es/last digits.dialog"
         },
         "cs-CZ": {
           "entries": [
@@ -1644,7 +1644,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/cs-cz/last digits.dialog"
+          "file_path": "locale/cs-cz/last digits.dialog"
         },
         "da-DK": {
           "entries": [
@@ -1672,7 +1672,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/da-dk/last digits.dialog"
+          "file_path": "locale/da-dk/last digits.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1696,7 +1696,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/de-de/last digits.dialog"
+          "file_path": "locale/de-de/last digits.dialog"
         },
         "en-US": {
           "entries": [
@@ -1724,7 +1724,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/en-us/last digits.dialog"
+          "file_path": "locale/en-us/last digits.dialog"
         },
         "es-ES": {
           "entries": [
@@ -1752,7 +1752,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/es-es/last digits.dialog"
+          "file_path": "locale/es-es/last digits.dialog"
         },
         "eu-EU": {
           "entries": [
@@ -1780,7 +1780,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/eu-eu/last digits.dialog"
+          "file_path": "locale/eu-eu/last digits.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -1808,7 +1808,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/gl-es/last digits.dialog"
+          "file_path": "locale/gl-es/last digits.dialog"
         },
         "pl-PL": {
           "entries": [
@@ -1828,7 +1828,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pl-pl/last digits.dialog"
+          "file_path": "locale/pl-pl/last digits.dialog"
         },
         "pt-BR": {
           "entries": [
@@ -1856,7 +1856,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pt-br/last digits.dialog"
+          "file_path": "locale/pt-br/last digits.dialog"
         }
       },
       "context": {
@@ -1882,16 +1882,16 @@
         "handler_source": "def speak_last_digits(self, ip):\n    ip_end = ip.split(\".\")[-1]\n    self.gui_show(ip_end)\n    self.speak_dialog(\"last digits\", data={\"digits\": ip_end}, wait=True)"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/ca-es/last digits.dialog",
-        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/cs-cz/last digits.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/da-dk/last digits.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/de-de/last digits.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/en-us/last digits.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/es-es/last digits.dialog",
-        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/eu-eu/last digits.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/gl-es/last digits.dialog",
-        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pl-pl/last digits.dialog",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pt-br/last digits.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/ca-es/last digits.dialog",
+        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/cs-cz/last digits.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/da-dk/last digits.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/de-de/last digits.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/en-us/last digits.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/es-es/last digits.dialog",
+        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/eu-eu/last digits.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/gl-es/last digits.dialog",
+        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pl-pl/last digits.dialog",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pt-br/last digits.dialog"
       }
     },
     "last digits device.dialog": {
@@ -1924,7 +1924,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/ca-es/last digits device.dialog"
+          "file_path": "locale/ca-es/last digits device.dialog"
         },
         "cs-CZ": {
           "entries": [
@@ -1940,7 +1940,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/cs-cz/last digits device.dialog"
+          "file_path": "locale/cs-cz/last digits device.dialog"
         },
         "da-DK": {
           "entries": [
@@ -1968,7 +1968,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/da-dk/last digits device.dialog"
+          "file_path": "locale/da-dk/last digits device.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1992,7 +1992,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/de-de/last digits device.dialog"
+          "file_path": "locale/de-de/last digits device.dialog"
         },
         "en-US": {
           "entries": [
@@ -2020,7 +2020,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/en-us/last digits device.dialog"
+          "file_path": "locale/en-us/last digits device.dialog"
         },
         "es-ES": {
           "entries": [
@@ -2048,7 +2048,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/es-es/last digits device.dialog"
+          "file_path": "locale/es-es/last digits device.dialog"
         },
         "eu-EU": {
           "entries": [
@@ -2076,7 +2076,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/eu-eu/last digits device.dialog"
+          "file_path": "locale/eu-eu/last digits device.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -2104,7 +2104,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/gl-es/last digits device.dialog"
+          "file_path": "locale/gl-es/last digits device.dialog"
         },
         "pl-PL": {
           "entries": [
@@ -2124,7 +2124,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pl-pl/last digits device.dialog"
+          "file_path": "locale/pl-pl/last digits device.dialog"
         },
         "pt-BR": {
           "entries": [
@@ -2152,7 +2152,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pt-br/last digits device.dialog"
+          "file_path": "locale/pt-br/last digits device.dialog"
         }
       },
       "context": {
@@ -2179,16 +2179,16 @@
         "handler_source": "def speak_multiple_last_digits(self, addr):\n    for key in addr:\n        ip_end = addr[key].split(\".\")[-1]\n        self.gui_show(ip_end)\n        self.speak_dialog(\"last digits device\",\n                          data={'device': key, 'digits': ip_end},\n                          wait=True)"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/ca-es/last digits device.dialog",
-        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/cs-cz/last digits device.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/da-dk/last digits device.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/de-de/last digits device.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/en-us/last digits device.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/es-es/last digits device.dialog",
-        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/eu-eu/last digits device.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/gl-es/last digits device.dialog",
-        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pl-pl/last digits device.dialog",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pt-br/last digits device.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/ca-es/last digits device.dialog",
+        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/cs-cz/last digits device.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/da-dk/last digits device.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/de-de/last digits device.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/en-us/last digits device.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/es-es/last digits device.dialog",
+        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/eu-eu/last digits device.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/gl-es/last digits device.dialog",
+        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pl-pl/last digits device.dialog",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pt-br/last digits device.dialog"
       }
     },
     "my address is.dialog": {
@@ -2211,7 +2211,7 @@
             "ip"
           ],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/ca-es/my address is.dialog"
+          "file_path": "locale/ca-es/my address is.dialog"
         },
         "cs-CZ": {
           "entries": [
@@ -2229,7 +2229,7 @@
             "ip"
           ],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/cs-cz/my address is.dialog"
+          "file_path": "locale/cs-cz/my address is.dialog"
         },
         "da-DK": {
           "entries": [
@@ -2247,7 +2247,7 @@
             "ip"
           ],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/da-dk/my address is.dialog"
+          "file_path": "locale/da-dk/my address is.dialog"
         },
         "de-DE": {
           "entries": [
@@ -2270,7 +2270,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/de-de/my address is.dialog"
+          "file_path": "locale/de-de/my address is.dialog"
         },
         "en-US": {
           "entries": [
@@ -2288,7 +2288,7 @@
             "ip"
           ],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/en-us/my address is.dialog"
+          "file_path": "locale/en-us/my address is.dialog"
         },
         "es-ES": {
           "entries": [
@@ -2306,7 +2306,7 @@
             "ip"
           ],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/es-es/my address is.dialog"
+          "file_path": "locale/es-es/my address is.dialog"
         },
         "eu-EU": {
           "entries": [
@@ -2324,7 +2324,7 @@
             "ip"
           ],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/eu-eu/my address is.dialog"
+          "file_path": "locale/eu-eu/my address is.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -2342,7 +2342,7 @@
             "ip"
           ],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/gl-es/my address is.dialog"
+          "file_path": "locale/gl-es/my address is.dialog"
         },
         "it-IT": {
           "entries": [
@@ -2360,7 +2360,7 @@
             "ip"
           ],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/it-it/my address is.dialog"
+          "file_path": "locale/it-it/my address is.dialog"
         },
         "pl-PL": {
           "entries": [
@@ -2378,7 +2378,7 @@
             "ip"
           ],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pl-pl/my address is.dialog"
+          "file_path": "locale/pl-pl/my address is.dialog"
         },
         "pt-BR": {
           "entries": [
@@ -2396,7 +2396,7 @@
             "ip"
           ],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pt-br/my address is.dialog"
+          "file_path": "locale/pt-br/my address is.dialog"
         },
         "sv-SE": {
           "entries": [
@@ -2418,7 +2418,7 @@
             "ip"
           ],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/sv-se/my address is.dialog"
+          "file_path": "locale/sv-se/my address is.dialog"
         }
       },
       "context": {
@@ -2436,8 +2436,8 @@
           "ip": "Runtime value from handle_query_IP()"
         },
         "related_files": [
-          "ovos-skill-ip/locale/en-us/no network connection.dialog",
-          "ovos-skill-ip/locale/en-us/my address on X is Y.dialog"
+          "locale/en-us/no network connection.dialog",
+          "locale/en-us/my address on X is Y.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -2449,18 +2449,18 @@
         "handler_source": "@intent_handler(IntentBuilder(\"IPIntent\").require(\"query\").require(\"IP\"))\ndef handle_query_IP(self, message):\n    addr = get_ifaces()\n    dot = self.dialog_renderer.render(\"dot\")\n\n    if len(addr) == 0:\n        self.speak_dialog(\"no network connection\")\n        return\n    elif len(addr) == 1:\n        self.enclosure.deactivate_mouth_events()\n        iface, ip = addr.popitem()\n        self.gui_show(ip)\n        ip_spoken = ip.replace(\".\", \" \" + dot + \" \")\n        self.speak_dialog(\"my address is\",\n                          {'ip': ip_spoken}, wait=True)\n    else:\n        self.enclosure.deactivate_mouth_events()\n        for iface in addr:\n            ip = addr[iface]\n            self.gui_show(ip)\n            ip_spoken = ip.replace(\".\", \" \" + dot + \" \")\n            self.speak_dialog(\"my address on X is Y\",\n                              {'interface': iface, 'ip': ip_spoken},\n                              wait=True)\n\n    self.enclosure.activate_mouth_events()\n    self.enclosure.mouth_reset()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/ca-es/my address is.dialog",
-        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/cs-cz/my address is.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/da-dk/my address is.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/de-de/my address is.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/en-us/my address is.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/es-es/my address is.dialog",
-        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/eu-eu/my address is.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/gl-es/my address is.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/it-it/my address is.dialog",
-        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pl-pl/my address is.dialog",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pt-br/my address is.dialog",
-        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/sv-se/my address is.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/ca-es/my address is.dialog",
+        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/cs-cz/my address is.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/da-dk/my address is.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/de-de/my address is.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/en-us/my address is.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/es-es/my address is.dialog",
+        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/eu-eu/my address is.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/gl-es/my address is.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/it-it/my address is.dialog",
+        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pl-pl/my address is.dialog",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pt-br/my address is.dialog",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/sv-se/my address is.dialog"
       }
     },
     "my address on X is Y.dialog": {
@@ -2487,7 +2487,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/ca-es/my address on X is Y.dialog"
+          "file_path": "locale/ca-es/my address on X is Y.dialog"
         },
         "cs-CZ": {
           "entries": [
@@ -2509,7 +2509,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/cs-cz/my address on X is Y.dialog"
+          "file_path": "locale/cs-cz/my address on X is Y.dialog"
         },
         "da-DK": {
           "entries": [
@@ -2531,7 +2531,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/da-dk/my address on X is Y.dialog"
+          "file_path": "locale/da-dk/my address on X is Y.dialog"
         },
         "de-DE": {
           "entries": [
@@ -2554,7 +2554,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/de-de/my address on X is Y.dialog"
+          "file_path": "locale/de-de/my address on X is Y.dialog"
         },
         "en-US": {
           "entries": [
@@ -2576,7 +2576,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/en-us/my address on X is Y.dialog"
+          "file_path": "locale/en-us/my address on X is Y.dialog"
         },
         "es-ES": {
           "entries": [
@@ -2598,7 +2598,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/es-es/my address on X is Y.dialog"
+          "file_path": "locale/es-es/my address on X is Y.dialog"
         },
         "eu-EU": {
           "entries": [
@@ -2620,7 +2620,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/eu-eu/my address on X is Y.dialog"
+          "file_path": "locale/eu-eu/my address on X is Y.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -2642,7 +2642,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/gl-es/my address on X is Y.dialog"
+          "file_path": "locale/gl-es/my address on X is Y.dialog"
         },
         "it-IT": {
           "entries": [
@@ -2664,7 +2664,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/it-it/my address on X is Y.dialog"
+          "file_path": "locale/it-it/my address on X is Y.dialog"
         },
         "pl-PL": {
           "entries": [
@@ -2686,7 +2686,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/pl-pl/my address on X is Y.dialog"
+          "file_path": "locale/pl-pl/my address on X is Y.dialog"
         },
         "pt-BR": {
           "entries": [
@@ -2708,7 +2708,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/pt-br/my address on X is Y.dialog"
+          "file_path": "locale/pt-br/my address on X is Y.dialog"
         },
         "sv-SE": {
           "entries": [
@@ -2730,7 +2730,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/sv-se/my address on X is Y.dialog"
+          "file_path": "locale/sv-se/my address on X is Y.dialog"
         }
       },
       "context": {
@@ -2750,8 +2750,8 @@
           "ip": "Runtime value from handle_query_IP()"
         },
         "related_files": [
-          "ovos-skill-ip/locale/en-us/my address is.dialog",
-          "ovos-skill-ip/locale/en-us/no network connection.dialog"
+          "locale/en-us/my address is.dialog",
+          "locale/en-us/no network connection.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -2763,18 +2763,18 @@
         "handler_source": "@intent_handler(IntentBuilder(\"IPIntent\").require(\"query\").require(\"IP\"))\ndef handle_query_IP(self, message):\n    addr = get_ifaces()\n    dot = self.dialog_renderer.render(\"dot\")\n\n    if len(addr) == 0:\n        self.speak_dialog(\"no network connection\")\n        return\n    elif len(addr) == 1:\n        self.enclosure.deactivate_mouth_events()\n        iface, ip = addr.popitem()\n        self.gui_show(ip)\n        ip_spoken = ip.replace(\".\", \" \" + dot + \" \")\n        self.speak_dialog(\"my address is\",\n                          {'ip': ip_spoken}, wait=True)\n    else:\n        self.enclosure.deactivate_mouth_events()\n        for iface in addr:\n            ip = addr[iface]\n            self.gui_show(ip)\n            ip_spoken = ip.replace(\".\", \" \" + dot + \" \")\n            self.speak_dialog(\"my address on X is Y\",\n                              {'interface': iface, 'ip': ip_spoken},\n                              wait=True)\n\n    self.enclosure.activate_mouth_events()\n    self.enclosure.mouth_reset()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/ca-es/my address on X is Y.dialog",
-        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/cs-cz/my address on X is Y.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/da-dk/my address on X is Y.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/de-de/my address on X is Y.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/en-us/my address on X is Y.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/es-es/my address on X is Y.dialog",
-        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/eu-eu/my address on X is Y.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/gl-es/my address on X is Y.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/it-it/my address on X is Y.dialog",
-        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pl-pl/my address on X is Y.dialog",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pt-br/my address on X is Y.dialog",
-        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/sv-se/my address on X is Y.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/ca-es/my address on X is Y.dialog",
+        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/cs-cz/my address on X is Y.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/da-dk/my address on X is Y.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/de-de/my address on X is Y.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/en-us/my address on X is Y.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/es-es/my address on X is Y.dialog",
+        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/eu-eu/my address on X is Y.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/gl-es/my address on X is Y.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/it-it/my address on X is Y.dialog",
+        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pl-pl/my address on X is Y.dialog",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pt-br/my address on X is Y.dialog",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/sv-se/my address on X is Y.dialog"
       }
     },
     "no network connection.dialog": {
@@ -2795,7 +2795,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/ca-es/no network connection.dialog"
+          "file_path": "locale/ca-es/no network connection.dialog"
         },
         "cs-CZ": {
           "entries": [
@@ -2811,7 +2811,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/cs-cz/no network connection.dialog"
+          "file_path": "locale/cs-cz/no network connection.dialog"
         },
         "da-DK": {
           "entries": [
@@ -2827,7 +2827,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/da-dk/no network connection.dialog"
+          "file_path": "locale/da-dk/no network connection.dialog"
         },
         "de-DE": {
           "entries": [
@@ -2843,7 +2843,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/de-de/no network connection.dialog"
+          "file_path": "locale/de-de/no network connection.dialog"
         },
         "en-US": {
           "entries": [
@@ -2859,7 +2859,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/en-us/no network connection.dialog"
+          "file_path": "locale/en-us/no network connection.dialog"
         },
         "es-ES": {
           "entries": [
@@ -2875,7 +2875,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/es-es/no network connection.dialog"
+          "file_path": "locale/es-es/no network connection.dialog"
         },
         "eu-EU": {
           "entries": [
@@ -2891,7 +2891,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/eu-eu/no network connection.dialog"
+          "file_path": "locale/eu-eu/no network connection.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -2907,7 +2907,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/gl-es/no network connection.dialog"
+          "file_path": "locale/gl-es/no network connection.dialog"
         },
         "it-IT": {
           "entries": [
@@ -2923,7 +2923,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/it-it/no network connection.dialog"
+          "file_path": "locale/it-it/no network connection.dialog"
         },
         "pl-PL": {
           "entries": [
@@ -2939,7 +2939,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pl-pl/no network connection.dialog"
+          "file_path": "locale/pl-pl/no network connection.dialog"
         },
         "pt-BR": {
           "entries": [
@@ -2955,7 +2955,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pt-br/no network connection.dialog"
+          "file_path": "locale/pt-br/no network connection.dialog"
         },
         "sv-SE": {
           "entries": [
@@ -2971,7 +2971,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/sv-se/no network connection.dialog"
+          "file_path": "locale/sv-se/no network connection.dialog"
         }
       },
       "context": {
@@ -2985,8 +2985,8 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-ip/locale/en-us/my address is.dialog",
-          "ovos-skill-ip/locale/en-us/my address on X is Y.dialog"
+          "locale/en-us/my address is.dialog",
+          "locale/en-us/my address on X is Y.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -2998,18 +2998,18 @@
         "handler_source": "@intent_handler(IntentBuilder(\"IPIntent\").require(\"query\").require(\"IP\"))\ndef handle_query_IP(self, message):\n    addr = get_ifaces()\n    dot = self.dialog_renderer.render(\"dot\")\n\n    if len(addr) == 0:\n        self.speak_dialog(\"no network connection\")\n        return\n    elif len(addr) == 1:\n        self.enclosure.deactivate_mouth_events()\n        iface, ip = addr.popitem()\n        self.gui_show(ip)\n        ip_spoken = ip.replace(\".\", \" \" + dot + \" \")\n        self.speak_dialog(\"my address is\",\n                          {'ip': ip_spoken}, wait=True)\n    else:\n        self.enclosure.deactivate_mouth_events()\n        for iface in addr:\n            ip = addr[iface]\n            self.gui_show(ip)\n            ip_spoken = ip.replace(\".\", \" \" + dot + \" \")\n            self.speak_dialog(\"my address on X is Y\",\n                              {'interface': iface, 'ip': ip_spoken},\n                              wait=True)\n\n    self.enclosure.activate_mouth_events()\n    self.enclosure.mouth_reset()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/ca-es/no network connection.dialog",
-        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/cs-cz/no network connection.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/da-dk/no network connection.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/de-de/no network connection.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/en-us/no network connection.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/es-es/no network connection.dialog",
-        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/eu-eu/no network connection.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/gl-es/no network connection.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/it-it/no network connection.dialog",
-        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pl-pl/no network connection.dialog",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pt-br/no network connection.dialog",
-        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/sv-se/no network connection.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/ca-es/no network connection.dialog",
+        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/cs-cz/no network connection.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/da-dk/no network connection.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/de-de/no network connection.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/en-us/no network connection.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/es-es/no network connection.dialog",
+        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/eu-eu/no network connection.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/gl-es/no network connection.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/it-it/no network connection.dialog",
+        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pl-pl/no network connection.dialog",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pt-br/no network connection.dialog",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/sv-se/no network connection.dialog"
       }
     },
     "query.voc": {
@@ -3038,7 +3038,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/ca-es/query.voc"
+          "file_path": "locale/ca-es/query.voc"
         },
         "cs-CZ": {
           "entries": [
@@ -3066,7 +3066,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/cs-cz/query.voc"
+          "file_path": "locale/cs-cz/query.voc"
         },
         "da-DK": {
           "entries": [
@@ -3090,7 +3090,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/da-dk/query.voc"
+          "file_path": "locale/da-dk/query.voc"
         },
         "de-DE": {
           "entries": [
@@ -3150,7 +3150,7 @@
           "line_count": 13,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/de-de/query.voc"
+          "file_path": "locale/de-de/query.voc"
         },
         "en-US": {
           "entries": [
@@ -3174,7 +3174,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/en-us/query.voc"
+          "file_path": "locale/en-us/query.voc"
         },
         "es-ES": {
           "entries": [
@@ -3198,7 +3198,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/es-es/query.voc"
+          "file_path": "locale/es-es/query.voc"
         },
         "eu-EU": {
           "entries": [
@@ -3222,7 +3222,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/eu-eu/query.voc"
+          "file_path": "locale/eu-eu/query.voc"
         },
         "gl-ES": {
           "entries": [
@@ -3246,7 +3246,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/gl-es/query.voc"
+          "file_path": "locale/gl-es/query.voc"
         },
         "it-IT": {
           "entries": [
@@ -3270,7 +3270,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/it-it/query.voc"
+          "file_path": "locale/it-it/query.voc"
         },
         "pl-PL": {
           "entries": [
@@ -3294,7 +3294,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pl-pl/query.voc"
+          "file_path": "locale/pl-pl/query.voc"
         },
         "pt-BR": {
           "entries": [
@@ -3318,7 +3318,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pt-br/query.voc"
+          "file_path": "locale/pt-br/query.voc"
         },
         "pt-PT": {
           "entries": [
@@ -3342,7 +3342,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pt-pt/query.voc"
+          "file_path": "locale/pt-pt/query.voc"
         },
         "sv-SE": {
           "entries": [
@@ -3366,7 +3366,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/sv-se/query.voc"
+          "file_path": "locale/sv-se/query.voc"
         }
       },
       "context": {
@@ -3401,19 +3401,19 @@
         "handler_source": "@intent_handler(IntentBuilder(\"IPIntent\").require(\"query\").require(\"IP\"))\ndef handle_query_IP(self, message):\n    addr = get_ifaces()\n    dot = self.dialog_renderer.render(\"dot\")\n\n    if len(addr) == 0:\n        self.speak_dialog(\"no network connection\")\n        return\n    elif len(addr) == 1:\n        self.enclosure.deactivate_mouth_events()\n        iface, ip = addr.popitem()\n        self.gui_show(ip)\n        ip_spoken = ip.replace(\".\", \" \" + dot + \" \")\n        self.speak_dialog(\"my address is\",\n                          {'ip': ip_spoken}, wait=True)\n    else:\n        self.enclosure.deactivate_mouth_events()\n        for iface in addr:\n            ip = addr[iface]\n            self.gui_show(ip)\n            ip_spoken = ip.replace(\".\", \" \" + dot + \" \")\n            self.speak_dialog(\"my address on X is Y\",\n                              {'interface': iface, 'ip': ip_spoken},\n                              wait=True)\n\n    self.enclosure.activate_mouth_events()\n    self.enclosure.mouth_reset()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/ca-es/query.voc",
-        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/cs-cz/query.voc",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/da-dk/query.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/de-de/query.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/en-us/query.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/es-es/query.voc",
-        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/eu-eu/query.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/gl-es/query.voc",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/it-it/query.voc",
-        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pl-pl/query.voc",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pt-br/query.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pt-pt/query.voc",
-        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/sv-se/query.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/ca-es/query.voc",
+        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/cs-cz/query.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/da-dk/query.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/de-de/query.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/en-us/query.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/es-es/query.voc",
+        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/eu-eu/query.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/gl-es/query.voc",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/it-it/query.voc",
+        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pl-pl/query.voc",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pt-br/query.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pt-pt/query.voc",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/sv-se/query.voc"
       }
     },
     "skill.json": {
@@ -3520,7 +3520,7 @@
           "line_count": 14,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/ca-es/skill.json"
+          "file_path": "locale/ca-es/skill.json"
         },
         "da-DK": {
           "entries": [
@@ -3622,7 +3622,7 @@
           "line_count": 14,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/da-dk/skill.json"
+          "file_path": "locale/da-dk/skill.json"
         },
         "de-DE": {
           "entries": [
@@ -3724,7 +3724,7 @@
           "line_count": 14,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/de-de/skill.json"
+          "file_path": "locale/de-de/skill.json"
         },
         "en-US": {
           "entries": [
@@ -3826,7 +3826,7 @@
           "line_count": 14,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/en-us/skill.json"
+          "file_path": "locale/en-us/skill.json"
         },
         "es-ES": {
           "entries": [
@@ -3928,7 +3928,7 @@
           "line_count": 14,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/es-es/skill.json"
+          "file_path": "locale/es-es/skill.json"
         },
         "gl-ES": {
           "entries": [
@@ -4030,7 +4030,7 @@
           "line_count": 14,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/gl-es/skill.json"
+          "file_path": "locale/gl-es/skill.json"
         }
       },
       "context": {
@@ -4050,12 +4050,12 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/ca-es/skill.json",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/da-dk/skill.json",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/de-de/skill.json",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/en-us/skill.json",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/es-es/skill.json",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/gl-es/skill.json"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/ca-es/skill.json",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/da-dk/skill.json",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/de-de/skill.json",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/en-us/skill.json",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/es-es/skill.json",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/gl-es/skill.json"
       }
     },
     "what.ssid.intent": {
@@ -4079,7 +4079,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/ca-es/what.ssid.intent"
+          "file_path": "locale/ca-es/what.ssid.intent"
         },
         "cs-CZ": {
           "entries": [
@@ -4091,7 +4091,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/cs-cz/what.ssid.intent"
+          "file_path": "locale/cs-cz/what.ssid.intent"
         },
         "da-DK": {
           "entries": [
@@ -4103,7 +4103,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/da-dk/what.ssid.intent"
+          "file_path": "locale/da-dk/what.ssid.intent"
         },
         "de-DE": {
           "entries": [
@@ -4147,7 +4147,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/de-de/what.ssid.intent"
+          "file_path": "locale/de-de/what.ssid.intent"
         },
         "en-US": {
           "entries": [
@@ -4159,7 +4159,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/en-us/what.ssid.intent"
+          "file_path": "locale/en-us/what.ssid.intent"
         },
         "es-ES": {
           "entries": [
@@ -4178,7 +4178,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/es-es/what.ssid.intent"
+          "file_path": "locale/es-es/what.ssid.intent"
         },
         "eu-EU": {
           "entries": [
@@ -4197,7 +4197,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-ip/locale/eu-eu/what.ssid.intent"
+          "file_path": "locale/eu-eu/what.ssid.intent"
         },
         "gl-ES": {
           "entries": [
@@ -4222,7 +4222,7 @@
               "line_number": 1
             }
           ],
-          "file_path": "ovos-skill-ip/locale/gl-es/what.ssid.intent"
+          "file_path": "locale/gl-es/what.ssid.intent"
         },
         "pl-PL": {
           "entries": [
@@ -4234,7 +4234,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pl-pl/what.ssid.intent"
+          "file_path": "locale/pl-pl/what.ssid.intent"
         },
         "pt-BR": {
           "entries": [
@@ -4246,7 +4246,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pt-br/what.ssid.intent"
+          "file_path": "locale/pt-br/what.ssid.intent"
         },
         "pt-PT": {
           "entries": [
@@ -4258,7 +4258,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-ip/locale/pt-pt/what.ssid.intent"
+          "file_path": "locale/pt-pt/what.ssid.intent"
         }
       },
       "context": {
@@ -4283,17 +4283,17 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/ca-es/what.ssid.intent",
-        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/cs-cz/what.ssid.intent",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/da-dk/what.ssid.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/de-de/what.ssid.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/en-us/what.ssid.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/es-es/what.ssid.intent",
-        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/eu-eu/what.ssid.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/gl-es/what.ssid.intent",
-        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pl-pl/what.ssid.intent",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pt-br/what.ssid.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/ovos-skill-ip/locale/pt-pt/what.ssid.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/ca-es/what.ssid.intent",
+        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/cs-cz/what.ssid.intent",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/da-dk/what.ssid.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/de-de/what.ssid.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/en-us/what.ssid.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/es-es/what.ssid.intent",
+        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/eu-eu/what.ssid.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/gl-es/what.ssid.intent",
+        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pl-pl/what.ssid.intent",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pt-br/what.ssid.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-ip/edit/dev/locale/pt-pt/what.ssid.intent"
       }
     }
   }

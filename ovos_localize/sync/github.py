@@ -120,11 +120,12 @@ def _extract_lang_from_path(file_path: Path, locale_root: Path) -> Optional[str]
     return None
 
 
-def scan_locale_directory(locale_dir: str) -> List[ScannedFile]:
+def scan_locale_directory(locale_dir: str, repo_root: str = "") -> List[ScannedFile]:
     """Scan a locale directory for all OVOS locale files.
 
     Args:
         locale_dir: Path to a locale/ directory.
+        repo_root: Path to the repository root (for relative paths).
 
     Returns:
         List of ScannedFile objects.
@@ -132,6 +133,7 @@ def scan_locale_directory(locale_dir: str) -> List[ScannedFile]:
     locale_path = Path(locale_dir)
     if not locale_path.is_dir():
         return []
+    root_path = Path(repo_root) if repo_root else locale_path.parent
 
     files: List[ScannedFile] = []
     for file_path in sorted(locale_path.rglob("*")):
@@ -158,7 +160,7 @@ def scan_locale_directory(locale_dir: str) -> List[ScannedFile]:
                 pass
 
         files.append(ScannedFile(
-            relative_path=str(file_path.relative_to(locale_path.parent.parent)),
+            relative_path=str(file_path.relative_to(root_path)),
             absolute_path=str(file_path),
             file_type=file_type,
             lang=lang,
@@ -238,7 +240,7 @@ class RepoScanner:
         # Find locale directory
         locale_dir = self._find_locale_dir(path)
         if locale_dir:
-            result.locale_files = scan_locale_directory(str(locale_dir))
+            result.locale_files = scan_locale_directory(str(locale_dir), repo_path)
 
         # Collect languages
         langs = set()

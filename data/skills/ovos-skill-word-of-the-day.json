@@ -42,7 +42,7 @@
               "line_number": 1
             }
           ],
-          "file_path": "ovos-skill-word-of-the-day/locale/ca/WordOfTheDayKeyword.voc"
+          "file_path": "locale/ca/WordOfTheDayKeyword.voc"
         },
         "da": {
           "entries": [
@@ -62,7 +62,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-word-of-the-day/locale/da/WordOfTheDayKeyword.voc"
+          "file_path": "locale/da/WordOfTheDayKeyword.voc"
         },
         "de": {
           "entries": [
@@ -89,7 +89,7 @@
               "line_number": 3
             }
           ],
-          "file_path": "ovos-skill-word-of-the-day/locale/de/WordOfTheDayKeyword.voc"
+          "file_path": "locale/de/WordOfTheDayKeyword.voc"
         },
         "en-US": {
           "entries": [
@@ -116,7 +116,7 @@
               "line_number": 1
             }
           ],
-          "file_path": "ovos-skill-word-of-the-day/locale/en-us/WordOfTheDayKeyword.voc"
+          "file_path": "locale/en-us/WordOfTheDayKeyword.voc"
         },
         "es": {
           "entries": [
@@ -136,7 +136,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-word-of-the-day/locale/es/WordOfTheDayKeyword.voc"
+          "file_path": "locale/es/WordOfTheDayKeyword.voc"
         },
         "gl": {
           "entries": [
@@ -156,7 +156,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-word-of-the-day/locale/gl/WordOfTheDayKeyword.voc"
+          "file_path": "locale/gl/WordOfTheDayKeyword.voc"
         },
         "pt-PT": {
           "entries": [
@@ -183,7 +183,7 @@
               "line_number": 1
             }
           ],
-          "file_path": "ovos-skill-word-of-the-day/locale/pt-pt/WordOfTheDayKeyword.voc"
+          "file_path": "locale/pt-pt/WordOfTheDayKeyword.voc"
         }
       },
       "context": {
@@ -216,13 +216,13 @@
         "handler_source": "@intent_handler(IntentBuilder(\"WordOfTheDayIntent\").require(\"WordOfTheDayKeyword\"))\ndef handle_word_of_the_day_intent(self, message):\n    l = self.lang.lower()\n    if l.lower() == \"pt-br\":\n        wod, definition = get_wod_pt(pt_br=True)\n    elif l.lower().split(\"-\")[0] == \"pt\":\n        wod, definition = get_wod_pt()\n    elif l.lower().split(\"-\")[0] == \"en\":\n        wod, definition = get_wod()\n    elif l.lower().split(\"-\")[0] == \"ca\":\n        wod, definition = get_wod_ca()\n    elif l.lower().split(\"-\")[0] == \"gl\":\n        wod, definition = get_wod_gl()\n    else:\n        self.speak_dialog(\"unknown.wod\")\n        return\n\n    self.speak_dialog(\"word.of.day\", {\"word\": wod})\n    self.gui.show_text(definition, wod)\n    self.speak(definition)"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/ca/WordOfTheDayKeyword.voc",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/da/WordOfTheDayKeyword.voc",
-        "de": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/de/WordOfTheDayKeyword.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/en-us/WordOfTheDayKeyword.voc",
-        "es": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/es/WordOfTheDayKeyword.voc",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/gl/WordOfTheDayKeyword.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/pt-pt/WordOfTheDayKeyword.voc"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/ca/WordOfTheDayKeyword.voc",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/da/WordOfTheDayKeyword.voc",
+        "de": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/de/WordOfTheDayKeyword.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/en-us/WordOfTheDayKeyword.voc",
+        "es": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/es/WordOfTheDayKeyword.voc",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/gl/WordOfTheDayKeyword.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/pt-pt/WordOfTheDayKeyword.voc"
       }
     },
     "unknown.wod.dialog": {
@@ -246,7 +246,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-word-of-the-day/locale/ca/unknown.wod.dialog"
+          "file_path": "locale/ca/unknown.wod.dialog"
         },
         "da": {
           "entries": [
@@ -265,7 +265,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-word-of-the-day/locale/da/unknown.wod.dialog"
+          "file_path": "locale/da/unknown.wod.dialog"
         },
         "de": {
           "entries": [
@@ -284,7 +284,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-word-of-the-day/locale/de/unknown.wod.dialog"
+          "file_path": "locale/de/unknown.wod.dialog"
         },
         "en-US": {
           "entries": [
@@ -303,7 +303,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-word-of-the-day/locale/en-us/unknown.wod.dialog"
+          "file_path": "locale/en-us/unknown.wod.dialog"
         },
         "es": {
           "entries": [
@@ -322,7 +322,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-word-of-the-day/locale/es/unknown.wod.dialog"
+          "file_path": "locale/es/unknown.wod.dialog"
         },
         "gl": {
           "entries": [
@@ -341,7 +341,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-word-of-the-day/locale/gl/unknown.wod.dialog"
+          "file_path": "locale/gl/unknown.wod.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -360,7 +360,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-word-of-the-day/locale/pt-pt/unknown.wod.dialog"
+          "file_path": "locale/pt-pt/unknown.wod.dialog"
         }
       },
       "context": {
@@ -374,7 +374,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-word-of-the-day/locale/en-us/word.of.day.dialog"
+          "locale/en-us/word.of.day.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -386,13 +386,13 @@
         "handler_source": "@intent_handler(IntentBuilder(\"WordOfTheDayIntent\").require(\"WordOfTheDayKeyword\"))\ndef handle_word_of_the_day_intent(self, message):\n    l = self.lang.lower()\n    if l.lower() == \"pt-br\":\n        wod, definition = get_wod_pt(pt_br=True)\n    elif l.lower().split(\"-\")[0] == \"pt\":\n        wod, definition = get_wod_pt()\n    elif l.lower().split(\"-\")[0] == \"en\":\n        wod, definition = get_wod()\n    elif l.lower().split(\"-\")[0] == \"ca\":\n        wod, definition = get_wod_ca()\n    elif l.lower().split(\"-\")[0] == \"gl\":\n        wod, definition = get_wod_gl()\n    else:\n        self.speak_dialog(\"unknown.wod\")\n        return\n\n    self.speak_dialog(\"word.of.day\", {\"word\": wod})\n    self.gui.show_text(definition, wod)\n    self.speak(definition)"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/ca/unknown.wod.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/da/unknown.wod.dialog",
-        "de": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/de/unknown.wod.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/en-us/unknown.wod.dialog",
-        "es": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/es/unknown.wod.dialog",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/gl/unknown.wod.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/pt-pt/unknown.wod.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/ca/unknown.wod.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/da/unknown.wod.dialog",
+        "de": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/de/unknown.wod.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/en-us/unknown.wod.dialog",
+        "es": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/es/unknown.wod.dialog",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/gl/unknown.wod.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/pt-pt/unknown.wod.dialog"
       }
     },
     "word.of.day.dialog": {
@@ -418,7 +418,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-word-of-the-day/locale/ca/word.of.day.dialog"
+          "file_path": "locale/ca/word.of.day.dialog"
         },
         "da": {
           "entries": [
@@ -439,7 +439,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-word-of-the-day/locale/da/word.of.day.dialog"
+          "file_path": "locale/da/word.of.day.dialog"
         },
         "de": {
           "entries": [
@@ -460,7 +460,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-word-of-the-day/locale/de/word.of.day.dialog"
+          "file_path": "locale/de/word.of.day.dialog"
         },
         "en-US": {
           "entries": [
@@ -481,7 +481,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-word-of-the-day/locale/en-us/word.of.day.dialog"
+          "file_path": "locale/en-us/word.of.day.dialog"
         },
         "es": {
           "entries": [
@@ -502,7 +502,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-word-of-the-day/locale/es/word.of.day.dialog"
+          "file_path": "locale/es/word.of.day.dialog"
         },
         "gl": {
           "entries": [
@@ -523,7 +523,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-word-of-the-day/locale/gl/word.of.day.dialog"
+          "file_path": "locale/gl/word.of.day.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -544,7 +544,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-word-of-the-day/locale/pt-pt/word.of.day.dialog"
+          "file_path": "locale/pt-pt/word.of.day.dialog"
         }
       },
       "context": {
@@ -562,7 +562,7 @@
           "word": "Runtime value from handle_word_of_the_day_intent()"
         },
         "related_files": [
-          "ovos-skill-word-of-the-day/locale/en-us/unknown.wod.dialog"
+          "locale/en-us/unknown.wod.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -574,13 +574,13 @@
         "handler_source": "@intent_handler(IntentBuilder(\"WordOfTheDayIntent\").require(\"WordOfTheDayKeyword\"))\ndef handle_word_of_the_day_intent(self, message):\n    l = self.lang.lower()\n    if l.lower() == \"pt-br\":\n        wod, definition = get_wod_pt(pt_br=True)\n    elif l.lower().split(\"-\")[0] == \"pt\":\n        wod, definition = get_wod_pt()\n    elif l.lower().split(\"-\")[0] == \"en\":\n        wod, definition = get_wod()\n    elif l.lower().split(\"-\")[0] == \"ca\":\n        wod, definition = get_wod_ca()\n    elif l.lower().split(\"-\")[0] == \"gl\":\n        wod, definition = get_wod_gl()\n    else:\n        self.speak_dialog(\"unknown.wod\")\n        return\n\n    self.speak_dialog(\"word.of.day\", {\"word\": wod})\n    self.gui.show_text(definition, wod)\n    self.speak(definition)"
       },
       "edit_urls": {
-        "ca": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/ca/word.of.day.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/da/word.of.day.dialog",
-        "de": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/de/word.of.day.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/en-us/word.of.day.dialog",
-        "es": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/es/word.of.day.dialog",
-        "gl": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/gl/word.of.day.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/ovos-skill-word-of-the-day/locale/pt-pt/word.of.day.dialog"
+        "ca": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/ca/word.of.day.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/da/word.of.day.dialog",
+        "de": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/de/word.of.day.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/en-us/word.of.day.dialog",
+        "es": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/es/word.of.day.dialog",
+        "gl": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/gl/word.of.day.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-word-of-the-day/edit/dev/locale/pt-pt/word.of.day.dialog"
       }
     }
   }

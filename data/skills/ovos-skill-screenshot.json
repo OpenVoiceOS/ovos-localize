@@ -35,7 +35,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-screenshot/locale/ca-es/screenshot.failed.dialog"
+          "file_path": "locale/ca-es/screenshot.failed.dialog"
         },
         "da-DK": {
           "entries": [
@@ -51,7 +51,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-screenshot/locale/da-dk/screenshot.failed.dialog"
+          "file_path": "locale/da-dk/screenshot.failed.dialog"
         },
         "de-DE": {
           "entries": [
@@ -67,7 +67,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-screenshot/locale/de-de/screenshot.failed.dialog"
+          "file_path": "locale/de-de/screenshot.failed.dialog"
         },
         "en-US": {
           "entries": [
@@ -83,7 +83,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-screenshot/locale/en-us/screenshot.failed.dialog"
+          "file_path": "locale/en-us/screenshot.failed.dialog"
         },
         "es-ES": {
           "entries": [
@@ -99,7 +99,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-screenshot/locale/es-es/screenshot.failed.dialog"
+          "file_path": "locale/es-es/screenshot.failed.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -115,7 +115,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-screenshot/locale/fr-fr/screenshot.failed.dialog"
+          "file_path": "locale/fr-fr/screenshot.failed.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -131,7 +131,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-screenshot/locale/gl-es/screenshot.failed.dialog"
+          "file_path": "locale/gl-es/screenshot.failed.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -147,7 +147,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-screenshot/locale/pt-pt/screenshot.failed.dialog"
+          "file_path": "locale/pt-pt/screenshot.failed.dialog"
         }
       },
       "context": {
@@ -171,14 +171,14 @@
         "handler_source": "@intent_handler(\"take.screenshot.intent\")\ndef handle_screenshot_intent(self, message):\n    if self.is_ovos_shell:\n        LOG.debug(\"Taking screenshot via ovos-shell\")\n        self.bus.emit(message.forward(\"ovos.display.screenshot.get\",\n                                      {\"folderpath\": self.screenshots_folder}))\n        return\n\n    output = os.path.join(self.screenshots_folder, f\"{time.time()}.png\")\n    try:\n        with mss.mss() as sct:\n            screenshot = sct.shot(output=output)\n        self.notify(output)\n    except Exception as e:\n        LOG.error(f\"Failed to take screenshot: {e}\")\n        self.speak_dialog(\"screenshot.failed\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/ca-es/screenshot.failed.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/da-dk/screenshot.failed.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/de-de/screenshot.failed.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/en-us/screenshot.failed.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/es-es/screenshot.failed.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/fr-fr/screenshot.failed.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/gl-es/screenshot.failed.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/pt-pt/screenshot.failed.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/ca-es/screenshot.failed.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/da-dk/screenshot.failed.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/de-de/screenshot.failed.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/en-us/screenshot.failed.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/es-es/screenshot.failed.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/fr-fr/screenshot.failed.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/gl-es/screenshot.failed.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/pt-pt/screenshot.failed.dialog"
       }
     },
     "screenshot.taken.dialog": {
@@ -202,7 +202,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-screenshot/locale/ca-es/screenshot.taken.dialog"
+          "file_path": "locale/ca-es/screenshot.taken.dialog"
         },
         "da-DK": {
           "entries": [
@@ -221,7 +221,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-screenshot/locale/da-dk/screenshot.taken.dialog"
+          "file_path": "locale/da-dk/screenshot.taken.dialog"
         },
         "de-DE": {
           "entries": [
@@ -240,7 +240,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-screenshot/locale/de-de/screenshot.taken.dialog"
+          "file_path": "locale/de-de/screenshot.taken.dialog"
         },
         "en-US": {
           "entries": [
@@ -259,7 +259,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-screenshot/locale/en-us/screenshot.taken.dialog"
+          "file_path": "locale/en-us/screenshot.taken.dialog"
         },
         "es-ES": {
           "entries": [
@@ -278,7 +278,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-screenshot/locale/es-es/screenshot.taken.dialog"
+          "file_path": "locale/es-es/screenshot.taken.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -294,7 +294,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-screenshot/locale/fr-fr/screenshot.taken.dialog"
+          "file_path": "locale/fr-fr/screenshot.taken.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -313,7 +313,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-screenshot/locale/gl-es/screenshot.taken.dialog"
+          "file_path": "locale/gl-es/screenshot.taken.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -332,7 +332,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-screenshot/locale/pt-pt/screenshot.taken.dialog"
+          "file_path": "locale/pt-pt/screenshot.taken.dialog"
         }
       },
       "context": {
@@ -356,14 +356,14 @@
         "handler_source": "def notify(self, output):\n    display_message = f\"Screenshot saved to {output}\"\n    self.gui.show_notification(display_message)\n    LOG.debug(f\"screenshot saved: {output}\")\n    self.speak_dialog(\"screenshot.taken\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/ca-es/screenshot.taken.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/da-dk/screenshot.taken.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/de-de/screenshot.taken.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/en-us/screenshot.taken.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/es-es/screenshot.taken.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/fr-fr/screenshot.taken.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/gl-es/screenshot.taken.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/pt-pt/screenshot.taken.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/ca-es/screenshot.taken.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/da-dk/screenshot.taken.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/de-de/screenshot.taken.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/en-us/screenshot.taken.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/es-es/screenshot.taken.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/fr-fr/screenshot.taken.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/gl-es/screenshot.taken.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/pt-pt/screenshot.taken.dialog"
       }
     },
     "skill.json": {
@@ -418,7 +418,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-screenshot/locale/ca-es/skill.json"
+          "file_path": "locale/ca-es/skill.json"
         },
         "da-DK": {
           "entries": [
@@ -468,7 +468,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-screenshot/locale/da-dk/skill.json"
+          "file_path": "locale/da-dk/skill.json"
         },
         "de-DE": {
           "entries": [
@@ -518,7 +518,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-screenshot/locale/de-de/skill.json"
+          "file_path": "locale/de-de/skill.json"
         },
         "en-US": {
           "entries": [
@@ -568,7 +568,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-screenshot/locale/en-us/skill.json"
+          "file_path": "locale/en-us/skill.json"
         },
         "es-ES": {
           "entries": [
@@ -618,7 +618,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-screenshot/locale/es-es/skill.json"
+          "file_path": "locale/es-es/skill.json"
         },
         "fr-FR": {
           "entries": [
@@ -668,7 +668,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-screenshot/locale/fr-fr/skill.json"
+          "file_path": "locale/fr-fr/skill.json"
         },
         "gl-ES": {
           "entries": [
@@ -718,7 +718,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-screenshot/locale/gl-es/skill.json"
+          "file_path": "locale/gl-es/skill.json"
         },
         "pt-PT": {
           "entries": [
@@ -768,7 +768,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-screenshot/locale/pt-PT/skill.json"
+          "file_path": "locale/pt-PT/skill.json"
         }
       },
       "context": {
@@ -788,14 +788,14 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/ca-es/skill.json",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/da-dk/skill.json",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/de-de/skill.json",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/en-us/skill.json",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/es-es/skill.json",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/fr-fr/skill.json",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/gl-es/skill.json",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/pt-PT/skill.json"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/ca-es/skill.json",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/da-dk/skill.json",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/de-de/skill.json",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/en-us/skill.json",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/es-es/skill.json",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/fr-fr/skill.json",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/gl-es/skill.json",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/pt-PT/skill.json"
       }
     },
     "take.screenshot.intent": {
@@ -835,7 +835,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-screenshot/locale/ca-es/take.screenshot.intent"
+          "file_path": "locale/ca-es/take.screenshot.intent"
         },
         "da-DK": {
           "entries": [
@@ -870,7 +870,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-screenshot/locale/da-dk/take.screenshot.intent"
+          "file_path": "locale/da-dk/take.screenshot.intent"
         },
         "de-DE": {
           "entries": [
@@ -930,7 +930,7 @@
           "line_count": 13,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-screenshot/locale/de-de/take.screenshot.intent"
+          "file_path": "locale/de-de/take.screenshot.intent"
         },
         "en-US": {
           "entries": [
@@ -969,7 +969,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-screenshot/locale/en-us/take.screenshot.intent"
+          "file_path": "locale/en-us/take.screenshot.intent"
         },
         "es-ES": {
           "entries": [
@@ -1004,7 +1004,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-screenshot/locale/es-es/take.screenshot.intent"
+          "file_path": "locale/es-es/take.screenshot.intent"
         },
         "eu": {
           "entries": [
@@ -1023,7 +1023,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-screenshot/locale/eu/take.screenshot.intent"
+          "file_path": "locale/eu/take.screenshot.intent"
         },
         "fr-FR": {
           "entries": [
@@ -1062,7 +1062,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-screenshot/locale/fr-fr/take.screenshot.intent"
+          "file_path": "locale/fr-fr/take.screenshot.intent"
         },
         "gl-ES": {
           "entries": [
@@ -1093,7 +1093,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-screenshot/locale/gl-es/take.screenshot.intent"
+          "file_path": "locale/gl-es/take.screenshot.intent"
         },
         "it-IT": {
           "entries": [
@@ -1116,7 +1116,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-screenshot/locale/it-it/take.screenshot.intent"
+          "file_path": "locale/it-it/take.screenshot.intent"
         },
         "nl-NL": {
           "entries": [
@@ -1145,7 +1145,7 @@
               "line_number": 1
             }
           ],
-          "file_path": "ovos-skill-screenshot/locale/nl-nl/take.screenshot.intent"
+          "file_path": "locale/nl-nl/take.screenshot.intent"
         },
         "pt-PT": {
           "entries": [
@@ -1168,7 +1168,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-screenshot/locale/pt-pt/take.screenshot.intent"
+          "file_path": "locale/pt-pt/take.screenshot.intent"
         }
       },
       "context": {
@@ -1184,7 +1184,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-screenshot/locale/en-us/screenshot.failed.dialog"
+          "locale/en-us/screenshot.failed.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1197,17 +1197,17 @@
         "handler_source": "@intent_handler(\"take.screenshot.intent\")\ndef handle_screenshot_intent(self, message):\n    if self.is_ovos_shell:\n        LOG.debug(\"Taking screenshot via ovos-shell\")\n        self.bus.emit(message.forward(\"ovos.display.screenshot.get\",\n                                      {\"folderpath\": self.screenshots_folder}))\n        return\n\n    output = os.path.join(self.screenshots_folder, f\"{time.time()}.png\")\n    try:\n        with mss.mss() as sct:\n            screenshot = sct.shot(output=output)\n        self.notify(output)\n    except Exception as e:\n        LOG.error(f\"Failed to take screenshot: {e}\")\n        self.speak_dialog(\"screenshot.failed\")"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/ca-es/take.screenshot.intent",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/da-dk/take.screenshot.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/de-de/take.screenshot.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/en-us/take.screenshot.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/es-es/take.screenshot.intent",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/eu/take.screenshot.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/fr-fr/take.screenshot.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/gl-es/take.screenshot.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/it-it/take.screenshot.intent",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/nl-nl/take.screenshot.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/ovos-skill-screenshot/locale/pt-pt/take.screenshot.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/ca-es/take.screenshot.intent",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/da-dk/take.screenshot.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/de-de/take.screenshot.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/en-us/take.screenshot.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/es-es/take.screenshot.intent",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/eu/take.screenshot.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/fr-fr/take.screenshot.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/gl-es/take.screenshot.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/it-it/take.screenshot.intent",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/nl-nl/take.screenshot.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-screenshot/edit/dev/locale/pt-pt/take.screenshot.intent"
       }
     }
   }

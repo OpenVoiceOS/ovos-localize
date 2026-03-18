@@ -38,7 +38,7 @@
             "application"
           ],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/ca-es/already_running.dialog"
+          "file_path": "locale/ca-es/already_running.dialog"
         },
         "da": {
           "entries": [
@@ -64,7 +64,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/da/already_running.dialog"
+          "file_path": "locale/da/already_running.dialog"
         },
         "de-DE": {
           "entries": [
@@ -82,7 +82,7 @@
             "application"
           ],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/de-de/already_running.dialog"
+          "file_path": "locale/de-de/already_running.dialog"
         },
         "en-US": {
           "entries": [
@@ -100,7 +100,7 @@
             "application"
           ],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/en-us/already_running.dialog"
+          "file_path": "locale/en-us/already_running.dialog"
         },
         "es-ES": {
           "entries": [
@@ -118,7 +118,7 @@
             "application"
           ],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/es-es/already_running.dialog"
+          "file_path": "locale/es-es/already_running.dialog"
         },
         "fa-IR": {
           "entries": [
@@ -136,7 +136,7 @@
             "application"
           ],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/fa-ir/already_running.dialog"
+          "file_path": "locale/fa-ir/already_running.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -154,7 +154,7 @@
             "application"
           ],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/fr-fr/already_running.dialog"
+          "file_path": "locale/fr-fr/already_running.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -172,7 +172,7 @@
             "application"
           ],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/gl-es/already_running.dialog"
+          "file_path": "locale/gl-es/already_running.dialog"
         },
         "nl-NL": {
           "entries": [
@@ -198,7 +198,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/nl-nl/already_running.dialog"
+          "file_path": "locale/nl-nl/already_running.dialog"
         }
       },
       "context": {
@@ -226,15 +226,15 @@
         "handler_source": "def handle_async_prompt(self, message: Message):\n    app = message.data[\"app\"]\n    # in order for fallback to not time out we can't ask user questions in the other handler\n    # so we consume the utterance first, and then proceed to ask the user to clarify action\n    launch = True\n    switch = False\n\n    self.speak_dialog(\"already_running\", {\"application\": app})\n\n    if self.wmctrl and not self.settings.get(\"disable_window_manager\", False):\n        for i in range(5):\n            if switch not in [\"no\", \"yes\"]:\n                switch = self.ask_yesno(\"confirm_switch\")\n                LOG.debug(f\"user confirmation: {switch}\")\n                if switch and switch == \"yes\":\n                    win = self.match_window(app)\n                    window_id = win[0][0] if win else None\n                    self.switch_window(window_id)\n                    return True\n    if not switch:\n        for i in range(5):\n            if launch not in [\"no\", \"yes\"]:\n                launch = self.ask_yesno(\"confirm_launch\")\n                LOG.debug(f\"user confirmation: {launch}\")\n                if launch == \"no\":\n                    return True  # no action\n\n    # launch\n    self.launch_app(app)"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/ca-es/already_running.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/da/already_running.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/de-de/already_running.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/en-us/already_running.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/es-es/already_running.dialog",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/fa-ir/already_running.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/fr-fr/already_running.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/gl-es/already_running.dialog",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/nl-nl/already_running.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/ca-es/already_running.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/da/already_running.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/de-de/already_running.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/en-us/already_running.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/es-es/already_running.dialog",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/fa-ir/already_running.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/fr-fr/already_running.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/gl-es/already_running.dialog",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/nl-nl/already_running.dialog"
       }
     },
     "close.intent": {
@@ -276,7 +276,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/ca-es/close.intent"
+          "file_path": "locale/ca-es/close.intent"
         },
         "da": {
           "entries": [
@@ -309,7 +309,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/da/close.intent"
+          "file_path": "locale/da/close.intent"
         },
         "de-DE": {
           "entries": [
@@ -342,7 +342,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/de-de/close.intent"
+          "file_path": "locale/de-de/close.intent"
         },
         "en-US": {
           "entries": [
@@ -379,7 +379,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/en-us/close.intent"
+          "file_path": "locale/en-us/close.intent"
         },
         "es-ES": {
           "entries": [
@@ -423,7 +423,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/es-es/close.intent"
+          "file_path": "locale/es-es/close.intent"
         },
         "fa-IR": {
           "entries": [
@@ -460,7 +460,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/fa-ir/close.intent"
+          "file_path": "locale/fa-ir/close.intent"
         },
         "fr-FR": {
           "entries": [
@@ -493,7 +493,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/fr-fr/close.intent"
+          "file_path": "locale/fr-fr/close.intent"
         },
         "gl-ES": {
           "entries": [
@@ -526,7 +526,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/gl-es/close.intent"
+          "file_path": "locale/gl-es/close.intent"
         },
         "it-IT": {
           "entries": [
@@ -559,7 +559,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/it-it/close.intent"
+          "file_path": "locale/it-it/close.intent"
         },
         "nl-NL": {
           "entries": [
@@ -596,7 +596,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/nl-nl/close.intent"
+          "file_path": "locale/nl-nl/close.intent"
         }
       },
       "context": {
@@ -623,16 +623,16 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/ca-es/close.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/da/close.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/de-de/close.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/en-us/close.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/es-es/close.intent",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/fa-ir/close.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/fr-fr/close.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/gl-es/close.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/it-it/close.intent",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/nl-nl/close.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/ca-es/close.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/da/close.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/de-de/close.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/en-us/close.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/es-es/close.intent",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/fa-ir/close.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/fr-fr/close.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/gl-es/close.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/it-it/close.intent",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/nl-nl/close.intent"
       }
     },
     "confirm_launch.dialog": {
@@ -653,7 +653,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/ca-es/confirm_launch.dialog"
+          "file_path": "locale/ca-es/confirm_launch.dialog"
         },
         "da": {
           "entries": [
@@ -669,7 +669,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/da/confirm_launch.dialog"
+          "file_path": "locale/da/confirm_launch.dialog"
         },
         "de-DE": {
           "entries": [
@@ -685,7 +685,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/de-de/confirm_launch.dialog"
+          "file_path": "locale/de-de/confirm_launch.dialog"
         },
         "en-US": {
           "entries": [
@@ -701,7 +701,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/en-us/confirm_launch.dialog"
+          "file_path": "locale/en-us/confirm_launch.dialog"
         },
         "es-ES": {
           "entries": [
@@ -717,7 +717,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/es-es/confirm_launch.dialog"
+          "file_path": "locale/es-es/confirm_launch.dialog"
         },
         "fa-IR": {
           "entries": [
@@ -733,7 +733,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/fa-ir/confirm_launch.dialog"
+          "file_path": "locale/fa-ir/confirm_launch.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -749,7 +749,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/fr-fr/confirm_launch.dialog"
+          "file_path": "locale/fr-fr/confirm_launch.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -765,7 +765,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/gl-es/confirm_launch.dialog"
+          "file_path": "locale/gl-es/confirm_launch.dialog"
         },
         "nl-NL": {
           "entries": [
@@ -781,7 +781,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/nl-nl/confirm_launch.dialog"
+          "file_path": "locale/nl-nl/confirm_launch.dialog"
         }
       },
       "context": {
@@ -795,7 +795,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-application-launcher/locale/en-us/already_running.dialog"
+          "locale/en-us/already_running.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -807,15 +807,15 @@
         "handler_source": "def handle_async_prompt(self, message: Message):\n    app = message.data[\"app\"]\n    # in order for fallback to not time out we can't ask user questions in the other handler\n    # so we consume the utterance first, and then proceed to ask the user to clarify action\n    launch = True\n    switch = False\n\n    self.speak_dialog(\"already_running\", {\"application\": app})\n\n    if self.wmctrl and not self.settings.get(\"disable_window_manager\", False):\n        for i in range(5):\n            if switch not in [\"no\", \"yes\"]:\n                switch = self.ask_yesno(\"confirm_switch\")\n                LOG.debug(f\"user confirmation: {switch}\")\n                if switch and switch == \"yes\":\n                    win = self.match_window(app)\n                    window_id = win[0][0] if win else None\n                    self.switch_window(window_id)\n                    return True\n    if not switch:\n        for i in range(5):\n            if launch not in [\"no\", \"yes\"]:\n                launch = self.ask_yesno(\"confirm_launch\")\n                LOG.debug(f\"user confirmation: {launch}\")\n                if launch == \"no\":\n                    return True  # no action\n\n    # launch\n    self.launch_app(app)"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/ca-es/confirm_launch.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/da/confirm_launch.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/de-de/confirm_launch.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/en-us/confirm_launch.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/es-es/confirm_launch.dialog",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/fa-ir/confirm_launch.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/fr-fr/confirm_launch.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/gl-es/confirm_launch.dialog",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/nl-nl/confirm_launch.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/ca-es/confirm_launch.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/da/confirm_launch.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/de-de/confirm_launch.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/en-us/confirm_launch.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/es-es/confirm_launch.dialog",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/fa-ir/confirm_launch.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/fr-fr/confirm_launch.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/gl-es/confirm_launch.dialog",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/nl-nl/confirm_launch.dialog"
       }
     },
     "confirm_switch.dialog": {
@@ -839,7 +839,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/ca-es/confirm_switch.dialog"
+          "file_path": "locale/ca-es/confirm_switch.dialog"
         },
         "da": {
           "entries": [
@@ -858,7 +858,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/da/confirm_switch.dialog"
+          "file_path": "locale/da/confirm_switch.dialog"
         },
         "de-DE": {
           "entries": [
@@ -877,7 +877,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/de-de/confirm_switch.dialog"
+          "file_path": "locale/de-de/confirm_switch.dialog"
         },
         "en-US": {
           "entries": [
@@ -896,7 +896,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/en-us/confirm_switch.dialog"
+          "file_path": "locale/en-us/confirm_switch.dialog"
         },
         "es-ES": {
           "entries": [
@@ -915,7 +915,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/es-es/confirm_switch.dialog"
+          "file_path": "locale/es-es/confirm_switch.dialog"
         },
         "fa-IR": {
           "entries": [
@@ -934,7 +934,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/fa-ir/confirm_switch.dialog"
+          "file_path": "locale/fa-ir/confirm_switch.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -950,7 +950,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/fr-fr/confirm_switch.dialog"
+          "file_path": "locale/fr-fr/confirm_switch.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -969,7 +969,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/gl-es/confirm_switch.dialog"
+          "file_path": "locale/gl-es/confirm_switch.dialog"
         },
         "nl-NL": {
           "entries": [
@@ -988,7 +988,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/nl-nl/confirm_switch.dialog"
+          "file_path": "locale/nl-nl/confirm_switch.dialog"
         }
       },
       "context": {
@@ -1002,7 +1002,7 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-application-launcher/locale/en-us/already_running.dialog"
+          "locale/en-us/already_running.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1014,15 +1014,15 @@
         "handler_source": "def handle_async_prompt(self, message: Message):\n    app = message.data[\"app\"]\n    # in order for fallback to not time out we can't ask user questions in the other handler\n    # so we consume the utterance first, and then proceed to ask the user to clarify action\n    launch = True\n    switch = False\n\n    self.speak_dialog(\"already_running\", {\"application\": app})\n\n    if self.wmctrl and not self.settings.get(\"disable_window_manager\", False):\n        for i in range(5):\n            if switch not in [\"no\", \"yes\"]:\n                switch = self.ask_yesno(\"confirm_switch\")\n                LOG.debug(f\"user confirmation: {switch}\")\n                if switch and switch == \"yes\":\n                    win = self.match_window(app)\n                    window_id = win[0][0] if win else None\n                    self.switch_window(window_id)\n                    return True\n    if not switch:\n        for i in range(5):\n            if launch not in [\"no\", \"yes\"]:\n                launch = self.ask_yesno(\"confirm_launch\")\n                LOG.debug(f\"user confirmation: {launch}\")\n                if launch == \"no\":\n                    return True  # no action\n\n    # launch\n    self.launch_app(app)"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/ca-es/confirm_switch.dialog",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/da/confirm_switch.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/de-de/confirm_switch.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/en-us/confirm_switch.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/es-es/confirm_switch.dialog",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/fa-ir/confirm_switch.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/fr-fr/confirm_switch.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/gl-es/confirm_switch.dialog",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/nl-nl/confirm_switch.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/ca-es/confirm_switch.dialog",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/da/confirm_switch.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/de-de/confirm_switch.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/en-us/confirm_switch.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/es-es/confirm_switch.dialog",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/fa-ir/confirm_switch.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/fr-fr/confirm_switch.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/gl-es/confirm_switch.dialog",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/nl-nl/confirm_switch.dialog"
       }
     },
     "launch.intent": {
@@ -1049,7 +1049,7 @@
             "application"
           ],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/ca-es/launch.intent"
+          "file_path": "locale/ca-es/launch.intent"
         },
         "da": {
           "entries": [
@@ -1078,7 +1078,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/da/launch.intent"
+          "file_path": "locale/da/launch.intent"
         },
         "de-DE": {
           "entries": [
@@ -1111,7 +1111,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/de-de/launch.intent"
+          "file_path": "locale/de-de/launch.intent"
         },
         "en-US": {
           "entries": [
@@ -1140,7 +1140,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/en-us/launch.intent"
+          "file_path": "locale/en-us/launch.intent"
         },
         "es-ES": {
           "entries": [
@@ -1181,7 +1181,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/es-es/launch.intent"
+          "file_path": "locale/es-es/launch.intent"
         },
         "eu": {
           "entries": [
@@ -1210,7 +1210,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/eu/launch.intent"
+          "file_path": "locale/eu/launch.intent"
         },
         "fa-IR": {
           "entries": [
@@ -1239,7 +1239,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/fa-ir/launch.intent"
+          "file_path": "locale/fa-ir/launch.intent"
         },
         "fr-FR": {
           "entries": [
@@ -1268,7 +1268,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/fr-fr/launch.intent"
+          "file_path": "locale/fr-fr/launch.intent"
         },
         "gl-ES": {
           "entries": [
@@ -1297,7 +1297,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/gl-es/launch.intent"
+          "file_path": "locale/gl-es/launch.intent"
         },
         "it-IT": {
           "entries": [
@@ -1326,7 +1326,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/it-it/launch.intent"
+          "file_path": "locale/it-it/launch.intent"
         },
         "nl-NL": {
           "entries": [
@@ -1355,7 +1355,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/nl-nl/launch.intent"
+          "file_path": "locale/nl-nl/launch.intent"
         },
         "pt-PT": {
           "entries": [
@@ -1384,7 +1384,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-application-launcher/locale/pt-pt/launch.intent"
+          "file_path": "locale/pt-pt/launch.intent"
         }
       },
       "context": {
@@ -1411,18 +1411,18 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/ca-es/launch.intent",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/da/launch.intent",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/de-de/launch.intent",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/en-us/launch.intent",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/es-es/launch.intent",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/eu/launch.intent",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/fa-ir/launch.intent",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/fr-fr/launch.intent",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/gl-es/launch.intent",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/it-it/launch.intent",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/nl-nl/launch.intent",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/pt-pt/launch.intent"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/ca-es/launch.intent",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/da/launch.intent",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/de-de/launch.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/en-us/launch.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/es-es/launch.intent",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/eu/launch.intent",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/fa-ir/launch.intent",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/fr-fr/launch.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/gl-es/launch.intent",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/it-it/launch.intent",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/nl-nl/launch.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/pt-pt/launch.intent"
       }
     },
     "skill.json": {
@@ -1456,7 +1456,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/ca-es/skill.json"
+          "file_path": "locale/ca-es/skill.json"
         },
         "da": {
           "entries": [
@@ -1485,7 +1485,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/da/skill.json"
+          "file_path": "locale/da/skill.json"
         },
         "de-DE": {
           "entries": [
@@ -1514,7 +1514,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/de-de/skill.json"
+          "file_path": "locale/de-de/skill.json"
         },
         "en-US": {
           "entries": [
@@ -1543,7 +1543,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/en-us/skill.json"
+          "file_path": "locale/en-us/skill.json"
         },
         "es-ES": {
           "entries": [
@@ -1572,7 +1572,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/es-es/skill.json"
+          "file_path": "locale/es-es/skill.json"
         },
         "fa-IR": {
           "entries": [
@@ -1601,7 +1601,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/fa-IR/skill.json"
+          "file_path": "locale/fa-IR/skill.json"
         },
         "fr-FR": {
           "entries": [
@@ -1630,7 +1630,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/fr-fr/skill.json"
+          "file_path": "locale/fr-fr/skill.json"
         },
         "gl-ES": {
           "entries": [
@@ -1659,7 +1659,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/gl-es/skill.json"
+          "file_path": "locale/gl-es/skill.json"
         },
         "nl-NL": {
           "entries": [
@@ -1688,7 +1688,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-application-launcher/locale/nl-nl/skill.json"
+          "file_path": "locale/nl-nl/skill.json"
         }
       },
       "context": {
@@ -1708,15 +1708,15 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/ca-es/skill.json",
-        "da": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/da/skill.json",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/de-de/skill.json",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/en-us/skill.json",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/es-es/skill.json",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/fa-IR/skill.json",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/fr-fr/skill.json",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/gl-es/skill.json",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/ovos-skill-application-launcher/locale/nl-nl/skill.json"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/ca-es/skill.json",
+        "da": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/da/skill.json",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/de-de/skill.json",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/en-us/skill.json",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/es-es/skill.json",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/fa-IR/skill.json",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/fr-fr/skill.json",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/gl-es/skill.json",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-application-launcher/edit/dev/locale/nl-nl/skill.json"
       }
     }
   }

@@ -58,7 +58,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/ca-es/Run.voc"
+          "file_path": "locale/ca-es/Run.voc"
         },
         "da-DK": {
           "entries": [
@@ -86,7 +86,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/da-dk/Run.voc"
+          "file_path": "locale/da-dk/Run.voc"
         },
         "de-DE": {
           "entries": [
@@ -134,7 +134,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/de-de/Run.voc"
+          "file_path": "locale/de-de/Run.voc"
         },
         "el-GR": {
           "entries": [
@@ -146,7 +146,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/el-gr/Run.voc"
+          "file_path": "locale/el-gr/Run.voc"
         },
         "en-US": {
           "entries": [
@@ -178,7 +178,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/en-us/Run.voc"
+          "file_path": "locale/en-us/Run.voc"
         },
         "es-ES": {
           "entries": [
@@ -206,7 +206,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/es-es/Run.voc"
+          "file_path": "locale/es-es/Run.voc"
         },
         "es-LM": {
           "entries": [
@@ -218,7 +218,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/es-lm/Run.voc"
+          "file_path": "locale/es-lm/Run.voc"
         },
         "eu": {
           "entries": [
@@ -250,7 +250,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/eu/Run.voc"
+          "file_path": "locale/eu/Run.voc"
         },
         "fa-IR": {
           "entries": [
@@ -282,7 +282,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/fa-ir/Run.voc"
+          "file_path": "locale/fa-ir/Run.voc"
         },
         "fr-FR": {
           "entries": [
@@ -302,7 +302,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/fr-fr/Run.voc"
+          "file_path": "locale/fr-fr/Run.voc"
         },
         "gl-ES": {
           "entries": [
@@ -330,7 +330,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/gl-es/Run.voc"
+          "file_path": "locale/gl-es/Run.voc"
         },
         "it-IT": {
           "entries": [
@@ -342,7 +342,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/it-it/Run.voc"
+          "file_path": "locale/it-it/Run.voc"
         },
         "nl-NL": {
           "entries": [
@@ -374,7 +374,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/nl-nl/Run.voc"
+          "file_path": "locale/nl-nl/Run.voc"
         },
         "pt-BR": {
           "entries": [
@@ -386,7 +386,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/pt-br/Run.voc"
+          "file_path": "locale/pt-br/Run.voc"
         },
         "pt-PT": {
           "entries": [
@@ -414,7 +414,7 @@
           "line_count": 5,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/pt-pt/Run.voc"
+          "file_path": "locale/pt-pt/Run.voc"
         },
         "ru-RU": {
           "entries": [
@@ -426,7 +426,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/ru-ru/Run.voc"
+          "file_path": "locale/ru-ru/Run.voc"
         },
         "sv-SE": {
           "entries": [
@@ -438,7 +438,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/sv-se/Run.voc"
+          "file_path": "locale/sv-se/Run.voc"
         },
         "tr-TR": {
           "entries": [
@@ -450,7 +450,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/tr-tr/Run.voc"
+          "file_path": "locale/tr-tr/Run.voc"
         }
       },
       "context": {
@@ -484,24 +484,24 @@
         "handler_source": "@intent_handler(IntentBuilder(\"SpeedtestIntent\").require(\"Run\").require(\"Speedtest\"))\ndef handle_speedtest_intent(self, message):\n    LOG.info(\"speedtest started\")\n    try:\n        self.speak_dialog('running')\n        self.enclosure.deactivate_mouth_events()\n        self.enclosure.mouth_think()\n        self.gui.show_animated_image(\"wifi-speed.gif\")\n        servers = []\n        speed = speedtest.Speedtest()\n        speed.get_servers(servers)\n        speed.get_best_server()\n        self.enclosure.eyes_look(\"d\")\n        speed.download()\n        self.enclosure.eyes_look(\"u\")\n        speed.upload(pre_allocate=False)\n        speed.results.share()\n        result = speed.results.dict()\n        LOG.info(\"speedtest finished\")\n        self.enclosure.eyes_narrow()\n        downspeed = ('%.2f' % float((result[\"download\"]) / 1000000))\n        upspeed = ('%.2f' % float((result[\"upload\"]) / 1000000))\n        self.gui.show_text(f\"UP: {upspeed} MB/S\\nDOWN: {downspeed} MB/S\")\n        self.enclosure.mouth_text(f\"UP: {upspeed} MB/S     DOWN: {downspeed} MB/S     \")\n        self.speak_dialog('result', {'DOWN': downspeed, 'UP': upspeed}, wait=True)\n        time.sleep(2)  # let speed test results scroll for a bit\n        self.enclosure.eyes_fill(100)\n    except:\n        self.speak_dialog(\"error\")\n\n    self.enclosure.activate_mouth_events()\n    self.enclosure.mouth_reset()\n    self.enclosure.eyes_reset()\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/ca-es/Run.voc",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/da-dk/Run.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/de-de/Run.voc",
-        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/el-gr/Run.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/en-us/Run.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/es-es/Run.voc",
-        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/es-lm/Run.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/eu/Run.voc",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/fa-ir/Run.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/fr-fr/Run.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/gl-es/Run.voc",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/it-it/Run.voc",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/nl-nl/Run.voc",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/pt-br/Run.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/pt-pt/Run.voc",
-        "ru-RU": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/ru-ru/Run.voc",
-        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/sv-se/Run.voc",
-        "tr-TR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/tr-tr/Run.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/ca-es/Run.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/da-dk/Run.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/de-de/Run.voc",
+        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/el-gr/Run.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/en-us/Run.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/es-es/Run.voc",
+        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/es-lm/Run.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/eu/Run.voc",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/fa-ir/Run.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/fr-fr/Run.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/gl-es/Run.voc",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/it-it/Run.voc",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/nl-nl/Run.voc",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/pt-br/Run.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/pt-pt/Run.voc",
+        "ru-RU": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/ru-ru/Run.voc",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/sv-se/Run.voc",
+        "tr-TR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/tr-tr/Run.voc"
       }
     },
     "Speedtest.voc": {
@@ -618,7 +618,7 @@
           "line_count": 26,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/ca-es/Speedtest.voc"
+          "file_path": "locale/ca-es/Speedtest.voc"
         },
         "da-DK": {
           "entries": [
@@ -650,7 +650,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/da-dk/Speedtest.voc"
+          "file_path": "locale/da-dk/Speedtest.voc"
         },
         "de-DE": {
           "entries": [
@@ -702,7 +702,7 @@
           "line_count": 11,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/de-de/Speedtest.voc"
+          "file_path": "locale/de-de/Speedtest.voc"
         },
         "el-GR": {
           "entries": [
@@ -714,7 +714,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/el-gr/Speedtest.voc"
+          "file_path": "locale/el-gr/Speedtest.voc"
         },
         "en-US": {
           "entries": [
@@ -746,7 +746,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/en-us/Speedtest.voc"
+          "file_path": "locale/en-us/Speedtest.voc"
         },
         "es-ES": {
           "entries": [
@@ -778,7 +778,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/es-es/Speedtest.voc"
+          "file_path": "locale/es-es/Speedtest.voc"
         },
         "es-LM": {
           "entries": [
@@ -790,7 +790,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/es-lm/Speedtest.voc"
+          "file_path": "locale/es-lm/Speedtest.voc"
         },
         "eu": {
           "entries": [
@@ -822,7 +822,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/eu/Speedtest.voc"
+          "file_path": "locale/eu/Speedtest.voc"
         },
         "fa-IR": {
           "entries": [
@@ -854,7 +854,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/fa-ir/Speedtest.voc"
+          "file_path": "locale/fa-ir/Speedtest.voc"
         },
         "fr-FR": {
           "entries": [
@@ -878,7 +878,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/fr-fr/Speedtest.voc"
+          "file_path": "locale/fr-fr/Speedtest.voc"
         },
         "gl-ES": {
           "entries": [
@@ -910,7 +910,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/gl-es/Speedtest.voc"
+          "file_path": "locale/gl-es/Speedtest.voc"
         },
         "it-IT": {
           "entries": [
@@ -922,7 +922,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/it-it/Speedtest.voc"
+          "file_path": "locale/it-it/Speedtest.voc"
         },
         "nl-NL": {
           "entries": [
@@ -954,7 +954,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/nl-nl/Speedtest.voc"
+          "file_path": "locale/nl-nl/Speedtest.voc"
         },
         "pt-BR": {
           "entries": [
@@ -966,7 +966,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/pt-br/Speedtest.voc"
+          "file_path": "locale/pt-br/Speedtest.voc"
         },
         "pt-PT": {
           "entries": [
@@ -998,7 +998,7 @@
           "line_count": 6,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/pt-pt/Speedtest.voc"
+          "file_path": "locale/pt-pt/Speedtest.voc"
         },
         "ru-RU": {
           "entries": [
@@ -1014,7 +1014,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/ru-ru/Speedtest.voc"
+          "file_path": "locale/ru-ru/Speedtest.voc"
         },
         "sv-SE": {
           "entries": [
@@ -1030,7 +1030,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/sv-se/Speedtest.voc"
+          "file_path": "locale/sv-se/Speedtest.voc"
         },
         "tr-TR": {
           "entries": [
@@ -1042,7 +1042,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/tr-tr/Speedtest.voc"
+          "file_path": "locale/tr-tr/Speedtest.voc"
         }
       },
       "context": {
@@ -1076,24 +1076,24 @@
         "handler_source": "@intent_handler(IntentBuilder(\"SpeedtestIntent\").require(\"Run\").require(\"Speedtest\"))\ndef handle_speedtest_intent(self, message):\n    LOG.info(\"speedtest started\")\n    try:\n        self.speak_dialog('running')\n        self.enclosure.deactivate_mouth_events()\n        self.enclosure.mouth_think()\n        self.gui.show_animated_image(\"wifi-speed.gif\")\n        servers = []\n        speed = speedtest.Speedtest()\n        speed.get_servers(servers)\n        speed.get_best_server()\n        self.enclosure.eyes_look(\"d\")\n        speed.download()\n        self.enclosure.eyes_look(\"u\")\n        speed.upload(pre_allocate=False)\n        speed.results.share()\n        result = speed.results.dict()\n        LOG.info(\"speedtest finished\")\n        self.enclosure.eyes_narrow()\n        downspeed = ('%.2f' % float((result[\"download\"]) / 1000000))\n        upspeed = ('%.2f' % float((result[\"upload\"]) / 1000000))\n        self.gui.show_text(f\"UP: {upspeed} MB/S\\nDOWN: {downspeed} MB/S\")\n        self.enclosure.mouth_text(f\"UP: {upspeed} MB/S     DOWN: {downspeed} MB/S     \")\n        self.speak_dialog('result', {'DOWN': downspeed, 'UP': upspeed}, wait=True)\n        time.sleep(2)  # let speed test results scroll for a bit\n        self.enclosure.eyes_fill(100)\n    except:\n        self.speak_dialog(\"error\")\n\n    self.enclosure.activate_mouth_events()\n    self.enclosure.mouth_reset()\n    self.enclosure.eyes_reset()\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/ca-es/Speedtest.voc",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/da-dk/Speedtest.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/de-de/Speedtest.voc",
-        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/el-gr/Speedtest.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/en-us/Speedtest.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/es-es/Speedtest.voc",
-        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/es-lm/Speedtest.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/eu/Speedtest.voc",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/fa-ir/Speedtest.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/fr-fr/Speedtest.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/gl-es/Speedtest.voc",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/it-it/Speedtest.voc",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/nl-nl/Speedtest.voc",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/pt-br/Speedtest.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/pt-pt/Speedtest.voc",
-        "ru-RU": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/ru-ru/Speedtest.voc",
-        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/sv-se/Speedtest.voc",
-        "tr-TR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/tr-tr/Speedtest.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/ca-es/Speedtest.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/da-dk/Speedtest.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/de-de/Speedtest.voc",
+        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/el-gr/Speedtest.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/en-us/Speedtest.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/es-es/Speedtest.voc",
+        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/es-lm/Speedtest.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/eu/Speedtest.voc",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/fa-ir/Speedtest.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/fr-fr/Speedtest.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/gl-es/Speedtest.voc",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/it-it/Speedtest.voc",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/nl-nl/Speedtest.voc",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/pt-br/Speedtest.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/pt-pt/Speedtest.voc",
+        "ru-RU": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/ru-ru/Speedtest.voc",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/sv-se/Speedtest.voc",
+        "tr-TR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/tr-tr/Speedtest.voc"
       }
     },
     "error.dialog": {
@@ -1117,7 +1117,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/ca-es/error.dialog"
+          "file_path": "locale/ca-es/error.dialog"
         },
         "da-DK": {
           "entries": [
@@ -1136,7 +1136,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/da-dk/error.dialog"
+          "file_path": "locale/da-dk/error.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1155,7 +1155,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/de-de/error.dialog"
+          "file_path": "locale/de-de/error.dialog"
         },
         "el-GR": {
           "entries": [
@@ -1174,7 +1174,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/el-gr/error.dialog"
+          "file_path": "locale/el-gr/error.dialog"
         },
         "en-US": {
           "entries": [
@@ -1193,7 +1193,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/en-us/error.dialog"
+          "file_path": "locale/en-us/error.dialog"
         },
         "es-ES": {
           "entries": [
@@ -1212,7 +1212,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/es-es/error.dialog"
+          "file_path": "locale/es-es/error.dialog"
         },
         "es-LM": {
           "entries": [
@@ -1231,7 +1231,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/es-lm/error.dialog"
+          "file_path": "locale/es-lm/error.dialog"
         },
         "eu": {
           "entries": [
@@ -1250,7 +1250,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/eu/error.dialog"
+          "file_path": "locale/eu/error.dialog"
         },
         "fa-IR": {
           "entries": [
@@ -1269,7 +1269,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/fa-ir/error.dialog"
+          "file_path": "locale/fa-ir/error.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1288,7 +1288,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/fr-fr/error.dialog"
+          "file_path": "locale/fr-fr/error.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -1307,7 +1307,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/gl-es/error.dialog"
+          "file_path": "locale/gl-es/error.dialog"
         },
         "it-IT": {
           "entries": [
@@ -1326,7 +1326,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/it-it/error.dialog"
+          "file_path": "locale/it-it/error.dialog"
         },
         "nl-NL": {
           "entries": [
@@ -1345,7 +1345,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/nl-nl/error.dialog"
+          "file_path": "locale/nl-nl/error.dialog"
         },
         "pt-BR": {
           "entries": [
@@ -1364,7 +1364,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/pt-br/error.dialog"
+          "file_path": "locale/pt-br/error.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -1383,7 +1383,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/pt-pt/error.dialog"
+          "file_path": "locale/pt-pt/error.dialog"
         },
         "ru-RU": {
           "entries": [
@@ -1402,7 +1402,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/ru-ru/error.dialog"
+          "file_path": "locale/ru-ru/error.dialog"
         },
         "sv-SE": {
           "entries": [
@@ -1421,7 +1421,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/sv-se/error.dialog"
+          "file_path": "locale/sv-se/error.dialog"
         },
         "tr-TR": {
           "entries": [
@@ -1440,7 +1440,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/tr-tr/error.dialog"
+          "file_path": "locale/tr-tr/error.dialog"
         }
       },
       "context": {
@@ -1454,8 +1454,8 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-speedtest/locale/en-us/result.dialog",
-          "ovos-skill-speedtest/locale/en-us/running.dialog"
+          "locale/en-us/running.dialog",
+          "locale/en-us/result.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1467,24 +1467,24 @@
         "handler_source": "@intent_handler(IntentBuilder(\"SpeedtestIntent\").require(\"Run\").require(\"Speedtest\"))\ndef handle_speedtest_intent(self, message):\n    LOG.info(\"speedtest started\")\n    try:\n        self.speak_dialog('running')\n        self.enclosure.deactivate_mouth_events()\n        self.enclosure.mouth_think()\n        self.gui.show_animated_image(\"wifi-speed.gif\")\n        servers = []\n        speed = speedtest.Speedtest()\n        speed.get_servers(servers)\n        speed.get_best_server()\n        self.enclosure.eyes_look(\"d\")\n        speed.download()\n        self.enclosure.eyes_look(\"u\")\n        speed.upload(pre_allocate=False)\n        speed.results.share()\n        result = speed.results.dict()\n        LOG.info(\"speedtest finished\")\n        self.enclosure.eyes_narrow()\n        downspeed = ('%.2f' % float((result[\"download\"]) / 1000000))\n        upspeed = ('%.2f' % float((result[\"upload\"]) / 1000000))\n        self.gui.show_text(f\"UP: {upspeed} MB/S\\nDOWN: {downspeed} MB/S\")\n        self.enclosure.mouth_text(f\"UP: {upspeed} MB/S     DOWN: {downspeed} MB/S     \")\n        self.speak_dialog('result', {'DOWN': downspeed, 'UP': upspeed}, wait=True)\n        time.sleep(2)  # let speed test results scroll for a bit\n        self.enclosure.eyes_fill(100)\n    except:\n        self.speak_dialog(\"error\")\n\n    self.enclosure.activate_mouth_events()\n    self.enclosure.mouth_reset()\n    self.enclosure.eyes_reset()\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/ca-es/error.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/da-dk/error.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/de-de/error.dialog",
-        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/el-gr/error.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/en-us/error.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/es-es/error.dialog",
-        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/es-lm/error.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/eu/error.dialog",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/fa-ir/error.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/fr-fr/error.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/gl-es/error.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/it-it/error.dialog",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/nl-nl/error.dialog",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/pt-br/error.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/pt-pt/error.dialog",
-        "ru-RU": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/ru-ru/error.dialog",
-        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/sv-se/error.dialog",
-        "tr-TR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/tr-tr/error.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/ca-es/error.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/da-dk/error.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/de-de/error.dialog",
+        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/el-gr/error.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/en-us/error.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/es-es/error.dialog",
+        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/es-lm/error.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/eu/error.dialog",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/fa-ir/error.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/fr-fr/error.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/gl-es/error.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/it-it/error.dialog",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/nl-nl/error.dialog",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/pt-br/error.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/pt-pt/error.dialog",
+        "ru-RU": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/ru-ru/error.dialog",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/sv-se/error.dialog",
+        "tr-TR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/tr-tr/error.dialog"
       }
     },
     "result.dialog": {
@@ -1511,7 +1511,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/ca-es/result.dialog"
+          "file_path": "locale/ca-es/result.dialog"
         },
         "da-DK": {
           "entries": [
@@ -1533,7 +1533,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/da-dk/result.dialog"
+          "file_path": "locale/da-dk/result.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1555,7 +1555,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/de-de/result.dialog"
+          "file_path": "locale/de-de/result.dialog"
         },
         "el-GR": {
           "entries": [
@@ -1577,7 +1577,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/el-gr/result.dialog"
+          "file_path": "locale/el-gr/result.dialog"
         },
         "en-US": {
           "entries": [
@@ -1599,7 +1599,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/en-us/result.dialog"
+          "file_path": "locale/en-us/result.dialog"
         },
         "es-ES": {
           "entries": [
@@ -1621,7 +1621,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/es-es/result.dialog"
+          "file_path": "locale/es-es/result.dialog"
         },
         "es-LM": {
           "entries": [
@@ -1643,7 +1643,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/es-lm/result.dialog"
+          "file_path": "locale/es-lm/result.dialog"
         },
         "eu": {
           "entries": [
@@ -1665,7 +1665,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/eu/result.dialog"
+          "file_path": "locale/eu/result.dialog"
         },
         "fa-IR": {
           "entries": [
@@ -1687,7 +1687,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/fa-ir/result.dialog"
+          "file_path": "locale/fa-ir/result.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -1709,7 +1709,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/fr-fr/result.dialog"
+          "file_path": "locale/fr-fr/result.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -1731,7 +1731,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/gl-es/result.dialog"
+          "file_path": "locale/gl-es/result.dialog"
         },
         "it-IT": {
           "entries": [
@@ -1753,7 +1753,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/it-it/result.dialog"
+          "file_path": "locale/it-it/result.dialog"
         },
         "nl-NL": {
           "entries": [
@@ -1775,7 +1775,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/nl-nl/result.dialog"
+          "file_path": "locale/nl-nl/result.dialog"
         },
         "pt-BR": {
           "entries": [
@@ -1797,7 +1797,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/pt-br/result.dialog"
+          "file_path": "locale/pt-br/result.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -1819,7 +1819,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/pt-pt/result.dialog"
+          "file_path": "locale/pt-pt/result.dialog"
         },
         "ru-RU": {
           "entries": [
@@ -1841,7 +1841,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/ru-ru/result.dialog"
+          "file_path": "locale/ru-ru/result.dialog"
         },
         "sv-SE": {
           "entries": [
@@ -1863,7 +1863,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/sv-se/result.dialog"
+          "file_path": "locale/sv-se/result.dialog"
         },
         "tr-TR": {
           "entries": [
@@ -1885,7 +1885,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/tr-tr/result.dialog"
+          "file_path": "locale/tr-tr/result.dialog"
         }
       },
       "context": {
@@ -1905,8 +1905,8 @@
           "UP": "Runtime value from handle_speedtest_intent()"
         },
         "related_files": [
-          "ovos-skill-speedtest/locale/en-us/running.dialog",
-          "ovos-skill-speedtest/locale/en-us/error.dialog"
+          "locale/en-us/running.dialog",
+          "locale/en-us/error.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1918,24 +1918,24 @@
         "handler_source": "@intent_handler(IntentBuilder(\"SpeedtestIntent\").require(\"Run\").require(\"Speedtest\"))\ndef handle_speedtest_intent(self, message):\n    LOG.info(\"speedtest started\")\n    try:\n        self.speak_dialog('running')\n        self.enclosure.deactivate_mouth_events()\n        self.enclosure.mouth_think()\n        self.gui.show_animated_image(\"wifi-speed.gif\")\n        servers = []\n        speed = speedtest.Speedtest()\n        speed.get_servers(servers)\n        speed.get_best_server()\n        self.enclosure.eyes_look(\"d\")\n        speed.download()\n        self.enclosure.eyes_look(\"u\")\n        speed.upload(pre_allocate=False)\n        speed.results.share()\n        result = speed.results.dict()\n        LOG.info(\"speedtest finished\")\n        self.enclosure.eyes_narrow()\n        downspeed = ('%.2f' % float((result[\"download\"]) / 1000000))\n        upspeed = ('%.2f' % float((result[\"upload\"]) / 1000000))\n        self.gui.show_text(f\"UP: {upspeed} MB/S\\nDOWN: {downspeed} MB/S\")\n        self.enclosure.mouth_text(f\"UP: {upspeed} MB/S     DOWN: {downspeed} MB/S     \")\n        self.speak_dialog('result', {'DOWN': downspeed, 'UP': upspeed}, wait=True)\n        time.sleep(2)  # let speed test results scroll for a bit\n        self.enclosure.eyes_fill(100)\n    except:\n        self.speak_dialog(\"error\")\n\n    self.enclosure.activate_mouth_events()\n    self.enclosure.mouth_reset()\n    self.enclosure.eyes_reset()\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/ca-es/result.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/da-dk/result.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/de-de/result.dialog",
-        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/el-gr/result.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/en-us/result.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/es-es/result.dialog",
-        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/es-lm/result.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/eu/result.dialog",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/fa-ir/result.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/fr-fr/result.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/gl-es/result.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/it-it/result.dialog",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/nl-nl/result.dialog",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/pt-br/result.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/pt-pt/result.dialog",
-        "ru-RU": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/ru-ru/result.dialog",
-        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/sv-se/result.dialog",
-        "tr-TR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/tr-tr/result.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/ca-es/result.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/da-dk/result.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/de-de/result.dialog",
+        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/el-gr/result.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/en-us/result.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/es-es/result.dialog",
+        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/es-lm/result.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/eu/result.dialog",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/fa-ir/result.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/fr-fr/result.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/gl-es/result.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/it-it/result.dialog",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/nl-nl/result.dialog",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/pt-br/result.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/pt-pt/result.dialog",
+        "ru-RU": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/ru-ru/result.dialog",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/sv-se/result.dialog",
+        "tr-TR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/tr-tr/result.dialog"
       }
     },
     "running.dialog": {
@@ -1959,7 +1959,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/ca-es/running.dialog"
+          "file_path": "locale/ca-es/running.dialog"
         },
         "da-DK": {
           "entries": [
@@ -1978,7 +1978,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/da-dk/running.dialog"
+          "file_path": "locale/da-dk/running.dialog"
         },
         "de-DE": {
           "entries": [
@@ -1997,7 +1997,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/de-de/running.dialog"
+          "file_path": "locale/de-de/running.dialog"
         },
         "el-GR": {
           "entries": [
@@ -2016,7 +2016,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/el-gr/running.dialog"
+          "file_path": "locale/el-gr/running.dialog"
         },
         "en-US": {
           "entries": [
@@ -2035,7 +2035,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/en-us/running.dialog"
+          "file_path": "locale/en-us/running.dialog"
         },
         "es-ES": {
           "entries": [
@@ -2054,7 +2054,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/es-es/running.dialog"
+          "file_path": "locale/es-es/running.dialog"
         },
         "es-LM": {
           "entries": [
@@ -2073,7 +2073,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/es-lm/running.dialog"
+          "file_path": "locale/es-lm/running.dialog"
         },
         "eu": {
           "entries": [
@@ -2092,7 +2092,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/eu/running.dialog"
+          "file_path": "locale/eu/running.dialog"
         },
         "fa-IR": {
           "entries": [
@@ -2111,7 +2111,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/fa-ir/running.dialog"
+          "file_path": "locale/fa-ir/running.dialog"
         },
         "fr-FR": {
           "entries": [
@@ -2130,7 +2130,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/fr-fr/running.dialog"
+          "file_path": "locale/fr-fr/running.dialog"
         },
         "gl-ES": {
           "entries": [
@@ -2149,7 +2149,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/gl-es/running.dialog"
+          "file_path": "locale/gl-es/running.dialog"
         },
         "it-IT": {
           "entries": [
@@ -2168,7 +2168,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/it-it/running.dialog"
+          "file_path": "locale/it-it/running.dialog"
         },
         "nl-NL": {
           "entries": [
@@ -2187,7 +2187,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/nl-nl/running.dialog"
+          "file_path": "locale/nl-nl/running.dialog"
         },
         "pt-BR": {
           "entries": [
@@ -2206,7 +2206,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/pt-br/running.dialog"
+          "file_path": "locale/pt-br/running.dialog"
         },
         "pt-PT": {
           "entries": [
@@ -2225,7 +2225,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/pt-pt/running.dialog"
+          "file_path": "locale/pt-pt/running.dialog"
         },
         "ru-RU": {
           "entries": [
@@ -2244,7 +2244,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/ru-ru/running.dialog"
+          "file_path": "locale/ru-ru/running.dialog"
         },
         "sv-SE": {
           "entries": [
@@ -2263,7 +2263,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/sv-se/running.dialog"
+          "file_path": "locale/sv-se/running.dialog"
         },
         "tr-TR": {
           "entries": [
@@ -2282,7 +2282,7 @@
               "line_number": null
             }
           ],
-          "file_path": "ovos-skill-speedtest/locale/tr-tr/running.dialog"
+          "file_path": "locale/tr-tr/running.dialog"
         }
       },
       "context": {
@@ -2296,8 +2296,8 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "ovos-skill-speedtest/locale/en-us/result.dialog",
-          "ovos-skill-speedtest/locale/en-us/error.dialog"
+          "locale/en-us/error.dialog",
+          "locale/en-us/result.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -2309,24 +2309,24 @@
         "handler_source": "@intent_handler(IntentBuilder(\"SpeedtestIntent\").require(\"Run\").require(\"Speedtest\"))\ndef handle_speedtest_intent(self, message):\n    LOG.info(\"speedtest started\")\n    try:\n        self.speak_dialog('running')\n        self.enclosure.deactivate_mouth_events()\n        self.enclosure.mouth_think()\n        self.gui.show_animated_image(\"wifi-speed.gif\")\n        servers = []\n        speed = speedtest.Speedtest()\n        speed.get_servers(servers)\n        speed.get_best_server()\n        self.enclosure.eyes_look(\"d\")\n        speed.download()\n        self.enclosure.eyes_look(\"u\")\n        speed.upload(pre_allocate=False)\n        speed.results.share()\n        result = speed.results.dict()\n        LOG.info(\"speedtest finished\")\n        self.enclosure.eyes_narrow()\n        downspeed = ('%.2f' % float((result[\"download\"]) / 1000000))\n        upspeed = ('%.2f' % float((result[\"upload\"]) / 1000000))\n        self.gui.show_text(f\"UP: {upspeed} MB/S\\nDOWN: {downspeed} MB/S\")\n        self.enclosure.mouth_text(f\"UP: {upspeed} MB/S     DOWN: {downspeed} MB/S     \")\n        self.speak_dialog('result', {'DOWN': downspeed, 'UP': upspeed}, wait=True)\n        time.sleep(2)  # let speed test results scroll for a bit\n        self.enclosure.eyes_fill(100)\n    except:\n        self.speak_dialog(\"error\")\n\n    self.enclosure.activate_mouth_events()\n    self.enclosure.mouth_reset()\n    self.enclosure.eyes_reset()\n    self.gui.release()"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/ca-es/running.dialog",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/da-dk/running.dialog",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/de-de/running.dialog",
-        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/el-gr/running.dialog",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/en-us/running.dialog",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/es-es/running.dialog",
-        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/es-lm/running.dialog",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/eu/running.dialog",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/fa-ir/running.dialog",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/fr-fr/running.dialog",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/gl-es/running.dialog",
-        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/it-it/running.dialog",
-        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/nl-nl/running.dialog",
-        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/pt-br/running.dialog",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/pt-pt/running.dialog",
-        "ru-RU": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/ru-ru/running.dialog",
-        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/sv-se/running.dialog",
-        "tr-TR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/tr-tr/running.dialog"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/ca-es/running.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/da-dk/running.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/de-de/running.dialog",
+        "el-GR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/el-gr/running.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/en-us/running.dialog",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/es-es/running.dialog",
+        "es-LM": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/es-lm/running.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/eu/running.dialog",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/fa-ir/running.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/fr-fr/running.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/gl-es/running.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/it-it/running.dialog",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/nl-nl/running.dialog",
+        "pt-BR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/pt-br/running.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/pt-pt/running.dialog",
+        "ru-RU": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/ru-ru/running.dialog",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/sv-se/running.dialog",
+        "tr-TR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/tr-tr/running.dialog"
       }
     },
     "skill.json": {
@@ -2412,7 +2412,7 @@
           "line_count": 11,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/ca-es/skill.json"
+          "file_path": "locale/ca-es/skill.json"
         },
         "da-DK": {
           "entries": [
@@ -2493,7 +2493,7 @@
           "line_count": 11,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/da-dk/skill.json"
+          "file_path": "locale/da-dk/skill.json"
         },
         "de-DE": {
           "entries": [
@@ -2574,7 +2574,7 @@
           "line_count": 11,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/de-de/skill.json"
+          "file_path": "locale/de-de/skill.json"
         },
         "en-US": {
           "entries": [
@@ -2655,7 +2655,7 @@
           "line_count": 11,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/en-us/skill.json"
+          "file_path": "locale/en-us/skill.json"
         },
         "es-ES": {
           "entries": [
@@ -2736,7 +2736,7 @@
           "line_count": 11,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/es-es/skill.json"
+          "file_path": "locale/es-es/skill.json"
         },
         "fa-IR": {
           "entries": [
@@ -2805,7 +2805,7 @@
           "line_count": 9,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/fa-IR/skill.json"
+          "file_path": "locale/fa-IR/skill.json"
         },
         "fr-FR": {
           "entries": [
@@ -2879,7 +2879,7 @@
           "line_count": 10,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/fr-fr/skill.json"
+          "file_path": "locale/fr-fr/skill.json"
         },
         "gl-ES": {
           "entries": [
@@ -2960,7 +2960,7 @@
           "line_count": 11,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/gl-es/skill.json"
+          "file_path": "locale/gl-es/skill.json"
         },
         "pt-PT": {
           "entries": [
@@ -3041,7 +3041,7 @@
           "line_count": 11,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-speedtest/locale/pt-pt/skill.json"
+          "file_path": "locale/pt-pt/skill.json"
         }
       },
       "context": {
@@ -3061,15 +3061,15 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/ca-es/skill.json",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/da-dk/skill.json",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/de-de/skill.json",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/en-us/skill.json",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/es-es/skill.json",
-        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/fa-IR/skill.json",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/fr-fr/skill.json",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/gl-es/skill.json",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/ovos-skill-speedtest/locale/pt-pt/skill.json"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/ca-es/skill.json",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/da-dk/skill.json",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/de-de/skill.json",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/en-us/skill.json",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/es-es/skill.json",
+        "fa-IR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/fa-IR/skill.json",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/fr-fr/skill.json",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/gl-es/skill.json",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-speedtest/edit/dev/locale/pt-pt/skill.json"
       }
     }
   }

@@ -33,7 +33,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/ca-es/Numbers.voc"
+          "file_path": "locale/ca-es/Numbers.voc"
         },
         "da-DK": {
           "entries": [
@@ -49,7 +49,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/da-dk/Numbers.voc"
+          "file_path": "locale/da-dk/Numbers.voc"
         },
         "de-DE": {
           "entries": [
@@ -69,7 +69,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/de-de/Numbers.voc"
+          "file_path": "locale/de-de/Numbers.voc"
         },
         "en-US": {
           "entries": [
@@ -85,7 +85,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/en-us/Numbers.voc"
+          "file_path": "locale/en-us/Numbers.voc"
         },
         "es-ES": {
           "entries": [
@@ -101,7 +101,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/es-es/Numbers.voc"
+          "file_path": "locale/es-es/Numbers.voc"
         },
         "eu": {
           "entries": [
@@ -117,7 +117,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/eu/Numbers.voc"
+          "file_path": "locale/eu/Numbers.voc"
         },
         "fr-FR": {
           "entries": [
@@ -133,7 +133,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/fr-fr/Numbers.voc"
+          "file_path": "locale/fr-fr/Numbers.voc"
         },
         "gl-ES": {
           "entries": [
@@ -149,7 +149,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/gl-es/Numbers.voc"
+          "file_path": "locale/gl-es/Numbers.voc"
         },
         "pt-PT": {
           "entries": [
@@ -165,7 +165,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/pt-pt/Numbers.voc"
+          "file_path": "locale/pt-pt/Numbers.voc"
         }
       },
       "context": {
@@ -202,15 +202,15 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"number_trivia\").require('Numbers').require(\n        \"fact\").optionally(\"api\").optionally(\"random\"))\ndef handle_numbers(self, message):\n    random = message.data.get(\"random\")\n    number = None\n    if not random:\n        number = extract_number(message.data[\"utterance\"], lang=self.lang)\n    if number is not None:\n        self.speak(number_trivia(number))\n    else:\n        self.speak(random_trivia())"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/ca-es/Numbers.voc",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/da-dk/Numbers.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/de-de/Numbers.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/en-us/Numbers.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/es-es/Numbers.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/eu/Numbers.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/fr-fr/Numbers.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/gl-es/Numbers.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/pt-pt/Numbers.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/ca-es/Numbers.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/da-dk/Numbers.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/de-de/Numbers.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/en-us/Numbers.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/es-es/Numbers.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/eu/Numbers.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/fr-fr/Numbers.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/gl-es/Numbers.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/pt-pt/Numbers.voc"
       }
     },
     "api.voc": {
@@ -227,7 +227,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/ca-es/api.voc"
+          "file_path": "locale/ca-es/api.voc"
         },
         "da-DK": {
           "entries": [
@@ -239,7 +239,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/da-dk/api.voc"
+          "file_path": "locale/da-dk/api.voc"
         },
         "de-DE": {
           "entries": [
@@ -251,7 +251,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/de-de/api.voc"
+          "file_path": "locale/de-de/api.voc"
         },
         "en-US": {
           "entries": [
@@ -263,7 +263,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/en-us/api.voc"
+          "file_path": "locale/en-us/api.voc"
         },
         "es-ES": {
           "entries": [
@@ -275,7 +275,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/es-es/api.voc"
+          "file_path": "locale/es-es/api.voc"
         },
         "eu": {
           "entries": [
@@ -287,7 +287,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/eu/api.voc"
+          "file_path": "locale/eu/api.voc"
         },
         "fr-FR": {
           "entries": [
@@ -299,7 +299,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/fr-fr/api.voc"
+          "file_path": "locale/fr-fr/api.voc"
         },
         "gl-ES": {
           "entries": [
@@ -311,7 +311,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/gl-es/api.voc"
+          "file_path": "locale/gl-es/api.voc"
         },
         "pt-PT": {
           "entries": [
@@ -323,7 +323,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/pt-pt/api.voc"
+          "file_path": "locale/pt-pt/api.voc"
         }
       },
       "context": {
@@ -363,15 +363,15 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"number_trivia\").require('Numbers').require(\n        \"fact\").optionally(\"api\").optionally(\"random\"))\ndef handle_numbers(self, message):\n    random = message.data.get(\"random\")\n    number = None\n    if not random:\n        number = extract_number(message.data[\"utterance\"], lang=self.lang)\n    if number is not None:\n        self.speak(number_trivia(number))\n    else:\n        self.speak(random_trivia())"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/ca-es/api.voc",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/da-dk/api.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/de-de/api.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/en-us/api.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/es-es/api.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/eu/api.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/fr-fr/api.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/gl-es/api.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/pt-pt/api.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/ca-es/api.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/da-dk/api.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/de-de/api.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/en-us/api.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/es-es/api.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/eu/api.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/fr-fr/api.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/gl-es/api.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/pt-pt/api.voc"
       }
     },
     "date_indicator.voc": {
@@ -488,7 +488,7 @@
           "line_count": 26,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/ca-es/date_indicator.voc"
+          "file_path": "locale/ca-es/date_indicator.voc"
         },
         "da-DK": {
           "entries": [
@@ -600,7 +600,7 @@
           "line_count": 26,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/da-dk/date_indicator.voc"
+          "file_path": "locale/da-dk/date_indicator.voc"
         },
         "de-DE": {
           "entries": [
@@ -712,7 +712,7 @@
           "line_count": 26,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/de-de/date_indicator.voc"
+          "file_path": "locale/de-de/date_indicator.voc"
         },
         "en-US": {
           "entries": [
@@ -824,7 +824,7 @@
           "line_count": 26,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/en-us/date_indicator.voc"
+          "file_path": "locale/en-us/date_indicator.voc"
         },
         "es-ES": {
           "entries": [
@@ -936,7 +936,7 @@
           "line_count": 26,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/es-es/date_indicator.voc"
+          "file_path": "locale/es-es/date_indicator.voc"
         },
         "eu": {
           "entries": [
@@ -1048,7 +1048,7 @@
           "line_count": 26,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/eu/date_indicator.voc"
+          "file_path": "locale/eu/date_indicator.voc"
         },
         "fr-FR": {
           "entries": [
@@ -1160,7 +1160,7 @@
           "line_count": 26,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/fr-fr/date_indicator.voc"
+          "file_path": "locale/fr-fr/date_indicator.voc"
         },
         "gl-ES": {
           "entries": [
@@ -1272,7 +1272,7 @@
           "line_count": 26,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/gl-es/date_indicator.voc"
+          "file_path": "locale/gl-es/date_indicator.voc"
         },
         "pt-PT": {
           "entries": [
@@ -1384,7 +1384,7 @@
           "line_count": 26,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/pt-pt/date_indicator.voc"
+          "file_path": "locale/pt-pt/date_indicator.voc"
         }
       },
       "context": {
@@ -1421,15 +1421,15 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"date_trivia\").require('date_indicator').require(\n        \"fact\").optionally(\"api\").optionally(\"random\"))\ndef handle_date(self, message):\n    random = message.data.get(\"random\")\n    date = None\n    if not random:\n        date = extract_datetime(message.data[\"utterance\"], anchorDate=now_local(), lang=self.lang)\n        self.log.info(\"extracted date: \" + str(date[0]))\n        self.log.info(\"utterance remainder: \" + str(date[1]))\n        date = date[0]\n\n    if date:\n        self.speak(date_trivia(date.month, date.day))\n    else:\n        self.speak(random_date())"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/ca-es/date_indicator.voc",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/da-dk/date_indicator.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/de-de/date_indicator.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/en-us/date_indicator.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/es-es/date_indicator.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/eu/date_indicator.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/fr-fr/date_indicator.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/gl-es/date_indicator.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/pt-pt/date_indicator.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/ca-es/date_indicator.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/da-dk/date_indicator.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/de-de/date_indicator.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/en-us/date_indicator.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/es-es/date_indicator.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/eu/date_indicator.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/fr-fr/date_indicator.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/gl-es/date_indicator.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/pt-pt/date_indicator.voc"
       }
     },
     "fact.voc": {
@@ -1454,7 +1454,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/ca-es/fact.voc"
+          "file_path": "locale/ca-es/fact.voc"
         },
         "da-DK": {
           "entries": [
@@ -1474,7 +1474,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/da-dk/fact.voc"
+          "file_path": "locale/da-dk/fact.voc"
         },
         "de-DE": {
           "entries": [
@@ -1494,7 +1494,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/de-de/fact.voc"
+          "file_path": "locale/de-de/fact.voc"
         },
         "en-US": {
           "entries": [
@@ -1514,7 +1514,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/en-us/fact.voc"
+          "file_path": "locale/en-us/fact.voc"
         },
         "es-ES": {
           "entries": [
@@ -1534,7 +1534,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/es-es/fact.voc"
+          "file_path": "locale/es-es/fact.voc"
         },
         "eu": {
           "entries": [
@@ -1554,7 +1554,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/eu/fact.voc"
+          "file_path": "locale/eu/fact.voc"
         },
         "fr-FR": {
           "entries": [
@@ -1574,7 +1574,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/fr-fr/fact.voc"
+          "file_path": "locale/fr-fr/fact.voc"
         },
         "gl-ES": {
           "entries": [
@@ -1594,7 +1594,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/gl-es/fact.voc"
+          "file_path": "locale/gl-es/fact.voc"
         },
         "pt-PT": {
           "entries": [
@@ -1614,7 +1614,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/pt-pt/fact.voc"
+          "file_path": "locale/pt-pt/fact.voc"
         }
       },
       "context": {
@@ -1654,15 +1654,15 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"number_trivia\").require('Numbers').require(\n        \"fact\").optionally(\"api\").optionally(\"random\"))\ndef handle_numbers(self, message):\n    random = message.data.get(\"random\")\n    number = None\n    if not random:\n        number = extract_number(message.data[\"utterance\"], lang=self.lang)\n    if number is not None:\n        self.speak(number_trivia(number))\n    else:\n        self.speak(random_trivia())"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/ca-es/fact.voc",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/da-dk/fact.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/de-de/fact.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/en-us/fact.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/es-es/fact.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/eu/fact.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/fr-fr/fact.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/gl-es/fact.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/pt-pt/fact.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/ca-es/fact.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/da-dk/fact.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/de-de/fact.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/en-us/fact.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/es-es/fact.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/eu/fact.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/fr-fr/fact.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/gl-es/fact.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/pt-pt/fact.voc"
       }
     },
     "math.voc": {
@@ -1687,7 +1687,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/ca-es/math.voc"
+          "file_path": "locale/ca-es/math.voc"
         },
         "da-DK": {
           "entries": [
@@ -1703,7 +1703,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/da-dk/math.voc"
+          "file_path": "locale/da-dk/math.voc"
         },
         "de-DE": {
           "entries": [
@@ -1723,7 +1723,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/de-de/math.voc"
+          "file_path": "locale/de-de/math.voc"
         },
         "en-US": {
           "entries": [
@@ -1743,7 +1743,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/en-us/math.voc"
+          "file_path": "locale/en-us/math.voc"
         },
         "es-ES": {
           "entries": [
@@ -1763,7 +1763,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/es-es/math.voc"
+          "file_path": "locale/es-es/math.voc"
         },
         "eu": {
           "entries": [
@@ -1779,7 +1779,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/eu/math.voc"
+          "file_path": "locale/eu/math.voc"
         },
         "fr-FR": {
           "entries": [
@@ -1799,7 +1799,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/fr-fr/math.voc"
+          "file_path": "locale/fr-fr/math.voc"
         },
         "gl-ES": {
           "entries": [
@@ -1819,7 +1819,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/gl-es/math.voc"
+          "file_path": "locale/gl-es/math.voc"
         },
         "pt-PT": {
           "entries": [
@@ -1835,7 +1835,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/pt-pt/math.voc"
+          "file_path": "locale/pt-pt/math.voc"
         }
       },
       "context": {
@@ -1873,15 +1873,15 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"math_trivia\").require('math').require(\"fact\").\n    optionally(\"api\").optionally(\"random\").optionally(\"number\"))\ndef handle_math(self, message):\n    random = message.data.get(\"random\")\n    number = None\n    if not random:\n        number = extract_number(message.data[\"utterance\"], lang=self.lang)\n    if number:\n        self.speak(number_math(number))\n    else:\n        self.speak(random_math())"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/ca-es/math.voc",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/da-dk/math.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/de-de/math.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/en-us/math.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/es-es/math.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/eu/math.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/fr-fr/math.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/gl-es/math.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/pt-pt/math.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/ca-es/math.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/da-dk/math.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/de-de/math.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/en-us/math.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/es-es/math.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/eu/math.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/fr-fr/math.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/gl-es/math.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/pt-pt/math.voc"
       }
     },
     "random.voc": {
@@ -1902,7 +1902,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/ca-es/random.voc"
+          "file_path": "locale/ca-es/random.voc"
         },
         "da-DK": {
           "entries": [
@@ -1922,7 +1922,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/da-dk/random.voc"
+          "file_path": "locale/da-dk/random.voc"
         },
         "de-DE": {
           "entries": [
@@ -1942,7 +1942,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/de-de/random.voc"
+          "file_path": "locale/de-de/random.voc"
         },
         "en-US": {
           "entries": [
@@ -1962,7 +1962,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/en-us/random.voc"
+          "file_path": "locale/en-us/random.voc"
         },
         "es-ES": {
           "entries": [
@@ -1978,7 +1978,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/es-es/random.voc"
+          "file_path": "locale/es-es/random.voc"
         },
         "eu": {
           "entries": [
@@ -1994,7 +1994,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/eu/random.voc"
+          "file_path": "locale/eu/random.voc"
         },
         "fr-FR": {
           "entries": [
@@ -2014,7 +2014,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/fr-fr/random.voc"
+          "file_path": "locale/fr-fr/random.voc"
         },
         "gl-ES": {
           "entries": [
@@ -2034,7 +2034,7 @@
           "line_count": 3,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/gl-es/random.voc"
+          "file_path": "locale/gl-es/random.voc"
         },
         "pt-PT": {
           "entries": [
@@ -2050,7 +2050,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/pt-pt/random.voc"
+          "file_path": "locale/pt-pt/random.voc"
         }
       },
       "context": {
@@ -2090,15 +2090,15 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"number_trivia\").require('Numbers').require(\n        \"fact\").optionally(\"api\").optionally(\"random\"))\ndef handle_numbers(self, message):\n    random = message.data.get(\"random\")\n    number = None\n    if not random:\n        number = extract_number(message.data[\"utterance\"], lang=self.lang)\n    if number is not None:\n        self.speak(number_trivia(number))\n    else:\n        self.speak(random_trivia())"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/ca-es/random.voc",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/da-dk/random.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/de-de/random.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/en-us/random.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/es-es/random.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/eu/random.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/fr-fr/random.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/gl-es/random.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/pt-pt/random.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/ca-es/random.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/da-dk/random.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/de-de/random.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/en-us/random.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/es-es/random.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/eu/random.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/fr-fr/random.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/gl-es/random.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/pt-pt/random.voc"
       }
     },
     "skill.json": {
@@ -2191,7 +2191,7 @@
           "line_count": 12,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/ca-es/skill.json"
+          "file_path": "locale/ca-es/skill.json"
         },
         "da-DK": {
           "entries": [
@@ -2279,7 +2279,7 @@
           "line_count": 12,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/da-dk/skill.json"
+          "file_path": "locale/da-dk/skill.json"
         },
         "de-DE": {
           "entries": [
@@ -2367,7 +2367,7 @@
           "line_count": 12,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/de-de/skill.json"
+          "file_path": "locale/de-de/skill.json"
         },
         "en-US": {
           "entries": [
@@ -2455,7 +2455,7 @@
           "line_count": 12,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/en-us/skill.json"
+          "file_path": "locale/en-us/skill.json"
         },
         "es-ES": {
           "entries": [
@@ -2543,7 +2543,7 @@
           "line_count": 12,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/es-es/skill.json"
+          "file_path": "locale/es-es/skill.json"
         },
         "fr-FR": {
           "entries": [
@@ -2631,7 +2631,7 @@
           "line_count": 12,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/fr-fr/skill.json"
+          "file_path": "locale/fr-fr/skill.json"
         },
         "gl-ES": {
           "entries": [
@@ -2719,7 +2719,7 @@
           "line_count": 12,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/gl-es/skill.json"
+          "file_path": "locale/gl-es/skill.json"
         },
         "pt-PT": {
           "entries": [
@@ -2807,7 +2807,7 @@
           "line_count": 12,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/pt-pt/skill.json"
+          "file_path": "locale/pt-pt/skill.json"
         }
       },
       "context": {
@@ -2827,14 +2827,14 @@
         "handler_source": null
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/ca-es/skill.json",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/da-dk/skill.json",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/de-de/skill.json",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/en-us/skill.json",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/es-es/skill.json",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/fr-fr/skill.json",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/gl-es/skill.json",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/pt-pt/skill.json"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/ca-es/skill.json",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/da-dk/skill.json",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/de-de/skill.json",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/en-us/skill.json",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/es-es/skill.json",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/fr-fr/skill.json",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/gl-es/skill.json",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/pt-pt/skill.json"
       }
     },
     "year.voc": {
@@ -2855,7 +2855,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/ca-es/year.voc"
+          "file_path": "locale/ca-es/year.voc"
         },
         "da-DK": {
           "entries": [
@@ -2867,7 +2867,7 @@
           "line_count": 1,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/da-dk/year.voc"
+          "file_path": "locale/da-dk/year.voc"
         },
         "de-DE": {
           "entries": [
@@ -2883,7 +2883,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/de-de/year.voc"
+          "file_path": "locale/de-de/year.voc"
         },
         "en-US": {
           "entries": [
@@ -2899,7 +2899,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/en-us/year.voc"
+          "file_path": "locale/en-us/year.voc"
         },
         "es-ES": {
           "entries": [
@@ -2915,7 +2915,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/es-es/year.voc"
+          "file_path": "locale/es-es/year.voc"
         },
         "eu": {
           "entries": [
@@ -2931,7 +2931,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/eu/year.voc"
+          "file_path": "locale/eu/year.voc"
         },
         "fr-FR": {
           "entries": [
@@ -2955,7 +2955,7 @@
           "line_count": 4,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/fr-fr/year.voc"
+          "file_path": "locale/fr-fr/year.voc"
         },
         "gl-ES": {
           "entries": [
@@ -2971,7 +2971,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/gl-es/year.voc"
+          "file_path": "locale/gl-es/year.voc"
         },
         "pt-PT": {
           "entries": [
@@ -2987,7 +2987,7 @@
           "line_count": 2,
           "slots": [],
           "validation": [],
-          "file_path": "ovos-skill-number-facts/locale/pt-pt/year.voc"
+          "file_path": "locale/pt-pt/year.voc"
         }
       },
       "context": {
@@ -3024,15 +3024,15 @@
         "handler_source": "@intent_handler(\n    IntentBuilder(\"year_trivia\").require('year').require(\n        \"fact\").optionally(\"api\").optionally(\"random\"))\ndef handle_year(self, message):\n    random = message.data.get(\"random\")\n    number = None\n    if not random:\n        number = extract_number(message.data[\"utterance\"], lang=self.lang)\n\n    if number:\n        self.speak(year_trivia(number))\n    else:\n        self.speak(random_year())"
       },
       "edit_urls": {
-        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/ca-es/year.voc",
-        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/da-dk/year.voc",
-        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/de-de/year.voc",
-        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/en-us/year.voc",
-        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/es-es/year.voc",
-        "eu": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/eu/year.voc",
-        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/fr-fr/year.voc",
-        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/gl-es/year.voc",
-        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/ovos-skill-number-facts/locale/pt-pt/year.voc"
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/ca-es/year.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/da-dk/year.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/de-de/year.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/en-us/year.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/es-es/year.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/eu/year.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/fr-fr/year.voc",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/gl-es/year.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-number-facts/edit/dev/locale/pt-pt/year.voc"
       }
     }
   }
