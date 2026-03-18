@@ -92,6 +92,7 @@
     <nav class="hidden sm:flex gap-4 ml-4 text-sm">
       <a href="#/" class="text-ovos-muted hover:text-ovos-text">Dashboard</a>
       <a href="#/stats" class="text-ovos-muted hover:text-ovos-text">Stats</a>
+      <a href="#/entities" class="text-ovos-muted hover:text-ovos-text">Entities</a>
       <a href="#/how-it-works" class="text-ovos-muted hover:text-ovos-text">How it works</a>
     </nav>
     <div class="ml-auto flex items-center gap-2">
@@ -110,6 +111,7 @@
       <a href="https://github.com/OpenVoiceOS/ovos-localize" target="_blank">GitHub</a>
       <a href="#/how-it-works">How it works</a>
       <a href="#/stats">Stats</a>
+      <a href="#/entities">Entities</a>
       <a href="https://matrix.to/#/#OpenVoiceOS:matrix.org" target="_blank">Matrix Chat</a>
     </div>
   </footer>
@@ -737,6 +739,7 @@
         if (hash === '#/' || hash === '') await renderLanding(app);
         else if (hash === '#/how-it-works') renderHowItWorks(app);
         else if (hash === '#/stats') await renderStats(app);
+        else if (hash === '#/entities') await renderEntities(app);
         else if (hash === '#/dashboard') await renderDashboard(app);
         else if (hash.match(/^#\/skill\/([^/]+)\/([^/]+)\/(.+)$/)) {
           // Editor: #/skill/{id}/{file}/{lang}
