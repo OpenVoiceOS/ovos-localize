@@ -1699,18 +1699,10 @@ Right now in {location} it's {condition}
           </div>
         </div>
 
-        <!-- Help callout -->
-        <div class="callout mb-4 flex items-start gap-3">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" class="flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-          <div class="text-sm">
-            <strong>${isNew ? 'New translation' : 'Edit translation'}</strong> &mdash; ${escapeHtml(fileHelp)}
-            ${isNew ? '<br><span class="text-ovos-muted">This file doesn\'t exist yet in <strong>' + lang + '</strong>. Use the English source as reference and write your translation below.</span>' : ''}
-          </div>
-        </div>
-
         <!-- Action bar -->
-        <div class="flex items-center gap-2 mb-4 flex-wrap">
+        <div class="flex items-center gap-2 mb-3 flex-wrap">
           <span id="editor-status" class="text-xs text-ovos-muted"></span>
+          ${isNew ? '<span class="badge badge-amber">new file</span>' : ''}
           <div class="ml-auto flex gap-2">
             ${!isJsonFile ? `
             <!-- Auto-translate button + server picker -->
@@ -1726,23 +1718,37 @@ Right now in {location} it's {condition}
               </button>
             </div>
             ` : ''}
+            <!-- Editor tools -->
+            <button onclick="runClientValidation()" class="text-xs px-3 py-1.5 rounded-lg border border-ovos-card hover:bg-ovos-hover flex items-center gap-1" title="Check for syntax errors and common issues">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              Validate
+            </button>
+            <button onclick="showContextModal()" class="text-xs px-3 py-1.5 rounded-lg border border-ovos-card hover:bg-ovos-hover flex items-center gap-1" title="Translation context and tips">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+              Context
+            </button>
+            ${ctx?.handler_source ? `
+            <button onclick="showCodeModal()" class="text-xs px-3 py-1.5 rounded-lg border border-ovos-card hover:bg-ovos-hover flex items-center gap-1" title="View the skill code that uses this file">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Code
+            </button>` : ''}
             ${editUrl ? `<a href="${editUrl}" target="_blank" class="text-xs px-3 py-1.5 rounded-lg border border-ovos-card hover:bg-ovos-hover hover:no-underline flex items-center gap-1">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Edit on GitHub
+              GitHub
             </a>` : ''}
             <button id="submit-pr-btn" onclick="handleSubmitPR()" class="text-xs px-4 py-1.5 rounded-lg bg-ovos-accent text-ovos-bg font-bold hover:opacity-80 disabled:opacity-40 flex items-center gap-1.5"
               ${isSignedIn ? '' : 'disabled title="Connect GitHub first (top right) to submit"'}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M6 9v12"/></svg>
-              ${isSignedIn ? 'Submit translation' : 'Connect GitHub to submit'}
+              ${isSignedIn ? 'Submit' : 'Sign in'}
             </button>
           </div>
         </div>
 
-        <!-- Editor: source | translation+preview | context+code -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-3" style="height: calc(100vh - 14rem);">
+        <!-- Editor: source | translation+preview (two columns, full width) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-3" style="height: calc(100vh - 14rem);">
 
           <!-- LEFT: Source reference (read-only) -->
-          <div class="lg:col-span-3 flex flex-col gap-3 overflow-hidden">
+          <div class="flex flex-col gap-3 overflow-hidden">
             <div class="bg-ovos-card rounded-xl p-3 flex flex-col overflow-hidden ${hasExpansion ? '' : 'flex-1'}">
               <div class="flex items-center gap-2 mb-2 flex-shrink-0">
                 <h3 class="text-sm font-bold">Source</h3>
@@ -1785,8 +1791,8 @@ Right now in {location} it's {condition}
             </div>` : ''}
           </div>
 
-          <!-- CENTER: Translation editor + expansion preview -->
-          <div class="lg:col-span-5 flex flex-col gap-3 overflow-hidden">
+          <!-- RIGHT: Translation editor + expansion preview -->
+          <div class="flex flex-col gap-3 overflow-hidden">
             <div class="bg-ovos-card rounded-xl p-3 flex flex-col overflow-hidden ${hasExpansion ? 'flex-1' : 'flex-1'}">
               <div class="flex items-center gap-2 mb-2 flex-shrink-0">
                 <h3 class="text-sm font-bold">${lang} translation</h3>
@@ -1886,69 +1892,12 @@ Right now in {location} it's {condition}
             </div>` : ''}
           </div>
 
-          <!-- RIGHT: Context + Source Code -->
-          <div class="lg:col-span-4 flex flex-col gap-3 overflow-hidden">
-
-            <!-- Context card (compact) -->
-            <div class="bg-ovos-card rounded-xl p-3 overflow-auto ${ctx?.handler_source ? 'max-h-[45%]' : 'flex-1'} flex-shrink-0">
-              <h3 class="text-sm font-bold mb-2">Translation help</h3>
-              <div class="space-y-2 text-sm">
-
-                <div class="p-2 bg-ovos-bg rounded-lg">
-                  <div class="font-medium text-xs">${ctx ? escapeHtml(ctx.file_type_label) : escapeHtml(fileData.type)}</div>
-                  <div class="text-xs text-ovos-muted mt-0.5">${escapeHtml(fileHelp)}</div>
-                </div>
-
-                ${ctx?.handler_method ? `
-                <div class="p-2 bg-ovos-bg rounded-lg">
-                  <div class="text-xs text-ovos-muted">Handler</div>
-                  <div class="mono text-xs">${ctx.handler_method}() <span class="text-ovos-muted">line ${ctx.handler_line || '?'}</span></div>
-                  ${ctx.triggers_dialog?.length ? `<div class="text-xs text-ovos-muted mt-0.5">Triggers: ${ctx.triggers_dialog.map(d=>`<code>${d}.dialog</code>`).join(', ')}</div>` : ''}
-                </div>` : ''}
-
-                ${ctx?.slots?.length ? `
-                <div class="p-2 bg-ovos-bg rounded-lg">
-                  <div class="text-xs text-red-400 font-bold mb-1">Keep these variables exactly as-is</div>
-                  ${ctx.slots.map(s => `
-                    <div class="flex items-center gap-2 cursor-pointer hover:bg-ovos-card/50 px-1 rounded" onclick="insertSlot('${s}')" title="Click to insert">
-                      <span class="slot text-xs">{${s}}</span>
-                      <span class="text-xs text-ovos-muted">${ctx.slot_descriptions?.[s] ? escapeHtml(ctx.slot_descriptions[s]) : ''}</span>
-                    </div>
-                  `).join('')}
-                </div>` : ''}
-
-                ${ctx?.builder_chain ? `
-                <div class="p-2 bg-ovos-bg rounded-lg">
-                  <div class="text-xs text-ovos-muted">IntentBuilder</div>
-                  <pre class="text-xs mono mt-0.5">require: [${(ctx.builder_chain.require||[]).join(', ')}]
-optionally: [${(ctx.builder_chain.optionally||[]).join(', ')}]</pre>
-                </div>` : ''}
-
-                ${ctx?.related_files?.length ? `<div class="text-xs text-ovos-muted">Related: ${ctx.related_files.join(', ')}</div>` : ''}
-                ${ctx?.used_by_intents?.length ? `<div class="text-xs text-ovos-muted">Used by: ${ctx.used_by_intents.join(', ')}</div>` : ''}
-
-                ${ctx?.tips?.length ? `
-                <div class="p-2 bg-ovos-bg rounded-lg border-l-2 border-red-500">
-                  <div class="text-xs font-bold text-ovos-accent mb-1">Tips</div>
-                  <ul class="space-y-0.5 text-xs text-ovos-muted list-disc ml-3">
-                    ${ctx.tips.map(t => `<li>${escapeHtml(t)}</li>`).join('')}
-                  </ul>
-                </div>` : ''}
-              </div>
-            </div>
-
-            <!-- Handler source code -->
-            ${ctx?.handler_source ? `
-            <div class="bg-ovos-card rounded-xl p-3 flex-1 flex flex-col overflow-hidden min-h-0">
-              <div class="flex items-center gap-2 mb-2 flex-shrink-0">
-                <h3 class="text-sm font-bold">Skill code</h3>
-                <span class="text-xs text-ovos-muted">where this file is used</span>
-              </div>
-              <pre class="flex-1 overflow-auto text-xs mono leading-relaxed p-3 bg-ovos-bg rounded-lg text-ovos-muted"><code>${highlightCodeStrings(escapeHtml(ctx.handler_source))}</code></pre>
-            </div>` : ''}
-
-          </div>
         </div>`;
+
+      // Store context data for modal access
+      window._editorCtx = ctx;
+      window._editorFileHelp = fileHelp;
+      window._editorFileData = fileData;
 
       // Wire up editor
       const editor = document.getElementById('translation-editor');
@@ -2134,6 +2083,207 @@ optionally: [${(ctx.builder_chain.optionally||[]).join(', ')}]</pre>
         btn.disabled = false;
         btn.innerHTML = origText;
       }
+    }
+
+    function runClientValidation() {
+      const editor = document.getElementById('translation-editor');
+      if (!editor) return;
+      const text = editor.value;
+      const fileType = editor.dataset.fileType;
+      const ctx = window._editorCtx;
+      const issues = [];
+
+      // Empty check
+      const lines = text.split('\n').filter(l => l.trim() && !l.trim().startsWith('#'));
+      if (!text.trim()) {
+        issues.push({ severity: 'error', message: 'File is empty' });
+      }
+
+      if (fileType === 'intent') {
+        // Expansion count
+        const expanded = expandAllLines(text);
+        if (expanded.total > 0 && expanded.total < 10) {
+          issues.push({ severity: 'warning', message: `Only ${expanded.total} expanded sentences (10+ recommended for Padatious)` });
+        }
+        // Unbalanced parentheses
+        for (let i = 0; i < lines.length; i++) {
+          const opens = (lines[i].match(/\(/g) || []).length;
+          const closes = (lines[i].match(/\)/g) || []).length;
+          if (opens !== closes) issues.push({ severity: 'error', message: `Unbalanced parentheses on line: "${lines[i].substring(0, 40)}..."` });
+        }
+        // Slot preservation
+        if (ctx?.slots?.length) {
+          const usedSlots = new Set(text.match(/\{(\w+)\}/g)?.map(s => s.slice(1,-1)) || []);
+          for (const s of ctx.slots) {
+            if (!usedSlots.has(s)) issues.push({ severity: 'error', message: `Missing slot {${s}} — must be kept in translation` });
+          }
+        }
+      }
+
+      if (fileType === 'dialog') {
+        // Slot preservation
+        if (ctx?.slots?.length) {
+          const usedSlots = new Set(text.match(/\{(\w+)\}/g)?.map(s => s.slice(1,-1)) || []);
+          for (const s of ctx.slots) {
+            if (!usedSlots.has(s)) issues.push({ severity: 'error', message: `Missing variable {${s}} — must be kept in translation` });
+          }
+        }
+        // Few variants
+        if (lines.length > 0 && lines.length < 2) {
+          issues.push({ severity: 'warning', message: 'Only 1 response variant — 2+ recommended for natural speech variety' });
+        }
+      }
+
+      if (fileType === 'voc') {
+        // Long keywords
+        for (const line of lines) {
+          if (line.split(/\s+/).length > 5) {
+            issues.push({ severity: 'warning', message: `Long keyword: "${line.substring(0,30)}..." — vocab entries should be 1-3 words` });
+          }
+        }
+      }
+
+      if (fileType === 'rx') {
+        // Regex compilation
+        for (const line of lines) {
+          try { new RegExp(line); } catch (e) {
+            issues.push({ severity: 'error', message: `Invalid regex: "${line.substring(0,30)}..." — ${e.message}` });
+          }
+        }
+      }
+
+      if (editor.dataset.isJson) {
+        try { JSON.parse(text); } catch (e) {
+          issues.push({ severity: 'error', message: `Invalid JSON: ${e.message}` });
+        }
+      }
+
+      // Show results
+      const errors = issues.filter(i => i.severity === 'error');
+      const warnings = issues.filter(i => i.severity === 'warning');
+
+      if (issues.length === 0) {
+        toast('No issues found!', 'green');
+        return;
+      }
+
+      let body = '';
+      if (errors.length) {
+        body += `<div class="mb-3"><div class="text-sm font-bold text-red-400 mb-1">${errors.length} error${errors.length>1?'s':''}</div>`;
+        body += errors.map(i => `<div class="text-xs text-red-400 flex items-start gap-1 mb-1"><span>&#9679;</span> ${escapeHtml(i.message)}</div>`).join('');
+        body += '</div>';
+      }
+      if (warnings.length) {
+        body += `<div><div class="text-sm font-bold text-yellow-400 mb-1">${warnings.length} warning${warnings.length>1?'s':''}</div>`;
+        body += warnings.map(i => `<div class="text-xs text-yellow-400 flex items-start gap-1 mb-1"><span>&#9651;</span> ${escapeHtml(i.message)}</div>`).join('');
+        body += '</div>';
+      }
+
+      document.getElementById('modal-container').innerHTML = `
+        <div class="modal-backdrop" onclick="if(event.target===this)closeModal()">
+          <div class="modal" style="max-width:28rem">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="text-lg font-bold">Validation results</h3>
+              <button onclick="closeModal()" class="text-ovos-muted hover:text-ovos-text text-lg px-2">&times;</button>
+            </div>
+            ${body}
+            <div class="mt-4 text-center">
+              <button onclick="closeModal()" class="px-4 py-2 text-sm rounded-lg border border-ovos-card hover:bg-ovos-hover">Close</button>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    function showContextModal() {
+      const ctx = window._editorCtx;
+      const fileHelp = window._editorFileHelp;
+      const fileData = window._editorFileData;
+      if (!ctx && !fileHelp) return;
+
+      let body = '';
+
+      // File type
+      body += `<div class="p-3 bg-ovos-bg rounded-lg mb-3">
+        <div class="font-medium">${ctx ? escapeHtml(ctx.file_type_label) : escapeHtml(fileData?.type || '')}</div>
+        <div class="text-xs text-ovos-muted mt-1">${escapeHtml(fileHelp || '')}</div>
+      </div>`;
+
+      // Handler
+      if (ctx?.handler_method) {
+        body += `<div class="p-3 bg-ovos-bg rounded-lg mb-3">
+          <div class="text-xs text-ovos-muted">Handler method</div>
+          <div class="mono text-sm">${ctx.handler_method}() <span class="text-ovos-muted">at line ${ctx.handler_line || '?'}</span></div>
+          ${ctx.triggers_dialog?.length ? `<div class="text-xs text-ovos-muted mt-1">Triggers: ${ctx.triggers_dialog.map(d=>`<code>${d}.dialog</code>`).join(', ')}</div>` : ''}
+        </div>`;
+      }
+
+      // Slots
+      if (ctx?.slots?.length) {
+        body += `<div class="p-3 bg-ovos-bg rounded-lg mb-3">
+          <div class="text-xs text-red-400 font-bold mb-2">Variables — keep these exactly as-is in your translation</div>
+          <div class="space-y-1">
+            ${ctx.slots.map(s => `<div class="flex items-center gap-2 cursor-pointer hover:bg-ovos-card/50 px-2 py-1 rounded" onclick="closeModal();insertSlot('${s}')">
+              <span class="slot">{${s}}</span>
+              <span class="text-xs text-ovos-muted">${ctx.slot_descriptions?.[s] ? escapeHtml(ctx.slot_descriptions[s]) : 'click to insert at cursor'}</span>
+            </div>`).join('')}
+          </div>
+        </div>`;
+      }
+
+      // IntentBuilder
+      if (ctx?.builder_chain) {
+        body += `<div class="p-3 bg-ovos-bg rounded-lg mb-3">
+          <div class="text-xs text-ovos-muted mb-1">Adapt IntentBuilder chain</div>
+          <pre class="text-xs mono">name: "${ctx.builder_chain.name || ''}"
+require: [${(ctx.builder_chain.require||[]).join(', ')}]
+optionally: [${(ctx.builder_chain.optionally||[]).join(', ')}]</pre>
+        </div>`;
+      }
+
+      // Related / used by
+      if (ctx?.related_files?.length) body += `<div class="text-xs text-ovos-muted mb-2">Related files: ${ctx.related_files.join(', ')}</div>`;
+      if (ctx?.used_by_intents?.length) body += `<div class="text-xs text-ovos-muted mb-2">Used by intents: ${ctx.used_by_intents.join(', ')}</div>`;
+
+      // Tips
+      if (ctx?.tips?.length) {
+        body += `<div class="p-3 bg-ovos-bg rounded-lg border-l-2 border-red-500">
+          <div class="text-xs font-bold text-ovos-accent mb-1">Translation tips</div>
+          <ul class="space-y-1 text-xs text-ovos-muted list-disc ml-3">
+            ${ctx.tips.map(t => `<li>${escapeHtml(t)}</li>`).join('')}
+          </ul>
+        </div>`;
+      }
+
+      document.getElementById('modal-container').innerHTML = `
+        <div class="modal-backdrop" onclick="if(event.target===this)closeModal()">
+          <div class="modal" style="max-width:32rem;max-height:80vh;display:flex;flex-direction:column">
+            <div class="flex items-center justify-between mb-3 flex-shrink-0">
+              <h3 class="text-lg font-bold">Translation context</h3>
+              <button onclick="closeModal()" class="text-ovos-muted hover:text-ovos-text text-lg px-2">&times;</button>
+            </div>
+            <div class="flex-1 overflow-auto text-sm">${body}</div>
+          </div>
+        </div>`;
+    }
+
+    function showCodeModal() {
+      const ctx = window._editorCtx;
+      if (!ctx?.handler_source) return;
+
+      document.getElementById('modal-container').innerHTML = `
+        <div class="modal-backdrop" onclick="if(event.target===this)closeModal()">
+          <div class="modal" style="max-width:48rem;max-height:80vh;display:flex;flex-direction:column">
+            <div class="flex items-center justify-between mb-3 flex-shrink-0">
+              <div>
+                <h3 class="text-lg font-bold">Skill source code</h3>
+                <p class="text-xs text-ovos-muted">The Python function that uses this locale file</p>
+              </div>
+              <button onclick="closeModal()" class="text-ovos-muted hover:text-ovos-text text-lg px-2">&times;</button>
+            </div>
+            ${ctx.handler_method ? `<div class="text-xs text-ovos-muted mb-2 mono">${ctx.handler_method}() — line ${ctx.handler_line || '?'}</div>` : ''}
+            <pre class="flex-1 overflow-auto text-xs mono leading-relaxed p-4 bg-ovos-bg rounded-lg text-ovos-muted"><code>${highlightCodeStrings(escapeHtml(ctx.handler_source))}</code></pre>
+          </div>
+        </div>`;
     }
 
     function changeSrcLang(newSrcLang, skillId, fileKeyEncoded, lang) {
