@@ -151,6 +151,36 @@
 
     function closeModal() { document.getElementById('modal-container').innerHTML = ''; }
 
+    async function showReadme(repoFullName) {
+      const el = document.getElementById('modal-container');
+      el.innerHTML = `
+        <div class="modal-backdrop" onclick="if(event.target===this)closeModal()">
+          <div class="modal" style="max-width:48rem;max-height:85vh;display:flex;flex-direction:column">
+            <div class="flex items-center justify-between mb-3 flex-shrink-0">
+              <h3 class="text-lg font-bold">README — ${escapeHtml(repoFullName)}</h3>
+              <button onclick="closeModal()" class="text-ovos-muted hover:text-ovos-text px-2">&times;</button>
+            </div>
+            <div class="flex-1 overflow-auto text-sm text-ovos-muted flex items-center justify-center">
+              <span class="spinner"></span>&nbsp; Loading...
+            </div>
+          </div>
+        </div>`;
+      try {
+        const r = await fetch('https://api.github.com/repos/' + repoFullName + '/readme', {
+          headers: { 'Accept': 'application/vnd.github.html+json' },
+          signal: AbortSignal.timeout(15000),
+        });
+        if (!r.ok) throw new Error(r.status === 404 ? 'No README found' : 'GitHub API ' + r.status);
+        const html = await r.text();
+        const content = el.querySelector('.overflow-auto');
+        content.className = 'flex-1 overflow-auto text-sm readme-content p-1';
+        content.innerHTML = html;
+      } catch (e) {
+        const content = el.querySelector('.overflow-auto');
+        content.innerHTML = '<p class="text-red-400">Failed to load README: ' + escapeHtml(e.message) + '</p><p class="mt-2"><a href="https://github.com/' + repoFullName + '#readme" target="_blank">View on GitHub</a></p>';
+      }
+    }
+
     // =========================================================================
     // USER PROFILE (localStorage — languages)
     // =========================================================================
