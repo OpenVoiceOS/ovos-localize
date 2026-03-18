@@ -1337,7 +1337,8 @@ Right now in {location} it's {condition}
       const meta = coverage.lang_meta || {};
       const userLangs = getUserLangs();
 
-      const allLangs = [...new Set(entityDb.filter(e => e.has_entity_file).flatMap(e => Object.keys(e.langs)))].sort();
+      // Use all coverage languages (not just ones with entity data) so users can create new files
+      const allLangs = coverage.languages || [];
       const displayLangs = userLangs.length ? allLangs.filter(l => userLangs.includes(l)) : allLangs;
 
       const withFile = entityDb.filter(e => e.has_entity_file).length;
@@ -1416,10 +1417,13 @@ Right now in {location} it's {condition}
         const enSamples = enData?.samples || [];
         const enCount = enData?.count || 0;
 
+        const entityFileName = entity.name + '.entity';
+        const intentFileForPath = entity.used_in_intents[0] || '';
+
         if (!entity.has_entity_file) {
           // GAP — slot used in intents but no .entity file
           return `
-            <div class="bg-ovos-card rounded-xl p-4 border-l-3 border-red-500" style="border-left:3px solid #ef4444">
+            <div class="bg-ovos-card rounded-xl p-4" style="border-left:3px solid #ef4444">
               <div class="flex items-start justify-between mb-1">
                 <div class="flex items-center gap-2">
                   <span class="slot text-base">{${escapeHtml(entity.name)}}</span>
@@ -1430,13 +1434,20 @@ Right now in {location} it's {condition}
               <div class="text-xs text-ovos-muted">
                 Used in: ${entity.used_in_intents.map(i => `<span class="mono">${escapeHtml(i)}</span>`).join(', ')}
               </div>
-              <div class="text-xs text-ovos-muted mt-1">
-                This slot has no training data. The assistant cannot learn what values to expect. Create a <code>${escapeHtml(entity.name)}.entity</code> file with example values.
+              <div class="text-xs text-ovos-muted mt-1 mb-2">
+                No training data exists. Create a <code>${escapeHtml(entityFileName)}</code> file with example values — one per line.
+              </div>
+              <div class="flex flex-wrap gap-1.5">
+                ${displayLangs.map(lang => {
+                  // Link to the skill page for this lang — user can create the file via GitHub
+                  const href = `#/skill/${entity.skill}/${lang}`;
+                  return `<a href="${href}" class="badge badge-gray hover:no-underline hover:opacity-80" title="Create ${entityFileName} for ${(meta[lang]?.native||lang)}">${lang} <span class="font-normal">create</span></a>`;
+                }).join('')}
               </div>
             </div>`;
         }
 
-        // HAS entity file — show per-language sample counts
+        // HAS entity file — show ALL user languages (including missing ones)
         return `
           <div class="bg-ovos-card rounded-xl p-4">
             <div class="flex items-start justify-between mb-2">
@@ -1461,9 +1472,11 @@ Right now in {location} it's {condition}
                 const ld = entity.langs[lang];
                 const count = ld?.count || 0;
                 const target = Math.max(enCount, 5);
-                const cls = count === 0 ? 'badge-gray' : count >= target ? 'badge-green' : count >= target * 0.5 ? 'badge-amber' : 'badge-red';
-                const href = entity.file_key ? `#/skill/${entity.skill}/${encodeURIComponent(entity.file_key)}/${lang}` : '#';
-                return `<a href="${href}" class="badge ${cls} hover:no-underline hover:opacity-80" title="${(meta[lang]?.native||lang)}: ${count} samples">${lang} <span class="font-normal">${count}</span></a>`;
+                const hasData = count > 0;
+                const cls = !hasData ? 'badge-gray' : count >= target ? 'badge-green' : count >= target * 0.5 ? 'badge-amber' : 'badge-red';
+                const label = hasData ? count : 'add';
+                const href = `#/skill/${entity.skill}/${encodeURIComponent(entity.file_key)}/${lang}`;
+                return `<a href="${href}" class="badge ${cls} hover:no-underline hover:opacity-80" title="${(meta[lang]?.native||lang)}: ${hasData ? count + ' samples' : 'no samples yet — click to add'}">${lang} <span class="font-normal">${label}</span></a>`;
               }).join('')}
             </div>
           </div>`;
