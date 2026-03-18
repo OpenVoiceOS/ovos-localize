@@ -23,15 +23,23 @@ class TestIntentValidation:
     """Tests for .intent file validation rules."""
 
     def test_min_lines_warning(self) -> None:
-        """Warn when intent file has fewer than 20 lines."""
+        """Warn when intent file expands to fewer than 10 sentences."""
         content = "\n".join([f"utterance {i}" for i in range(5)])
         parsed = IntentParser().parse_content(content)
         issues = validate_intent(parsed)
         assert any(i.rule_name == "intent.min_lines" for i in issues)
 
     def test_min_lines_passes(self) -> None:
-        """No warning when intent file has 20+ lines."""
-        content = "\n".join([f"unique utterance number {i} here" for i in range(25)])
+        """No warning when intent file has 10+ expanded sentences."""
+        content = "\n".join([f"unique utterance number {i} here" for i in range(12)])
+        parsed = IntentParser().parse_content(content)
+        issues = validate_intent(parsed)
+        assert not any(i.rule_name == "intent.min_lines" for i in issues)
+
+    def test_min_lines_with_alternatives(self) -> None:
+        """Templates with (a|b|c) alternatives expand to enough sentences."""
+        # 3 templates × 4 alternatives each = 12 expanded sentences → passes
+        content = "(tell|show|give) me the (weather|forecast|temperature|conditions)\nwhat is the (weather|forecast)\nhow is the weather"
         parsed = IntentParser().parse_content(content)
         issues = validate_intent(parsed)
         assert not any(i.rule_name == "intent.min_lines" for i in issues)

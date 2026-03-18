@@ -8,6 +8,7 @@ import re
 from dataclasses import dataclass
 from typing import List, Optional, Set
 
+from ovos_localize.bracket_expansion import count_expanded_lines
 from ovos_localize.parsers.base import ParsedFile
 from ovos_localize.parsers.intent import IntentParser
 
@@ -35,7 +36,7 @@ def validate_intent(
     """Validate a translated .intent file.
 
     Rules:
-    - MIN_LINES: At least 20 content lines.
+    - MIN_LINES: At least 10 expanded sentences (after bracket expansion).
     - SLOT_PRESERVATION: All source {slots} must appear in translation.
     - ALTERNATIVE_SYNTAX: All (a|b) groups must be valid.
     - LEXICAL_DIVERSITY: Diversity score >= 0.25.
@@ -50,12 +51,13 @@ def validate_intent(
     issues: List[ValidationIssue] = []
     content = translated.content_lines
 
-    # MIN_LINES
-    if len(content) < 10:
+    # MIN_LINES — count after template expansion (3 lines with (a|b|c) = 9 sentences)
+    expanded_count = count_expanded_lines([ln.text for ln in content])
+    if expanded_count < 10:
         issues.append(ValidationIssue(
             rule_name="intent.min_lines",
             severity="warning",
-            message=f"Intent file has {len(content)} lines; 10+ recommended for Padatious accuracy.",
+            message=f"Intent file expands to {expanded_count} sentences ({len(content)} templates); 10+ recommended for Padatious accuracy.",
         ))
 
     # SLOT_PRESERVATION
