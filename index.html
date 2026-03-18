@@ -1418,10 +1418,11 @@ Right now in {location} it's {condition}
         const enCount = enData?.count || 0;
 
         const entityFileName = entity.name + '.entity';
-        const intentFileForPath = entity.used_in_intents[0] || '';
 
         if (!entity.has_entity_file) {
           // GAP — slot used in intents but no .entity file
+          // Build GitHub "new file" URL by guessing locale path from the repo
+          const [gapOrg, gapRepo] = entity.repo.split('/');
           return `
             <div class="bg-ovos-card rounded-xl p-4" style="border-left:3px solid #ef4444">
               <div class="flex items-start justify-between mb-1">
@@ -1435,13 +1436,13 @@ Right now in {location} it's {condition}
                 Used in: ${entity.used_in_intents.map(i => `<span class="mono">${escapeHtml(i)}</span>`).join(', ')}
               </div>
               <div class="text-xs text-ovos-muted mt-1 mb-2">
-                No training data exists. Create a <code>${escapeHtml(entityFileName)}</code> file with example values — one per line.
+                No training data exists. Click a language below to create <code>${escapeHtml(entityFileName)}</code> on GitHub — add example values, one per line.
               </div>
               <div class="flex flex-wrap gap-1.5">
                 ${displayLangs.map(lang => {
-                  // Link to the skill page for this lang — user can create the file via GitHub
-                  const href = `#/skill/${entity.skill}/${lang}`;
-                  return `<a href="${href}" class="badge badge-gray hover:no-underline hover:opacity-80" title="Create ${entityFileName} for ${(meta[lang]?.native||lang)}">${lang} <span class="font-normal">create</span></a>`;
+                  const langDir = lang.toLowerCase();
+                  const ghUrl = `https://github.com/${entity.repo}/new/dev?filename=locale/${langDir}/${entityFileName}&value=${encodeURIComponent('# Add example values for {' + entity.name + '}, one per line\\n')}`;
+                  return `<a href="${ghUrl}" target="_blank" class="badge badge-gray hover:no-underline hover:opacity-80" title="Create ${entityFileName} for ${(meta[lang]?.native||lang)} on GitHub">${lang} <span class="font-normal">+ create</span></a>`;
                 }).join('')}
               </div>
             </div>`;
