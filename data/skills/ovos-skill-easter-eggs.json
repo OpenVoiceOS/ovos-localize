@@ -1465,8 +1465,8 @@
         "slot_descriptions": {},
         "related_files": [
           "ovos-skill-easter-eggs/locale/en-us/dialog/rule3.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule2.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule1.dialog"
+          "ovos-skill-easter-eggs/locale/en-us/dialog/rule1.dialog",
+          "ovos-skill-easter-eggs/locale/en-us/dialog/rule2.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -1862,14 +1862,7 @@
           "slots": [
             "ordinal"
           ],
-          "validation": [
-            {
-              "rule_name": "intent.min_lines",
-              "severity": "warning",
-              "message": "Intent file has 8 lines; 10+ recommended for Padatious accuracy.",
-              "line_number": null
-            }
-          ],
+          "validation": [],
           "file_path": "ovos-skill-easter-eggs/locale/en-us/vocab/law_of_robotics.intent"
         },
         "fr-FR": {
@@ -1915,7 +1908,7 @@
             {
               "rule_name": "intent.min_lines",
               "severity": "warning",
-              "message": "Intent file has 8 lines; 10+ recommended for Padatious accuracy.",
+              "message": "Intent file expands to 8 sentences (8 templates); 10+ recommended for Padatious accuracy.",
               "line_number": null
             }
           ],
@@ -1944,9 +1937,9 @@
         "slot_descriptions": {},
         "related_files": [
           "ovos-skill-easter-eggs/locale/en-us/dialog/rule3.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule2.dialog",
+          "ovos-skill-easter-eggs/locale/en-us/dialog/rule1.dialog",
           "ovos-skill-easter-eggs/locale/en-us/dialog/invalid_law.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule1.dialog"
+          "ovos-skill-easter-eggs/locale/en-us/dialog/rule2.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -3362,8 +3355,8 @@
         "slot_descriptions": {},
         "related_files": [
           "ovos-skill-easter-eggs/locale/en-us/dialog/rule3.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/invalid_law.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule1.dialog"
+          "ovos-skill-easter-eggs/locale/en-us/dialog/rule1.dialog",
+          "ovos-skill-easter-eggs/locale/en-us/dialog/invalid_law.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -3493,9 +3486,9 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
+          "ovos-skill-easter-eggs/locale/en-us/dialog/rule1.dialog",
           "ovos-skill-easter-eggs/locale/en-us/dialog/invalid_law.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule2.dialog",
-          "ovos-skill-easter-eggs/locale/en-us/dialog/rule1.dialog"
+          "ovos-skill-easter-eggs/locale/en-us/dialog/rule2.dialog"
         ],
         "builder_chain": null,
         "tips": [

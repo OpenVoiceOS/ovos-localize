@@ -1079,7 +1079,16 @@ Right now in {location} it's {condition}
 
       // Compute chart data
       const topN = langs.slice(0, 15);
-      const usableLangs = langs.filter(l => stats.languages[l].skills_fully_translated >= Math.floor(stats.total_skills * 0.5));
+      // "Usable" = 70%+ coverage of core files (intent + dialog + voc)
+      const usableLangs = langs.filter(l => {
+        const ls = stats.languages[l];
+        let src = 0, have = 0;
+        for (const ft of ['intent', 'dialog', 'voc']) {
+          const t = ls.by_type[ft];
+          if (t) { src += t.source; have += t.translated; }
+        }
+        return src > 0 && (have / src * 100) >= 70;
+      });
       const barMax = Math.max(...langs.map(l => stats.languages[l].combined_pct), 1);
 
       // Validation breakdown
@@ -1114,7 +1123,7 @@ Right now in {location} it's {condition}
             </div>
             <div class="p-4 bg-ovos-card rounded-xl text-center">
               <div class="text-2xl font-bold text-green-400">${usableLangs.length}</div>
-              <div class="text-xs text-ovos-muted mt-1">fully usable languages</div>
+              <div class="text-xs text-ovos-muted mt-1">usable languages</div>
             </div>
             <div class="p-4 bg-ovos-card rounded-xl text-center">
               <div class="text-2xl font-bold text-yellow-400">${validation.total_errors + validation.total_warnings}</div>
@@ -1193,15 +1202,22 @@ Right now in {location} it's {condition}
             </div>
 
             <div class="bg-ovos-card rounded-xl p-4">
-              <h2 class="text-sm font-bold mb-1">Fully usable languages</h2>
-              <p class="text-xs text-ovos-muted mb-3">Languages where the voice assistant works for most skills. "Fully usable" means every locale file (all types) is translated for 50%+ of skills.</p>
+              <h2 class="text-sm font-bold mb-1">Usable languages</h2>
+              <p class="text-xs text-ovos-muted mb-3">Languages with 70%+ coverage of core files (.intent, .voc, .dialog) — the voice assistant understands and responds in these languages.</p>
               <div class="flex flex-wrap gap-2">
                 ${langs.map(lang => {
                   const ls = stats.languages[lang];
                   const m = meta[lang] || {};
-                  const ratio = ls.skills_fully_translated / stats.total_skills;
-                  const cls = ratio >= 0.5 ? 'badge-green' : ratio >= 0.25 ? 'badge-amber' : 'badge-gray';
-                  return `<div class="badge ${cls}" title="${ls.skills_fully_translated}/${stats.total_skills} skills fully translated (all file types)">${m.native||lang} ${ls.skills_fully_translated}/${stats.total_skills}</div>`;
+                  // Only count core file types for "usable"
+                  const coreTypes = ['intent', 'dialog', 'voc'];
+                  let coreSrc = 0, coreHave = 0;
+                  for (const ft of coreTypes) {
+                    const t = ls.by_type[ft];
+                    if (t) { coreSrc += t.source; coreHave += t.translated; }
+                  }
+                  const corePct = coreSrc > 0 ? (coreHave / coreSrc * 100) : 0;
+                  const cls = corePct >= 70 ? 'badge-green' : corePct >= 40 ? 'badge-amber' : 'badge-gray';
+                  return `<div class="badge ${cls}" title="${corePct.toFixed(0)}% core coverage (intent+dialog+voc)">${m.native||lang} ${corePct.toFixed(0)}%</div>`;
                 }).join('')}
               </div>
             </div>
