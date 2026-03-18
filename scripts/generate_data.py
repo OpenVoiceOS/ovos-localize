@@ -524,6 +524,80 @@ def export_intent_dataset(all_skills: List[Dict[str, Any]], output_path: Path) -
     return rows
 
 
+def build_entities_json(all_skills: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Build entity index from .entity files and {slots} in .intent files.
+
+    For each {slot} used in .intent files, checks if a corresponding
+    .entity file exists. This surfaces gaps in NER training data.
+
+    Args:
+        all_skills: List of per-skill JSON dicts.
+
+    Returns:
+        List of entity dicts.
+    """
+    entities: List[Dict[str, Any]] = []
+
+    for skill in all_skills:
+        # Collect all entity file base names
+        entity_files = set()
+        for fk, fd in skill["files"].items():
+            if fd["type"] == "entity":
+                entity_files.add(fd.get("_base_name", fk.replace(".entity", "")))
+
+        # Collect slots from intent files
+        intent_slots: Dict[str, List[str]] = {}  # slot_name → list of intent files using it
+        for fk, fd in skill["files"].items():
+            if fd["type"] != "intent":
+                continue
+            en_data = fd["langs"].get("en-US", {})
+            for entry in en_data.get("entries", []):
+                import re
+                for slot in re.findall(r"\{(\w+)\}", entry.get("text", "")):
+                    intent_slots.setdefault(slot, []).append(fk)
+
+        # Build entity entries from .entity files
+        for fk, fd in skill["files"].items():
+            if fd["type"] != "entity":
+                continue
+            lang_data = {}
+            for lang, ld in fd["langs"].items():
+                lang_data[lang] = {
+                    "count": len(ld.get("entries", [])),
+                    "samples": [e["text"] for e in ld.get("entries", [])[:15]],
+                }
+            base = fk.replace(".entity", "")
+            entities.append({
+                "name": base,
+                "file_key": fk,
+                "type": "entity",
+                "skill": skill["id"],
+                "repo": skill["repo"],
+                "has_entity_file": True,
+                "used_in_intents": intent_slots.get(base, []),
+                "langs": lang_data,
+            })
+
+        # Add slots from intents that DON'T have .entity files
+        for slot, intents in intent_slots.items():
+            if slot in entity_files:
+                continue  # Already covered by .entity file above
+            entities.append({
+                "name": slot,
+                "file_key": None,
+                "type": "slot",
+                "skill": skill["id"],
+                "repo": skill["repo"],
+                "has_entity_file": False,
+                "used_in_intents": list(set(intents)),
+                "langs": {},
+            })
+
+    # Sort: slots without entity files first (gaps), then by name
+    entities.sort(key=lambda e: (e["has_entity_file"], e["name"], e["skill"]))
+    return entities
+
+
 def main() -> None:
     """Run data generation pipeline."""
     skills_list = load_skills_list()
@@ -572,11 +646,17 @@ def main() -> None:
     dataset_path = DATA_DIR / "dataset.tsv"
     dataset_rows = export_intent_dataset(all_skills, dataset_path)
 
+    entities_data = build_entities_json(all_skills)
+    entities_path = DATA_DIR / "entities.json"
+    entities_path.write_text(json.dumps(entities_data, indent=2, ensure_ascii=False))
+    gaps = sum(1 for e in entities_data if not e["has_entity_file"])
+
     print(f"\nDone. {len(all_skills)} skills → data/")
     print(f"  repos.json: {len(all_skills)} entries")
     print(f"  coverage.json: {len(coverage_data['languages'])} languages")
     print(f"  stats.json: {len(stats_data['languages'])} languages")
     print(f"  dataset.tsv: {dataset_rows} rows")
+    print(f"  entities.json: {len(entities_data)} entities ({gaps} missing .entity files)")
 
 
 if __name__ == "__main__":

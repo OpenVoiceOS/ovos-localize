@@ -4680,11 +4680,11 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "locale/en-us/dialog/confirm_alert_set.dialog",
-          "locale/en-us/dialog/confirm_alert_recurring_playback.dialog",
-          "locale/en-us/dialog/confirm_alert_playback.dialog",
           "locale/en-us/dialog/confirm_alert_recurring.dialog",
-          "locale/en-us/dialog/confirm_timer_started.dialog"
+          "locale/en-us/dialog/confirm_timer_started.dialog",
+          "locale/en-us/dialog/confirm_alert_set.dialog",
+          "locale/en-us/dialog/confirm_alert_playback.dialog",
+          "locale/en-us/dialog/confirm_alert_recurring_playback.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -7752,10 +7752,10 @@
         ],
         "slot_descriptions": {},
         "related_files": [
-          "locale/en-us/dialog/error_no_scheduled_kind.dialog",
+          "locale/en-us/dialog/alert_rescheduled_repeat.dialog",
           "locale/en-us/dialog/error_no_repeat.dialog",
           "locale/en-us/dialog/error_no_time.dialog",
-          "locale/en-us/dialog/alert_rescheduled_repeat.dialog"
+          "locale/en-us/dialog/error_no_scheduled_kind.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -8621,10 +8621,10 @@
         ],
         "slot_descriptions": {},
         "related_files": [
-          "locale/en-us/dialog/error_no_scheduled_kind.dialog",
+          "locale/en-us/dialog/alert_rescheduled_end.dialog",
           "locale/en-us/dialog/error_no_repeat.dialog",
           "locale/en-us/dialog/error_no_time.dialog",
-          "locale/en-us/dialog/alert_rescheduled_end.dialog"
+          "locale/en-us/dialog/error_no_scheduled_kind.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -13265,11 +13265,11 @@
           "remaining": "Runtime value from confirm_alert()"
         },
         "related_files": [
+          "locale/en-us/dialog/confirm_alert_recurring.dialog",
+          "locale/en-us/dialog/confirm_timer_started.dialog",
           "locale/en-us/dialog/confirm_alert_set.dialog",
           "locale/en-us/dialog/confirm_alert_recurring_playback.dialog",
-          "locale/en-us/dialog/confirm_alert_recurring.dialog",
-          "locale/en-us/dialog/alert_expiration_past.dialog",
-          "locale/en-us/dialog/confirm_timer_started.dialog"
+          "locale/en-us/dialog/alert_expiration_past.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -13739,11 +13739,11 @@
           "repeat": "Runtime value from confirm_alert()"
         },
         "related_files": [
+          "locale/en-us/dialog/confirm_timer_started.dialog",
           "locale/en-us/dialog/confirm_alert_set.dialog",
-          "locale/en-us/dialog/confirm_alert_recurring_playback.dialog",
           "locale/en-us/dialog/confirm_alert_playback.dialog",
-          "locale/en-us/dialog/alert_expiration_past.dialog",
-          "locale/en-us/dialog/confirm_timer_started.dialog"
+          "locale/en-us/dialog/confirm_alert_recurring_playback.dialog",
+          "locale/en-us/dialog/alert_expiration_past.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -14213,11 +14213,11 @@
           "repeat": "Runtime value from confirm_alert()"
         },
         "related_files": [
+          "locale/en-us/dialog/confirm_alert_recurring.dialog",
+          "locale/en-us/dialog/confirm_timer_started.dialog",
           "locale/en-us/dialog/confirm_alert_set.dialog",
           "locale/en-us/dialog/confirm_alert_playback.dialog",
-          "locale/en-us/dialog/confirm_alert_recurring.dialog",
-          "locale/en-us/dialog/alert_expiration_past.dialog",
-          "locale/en-us/dialog/confirm_timer_started.dialog"
+          "locale/en-us/dialog/alert_expiration_past.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -15627,11 +15627,11 @@
           "remaining": "Runtime value from confirm_alert()"
         },
         "related_files": [
-          "locale/en-us/dialog/confirm_alert_recurring_playback.dialog",
-          "locale/en-us/dialog/confirm_alert_playback.dialog",
           "locale/en-us/dialog/confirm_alert_recurring.dialog",
-          "locale/en-us/dialog/alert_expiration_past.dialog",
-          "locale/en-us/dialog/confirm_timer_started.dialog"
+          "locale/en-us/dialog/confirm_timer_started.dialog",
+          "locale/en-us/dialog/confirm_alert_playback.dialog",
+          "locale/en-us/dialog/confirm_alert_recurring_playback.dialog",
+          "locale/en-us/dialog/alert_expiration_past.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -16081,8 +16081,8 @@
           "name": "Runtime value from handle_cancel_alert()"
         },
         "related_files": [
-          "locale/en-us/dialog/error_no_scheduled_kind.dialog",
-          "locale/en-us/dialog/error_nothing_to_cancel.dialog"
+          "locale/en-us/dialog/error_nothing_to_cancel.dialog",
+          "locale/en-us/dialog/error_no_scheduled_kind.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -30158,10 +30158,10 @@
           "kind": "Runtime value from handle_change_properties()"
         },
         "related_files": [
-          "locale/en-us/dialog/error_no_scheduled_kind.dialog",
+          "locale/en-us/dialog/alert_rescheduled_end.dialog",
           "locale/en-us/dialog/error_no_time.dialog",
           "locale/en-us/dialog/alert_rescheduled_repeat.dialog",
-          "locale/en-us/dialog/alert_rescheduled_end.dialog"
+          "locale/en-us/dialog/error_no_scheduled_kind.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -33908,8 +33908,8 @@
           "name": "Runtime value from _speak_notify_expired()"
         },
         "related_files": [
-          "locale/en-us/dialog/expired_timer.dialog",
-          "locale/en-us/dialog/expired_alert.dialog"
+          "locale/en-us/dialog/expired_alert.dialog",
+          "locale/en-us/dialog/expired_timer.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -38022,8 +38022,8 @@
         ],
         "slot_descriptions": {},
         "related_files": [
-          "locale/en-us/dialog/list_alert_none_missed.dialog",
-          "locale/en-us/dialog/list_alert_missed_intro.dialog"
+          "locale/en-us/dialog/list_alert_missed_intro.dialog",
+          "locale/en-us/dialog/list_alert_none_missed.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -38804,8 +38804,8 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "locale/en-us/dialog/list_alert_missed.dialog",
-          "locale/en-us/dialog/list_alert_missed_intro.dialog"
+          "locale/en-us/dialog/list_alert_missed_intro.dialog",
+          "locale/en-us/dialog/list_alert_missed.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -39235,8 +39235,8 @@
           "kind": "Runtime value from handle_next_alert()"
         },
         "related_files": [
-          "locale/en-us/dialog/ocp_breaking_up.dialog",
-          "locale/en-us/dialog/ocp_missing.dialog"
+          "locale/en-us/dialog/ocp_missing.dialog",
+          "locale/en-us/dialog/ocp_breaking_up.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -39687,8 +39687,8 @@
         },
         "related_files": [
           "locale/en-us/dialog/list_alert_wo_duration.dialog",
-          "locale/en-us/dialog/list_alert_timeframe_none.dialog",
-          "locale/en-us/dialog/list_alert_w_duration.dialog"
+          "locale/en-us/dialog/list_alert_w_duration.dialog",
+          "locale/en-us/dialog/list_alert_timeframe_none.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -40025,8 +40025,8 @@
         "slot_descriptions": {},
         "related_files": [
           "locale/en-us/dialog/list_alert_wo_duration.dialog",
-          "locale/en-us/dialog/list_alert_timeframe_intro.dialog",
-          "locale/en-us/dialog/list_alert_w_duration.dialog"
+          "locale/en-us/dialog/list_alert_w_duration.dialog",
+          "locale/en-us/dialog/list_alert_timeframe_intro.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -40959,8 +40959,8 @@
         "slot_descriptions": {},
         "related_files": [
           "locale/en-us/dialog/list_alert_timeframe_none.dialog",
-          "locale/en-us/dialog/list_alert_timeframe_intro.dialog",
-          "locale/en-us/dialog/list_alert_w_duration.dialog"
+          "locale/en-us/dialog/list_alert_w_duration.dialog",
+          "locale/en-us/dialog/list_alert_timeframe_intro.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -46923,8 +46923,8 @@
           "items": "Runtime value from handle_delete_todo_entries()"
         },
         "related_files": [
-          "locale/en-us/dialog/list_todo_dont_exist.dialog",
-          "locale/en-us/dialog/list_todo_no_subitems.dialog"
+          "locale/en-us/dialog/list_todo_no_subitems.dialog",
+          "locale/en-us/dialog/list_todo_dont_exist.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -78589,9 +78589,9 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
+          "locale/en-us/dialog/list_alert_missed_intro.dialog",
           "locale/en-us/dialog/list_alert_missed.dialog",
-          "locale/en-us/dialog/list_alert_none_missed.dialog",
-          "locale/en-us/dialog/list_alert_missed_intro.dialog"
+          "locale/en-us/dialog/list_alert_none_missed.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -84359,8 +84359,8 @@
         "slots": [],
         "slot_descriptions": {},
         "related_files": [
-          "locale/en-us/dialog/list_alert_none_upcoming.dialog",
-          "locale/en-us/dialog/ocp_missing.dialog"
+          "locale/en-us/dialog/ocp_missing.dialog",
+          "locale/en-us/dialog/list_alert_none_upcoming.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -88113,11 +88113,11 @@
           "num": "Runtime value from handle_change_properties()"
         },
         "related_files": [
-          "locale/de-de/dialog/error_no_time.dialog",
-          "locale/de-de/dialog/error_no_repeat.dialog",
-          "locale/de-de/dialog/alert_rescheduled_end.dialog",
           "locale/de-de/dialog/error_no_scheduled_kind.dialog",
-          "locale/de-de/dialog/alert_rescheduled_repeat.dialog"
+          "locale/de-de/dialog/alert_rescheduled_repeat.dialog",
+          "locale/de-de/dialog/error_no_time.dialog",
+          "locale/de-de/dialog/alert_rescheduled_end.dialog",
+          "locale/de-de/dialog/error_no_repeat.dialog"
         ],
         "builder_chain": null,
         "tips": [
@@ -97185,8 +97185,8 @@
         ],
         "slot_descriptions": {},
         "related_files": [
-          "locale/en-us/dialog/error_no_scheduled_kind.dialog",
-          "locale/en-us/dialog/error_no_time.dialog"
+          "locale/en-us/dialog/error_no_time.dialog",
+          "locale/en-us/dialog/error_no_scheduled_kind.dialog"
         ],
         "builder_chain": null,
         "tips": [

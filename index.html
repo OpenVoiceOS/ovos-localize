@@ -1329,63 +1329,40 @@ Right now in {location} it's {condition}
     // ENTITY DATABASE
     // =========================================================================
     async function renderEntities(el) {
-      const repos = await fetchJSON('data/repos.json');
+      const entityDb = await fetchJSON('data/entities.json');
       const coverage = await fetchJSON('data/coverage.json');
       const meta = coverage.lang_meta || {};
       const userLangs = getUserLangs();
 
-      // Collect all entity and voc files across all skills
-      const entityDb = [];
-      for (const repo of repos) {
-        try {
-          const skill = await fetchJSON(`data/skills/${repo.id}.json`);
-          for (const [fk, fd] of Object.entries(skill.files)) {
-            if (fd.type !== 'entity' && fd.type !== 'voc') continue;
-            const langData = {};
-            for (const [lang, ld] of Object.entries(fd.langs)) {
-              langData[lang] = {
-                count: ld.entries?.length || 0,
-                entries: (ld.entries || []).map(e => e.text).slice(0, 10),
-              };
-            }
-            entityDb.push({
-              name: fk, type: fd.type, skill: skill.id,
-              skillRepo: skill.repo, langs: langData, editUrls: fd.edit_urls || {},
-            });
-          }
-        } catch {}
-      }
-
-      entityDb.sort((a, b) => a.type !== b.type ? (a.type === 'entity' ? -1 : 1) : a.name.localeCompare(b.name));
-
-      const allLangs = [...new Set(entityDb.flatMap(e => Object.keys(e.langs)))].sort();
+      const allLangs = [...new Set(entityDb.filter(e => e.has_entity_file).flatMap(e => Object.keys(e.langs)))].sort();
       const displayLangs = userLangs.length ? allLangs.filter(l => userLangs.includes(l)) : allLangs;
 
-      const totalEntities = entityDb.filter(e => e.type === 'entity').length;
-      const totalVoc = entityDb.filter(e => e.type === 'voc').length;
-      const totalSamples = entityDb.reduce((s, e) => s + Object.values(e.langs).reduce((s2, l) => s2 + l.count, 0), 0);
+      const withFile = entityDb.filter(e => e.has_entity_file).length;
+      const gaps = entityDb.filter(e => !e.has_entity_file).length;
+      const totalSamples = entityDb.reduce((s, e) => s + Object.values(e.langs).reduce((s2, l) => s2 + (l.count||0), 0), 0);
 
       el.innerHTML = `
         <div class="max-w-6xl mx-auto">
           <div class="mb-6">
             <a href="#/" class="text-sm text-ovos-muted">&larr; Home</a>
             <h1 class="text-xl font-bold mt-2">Entity Database</h1>
-            <p class="text-sm text-ovos-muted mt-1">Training data for Named Entity Recognition. Each file lists example values that help the voice assistant recognize entities like colors, locations, or categories.</p>
+            <p class="text-sm text-ovos-muted mt-1">Training data for Named Entity Recognition. Shows all <code>{entity}</code> slots used in .intent files and whether they have a corresponding .entity training file.</p>
           </div>
 
           <div class="callout mb-6 text-sm">
-            <strong>How to contribute:</strong> Click any language badge to open the editor. Add more example values — one per line. More diverse examples = better entity recognition.
-            <br><span class="text-ovos-muted"><strong>.entity</strong> files train Padatious entity slots. <strong>.voc</strong> files are Adapt keyword triggers. Both benefit from more samples.</span>
+            <strong>What are entities?</strong> When a user says <em>"what's the weather in <span class="slot">{location}</span>"</em>, the word after "in" needs to be recognized as a location.
+            An <code>.entity</code> file provides example values (e.g. "London", "New York", "Tokyo") that train the NER model.
+            <br><strong class="text-red-400">Gaps</strong> are {slots} used in .intent files that have <em>no</em> .entity training data — the assistant can't learn what values to expect.
           </div>
 
           <div class="grid grid-cols-3 gap-3 mb-6">
             <div class="p-3 bg-ovos-card rounded-xl text-center">
-              <div class="text-xl font-bold">${totalEntities}</div>
-              <div class="text-xs text-ovos-muted">.entity files</div>
+              <div class="text-xl font-bold text-green-400">${withFile}</div>
+              <div class="text-xs text-ovos-muted">with .entity file</div>
             </div>
             <div class="p-3 bg-ovos-card rounded-xl text-center">
-              <div class="text-xl font-bold">${totalVoc}</div>
-              <div class="text-xs text-ovos-muted">.voc files</div>
+              <div class="text-xl font-bold text-red-400">${gaps}</div>
+              <div class="text-xs text-ovos-muted">missing .entity file</div>
             </div>
             <div class="p-3 bg-ovos-card rounded-xl text-center">
               <div class="text-xl font-bold">${totalSamples.toLocaleString()}</div>
@@ -1399,9 +1376,9 @@ Right now in {location} it's {condition}
               <input id="entity-search" type="text" placeholder="Search entities..." class="bg-transparent text-sm text-ovos-text w-full outline-none placeholder-ovos-muted" oninput="filterEntities()">
             </div>
             <select id="entity-type-filter" class="bg-ovos-card text-ovos-text text-sm rounded-lg border border-ovos-card px-3 py-2" onchange="filterEntities()">
-              <option value="">All types</option>
-              <option value="entity">.entity only</option>
-              <option value="voc">.voc only</option>
+              <option value="">All entities</option>
+              <option value="gap">Missing .entity file only</option>
+              <option value="has">With .entity file only</option>
             </select>
             <span id="entity-count" class="text-xs text-ovos-muted"></span>
           </div>
@@ -1426,31 +1403,55 @@ Right now in {location} it's {condition}
 
       let filtered = db;
       if (search) filtered = filtered.filter(e => e.name.toLowerCase().includes(search) || e.skill.toLowerCase().includes(search));
-      if (typeFilter) filtered = filtered.filter(e => e.type === typeFilter);
+      if (typeFilter === 'gap') filtered = filtered.filter(e => !e.has_entity_file);
+      if (typeFilter === 'has') filtered = filtered.filter(e => e.has_entity_file);
 
-      if (countEl) countEl.textContent = `${filtered.length} files`;
+      if (countEl) countEl.textContent = `${filtered.length} entities`;
 
       list.innerHTML = filtered.map(entity => {
         const enData = entity.langs['en-US'];
-        const enSamples = enData?.entries || [];
+        const enSamples = enData?.samples || [];
         const enCount = enData?.count || 0;
 
+        if (!entity.has_entity_file) {
+          // GAP — slot used in intents but no .entity file
+          return `
+            <div class="bg-ovos-card rounded-xl p-4 border-l-3 border-red-500" style="border-left:3px solid #ef4444">
+              <div class="flex items-start justify-between mb-1">
+                <div class="flex items-center gap-2">
+                  <span class="slot text-base">{${escapeHtml(entity.name)}}</span>
+                  <span class="badge badge-red">no .entity file</span>
+                </div>
+                <div class="text-xs text-ovos-muted">from <a href="#/skill/${entity.skill}/en-US">${entity.skill.replace('ovos-skill-','').replace('ovos-','')}</a></div>
+              </div>
+              <div class="text-xs text-ovos-muted">
+                Used in: ${entity.used_in_intents.map(i => `<span class="mono">${escapeHtml(i)}</span>`).join(', ')}
+              </div>
+              <div class="text-xs text-ovos-muted mt-1">
+                This slot has no training data. The assistant cannot learn what values to expect. Create a <code>${escapeHtml(entity.name)}.entity</code> file with example values.
+              </div>
+            </div>`;
+        }
+
+        // HAS entity file — show per-language sample counts
         return `
           <div class="bg-ovos-card rounded-xl p-4">
             <div class="flex items-start justify-between mb-2">
               <div>
                 <div class="flex items-center gap-2">
-                  <span class="font-bold mono">${escapeHtml(entity.name)}</span>
-                  <span class="badge badge-blue mono">.${entity.type}</span>
+                  <span class="slot text-base">{${escapeHtml(entity.name)}}</span>
+                  <span class="badge badge-green">.entity</span>
                 </div>
-                <div class="text-xs text-ovos-muted">from <a href="#/skill/${entity.skill}/en-US">${entity.skill.replace('ovos-skill-','')}</a></div>
+                <div class="text-xs text-ovos-muted">from <a href="#/skill/${entity.skill}/en-US">${entity.skill.replace('ovos-skill-','').replace('ovos-','')}</a>
+                  ${entity.used_in_intents.length ? ` &middot; used in: ${entity.used_in_intents.map(i => `<span class="mono">${escapeHtml(i)}</span>`).join(', ')}` : ''}
+                </div>
               </div>
               <div class="text-right text-xs text-ovos-muted">${enCount} English samples</div>
             </div>
             ${enSamples.length ? `<div class="mb-3 text-xs">
-              <span class="text-ovos-muted">English:</span>
+              <span class="text-ovos-muted">Examples:</span>
               ${enSamples.map(s => `<span class="inline-block bg-ovos-bg px-1.5 py-0.5 rounded mr-1 mb-1 mono">${escapeHtml(s)}</span>`).join('')}
-              ${enCount > 10 ? `<span class="text-ovos-muted">+${enCount - 10} more</span>` : ''}
+              ${enCount > 15 ? `<span class="text-ovos-muted">+${enCount - 15} more</span>` : ''}
             </div>` : ''}
             <div class="flex flex-wrap gap-1.5">
               ${displayLangs.map(lang => {
@@ -1458,12 +1459,12 @@ Right now in {location} it's {condition}
                 const count = ld?.count || 0;
                 const target = Math.max(enCount, 5);
                 const cls = count === 0 ? 'badge-gray' : count >= target ? 'badge-green' : count >= target * 0.5 ? 'badge-amber' : 'badge-red';
-                const href = `#/skill/${entity.skill}/${encodeURIComponent(entity.name)}/${lang}`;
-                return `<a href="${href}" class="badge ${cls} hover:no-underline hover:opacity-80" title="${(meta[lang]?.native||lang)}: ${count} samples${ld?.entries?.length ? '\\n' + ld.entries.slice(0,3).join(', ') : ''}">${lang} <span class="font-normal">${count}</span></a>`;
+                const href = entity.file_key ? `#/skill/${entity.skill}/${encodeURIComponent(entity.file_key)}/${lang}` : '#';
+                return `<a href="${href}" class="badge ${cls} hover:no-underline hover:opacity-80" title="${(meta[lang]?.native||lang)}: ${count} samples">${lang} <span class="font-normal">${count}</span></a>`;
               }).join('')}
             </div>
           </div>`;
-      }).join('') || '<p class="text-ovos-muted text-center py-8">No entity files match.</p>';
+      }).join('') || '<p class="text-ovos-muted text-center py-8">No entities match.</p>';
     }
 
     // =========================================================================
