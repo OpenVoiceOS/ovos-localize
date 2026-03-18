@@ -449,12 +449,16 @@ def build_stats_json(all_skills: List[Dict[str, Any]], coverage: Dict[str, Any])
             source_have = 0
             for fd in skill["files"].values():
                 ft = fd["type"]
-                if lang in fd["langs"]:
-                    type_counts[ft] = type_counts.get(ft, 0) + 1
+                has_source = "en-US" in fd["langs"]
+                has_lang = lang in fd["langs"]
+                if has_lang:
                     has_any = True
-                if "en-US" in fd["langs"]:
+                # Only count translations of files that exist in source
+                if has_source and has_lang:
+                    type_counts[ft] = type_counts.get(ft, 0) + 1
+                if has_source:
                     source_total += 1
-                    if lang in fd["langs"]:
+                    if has_lang:
                         source_have += 1
             if has_any:
                 skills_with_any += 1
