@@ -1,0 +1,814 @@
+{
+  "id": "ovos-skill-spelling",
+  "repo": "OpenVoiceOS/ovos-skill-spelling",
+  "skill_class": "SpellingSkill",
+  "source_file": "/home/miro/PycharmProjects/OpenVoiceOS Workspace/ovos-localize/repos/OpenVoiceOS/ovos-skill-spelling/__init__.py",
+  "languages": [
+    "ca-ES",
+    "da-DK",
+    "de-DE",
+    "en-US",
+    "es-ES",
+    "eu-EU",
+    "gl-ES",
+    "pt-PT"
+  ],
+  "files": {
+    "Spell.intent": {
+      "type": "intent",
+      "intent_system": "padatious",
+      "langs": {
+        "ca-ES": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "com escrius  {word}"
+            },
+            {
+              "line": 2,
+              "text": "com escrius la paraula {word}"
+            },
+            {
+              "line": 3,
+              "text": "com s'escriu  {word}"
+            },
+            {
+              "line": 4,
+              "text": "com s'escriu el mot {word}"
+            },
+            {
+              "line": 5,
+              "text": "com s'escriu la paraula {word}"
+            },
+            {
+              "line": 6,
+              "text": "com s'escriu {word}"
+            },
+            {
+              "line": 7,
+              "text": "deixa'm escriure la paraula {word}"
+            },
+            {
+              "line": 8,
+              "text": "dóna'm les lletres de {word}"
+            },
+            {
+              "line": 9,
+              "text": "escriu la paraula {word}"
+            },
+            {
+              "line": 10,
+              "text": "escriu {word}"
+            },
+            {
+              "line": 11,
+              "text": "lletreig de la paraula {word}"
+            },
+            {
+              "line": 12,
+              "text": "lletreig de {word}"
+            },
+            {
+              "line": 13,
+              "text": "lletreig del mot {word}"
+            },
+            {
+              "line": 14,
+              "text": "lletreja el mot {word}"
+            },
+            {
+              "line": 15,
+              "text": "lletreja la paraula {word}"
+            },
+            {
+              "line": 16,
+              "text": "lletreja {word}"
+            },
+            {
+              "line": 17,
+              "text": "lletrejament de la paraula {word}"
+            },
+            {
+              "line": 18,
+              "text": "lletrejament de {word}"
+            },
+            {
+              "line": 19,
+              "text": "lletrejament del mot {word}"
+            },
+            {
+              "line": 20,
+              "text": "lletres de la paraula {word}"
+            },
+            {
+              "line": 21,
+              "text": "lletres de {word}"
+            },
+            {
+              "line": 22,
+              "text": "pots donar-me les lletres de {word}"
+            },
+            {
+              "line": 23,
+              "text": "pots escriure la paraula {word}"
+            },
+            {
+              "line": 24,
+              "text": "pots escriure {word} per mi"
+            },
+            {
+              "line": 25,
+              "text": "quines són les lletres de {word}"
+            }
+          ],
+          "line_count": 25,
+          "slots": [
+            "word"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-spelling/locale/ca-es/Spell.intent"
+        },
+        "en-US": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "can you give me the spelling of {word}"
+            },
+            {
+              "line": 2,
+              "text": "can you spell  {word}"
+            },
+            {
+              "line": 3,
+              "text": "can you spell the word {word}"
+            },
+            {
+              "line": 4,
+              "text": "can you tell me the spelling of {word}"
+            },
+            {
+              "line": 5,
+              "text": "can you what is the spelling of {word}"
+            },
+            {
+              "line": 6,
+              "text": "could you spell  {word}"
+            },
+            {
+              "line": 7,
+              "text": "could you spell the word {word}"
+            },
+            {
+              "line": 8,
+              "text": "give me the spelling of {word}"
+            },
+            {
+              "line": 9,
+              "text": "how do you spell  {word}"
+            },
+            {
+              "line": 10,
+              "text": "how do you spell the word {word}"
+            },
+            {
+              "line": 11,
+              "text": "how to spell  {word}"
+            },
+            {
+              "line": 12,
+              "text": "how to spell the word {word}"
+            },
+            {
+              "line": 13,
+              "text": "spell out {word}"
+            },
+            {
+              "line": 14,
+              "text": "spell the word {word}"
+            },
+            {
+              "line": 15,
+              "text": "spell word {word}"
+            },
+            {
+              "line": 16,
+              "text": "spelling of the word {word}"
+            },
+            {
+              "line": 17,
+              "text": "spelling of {word}"
+            },
+            {
+              "line": 18,
+              "text": "tell me the spelling of {word}"
+            },
+            {
+              "line": 19,
+              "text": "what is the spelling of {word}"
+            }
+          ],
+          "line_count": 19,
+          "slots": [
+            "word"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-spelling/locale/en-us/Spell.intent"
+        },
+        "es-ES": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "dame las letras de {word}"
+            },
+            {
+              "line": 2,
+              "text": "deja escribir la palabra {word}"
+            },
+            {
+              "line": 3,
+              "text": "deletrea la palabra {word}"
+            },
+            {
+              "line": 4,
+              "text": "deletrear de {word}"
+            },
+            {
+              "line": 5,
+              "text": "deletrear la palabra {word}"
+            },
+            {
+              "line": 6,
+              "text": "deletrear {word}"
+            },
+            {
+              "line": 7,
+              "text": "escribe la palabra {word}"
+            },
+            {
+              "line": 8,
+              "text": "escribe {word}"
+            },
+            {
+              "line": 9,
+              "text": "letras de la palabra {word}"
+            },
+            {
+              "line": 10,
+              "text": "letras de {word}"
+            },
+            {
+              "line": 11,
+              "text": "¿cuáles son las letras de {word}"
+            },
+            {
+              "line": 12,
+              "text": "¿cómo escribes  {word}"
+            },
+            {
+              "line": 13,
+              "text": "¿cómo escribes la palabra {word}"
+            },
+            {
+              "line": 14,
+              "text": "¿cómo se escribe  {word}"
+            },
+            {
+              "line": 15,
+              "text": "¿cómo se escribe la palabra {word}"
+            },
+            {
+              "line": 16,
+              "text": "¿cómo se escribe {word}"
+            },
+            {
+              "line": 17,
+              "text": "¿puedes darme las letras de {word}"
+            },
+            {
+              "line": 18,
+              "text": "¿puedes escribir la palabra {word}"
+            },
+            {
+              "line": 19,
+              "text": "¿puedes escribir {word} para mí"
+            }
+          ],
+          "line_count": 19,
+          "slots": [
+            "word"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-spelling/locale/es-es/Spell.intent"
+        },
+        "eu-EU": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "eman iezadazu {word} hitzaren idazketa"
+            },
+            {
+              "line": 2,
+              "text": "emango al didazu {word} hitzaren idazketa"
+            },
+            {
+              "line": 3,
+              "text": "hitza idazketa {word}"
+            },
+            {
+              "line": 4,
+              "text": "hitza idaztekoa {word}"
+            },
+            {
+              "line": 5,
+              "text": "hitzaren ortografia {word}"
+            },
+            {
+              "line": 6,
+              "text": "idatzi al dezakezu {word} niretzat"
+            },
+            {
+              "line": 7,
+              "text": "idatzi hitza {word}"
+            },
+            {
+              "line": 8,
+              "text": "idatzi {word}"
+            },
+            {
+              "line": 9,
+              "text": "idazteko aukera al duzu {word} hitza"
+            },
+            {
+              "line": 10,
+              "text": "letreiatu hitza {word}"
+            },
+            {
+              "line": 11,
+              "text": "letreiatu {word}"
+            },
+            {
+              "line": 12,
+              "text": "nola idazten da  {word}"
+            },
+            {
+              "line": 13,
+              "text": "nola idazten da hitza {word}"
+            },
+            {
+              "line": 14,
+              "text": "nola idazten da {word}"
+            },
+            {
+              "line": 15,
+              "text": "nola idazten duzu  {word}"
+            },
+            {
+              "line": 16,
+              "text": "nola idazten duzu hitza {word}"
+            },
+            {
+              "line": 17,
+              "text": "zein da {word} hitzaren idazketa"
+            }
+          ],
+          "line_count": 17,
+          "slots": [
+            "word"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-spelling/locale/eu-eu/Spell.intent"
+        },
+        "gl-ES": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "cal é a ortografía de {word}"
+            },
+            {
+              "line": 2,
+              "text": "como escribes  {word}"
+            },
+            {
+              "line": 3,
+              "text": "como escribes a palabra {word}"
+            },
+            {
+              "line": 4,
+              "text": "como se escribe  {word}"
+            },
+            {
+              "line": 5,
+              "text": "como se escribe a palabra {word}"
+            },
+            {
+              "line": 6,
+              "text": "como se escribe {word}"
+            },
+            {
+              "line": 7,
+              "text": "dame as letras de {word}"
+            },
+            {
+              "line": 8,
+              "text": "deixa me escribir a palabra {word}"
+            },
+            {
+              "line": 9,
+              "text": "escribe a palabra {word}"
+            },
+            {
+              "line": 10,
+              "text": "escribe {word}"
+            },
+            {
+              "line": 11,
+              "text": "letras da palabra {word}"
+            },
+            {
+              "line": 12,
+              "text": "letras de {word}"
+            },
+            {
+              "line": 13,
+              "text": "ortografía da palabra {word}"
+            },
+            {
+              "line": 14,
+              "text": "ortografía de {word}"
+            },
+            {
+              "line": 15,
+              "text": "podes darme as letras de {word}"
+            },
+            {
+              "line": 16,
+              "text": "podes escribir {word} para min"
+            },
+            {
+              "line": 17,
+              "text": "pódese escribir a palabra {word}"
+            },
+            {
+              "line": 18,
+              "text": "soletrear palabra {word}"
+            },
+            {
+              "line": 19,
+              "text": "soletrear {word}"
+            }
+          ],
+          "line_count": 19,
+          "slots": [
+            "word"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-spelling/locale/gl-es/Spell.intent"
+        },
+        "pt-PT": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "como escreves  {word}"
+            },
+            {
+              "line": 2,
+              "text": "como escreves a palavra {word}"
+            },
+            {
+              "line": 3,
+              "text": "como se escreve  {word}"
+            },
+            {
+              "line": 4,
+              "text": "como se escreve a palavra {word}"
+            },
+            {
+              "line": 5,
+              "text": "como se escreve {word}"
+            },
+            {
+              "line": 6,
+              "text": "como se soletra {word}"
+            },
+            {
+              "line": 7,
+              "text": "dá-me a soletração de {word}"
+            },
+            {
+              "line": 8,
+              "text": "podes dar-me a soletração de {word}"
+            },
+            {
+              "line": 9,
+              "text": "podes soletrar a palavra {word}"
+            },
+            {
+              "line": 10,
+              "text": "podes soletrar {word} para mim"
+            },
+            {
+              "line": 11,
+              "text": "qual é a soletração de {word}"
+            },
+            {
+              "line": 12,
+              "text": "soletra a palavra {word}"
+            },
+            {
+              "line": 13,
+              "text": "soletra {word}"
+            },
+            {
+              "line": 14,
+              "text": "soletrar {word}"
+            },
+            {
+              "line": 15,
+              "text": "soletração da palavra {word}"
+            },
+            {
+              "line": 16,
+              "text": "soletração de {word}"
+            }
+          ],
+          "line_count": 16,
+          "slots": [
+            "word"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-spelling/locale/pt-pt/Spell.intent"
+        }
+      },
+      "context": {
+        "file_name": "Spell",
+        "file_type_label": "Padatious Intent (training utterances)",
+        "intent_system": "PADATIOUS",
+        "handler_method": "handle_spell",
+        "handler_file": "/home/miro/PycharmProjects/OpenVoiceOS Workspace/ovos-localize/repos/OpenVoiceOS/ovos-skill-spelling/__init__.py",
+        "handler_line": 23,
+        "triggers_dialog": [],
+        "slots": [
+          "word"
+        ],
+        "slot_descriptions": {},
+        "related_files": [],
+        "builder_chain": null,
+        "tips": [
+          "Provide 10+ natural phrasings with varied sentence structure.",
+          "Keep all {slot} placeholders exactly as in the source.",
+          "Use (option1|option2) for alternative words.",
+          "Vary sentence beginnings — don't start every line the same way."
+        ],
+        "used_by_intents": [],
+        "handler_source": "@intent_handler(\"Spell.intent\")\ndef handle_spell(self, message):\n    word = message.data.get(\"word\")\n    spelled_word = '; '.join(word).upper()\n\n    # Pause mouth shapes appearing on screen for at least enough time\n    # for the word to scroll by on the Mark 1 screen.  Pad with blanks\n    # to prevent re-starting the scroll action if the timing is slightly\n    # off.\n    self.enclosure.deactivate_mouth_events()\n    self.enclosure.mouth_text(word + \"          \")\n\n    self.speak(spelled_word, wait=True)\n\n    # allow mouth movements again\n    self.enclosure.activate_mouth_events()\n    self.enclosure.mouth_reset()"
+      },
+      "edit_urls": {
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/ca-es/Spell.intent",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/en-us/Spell.intent",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/es-es/Spell.intent",
+        "eu-EU": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/eu-eu/Spell.intent",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/gl-es/Spell.intent",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/pt-pt/Spell.intent"
+      }
+    },
+    "skill.json": {
+      "type": "skill.json",
+      "intent_system": "none",
+      "langs": {
+        "ca-ES": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Habilitat de lletreig",
+              "key": "name",
+              "translatable": true
+            },
+            {
+              "line": 2,
+              "text": "Com s'escriu arquitectura?",
+              "key": "examples",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 3,
+              "text": "Lletreja omnipotència",
+              "key": "examples",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 4,
+              "text": "Com s'escriu burocràcia?",
+              "key": "examples",
+              "translatable": true,
+              "index": 2
+            },
+            {
+              "line": 5,
+              "text": "Lletreja ornitorrinc",
+              "key": "examples",
+              "translatable": true,
+              "index": 3
+            }
+          ],
+          "line_count": 5,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-spelling/locale/ca-es/skill.json"
+        },
+        "da-DK": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Stavefærdighed",
+              "key": "name",
+              "translatable": true
+            },
+            {
+              "line": 2,
+              "text": "Hvordan staves jordvark?",
+              "key": "examples",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 3,
+              "text": "Stav almagt",
+              "key": "examples",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 4,
+              "text": "Hvordan staver man bureaukrati?",
+              "key": "examples",
+              "translatable": true,
+              "index": 2
+            },
+            {
+              "line": 5,
+              "text": "Stav succotash",
+              "key": "examples",
+              "translatable": true,
+              "index": 3
+            }
+          ],
+          "line_count": 5,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-spelling/locale/da-dk/skill.json"
+        },
+        "de-DE": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Buchstabier Skill",
+              "key": "name",
+              "translatable": true
+            },
+            {
+              "line": 2,
+              "text": "Wie buchstabiert man Erdferkel?",
+              "key": "examples",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 3,
+              "text": "Buchstabiere Allmacht",
+              "key": "examples",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 4,
+              "text": "Wie buchstabiert man Bürokratie?",
+              "key": "examples",
+              "translatable": true,
+              "index": 2
+            },
+            {
+              "line": 5,
+              "text": "Buchstabiere Succotash ",
+              "key": "examples",
+              "translatable": true,
+              "index": 3
+            }
+          ],
+          "line_count": 5,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-spelling/locale/de-de/skill.json"
+        },
+        "en-US": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Spelling Skill",
+              "key": "name",
+              "translatable": true
+            },
+            {
+              "line": 2,
+              "text": "How do you spell aardvark?",
+              "key": "examples",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 3,
+              "text": "Spell omnipotence",
+              "key": "examples",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 4,
+              "text": "How do you spell bureacracy?",
+              "key": "examples",
+              "translatable": true,
+              "index": 2
+            },
+            {
+              "line": 5,
+              "text": "Spell succotash",
+              "key": "examples",
+              "translatable": true,
+              "index": 3
+            }
+          ],
+          "line_count": 5,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-spelling/locale/en-us/skill.json"
+        },
+        "gl-ES": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Soletreador",
+              "key": "name",
+              "translatable": true
+            },
+            {
+              "line": 2,
+              "text": "Como se escribe aardvark?",
+              "key": "examples",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 3,
+              "text": "Soletrea omnipotencia",
+              "key": "examples",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 4,
+              "text": "Como se soletrea burocracia?",
+              "key": "examples",
+              "translatable": true,
+              "index": 2
+            },
+            {
+              "line": 5,
+              "text": "Deletrea succotash",
+              "key": "examples",
+              "translatable": true,
+              "index": 3
+            }
+          ],
+          "line_count": 5,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-spelling/locale/gl-es/skill.json"
+        }
+      },
+      "context": {
+        "file_name": "skill",
+        "file_type_label": "Skill Metadata (JSON)",
+        "intent_system": null,
+        "handler_method": null,
+        "handler_file": null,
+        "handler_line": null,
+        "triggers_dialog": [],
+        "slots": [],
+        "slot_descriptions": {},
+        "related_files": [],
+        "builder_chain": null,
+        "tips": [],
+        "used_by_intents": [],
+        "handler_source": null
+      },
+      "edit_urls": {
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/ca-es/skill.json",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/da-dk/skill.json",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/de-de/skill.json",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/en-us/skill.json",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-spelling/edit/dev/ovos-skill-spelling/locale/gl-es/skill.json"
+      }
+    }
+  }
+}

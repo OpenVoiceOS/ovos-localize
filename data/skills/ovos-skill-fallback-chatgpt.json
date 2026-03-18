@@ -1,0 +1,938 @@
+{
+  "id": "ovos-skill-fallback-chatgpt",
+  "repo": "OpenVoiceOS/ovos-skill-fallback-chatgpt",
+  "skill_class": "ChatGPTSkill",
+  "source_file": "/home/miro/PycharmProjects/OpenVoiceOS Workspace/ovos-localize/repos/OpenVoiceOS/ovos-skill-fallback-chatgpt/__init__.py",
+  "languages": [
+    "ca-ES",
+    "da-DK",
+    "de-DE",
+    "en-US",
+    "eu",
+    "fr-FR",
+    "gl-ES",
+    "it-IT",
+    "nl-NL",
+    "pt-PT"
+  ],
+  "files": {
+    "asking.dialog": {
+      "type": "dialog",
+      "intent_system": "none",
+      "langs": {
+        "ca-ES": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Deixa'm preguntar a {name}"
+            },
+            {
+              "line": 2,
+              "text": "Ho demano a {name}"
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/ca-es/asking.dialog"
+        },
+        "da-DK": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Lad mig spørge {name}"
+            },
+            {
+              "line": 2,
+              "text": "Spørger {name}"
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/da-dk/asking.dialog"
+        },
+        "de-DE": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Frage {name}"
+            },
+            {
+              "line": 2,
+              "text": "Lass mich {name} fragen"
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/de-de/asking.dialog"
+        },
+        "en-US": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Asking {name}"
+            },
+            {
+              "line": 2,
+              "text": "Let me ask {name}"
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/en-us/asking.dialog"
+        },
+        "eu": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Utzidazu {name} bilatzailean galdetzen"
+            },
+            {
+              "line": 2,
+              "text": "{name} bilatzailean galdetzen"
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/eu/asking.dialog"
+        },
+        "fr-FR": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Je demande à {name}"
+            },
+            {
+              "line": 2,
+              "text": "Laissez moi poser la question à {name}"
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/fr-fr/asking.dialog"
+        },
+        "gl-ES": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Déixame preguntarlle a {name}"
+            },
+            {
+              "line": 2,
+              "text": "Preguntando a {name}"
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/gl-es/asking.dialog"
+        },
+        "it-IT": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Fammi chiedere a {name}"
+            },
+            {
+              "line": 2,
+              "text": "Sto chiedendo a {name}"
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/it-it/asking.dialog"
+        },
+        "nl-NL": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Ik vraag het {name}"
+            },
+            {
+              "line": 2,
+              "text": "{name} weet het antwoord."
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/nl-nl/asking.dialog"
+        },
+        "pt-PT": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Deixa-me perguntar ao {name}"
+            },
+            {
+              "line": 2,
+              "text": "Vou perguntar ao {name}"
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/pt-pt/asking.dialog"
+        }
+      },
+      "context": {
+        "file_name": "asking",
+        "file_type_label": "Dialog (TTS response variants)",
+        "intent_system": null,
+        "handler_method": "ask_chatgpt",
+        "handler_file": null,
+        "handler_line": null,
+        "triggers_dialog": [],
+        "slots": [
+          "name"
+        ],
+        "slot_descriptions": {
+          "name": "Runtime value from ask_chatgpt()"
+        },
+        "related_files": [],
+        "builder_chain": null,
+        "tips": [
+          "Keep all {variable} placeholders exactly as in the source.",
+          "Provide 2+ variant lines for natural speech variety.",
+          "These are spoken aloud by TTS — write naturally."
+        ],
+        "used_by_intents": [],
+        "handler_source": "def ask_chatgpt(self, message):\n    if \"key\" not in self.settings:\n        self.log.error(\n            \"ChatGPT not configured yet, please set your API key in %s\",\n            self.settings.path,\n        )\n        return False  # ChatGPT not configured yet\n    utterance = message.data[\"utterance\"]\n    if self.confirmation:\n        self.speak_dialog(\"asking\", data={\"name\": self.ai_name})\n    # ask in a thread so fallback doesnt timeout\n    self.bus.once(\"async.chatgpt.fallback\", self._async_ask)\n    self.bus.emit(\n        message.forward(\"async.chatgpt.fallback\", {\"utterance\": utterance})\n    )\n    return True"
+      },
+      "edit_urls": {
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/ca-es/asking.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/da-dk/asking.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/de-de/asking.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/en-us/asking.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/eu/asking.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/fr-fr/asking.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/gl-es/asking.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/it-it/asking.dialog",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/nl-nl/asking.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/pt-pt/asking.dialog"
+      }
+    },
+    "gpt_error.dialog": {
+      "type": "dialog",
+      "intent_system": "none",
+      "langs": {
+        "ca-ES": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Ho sento, però hi ha hagut un error amb la sol·licitud {name}."
+            },
+            {
+              "line": 2,
+              "text": "No he pogut obtenir una resposta de {name}"
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/ca-es/gpt_error.dialog"
+        },
+        "da-DK": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Beklager, men noget gik galt med {name}-anmodningen."
+            },
+            {
+              "line": 2,
+              "text": "Jeg kunne ikke få et svar fra {name}"
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/da-dk/gpt_error.dialog"
+        },
+        "de-DE": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Es tut mir leid, aber bei der {name}-Anfrage ist ein Fehler aufgetreten."
+            },
+            {
+              "line": 2,
+              "text": "Ich konnte von {name} keine Antwort erhalten"
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/de-de/gpt_error.dialog"
+        },
+        "en-US": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "I was not able to get an answer from {name}"
+            },
+            {
+              "line": 2,
+              "text": "Sorry but something went wrong with the {name} request."
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/en-us/gpt_error.dialog"
+        },
+        "eu": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Barkatu. zerbaitek huts egin du {name} bilatzaileko eskaeran."
+            },
+            {
+              "line": 2,
+              "text": "Ezin izan erantzunik lortu {name} bilatzailean"
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/eu/gpt_error.dialog"
+        },
+        "fr-FR": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Désolé, mais quelque chose s'est mal passé avec la demande à {name}"
+            },
+            {
+              "line": 2,
+              "text": "Je n'ai pas pu obtenir de réponse venant de {name}"
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/fr-fr/gpt_error.dialog"
+        },
+        "gl-ES": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Non dei atopado unha resposta de {name}"
+            },
+            {
+              "line": 2,
+              "text": "Síntocho, mais algo foi mal coa petición de {name}."
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/gl-es/gpt_error.dialog"
+        },
+        "it-IT": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Scusa, ma qualcosa è andato storto durante la connessione con {name}"
+            },
+            {
+              "line": 2,
+              "text": "Scusa, non ho potuto ottenere una risposta da {name}"
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/it-it/gpt_error.dialog"
+        },
+        "nl-NL": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Ik kon geen antwoord krijgen van {name}"
+            },
+            {
+              "line": 2,
+              "text": "Sorry, maar er is iets misgegaan met het verzoek aan {name}"
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/nl-nl/gpt_error.dialog"
+        },
+        "pt-PT": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Desculpe, mas aconteceu algo de errado ao perguntar ao {name}."
+            },
+            {
+              "line": 2,
+              "text": "{name} não soube responder"
+            }
+          ],
+          "line_count": 2,
+          "slots": [
+            "name"
+          ],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/pt-pt/gpt_error.dialog"
+        }
+      },
+      "context": {
+        "file_name": "gpt_error",
+        "file_type_label": "Dialog (TTS response variants)",
+        "intent_system": null,
+        "handler_method": "_async_ask",
+        "handler_file": null,
+        "handler_line": null,
+        "triggers_dialog": [],
+        "slots": [
+          "name"
+        ],
+        "slot_descriptions": {
+          "name": "Runtime value from _async_ask()"
+        },
+        "related_files": [],
+        "builder_chain": null,
+        "tips": [
+          "Keep all {variable} placeholders exactly as in the source.",
+          "Provide 2+ variant lines for natural speech variety.",
+          "These are spoken aloud by TTS — write naturally."
+        ],
+        "used_by_intents": [],
+        "handler_source": "def _async_ask(self, message):\n    utterance = message.data[\"utterance\"]\n    chat = self.chat\n    chat.qa_pairs = self.build_msg_history(message)\n    answered = False\n    try:\n        for utt in chat.stream_utterances(utterance):\n            answered = True\n            self.speak(utt)\n    except Exception as err:  # speak error on any network issue / no credits etc\n        self.log.error(err)\n    if not answered:\n        self.speak_dialog(\"gpt_error\", data={\"name\": self.ai_name})"
+      },
+      "edit_urls": {
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/ca-es/gpt_error.dialog",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/da-dk/gpt_error.dialog",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/de-de/gpt_error.dialog",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/en-us/gpt_error.dialog",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/eu/gpt_error.dialog",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/fr-fr/gpt_error.dialog",
+        "gl-ES": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/gl-es/gpt_error.dialog",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/it-it/gpt_error.dialog",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/nl-nl/gpt_error.dialog",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/pt-pt/gpt_error.dialog"
+      }
+    },
+    "skill.json": {
+      "type": "skill.json",
+      "intent_system": "none",
+      "langs": {
+        "ca-ES": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "skill-ovos-fallback-chatgpt.openvoiceos",
+              "key": "skill_id",
+              "translatable": false
+            },
+            {
+              "line": 2,
+              "text": "https://github.com/OpenVoiceOS/skill-ovos-fallback-chatgpt",
+              "key": "source",
+              "translatable": false
+            },
+            {
+              "line": 3,
+              "text": "Habilitat de rescat ChatGPT",
+              "key": "name",
+              "translatable": true
+            },
+            {
+              "line": 4,
+              "text": "En cas de dubte, demana a ChatGPT",
+              "key": "description",
+              "translatable": true
+            },
+            {
+              "line": 5,
+              "text": "Explica la computació quàntica en termes senzills",
+              "key": "examples",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 6,
+              "text": "Tens alguna idea creativa per a l'aniversari d'un nen de 10 anys?",
+              "key": "examples",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 8,
+              "text": "rescat",
+              "key": "tags",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 9,
+              "text": "LLM",
+              "key": "tags",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 10,
+              "text": "consulta",
+              "key": "tags",
+              "translatable": true,
+              "index": 2
+            },
+            {
+              "line": 11,
+              "text": "informació",
+              "key": "tags",
+              "translatable": true,
+              "index": 3
+            }
+          ],
+          "line_count": 10,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/ca-es/skill.json"
+        },
+        "da-DK": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "skill-ovos-fallback-chatgpt.openvoiceos",
+              "key": "skill_id",
+              "translatable": false
+            },
+            {
+              "line": 2,
+              "text": "https://github.com/OpenVoiceOS/skill-ovos-fallback-chatgpt",
+              "key": "source",
+              "translatable": false
+            },
+            {
+              "line": 3,
+              "text": "ChatGPT Fallback færdighed",
+              "key": "name",
+              "translatable": true
+            },
+            {
+              "line": 4,
+              "text": "Spørg ChatGPT, når du er i tvivl",
+              "key": "description",
+              "translatable": true
+            },
+            {
+              "line": 5,
+              "text": "Forklar kvanteberegning i enkle vendinger",
+              "key": "examples",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 6,
+              "text": "Har du nogle kreative ideer til en 10-årig fødselsdag?",
+              "key": "examples",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 8,
+              "text": "tilbagefald",
+              "key": "tags",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 9,
+              "text": "LLM",
+              "key": "tags",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 10,
+              "text": "forespørgsel",
+              "key": "tags",
+              "translatable": true,
+              "index": 2
+            },
+            {
+              "line": 11,
+              "text": "information",
+              "key": "tags",
+              "translatable": true,
+              "index": 3
+            }
+          ],
+          "line_count": 10,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/da-dk/skill.json"
+        },
+        "de-DE": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "skill-ovos-fallback-chatgpt.openvoiceos",
+              "key": "skill_id",
+              "translatable": false
+            },
+            {
+              "line": 2,
+              "text": "https://github.com/OpenVoiceOS/skill-ovos-fallback-chatgpt",
+              "key": "source",
+              "translatable": false
+            },
+            {
+              "line": 3,
+              "text": "ChatGPT Fallback-Fähigkeit",
+              "key": "name",
+              "translatable": true
+            },
+            {
+              "line": 4,
+              "text": "Im Zweifelsfall frage ChatGPT",
+              "key": "description",
+              "translatable": true
+            },
+            {
+              "line": 5,
+              "text": "Erkläre einfach Quantencomputing",
+              "key": "examples",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 6,
+              "text": "Hast Du kreative Ideen für den Geburtstag eines 10-Jährigen?",
+              "key": "examples",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 8,
+              "text": "fallback",
+              "key": "tags",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 9,
+              "text": "LLM",
+              "key": "tags",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 10,
+              "text": "Abfrage\nSuche",
+              "key": "tags",
+              "translatable": true,
+              "index": 2
+            },
+            {
+              "line": 11,
+              "text": "Information",
+              "key": "tags",
+              "translatable": true,
+              "index": 3
+            }
+          ],
+          "line_count": 10,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/de-de/skill.json"
+        },
+        "en-US": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "skill-ovos-fallback-chatgpt.openvoiceos",
+              "key": "skill_id",
+              "translatable": false
+            },
+            {
+              "line": 2,
+              "text": "https://github.com/OpenVoiceOS/skill-ovos-fallback-chatgpt",
+              "key": "source",
+              "translatable": false
+            },
+            {
+              "line": 3,
+              "text": "ChatGPT Fallback Skill",
+              "key": "name",
+              "translatable": true
+            },
+            {
+              "line": 4,
+              "text": "When in doubt, ask ChatGPT",
+              "key": "description",
+              "translatable": true
+            },
+            {
+              "line": 5,
+              "text": "Explain quantum computing in simple terms",
+              "key": "examples",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 6,
+              "text": "Got any creative ideas for a 10 year old’s birthday?",
+              "key": "examples",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 8,
+              "text": "fallback",
+              "key": "tags",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 9,
+              "text": "LLM",
+              "key": "tags",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 10,
+              "text": "query",
+              "key": "tags",
+              "translatable": true,
+              "index": 2
+            },
+            {
+              "line": 11,
+              "text": "information",
+              "key": "tags",
+              "translatable": true,
+              "index": 3
+            }
+          ],
+          "line_count": 10,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/en-us/skill.json"
+        },
+        "it-IT": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "skill-ovos-fallback-chatgpt.openvoiceos",
+              "key": "skill_id",
+              "translatable": false
+            },
+            {
+              "line": 2,
+              "text": "https://github.com/OpenVoiceOS/skill-ovos-fallback-chatgpt",
+              "key": "source",
+              "translatable": false
+            },
+            {
+              "line": 3,
+              "text": "Competenza di ripiego ChatGPT",
+              "key": "name",
+              "translatable": true
+            },
+            {
+              "line": 4,
+              "text": "Se non sai qualcosa puoi sempre chiedere a ChatGPT",
+              "key": "description",
+              "translatable": true
+            },
+            {
+              "line": 5,
+              "text": "Spiegami quantum computing in parole semplici",
+              "key": "examples",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 6,
+              "text": "Devo preparare la festa di compleanno per un bambino di 10 anni, hai qualche idea da darmi?",
+              "key": "examples",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 8,
+              "text": "ripiego",
+              "key": "tags",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 9,
+              "text": "LLM",
+              "key": "tags",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 10,
+              "text": "domanda",
+              "key": "tags",
+              "translatable": true,
+              "index": 2
+            },
+            {
+              "line": 11,
+              "text": "informazione",
+              "key": "tags",
+              "translatable": true,
+              "index": 3
+            }
+          ],
+          "line_count": 10,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/it-it/skill.json"
+        },
+        "pt-PT": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "skill-ovos-fallback-chatgpt.openvoiceos",
+              "key": "skill_id",
+              "translatable": false
+            },
+            {
+              "line": 2,
+              "text": "https://github.com/OpenVoiceOS/skill-ovos-fallback-chatgpt",
+              "key": "source",
+              "translatable": false
+            },
+            {
+              "line": 3,
+              "text": "Habilidade de fallback do ChatGPT",
+              "key": "name",
+              "translatable": true
+            },
+            {
+              "line": 4,
+              "text": "Em caso de dúvida, pergunte ao ChatGPT",
+              "key": "description",
+              "translatable": true
+            },
+            {
+              "line": 5,
+              "text": "Explique a computação quântica em termos simples",
+              "key": "examples",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 6,
+              "text": "Tem alguma ideia criativa para o aniversário de uma criança de 10 anos?",
+              "key": "examples",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 8,
+              "text": "None",
+              "key": "tags",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 9,
+              "text": "LLM",
+              "key": "tags",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 10,
+              "text": "pergunta",
+              "key": "tags",
+              "translatable": true,
+              "index": 2
+            },
+            {
+              "line": 11,
+              "text": "informação",
+              "key": "tags",
+              "translatable": true,
+              "index": 3
+            }
+          ],
+          "line_count": 10,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-fallback-chatgpt/locale/pt-pt/skill.json"
+        }
+      },
+      "context": {
+        "file_name": "skill",
+        "file_type_label": "Skill Metadata (JSON)",
+        "intent_system": null,
+        "handler_method": null,
+        "handler_file": null,
+        "handler_line": null,
+        "triggers_dialog": [],
+        "slots": [],
+        "slot_descriptions": {},
+        "related_files": [],
+        "builder_chain": null,
+        "tips": [],
+        "used_by_intents": [],
+        "handler_source": null
+      },
+      "edit_urls": {
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/ca-es/skill.json",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/da-dk/skill.json",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/de-de/skill.json",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/en-us/skill.json",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/it-it/skill.json",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-fallback-chatgpt/edit/dev/ovos-skill-fallback-chatgpt/locale/pt-pt/skill.json"
+      }
+    }
+  }
+}

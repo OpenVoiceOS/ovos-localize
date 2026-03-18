@@ -1,0 +1,823 @@
+{
+  "id": "ovos-skill-pyradios",
+  "repo": "OpenVoiceOS/ovos-skill-pyradios",
+  "skill_class": "",
+  "source_file": "",
+  "languages": [
+    "ca-ES",
+    "cs-CZ",
+    "da-DK",
+    "de-DE",
+    "en-US",
+    "es-ES",
+    "eu",
+    "fr-FR",
+    "hu-HU",
+    "it-IT",
+    "nl-NL",
+    "pl-PL",
+    "pt-PT",
+    "ru-RU",
+    "sv-FI",
+    "sv-SE"
+  ],
+  "files": {
+    "pyradios.voc": {
+      "type": "voc",
+      "intent_system": "none",
+      "langs": {
+        "ca-ES": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(en|a|) (pyradio|pyradios|pi ràdio|pi ràdios)"
+            },
+            {
+              "line": 2,
+              "text": "(en|a|) (pyradio|pyradios|pi ràdio|pi ràdios)"
+            },
+            {
+              "line": 3,
+              "text": "pyradios"
+            },
+            {
+              "line": 4,
+              "text": "pi ràdios"
+            }
+          ],
+          "line_count": 4,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/ca-es/pyradios.voc"
+        },
+        "cs-CZ": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "o naladění"
+            },
+            {
+              "line": 2,
+              "text": "pyradio"
+            },
+            {
+              "line": 3,
+              "text": "pyradios"
+            },
+            {
+              "line": 4,
+              "text": "u společnosti (pyradio|pyradios)"
+            },
+            {
+              "line": 5,
+              "text": "v (pyradio|pyradios)"
+            },
+            {
+              "line": 6,
+              "text": "v aplikaci (pyradio|pyradios)"
+            },
+            {
+              "line": 7,
+              "text": "v síti (pyradio|pyradios)"
+            }
+          ],
+          "line_count": 7,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/cs-cz/pyradios.voc"
+        },
+        "da-DK": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(på|i|) (pyradio|pyradios)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/da-dk/pyradios.voc"
+        },
+        "de-DE": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(mit|auf|per) (pyradio|pyradios)"
+            },
+            {
+              "line": 2,
+              "text": "pyradio"
+            },
+            {
+              "line": 3,
+              "text": "pyradios"
+            }
+          ],
+          "line_count": 3,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/de-de/pyradios.voc"
+        },
+        "en-US": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(in|on|at) (pyradio|pyradios)"
+            },
+            {
+              "line": 2,
+              "text": "pyradio"
+            },
+            {
+              "line": 3,
+              "text": "pyradios"
+            }
+          ],
+          "line_count": 3,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/en-us/pyradios.voc"
+        },
+        "es-ES": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(en|) (pyradio|pyradios)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/es-es/pyradios.voc"
+        },
+        "fr-FR": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(avec|dans|sur|) (pyradio|pyradios)"
+            },
+            {
+              "line": 2,
+              "text": "pyradio"
+            },
+            {
+              "line": 3,
+              "text": "pyradios"
+            }
+          ],
+          "line_count": 3,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/fr-fr/pyradios.voc"
+        },
+        "hu-HU": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(on|a|) (pyradio|pyradios)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/hu-hu/pyradios.voc"
+        },
+        "it-IT": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(su|in|a|) (pyradio|pyradios)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/it-it/pyradios.voc"
+        },
+        "nl-NL": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(in|op|bij|) (pyradio|pyradios)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/nl-nl/pyradios.voc"
+        },
+        "pl-PL": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(na|w|przy|) (pyradio|pyradios)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/pl-pl/pyradios.voc"
+        },
+        "pt-PT": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(em|no|) (pyradio|pyradios)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/pt-pt/pyradios.voc"
+        },
+        "ru-RU": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(на|в|) (pyradio|pyradios)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/ru-ru/pyradios.voc"
+        },
+        "sv-FI": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(at|klo|on|) (pyradio|pyradios)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/sv-fi/pyradios.voc"
+        },
+        "sv-SE": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Pyradio"
+            },
+            {
+              "line": 2,
+              "text": "Pyradios"
+            },
+            {
+              "line": 3,
+              "text": "i (pyradio|pyradios)"
+            },
+            {
+              "line": 4,
+              "text": "i (pyradio|pyradios)"
+            },
+            {
+              "line": 5,
+              "text": "i stämma i"
+            },
+            {
+              "line": 6,
+              "text": "på (pyradio|pyradios)"
+            },
+            {
+              "line": 7,
+              "text": "på (pyradio|pyradios)"
+            },
+            {
+              "line": 8,
+              "text": "på stämma in"
+            },
+            {
+              "line": 9,
+              "text": "stämma in"
+            },
+            {
+              "line": 10,
+              "text": "vid stämma in"
+            }
+          ],
+          "line_count": 10,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/sv-se/pyradios.voc"
+        }
+      },
+      "context": {
+        "file_name": "pyradios",
+        "file_type_label": "Adapt Keyword (vocabulary)",
+        "intent_system": null,
+        "handler_method": null,
+        "handler_file": null,
+        "handler_line": null,
+        "triggers_dialog": [],
+        "slots": [],
+        "slot_descriptions": {},
+        "related_files": [],
+        "builder_chain": null,
+        "tips": [
+          "Use short keywords (1-3 words), not full sentences.",
+          "Include common synonyms in the target language.",
+          "One keyword per line."
+        ],
+        "used_by_intents": [],
+        "handler_source": null
+      },
+      "edit_urls": {
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/ca-es/pyradios.voc",
+        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/cs-cz/pyradios.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/da-dk/pyradios.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/de-de/pyradios.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/en-us/pyradios.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/es-es/pyradios.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/fr-fr/pyradios.voc",
+        "hu-HU": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/hu-hu/pyradios.voc",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/it-it/pyradios.voc",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/nl-nl/pyradios.voc",
+        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/pl-pl/pyradios.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/pt-pt/pyradios.voc",
+        "ru-RU": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/ru-ru/pyradios.voc",
+        "sv-FI": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/sv-fi/pyradios.voc",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/sv-se/pyradios.voc"
+      }
+    },
+    "radio.voc": {
+      "type": "voc",
+      "intent_system": "none",
+      "langs": {
+        "ca-ES": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "ràdio"
+            },
+            {
+              "line": 2,
+              "text": "ràdio per internet"
+            },
+            {
+              "line": 3,
+              "text": "ràdio"
+            }
+          ],
+          "line_count": 3,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/ca-es/radio.voc"
+        },
+        "cs-CZ": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "internetové rádio"
+            },
+            {
+              "line": 2,
+              "text": "rádio"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/cs-cz/radio.voc"
+        },
+        "da-DK": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Internetradio"
+            },
+            {
+              "line": 2,
+              "text": "Radio"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/da-dk/radio.voc"
+        },
+        "de-DE": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "internet radio"
+            },
+            {
+              "line": 2,
+              "text": "radio"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/de-de/radio.voc"
+        },
+        "en-US": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "internet radio"
+            },
+            {
+              "line": 2,
+              "text": "radio"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/en-us/radio.voc"
+        },
+        "es-ES": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "radio"
+            },
+            {
+              "line": 2,
+              "text": "radio por internet"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/es-es/radio.voc"
+        },
+        "eu": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "internet irrati"
+            },
+            {
+              "line": 2,
+              "text": "irrati"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/eu/radio.voc"
+        },
+        "fr-FR": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "radio"
+            },
+            {
+              "line": 2,
+              "text": "radio internet"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/fr-fr/radio.voc"
+        },
+        "hu-HU": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "internetes rádió"
+            },
+            {
+              "line": 2,
+              "text": "rádió"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/hu-hu/radio.voc"
+        },
+        "it-IT": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "radio"
+            },
+            {
+              "line": 2,
+              "text": "radio via internet"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/it-it/radio.voc"
+        },
+        "nl-NL": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "internetradio"
+            },
+            {
+              "line": 2,
+              "text": "radio"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/nl-nl/radio.voc"
+        },
+        "pl-PL": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "radio"
+            },
+            {
+              "line": 2,
+              "text": "radio internetowe"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/pl-pl/radio.voc"
+        },
+        "pt-PT": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "rádio"
+            },
+            {
+              "line": 2,
+              "text": "rádio pela internet"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/pt-pt/radio.voc"
+        },
+        "ru-RU": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "интернет-радио"
+            },
+            {
+              "line": 2,
+              "text": "радио"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/ru-ru/radio.voc"
+        },
+        "sv-FI": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Internet-radio"
+            },
+            {
+              "line": 2,
+              "text": "radio"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/sv-fi/radio.voc"
+        },
+        "sv-SE": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Internetradio"
+            },
+            {
+              "line": 2,
+              "text": "radio"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/sv-se/radio.voc"
+        }
+      },
+      "context": {
+        "file_name": "radio",
+        "file_type_label": "Adapt Keyword (vocabulary)",
+        "intent_system": null,
+        "handler_method": null,
+        "handler_file": null,
+        "handler_line": null,
+        "triggers_dialog": [],
+        "slots": [],
+        "slot_descriptions": {},
+        "related_files": [],
+        "builder_chain": null,
+        "tips": [
+          "Use short keywords (1-3 words), not full sentences.",
+          "Include common synonyms in the target language.",
+          "One keyword per line."
+        ],
+        "used_by_intents": [],
+        "handler_source": null
+      },
+      "edit_urls": {
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/ca-es/radio.voc",
+        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/cs-cz/radio.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/da-dk/radio.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/de-de/radio.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/en-us/radio.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/es-es/radio.voc",
+        "eu": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/eu/radio.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/fr-fr/radio.voc",
+        "hu-HU": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/hu-hu/radio.voc",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/it-it/radio.voc",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/nl-nl/radio.voc",
+        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/pl-pl/radio.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/pt-pt/radio.voc",
+        "ru-RU": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/ru-ru/radio.voc",
+        "sv-FI": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/sv-fi/radio.voc",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/sv-se/radio.voc"
+      }
+    },
+    "skill.json": {
+      "type": "skill.json",
+      "intent_system": "none",
+      "langs": {
+        "en-US": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "ovos-skill-pyradios.openvoiceos",
+              "key": "skill_id",
+              "translatable": false
+            },
+            {
+              "line": 2,
+              "text": "https://github.com/OpenVoiceOS/ovos-skill-pyradios",
+              "key": "source",
+              "translatable": false
+            },
+            {
+              "line": 3,
+              "text": "Pyradios",
+              "key": "name",
+              "translatable": true
+            },
+            {
+              "line": 4,
+              "text": "a client for the client for the Radio Browser API",
+              "key": "description",
+              "translatable": true
+            },
+            {
+              "line": 5,
+              "text": "play tsf jazz radio",
+              "key": "examples",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 6,
+              "text": "play tsf jazz on pyradios",
+              "key": "examples",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 8,
+              "text": "media",
+              "key": "tags",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 9,
+              "text": "music",
+              "key": "tags",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 10,
+              "text": "entertainment",
+              "key": "tags",
+              "translatable": true,
+              "index": 2
+            },
+            {
+              "line": 11,
+              "text": "OCP",
+              "key": "tags",
+              "translatable": true,
+              "index": 3
+            }
+          ],
+          "line_count": 10,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/en-us/skill.json"
+        },
+        "fr-FR": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "ovos-skill-pyradios.openvoiceos",
+              "key": "skill_id",
+              "translatable": false
+            },
+            {
+              "line": 2,
+              "text": "https://github.com/OpenVoiceOS/ovos-skill-pyradios",
+              "key": "source",
+              "translatable": false
+            },
+            {
+              "line": 3,
+              "text": "Pyradios",
+              "key": "name",
+              "translatable": true
+            },
+            {
+              "line": 4,
+              "text": "Permet d'écouter des radios du monde entier via Radio Browser.",
+              "key": "description",
+              "translatable": true
+            },
+            {
+              "line": 5,
+              "text": "Joue TSF Jazz Radio",
+              "key": "examples",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 6,
+              "text": "Joue TSF Jazz sur Pyradios",
+              "key": "examples",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 8,
+              "text": "média",
+              "key": "tags",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 9,
+              "text": "musique",
+              "key": "tags",
+              "translatable": true,
+              "index": 1
+            },
+            {
+              "line": 10,
+              "text": "divertissement",
+              "key": "tags",
+              "translatable": true,
+              "index": 2
+            },
+            {
+              "line": 11,
+              "text": "OCP",
+              "key": "tags",
+              "translatable": true,
+              "index": 3
+            }
+          ],
+          "line_count": 10,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-pyradios/locale/fr-fr/skill.json"
+        }
+      },
+      "context": {
+        "file_name": "skill",
+        "file_type_label": "Skill Metadata (JSON)",
+        "intent_system": null,
+        "handler_method": null,
+        "handler_file": null,
+        "handler_line": null,
+        "triggers_dialog": [],
+        "slots": [],
+        "slot_descriptions": {},
+        "related_files": [],
+        "builder_chain": null,
+        "tips": [],
+        "used_by_intents": [],
+        "handler_source": null
+      },
+      "edit_urls": {
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/en-us/skill.json",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-pyradios/edit/dev/ovos-skill-pyradios/locale/fr-fr/skill.json"
+      }
+    }
+  }
+}

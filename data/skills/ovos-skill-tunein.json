@@ -1,0 +1,689 @@
+{
+  "id": "ovos-skill-tunein",
+  "repo": "OpenVoiceOS/ovos-skill-tunein",
+  "skill_class": "",
+  "source_file": "",
+  "languages": [
+    "ca-ES",
+    "cs-CZ",
+    "da-DK",
+    "de-DE",
+    "en-US",
+    "es-ES",
+    "fr-FR",
+    "hu-HU",
+    "it-IT",
+    "nl-NL",
+    "pl-PL",
+    "pt-PT",
+    "ru-RU",
+    "sv-FI",
+    "sv-SE"
+  ],
+  "files": {
+    "radio.voc": {
+      "type": "voc",
+      "intent_system": "none",
+      "langs": {
+        "ca-ES": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "radio"
+            },
+            {
+              "line": 2,
+              "text": "radio por internet"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/ca-es/radio.voc"
+        },
+        "cs-CZ": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "internetové rádio"
+            },
+            {
+              "line": 2,
+              "text": "rádio"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/cs-cz/radio.voc"
+        },
+        "da-DK": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Internetradio"
+            },
+            {
+              "line": 2,
+              "text": "Radio"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/da-dk/radio.voc"
+        },
+        "de-DE": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "internet radio"
+            },
+            {
+              "line": 2,
+              "text": "radio"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/de-de/radio.voc"
+        },
+        "en-US": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "internet radio"
+            },
+            {
+              "line": 2,
+              "text": "radio"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/en-us/radio.voc"
+        },
+        "es-ES": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "radio"
+            },
+            {
+              "line": 2,
+              "text": "radio por internet"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/es-es/radio.voc"
+        },
+        "fr-FR": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "radio"
+            },
+            {
+              "line": 2,
+              "text": "radio internet"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/fr-fr/radio.voc"
+        },
+        "hu-HU": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "internetes rádió"
+            },
+            {
+              "line": 2,
+              "text": "rádió"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/hu-hu/radio.voc"
+        },
+        "it-IT": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "radio"
+            },
+            {
+              "line": 2,
+              "text": "radio via internet"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/it-it/radio.voc"
+        },
+        "nl-NL": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "internetradio"
+            },
+            {
+              "line": 2,
+              "text": "radio"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/nl-nl/radio.voc"
+        },
+        "pl-PL": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "radio"
+            },
+            {
+              "line": 2,
+              "text": "radio internetowe"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/pl-pl/radio.voc"
+        },
+        "pt-PT": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "rádio"
+            },
+            {
+              "line": 2,
+              "text": "rádio pela internet"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/pt-pt/radio.voc"
+        },
+        "ru-RU": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "интернет-радио"
+            },
+            {
+              "line": 2,
+              "text": "радио"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/ru-ru/radio.voc"
+        },
+        "sv-FI": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Internet-radio"
+            },
+            {
+              "line": 2,
+              "text": "radio"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/sv-fi/radio.voc"
+        },
+        "sv-SE": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Internetradio"
+            },
+            {
+              "line": 2,
+              "text": "radio"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/sv-se/radio.voc"
+        }
+      },
+      "context": {
+        "file_name": "radio",
+        "file_type_label": "Adapt Keyword (vocabulary)",
+        "intent_system": null,
+        "handler_method": null,
+        "handler_file": null,
+        "handler_line": null,
+        "triggers_dialog": [],
+        "slots": [],
+        "slot_descriptions": {},
+        "related_files": [],
+        "builder_chain": null,
+        "tips": [
+          "Use short keywords (1-3 words), not full sentences.",
+          "Include common synonyms in the target language.",
+          "One keyword per line."
+        ],
+        "used_by_intents": [],
+        "handler_source": null
+      },
+      "edit_urls": {
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/ca-es/radio.voc",
+        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/cs-cz/radio.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/da-dk/radio.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/de-de/radio.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/en-us/radio.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/es-es/radio.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/fr-fr/radio.voc",
+        "hu-HU": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/hu-hu/radio.voc",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/it-it/radio.voc",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/nl-nl/radio.voc",
+        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/pl-pl/radio.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/pt-pt/radio.voc",
+        "ru-RU": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/ru-ru/radio.voc",
+        "sv-FI": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/sv-fi/radio.voc",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/sv-se/radio.voc"
+      }
+    },
+    "skill.json": {
+      "type": "skill.json",
+      "intent_system": "none",
+      "langs": {
+        "en-US": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "TuneIn Skill",
+              "key": "name",
+              "translatable": true
+            },
+            {
+              "line": 2,
+              "text": "play heavy metal heart radio",
+              "key": "examples",
+              "translatable": true,
+              "index": 0
+            },
+            {
+              "line": 3,
+              "text": "play jazz on tune in",
+              "key": "examples",
+              "translatable": true,
+              "index": 1
+            }
+          ],
+          "line_count": 3,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/en-us/skill.json"
+        }
+      },
+      "context": {
+        "file_name": "skill",
+        "file_type_label": "Skill Metadata (JSON)",
+        "intent_system": null,
+        "handler_method": null,
+        "handler_file": null,
+        "handler_line": null,
+        "triggers_dialog": [],
+        "slots": [],
+        "slot_descriptions": {},
+        "related_files": [],
+        "builder_chain": null,
+        "tips": [],
+        "used_by_intents": [],
+        "handler_source": null
+      },
+      "edit_urls": {
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/en-us/skill.json"
+      }
+    },
+    "tunein.voc": {
+      "type": "voc",
+      "intent_system": "none",
+      "langs": {
+        "ca-ES": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(en|) (tunein|tune in|tune-in)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/ca-es/tunein.voc"
+        },
+        "cs-CZ": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "o naladění"
+            },
+            {
+              "line": 2,
+              "text": "tunein"
+            },
+            {
+              "line": 3,
+              "text": "u společnosti (tunein|tune in|tune-in)"
+            },
+            {
+              "line": 4,
+              "text": "v (tunein|tune in|tune-in)"
+            },
+            {
+              "line": 5,
+              "text": "v aplikaci (tunein|tune in|tune-in)"
+            },
+            {
+              "line": 6,
+              "text": "v síti (tunein|tune in|tune-in)"
+            }
+          ],
+          "line_count": 6,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/cs-cz/tunein.voc"
+        },
+        "da-DK": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(på|i|) (tunein|tune in|tune-in)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/da-dk/tunein.voc"
+        },
+        "de-DE": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(mit|auf|per) (tunein|tune in)"
+            },
+            {
+              "line": 2,
+              "text": "tune in"
+            },
+            {
+              "line": 3,
+              "text": "tunein"
+            }
+          ],
+          "line_count": 3,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/de-de/tunein.voc"
+        },
+        "en-US": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(in|on|at) (tunein|tune in)"
+            },
+            {
+              "line": 2,
+              "text": "tune in"
+            },
+            {
+              "line": 3,
+              "text": "tunein"
+            }
+          ],
+          "line_count": 3,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/en-us/tunein.voc"
+        },
+        "es-ES": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(en|) (tunein|tune in|tune-in)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/es-es/tunein.voc"
+        },
+        "fr-FR": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(avec|dans|au|à) (tunein|tune in|tune-in)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/fr-fr/tunein.voc"
+        },
+        "hu-HU": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(on|a|) (tunein|tune in|tune-in)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/hu-hu/tunein.voc"
+        },
+        "it-IT": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(su|in|a|) (tunein|tune in|tune-in)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/it-it/tunein.voc"
+        },
+        "nl-NL": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(in|op|bij|) (tunein|tune in|tune-in)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/nl-nl/tunein.voc"
+        },
+        "pl-PL": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(na|w|przy|) (tunein|tune in|tune-in)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/pl-pl/tunein.voc"
+        },
+        "pt-PT": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(em|no|) (tunein|tune in|tune-in)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/pt-pt/tunein.voc"
+        },
+        "ru-RU": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(на|в|) (tunein|tune in|tune-in)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/ru-ru/tunein.voc"
+        },
+        "sv-FI": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(at|klo|on|) (tunein|tune in|tune-in)"
+            }
+          ],
+          "line_count": 1,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/sv-fi/tunein.voc"
+        },
+        "sv-SE": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "Tunein"
+            },
+            {
+              "line": 2,
+              "text": "i stämma i"
+            },
+            {
+              "line": 3,
+              "text": "i tunein"
+            },
+            {
+              "line": 4,
+              "text": "på stämma in"
+            },
+            {
+              "line": 5,
+              "text": "på tunein"
+            },
+            {
+              "line": 6,
+              "text": "stämma in"
+            },
+            {
+              "line": 7,
+              "text": "vid stämma in"
+            }
+          ],
+          "line_count": 7,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/sv-se/tunein.voc"
+        }
+      },
+      "context": {
+        "file_name": "tunein",
+        "file_type_label": "Adapt Keyword (vocabulary)",
+        "intent_system": null,
+        "handler_method": null,
+        "handler_file": null,
+        "handler_line": null,
+        "triggers_dialog": [],
+        "slots": [],
+        "slot_descriptions": {},
+        "related_files": [],
+        "builder_chain": null,
+        "tips": [
+          "Use short keywords (1-3 words), not full sentences.",
+          "Include common synonyms in the target language.",
+          "One keyword per line."
+        ],
+        "used_by_intents": [],
+        "handler_source": null
+      },
+      "edit_urls": {
+        "ca-ES": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/ca-es/tunein.voc",
+        "cs-CZ": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/cs-cz/tunein.voc",
+        "da-DK": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/da-dk/tunein.voc",
+        "de-DE": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/de-de/tunein.voc",
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/en-us/tunein.voc",
+        "es-ES": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/es-es/tunein.voc",
+        "fr-FR": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/fr-fr/tunein.voc",
+        "hu-HU": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/hu-hu/tunein.voc",
+        "it-IT": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/it-it/tunein.voc",
+        "nl-NL": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/nl-nl/tunein.voc",
+        "pl-PL": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/pl-pl/tunein.voc",
+        "pt-PT": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/pt-pt/tunein.voc",
+        "ru-RU": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/ru-ru/tunein.voc",
+        "sv-FI": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/sv-fi/tunein.voc",
+        "sv-SE": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/sv-se/tunein.voc"
+      }
+    },
+    "tunein_skill.voc": {
+      "type": "voc",
+      "intent_system": "none",
+      "langs": {
+        "en-US": {
+          "entries": [
+            {
+              "line": 1,
+              "text": "(tune in|tunein)"
+            },
+            {
+              "line": 2,
+              "text": "(tune in|tunein) skill"
+            }
+          ],
+          "line_count": 2,
+          "slots": [],
+          "validation": [],
+          "file_path": "ovos-skill-tunein/locale/en-us/tunein_skill.voc"
+        }
+      },
+      "context": {
+        "file_name": "tunein_skill",
+        "file_type_label": "Adapt Keyword (vocabulary)",
+        "intent_system": null,
+        "handler_method": null,
+        "handler_file": null,
+        "handler_line": null,
+        "triggers_dialog": [],
+        "slots": [],
+        "slot_descriptions": {},
+        "related_files": [],
+        "builder_chain": null,
+        "tips": [
+          "Use short keywords (1-3 words), not full sentences.",
+          "Include common synonyms in the target language.",
+          "One keyword per line."
+        ],
+        "used_by_intents": [],
+        "handler_source": null
+      },
+      "edit_urls": {
+        "en-US": "https://github.com/OpenVoiceOS/ovos-skill-tunein/edit/dev/ovos-skill-tunein/locale/en-us/tunein_skill.voc"
+      }
+    }
+  }
+}
