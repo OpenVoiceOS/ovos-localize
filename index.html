@@ -61,6 +61,24 @@
     /* Search */
     .search-box { background: #171717; border: 1px solid #262626; border-radius: 0.5rem; }
     .search-box:focus-within { border-color: #ef4444; }
+    /* README content styling */
+    .readme-content { color: #e5e5e5; line-height: 1.6; }
+    .readme-content h1, .readme-content h2, .readme-content h3 { font-weight: bold; margin: 1em 0 0.5em; border-bottom: 1px solid #262626; padding-bottom: 0.3em; }
+    .readme-content h1 { font-size: 1.5em; }
+    .readme-content h2 { font-size: 1.25em; }
+    .readme-content h3 { font-size: 1.1em; border: none; }
+    .readme-content p { margin: 0.5em 0; }
+    .readme-content ul, .readme-content ol { margin: 0.5em 0; padding-left: 1.5em; }
+    .readme-content li { margin: 0.25em 0; }
+    .readme-content code { background: #262626; padding: 0.15em 0.4em; border-radius: 0.25em; font-size: 0.9em; }
+    .readme-content pre { background: #171717; padding: 0.75em; border-radius: 0.5em; overflow-x: auto; margin: 0.5em 0; }
+    .readme-content pre code { background: none; padding: 0; }
+    .readme-content a { color: #ef4444; }
+    .readme-content img { max-width: 100%; border-radius: 0.5em; }
+    .readme-content table { border-collapse: collapse; width: 100%; margin: 0.5em 0; }
+    .readme-content th, .readme-content td { border: 1px solid #262626; padding: 0.4em 0.6em; text-align: left; }
+    .readme-content th { background: #171717; }
+    .readme-content blockquote { border-left: 3px solid #ef4444; padding-left: 1em; color: #a3a3a3; margin: 0.5em 0; }
   </style>
 </head>
 <body class="min-h-screen">
@@ -247,6 +265,39 @@
         </div>`;
     }
     function closeModal() { document.getElementById('modal-container').innerHTML = ''; }
+
+    async function showReadme(repoFullName) {
+      const el = document.getElementById('modal-container');
+      el.innerHTML = `
+        <div class="modal-backdrop" onclick="if(event.target===this)closeModal()">
+          <div class="modal" style="max-width:48rem;max-height:85vh;display:flex;flex-direction:column">
+            <div class="flex items-center justify-between mb-3 flex-shrink-0">
+              <h3 class="text-lg font-bold">README — ${escapeHtml(repoFullName)}</h3>
+              <button onclick="closeModal()" class="text-ovos-muted hover:text-ovos-text px-2">&times;</button>
+            </div>
+            <div class="flex-1 overflow-auto text-sm text-ovos-muted flex items-center justify-center">
+              <span class="spinner"></span>&nbsp; Loading...
+            </div>
+          </div>
+        </div>`;
+
+      try {
+        // Fetch rendered README HTML from GitHub API
+        const r = await fetch('https://api.github.com/repos/' + repoFullName + '/readme', {
+          headers: { 'Accept': 'application/vnd.github.html+json' },
+          signal: AbortSignal.timeout(15000),
+        });
+        if (!r.ok) throw new Error(r.status === 404 ? 'No README found' : 'GitHub API ' + r.status);
+        const html = await r.text();
+
+        const content = el.querySelector('.overflow-auto');
+        content.className = 'flex-1 overflow-auto text-sm readme-content p-1';
+        content.innerHTML = html;
+      } catch (e) {
+        const content = el.querySelector('.overflow-auto');
+        content.innerHTML = '<p class="text-red-400">Failed to load README: ' + escapeHtml(e.message) + '</p><p class="mt-2"><a href="https://github.com/' + repoFullName + '#readme" target="_blank">View on GitHub</a></p>';
+      }
+    }
     async function submitToken() {
       const input = document.getElementById('token-input');
       const token = input.value.trim();
@@ -1307,12 +1358,18 @@ Right now in {location} it's {condition}
           <div class="mb-4">
             <a href="#/dashboard" class="text-sm text-ovos-muted">&larr; Dashboard</a>
           </div>
-          <div class="mb-6">
-            <h1 class="text-xl font-bold">${skill.id.replace('ovos-skill-', '')}</h1>
-            <p class="text-sm text-ovos-muted mt-0.5">
-              <a href="https://github.com/${skill.repo}" target="_blank">${skill.repo}</a>
-              ${skill.skill_class ? ` &mdash; <code>${skill.skill_class}</code>` : ''}
-            </p>
+          <div class="mb-6 flex items-start justify-between">
+            <div>
+              <h1 class="text-xl font-bold">${skill.id.replace('ovos-skill-', '')}</h1>
+              <p class="text-sm text-ovos-muted mt-0.5">
+                <a href="https://github.com/${skill.repo}" target="_blank">${skill.repo}</a>
+                ${skill.skill_class ? ` &mdash; <code>${skill.skill_class}</code>` : ''}
+              </p>
+            </div>
+            <button onclick="showReadme('${skill.repo}')" class="text-xs px-3 py-1.5 rounded-lg border border-ovos-card hover:bg-ovos-hover flex items-center gap-1.5 flex-shrink-0" title="Show skill README for context">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              README
+            </button>
           </div>
 
           <!-- Language tabs -->
@@ -1435,6 +1492,10 @@ Right now in {location} it's {condition}
             <a href="#/skill/${skillId}/${lang}">${skillId.replace('ovos-skill-', '')} (${lang})</a>
             <span>/</span>
             <span class="mono text-ovos-text">${escapeHtml(fileKey)}</span>
+            <button onclick="showReadme('${skill.repo}')" class="ml-auto text-xs px-2 py-1 rounded border border-ovos-card hover:bg-ovos-hover flex items-center gap-1" title="Show skill README">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              README
+            </button>
           </div>
         </div>
 
