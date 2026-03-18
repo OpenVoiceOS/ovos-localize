@@ -19,12 +19,21 @@ jobs:
           echo "branch=${{ github.event.client_payload.branch }}" >> "$GITHUB_OUTPUT"
           echo "author=${{ github.event.client_payload.author }}" >> "$GITHUB_OUTPUT"
 
+      - name: Generate GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.LOCALIZE_APP_ID }}
+          private-key: ${{ secrets.LOCALIZE_APP_PRIVATE_KEY }}
+          owner: ${{ steps.payload.outputs.org }}
+          repositories: ${{ steps.payload.outputs.repo }}
+
       - name: Checkout target repo
         uses: actions/checkout@v4
         with:
           repository: ${{ steps.payload.outputs.org }}/${{ steps.payload.outputs.repo }}
           ref: ${{ steps.payload.outputs.branch }}
-          token: ${{ secrets.BOT_TOKEN }}
+          token: ${{ steps.app-token.outputs.token }}
 
       - name: Create branch and commit
         env:
@@ -43,8 +52,8 @@ jobs:
           # Write content (base64 decoded)
           echo "$CONTENT" | base64 -d > "$FILE_PATH"
 
-          git config user.name "OVOS Localize Bot"
-          git config user.email "noreply@openvoiceos.org"
+          git config user.name "ovos-localize[bot]"
+          git config user.email "ovos-localize[bot]@users.noreply.github.com"
           git add "$FILE_PATH"
           git commit -m "translate(${LANG}): update ${FILE_KEY}
 
@@ -57,7 +66,7 @@ Submitted by @${AUTHOR} via OVOS Localize"
 
       - name: Create Pull Request
         env:
-          GH_TOKEN: ${{ secrets.BOT_TOKEN }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
           ORG: ${{ steps.payload.outputs.org }}
           REPO: ${{ steps.payload.outputs.repo }}
           BASE: ${{ steps.payload.outputs.branch }}
