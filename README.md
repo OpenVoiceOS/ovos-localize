@@ -2,6 +2,8 @@
 
 GitHub-native localization platform for [OpenVoiceOS](https://openvoiceos.org) skills. Replaces GitLocalize with a purpose-built tool that understands OVOS locale file types.
 
+<img width="1075" height="947" alt="image" src="https://github.com/user-attachments/assets/fcc2b947-0d07-4775-b905-038b9d8236f9" />
+
 ## What it does
 
 - **Scans** 50+ OVOS skill repos for locale files (.intent, .voc, .dialog, .entity, .rx, .value, skill.json)
