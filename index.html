@@ -1326,6 +1326,147 @@ Right now in {location} it's {condition}
     }
 
     // =========================================================================
+    // ENTITY DATABASE
+    // =========================================================================
+    async function renderEntities(el) {
+      const repos = await fetchJSON('data/repos.json');
+      const coverage = await fetchJSON('data/coverage.json');
+      const meta = coverage.lang_meta || {};
+      const userLangs = getUserLangs();
+
+      // Collect all entity and voc files across all skills
+      const entityDb = [];
+      for (const repo of repos) {
+        try {
+          const skill = await fetchJSON(`data/skills/${repo.id}.json`);
+          for (const [fk, fd] of Object.entries(skill.files)) {
+            if (fd.type !== 'entity' && fd.type !== 'voc') continue;
+            const langData = {};
+            for (const [lang, ld] of Object.entries(fd.langs)) {
+              langData[lang] = {
+                count: ld.entries?.length || 0,
+                entries: (ld.entries || []).map(e => e.text).slice(0, 10),
+              };
+            }
+            entityDb.push({
+              name: fk, type: fd.type, skill: skill.id,
+              skillRepo: skill.repo, langs: langData, editUrls: fd.edit_urls || {},
+            });
+          }
+        } catch {}
+      }
+
+      entityDb.sort((a, b) => a.type !== b.type ? (a.type === 'entity' ? -1 : 1) : a.name.localeCompare(b.name));
+
+      const allLangs = [...new Set(entityDb.flatMap(e => Object.keys(e.langs)))].sort();
+      const displayLangs = userLangs.length ? allLangs.filter(l => userLangs.includes(l)) : allLangs;
+
+      const totalEntities = entityDb.filter(e => e.type === 'entity').length;
+      const totalVoc = entityDb.filter(e => e.type === 'voc').length;
+      const totalSamples = entityDb.reduce((s, e) => s + Object.values(e.langs).reduce((s2, l) => s2 + l.count, 0), 0);
+
+      el.innerHTML = `
+        <div class="max-w-6xl mx-auto">
+          <div class="mb-6">
+            <a href="#/" class="text-sm text-ovos-muted">&larr; Home</a>
+            <h1 class="text-xl font-bold mt-2">Entity Database</h1>
+            <p class="text-sm text-ovos-muted mt-1">Training data for Named Entity Recognition. Each file lists example values that help the voice assistant recognize entities like colors, locations, or categories.</p>
+          </div>
+
+          <div class="callout mb-6 text-sm">
+            <strong>How to contribute:</strong> Click any language badge to open the editor. Add more example values — one per line. More diverse examples = better entity recognition.
+            <br><span class="text-ovos-muted"><strong>.entity</strong> files train Padatious entity slots. <strong>.voc</strong> files are Adapt keyword triggers. Both benefit from more samples.</span>
+          </div>
+
+          <div class="grid grid-cols-3 gap-3 mb-6">
+            <div class="p-3 bg-ovos-card rounded-xl text-center">
+              <div class="text-xl font-bold">${totalEntities}</div>
+              <div class="text-xs text-ovos-muted">.entity files</div>
+            </div>
+            <div class="p-3 bg-ovos-card rounded-xl text-center">
+              <div class="text-xl font-bold">${totalVoc}</div>
+              <div class="text-xs text-ovos-muted">.voc files</div>
+            </div>
+            <div class="p-3 bg-ovos-card rounded-xl text-center">
+              <div class="text-xl font-bold">${totalSamples.toLocaleString()}</div>
+              <div class="text-xs text-ovos-muted">total samples</div>
+            </div>
+          </div>
+
+          <div class="flex gap-3 mb-4 items-center">
+            <div class="search-box flex items-center px-3 py-2 gap-2 flex-1 max-w-sm">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#737373" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <input id="entity-search" type="text" placeholder="Search entities..." class="bg-transparent text-sm text-ovos-text w-full outline-none placeholder-ovos-muted" oninput="filterEntities()">
+            </div>
+            <select id="entity-type-filter" class="bg-ovos-card text-ovos-text text-sm rounded-lg border border-ovos-card px-3 py-2" onchange="filterEntities()">
+              <option value="">All types</option>
+              <option value="entity">.entity only</option>
+              <option value="voc">.voc only</option>
+            </select>
+            <span id="entity-count" class="text-xs text-ovos-muted"></span>
+          </div>
+
+          <div id="entity-list" class="space-y-3"></div>
+        </div>`;
+
+      window._entityDb = entityDb;
+      window._entityDisplayLangs = displayLangs;
+      window._entityMeta = meta;
+      filterEntities();
+    }
+
+    function filterEntities() {
+      const db = window._entityDb || [];
+      const displayLangs = window._entityDisplayLangs || [];
+      const meta = window._entityMeta || {};
+      const search = (document.getElementById('entity-search')?.value || '').toLowerCase();
+      const typeFilter = document.getElementById('entity-type-filter')?.value || '';
+      const list = document.getElementById('entity-list');
+      const countEl = document.getElementById('entity-count');
+
+      let filtered = db;
+      if (search) filtered = filtered.filter(e => e.name.toLowerCase().includes(search) || e.skill.toLowerCase().includes(search));
+      if (typeFilter) filtered = filtered.filter(e => e.type === typeFilter);
+
+      if (countEl) countEl.textContent = `${filtered.length} files`;
+
+      list.innerHTML = filtered.map(entity => {
+        const enData = entity.langs['en-US'];
+        const enSamples = enData?.entries || [];
+        const enCount = enData?.count || 0;
+
+        return `
+          <div class="bg-ovos-card rounded-xl p-4">
+            <div class="flex items-start justify-between mb-2">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="font-bold mono">${escapeHtml(entity.name)}</span>
+                  <span class="badge badge-blue mono">.${entity.type}</span>
+                </div>
+                <div class="text-xs text-ovos-muted">from <a href="#/skill/${entity.skill}/en-US">${entity.skill.replace('ovos-skill-','')}</a></div>
+              </div>
+              <div class="text-right text-xs text-ovos-muted">${enCount} English samples</div>
+            </div>
+            ${enSamples.length ? `<div class="mb-3 text-xs">
+              <span class="text-ovos-muted">English:</span>
+              ${enSamples.map(s => `<span class="inline-block bg-ovos-bg px-1.5 py-0.5 rounded mr-1 mb-1 mono">${escapeHtml(s)}</span>`).join('')}
+              ${enCount > 10 ? `<span class="text-ovos-muted">+${enCount - 10} more</span>` : ''}
+            </div>` : ''}
+            <div class="flex flex-wrap gap-1.5">
+              ${displayLangs.map(lang => {
+                const ld = entity.langs[lang];
+                const count = ld?.count || 0;
+                const target = Math.max(enCount, 5);
+                const cls = count === 0 ? 'badge-gray' : count >= target ? 'badge-green' : count >= target * 0.5 ? 'badge-amber' : 'badge-red';
+                const href = `#/skill/${entity.skill}/${encodeURIComponent(entity.name)}/${lang}`;
+                return `<a href="${href}" class="badge ${cls} hover:no-underline hover:opacity-80" title="${(meta[lang]?.native||lang)}: ${count} samples${ld?.entries?.length ? '\\n' + ld.entries.slice(0,3).join(', ') : ''}">${lang} <span class="font-normal">${count}</span></a>`;
+              }).join('')}
+            </div>
+          </div>`;
+      }).join('') || '<p class="text-ovos-muted text-center py-8">No entity files match.</p>';
+    }
+
+    // =========================================================================
     // SKILL DETAIL
     // =========================================================================
     async function renderSkillDetail(el, skillId, activeLang) {
