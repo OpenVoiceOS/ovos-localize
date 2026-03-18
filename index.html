@@ -376,8 +376,8 @@
         langMeta = coverage.lang_meta || {};
       } catch {}
 
-      // Build language list (exclude en-US)
-      const allLangs = Object.keys(langMeta).filter(l => l !== 'en-US').sort((a, b) => {
+      // Build language list (include all — en-US is a valid target for expanding source files)
+      const allLangs = Object.keys(langMeta).sort((a, b) => {
         const na = langMeta[a]?.native || a;
         const nb = langMeta[b]?.native || b;
         return na.localeCompare(nb);
@@ -705,10 +705,10 @@
     }
 
     /**
-     * Auto-translate all lines from English source to target language.
+     * Auto-translate all lines from source to target language.
      * Translates line-by-line to preserve structure.
      */
-    async function autoTranslateLines(lines, tgtLang, serverUrl, onProgress) {
+    async function autoTranslateLines(lines, tgtLang, serverUrl, onProgress, srcLang = 'en-US') {
       const results = [];
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i].trim();
@@ -731,7 +731,7 @@
 
         let translated;
         try {
-          translated = await ovsTranslate(withoutAlts, 'en-US', tgtLang, serverUrl);
+          translated = await ovsTranslate(withoutAlts, srcLang, tgtLang, serverUrl);
         } catch {
           translated = withoutAlts; // Keep original on failure
         }
@@ -743,7 +743,7 @@
           for (const opt of options) {
             if (!opt.trim()) { translatedOpts.push(''); continue; }
             try {
-              translatedOpts.push(await ovsTranslate(opt.trim(), 'en-US', tgtLang, serverUrl));
+              translatedOpts.push(await ovsTranslate(opt.trim(), srcLang, tgtLang, serverUrl));
             } catch {
               translatedOpts.push(opt);
             }
@@ -1087,7 +1087,7 @@ Right now in {location} it's {condition}
         fetchJSON('data/repos.json'), fetchJSON('data/coverage.json'), fetchJSON('data/validation.json'),
       ]);
 
-      const allLangs = coverage.languages.filter(l => l !== 'en-US');
+      const allLangs = coverage.languages;
       const userLangs = getUserLangs();
       // Default to user's languages, but allow seeing all via filter
       const langs = userLangs.length > 0 ? allLangs.filter(l => userLangs.includes(l)) : allLangs;
@@ -1228,7 +1228,7 @@ Right now in {location} it's {condition}
 
       // Compute chart data
       const topN = langs.slice(0, 15);
-      const usableLangs = langs.filter(l => stats.languages[l].skills_full_intent >= Math.floor(stats.total_skills * 0.5));
+      const usableLangs = langs.filter(l => stats.languages[l].skills_fully_translated >= Math.floor(stats.total_skills * 0.5));
       const barMax = Math.max(...langs.map(l => stats.languages[l].combined_pct), 1);
 
       // Validation breakdown
@@ -1343,14 +1343,14 @@ Right now in {location} it's {condition}
 
             <div class="bg-ovos-card rounded-xl p-4">
               <h2 class="text-sm font-bold mb-1">Fully usable languages</h2>
-              <p class="text-xs text-ovos-muted mb-3">Languages where the voice assistant can understand users for most skills. "Fully usable" = intent files translated for 50%+ of skills.</p>
+              <p class="text-xs text-ovos-muted mb-3">Languages where the voice assistant works for most skills. "Fully usable" means every locale file (all types) is translated for 50%+ of skills.</p>
               <div class="flex flex-wrap gap-2">
                 ${langs.map(lang => {
                   const ls = stats.languages[lang];
                   const m = meta[lang] || {};
-                  const ratio = ls.skills_full_intent / stats.total_skills;
+                  const ratio = ls.skills_fully_translated / stats.total_skills;
                   const cls = ratio >= 0.5 ? 'badge-green' : ratio >= 0.25 ? 'badge-amber' : 'badge-gray';
-                  return `<div class="badge ${cls}" title="${ls.skills_full_intent}/${stats.total_skills} skills with all intents translated">${m.native||lang} ${ls.skills_full_intent}/${stats.total_skills}</div>`;
+                  return `<div class="badge ${cls}" title="${ls.skills_fully_translated}/${stats.total_skills} skills fully translated (all file types)">${m.native||lang} ${ls.skills_fully_translated}/${stats.total_skills}</div>`;
                 }).join('')}
               </div>
             </div>
@@ -1360,13 +1360,13 @@ Right now in {location} it's {condition}
           <h2 class="text-lg font-bold mb-2">Detailed coverage table</h2>
           <div class="callout mb-4 text-xs">
             <strong>How to read this table:</strong>
-            <ul class="mt-1 space-y-0.5 text-ovos-muted list-disc ml-4">
-              <li><strong class="text-ovos-text">Overall</strong> — percentage of all English source files that exist in this language</li>
-              <li><strong class="text-ovos-text mono">.intent</strong> — training phrases that teach the voice assistant to recognize user speech. Most critical for usability</li>
-              <li><strong class="text-ovos-text mono">.dialog</strong> — spoken responses (what the assistant says back). Important for natural interaction</li>
-              <li><strong class="text-ovos-text mono">.voc</strong> — short trigger keywords for the Adapt intent engine</li>
+            <ul class="mt-1 space-y-1 text-ovos-muted list-disc ml-4">
+              <li><strong class="text-ovos-text">Overall</strong> — percentage of all English source files that have a corresponding file in this language (a file counts as translated if it exists and contains at least 1 line)</li>
+              <li><strong class="text-ovos-text mono">.intent</strong> — training phrases that teach the voice assistant what users might say. Each file needs at least 1 sample utterance. Most critical for usability</li>
+              <li><strong class="text-ovos-text mono">.dialog</strong> — spoken responses (what the assistant says back). Each file needs at least 1 response variant</li>
+              <li><strong class="text-ovos-text mono">.voc</strong> — short trigger keywords for the Adapt intent engine. Each file needs at least 1 keyword</li>
               <li><strong class="text-ovos-text">Skills</strong> — how many skills have at least one translated file in this language (X/${stats.total_skills})</li>
-              <li><strong class="text-ovos-text">Full intent</strong> — how many skills have <em>all</em> their .intent files translated. A skill with full intent coverage can understand users in that language</li>
+              <li><strong class="text-ovos-text">Fully translated</strong> — number of skills where <em>every single locale file</em> (of all types — .intent, .dialog, .voc, etc.) has been translated. A fully translated skill works completely in that language — it can understand users, respond, and display correct metadata</li>
             </ul>
             <p class="mt-2 text-ovos-muted">
               <a href="data/dataset.tsv" download class="text-ovos-accent">Download the full intent dataset</a> (TSV, all languages) for ML training or analysis.
@@ -1392,7 +1392,7 @@ Right now in {location} it's {condition}
                   return `<th class="py-2.5 px-2 text-right mono" title="${titles[ft] || ft}">.${ft}</th>`;
                 }).join('')}
                 <th class="py-2.5 px-2 text-right" title="Skills with at least one translated file">Skills</th>
-                <th class="py-2.5 px-2 text-right" title="Skills where ALL .intent files are translated — the assistant can understand users for these skills">Full intent</th>
+                <th class="py-2.5 px-2 text-right" title="Skills where every locale file has a translation — the skill works fully in this language">Fully translated</th>
               </tr>
             </thead>
             <tbody>
@@ -1416,7 +1416,7 @@ Right now in {location} it's {condition}
                     return `<td class="py-2 px-2 text-right text-xs">${t.pct > 0 ? `<span class="${t.pct >= 80 ? 'text-green-400' : t.pct >= 50 ? 'text-yellow-400' : 'text-red-400'}">${t.pct}%</span><br><span class="text-ovos-muted">${t.translated}/${t.source}</span>` : '<span class="text-ovos-muted">—</span>'}</td>`;
                   }).join('')}
                   <td class="py-2 px-2 text-right text-xs">${ls.skills_any_coverage}/${stats.total_skills}</td>
-                  <td class="py-2 px-2 text-right text-xs font-medium ${ls.skills_full_intent >= stats.total_skills * 0.5 ? 'text-green-400' : ''}">${ls.skills_full_intent}/${stats.total_skills}</td>
+                  <td class="py-2 px-2 text-right text-xs font-medium ${ls.skills_fully_translated >= stats.total_skills * 0.5 ? 'text-green-400' : ''}">${ls.skills_fully_translated}/${stats.total_skills}</td>
                 </tr>`;
               }).join('')}
             </tbody>
@@ -1461,7 +1461,7 @@ Right now in {location} it's {condition}
     // =========================================================================
     async function renderSkillDetail(el, skillId, activeLang) {
       const skill = await fetchJSON(`data/skills/${skillId}.json`);
-      const allSkillLangs = skill.languages.filter(l => l !== 'en-US');
+      const allSkillLangs = skill.languages;
       const userLangs = getUserLangs();
       const tabLangs = userLangs.length > 0 ? allSkillLangs.filter(l => userLangs.includes(l)) : allSkillLangs;
       if (!tabLangs.includes(activeLang) && allSkillLangs.includes(activeLang)) tabLangs.push(activeLang);
@@ -1589,7 +1589,6 @@ Right now in {location} it's {condition}
       if (!fileData) { el.innerHTML = `<p>File not found: ${escapeHtml(fileKey)}. <a href="#/skill/${skillId}">Back to skill</a></p>`; return; }
 
       const [org, repo] = skill.repo.split('/');
-      const enData = fileData.langs['en-US'];
       const targetData = fileData.langs[lang];
       const ctx = fileData.context;
       const editUrl = (fileData.edit_urls || {})[lang] || '';
@@ -1601,11 +1600,20 @@ Right now in {location} it's {condition}
       const isJsonFile = fileData.type === 'skill.json' || fileData.type === 'settingsmeta';
       const hasExpansion = ['intent', 'voc', 'dialog'].includes(fileData.type);
 
-      // Compute en-us file path for new files
+      // Source language: prefer stored preference, then en-US, then first available
+      const availableSrcLangs = Object.keys(fileData.langs).filter(l => l !== lang);
+      const storedSrc = localStorage.getItem('ovos_src_lang');
+      const defaultSrc = (storedSrc && availableSrcLangs.includes(storedSrc)) ? storedSrc
+        : availableSrcLangs.includes('en-US') ? 'en-US'
+        : availableSrcLangs[0] || lang;
+      const srcLang = defaultSrc;
+      const srcData = fileData.langs[srcLang];
+
+      // Compute file path for new files
       let newFilePath = filePath;
-      if (!filePath && enData?.file_path) {
-        // Replace en-us with target lang in the path
-        newFilePath = enData.file_path.replace(/\/en-us\//, `/${lang}/`);
+      if (!filePath && srcData?.file_path) {
+        // Replace source lang dir with target lang in the path
+        newFilePath = srcData.file_path.replace(new RegExp(`/${srcLang.toLowerCase()}/|/${srcLang}/`, 'i'), `/${lang}/`);
       }
 
       el.innerHTML = `
@@ -1665,18 +1673,22 @@ Right now in {location} it's {condition}
         <!-- Editor: source | translation+preview | context+code -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-3" style="height: calc(100vh - 14rem);">
 
-          <!-- LEFT: English source (read-only) -->
+          <!-- LEFT: Source reference (read-only) -->
           <div class="lg:col-span-3 flex flex-col gap-3 overflow-hidden">
             <div class="bg-ovos-card rounded-xl p-3 flex flex-col overflow-hidden ${hasExpansion ? '' : 'flex-1'}">
               <div class="flex items-center gap-2 mb-2 flex-shrink-0">
-                <h3 class="text-sm font-bold">English source</h3>
+                <h3 class="text-sm font-bold">Source</h3>
+                <select id="src-lang-select" class="text-xs py-0.5 px-1.5 rounded bg-ovos-bg border border-ovos-card text-ovos-muted" onchange="changeSrcLang(this.value,'${skillId}','${encodeURIComponent(fileKey)}','${lang}')">
+                  ${availableSrcLangs.map(l => `<option value="${l}" ${l === srcLang ? 'selected' : ''}>${l}</option>`).join('')}
+                  ${!availableSrcLangs.length ? `<option value="${lang}" selected>${lang}</option>` : ''}
+                </select>
                 <span class="badge badge-gray">read-only</span>
               </div>
               <div class="overflow-auto flex-1 text-sm mono leading-relaxed">
                 ${(() => {
-                  if (!enData || !enData.entries.length) return '<p class="text-ovos-muted">No English source file found.</p>';
+                  if (!srcData || !srcData.entries.length) return '<p class="text-ovos-muted">No source file found for this language.</p>';
                   if (isJsonFile) {
-                    return enData.entries.map(e => {
+                    return srcData.entries.map(e => {
                       const key = e.key || '';
                       const translatable = e.translatable !== false;
                       return `<div class="flex gap-2 py-1 px-1 rounded ${translatable ? '' : 'opacity-50'}">
@@ -1686,19 +1698,19 @@ Right now in {location} it's {condition}
                       </div>`;
                     }).join('');
                   }
-                  return enData.entries.map(e =>
+                  return srcData.entries.map(e =>
                     `<div class="flex hover:bg-ovos-bg/50 px-1 rounded"><span class="text-ovos-muted w-6 text-right mr-2 flex-shrink-0 select-none">${e.line}</span><span>${highlightSlots(escapeHtml(e.text))}</span></div>`
                   ).join('');
                 })()}
               </div>
-              ${enData ? `<div class="mt-2 text-xs text-ovos-muted flex-shrink-0">${enData.entries.length} line${enData.entries.length!==1?'s':''} &middot; ${(enData.slots||[]).length ? 'Slots: ' + enData.slots.map(s=>'<span class="slot">{'+s+'}</span>').join(', ') : 'No slots'}</div>` : ''}
+              ${srcData ? `<div class="mt-2 text-xs text-ovos-muted flex-shrink-0">${srcData.entries.length} line${srcData.entries.length!==1?'s':''} &middot; ${(srcData.slots||[]).length ? 'Slots: ' + srcData.slots.map(s=>'<span class="slot">{'+s+'}</span>').join(', ') : 'No slots'}</div>` : ''}
             </div>
 
-            ${hasExpansion && enData?.entries?.length ? `
-            <!-- English expanded sentences -->
+            ${hasExpansion && srcData?.entries?.length ? `
+            <!-- Source expanded sentences -->
             <div class="bg-ovos-card rounded-xl p-3 flex-1 flex flex-col overflow-hidden min-h-0">
               <div class="flex items-center gap-2 mb-2 flex-shrink-0">
-                <h3 class="text-xs font-bold text-ovos-muted">English expanded</h3>
+                <h3 class="text-xs font-bold text-ovos-muted">${srcLang} expanded</h3>
                 <span id="en-expansion-count" class="badge badge-gray text-xs"></span>
               </div>
               <div id="en-expansion-list" class="overflow-auto flex-1 text-xs mono leading-relaxed space-y-0.5"></div>
@@ -1732,7 +1744,7 @@ Right now in {location} it's {condition}
                 <div class="flex-1 overflow-auto space-y-3" id="json-form">
                   ${(() => {
                     // Build form fields from en-US entries as template
-                    const sourceEntries = enData?.entries || [];
+                    const sourceEntries = srcData?.entries || [];
                     const targetEntries = targetData?.entries || [];
                     // Group by key
                     const keys = [];
@@ -1780,7 +1792,7 @@ Right now in {location} it's {condition}
               <div class="mt-2 text-xs text-ovos-muted flex items-center gap-3 flex-shrink-0">
                 <span id="line-count">0 lines</span>
                 <span id="char-count">0 chars</span>
-                ${enData?.entries?.length ? `<span>(source: ${enData.entries.length} lines)</span>` : ''}
+                ${srcData?.entries?.length ? `<span>(source: ${srcData.entries.length} lines)</span>` : ''}
               </div>
             </div>
 
@@ -1878,6 +1890,7 @@ optionally: [${(ctx.builder_chain.optionally||[]).join(', ')}]</pre>
       editor.dataset.lang = lang;
       editor.dataset.fileKey = fileKey;
       editor.dataset.skillId = skillId;
+      editor.dataset.srcLang = srcLang;
       editor.dataset.originalText = currentText;
 
       // Track file type for preview logic
@@ -1887,7 +1900,7 @@ optionally: [${(ctx.builder_chain.optionally||[]).join(', ')}]</pre>
 
       // For JSON form: sync form fields → hidden textarea
       if (isJsonFile) {
-        const enEntries = enData?.entries || [];
+        const enEntries = srcData?.entries || [];
         function syncJsonForm() {
           // Rebuild the file content from form fields + non-translatable source entries
           const lines = [];
@@ -1941,8 +1954,8 @@ optionally: [${(ctx.builder_chain.optionally||[]).join(', ')}]</pre>
       updateCounts();
 
       // Populate English expansion preview (one-time, static)
-      if (hasExpansion && enData?.entries?.length) {
-        const enText = enData.entries.map(e => e.text).join('\n');
+      if (hasExpansion && srcData?.entries?.length) {
+        const enText = srcData.entries.map(e => e.text).join('\n');
         const { total, samples } = expandAllLines(enText, 30, 150);
         const enCountEl = document.getElementById('en-expansion-count');
         const enListEl = document.getElementById('en-expansion-list');
@@ -2015,17 +2028,18 @@ optionally: [${(ctx.builder_chain.optionally||[]).join(', ')}]</pre>
       const editor = document.getElementById('translation-editor');
       if (!editor) return;
 
-      // Get English source lines from the data
-      const { skillId, fileKey } = editor.dataset;
+      // Get source lines from the reference language
+      const { skillId, fileKey, srcLang: editorSrcLang } = editor.dataset;
+      const fromLang = editorSrcLang || 'en-US';
       if (!skillId) { toast('Cannot determine skill', 'red'); return; }
 
-      let enLines;
+      let sourceLines;
       try {
         const skill = await fetchJSON(`data/skills/${skillId}.json`);
         const fd = skill.files[fileKey];
-        const enData = fd?.langs?.['en-US'];
-        if (!enData?.entries?.length) { toast('No English source to translate from', 'red'); return; }
-        enLines = enData.entries.map(e => e.text);
+        const srcLangData = fd?.langs?.[fromLang];
+        if (!srcLangData?.entries?.length) { toast(`No source file in ${fromLang} to translate from`, 'red'); return; }
+        sourceLines = srcLangData.entries.map(e => e.text);
       } catch (e) {
         toast(`Failed to load source: ${e.message}`, 'red'); return;
       }
@@ -2039,9 +2053,9 @@ optionally: [${(ctx.builder_chain.optionally||[]).join(', ')}]</pre>
       btn.disabled = true;
 
       try {
-        const translated = await autoTranslateLines(enLines, tgtLang, serverUrl, (done, total) => {
+        const translated = await autoTranslateLines(sourceLines, tgtLang, serverUrl, (done, total) => {
           btn.innerHTML = `<span class="spinner"></span> ${done}/${total}`;
-        });
+        }, fromLang);
 
         editor.value = translated.join('\n');
         editor.dispatchEvent(new Event('input'));
@@ -2052,6 +2066,14 @@ optionally: [${(ctx.builder_chain.optionally||[]).join(', ')}]</pre>
         btn.disabled = false;
         btn.innerHTML = origText;
       }
+    }
+
+    function changeSrcLang(newSrcLang, skillId, fileKeyEncoded, lang) {
+      // Store the new source language preference and re-render
+      localStorage.setItem('ovos_src_lang', newSrcLang);
+      // Re-render the editor (the hash doesn't change, so manually call route)
+      const app = document.getElementById('app');
+      renderEditor(app, skillId, decodeURIComponent(fileKeyEncoded), lang);
     }
 
     function insertSlot(name) {

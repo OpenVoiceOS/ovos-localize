@@ -423,7 +423,7 @@ def build_stats_json(all_skills: List[Dict[str, Any]], coverage: Dict[str, Any])
         Stats dict with per-language breakdown.
     """
     file_types = ["intent", "voc", "dialog", "entity", "rx", "value", "skill.json"]
-    langs = [l for l in coverage.get("languages", []) if l != "en-US"]
+    langs = list(coverage.get("languages", []))
 
     # Count source (en-US) files per type
     source_counts: Dict[str, int] = {}
@@ -440,25 +440,26 @@ def build_stats_json(all_skills: List[Dict[str, Any]], coverage: Dict[str, Any])
     for lang in langs:
         type_counts: Dict[str, int] = {}
         skills_with_any = 0
-        skills_full_intent = 0
+        skills_fully_translated = 0
 
         for skill in all_skills:
             has_any = False
-            intent_total = 0
-            intent_have = 0
+            # A skill is fully translated when every source file has a translation
+            source_total = 0
+            source_have = 0
             for fd in skill["files"].values():
                 ft = fd["type"]
                 if lang in fd["langs"]:
                     type_counts[ft] = type_counts.get(ft, 0) + 1
                     has_any = True
-                if ft == "intent" and "en-US" in fd["langs"]:
-                    intent_total += 1
+                if "en-US" in fd["langs"]:
+                    source_total += 1
                     if lang in fd["langs"]:
-                        intent_have += 1
+                        source_have += 1
             if has_any:
                 skills_with_any += 1
-            if intent_total > 0 and intent_have == intent_total:
-                skills_full_intent += 1
+            if source_total > 0 and source_have == source_total:
+                skills_fully_translated += 1
 
         total_translated = sum(type_counts.values())
         combined_pct = round(total_translated / total_source * 100, 1) if total_source else 0
@@ -478,7 +479,7 @@ def build_stats_json(all_skills: List[Dict[str, Any]], coverage: Dict[str, Any])
             "total_source": total_source,
             "combined_pct": combined_pct,
             "skills_any_coverage": skills_with_any,
-            "skills_full_intent": skills_full_intent,
+            "skills_fully_translated": skills_fully_translated,
             "by_type": per_type,
         }
 
