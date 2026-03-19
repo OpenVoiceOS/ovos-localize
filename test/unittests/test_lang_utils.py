@@ -34,6 +34,24 @@ class TestNormalizeLangCode:
         # langcodes may normalize or pass through
         assert isinstance(result, str)
 
+    def test_explicit_mapping(self) -> None:
+        """Verify explicit OVOS mappings."""
+        assert normalize_lang_code("ca") == "ca-ES"
+        assert normalize_lang_code("de") == "de-DE"
+        assert normalize_lang_code("es") == "es-ES"
+        assert normalize_lang_code("fa-FA") == "fa-IR"
+        assert normalize_lang_code("fr") == "fr-FR"
+        assert normalize_lang_code("gl") == "gl-ES"
+        assert normalize_lang_code("it") == "it-IT"
+        assert normalize_lang_code("nl") == "nl-NL"
+        assert normalize_lang_code("pt") == "pt-BR"
+        assert normalize_lang_code("eu") == "eu-ES"
+        assert normalize_lang_code("eu-EU") == "eu-ES"
+        assert normalize_lang_code("es-LM") == "es-419"
+        # Case insensitive
+        assert normalize_lang_code("CA") == "ca-ES"
+        assert normalize_lang_code("EU-eu") == "eu-ES"
+
 
 class TestMergeEquivalentLangs:
     """Tests for merge_equivalent_langs()."""

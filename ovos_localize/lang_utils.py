@@ -8,14 +8,28 @@ from typing import Dict, List, Tuple
 
 import langcodes
 
+# Explicit normalization for OVOS specific usage
+EXPLICIT_MAPPING = {
+    "ca": "ca-ES",
+    "de": "de-DE",
+    "es": "es-ES",
+    "fa-FA": "fa-IR",
+    "fr": "fr-FR",
+    "gl": "gl-ES",
+    "it": "it-IT",
+    "nl": "nl-NL",
+    "pt": "pt-BR",
+    "eu": "eu-ES",
+    "eu-EU": "eu-ES",
+    "es-LM": "es-419"
+}
+
 
 def normalize_lang_code(code: str) -> str:
     """Normalize a language code to canonical BCP-47 form.
 
-    Uses ``langcodes`` for proper BCP-47 standardization:
-    - Fixes casing: ``en-us`` → ``en-US``, ``fa-ir`` → ``fa-IR``
-    - Bare codes stay bare if no default region is unambiguous:
-      ``da`` stays ``da``, ``en-us`` stays ``en-US``
+    Uses an explicit mapping for common OVOS aliases, then falls back
+    to ``langcodes`` for BCP-47 standardization.
 
     Args:
         code: Raw language code from a locale directory name.
@@ -23,11 +37,23 @@ def normalize_lang_code(code: str) -> str:
     Returns:
         Normalized BCP-47 language tag.
     """
+    # Fix casing and whitespace for lookup
+    code = code.strip()
+    
+    # Check explicit mapping first
+    if code in EXPLICIT_MAPPING:
+        return EXPLICIT_MAPPING[code]
+    
+    # Also check case-insensitive match for the mapping
+    for k, v in EXPLICIT_MAPPING.items():
+        if k.lower() == code.lower():
+            return v
+
     try:
         tag = langcodes.Language.get(code)
         return tag.to_tag()
     except langcodes.tag_parser.LanguageTagError:
-        return code.strip().lower()
+        return code.lower()
 
 
 def merge_equivalent_langs(lang_list: List[str], max_distance: int = 0) -> Dict[str, str]:
