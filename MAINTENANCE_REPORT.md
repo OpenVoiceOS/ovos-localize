@@ -1,5 +1,14 @@
 # Maintenance Report - ovos-localize
 
+## [2026-03-19] - Dataset Cleanup After BCP-47 Normalization
+- **AI Model**: Claude Sonnet 4.6
+- **Actions Taken**:
+    - Deleted stale dataset files using deprecated lang codes (`eu-EU.jsonl`, `eu.jsonl`, `es-LM.jsonl` and translation counterparts).
+    - Added regenerated datasets with normalized codes (`eu-ES.jsonl`, `es-419.jsonl`).
+    - Staged and committed all modified skill JSON, coverage, stats, repos, entities, and TSV files.
+    - Updated `FAQ.md` to explain the file removal.
+- **Oversight**: 140 unit tests passing.
+
 ## [2026-03-19] - Dependency Fixes & Test Validation
 - **AI Model**: Gemini 2.0 Flash
 - **Actions Taken**:
