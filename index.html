@@ -1387,14 +1387,13 @@ translation = load_dataset("json", data_files="https://openvoiceos.github.io/ovo
                 <div class="max-h-[400px] overflow-y-auto p-2 space-y-1 custom-scrollbar">
                   ${langs.map(lang => {
                     const name = meta[lang]?.native || lang;
-                    return \`
-                    <a href="data/datasets/classification/\${lang}.jsonl" download class="flex items-center justify-between p-2 rounded hover:bg-ovos-hover group transition-colors hover:no-underline">
-                      <div>
-                        <div class="text-sm font-medium text-ovos-text group-hover:text-ovos-accent">\${name}</div>
-                        <div class="text-xs text-ovos-muted mono">\${lang}.jsonl</div>
-                      </div>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-ovos-muted group-hover:text-ovos-accent"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    </a>\`;
+                    return '<a href="data/datasets/classification/' + lang + '.jsonl" download class="flex items-center justify-between p-2 rounded hover:bg-ovos-hover group transition-colors hover:no-underline">' +
+                      '<div>' +
+                        '<div class="text-sm font-medium text-ovos-text group-hover:text-ovos-accent">' + name + '</div>' +
+                        '<div class="text-xs text-ovos-muted mono">' + lang + '.jsonl</div>' +
+                      '</div>' +
+                      '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-ovos-muted group-hover:text-ovos-accent"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>' +
+                    '</a>';
                   }).join('')}
                 </div>
               </div>
@@ -1408,14 +1407,13 @@ translation = load_dataset("json", data_files="https://openvoiceos.github.io/ovo
                 <div class="max-h-[400px] overflow-y-auto p-2 space-y-1 custom-scrollbar">
                   ${langs.filter(l => l !== 'en-US').map(lang => {
                     const name = meta[lang]?.native || lang;
-                    return \`
-                    <a href="data/datasets/translation/en-US_\${lang}.jsonl" download class="flex items-center justify-between p-2 rounded hover:bg-ovos-hover group transition-colors hover:no-underline">
-                      <div>
-                        <div class="text-sm font-medium text-ovos-text group-hover:text-ovos-accent">English &rarr; \${name}</div>
-                        <div class="text-xs text-ovos-muted mono">en-US_\${lang}.jsonl</div>
-                      </div>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-ovos-muted group-hover:text-ovos-accent"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    </a>\`;
+                    return '<a href="data/datasets/translation/en-US_' + lang + '.jsonl" download class="flex items-center justify-between p-2 rounded hover:bg-ovos-hover group transition-colors hover:no-underline">' +
+                      '<div>' +
+                        '<div class="text-sm font-medium text-ovos-text group-hover:text-ovos-accent">English &rarr; ' + name + '</div>' +
+                        '<div class="text-xs text-ovos-muted mono">en-US_' + lang + '.jsonl</div>' +
+                      '</div>' +
+                      '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-ovos-muted group-hover:text-ovos-accent"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>' +
+                    '</a>';
                   }).join('')}
                 </div>
               </div>
