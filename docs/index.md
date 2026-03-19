@@ -79,6 +79,20 @@ ovos-localize-cli --repo /path/to/skill --report-format github
 
 See [local-development.md](local-development.md) for the full local workflow.
 
+## Open Data (ML Datasets)
+
+`ovos-localize` automatically generates machine-learning-ready JSONL datasets from the scanned skill data. These are hosted statically and updated daily.
+
+Available datasets (`data/datasets/`):
+- **Intent Classification** (`classification/{lang}.jsonl`): Maps `.intent` and `.voc` phrases to their respective skill domains and intent names. Ideal for training NLU or SLMs.
+- **Parallel Corpora** (`translation/{lang_pair}.jsonl`): Pairs English (`en-US`) keys with corresponding translations (e.g., `pt-BR`) from `.dialog` and `.intent` files. Ideal for machine translation tasks.
+
+You can load these directly via HuggingFace:
+```python
+from datasets import load_dataset
+dataset = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localize/data/datasets/classification/en-US.jsonl")
+```
+
 ## CI Integration
 
 Skills can use the reusable workflow from `gh-automations`:
