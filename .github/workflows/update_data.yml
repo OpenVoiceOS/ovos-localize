@@ -30,6 +30,9 @@ jobs:
         env:
           GIT_TERMINAL_PROMPT: 0
 
+      - name: Generate ML datasets
+        run: python scripts/generate_datasets.py
+
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update translation data"
