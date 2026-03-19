@@ -59,6 +59,24 @@ def expand_template(template: str) -> List[str]:
     return sorted(s for s in result if s.strip())
 
 
+def clean_text(text: str) -> str:
+    """Clean text for ML datasets: lowercase, remove extra whitespace.
+
+    Args:
+        text: Raw utterance.
+
+    Returns:
+        Cleaned, lowercased string.
+    """
+    import re
+    # Lowercase and remove punctuation (optional? user didn't ask but typical)
+    # Keeping it simple as requested: whitespace and lowercase
+    text = text.lower().strip()
+    # Replace multiple whitespaces with single space
+    text = re.sub(r"\s+", " ", text)
+    return text
+
+
 def count_expanded_lines(lines: List[str]) -> int:
     """Count the total number of expanded sentences from a list of template lines.
 

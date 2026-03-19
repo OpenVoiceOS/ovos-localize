@@ -18,6 +18,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 from ovos_localize.analyzers.context_builder import ContextCard, build_context_card
+from ovos_localize.bracket_expansion import expand_template, clean_text
 from ovos_localize.enums import FileType
 from ovos_localize.lang_utils import lang_display_name, lang_display_name_native, merge_equivalent_langs
 from ovos_localize.parsers.base import ParsedFile
@@ -29,6 +30,9 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 SKILLS_FILE = REPO_ROOT / "skills.txt"
 DATA_DIR = REPO_ROOT / "data"
 SKILLS_DATA_DIR = DATA_DIR / "skills"
+
+# GitHub file size limit is 100MB, we aim for 50MB chunks
+MAX_FILE_SIZE = 48 * 1024 * 1024  # 48MB
 
 
 def load_skills_list(path: Path = SKILLS_FILE) -> List[Tuple[str, str]]:
@@ -497,9 +501,10 @@ def build_stats_json(all_skills: List[Dict[str, Any]], coverage: Dict[str, Any])
 
 
 def export_intent_dataset(all_skills: List[Dict[str, Any]], output_path: Path) -> int:
-    """Export a unified intent dataset TSV (like lang-support-tracker's gitlocalize_dataset.tsv).
+    """Export a unified intent dataset TSV, split into chunks if necessary.
 
-    Each row: lang, skill_id, file_key, utterance
+    Each row: lang, skill_id, file_key, utterance.
+    Expands templates, lowercases, and deduplicates phrases.
 
     Args:
         all_skills: List of per-skill JSON dicts.
@@ -508,19 +513,57 @@ def export_intent_dataset(all_skills: List[Dict[str, Any]], output_path: Path) -
     Returns:
         Number of rows written.
     """
+    chunk_index = 0
     rows = 0
-    with output_path.open("w", encoding="utf-8") as f:
-        f.write("lang\tskill\tfile\tutterance\n")
+    current_f = None
+    current_size = 0
+
+    def get_path(idx):
+        if idx == 0:
+            return output_path
+        return output_path.with_name(f"{output_path.stem}_{idx}{output_path.suffix}")
+
+    try:
+        current_f = get_path(chunk_index).open("w", encoding="utf-8")
+        current_f.write("lang\tskill\tfile\tutterance\n")
+        current_size = current_f.tell()
+
         for skill in all_skills:
             for file_key, fd in skill["files"].items():
                 if fd["type"] not in ("intent", "dialog", "voc"):
                     continue
                 for lang, ld in fd["langs"].items():
+                    seen = set()
                     for entry in ld.get("entries", []):
-                        text = entry["text"].strip()
-                        if text and not text.startswith("#"):
-                            f.write(f"{lang}\t{skill['id']}\t{file_key}\t{text}\n")
+                        template = entry.get("text", "").strip()
+                        if not template or template.startswith("#"):
+                            continue
+
+                        # Expand templates and clean
+                        for expanded in expand_template(template):
+                            cleaned = clean_text(expanded)
+                            if not cleaned or cleaned in seen:
+                                continue
+                            seen.add(cleaned)
+
+                            line = f"{lang}\t{skill['id']}\t{file_key}\t{cleaned}\n"
+                            line_bytes = len(line.encode("utf-8"))
+
+                            # Split if file exceeds MAX_FILE_SIZE
+                            if current_size + line_bytes > MAX_FILE_SIZE:
+                                current_f.close()
+                                chunk_index += 1
+                                current_f = get_path(chunk_index).open("w", encoding="utf-8")
+                                current_f.write("lang\tskill\tfile\tutterance\n")
+                                current_size = current_f.tell()
+
+                            current_f.write(line)
+                            current_size += line_bytes
                             rows += 1
+    finally:
+        if current_f:
+            current_f.close()
+
     return rows
 
 
@@ -620,35 +663,83 @@ def main() -> None:
             skill_json = build_skill_json(scan, org, repo)
             all_skills.append(skill_json)
 
-            # Write per-skill JSON
-            skill_path = SKILLS_DATA_DIR / f"{skill_json['id']}.json"
-            skill_path.write_text(json.dumps(skill_json, indent=2, ensure_ascii=False))
-            print(f"{len(scan.languages)} langs, {len(scan.locale_files)} files")
+            # Write per-skill JSON (split if too large)
+            skill_id = skill_json['id']
+            skill_path = SKILLS_DATA_DIR / f"{skill_id}.json"
+            
+            # Remove indent to save space
+            content = json.dumps(skill_json, ensure_ascii=False)
+            content_bytes = content.encode("utf-8")
+            if len(content_bytes) > MAX_FILE_SIZE:
+                # Split 'files' key if too large
+                all_files = list(skill_json["files"].items())
+                chunk_index = 0
+                
+                # Copy metadata
+                main_json = {k: v for k, v in skill_json.items() if k != "files"}
+                main_json["files"] = {}
+                main_json["chunks"] = []
+                
+                current_chunk_json = {"files": {}}
+                current_chunk_size = 15 # approximate size of '{"files":{}}'
+                
+                for fk, fv in all_files:
+                    # Quick size estimation for this entry
+                    file_content = json.dumps({fk: fv}, ensure_ascii=False)
+                    file_size = len(file_content.encode("utf-8"))
+                    
+                    if current_chunk_size + file_size > MAX_FILE_SIZE and current_chunk_json["files"]:
+                        # Save current chunk
+                        chunk_name = f"{skill_id}_{chunk_index}.json"
+                        (SKILLS_DATA_DIR / chunk_name).write_text(
+                            json.dumps(current_chunk_json, ensure_ascii=False)
+                        )
+                        main_json["chunks"].append(chunk_name)
+                        chunk_index += 1
+                        current_chunk_json = {"files": {}}
+                        current_chunk_size = 15
+                    
+                    current_chunk_json["files"][fk] = fv
+                    current_chunk_size += file_size
+                
+                # Save last chunk
+                if current_chunk_json["files"]:
+                    chunk_name = f"{skill_id}_{chunk_index}.json"
+                    (SKILLS_DATA_DIR / chunk_name).write_text(
+                        json.dumps(current_chunk_json, ensure_ascii=False)
+                    )
+                    main_json["chunks"].append(chunk_name)
+                
+                skill_path.write_text(json.dumps(main_json, ensure_ascii=False))
+                print(f"{len(scan.languages)} langs, {len(scan.locale_files)} files (SPLIT into {len(main_json['chunks'])} chunks)")
+            else:
+                skill_path.write_text(content)
+                print(f"{len(scan.languages)} langs, {len(scan.locale_files)} files")
         except Exception as e:
             print(f"FAILED: {e}", file=sys.stderr)
             continue
 
     # Write aggregate files
     repos_path = DATA_DIR / "repos.json"
-    repos_path.write_text(json.dumps(build_repos_json(all_skills), indent=2, ensure_ascii=False))
+    repos_path.write_text(json.dumps(build_repos_json(all_skills), ensure_ascii=False))
 
     coverage_data = build_coverage_json(all_skills)
     coverage_path = DATA_DIR / "coverage.json"
-    coverage_path.write_text(json.dumps(coverage_data, indent=2, ensure_ascii=False))
+    coverage_path.write_text(json.dumps(coverage_data, ensure_ascii=False))
 
     validation_path = DATA_DIR / "validation.json"
-    validation_path.write_text(json.dumps(build_validation_json(all_skills), indent=2, ensure_ascii=False))
+    validation_path.write_text(json.dumps(build_validation_json(all_skills), ensure_ascii=False))
 
     stats_data = build_stats_json(all_skills, coverage_data)
     stats_path = DATA_DIR / "stats.json"
-    stats_path.write_text(json.dumps(stats_data, indent=2, ensure_ascii=False))
+    stats_path.write_text(json.dumps(stats_data, ensure_ascii=False))
 
     dataset_path = DATA_DIR / "dataset.tsv"
     dataset_rows = export_intent_dataset(all_skills, dataset_path)
 
     entities_data = build_entities_json(all_skills)
     entities_path = DATA_DIR / "entities.json"
-    entities_path.write_text(json.dumps(entities_data, indent=2, ensure_ascii=False))
+    entities_path.write_text(json.dumps(entities_data, ensure_ascii=False))
     gaps = sum(1 for e in entities_data if not e["has_entity_file"])
 
     print(f"\nDone. {len(all_skills)} skills → data/")

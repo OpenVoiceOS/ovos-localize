@@ -1,13 +1,15 @@
 """Dataset generator for parallel corpora (machine translation)."""
 
-from typing import Any, Dict, Iterator
+from typing import Any, Dict, Iterator, Set
+from ovos_localize.bracket_expansion import expand_template, clean_text
 
 
 def generate_parallel_corpora(skill_id: str, skill_data: dict, base_lang: str = "en-US") -> Iterator[Dict[str, Any]]:
     """Yield parallel translations from a skill's parsed data.
 
     Pairs the base language (default en-US) with other languages found in the same file.
-    
+    Expands templates, lowercases, and deduplicates pairs.
+
     Args:
         skill_id: The ID of the skill (e.g., 'ovos-skill-hello-world').
         skill_data: The JSON dictionary representation of the parsed skill.
@@ -19,10 +21,9 @@ def generate_parallel_corpora(skill_id: str, skill_data: dict, base_lang: str = 
     files = skill_data.get("files", {})
     for filename, file_info in files.items():
         langs = file_info.get("langs", {})
-        
-        # We need the base language to exist in this file to pair it
+
+        # Pivot language check
         if base_lang not in langs:
-            # Fallback: check if any 'en-*' exists if 'en-US' is requested and missing
             if base_lang == "en-US":
                 alt_en = [l for l in langs.keys() if l.lower().startswith("en-")]
                 if alt_en:
@@ -34,13 +35,19 @@ def generate_parallel_corpora(skill_id: str, skill_data: dict, base_lang: str = 
         else:
             base_lang_key = base_lang
 
-        base_data = langs[base_lang_key]
-        base_texts = [
-            e.get("text").strip() 
-            for e in base_data.get("entries", []) 
-            if e.get("text", "").strip()
-        ]
-        
+        def _get_cleaned_entries(lang_key: str) -> Set[str]:
+            seen = set()
+            for entry in langs[lang_key].get("entries", []):
+                template = entry.get("text", "").strip()
+                if not template or template.startswith("#"):
+                    continue
+                for expanded in expand_template(template):
+                    cleaned = clean_text(expanded)
+                    if cleaned:
+                        seen.add(cleaned)
+            return seen
+
+        base_texts = sorted(list(_get_cleaned_entries(base_lang_key)))
         if not base_texts:
             continue
 
@@ -50,12 +57,7 @@ def generate_parallel_corpora(skill_id: str, skill_data: dict, base_lang: str = 
             if target_lang == base_lang_key:
                 continue
 
-            target_texts = [
-                e.get("text").strip() 
-                for e in target_data.get("entries", []) 
-                if e.get("text", "").strip()
-            ]
-            
+            target_texts = sorted(list(_get_cleaned_entries(target_lang)))
             if not target_texts:
                 continue
 

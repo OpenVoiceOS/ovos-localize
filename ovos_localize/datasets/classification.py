@@ -1,12 +1,13 @@
 """Dataset generator for NLU intent classification."""
 
-from typing import Any, Dict, Iterator
+from typing import Any, Dict, Iterator, Set
+from ovos_localize.bracket_expansion import expand_template, clean_text
 
 
 def generate_intent_classification(skill_id: str, skill_data: dict) -> Iterator[Dict[str, Any]]:
     """Yield intent classification samples from a skill's parsed data.
 
-    Extracts entries from `.intent` and `.voc` files.
+    Expands templates, lowercases, and deduplicates phrases.
 
     Args:
         skill_id: The ID of the skill (e.g., 'ovos-skill-hello-world').
@@ -23,16 +24,24 @@ def generate_intent_classification(skill_id: str, skill_data: dict) -> Iterator[
 
         langs = file_info.get("langs", {})
         for lang, lang_data in langs.items():
+            seen: Set[str] = set()
             entries = lang_data.get("entries", [])
             for entry in entries:
-                text = entry.get("text", "").strip()
-                if not text:
+                template = entry.get("text", "").strip()
+                if not template or template.startswith("#"):
                     continue
 
-                yield {
-                    "lang": lang,
-                    "skill": skill_id,
-                    "file_type": file_type,
-                    "intent": filename,
-                    "text": text
-                }
+                # Expand templates: "(hello|hi) world" -> "hello world", "hi world"
+                for expanded in expand_template(template):
+                    cleaned = clean_text(expanded)
+                    if not cleaned or cleaned in seen:
+                        continue
+                    seen.add(cleaned)
+
+                    yield {
+                        "lang": lang,
+                        "skill": skill_id,
+                        "file_type": file_type,
+                        "intent": filename,
+                        "text": cleaned
+                    }

@@ -370,7 +370,21 @@
       return d;
     }
 
+    async function fetchSkill(skillId) {
+      const skill = await fetchJSON(`data/skills/${skillId}.json`);
+      if (skill.chunks && skill.chunks.length > 0) {
+        for (const chunk of skill.chunks) {
+          const chunkData = await fetchJSON(`data/skills/${chunk}`);
+          if (chunkData.files) {
+            Object.assign(skill.files, chunkData.files);
+          }
+        }
+      }
+      return skill;
+    }
+
     // =========================================================================
+
     // OVOS TRANSLATION API (auto-translate via community servers)
     // =========================================================================
     const TRANSLATE_SERVERS = [
@@ -1487,7 +1501,7 @@ Right now in {location} it's {condition}
     // SKILL DETAIL
     // =========================================================================
     async function renderSkillDetail(el, skillId, activeLang) {
-      const skill = await fetchJSON(`data/skills/${skillId}.json`);
+      const skill = await fetchSkill(skillId);
       const allSkillLangs = skill.languages;
       const userLangs = getUserLangs();
       const tabLangs = userLangs.length > 0 ? allSkillLangs.filter(l => userLangs.includes(l)) : allSkillLangs;
@@ -1611,7 +1625,7 @@ Right now in {location} it's {condition}
     // TRANSLATION EDITOR
     // =========================================================================
     async function renderEditor(el, skillId, fileKey, lang) {
-      const skill = await fetchJSON(`data/skills/${skillId}.json`);
+      const skill = await fetchSkill(skillId);
       const fileData = skill.files[fileKey];
       const [org, repo] = skill.repo.split('/');
 
@@ -2052,7 +2066,7 @@ Right now in {location} it's {condition}
 
       let sourceLines;
       try {
-        const skill = await fetchJSON(`data/skills/${skillId}.json`);
+        const skill = await fetchSkill(skillId);
         const fd = skill.files[fileKey];
         const srcLangData = fd?.langs?.[fromLang];
         if (!srcLangData?.entries?.length) { toast(`No source file in ${fromLang} to translate from`, 'red'); return; }
