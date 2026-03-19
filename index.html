@@ -1352,13 +1352,37 @@ Right now in {location} it's {condition}
       const meta = coverage.lang_meta || {};
       const langs = coverage.languages || [];
 
+      let clsHtml = '';
+      for (const lang of langs) {
+        const name = meta[lang]?.native || lang;
+        clsHtml += '<a href="data/datasets/classification/' + lang + '.jsonl" download class="flex items-center justify-between p-2 rounded hover:bg-ovos-hover group transition-colors hover:no-underline">' +
+          '<div>' +
+            '<div class="text-sm font-medium text-ovos-text group-hover:text-ovos-accent">' + name + '</div>' +
+            '<div class="text-xs text-ovos-muted mono">' + lang + '.jsonl</div>' +
+          '</div>' +
+          '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-ovos-muted group-hover:text-ovos-accent"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>' +
+        '</a>';
+      }
+
+      let traHtml = '';
+      for (const lang of langs) {
+        if (lang === 'en-US') continue;
+        const name = meta[lang]?.native || lang;
+        traHtml += '<a href="data/datasets/translation/en-US_' + lang + '.jsonl" download class="flex items-center justify-between p-2 rounded hover:bg-ovos-hover group transition-colors hover:no-underline">' +
+          '<div>' +
+            '<div class="text-sm font-medium text-ovos-text group-hover:text-ovos-accent">English &rarr; ' + name + '</div>' +
+            '<div class="text-xs text-ovos-muted mono">en-US_' + lang + '.jsonl</div>' +
+          '</div>' +
+          '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-ovos-muted group-hover:text-ovos-accent"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>' +
+        '</a>';
+      }
+
       el.innerHTML = `
         <div class="max-w-4xl mx-auto py-4">
           <div class="mb-8 border-b border-ovos-card pb-6">
             <h1 class="text-3xl font-bold mb-2">Open Data <span class="text-ovos-accent">Machine Learning Datasets</span></h1>
             <p class="text-ovos-muted text-sm leading-relaxed mb-4">
               OVOS Localize automatically processes thousands of OpenVoiceOS intent and dialog files to generate high-quality, open-source datasets for Machine Learning researchers. 
-              These datasets are perfect for training NLU (Natural Language Understanding) models, Small Language Models (SLMs), and Machine Translation systems tailored for Voice Assistants.
               All templates are fully expanded, cleaned, lowercased, and deduplicated.
             </p>
             
@@ -1367,88 +1391,38 @@ Right now in {location} it's {condition}
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                 Load via HuggingFace
               </h3>
-              <p class="text-xs text-ovos-muted mb-3">You can load these datasets directly into your Python scripts without downloading them manually:</p>
+              <p class="text-xs text-ovos-muted mb-3">Stream datasets directly into your scripts:</p>
               <pre class="bg-ovos-bg p-3 rounded-lg text-xs overflow-x-auto mono border border-ovos-card text-ovos-text"><code>from datasets import load_dataset
-
-# Load Intent Classification data for English
-dataset = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localize/data/datasets/classification/en-US.jsonl")
-
-# Load Parallel Corpora (English -> German)
-translation = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localize/data/datasets/translation/en-US_de-DE.jsonl")</code></pre>
+# Example: en-US Intent Classification
+ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localize/data/datasets/classification/en-US.jsonl")</code></pre>
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <!-- Intent Classification -->
             <div>
-              <h2 class="text-lg font-bold mb-1 flex items-center gap-2">Intent Classification</h2>
-              <p class="text-xs text-ovos-muted mb-4">Maps utterances to their respective skill domains and intent names. Ideal for NLU training. (.jsonl format)</p>
-              <div class="bg-ovos-card rounded-xl border border-ovos-card overflow-hidden">
-                <div class="max-h-[400px] overflow-y-auto p-2 space-y-1 custom-scrollbar">
-                  ${langs.map(lang => {
-                    const name = meta[lang]?.native || lang;
-                    return '<a href="data/datasets/classification/' + lang + '.jsonl" download class="flex items-center justify-between p-2 rounded hover:bg-ovos-hover group transition-colors hover:no-underline">' +
-                      '<div>' +
-                        '<div class="text-sm font-medium text-ovos-text group-hover:text-ovos-accent">' + name + '</div>' +
-                        '<div class="text-xs text-ovos-muted mono">' + lang + '.jsonl</div>' +
-                      '</div>' +
-                      '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-ovos-muted group-hover:text-ovos-accent"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>' +
-                    '</a>';
-                  }).join('')}
-                </div>
+              <h2 class="text-lg font-bold mb-4">Intent Classification</h2>
+              <div class="bg-ovos-card rounded-xl border border-ovos-card max-h-[400px] overflow-auto p-2">
+                ${clsHtml}
               </div>
             </div>
-
-            <!-- Parallel Corpora -->
             <div>
-              <h2 class="text-lg font-bold mb-1 flex items-center gap-2">Parallel Corpora</h2>
-              <p class="text-xs text-ovos-muted mb-4">Pairs English keys with corresponding translations from dialog and intent files. Ideal for Machine Translation. (.jsonl format)</p>
-              <div class="bg-ovos-card rounded-xl border border-ovos-card overflow-hidden">
-                <div class="max-h-[400px] overflow-y-auto p-2 space-y-1 custom-scrollbar">
-                  ${langs.filter(l => l !== 'en-US').map(lang => {
-                    const name = meta[lang]?.native || lang;
-                    return '<a href="data/datasets/translation/en-US_' + lang + '.jsonl" download class="flex items-center justify-between p-2 rounded hover:bg-ovos-hover group transition-colors hover:no-underline">' +
-                      '<div>' +
-                        '<div class="text-sm font-medium text-ovos-text group-hover:text-ovos-accent">English &rarr; ' + name + '</div>' +
-                        '<div class="text-xs text-ovos-muted mono">en-US_' + lang + '.jsonl</div>' +
-                      '</div>' +
-                      '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-ovos-muted group-hover:text-ovos-accent"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>' +
-                    '</a>';
-                  }).join('')}
-                </div>
+              <h2 class="text-lg font-bold mb-4">Parallel Corpora</h2>
+              <div class="bg-ovos-card rounded-xl border border-ovos-card max-h-[400px] overflow-auto p-2">
+                ${traHtml}
               </div>
             </div>
           </div>
 
           <div class="bg-ovos-card rounded-xl p-5 border border-ovos-card mb-8">
-            <div class="flex items-start justify-between">
-              <div>
-                <h3 class="text-lg font-bold mb-1">Unified Dataset</h3>
-                <p class="text-xs text-ovos-muted mb-3 max-w-2xl">
-                  A massive, concatenated dataset containing all expanded sentences across all languages, skills, and file types. 
-                  Due to its size, it is split into multiple 48MB chunks.
-                  <br><br>
-                  <span class="mono">Format: lang | skill | file | utterance</span>
-                </p>
-              </div>
-            </div>
-            <div class="flex flex-wrap gap-3 mt-4">
-              <a href="data/dataset.tsv" download class="px-4 py-2 bg-ovos-bg hover:bg-ovos-hover border border-ovos-card rounded-lg text-sm flex items-center gap-2 hover:no-underline transition-colors">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span class="font-medium">dataset.tsv</span>
-              </a>
-              <a href="data/dataset_1.tsv" download class="px-4 py-2 bg-ovos-bg hover:bg-ovos-hover border border-ovos-card rounded-lg text-sm flex items-center gap-2 hover:no-underline transition-colors">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span class="font-medium">dataset_1.tsv</span>
-              </a>
-              <a href="data/dataset_2.tsv" download class="px-4 py-2 bg-ovos-bg hover:bg-ovos-hover border border-ovos-card rounded-lg text-sm flex items-center gap-2 hover:no-underline transition-colors">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span class="font-medium">dataset_2.tsv</span>
-              </a>
+            <h3 class="text-lg font-bold mb-4">Unified Dataset (Split TSVs)</h3>
+            <div class="flex flex-wrap gap-3">
+              <a href="data/dataset.tsv" download class="px-4 py-2 bg-ovos-bg border border-ovos-card rounded-lg text-sm hover:no-underline">dataset.tsv</a>
+              <a href="data/dataset_1.tsv" download class="px-4 py-2 bg-ovos-bg border border-ovos-card rounded-lg text-sm hover:no-underline">dataset_1.tsv</a>
+              <a href="data/dataset_2.tsv" download class="px-4 py-2 bg-ovos-bg border border-ovos-card rounded-lg text-sm hover:no-underline">dataset_2.tsv</a>
             </div>
           </div>
         </div>
-      \`;
+      `;
     }
 
     // =========================================================================
