@@ -747,7 +747,10 @@
       // Show onboarding on first visit — only for pages that need a user profile
       // Informational pages (stats, entities, open-data) are accessible without a profile
       const publicPages = ['#/', '', '#/how-it-works', '#/stats', '#/entities', '#/open-data'];
-      if (!hasCompletedOnboarding() && !publicPages.includes(hash)) {
+      // Skill editor pages with an explicit lang in the URL are accessible without a profile
+      // (the lang is encoded in the route, so no profile is needed to determine what to show)
+      const isSkillEditorWithLang = /^#\/skill\/[^/]+\/[^/]+\/.+/.test(hash);
+      if (!hasCompletedOnboarding() && !publicPages.includes(hash) && !isSkillEditorWithLang) {
         await renderLanding(app);
         return;
       }

@@ -25,6 +25,9 @@ Yes! `ovos-localize` automatically processes all OpenVoiceOS language files and 
 ### Why do Stats, Entities, and Open Data work without setting up languages?
 These are read-only informational pages. The onboarding (language selection) is only required for the Dashboard and skill editor pages, where user language preferences are used to filter content.
 
+### Why does the entity create editor now work without setting up languages first?
+The onboarding guard was blocking all `#/skill/...` routes for users without a saved profile. But skill editor URLs with an explicit lang in the route (e.g. `#/skill/foo/bar.entity/pt-PT`) don't need a profile — the language is already in the URL. The guard now allows these through.
+
 ### Why does clicking "+ create" on a gap entity work now?
 Previously, `renderEditor()` crashed with `TypeError: Cannot read properties of undefined (reading 'type')` when opened in create mode (no existing file). The bug was `editor.dataset.fileType = fileData.type` — `fileData` is `undefined` in create mode. Fixed to use the already-computed `fileType` variable instead.
 
