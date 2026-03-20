@@ -1969,7 +1969,7 @@ ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localiz
               ` : `
                 <textarea id="translation-editor"
                   class="flex-1 w-full bg-ovos-input text-ovos-text p-3 rounded-lg border border-ovos-card text-sm resize-none leading-relaxed mono"
-                  placeholder="${isCreateMode && fileType === 'entity' ? `Example values that {${fileKey.replace('.entity','')}} can be replaced with, one per line.\\n\\nExample:\\nvalue one\\nvalue two\\nvalue three` : isNew ? 'Type your translation here, one line per entry...\\n\\nLook at the source on the left for reference.\\nKeep {variables} exactly as they are.' : 'Edit the translation...'}"
+                  placeholder="${isCreateMode && fileType === 'entity' ? `Example values that {${fileKey.replace('.entity','')}} can be replaced with, one per line.&#10;&#10;Example:&#10;value one&#10;value two&#10;value three` : isNew ? 'Type your translation here, one line per entry...&#10;&#10;Look at the source on the left for reference.&#10;Keep {variables} exactly as they are.' : 'Edit the translation...'}"
                   spellcheck="true"
                 >${escapeHtml(currentText)}</textarea>
               `}
