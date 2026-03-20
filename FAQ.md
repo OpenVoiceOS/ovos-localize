@@ -20,7 +20,19 @@ uv run pytest
 ```
 
 ### Are there open datasets available for Machine Learning?
-Yes! `ovos-localize` automatically processes all OpenVoiceOS language files and generates machine-learning datasets in JSONL format. You can find them under the `data/datasets/` directory. These include Intent Classification datasets (for NLU) and Parallel Corpora (for machine translation), all of which update daily via GitHub Actions.
+Yes! `ovos-localize` generates six JSONL dataset families under `data/datasets/`, updated daily via GitHub Actions:
+
+| Directory | Description | Key fields |
+|---|---|---|
+| `classification/` | Intent/voc utterances with skill+intent label | `lang`, `skill`, `intent`, `text` |
+| `translation/` | Parallel corpora for machine translation | `pair`, `base_texts`, `target_texts` |
+| `slot_filling/` | Intent templates with slot names + entity values | `template`, `slots`, `entity_values` |
+| `response_pairs/` | (utterance, responses) pairs via AST handler analysis | `utterance`, `responses`, `handler` |
+| `tts/` | Deduplicated dialog sentences for TTS training | `lang`, `dialog`, `text` |
+| `skill_metadata/` | Multilingual skill name, description, examples, tags | `name`, `description`, `examples` |
+
+### How are intent→dialog response pairs generated?
+The `response_pairs` dataset is derived from AST analysis. At data-generation time, `context_builder.py` parses each skill's Python source and records `context.triggers_dialog` — the list of dialog file stems called by `self.speak_dialog()` in the intent handler. `generate_response_pairs()` uses this to pair intent utterances with their actual responses, without any string heuristics.
 
 ### Why do Stats, Entities, and Open Data work without setting up languages?
 These are read-only informational pages. The onboarding (language selection) is only required for the Dashboard and skill editor pages, where user language preferences are used to filter content.

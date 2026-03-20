@@ -1,5 +1,18 @@
 # Maintenance Report - ovos-localize
 
+## [2026-03-20] - Four New Open Data Dataset Generators
+- **AI Model**: Claude Sonnet 4.6
+- **Actions Taken**:
+    - Added `ovos_localize/datasets/slot_filling.py` — slot-filling / NER dataset: intent templates + slot names + known entity values from `.entity` files.
+    - Added `ovos_localize/datasets/response_pairs.py` — intent→dialog response pairs derived from `context.triggers_dialog` (AST-extracted handler analysis); no string heuristics.
+    - Added `ovos_localize/datasets/tts_corpus.py` — TTS training corpus from all `.dialog` files across all languages; template-expanded and deduplicated.
+    - Added `ovos_localize/datasets/skill_metadata.py` — multilingual skill name/description/examples/tags from `skill.json` files.
+    - Updated `ovos_localize/datasets/__init__.py` to export all six generators.
+    - Rewrote `scripts/generate_datasets.py` to wire all generators; outputs to `data/datasets/{slot_filling,response_pairs,tts,skill_metadata}/`.
+    - Added `test/unittests/test_datasets.py` — 28 unit tests covering all four generators.
+    - Updated `FAQ.md` with dataset table and AST-pairing explanation.
+- **Oversight**: 168 unit tests passing; generator verified against live `data/skills/` corpus.
+
 ## [2026-03-20] - Fix Entity Create Mode Crash + Improve UX
 - **AI Model**: Claude Sonnet 4.6
 - **Actions Taken**:
