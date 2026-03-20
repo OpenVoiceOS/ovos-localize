@@ -1735,8 +1735,10 @@ ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localiz
         return Object.entries(skill.files)
           .filter(([k, f]) => k.endsWith('.intent') && Object.values(f.langs || {}).some(ld => (ld.entries || []).some(e => pattern.test(e.text))))
           .map(([k, f]) => {
-            const srcLd = f.langs?.['en-US'] || Object.values(f.langs || {})[0];
-            return { key: k, entries: (srcLd?.entries || []).filter(e => pattern.test(e.text)).slice(0, 5) };
+            // Prefer target lang entries so user sees how the slot is used in their language
+            const srcLd = f.langs?.[lang] || f.langs?.['en-US'] || Object.values(f.langs || {})[0];
+            const displayLang = f.langs?.[lang] ? lang : (f.langs?.['en-US'] ? 'en-US' : Object.keys(f.langs || {})[0]);
+            return { key: k, entries: (srcLd?.entries || []).filter(e => pattern.test(e.text)).slice(0, 6), displayLang };
           });
       })();
 
@@ -1841,7 +1843,7 @@ ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localiz
           <div class="flex flex-col gap-3 overflow-hidden">
             <div class="bg-ovos-card rounded-xl p-3 flex flex-col overflow-hidden ${hasExpansion ? '' : 'flex-1'}">
               <div class="flex items-center gap-2 mb-2 flex-shrink-0">
-                <h3 class="text-sm font-bold">${isCreateMode && fileType === 'entity' ? 'Used in intents' : 'Source'}</h3>
+                <h3 class="text-sm font-bold">${isCreateMode && fileType === 'entity' ? `Intents using <span class="slot">{${escapeHtml(fileKey.replace('.entity',''))}}</span>` : 'Source'}</h3>
                 ${!isCreateMode ? `<select id="src-lang-select" class="text-xs py-0.5 px-1.5 rounded bg-ovos-bg border border-ovos-card text-ovos-muted" onchange="changeSrcLang(this.value,'${skillId}','${encodeURIComponent(fileKey)}','${lang}')">
                   ${availableSrcLangs.map(l => `<option value="${l}" ${l === srcLang ? 'selected' : ''}>${l}</option>`).join('')}
                   ${!availableSrcLangs.length ? `<option value="${lang}" selected>${lang}</option>` : ''}
@@ -1852,12 +1854,15 @@ ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localiz
                 ${(() => {
                   if (isCreateMode && fileType === 'entity' && entityCreateIntents.length) {
                     const slotName = fileKey.replace('.entity', '');
-                    return entityCreateIntents.map(({ key, entries }) =>
+                    return entityCreateIntents.map(({ key, entries, displayLang }) =>
                       `<div class="mb-3">
-                        <div class="text-xs text-ovos-muted mb-1 mono">${escapeHtml(key)}</div>
+                        <div class="text-xs text-ovos-muted mb-1 flex items-center gap-1.5 mono">
+                          ${escapeHtml(key)}
+                          <span class="badge badge-gray">${escapeHtml(displayLang)}</span>
+                        </div>
                         ${entries.map(e => `<div class="px-1 rounded hover:bg-ovos-bg/50">${highlightSlots(escapeHtml(e.text))}</div>`).join('')}
                       </div>`
-                    ).join('') + `<p class="text-xs text-ovos-muted mt-2">Add example values for <span class="slot">{${escapeHtml(slotName)}}</span> in the editor →</p>`;
+                    ).join('') + `<p class="text-xs text-ovos-muted mt-3 border-t border-ovos-card pt-2">The highlighted <span class="slot">{${escapeHtml(slotName)}}</span> is what you are providing values for.</p>`;
                   }
                   if (!srcData || !srcData.entries.length) return '<p class="text-ovos-muted">No source file found for this language.</p>';
                   if (isJsonFile) {
@@ -1894,13 +1899,20 @@ ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localiz
           <div class="flex flex-col gap-3 overflow-hidden">
             <div class="bg-ovos-card rounded-xl p-3 flex flex-col overflow-hidden ${hasExpansion ? 'flex-1' : 'flex-1'}">
               <div class="flex items-center gap-2 mb-2 flex-shrink-0">
-                <h3 class="text-sm font-bold">${lang} translation</h3>
-                ${isNew ? '<span class="badge badge-amber">new</span>' : ''}
+                <h3 class="text-sm font-bold">${isCreateMode && fileType === 'entity' ? `Values for <span class="slot">{${escapeHtml(fileKey.replace('.entity',''))}}</span> <span class="font-normal text-ovos-muted">(${lang})</span>` : `${lang} translation`}</h3>
+                ${isNew ? '<span class="badge badge-amber">new file</span>' : ''}
                 ${isJsonFile ? '<span class="badge badge-blue">JSON</span>' : ''}
                 ${ctx?.slots?.length ? `<div class="ml-auto flex gap-1 flex-shrink-0">${ctx.slots.map(s =>
                   `<span class="slot cursor-pointer text-xs px-1 rounded hover:bg-ovos-bg" onclick="insertSlot('${s}')" title="Click to insert {${s}} at cursor">{${s}}</span>`
                 ).join('')}</div>` : ''}
               </div>
+              ${isCreateMode && fileType === 'entity' ? `
+              <div class="callout callout-warn mb-2 text-xs flex-shrink-0">
+                <strong>One value per line.</strong> Each line is a concrete example that can replace
+                <span class="slot">{${escapeHtml(fileKey.replace('.entity',''))}}</span> in the intent.
+                Write the values <em>as they would be spoken</em> in <strong>${lang}</strong> —
+                <em>not</em> a translation of the full sentence.
+              </div>` : ''}
 
               ${targetData?.validation?.length ? `
                 <div class="mb-2 flex-shrink-0 max-h-16 overflow-auto space-y-0.5">
@@ -1957,7 +1969,7 @@ ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localiz
               ` : `
                 <textarea id="translation-editor"
                   class="flex-1 w-full bg-ovos-input text-ovos-text p-3 rounded-lg border border-ovos-card text-sm resize-none leading-relaxed mono"
-                  placeholder="${isNew ? 'Type your translation here, one line per entry...\\n\\nLook at the English source on the left for reference.\\nKeep {variables} exactly as they are.' : 'Edit the translation...'}"
+                  placeholder="${isCreateMode && fileType === 'entity' ? `Example values that {${fileKey.replace('.entity','')}} can be replaced with, one per line.\\n\\nExample:\\nvalue one\\nvalue two\\nvalue three` : isNew ? 'Type your translation here, one line per entry...\\n\\nLook at the source on the left for reference.\\nKeep {variables} exactly as they are.' : 'Edit the translation...'}"
                   spellcheck="true"
                 >${escapeHtml(currentText)}</textarea>
               `}
