@@ -815,7 +815,7 @@
       el.innerHTML = `
         <div class="text-center py-12 max-w-2xl mx-auto">
           <div class="mb-6">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-4"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <img src="logo.png" alt="OVOS" width="96" height="96" class="mx-auto mb-4">
             <h1 class="text-3xl font-bold mb-3">Help translate OpenVoiceOS</h1>
             <p class="text-ovos-muted text-lg leading-relaxed">
               OVOS is an open-source voice assistant. You can help make it work in your language
@@ -1262,7 +1262,7 @@ Right now in {location} it's {condition}
               <li><strong class="text-ovos-text">Fully translated</strong> — number of skills where <em>every single locale file</em> (of all types — .intent, .dialog, .voc, etc.) has been translated. A fully translated skill works completely in that language — it can understand users, respond, and display correct metadata</li>
             </ul>
             <p class="mt-2 text-ovos-muted">
-              <a href="data/dataset.tsv" download class="text-ovos-accent">Download the full intent dataset</a> (TSV, all languages) for ML training or analysis.
+              <a href="#/open-data" class="text-ovos-accent">Browse ML datasets</a> (classification, TTS, slot filling, response pairs and more).
               Don't see your language? <a href="#" onclick="event.preventDefault();showRequestLangModal()" class="text-ovos-accent">Request it</a>.
             </p>
           </div>
@@ -1505,7 +1505,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
           </div>
 
           <div class="mt-8 bg-ovos-card rounded-xl p-4 border border-ovos-card">
-            <h3 class="font-bold mb-3 text-sm">Unified TSV (legacy)</h3>
+            <h3 class="font-bold mb-3 text-sm">Unified TSV (full data export)</h3>
             <div class="flex flex-wrap gap-2">
               <a href="data/dataset.tsv" download class="px-3 py-1.5 bg-ovos-bg border border-ovos-card rounded-lg text-sm hover:no-underline hover:bg-ovos-hover">dataset.tsv</a>
               <a href="data/dataset_1.tsv" download class="px-3 py-1.5 bg-ovos-bg border border-ovos-card rounded-lg text-sm hover:no-underline hover:bg-ovos-hover">dataset_1.tsv</a>
