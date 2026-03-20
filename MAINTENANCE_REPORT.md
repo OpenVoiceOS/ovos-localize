@@ -1,5 +1,15 @@
 # Maintenance Report - ovos-localize
 
+## [2026-03-20] - Fix Entity Create Mode Crash + Improve UX
+- **AI Model**: Claude Sonnet 4.6
+- **Actions Taken**:
+    - Fixed `TypeError: Cannot read properties of undefined (reading 'type')` crash in `renderEditor()` (`index.html:1986`) — replaced `fileData.type` with already-computed `fileType` variable; `fileData` is `undefined` in create mode.
+    - In entity create mode, source panel now shows intent files that use `{slotName}` (derived from `skill.files` — no extra fetch). Panel header changes from "Source" to "Used in intents".
+    - `fileHelp` message in create mode now names the slot and intent count for context.
+    - Source language `<select>` hidden in create mode (no source langs exist).
+    - Updated `FAQ.md`.
+- **Oversight**: 140 unit tests passing; JS syntax clean via node.
+
 ## [2026-03-19] - Fix Frontend Onboarding Guard
 - **AI Model**: Claude Sonnet 4.6
 - **Actions Taken**:

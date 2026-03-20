@@ -1724,8 +1724,23 @@ ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localiz
       const filePath = targetData?.file_path || (isCreateMode ? '' : filePathFromEditUrl(editUrl));
       const currentText = targetData?.entries?.length ? targetData.entries.map(e => e.text).join('\n') : '';
       const isNew = isCreateMode || !targetData || targetData.entries.length === 0;
+      // For entity create mode: find intent files that use this slot
+      const entityCreateIntents = (() => {
+        if (!isCreateMode || fileType !== 'entity') return [];
+        const slotName = fileKey.replace('.entity', '');
+        const pattern = new RegExp(`\\{${slotName}\\}`, 'i');
+        return Object.entries(skill.files)
+          .filter(([k, f]) => k.endsWith('.intent') && Object.values(f.langs || {}).some(ld => (ld.entries || []).some(e => pattern.test(e.text))))
+          .map(([k, f]) => {
+            const srcLd = f.langs?.['en-US'] || Object.values(f.langs || {})[0];
+            return { key: k, entries: (srcLd?.entries || []).filter(e => pattern.test(e.text)).slice(0, 5) };
+          });
+      })();
+
       const fileHelp = isCreateMode
-        ? `Create a new ${fileKey} file. Add example values, one per line.`
+        ? (fileType === 'entity' && entityCreateIntents.length
+          ? `<strong>{${fileKey.replace('.entity','')}}</strong> is used in ${entityCreateIntents.length} intent file${entityCreateIntents.length>1?'s':''}. Add example values that can fill this slot — one per line.`
+          : `Create a new ${fileKey} file. Add example values, one per line.`)
         : (FILE_TYPE_HELP[fileData.type] || 'Translate this file to your language.');
       const isJsonFile = !isCreateMode && (fileData.type === 'skill.json' || fileData.type === 'settingsmeta');
       const hasExpansion = isCreateMode ? fileType === 'entity' : ['intent', 'voc', 'dialog'].includes(fileData.type);
@@ -1823,15 +1838,24 @@ ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localiz
           <div class="flex flex-col gap-3 overflow-hidden">
             <div class="bg-ovos-card rounded-xl p-3 flex flex-col overflow-hidden ${hasExpansion ? '' : 'flex-1'}">
               <div class="flex items-center gap-2 mb-2 flex-shrink-0">
-                <h3 class="text-sm font-bold">Source</h3>
-                <select id="src-lang-select" class="text-xs py-0.5 px-1.5 rounded bg-ovos-bg border border-ovos-card text-ovos-muted" onchange="changeSrcLang(this.value,'${skillId}','${encodeURIComponent(fileKey)}','${lang}')">
+                <h3 class="text-sm font-bold">${isCreateMode && fileType === 'entity' ? 'Used in intents' : 'Source'}</h3>
+                ${!isCreateMode ? `<select id="src-lang-select" class="text-xs py-0.5 px-1.5 rounded bg-ovos-bg border border-ovos-card text-ovos-muted" onchange="changeSrcLang(this.value,'${skillId}','${encodeURIComponent(fileKey)}','${lang}')">
                   ${availableSrcLangs.map(l => `<option value="${l}" ${l === srcLang ? 'selected' : ''}>${l}</option>`).join('')}
                   ${!availableSrcLangs.length ? `<option value="${lang}" selected>${lang}</option>` : ''}
-                </select>
+                </select>` : ''}
                 <span class="badge badge-gray">read-only</span>
               </div>
               <div class="overflow-auto flex-1 text-sm mono leading-relaxed">
                 ${(() => {
+                  if (isCreateMode && fileType === 'entity' && entityCreateIntents.length) {
+                    const slotName = fileKey.replace('.entity', '');
+                    return entityCreateIntents.map(({ key, entries }) =>
+                      `<div class="mb-3">
+                        <div class="text-xs text-ovos-muted mb-1 mono">${escapeHtml(key)}</div>
+                        ${entries.map(e => `<div class="px-1 rounded hover:bg-ovos-bg/50">${highlightSlots(escapeHtml(e.text))}</div>`).join('')}
+                      </div>`
+                    ).join('') + `<p class="text-xs text-ovos-muted mt-2">Add example values for <span class="slot">{${escapeHtml(slotName)}}</span> in the editor →</p>`;
+                  }
                   if (!srcData || !srcData.entries.length) return '<p class="text-ovos-muted">No source file found for this language.</p>';
                   if (isJsonFile) {
                     return srcData.entries.map(e => {
@@ -1983,7 +2007,7 @@ ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localiz
       editor.dataset.originalText = currentText;
 
       // Track file type for preview logic
-      editor.dataset.fileType = fileData.type;
+      editor.dataset.fileType = fileType;
       editor.dataset.isJson = isJsonFile ? '1' : '';
       editor.dataset.hasExpansion = hasExpansion ? '1' : '';
 

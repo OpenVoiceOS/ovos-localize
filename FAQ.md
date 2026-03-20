@@ -25,5 +25,11 @@ Yes! `ovos-localize` automatically processes all OpenVoiceOS language files and 
 ### Why do Stats, Entities, and Open Data work without setting up languages?
 These are read-only informational pages. The onboarding (language selection) is only required for the Dashboard and skill editor pages, where user language preferences are used to filter content.
 
+### Why does clicking "+ create" on a gap entity work now?
+Previously, `renderEditor()` crashed with `TypeError: Cannot read properties of undefined (reading 'type')` when opened in create mode (no existing file). The bug was `editor.dataset.fileType = fileData.type` — `fileData` is `undefined` in create mode. Fixed to use the already-computed `fileType` variable instead.
+
+### What does the editor show in the source panel when creating a new entity file?
+Instead of "No source file found", the source panel shows the `.intent` files that reference `{slotName}`, with their sample utterances. This gives context for what values belong in the entity file. The panel header also changes to "Used in intents".
+
 ### Why were eu-EU, eu, and es-LM dataset files removed?
 After BCP-47 normalization was added (`lang_utils.EXPLICIT_MAPPING`), `eu-EU` and `eu` both normalize to `eu-ES`, and `es-LM` normalizes to `es-419`. The old files contained data tagged with deprecated codes; they were replaced by `eu-ES.jsonl` and `es-419.jsonl`.
