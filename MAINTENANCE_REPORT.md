@@ -1,5 +1,13 @@
 # Maintenance Report - ovos-localize
 
+## [2026-03-19] - Fix Frontend Onboarding Guard
+- **AI Model**: Claude Sonnet 4.6
+- **Actions Taken**:
+    - Extended public pages list to include `#/stats`, `#/entities`, `#/open-data` so they render without a saved profile.
+    - Removed permanent accent styling on Open Data nav link (`index.html:96`).
+    - Updated `FAQ.md`.
+- **Oversight**: Verified via Chromium CDP — all three pages render without a profile.
+
 ## [2026-03-19] - Dataset Cleanup After BCP-47 Normalization
 - **AI Model**: Claude Sonnet 4.6
 - **Actions Taken**:
