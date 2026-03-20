@@ -93,7 +93,7 @@
       <a href="#/" class="text-ovos-muted hover:text-ovos-text">Dashboard</a>
       <a href="#/stats" class="text-ovos-muted hover:text-ovos-text">Stats</a>
       <a href="#/entities" class="text-ovos-muted hover:text-ovos-text">Entities</a>
-      <a href="#/open-data" class="text-ovos-accent font-bold hover:text-red-400">Open Data</a>
+      <a href="#/open-data" class="text-ovos-muted hover:text-ovos-text">Open Data</a>
       <a href="#/how-it-works" class="text-ovos-muted hover:text-ovos-text">How it works</a>
     </nav>
     <div class="ml-auto flex items-center gap-2">
@@ -744,8 +744,10 @@
       const app = document.getElementById('app');
       app.innerHTML = '<div class="flex items-center gap-2 py-12 justify-center text-ovos-muted"><span class="spinner"></span> Loading...</div>';
 
-      // Show onboarding on first visit (except on landing and how-it-works)
-      if (!hasCompletedOnboarding() && hash !== '#/' && hash !== '' && hash !== '#/how-it-works') {
+      // Show onboarding on first visit — only for pages that need a user profile
+      // Informational pages (stats, entities, open-data) are accessible without a profile
+      const publicPages = ['#/', '', '#/how-it-works', '#/stats', '#/entities', '#/open-data'];
+      if (!hasCompletedOnboarding() && !publicPages.includes(hash)) {
         await renderLanding(app);
         return;
       }
