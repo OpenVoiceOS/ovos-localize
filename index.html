@@ -1357,73 +1357,158 @@ Right now in {location} it's {condition}
       const meta = coverage.lang_meta || {};
       const langs = coverage.languages || [];
 
-      let clsHtml = '';
-      for (const lang of langs) {
-        const name = meta[lang]?.native || lang;
-        clsHtml += '<a href="data/datasets/classification/' + lang + '.jsonl" download class="flex items-center justify-between p-2 rounded hover:bg-ovos-hover group transition-colors hover:no-underline">' +
-          '<div>' +
-            '<div class="text-sm font-medium text-ovos-text group-hover:text-ovos-accent">' + name + '</div>' +
-            '<div class="text-xs text-ovos-muted mono">' + lang + '.jsonl</div>' +
-          '</div>' +
-          '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-ovos-muted group-hover:text-ovos-accent"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>' +
-        '</a>';
+      // Build per-language download list for a given directory + file pattern
+      function langDownloadList(dir, fileFn, labelFn) {
+        return langs.map(lang => {
+          const file = fileFn(lang);
+          const label = labelFn(lang);
+          if (!file) return '';
+          return `<a href="${file}" download class="flex items-center justify-between p-2 rounded hover:bg-ovos-hover group transition-colors hover:no-underline">
+            <div>
+              <div class="text-sm font-medium text-ovos-text group-hover:text-ovos-accent">${escapeHtml(label)}</div>
+              <div class="text-xs text-ovos-muted mono">${escapeHtml(file.split('/').pop())}</div>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-ovos-muted group-hover:text-ovos-accent flex-shrink-0"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </a>`;
+        }).join('');
       }
 
-      let traHtml = '';
-      for (const lang of langs) {
-        if (lang === 'en-US') continue;
-        const name = meta[lang]?.native || lang;
-        traHtml += '<a href="data/datasets/translation/en-US_' + lang + '.jsonl" download class="flex items-center justify-between p-2 rounded hover:bg-ovos-hover group transition-colors hover:no-underline">' +
-          '<div>' +
-            '<div class="text-sm font-medium text-ovos-text group-hover:text-ovos-accent">English &rarr; ' + name + '</div>' +
-            '<div class="text-xs text-ovos-muted mono">en-US_' + lang + '.jsonl</div>' +
-          '</div>' +
-          '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-ovos-muted group-hover:text-ovos-accent"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>' +
-        '</a>';
-      }
+      const datasets = [
+        {
+          id: 'classification',
+          title: 'Intent Classification',
+          tag: 'NLU',
+          tagColor: 'badge-blue',
+          desc: 'Intent and vocabulary utterances labelled by skill and intent file. All <code>(a|b)</code> templates are fully expanded and deduplicated.',
+          schema: '{ lang, skill, intent, file_type, text }',
+          sample: '{ "lang":"en-US", "skill":"ovos-skill-alerts", "intent":"cancel_alarm.intent", "file_type":"intent", "text":"cancel my alarm" }',
+          list: langDownloadList('classification',
+            l => `data/datasets/classification/${l}.jsonl`,
+            l => meta[l]?.native || l),
+        },
+        {
+          id: 'translation',
+          title: 'Parallel Corpora',
+          tag: 'MT',
+          tagColor: 'badge-green',
+          desc: 'Aligned intent/dialog/voc sentence pairs pivoted on English. Suitable for fine-tuning machine-translation models on voice assistant language.',
+          schema: '{ pair, base_lang, target_lang, skill, file_type, file_name, base_texts[], target_texts[] }',
+          sample: '{ "pair":"en-US_fr-FR", "base_texts":["set alarm for {time}"], "target_texts":["mettre une alarme pour {time}"] }',
+          list: langDownloadList('translation',
+            l => l === 'en-US' ? null : `data/datasets/translation/en-US_${l}.jsonl`,
+            l => `English → ${meta[l]?.native || l}`),
+        },
+        {
+          id: 'slot_filling',
+          title: 'Slot Filling / NER',
+          tag: 'NER',
+          tagColor: 'badge-amber',
+          desc: 'Intent utterance templates with all <code>{slot}</code> names extracted, plus known entity values from matching <code>.entity</code> files where available.',
+          schema: '{ lang, skill, intent, template, slots[], entity_values{} }',
+          sample: '{ "lang":"en-US", "template":"open {application}", "slots":["application"], "entity_values":{"application":["firefox","chrome"]} }',
+          list: langDownloadList('slot_filling',
+            l => `data/datasets/slot_filling/${l}.jsonl`,
+            l => meta[l]?.native || l),
+        },
+        {
+          id: 'response_pairs',
+          title: 'Response Pairs',
+          tag: 'Dialogue',
+          tagColor: 'badge-red',
+          desc: 'Paired (utterance, responses) derived from AST analysis — <code>context.triggers_dialog</code> maps each intent handler\'s <code>self.speak_dialog()</code> calls to the exact dialog templates it uses.',
+          schema: '{ lang, skill, intent, handler, utterance, responses[] }',
+          sample: '{ "lang":"en-US", "utterance":"did i miss a alarm", "handler":"handle_missed_alerts", "responses":["here\'s what you missed:", "you haven\'t missed any alerts."] }',
+          list: langDownloadList('response_pairs',
+            l => `data/datasets/response_pairs/${l}.jsonl`,
+            l => meta[l]?.native || l),
+        },
+        {
+          id: 'tts',
+          title: 'TTS Corpus',
+          tag: 'TTS',
+          tagColor: 'badge-gray',
+          desc: 'All dialog file lines — the spoken responses of OVOS skills — deduplicated and template-expanded. The largest dataset: ~113 MB across 26 languages.',
+          schema: '{ lang, skill, dialog, text }',
+          sample: '{ "lang":"en-US", "skill":"ovos-skill-alerts", "dialog":"alarm.beep.dialog", "text":"your alarm is going off" }',
+          list: langDownloadList('tts',
+            l => `data/datasets/tts/${l}.jsonl`,
+            l => meta[l]?.native || l),
+        },
+        {
+          id: 'skill_metadata',
+          title: 'Skill Metadata',
+          tag: 'Classification',
+          tagColor: 'badge-gray',
+          desc: 'Multilingual skill name, description, example voice commands, and tags from <code>skill.json</code> files. Useful for zero-shot classification baselines and skill discovery.',
+          schema: '{ lang, skill, name, description, examples[], tags[] }',
+          sample: '{ "lang":"fr-FR", "name":"Réveil", "description":"Gérez vos alarmes...", "examples":["réveille-moi à 7h"], "tags":["utilities"] }',
+          list: langDownloadList('skill_metadata',
+            l => `data/datasets/skill_metadata/${l}.jsonl`,
+            l => meta[l]?.native || l),
+        },
+      ];
 
       el.innerHTML = `
-        <div class="max-w-4xl mx-auto py-4">
-          <div class="mb-8 border-b border-ovos-card pb-6">
-            <h1 class="text-3xl font-bold mb-2">Open Data <span class="text-ovos-accent">Machine Learning Datasets</span></h1>
-            <p class="text-ovos-muted text-sm leading-relaxed mb-4">
-              OVOS Localize automatically processes thousands of OpenVoiceOS intent and dialog files to generate high-quality, open-source datasets for Machine Learning researchers. 
-              All templates are fully expanded, cleaned, lowercased, and deduplicated.
+        <div class="max-w-5xl mx-auto py-4">
+          <div class="mb-8">
+            <a href="#/" class="text-sm text-ovos-muted">&larr; Home</a>
+            <h1 class="text-2xl font-bold mt-2">Open Data <span class="text-ovos-accent">ML Datasets</span></h1>
+            <p class="text-sm text-ovos-muted mt-1 leading-relaxed">
+              Six dataset families auto-generated daily from OpenVoiceOS skill locale files — expanded, cleaned, and deduplicated. Apache 2.0.
             </p>
-            
-            <div class="bg-ovos-card rounded-xl p-5 border border-ovos-card">
-              <h3 class="font-bold mb-2 flex items-center gap-2">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                Load via HuggingFace
-              </h3>
-              <p class="text-xs text-ovos-muted mb-3">Stream datasets directly into your scripts:</p>
-              <pre class="bg-ovos-bg p-3 rounded-lg text-xs overflow-x-auto mono border border-ovos-card text-ovos-text"><code>from datasets import load_dataset
-# Example: en-US Intent Classification
-ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localize/data/datasets/classification/en-US.jsonl")</code></pre>
-            </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <div>
-              <h2 class="text-lg font-bold mb-4">Intent Classification</h2>
-              <div class="bg-ovos-card rounded-xl border border-ovos-card max-h-[400px] overflow-auto p-2">
-                ${clsHtml}
-              </div>
+          <div class="callout mb-8">
+            <div class="flex items-center gap-2 mb-2 font-bold text-sm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              Load via HuggingFace Datasets
             </div>
-            <div>
-              <h2 class="text-lg font-bold mb-4">Parallel Corpora</h2>
-              <div class="bg-ovos-card rounded-xl border border-ovos-card max-h-[400px] overflow-auto p-2">
-                ${traHtml}
-              </div>
-            </div>
+            <pre class="bg-ovos-bg p-3 rounded-lg text-xs overflow-x-auto mono border border-ovos-card text-ovos-text mt-2">from datasets import load_dataset
+
+BASE = "https://openvoiceos.github.io/ovos-localize/data/datasets"
+
+# Intent classification (NLU)
+ds = load_dataset("json", data_files=f"{BASE}/classification/en-US.jsonl")
+
+# Response pairs (Dialogue)
+ds = load_dataset("json", data_files=f"{BASE}/response_pairs/en-US.jsonl")
+
+# TTS corpus
+ds = load_dataset("json", data_files=f"{BASE}/tts/en-US.jsonl")
+
+# Slot filling / NER
+ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
           </div>
 
-          <div class="bg-ovos-card rounded-xl p-5 border border-ovos-card mb-8">
-            <h3 class="text-lg font-bold mb-4">Unified Dataset (Split TSVs)</h3>
-            <div class="flex flex-wrap gap-3">
-              <a href="data/dataset.tsv" download class="px-4 py-2 bg-ovos-bg border border-ovos-card rounded-lg text-sm hover:no-underline">dataset.tsv</a>
-              <a href="data/dataset_1.tsv" download class="px-4 py-2 bg-ovos-bg border border-ovos-card rounded-lg text-sm hover:no-underline">dataset_1.tsv</a>
-              <a href="data/dataset_2.tsv" download class="px-4 py-2 bg-ovos-bg border border-ovos-card rounded-lg text-sm hover:no-underline">dataset_2.tsv</a>
+          <div class="space-y-6">
+            ${datasets.map(d => `
+            <div class="bg-ovos-card rounded-xl border border-ovos-card overflow-hidden">
+              <div class="p-4 flex items-start gap-3">
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2 mb-1">
+                    <h2 class="text-base font-bold">${d.title}</h2>
+                    <span class="badge ${d.tagColor} text-xs">${d.tag}</span>
+                  </div>
+                  <p class="text-sm text-ovos-muted mb-2">${d.desc}</p>
+                  <code class="text-xs text-ovos-accent bg-ovos-bg px-2 py-0.5 rounded mono">${escapeHtml(d.schema)}</code>
+                  <details class="mt-2">
+                    <summary class="text-xs text-ovos-muted cursor-pointer hover:text-ovos-text select-none">Sample record</summary>
+                    <pre class="mt-1 bg-ovos-bg p-2 rounded text-xs mono overflow-x-auto text-ovos-text border border-ovos-card">${escapeHtml(d.sample)}</pre>
+                  </details>
+                </div>
+              </div>
+              <div class="border-t border-ovos-card max-h-52 overflow-auto p-2">
+                ${d.list || '<p class="text-xs text-ovos-muted p-2">No files available.</p>'}
+              </div>
+            </div>`).join('')}
+          </div>
+
+          <div class="mt-8 bg-ovos-card rounded-xl p-4 border border-ovos-card">
+            <h3 class="font-bold mb-3 text-sm">Unified TSV (legacy)</h3>
+            <div class="flex flex-wrap gap-2">
+              <a href="data/dataset.tsv" download class="px-3 py-1.5 bg-ovos-bg border border-ovos-card rounded-lg text-sm hover:no-underline hover:bg-ovos-hover">dataset.tsv</a>
+              <a href="data/dataset_1.tsv" download class="px-3 py-1.5 bg-ovos-bg border border-ovos-card rounded-lg text-sm hover:no-underline hover:bg-ovos-hover">dataset_1.tsv</a>
+              <a href="data/dataset_2.tsv" download class="px-3 py-1.5 bg-ovos-bg border border-ovos-card rounded-lg text-sm hover:no-underline hover:bg-ovos-hover">dataset_2.tsv</a>
             </div>
           </div>
         </div>
