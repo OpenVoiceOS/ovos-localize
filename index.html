@@ -1748,7 +1748,7 @@ ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localiz
           : `Create a new ${fileKey} file. Add example values, one per line.`)
         : (FILE_TYPE_HELP[fileData.type] || 'Translate this file to your language.');
       const isJsonFile = !isCreateMode && (fileData.type === 'skill.json' || fileData.type === 'settingsmeta');
-      const hasExpansion = isCreateMode ? fileType === 'entity' : ['intent', 'voc', 'dialog'].includes(fileData.type);
+      const hasExpansion = isCreateMode ? false : ['intent', 'voc', 'dialog'].includes(fileData.type);
 
       // Source language
       const availableSrcLangs = isCreateMode ? [] : Object.keys(fileData.langs).filter(l => l !== lang);
