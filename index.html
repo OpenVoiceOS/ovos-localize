@@ -1728,8 +1728,9 @@ ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localiz
       const currentText = targetData?.entries?.length ? targetData.entries.map(e => e.text).join('\n') : '';
       const isNew = isCreateMode || !targetData || targetData.entries.length === 0;
       // For entity create mode: find intent files that use this slot
-      const entityCreateIntents = (() => {
-        if (!isCreateMode || fileType !== 'entity') return [];
+      // Intent files that use this entity slot — shown for ALL entity files (create or existing)
+      const entityContextIntents = (() => {
+        if (fileType !== 'entity') return [];
         const slotName = fileKey.replace('.entity', '');
         const pattern = new RegExp(`\\{${slotName}\\}`, 'i');
         return Object.entries(skill.files)
@@ -1741,12 +1742,13 @@ ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localiz
             return { key: k, entries: (srcLd?.entries || []).filter(e => pattern.test(e.text)).slice(0, 6), displayLang };
           });
       })();
+      const hasEntityContext = fileType === 'entity';
 
-      const fileHelp = isCreateMode
-        ? (fileType === 'entity' && entityCreateIntents.length
-          ? `<strong>{${fileKey.replace('.entity','')}}</strong> is used in ${entityCreateIntents.length} intent file${entityCreateIntents.length>1?'s':''}. Add example values that can fill this slot — one per line.`
-          : `Create a new ${fileKey} file. Add example values, one per line.`)
-        : (FILE_TYPE_HELP[fileData.type] || 'Translate this file to your language.');
+      const fileHelp = hasEntityContext && entityContextIntents.length
+        ? `<strong>{${fileKey.replace('.entity','')}}</strong> is used in ${entityContextIntents.length} intent file${entityContextIntents.length>1?'s':''}. Add example values that can fill this slot — one per line.`
+        : isCreateMode
+          ? `Create a new ${fileKey} file. Add example values, one per line.`
+          : (FILE_TYPE_HELP[fileData.type] || 'Translate this file to your language.');
       const isJsonFile = !isCreateMode && (fileData.type === 'skill.json' || fileData.type === 'settingsmeta');
       const hasExpansion = isCreateMode ? false : ['intent', 'voc', 'dialog'].includes(fileData.type);
 
@@ -1843,7 +1845,7 @@ ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localiz
           <div class="flex flex-col gap-3 overflow-hidden">
             <div class="bg-ovos-card rounded-xl p-3 flex flex-col overflow-hidden ${hasExpansion ? '' : 'flex-1'}">
               <div class="flex items-center gap-2 mb-2 flex-shrink-0">
-                <h3 class="text-sm font-bold">${isCreateMode && fileType === 'entity' ? `Intents using <span class="slot">{${escapeHtml(fileKey.replace('.entity',''))}}</span>` : 'Source'}</h3>
+                <h3 class="text-sm font-bold">${hasEntityContext ? `Intents using <span class="slot">{${escapeHtml(fileKey.replace('.entity',''))}}</span>` : 'Source'}</h3>
                 ${!isCreateMode ? `<select id="src-lang-select" class="text-xs py-0.5 px-1.5 rounded bg-ovos-bg border border-ovos-card text-ovos-muted" onchange="changeSrcLang(this.value,'${skillId}','${encodeURIComponent(fileKey)}','${lang}')">
                   ${availableSrcLangs.map(l => `<option value="${l}" ${l === srcLang ? 'selected' : ''}>${l}</option>`).join('')}
                   ${!availableSrcLangs.length ? `<option value="${lang}" selected>${lang}</option>` : ''}
@@ -1852,9 +1854,9 @@ ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localiz
               </div>
               <div class="overflow-auto flex-1 text-sm mono leading-relaxed">
                 ${(() => {
-                  if (isCreateMode && fileType === 'entity' && entityCreateIntents.length) {
+                  if (hasEntityContext && entityContextIntents.length) {
                     const slotName = fileKey.replace('.entity', '');
-                    return entityCreateIntents.map(({ key, entries, displayLang }) =>
+                    return entityContextIntents.map(({ key, entries, displayLang }) =>
                       `<div class="mb-3">
                         <div class="text-xs text-ovos-muted mb-1 flex items-center gap-1.5 mono">
                           ${escapeHtml(key)}
@@ -1884,11 +1886,11 @@ ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localiz
               ${srcData ? `<div class="mt-2 text-xs text-ovos-muted flex-shrink-0">${srcData.entries.length} line${srcData.entries.length!==1?'s':''} &middot; ${(srcData.slots||[]).length ? 'Slots: ' + srcData.slots.map(s=>'<span class="slot">{'+s+'}</span>').join(', ') : 'No slots'}</div>` : ''}
             </div>
 
-            ${hasExpansion && srcData?.entries?.length ? `
-            <!-- Source expanded sentences -->
+            ${(hasExpansion && srcData?.entries?.length) || (hasEntityContext && entityContextIntents.length) ? `
+            <!-- Source expanded sentences / entity intent expansion -->
             <div class="bg-ovos-card rounded-xl p-3 flex-1 flex flex-col overflow-hidden min-h-0">
               <div class="flex items-center gap-2 mb-2 flex-shrink-0">
-                <h3 class="text-xs font-bold text-ovos-muted">${srcLang} expanded</h3>
+                <h3 class="text-xs font-bold text-ovos-muted">${hasEntityContext ? 'Expanded intent sentences' : `${srcLang} expanded`}</h3>
                 <span id="en-expansion-count" class="badge badge-gray text-xs"></span>
               </div>
               <div id="en-expansion-list" class="overflow-auto flex-1 text-xs mono leading-relaxed space-y-0.5"></div>
@@ -1899,14 +1901,14 @@ ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localiz
           <div class="flex flex-col gap-3 overflow-hidden">
             <div class="bg-ovos-card rounded-xl p-3 flex flex-col overflow-hidden ${hasExpansion ? 'flex-1' : 'flex-1'}">
               <div class="flex items-center gap-2 mb-2 flex-shrink-0">
-                <h3 class="text-sm font-bold">${isCreateMode && fileType === 'entity' ? `Values for <span class="slot">{${escapeHtml(fileKey.replace('.entity',''))}}</span> <span class="font-normal text-ovos-muted">(${lang})</span>` : `${lang} translation`}</h3>
+                <h3 class="text-sm font-bold">${hasEntityContext ? `Values for <span class="slot">{${escapeHtml(fileKey.replace('.entity',''))}}</span> <span class="font-normal text-ovos-muted">(${lang})</span>` : `${lang} translation`}</h3>
                 ${isNew ? '<span class="badge badge-amber">new file</span>' : ''}
                 ${isJsonFile ? '<span class="badge badge-blue">JSON</span>' : ''}
                 ${ctx?.slots?.length ? `<div class="ml-auto flex gap-1 flex-shrink-0">${ctx.slots.map(s =>
                   `<span class="slot cursor-pointer text-xs px-1 rounded hover:bg-ovos-bg" onclick="insertSlot('${s}')" title="Click to insert {${s}} at cursor">{${s}}</span>`
                 ).join('')}</div>` : ''}
               </div>
-              ${isCreateMode && fileType === 'entity' ? `
+              ${hasEntityContext ? `
               <div class="callout callout-warn mb-2 text-xs flex-shrink-0">
                 <strong>One value per line.</strong> Each line is a concrete example that can replace
                 <span class="slot">{${escapeHtml(fileKey.replace('.entity',''))}}</span> in the intent.
@@ -1969,7 +1971,7 @@ ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localiz
               ` : `
                 <textarea id="translation-editor"
                   class="flex-1 w-full bg-ovos-input text-ovos-text p-3 rounded-lg border border-ovos-card text-sm resize-none leading-relaxed mono"
-                  placeholder="${isCreateMode && fileType === 'entity' ? `Example values that {${fileKey.replace('.entity','')}} can be replaced with, one per line.&#10;&#10;Example:&#10;value one&#10;value two&#10;value three` : isNew ? 'Type your translation here, one line per entry...&#10;&#10;Look at the source on the left for reference.&#10;Keep {variables} exactly as they are.' : 'Edit the translation...'}"
+                  placeholder="${hasEntityContext ? `Example values that {${fileKey.replace('.entity','')}} can be replaced with, one per line.&#10;&#10;Example:&#10;value one&#10;value two&#10;value three` : isNew ? 'Type your translation here, one line per entry...&#10;&#10;Look at the source on the left for reference.&#10;Keep {variables} exactly as they are.' : 'Edit the translation...'}"
                   spellcheck="true"
                 >${escapeHtml(currentText)}</textarea>
               `}
@@ -2085,8 +2087,20 @@ ds = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localiz
       editor.addEventListener('input', updateCounts);
       updateCounts();
 
-      // Populate English expansion preview (one-time, static)
-      if (hasExpansion && srcData?.entries?.length) {
+      // Populate source expansion preview (one-time, static)
+      if (hasEntityContext && entityContextIntents.length) {
+        // Expand all intent sentences that contain this slot
+        const allEntries = entityContextIntents.flatMap(i => i.entries).map(e => e.text);
+        const { total, samples } = expandAllLines(allEntries.join('\n'), 50, 200);
+        const enCountEl = document.getElementById('en-expansion-count');
+        const enListEl = document.getElementById('en-expansion-list');
+        if (enCountEl) enCountEl.textContent = `${total} sentences`;
+        if (enListEl) {
+          enListEl.innerHTML = samples.map((s, i) =>
+            `<div class="px-1 rounded ${i % 2 ? '' : 'bg-ovos-bg/30'}">${highlightSlots(escapeHtml(s))}</div>`
+          ).join('') + (total > samples.length ? `<div class="text-ovos-muted mt-1">... and ${total - samples.length} more</div>` : '');
+        }
+      } else if (hasExpansion && srcData?.entries?.length) {
         const enText = srcData.entries.map(e => e.text).join('\n');
         const { total, samples } = expandAllLines(enText, 30, 150);
         const enCountEl = document.getElementById('en-expansion-count');
