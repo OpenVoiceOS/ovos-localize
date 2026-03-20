@@ -1818,8 +1818,10 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         if (fileType !== 'entity') return [];
         const slotName = fileKey.replace('.entity', '');
         const pattern = new RegExp(`\\{${slotName}\\}`, 'i');
-        const intentEntries = Object.entries(skill.files).filter(([k, f]) => k.endsWith('.intent'));
-        const direct = intentEntries
+        const slotBearingTypes = new Set(['intent', 'dialog', 'voc', 'rx']);
+        const candidateEntries = Object.entries(skill.files)
+          .filter(([k, f]) => slotBearingTypes.has(f.type));
+        const direct = candidateEntries
           .filter(([k, f]) => Object.values(f.langs || {}).some(ld => (ld.entries || []).some(e => pattern.test(e.text))))
           .map(([k, f]) => {
             const srcLd = f.langs?.[lang] || f.langs?.['en-US'] || Object.values(f.langs || {})[0];
@@ -1827,12 +1829,14 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
             return { key: k, entries: (srcLd?.entries || []).filter(e => pattern.test(e.text)).slice(0, 6), displayLang, fallback: false };
           });
         if (direct.length) return direct;
-        // No direct {slotName} references — show all skill intents as broader context
-        return intentEntries.map(([k, f]) => {
-          const srcLd = f.langs?.[lang] || f.langs?.['en-US'] || Object.values(f.langs || {})[0];
-          const displayLang = f.langs?.[lang] ? lang : (f.langs?.['en-US'] ? 'en-US' : Object.keys(f.langs || {})[0]);
-          return { key: k, entries: (srcLd?.entries || []).slice(0, 5), displayLang, fallback: true };
-        });
+        // No direct {slotName} references anywhere — fall back to all intent files for context
+        return candidateEntries
+          .filter(([k, f]) => f.type === 'intent')
+          .map(([k, f]) => {
+            const srcLd = f.langs?.[lang] || f.langs?.['en-US'] || Object.values(f.langs || {})[0];
+            const displayLang = f.langs?.[lang] ? lang : (f.langs?.['en-US'] ? 'en-US' : Object.keys(f.langs || {})[0]);
+            return { key: k, entries: (srcLd?.entries || []).slice(0, 5), displayLang, fallback: true };
+          });
       })();
       const hasEntityContext = fileType === 'entity';
 
