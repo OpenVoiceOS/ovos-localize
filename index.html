@@ -1846,7 +1846,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         : isCreateMode
           ? `Create a new ${fileKey} file. Add example values, one per line.`
           : (FILE_TYPE_HELP[fileData.type] || 'Translate this file to your language.');
-      const isJsonFile = !isCreateMode && (fileData.type === 'skill.json' || fileData.type === 'settingsmeta');
+      const isJsonFile = !isCreateMode && (fileData.type === 'skill.json' || fileData.type === 'settingsmeta' || fileData.type === 'resource_json');
       const hasExpansion = isCreateMode ? false : ['intent', 'voc', 'dialog'].includes(fileData.type);
 
       // Source language
@@ -2051,8 +2051,8 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
                       }
                       if (isList) {
                         // List field: textarea
-                        const tgtText = tgtItems.length ? tgtItems.map(e=>e.text).join('\\n') : '';
-                        const srcText = srcItems.map(e=>e.text).join('\\n');
+                        const tgtText = tgtItems.length ? tgtItems.map(e=>e.text).join('\n') : '';
+                        const srcText = srcItems.map(e=>e.text).join('\n');
                         return '<div class="p-2 bg-ovos-bg rounded-lg"><label class="text-xs font-bold text-ovos-accent">' + escapeHtml(key) + ' <span class="text-ovos-muted font-normal">(one per line)</span></label><div class="text-xs text-ovos-muted mt-0.5 mb-1">English: ' + escapeHtml(srcText.substring(0,80)) + (srcText.length > 80 ? '...' : '') + '</div><textarea class="json-field w-full bg-ovos-input text-ovos-text p-2 rounded border border-ovos-card text-sm mono resize-none" rows="' + Math.max(3, srcItems.length) + '" data-key="' + escapeHtml(key) + '" data-list="1" spellcheck="true">' + escapeHtml(tgtText) + '</textarea></div>';
                       } else {
                         // Single field: input

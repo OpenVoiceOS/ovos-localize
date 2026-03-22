@@ -132,7 +132,7 @@ def _extract_lang_from_path(file_path: Path, locale_root: Path) -> Optional[str]
     try:
         relative = file_path.relative_to(locale_root)
         parts = relative.parts
-        if parts:
+        if len(parts) >= 2 and _is_lang_dir(parts[0]):
             return parts[0]
     except ValueError:
         pass
