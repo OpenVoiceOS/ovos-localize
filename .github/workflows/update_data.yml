@@ -23,7 +23,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install package
-        run: pip install -e ".[dev]"
+        run: pip install -e ".[dev]" --pre -c https://raw.githubusercontent.com/OpenVoiceOS/OpenVoiceOS/refs/heads/main/constraints-alpha.txt
 
       - name: Generate data
         run: python scripts/generate_data.py
