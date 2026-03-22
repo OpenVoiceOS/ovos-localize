@@ -449,7 +449,7 @@ def build_stats_json(all_skills: List[Dict[str, Any]], coverage: Dict[str, Any])
     Returns:
         Stats dict with per-language breakdown.
     """
-    file_types = ["intent", "voc", "dialog", "entity", "rx", "value", "skill.json"]
+    file_types = ["intent", "voc", "dialog", "entity", "rx", "value", "skill.json", "resource_json"]
     langs = list(coverage.get("languages", []))
 
     # Count source files per type (source lang varies per skill)

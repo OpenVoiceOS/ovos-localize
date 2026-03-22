@@ -8,6 +8,7 @@ from ovos_localize.parsers.entity import EntityParser
 from ovos_localize.parsers.regex import RegexParser
 from ovos_localize.parsers.value import ValueParser
 from ovos_localize.parsers.skill_json import SkillJsonParser
+from ovos_localize.parsers.resource_json import ResourceJsonParser
 from ovos_localize.parsers.settings_meta import SettingsMetaParser
 
 PARSERS = {
@@ -41,6 +42,9 @@ def get_parser(filename: str) -> type:
     for ext, parser in PARSERS.items():
         if ext.startswith(".") and basename.endswith(ext):
             return parser
+    # Generic JSON data files
+    if basename.endswith(".json"):
+        return ResourceJsonParser
     return None
 
 
@@ -54,6 +58,7 @@ __all__ = [
     "RegexParser",
     "ValueParser",
     "SkillJsonParser",
+    "ResourceJsonParser",
     "SettingsMetaParser",
     "PARSERS",
     "get_parser",

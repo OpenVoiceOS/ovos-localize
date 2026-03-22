@@ -111,6 +111,9 @@ def _detect_file_type(filename: str) -> Optional[FileType]:
     for ext, ft in _EXT_TO_FILE_TYPE.items():
         if filename.endswith(ext):
             return ft
+    # Generic .json data files (not skill.json/settingsmeta)
+    if filename.endswith(".json"):
+        return FileType.RESOURCE_JSON
     return None
 
 

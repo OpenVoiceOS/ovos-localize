@@ -20,6 +20,7 @@ class FileType(str, enum.Enum):
     SETTINGS_META = "settingsmeta"
     NOISE_WORDS = "noise_words"
     WORD_CONNECTORS = "word_connectors"
+    RESOURCE_JSON = "resource_json"
 
 
 class IntentSystem(str, enum.Enum):
