@@ -685,6 +685,9 @@ def main() -> None:
         print(f"  [{i}/{len(skills_list)}] {org}/{repo}...", end=" ", flush=True)
         try:
             scan = scanner.full_sync(org, repo)
+            if not scan.locale_files:
+                print("SKIPPED (no locale files)")
+                continue
             skill_json = build_skill_json(scan, org, repo)
             all_skills.append(skill_json)
 
