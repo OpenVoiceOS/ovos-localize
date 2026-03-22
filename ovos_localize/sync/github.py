@@ -7,6 +7,7 @@ Handles:
 - Generating code context via AST analysis
 """
 
+import re
 import subprocess
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -17,6 +18,21 @@ from ovos_localize.enums import FileType, IntentSystem
 from ovos_localize.lang_utils import normalize_lang_code
 from ovos_localize.parsers import get_parser
 from ovos_localize.parsers.base import ParsedFile
+
+# Matches BCP-47 language codes: "en", "pt-BR", "zh-hans", etc.
+_LANG_DIR_RE = re.compile(r"^[a-z]{2,3}(-[a-zA-Z]{2,})?$")
+
+
+def _is_lang_dir(name: str) -> bool:
+    """Check if a directory name looks like a BCP-47 language code.
+
+    Args:
+        name: Directory name to check.
+
+    Returns:
+        True if name matches a language code pattern.
+    """
+    return bool(_LANG_DIR_RE.match(name))
 
 
 @dataclass
@@ -298,7 +314,7 @@ class RepoScanner:
             if candidate.is_dir():
                 # Must have at least one language subdirectory
                 for child in candidate.iterdir():
-                    if child.is_dir() and "-" in child.name:
+                    if child.is_dir() and _is_lang_dir(child.name):
                         return candidate
         return None
 
