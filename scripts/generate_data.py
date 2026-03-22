@@ -139,6 +139,25 @@ def _make_edit_url(org: str, repo: str, relative_path: str, branch: str = "dev")
     return f"https://github.com/{org}/{repo}/edit/{branch}/{relative_path}"
 
 
+def _detect_source_lang(skill: Dict[str, Any]) -> str:
+    """Detect the source language for a skill (the one with the most files).
+
+    Args:
+        skill: Per-skill JSON dict with a ``files`` key.
+
+    Returns:
+        BCP-47 language code of the source language.
+    """
+    lang_counts: Dict[str, int] = {}
+    for fd in skill["files"].values():
+        for lang in fd["langs"]:
+            lang_counts[lang] = lang_counts.get(lang, 0) + 1
+    if not lang_counts:
+        return "en-US"
+    # Prefer en-US when tied
+    return max(lang_counts, key=lambda k: (lang_counts[k], k == "en-US"))
+
+
 def _compute_file_coverage(
     files_by_lang: Dict[str, List[ScannedFile]],
     file_type: FileType,
@@ -184,7 +203,6 @@ def build_skill_json(
         Dict representing the full skill detail JSON.
     """
     skill_id = _make_skill_id(repo)
-    en_files = [f for f in scan.locale_files if f.lang == "en-US"]
 
     # Group files by base_name across languages
     files_by_base: Dict[str, Dict[str, ScannedFile]] = {}
@@ -196,10 +214,13 @@ def build_skill_json(
     for f in scan.locale_files:
         files_by_lang.setdefault(f.lang, []).append(f)
 
+    # Determine source language (most files, prefer en-US when tied)
+    source_lang = max(files_by_lang, key=lambda k: (len(files_by_lang[k]), k == "en-US")) if files_by_lang else "en-US"
+
     # Build source file lookup for validation
     sources: Dict[str, ParsedFile] = {}
     for f in scan.locale_files:
-        if f.lang == "en-US" and f.parsed:
+        if f.lang == source_lang and f.parsed:
             sources[f.base_name] = f.parsed
 
     # Build file entries
@@ -211,8 +232,8 @@ def build_skill_json(
             FileType.SKILL_JSON, FileType.SETTINGS_META
         ) else sample.file_type.value
 
-        # Build context card from en-us file if available
-        en_file = lang_map.get("en-US", sample)
+        # Build context card from source language file if available
+        en_file = lang_map.get(source_lang, sample)
         context_card = build_context_card(
             en_file,
             scan.skill_analysis,
@@ -226,7 +247,7 @@ def build_skill_json(
             issues: List[ValidationIssue] = []
             if scanned.parsed:
                 source = sources.get(base_name)
-                issues = validate_file(scanned.parsed, source if lang != "en-US" else None)
+                issues = validate_file(scanned.parsed, source if lang != source_lang else None)
 
             entries = []
             for ln in (scanned.parsed.content_lines if scanned.parsed else []):
@@ -284,6 +305,8 @@ def build_coverage_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
         skill_ids.append(sid)
         all_langs.update(skill["languages"])
 
+        source_lang = _detect_source_lang(skill)
+
         # Count files by type per language
         type_counts: Dict[str, Dict[str, int]] = {}
         source_counts: Dict[str, int] = {}
@@ -292,7 +315,7 @@ def build_coverage_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
             for lang, lang_data in file_data["langs"].items():
                 type_counts.setdefault(ft, {}).setdefault(lang, 0)
                 type_counts[ft][lang] += 1
-                if lang == "en-US":
+                if lang == source_lang:
                     source_counts[ft] = source_counts.get(ft, 0) + 1
 
         # Compute per-language coverage
@@ -429,12 +452,13 @@ def build_stats_json(all_skills: List[Dict[str, Any]], coverage: Dict[str, Any])
     file_types = ["intent", "voc", "dialog", "entity", "rx", "value", "skill.json"]
     langs = list(coverage.get("languages", []))
 
-    # Count source (en-US) files per type
+    # Count source files per type (source lang varies per skill)
     source_counts: Dict[str, int] = {}
     for skill in all_skills:
+        sl = _detect_source_lang(skill)
         for fd in skill["files"].values():
             ft = fd["type"]
-            if "en-US" in fd["langs"]:
+            if sl in fd["langs"]:
                 source_counts[ft] = source_counts.get(ft, 0) + 1
 
     total_source = sum(source_counts.values())
@@ -447,13 +471,14 @@ def build_stats_json(all_skills: List[Dict[str, Any]], coverage: Dict[str, Any])
         skills_fully_translated = 0
 
         for skill in all_skills:
+            sl = _detect_source_lang(skill)
             has_any = False
             # A skill is fully translated when every source file has a translation
             source_total = 0
             source_have = 0
             for fd in skill["files"].values():
                 ft = fd["type"]
-                has_source = "en-US" in fd["langs"]
+                has_source = sl in fd["langs"]
                 has_lang = lang in fd["langs"]
                 if has_lang:
                     has_any = True
@@ -593,7 +618,7 @@ def build_entities_json(all_skills: List[Dict[str, Any]]) -> List[Dict[str, Any]
         for fk, fd in skill["files"].items():
             if fd["type"] != "intent":
                 continue
-            en_data = fd["langs"].get("en-US", {})
+            en_data = fd["langs"].get(_detect_source_lang(skill), {})
             for entry in en_data.get("entries", []):
                 import re
                 for slot in re.findall(r"\{(\w+)\}", entry.get("text", "")):

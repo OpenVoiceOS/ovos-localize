@@ -12,6 +12,7 @@ import langcodes
 EXPLICIT_MAPPING = {
     "ca": "ca-ES",
     "de": "de-DE",
+    "en": "en-US",
     "es": "es-ES",
     "fa-FA": "fa-IR",
     "fr": "fr-FR",
