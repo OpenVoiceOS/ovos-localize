@@ -300,22 +300,22 @@ class RepoScanner:
     def _find_locale_dir(repo_path: Path) -> Optional[Path]:
         """Find the locale directory in a repository.
 
-        Searches for ``locale/`` directory containing language subdirectories.
+        Searches for ``locale/`` or ``res/`` directories containing language
+        subdirectories.
 
         Args:
             repo_path: Path to the repository root.
 
         Returns:
-            Path to locale/ directory or None.
+            Path to locale/ or res/ directory, or None.
         """
-        # Direct locale/ at repo root
-        candidates = list(repo_path.glob("**/locale"))
-        for candidate in candidates:
-            if candidate.is_dir():
-                # Must have at least one language subdirectory
-                for child in candidate.iterdir():
-                    if child.is_dir() and _is_lang_dir(child.name):
-                        return candidate
+        for dir_name in ("locale", "res"):
+            candidates = list(repo_path.glob(f"**/{dir_name}"))
+            for candidate in candidates:
+                if candidate.is_dir():
+                    for child in candidate.iterdir():
+                        if child.is_dir() and _is_lang_dir(child.name):
+                            return candidate
         return None
 
     @staticmethod
