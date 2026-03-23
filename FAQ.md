@@ -54,5 +54,8 @@ The allowlist lives in `config/enabled_languages.txt` — `_load_enabled_languag
 ### Who approves new language requests?
 A maintainer must review and merge the automatically-created PR before the language appears. This prevents invalid codes (e.g. `klingon`, `xx-XX`) from polluting the platform.
 
+### Why wasn't the automation triggered when I submitted a language request?
+GitHub ignores `?labels=` query parameters for users without write access to the repo, so issues created via the frontend URL arrive without any labels. The `enable_new_language.yml` workflow now detects language requests by title prefix (`Add language:`) or body content (`NEW_LANGUAGE_META`) in addition to the `new-language` label, so label-less issues are handled correctly.
+
 ### Why were eu-EU, eu, and es-LM dataset files removed?
 After BCP-47 normalization was added (`lang_utils.EXPLICIT_MAPPING`), `eu-EU` and `eu` both normalize to `eu-ES`, and `es-LM` normalizes to `es-419`. The old files contained data tagged with deprecated codes; they were replaced by `eu-ES.jsonl` and `es-419.jsonl`.

@@ -12,7 +12,9 @@ jobs:
   open-pr:
     if: |
       github.event_name == 'issues' &&
-      contains(github.event.issue.labels.*.name, 'new-language')
+      (contains(github.event.issue.labels.*.name, 'new-language') ||
+       startsWith(github.event.issue.title, 'Add language:') ||
+       contains(github.event.issue.body, 'NEW_LANGUAGE_META'))
     runs-on: ubuntu-latest
     permissions:
       contents: write
