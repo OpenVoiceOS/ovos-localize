@@ -63,6 +63,7 @@ jobs:
           LANG_CODE: ${{ steps.parse.outputs.lang_code }}
           LANG_NAME: ${{ steps.parse.outputs.lang_name }}
           AUTHOR: ${{ steps.parse.outputs.author }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
           FILE="config/enabled_languages.txt"
           # Duplicate check (case-insensitive)
@@ -76,9 +77,7 @@ jobs:
           git config user.name "ovos-localize[bot]"
           git config user.email "ovos-localize[bot]@users.noreply.github.com"
           git add "$FILE"
-          git commit -m "feat(i18n): enable ${LANG_CODE} (${LANG_NAME})
-
-Requested by @${AUTHOR} via issue #${{ github.event.issue.number }}"
+          git commit -m "feat(i18n): enable ${LANG_CODE} (${LANG_NAME})" -m "Requested by @${AUTHOR} via issue #${ISSUE_NUMBER}"
           git push origin "$BRANCH_NAME"
           echo "already_exists=false" >> "$GITHUB_OUTPUT"
           echo "branch_name=$BRANCH_NAME" >> "$GITHUB_OUTPUT"
