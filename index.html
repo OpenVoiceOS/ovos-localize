@@ -317,7 +317,7 @@
                   class="mt-1 w-full bg-ovos-input text-ovos-text px-3 py-2 rounded-lg border border-ovos-card text-sm">
               </div>
               <div>
-                <label class="text-xs font-bold text-ovos-muted">Language code <span class="font-normal">(optional)</span></label>
+                <label class="text-xs font-bold text-ovos-muted">Language code <span class="font-normal text-ovos-muted">(BCP-47, e.g. hi-IN)</span></label>
                 <input id="req-lang-code" type="text" placeholder="e.g. hi-IN"
                   class="mt-1 w-full bg-ovos-input text-ovos-text px-3 py-2 rounded-lg border border-ovos-card text-sm mono">
               </div>
@@ -337,13 +337,18 @@
       const name = document.getElementById('req-lang-name')?.value.trim();
       const code = document.getElementById('req-lang-code')?.value.trim();
       if (!name) { toast('Enter a language name', 'amber'); return; }
-      const title = encodeURIComponent('Add language: ' + name + (code ? ' (' + code + ')' : ''));
-      const body = encodeURIComponent(
-        '## New language request\\n\\n' +
-        '- **Language**: ' + name + '\\n' +
-        (code ? '- **Code**: `' + code + '`\\n' : '') +
-        '\\nI am volunteering to help translate OVOS skills into this language.'
-      );
+      if (!code) { toast('Enter a BCP-47 language code (e.g. hi-IN)', 'amber'); return; }
+      if (!/^[a-zA-Z]{2,3}(-[a-zA-Z0-9]{2,})*$/.test(code)) {
+        toast('Invalid language code format. Use BCP-47, e.g. hi-IN', 'amber'); return;
+      }
+      const title = encodeURIComponent('Add language: ' + name + ' (' + code + ')');
+      const payload =
+        '<!-- NEW_LANGUAGE_META\n' +
+        'name: ' + name + '\n' +
+        'code: ' + code + '\n' +
+        '-->\n\n' +
+        'I am requesting the **' + name + '** (`' + code + '`) language to be added to OVOS Localize so I can start contributing translations.';
+      const body = encodeURIComponent(payload);
       window.open('https://github.com/OpenVoiceOS/ovos-localize/issues/new?title=' + title + '&body=' + body + '&labels=new-language', '_blank');
       closeModal();
     }

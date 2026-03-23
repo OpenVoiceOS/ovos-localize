@@ -1,5 +1,15 @@
 # Maintenance Report - ovos-localize
 
+## [2026-03-23] - Request a new language workflow
+- **AI Model**: Claude Sonnet 4.6
+- **Actions Taken**:
+    - Added `config/enabled_languages.txt` — allowlist of explicitly enabled BCP-47 codes; empty by default, managed by automation.
+    - Added `_load_enabled_languages()` in `scripts/generate_data.py` — reads the allowlist and seeds `all_langs` before scanning, so those codes appear in `coverage.json`/`stats.json` at 0 % when no locale files exist yet.
+    - Added `.github/ISSUE_TEMPLATE/new_language.yml` — issue form for requesting a new language.
+    - Added `.github/workflows/enable_new_language.yml` — two-job workflow: (1) on issue open, validates the BCP-47 code and opens a PR for maintainer review; (2) on PR merge into `dev`, triggers `update_data.yml` for a data refresh.
+    - Updated `index.html` `submitLangRequest()` — BCP-47 code is now required, validated client-side, and embedded as a `<!-- NEW_LANGUAGE_META ... -->` block in the issue body so the workflow can parse it reliably.
+- **Oversight**: Human review required (PR must be approved before language is enabled).
+
 ## [2026-03-20] - Four New Open Data Dataset Generators
 - **AI Model**: Claude Sonnet 4.6
 - **Actions Taken**:

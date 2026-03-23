@@ -28,6 +28,7 @@ from ovos_localize.validators.rules import ValidationIssue, validate_file
 # Repo root (where this script lives under scripts/)
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SKILLS_FILE = REPO_ROOT / "skills.txt"
+ENABLED_LANGS_FILE = REPO_ROOT / "config" / "enabled_languages.txt"
 DATA_DIR = REPO_ROOT / "data"
 SKILLS_DATA_DIR = DATA_DIR / "skills"
 
@@ -287,6 +288,32 @@ def build_skill_json(
     }
 
 
+def _load_enabled_languages() -> List[str]:
+    """Return language codes from ``config/enabled_languages.txt``.
+
+    Lines starting with ``#`` and blank lines are ignored.  The codes are
+    normalised via :func:`~ovos_localize.lang_utils.normalize_lang_code` so
+    they are consistent with the rest of the pipeline.
+
+    Returns:
+        Sorted list of normalised BCP-47 codes.
+    """
+    from ovos_localize.lang_utils import normalize_lang_code
+
+    if not ENABLED_LANGS_FILE.exists():
+        return []
+    codes: List[str] = []
+    for raw in ENABLED_LANGS_FILE.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        try:
+            codes.append(normalize_lang_code(line))
+        except Exception:
+            pass  # skip malformed lines silently
+    return sorted(set(codes))
+
+
 def build_coverage_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
     """Build coverage matrix JSON from all skill data.
 
@@ -296,7 +323,7 @@ def build_coverage_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
     Returns:
         Coverage matrix dict.
     """
-    all_langs: set = set()
+    all_langs: set = set(_load_enabled_languages())
     skill_ids: List[str] = []
     matrix: Dict[str, Dict[str, Dict[str, float]]] = {}
 

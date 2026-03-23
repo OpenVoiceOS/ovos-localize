@@ -1,0 +1,159 @@
+name: Enable New Language
+
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [closed]
+    branches: [dev]
+
+jobs:
+  # ── Job 1: opened issue with new-language label → open a PR ──────────────
+  open-pr:
+    if: |
+      github.event_name == 'issues' &&
+      contains(github.event.issue.labels.*.name, 'new-language')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+
+    steps:
+      - name: Parse issue body
+        id: parse
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body || '';
+            const match = body.match(/<!--\s*NEW_LANGUAGE_META\s+([\s\S]*?)-->/);
+            if (!match) {
+              core.setFailed('No NEW_LANGUAGE_META block found in issue body');
+              return;
+            }
+            const meta = {};
+            for (const line of match[1].trim().split('\n')) {
+              const [key, ...rest] = line.split(':');
+              if (key && rest.length) meta[key.trim()] = rest.join(':').trim();
+            }
+            if (!meta.code) {
+              core.setFailed('No language code found in NEW_LANGUAGE_META block');
+              return;
+            }
+            // Basic BCP-47 validation
+            if (!/^[a-zA-Z]{2,3}(-[a-zA-Z0-9]{2,})*$/.test(meta.code)) {
+              core.setFailed(`Invalid BCP-47 code: ${meta.code}`);
+              return;
+            }
+            core.setOutput('lang_code', meta.code);
+            core.setOutput('lang_name', meta.name || meta.code);
+            core.setOutput('author', context.payload.issue.user.login);
+
+      - name: Checkout ovos-localize
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create branch and add language code
+        id: branch
+        env:
+          LANG_CODE: ${{ steps.parse.outputs.lang_code }}
+          LANG_NAME: ${{ steps.parse.outputs.lang_name }}
+          AUTHOR: ${{ steps.parse.outputs.author }}
+        run: |
+          FILE="config/enabled_languages.txt"
+          # Duplicate check (case-insensitive)
+          if grep -qi "^${LANG_CODE}$" "$FILE"; then
+            echo "already_exists=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          BRANCH_NAME="i18n/enable-${LANG_CODE}-$(date +%s)"
+          git checkout -b "$BRANCH_NAME"
+          echo "${LANG_CODE}" >> "$FILE"
+          git config user.name "ovos-localize[bot]"
+          git config user.email "ovos-localize[bot]@users.noreply.github.com"
+          git add "$FILE"
+          git commit -m "feat(i18n): enable ${LANG_CODE} (${LANG_NAME})
+
+Requested by @${AUTHOR} via issue #${{ github.event.issue.number }}"
+          git push origin "$BRANCH_NAME"
+          echo "already_exists=false" >> "$GITHUB_OUTPUT"
+          echo "branch_name=$BRANCH_NAME" >> "$GITHUB_OUTPUT"
+
+      - name: Create Pull Request
+        id: pr
+        if: steps.branch.outputs.already_exists == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LANG_CODE: ${{ steps.parse.outputs.lang_code }}
+          LANG_NAME: ${{ steps.parse.outputs.lang_name }}
+          AUTHOR: ${{ steps.parse.outputs.author }}
+        run: |
+          PR_URL=$(gh pr create \
+            --base dev \
+            --head "${{ steps.branch.outputs.branch_name }}" \
+            --title "feat(i18n): enable ${LANG_CODE} (${LANG_NAME})" \
+            --body "## New language request
+
+          - **Language**: ${LANG_NAME}
+          - **Code**: \`${LANG_CODE}\`
+          - **Requested by**: @${AUTHOR}
+          - **Issue**: #${{ github.event.issue.number }}
+
+          Adds \`${LANG_CODE}\` to \`config/enabled_languages.txt\` so the language appears in [OVOS Localize](https://openvoiceos.github.io/ovos-localize/) even before any translation files exist.
+
+          **Maintainer checklist before merging:**
+          - [ ] Confirm the BCP-47 code is correct (e.g. \`hi-IN\`, not \`hindi\`)
+          - [ ] Confirm this is a real, supported human language
+          - [ ] Merging will trigger an automatic data refresh")
+          echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
+
+      - name: Comment on issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const alreadyExists = '${{ steps.branch.outputs.already_exists }}' === 'true';
+            const code = '${{ steps.parse.outputs.lang_code }}';
+            const name = '${{ steps.parse.outputs.lang_name }}';
+            const prUrl = '${{ steps.pr.outputs.pr_url }}';
+            const body = alreadyExists
+              ? `ℹ️ **\`${code}\` is already enabled.**\n\nThis language is already present in the platform. Head to [OVOS Localize](https://openvoiceos.github.io/ovos-localize/) and select **${name}** from the language list to start translating!`
+              : `👀 **A maintainer needs to review and approve this request.**\n\nA pull request has been opened: ${prUrl}\n\nOnce a maintainer merges it, the language will appear in [OVOS Localize](https://openvoiceos.github.io/ovos-localize/) and you can start contributing translations right away. Thank you! 🌍`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });
+            if (alreadyExists) {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                state: 'closed',
+                state_reason: 'not_planned',
+              });
+            }
+
+  # ── Job 2: i18n/enable-* PR merged into dev → trigger data refresh ───────
+  refresh-on-merge:
+    if: |
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.merged == true &&
+      startsWith(github.event.pull_request.head.ref, 'i18n/enable-')
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+
+    steps:
+      - name: Trigger data refresh
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'update_data.yml',
+              ref: 'dev',
+            });

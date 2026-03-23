@@ -46,5 +46,13 @@ Previously, `renderEditor()` crashed with `TypeError: Cannot read properties of 
 ### What does the editor show in the source panel when creating a new entity file?
 Instead of "No source file found", the source panel shows the `.intent` files that reference `{slotName}`, with their sample utterances. This gives context for what values belong in the entity file. The panel header also changes to "Used in intents".
 
+### How do I add a brand-new language that has no translations yet?
+Click **"Can't find your language? Request it"** in the language selection modal. Enter the language name and its BCP-47 code (e.g. `hi-IN`). This opens a GitHub issue with a machine-readable payload. A maintainer reviews the PR created by automation and merges it — after which the language appears in the UI at 0 % progress, ready for contributions.
+
+The allowlist lives in `config/enabled_languages.txt` — `_load_enabled_languages()` in `scripts/generate_data.py` reads it and injects those codes into `coverage.json` even when no locale files exist yet. The data refresh is triggered automatically on PR merge.
+
+### Who approves new language requests?
+A maintainer must review and merge the automatically-created PR before the language appears. This prevents invalid codes (e.g. `klingon`, `xx-XX`) from polluting the platform.
+
 ### Why were eu-EU, eu, and es-LM dataset files removed?
 After BCP-47 normalization was added (`lang_utils.EXPLICIT_MAPPING`), `eu-EU` and `eu` both normalize to `eu-ES`, and `es-LM` normalizes to `es-419`. The old files contained data tagged with deprecated codes; they were replaced by `eu-ES.jsonl` and `es-419.jsonl`.

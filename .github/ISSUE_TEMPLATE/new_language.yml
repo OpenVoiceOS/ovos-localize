@@ -1,0 +1,17 @@
+name: Request a new language
+description: Ask to add a new language to OVOS Localize so you can start translating
+labels: ["new-language"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > This issue is processed automatically by [OVOS Localize](https://openvoiceos.github.io/ovos-localize/).
+        > A bot will validate the language code, enable the language in the platform, and trigger a data refresh.
+        > You will be able to start contributing translations within a few minutes.
+  - type: textarea
+    id: payload
+    attributes:
+      label: Language request payload
+      description: Machine-readable language request data (do not edit)
+    validations:
+      required: true
