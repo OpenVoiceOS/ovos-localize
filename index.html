@@ -342,13 +342,16 @@
         toast('Invalid language code format. Use BCP-47, e.g. hi-IN', 'amber'); return;
       }
       const title = encodeURIComponent('Add language: ' + name + ' (' + code + ')');
-      const payload =
-        '<!-- NEW_LANGUAGE_META\n' +
-        'name: ' + name + '\n' +
-        'code: ' + code + '\n' +
-        '-->\n\n' +
-        'I am requesting the **' + name + '** (`' + code + '`) language to be added to OVOS Localize so I can start contributing translations.';
-      const body = encodeURIComponent(payload);
+      const enc = s => encodeURIComponent(s);
+      const NL = '%0A';
+      const body = [
+        enc('<!-- NEW_LANGUAGE_META'),
+        enc('name: ' + name),
+        enc('code: ' + code),
+        enc('-->'),
+        '',
+        enc('I am requesting the **' + name + '** (`' + code + '`) language to be added to OVOS Localize so I can start contributing translations.'),
+      ].join(NL);
       window.open('https://github.com/OpenVoiceOS/ovos-localize/issues/new?title=' + title + '&body=' + body + '&labels=new-language', '_blank');
       closeModal();
     }
