@@ -1641,10 +1641,23 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         },
       };
 
-      // Collect unique types for the filter dropdown
       const allTypes = Object.keys(byType);
+      const repoTypes = allTypes.filter(t => !t.startsWith('validation.'));
+      const validationTypes = allTypes.filter(t => t.startsWith('validation.')).sort((a, b) => (byType[b] || 0) - (byType[a] || 0));
 
-      function buildTable(filtered) {
+      const repoIssues = issues.filter(i => !i.type.startsWith('validation.'));
+      const validationIssues = issues.filter(i => i.type.startsWith('validation.'));
+
+      function buildCallout(type) {
+        const desc = typeDescriptions[type] || typeDescriptions._default;
+        return `<div class="callout callout-warn text-sm space-y-2">
+          <p><strong class="text-ovos-text">What is this?</strong> <span class="text-ovos-muted">${desc.what}</span></p>
+          <p><strong class="text-ovos-text">Impact</strong> <span class="text-ovos-muted">${desc.impact}</span></p>
+          <p><strong class="text-ovos-text">How to help</strong> <span class="text-ovos-muted">${desc.action}</span></p>
+        </div>`;
+      }
+
+      function buildTable(filtered, showType) {
         if (!filtered.length) {
           return `<p class="text-ovos-muted text-sm py-8 text-center">No issues match the current filter.</p>`;
         }
@@ -1653,96 +1666,85 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
             ? `<span class="badge badge-red">● error</span>`
             : `<span class="badge badge-amber">▲ warning</span>`;
           const typeLabel = typeLabels[issue.type] || issue.type;
+          const typeCell = showType ? `<td class="py-2 px-3 font-mono text-xs text-ovos-muted">${escapeHtml(typeLabel)}</td>` : '';
           return `<tr class="border-t border-ovos-card hover:bg-ovos-hover">
             <td class="py-2 px-3">${severityBadge}</td>
-            <td class="py-2 px-3 font-mono text-xs text-ovos-muted">${escapeHtml(typeLabel)}</td>
+            ${typeCell}
             <td class="py-2 px-3"><a href="#/skill/${escapeHtml(issue.skill_id)}" class="text-ovos-accent hover:underline text-sm">${escapeHtml(issue.skill_id)}</a></td>
             <td class="py-2 px-3"><a href="https://github.com/${escapeHtml(issue.repo)}" target="_blank" rel="noopener" class="text-ovos-muted hover:text-ovos-text text-xs">${escapeHtml(issue.repo)} ↗</a></td>
             <td class="py-2 px-3 text-sm text-ovos-muted">${escapeHtml(issue.detail)}</td>
           </tr>`;
         }).join('');
+        const typeHeader = showType ? '<th class="py-2 px-3">Type</th>' : '';
         return `<table class="w-full text-left text-sm">
-          <thead>
-            <tr class="text-ovos-muted text-xs uppercase">
-              <th class="py-2 px-3">Severity</th>
-              <th class="py-2 px-3">Type</th>
-              <th class="py-2 px-3">Skill</th>
-              <th class="py-2 px-3">Repo</th>
-              <th class="py-2 px-3">Detail</th>
-            </tr>
-          </thead>
+          <thead><tr class="text-ovos-muted text-xs uppercase">
+            <th class="py-2 px-3">Severity</th>
+            ${typeHeader}
+            <th class="py-2 px-3">Skill</th>
+            <th class="py-2 px-3">Repo</th>
+            <th class="py-2 px-3">Detail</th>
+          </tr></thead>
           <tbody>${rows}</tbody>
         </table>`;
       }
 
-      const repoTypes = allTypes.filter(t => !t.startsWith('validation.'));
-      const validationTypes = allTypes.filter(t => t.startsWith('validation.')).sort((a, b) => (byType[b] || 0) - (byType[a] || 0));
-      const typeOptions = `
-        <option value="all">All types</option>
-        ${repoTypes.length ? `<optgroup label="Repo issues">${repoTypes.map(t => `<option value="${escapeHtml(t)}">${typeLabels[t] || t} (${byType[t]})</option>`).join('')}</optgroup>` : ''}
-        ${validationTypes.length ? `<optgroup label="Translation quality">${validationTypes.map(t => `<option value="${escapeHtml(t)}">${typeLabels[t] || t} (${byType[t]})</option>`).join('')}</optgroup>` : ''}
-      `;
-
-      const repoIssueCount = repoTypes.reduce((n, t) => n + (byType[t] || 0), 0);
-      const validationIssueCount = validationTypes.reduce((n, t) => n + (byType[t] || 0), 0);
-      const statCards = `
-        <div class="bg-ovos-card rounded-lg p-4 border border-ovos-card">
-          <div class="text-2xl font-bold text-ovos-accent">${repoIssueCount}</div>
-          <div class="text-xs text-ovos-muted mt-1">Repo issues</div>
-        </div>
-        <div class="bg-ovos-card rounded-lg p-4 border border-ovos-card">
-          <div class="text-2xl font-bold text-yellow-400">${validationIssueCount}</div>
-          <div class="text-xs text-ovos-muted mt-1">Translation quality</div>
-        </div>
-      `;
-
-      function buildCallout(type) {
-        const desc = typeDescriptions[type] || typeDescriptions._default;
-        return `<div class="callout callout-warn mb-6 text-sm space-y-2">
-          <p><strong class="text-ovos-text">What is this?</strong> <span class="text-ovos-muted">${desc.what}</span></p>
-          <p><strong class="text-ovos-text">Impact</strong> <span class="text-ovos-muted">${desc.impact}</span></p>
-          <p><strong class="text-ovos-text">How to help</strong> <span class="text-ovos-muted">${desc.action}</span></p>
-        </div>`;
-      }
-
-      const initialCalloutType = '_default';
+      const repoTypeOptions = repoTypes.map(t =>
+        `<option value="${escapeHtml(t)}">${typeLabels[t] || t} (${byType[t]})</option>`
+      ).join('');
+      const validationTypeOptions = `<option value="all">All rules</option>` + validationTypes.map(t =>
+        `<option value="${escapeHtml(t)}">${typeLabels[t] || t} (${byType[t]})</option>`
+      ).join('');
 
       el.innerHTML = `
-        <div class="max-w-6xl mx-auto px-4 py-8">
-          <div class="mb-6">
-            <h1 class="text-2xl font-bold mb-1">Repo Issues</h1>
-            <p class="text-ovos-muted text-sm">Problems detected in skill repositories during the last data sync. Each issue is corrected automatically so translations still work, but the upstream skill should be fixed so human translators aren't confused.</p>
-          </div>
+        <div class="max-w-6xl mx-auto px-4 py-8 space-y-10">
 
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
-            <div class="bg-ovos-card rounded-lg p-4 border border-ovos-card">
-              <div class="text-2xl font-bold text-ovos-text">${data.total}</div>
-              <div class="text-xs text-ovos-muted mt-1">Total flagged</div>
+          <!-- DEVELOPER ISSUES -->
+          <section>
+            <div class="mb-4">
+              <h1 class="text-2xl font-bold mb-1">Developer Issues</h1>
+              <p class="text-ovos-muted text-sm">These problems are in the skill repositories themselves and require a code change or PR by a developer. They are worked around automatically, but fixing them upstream keeps the project clean and avoids confusion for translators.</p>
             </div>
-            ${statCards}
-          </div>
+            <div class="mb-4">${buildCallout('bad_lang_code')}</div>
+            <div class="bg-ovos-card rounded-xl border border-ovos-card overflow-hidden">
+              <div class="flex items-center justify-between px-4 py-3 border-b border-ovos-input">
+                <span class="text-sm font-semibold">${repoIssues.length} repo issue${repoIssues.length !== 1 ? 's' : ''}</span>
+                ${repoTypes.length > 1 ? `<select id="repo-type-filter" class="bg-ovos-input border border-ovos-card text-sm rounded-lg px-2 py-1 text-ovos-text"><option value="all">All types</option>${repoTypeOptions}</select>` : ''}
+              </div>
+              <div id="repo-table" class="overflow-x-auto">${buildTable(repoIssues, repoTypes.length > 1)}</div>
+            </div>
+          </section>
 
-          <div id="issues-callout">${buildCallout(initialCalloutType)}</div>
+          <!-- TRANSLATION QUALITY -->
+          <section>
+            <div class="mb-4">
+              <h1 class="text-2xl font-bold mb-1">Translation Quality</h1>
+              <p class="text-ovos-muted text-sm">These issues are in the translated locale files and can be fixed directly in the translation editor — no coding required. Fixing them improves how natural and reliable OVOS sounds in your language. Select a rule below to learn what it means and how to help.</p>
+            </div>
+            <div id="validation-callout" class="mb-4">${buildCallout('_default')}</div>
+            <div class="bg-ovos-card rounded-xl border border-ovos-card overflow-hidden">
+              <div class="flex items-center justify-between px-4 py-3 border-b border-ovos-input">
+                <span class="text-sm font-semibold">${validationIssues.length} quality issue${validationIssues.length !== 1 ? 's' : ''} across ${validationTypes.length} rule${validationTypes.length !== 1 ? 's' : ''}</span>
+                <select id="validation-type-filter" class="bg-ovos-input border border-ovos-card text-sm rounded-lg px-2 py-1 text-ovos-text">${validationTypeOptions}</select>
+              </div>
+              <div id="validation-table" class="overflow-x-auto">${buildTable(validationIssues, true)}</div>
+            </div>
+          </section>
 
-          <div class="bg-ovos-card rounded-xl border border-ovos-card overflow-hidden">
-            <div class="flex items-center justify-between px-4 py-3 border-b border-ovos-input">
-              <span class="text-sm font-semibold">All flagged issues</span>
-              <select id="issues-type-filter" class="bg-ovos-input border border-ovos-card text-sm rounded-lg px-2 py-1 text-ovos-text">
-                ${typeOptions}
-              </select>
-            </div>
-            <div id="issues-table" class="overflow-x-auto">
-              ${buildTable(issues)}
-            </div>
-          </div>
         </div>`;
 
-      document.getElementById('issues-type-filter').addEventListener('change', function() {
+      if (document.getElementById('repo-type-filter')) {
+        document.getElementById('repo-type-filter').addEventListener('change', function() {
+          const val = this.value;
+          const filtered = val === 'all' ? repoIssues : repoIssues.filter(i => i.type === val);
+          document.getElementById('repo-table').innerHTML = buildTable(filtered, repoTypes.length > 1);
+        });
+      }
+
+      document.getElementById('validation-type-filter').addEventListener('change', function() {
         const val = this.value;
-        const filtered = val === 'all' ? issues : issues.filter(i => i.type === val);
-        document.getElementById('issues-table').innerHTML = buildTable(filtered);
-        const calloutType = val === 'all' ? (allTypes.length === 1 ? allTypes[0] : '_default') : val;
-        document.getElementById('issues-callout').innerHTML = buildCallout(calloutType);
+        const filtered = val === 'all' ? validationIssues : validationIssues.filter(i => i.type === val);
+        document.getElementById('validation-table').innerHTML = buildTable(filtered, true);
+        document.getElementById('validation-callout').innerHTML = buildCallout(val === 'all' ? '_default' : val);
       });
     }
 
