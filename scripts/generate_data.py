@@ -495,18 +495,21 @@ def build_issues_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
     for skill in all_skills:
         rule_counts: Dict[str, int] = {}
         rule_severity: Dict[str, str] = {}
+        rule_langs: Dict[str, set] = {}
         for file_data in skill["files"].values():
-            for lang_data in file_data["langs"].values():
+            for lang, lang_data in file_data["langs"].items():
                 for v in lang_data.get("validation", []):
                     rule = v["rule_name"]
                     rule_counts[rule] = rule_counts.get(rule, 0) + 1
                     rule_severity[rule] = v["severity"]
+                    rule_langs.setdefault(rule, set()).add(lang)
         for rule, count in sorted(rule_counts.items()):
             issues.append({
                 "type": f"validation.{rule}",
                 "severity": rule_severity[rule],
                 "repo": skill["repo"],
                 "skill_id": skill["id"],
+                "langs": sorted(rule_langs.get(rule, [])),
                 "detail": f"{count} occurrence{'s' if count != 1 else ''} of {rule} across translated files",
             })
 

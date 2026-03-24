@@ -1695,6 +1695,14 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         `<option value="${escapeHtml(t)}">${typeLabels[t] || t} (${byType[t]})</option>`
       ).join('');
 
+      // Collect all languages that appear in validation issues, sorted
+      const allValidationLangs = [...new Set(validationIssues.flatMap(i => i.langs || []))].sort();
+      const userLang = getUserLangs()[0] || 'en-US';
+      const defaultLang = allValidationLangs.includes(userLang) ? userLang : 'all';
+      const langOptions = `<option value="all">All languages</option>` + allValidationLangs.map(l =>
+        `<option value="${escapeHtml(l)}" ${l === defaultLang ? 'selected' : ''}>${escapeHtml(l)}</option>`
+      ).join('');
+
       function showTab(name) {
         ['translation', 'developer'].forEach(t => {
           document.getElementById(`tab-panel-${t}`).style.display = t === name ? '' : 'none';
@@ -1731,11 +1739,12 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
             </div>
             <div id="validation-callout" class="mb-4">${buildCallout('_default')}</div>
             <div class="bg-ovos-card rounded-xl border border-ovos-card overflow-hidden">
-              <div class="flex items-center justify-between px-4 py-3 border-b border-ovos-input">
-                <span class="text-sm font-semibold">${validationIssues.length} issue${validationIssues.length !== 1 ? 's' : ''} across ${validationTypes.length} rule${validationTypes.length !== 1 ? 's' : ''}</span>
+              <div class="flex flex-wrap items-center gap-2 px-4 py-3 border-b border-ovos-input">
+                <span class="text-sm font-semibold mr-auto" id="validation-count">${validationIssues.length} issue${validationIssues.length !== 1 ? 's' : ''}</span>
+                <select id="validation-lang-filter" class="bg-ovos-input border border-ovos-card text-sm rounded-lg px-2 py-1 text-ovos-text">${langOptions}</select>
                 <select id="validation-type-filter" class="bg-ovos-input border border-ovos-card text-sm rounded-lg px-2 py-1 text-ovos-text">${validationTypeOptions}</select>
               </div>
-              <div id="validation-table" class="overflow-x-auto">${buildTable(validationIssues, true)}</div>
+              <div id="validation-table" class="overflow-x-auto">${buildTable(defaultLang === 'all' ? validationIssues : validationIssues.filter(i => (i.langs||[]).includes(defaultLang)), true)}</div>
             </div>
           </div>
 
@@ -1778,12 +1787,18 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         });
       }
 
-      document.getElementById('validation-type-filter').addEventListener('change', function() {
-        const val = this.value;
-        const filtered = val === 'all' ? validationIssues : validationIssues.filter(i => i.type === val);
+      function applyValidationFilters() {
+        const type = document.getElementById('validation-type-filter').value;
+        const lang = document.getElementById('validation-lang-filter').value;
+        let filtered = validationIssues;
+        if (type !== 'all') filtered = filtered.filter(i => i.type === type);
+        if (lang !== 'all') filtered = filtered.filter(i => (i.langs || []).includes(lang));
         document.getElementById('validation-table').innerHTML = buildTable(filtered, true);
-        document.getElementById('validation-callout').innerHTML = buildCallout(val === 'all' ? '_default' : val);
-      });
+        document.getElementById('validation-count').textContent = `${filtered.length} issue${filtered.length !== 1 ? 's' : ''}`;
+        document.getElementById('validation-callout').innerHTML = buildCallout(type === 'all' ? '_default' : type);
+      }
+      document.getElementById('validation-type-filter').addEventListener('change', applyValidationFilters);
+      document.getElementById('validation-lang-filter').addEventListener('change', applyValidationFilters);
     }
 
     // ENTITY DATABASE
