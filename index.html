@@ -1677,9 +1677,6 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         </div>`;
       }
 
-      // Repo URL for ovos-localize itself (issues are opened here, workflow runs here)
-      const LOCALIZE_REPO = 'OpenVoiceOS/ovos-localize';
-
       function buildRepoTable(filtered) {
         if (!filtered.length) return `<p class="text-ovos-muted text-sm py-8 text-center">No issues.</p>`;
 
