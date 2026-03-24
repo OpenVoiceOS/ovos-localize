@@ -1538,6 +1538,19 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         bad_lang_code: 'Bare lang code',
       };
 
+      const typeDescriptions = {
+        bad_lang_code: {
+          what: 'The skill\'s locale directory uses a bare language code (e.g. <code class="mono text-yellow-400">eu/</code>) instead of a full BCP-47 code with a region subtag (e.g. <code class="mono text-yellow-400">eu-ES/</code>). Bare codes are ambiguous — the same language can have regional variants with different vocabulary or phrasing.',
+          impact: 'OVOS Localize normalises these automatically using a built-in mapping, so translations still work. However, the mapping may not always pick the right region, and the skill repo itself will be confusing to human translators.',
+          action: 'Open a PR on the skill\'s GitHub repo renaming the locale directory to include the region subtag (e.g. <code class="mono text-yellow-400">locale/eu/</code> → <code class="mono text-yellow-400">locale/eu-ES/</code>). Update any internal references to the path as well.',
+        },
+        _default: {
+          what: 'A potential problem was detected in this skill repository during the last data sync.',
+          impact: 'The exact impact depends on the issue type. Translation quality or coverage may be affected.',
+          action: 'Click the repo link to inspect the skill on GitHub and open an issue or PR to address it.',
+        },
+      };
+
       // Collect unique types for the filter dropdown
       const allTypes = Object.keys(byType);
 
@@ -1583,11 +1596,22 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         </div>`
       ).join('');
 
+      function buildCallout(type) {
+        const desc = typeDescriptions[type] || typeDescriptions._default;
+        return `<div class="callout callout-warn mb-6 text-sm space-y-2">
+          <p><strong class="text-ovos-text">What is this?</strong> <span class="text-ovos-muted">${desc.what}</span></p>
+          <p><strong class="text-ovos-text">Impact</strong> <span class="text-ovos-muted">${desc.impact}</span></p>
+          <p><strong class="text-ovos-text">How to help</strong> <span class="text-ovos-muted">${desc.action}</span></p>
+        </div>`;
+      }
+
+      const initialCalloutType = allTypes.length === 1 ? allTypes[0] : '_default';
+
       el.innerHTML = `
         <div class="max-w-6xl mx-auto px-4 py-8">
           <div class="mb-6">
             <h1 class="text-2xl font-bold mb-1">Repo Issues</h1>
-            <p class="text-ovos-muted text-sm">Flagged problems detected across all skill repositories. These are normalised automatically but should be fixed upstream.</p>
+            <p class="text-ovos-muted text-sm">Problems detected in skill repositories during the last data sync. Each issue is corrected automatically so translations still work, but the upstream skill should be fixed so human translators aren't confused.</p>
           </div>
 
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
@@ -1597,6 +1621,8 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
             </div>
             ${statCards}
           </div>
+
+          <div id="issues-callout">${buildCallout(initialCalloutType)}</div>
 
           <div class="bg-ovos-card rounded-xl border border-ovos-card overflow-hidden">
             <div class="flex items-center justify-between px-4 py-3 border-b border-ovos-input">
@@ -1615,6 +1641,8 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         const val = this.value;
         const filtered = val === 'all' ? issues : issues.filter(i => i.type === val);
         document.getElementById('issues-table').innerHTML = buildTable(filtered);
+        const calloutType = val === 'all' ? (allTypes.length === 1 ? allTypes[0] : '_default') : val;
+        document.getElementById('issues-callout').innerHTML = buildCallout(calloutType);
       });
     }
 
