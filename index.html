@@ -1695,14 +1695,54 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         `<option value="${escapeHtml(t)}">${typeLabels[t] || t} (${byType[t]})</option>`
       ).join('');
 
-      el.innerHTML = `
-        <div class="max-w-6xl mx-auto px-4 py-8 space-y-10">
+      function showTab(name) {
+        ['translation', 'developer'].forEach(t => {
+          document.getElementById(`tab-panel-${t}`).style.display = t === name ? '' : 'none';
+          const btn = document.getElementById(`tab-btn-${t}`);
+          if (t === name) {
+            btn.classList.add('border-ovos-accent', 'text-ovos-text');
+            btn.classList.remove('border-transparent', 'text-ovos-muted');
+          } else {
+            btn.classList.remove('border-ovos-accent', 'text-ovos-text');
+            btn.classList.add('border-transparent', 'text-ovos-muted');
+          }
+        });
+      }
 
-          <!-- DEVELOPER ISSUES -->
-          <section>
+      el.innerHTML = `
+        <div class="max-w-6xl mx-auto px-4 py-8">
+
+          <!-- TAB BAR -->
+          <div class="flex gap-0 border-b border-ovos-card mb-6">
+            <button id="tab-btn-translation" onclick="showIssuesTab('translation')"
+              class="px-5 py-2.5 text-sm font-semibold border-b-2 border-ovos-accent text-ovos-text -mb-px transition-colors">
+              Translation Quality
+            </button>
+            <button id="tab-btn-developer" onclick="showIssuesTab('developer')"
+              class="px-5 py-2.5 text-sm font-semibold border-b-2 border-transparent text-ovos-muted -mb-px transition-colors hover:text-ovos-text">
+              Developer Issues
+            </button>
+          </div>
+
+          <!-- TRANSLATION QUALITY TAB -->
+          <div id="tab-panel-translation">
             <div class="mb-4">
-              <h1 class="text-2xl font-bold mb-1">Developer Issues</h1>
-              <p class="text-ovos-muted text-sm">These problems are in the skill repositories themselves and require a code change or PR by a developer. They are worked around automatically, but fixing them upstream keeps the project clean and avoids confusion for translators.</p>
+              <p class="text-ovos-muted text-sm">These issues are in the translated locale files and can be fixed directly in the translation editor — no coding required. Fixing them improves how natural and reliable OVOS sounds in your language. Select a rule below to learn what it means and how to help.</p>
+            </div>
+            <div id="validation-callout" class="mb-4">${buildCallout('_default')}</div>
+            <div class="bg-ovos-card rounded-xl border border-ovos-card overflow-hidden">
+              <div class="flex items-center justify-between px-4 py-3 border-b border-ovos-input">
+                <span class="text-sm font-semibold">${validationIssues.length} issue${validationIssues.length !== 1 ? 's' : ''} across ${validationTypes.length} rule${validationTypes.length !== 1 ? 's' : ''}</span>
+                <select id="validation-type-filter" class="bg-ovos-input border border-ovos-card text-sm rounded-lg px-2 py-1 text-ovos-text">${validationTypeOptions}</select>
+              </div>
+              <div id="validation-table" class="overflow-x-auto">${buildTable(validationIssues, true)}</div>
+            </div>
+          </div>
+
+          <!-- DEVELOPER ISSUES TAB -->
+          <div id="tab-panel-developer" style="display:none">
+            <div class="mb-4">
+              <p class="text-ovos-muted text-sm">These problems are in the skill repositories themselves and require a code change or PR by a developer. They are worked around automatically, but fixing them upstream keeps things clean and avoids confusion for translators.</p>
             </div>
             <div class="mb-4">${buildCallout('bad_lang_code')}</div>
             <div class="bg-ovos-card rounded-xl border border-ovos-card overflow-hidden">
@@ -1712,25 +1752,23 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
               </div>
               <div id="repo-table" class="overflow-x-auto">${buildTable(repoIssues, repoTypes.length > 1)}</div>
             </div>
-          </section>
-
-          <!-- TRANSLATION QUALITY -->
-          <section>
-            <div class="mb-4">
-              <h1 class="text-2xl font-bold mb-1">Translation Quality</h1>
-              <p class="text-ovos-muted text-sm">These issues are in the translated locale files and can be fixed directly in the translation editor — no coding required. Fixing them improves how natural and reliable OVOS sounds in your language. Select a rule below to learn what it means and how to help.</p>
-            </div>
-            <div id="validation-callout" class="mb-4">${buildCallout('_default')}</div>
-            <div class="bg-ovos-card rounded-xl border border-ovos-card overflow-hidden">
-              <div class="flex items-center justify-between px-4 py-3 border-b border-ovos-input">
-                <span class="text-sm font-semibold">${validationIssues.length} quality issue${validationIssues.length !== 1 ? 's' : ''} across ${validationTypes.length} rule${validationTypes.length !== 1 ? 's' : ''}</span>
-                <select id="validation-type-filter" class="bg-ovos-input border border-ovos-card text-sm rounded-lg px-2 py-1 text-ovos-text">${validationTypeOptions}</select>
-              </div>
-              <div id="validation-table" class="overflow-x-auto">${buildTable(validationIssues, true)}</div>
-            </div>
-          </section>
+          </div>
 
         </div>`;
+
+      window.showIssuesTab = (name) => {
+        ['translation', 'developer'].forEach(t => {
+          document.getElementById(`tab-panel-${t}`).style.display = t === name ? '' : 'none';
+          const btn = document.getElementById(`tab-btn-${t}`);
+          if (t === name) {
+            btn.classList.add('border-ovos-accent', 'text-ovos-text');
+            btn.classList.remove('border-transparent', 'text-ovos-muted');
+          } else {
+            btn.classList.remove('border-ovos-accent', 'text-ovos-text');
+            btn.classList.add('border-transparent', 'text-ovos-muted');
+          }
+        });
+      };
 
       if (document.getElementById('repo-type-filter')) {
         document.getElementById('repo-type-filter').addEventListener('change', function() {
