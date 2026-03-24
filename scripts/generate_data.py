@@ -20,7 +20,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from ovos_localize.analyzers.context_builder import ContextCard, build_context_card
 from ovos_localize.bracket_expansion import expand_template, clean_text
 from ovos_localize.enums import FileType
-from ovos_localize.lang_utils import lang_display_name, lang_display_name_native, merge_equivalent_langs
+from ovos_localize.lang_utils import lang_display_name, lang_display_name_native, merge_equivalent_langs, normalize_lang_code
 from ovos_localize.parsers.base import ParsedFile
 from ovos_localize.sync.github import RepoScanner, ScanResult, ScannedFile
 from ovos_localize.validators.rules import ValidationIssue, validate_file
@@ -483,12 +483,15 @@ def build_issues_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
     # Repo-level: bare lang codes
     for skill in all_skills:
         for code in skill.get("bad_lang_codes", []):
+            normalized = normalize_lang_code(code)
             issues.append({
                 "type": "bad_lang_code",
                 "severity": "warning",
                 "repo": skill["repo"],
                 "skill_id": skill["id"],
-                "detail": f"Locale dir '{code}' is missing a region subtag — normalised automatically, but should be fixed upstream",
+                "code": code,
+                "normalized": normalized,
+                "detail": f"locale/{code}/ → locale/{normalized}/",
             })
 
     # File-level: validation rule violations aggregated per skill+rule
