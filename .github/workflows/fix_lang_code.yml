@@ -80,12 +80,27 @@ jobs:
           renames = json.load(sys.stdin)
           for r in renames:
               src, dst = r['from'], r['to']
-              if os.path.isdir(src):
-                  os.makedirs(os.path.dirname(dst), exist_ok=True)
+              if not os.path.isdir(src):
+                  print(f'SKIP: {src} not found', file=sys.stderr)
+                  continue
+              os.makedirs(dst, exist_ok=True)
+              if os.path.isdir(dst):
+                  # Destination already exists — merge files from src into dst,
+                  # then remove src. Files already in dst are kept (not overwritten).
+                  for item in os.listdir(src):
+                      s = os.path.join(src, item)
+                      d = os.path.join(dst, item)
+                      if not os.path.exists(d):
+                          shutil.move(s, d)
+                          print(f'Moved {s} -> {d}')
+                      else:
+                          print(f'KEEP existing {d} (skipped {s})')
+                  if not os.listdir(src):
+                      os.rmdir(src)
+                      print(f'Removed empty dir {src}')
+              else:
                   shutil.move(src, dst)
                   print(f'Renamed {src} -> {dst}')
-              else:
-                  print(f'SKIP: {src} not found', file=sys.stderr)
           "
 
           git add -A
