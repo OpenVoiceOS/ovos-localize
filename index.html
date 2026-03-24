@@ -1657,32 +1657,100 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         </div>`;
       }
 
-      function buildTable(filtered, showType) {
-        if (!filtered.length) {
-          return `<p class="text-ovos-muted text-sm py-8 text-center">No issues match the current filter.</p>`;
+      // Repo URL for ovos-localize itself (issues are opened here, workflow runs here)
+      const LOCALIZE_REPO = 'OpenVoiceOS/ovos-localize';
+
+      function buildRepoTable(filtered) {
+        if (!filtered.length) return `<p class="text-ovos-muted text-sm py-8 text-center">No issues.</p>`;
+
+        // Group bad_lang_code issues by repo so one button fires one issue per repo
+        const byRepo = {};
+        for (const issue of filtered) {
+          if (!byRepo[issue.repo]) byRepo[issue.repo] = { repo: issue.repo, skill_id: issue.skill_id, renames: [] };
+          if (issue.code && issue.normalized) byRepo[issue.repo].renames.push({ from: `locale/${issue.code}`, to: `locale/${issue.normalized}` });
         }
+
+        function makeAutoFixUrl(entry) {
+          const [org, repo] = entry.repo.split('/');
+          const renameLines = entry.renames.map((r, i) => `rename_${i}: ${r.from} -> ${r.to}`).join('\n');
+          const meta = `<!-- FIX_LANG_CODE_META\norg: ${org}\nrepo: ${repo}\nbranch: dev\n${renameLines}\n-->`;
+          const title = encodeURIComponent(`[fix-lang-code] ${entry.repo}`);
+          const body = encodeURIComponent(`${meta}\n\nAutomated locale directory rename request from OVOS Localize.\n\nRenames:\n${entry.renames.map(r => `- \`${r.from}\` → \`${r.to}\``).join('\n')}`);
+          return `https://github.com/${LOCALIZE_REPO}/issues/new?title=${title}&body=${body}&labels=fix-lang-code`;
+        }
+
+        const rows = filtered.map(issue => {
+          const entry = byRepo[issue.repo];
+          const fixUrl = entry ? makeAutoFixUrl(entry) : '#';
+          return `<tr class="border-t border-ovos-card hover:bg-ovos-hover">
+            <td class="py-2 px-3"><a href="#/skill/${escapeHtml(issue.skill_id)}" class="text-ovos-accent hover:underline text-sm">${escapeHtml(issue.skill_id)}</a></td>
+            <td class="py-2 px-3"><a href="https://github.com/${escapeHtml(issue.repo)}" target="_blank" rel="noopener" class="text-ovos-muted hover:text-ovos-text text-xs">${escapeHtml(issue.repo)} ↗</a></td>
+            <td class="py-2 px-3 font-mono text-xs text-ovos-muted">${escapeHtml(issue.detail)}</td>
+            <td class="py-2 px-3">
+              <a href="${fixUrl}" target="_blank" rel="noopener"
+                class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-lg bg-ovos-accent text-ovos-bg hover:opacity-80 hover:no-underline">
+                ⚡ Request auto-fix
+              </a>
+            </td>
+          </tr>`;
+        }).join('');
+        return `<table class="w-full text-left text-sm">
+          <thead><tr class="text-ovos-muted text-xs uppercase">
+            <th class="py-2 px-3">Skill</th>
+            <th class="py-2 px-3">Repo</th>
+            <th class="py-2 px-3">Rename</th>
+            <th class="py-2 px-3"></th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>`;
+      }
+
+      function buildValidationTable(filtered) {
+        if (!filtered.length) return `<p class="text-ovos-muted text-sm py-8 text-center">No issues match the current filter.</p>`;
+
+        function makeReportUrl(issue) {
+          const ruleLabel = typeLabels[issue.type] || issue.type;
+          const title = encodeURIComponent(`[translation-quality] ${ruleLabel} in ${issue.skill_id}`);
+          const langList = (issue.langs || []).join(', ') || 'unknown';
+          const body = encodeURIComponent(
+            `## Translation quality issue: \`${ruleLabel}\`\n\n` +
+            `**Skill**: \`${issue.skill_id}\`\n` +
+            `**Affected languages**: ${langList}\n` +
+            `**Detail**: ${issue.detail}\n\n` +
+            `Detected by [OVOS Localize](https://openvoiceos.github.io/ovos-localize/#/issues). ` +
+            `Please review the affected locale files and fix them in the translation editor or directly in the repo.`
+          );
+          return `https://github.com/${escapeHtml(issue.repo)}/issues/new?title=${title}&body=${body}`;
+        }
+
         const rows = filtered.map(issue => {
           const severityBadge = issue.severity === 'error'
             ? `<span class="badge badge-red">● error</span>`
             : `<span class="badge badge-amber">▲ warning</span>`;
           const typeLabel = typeLabels[issue.type] || issue.type;
-          const typeCell = showType ? `<td class="py-2 px-3 font-mono text-xs text-ovos-muted">${escapeHtml(typeLabel)}</td>` : '';
+          const reportUrl = makeReportUrl(issue);
           return `<tr class="border-t border-ovos-card hover:bg-ovos-hover">
             <td class="py-2 px-3">${severityBadge}</td>
-            ${typeCell}
+            <td class="py-2 px-3 font-mono text-xs text-ovos-muted">${escapeHtml(typeLabel)}</td>
             <td class="py-2 px-3"><a href="#/skill/${escapeHtml(issue.skill_id)}" class="text-ovos-accent hover:underline text-sm">${escapeHtml(issue.skill_id)}</a></td>
             <td class="py-2 px-3"><a href="https://github.com/${escapeHtml(issue.repo)}" target="_blank" rel="noopener" class="text-ovos-muted hover:text-ovos-text text-xs">${escapeHtml(issue.repo)} ↗</a></td>
             <td class="py-2 px-3 text-sm text-ovos-muted">${escapeHtml(issue.detail)}</td>
+            <td class="py-2 px-3">
+              <a href="${reportUrl}" target="_blank" rel="noopener"
+                class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-lg border border-ovos-card text-ovos-muted hover:text-ovos-text hover:no-underline">
+                ↗ Report
+              </a>
+            </td>
           </tr>`;
         }).join('');
-        const typeHeader = showType ? '<th class="py-2 px-3">Type</th>' : '';
         return `<table class="w-full text-left text-sm">
           <thead><tr class="text-ovos-muted text-xs uppercase">
             <th class="py-2 px-3">Severity</th>
-            ${typeHeader}
+            <th class="py-2 px-3">Rule</th>
             <th class="py-2 px-3">Skill</th>
             <th class="py-2 px-3">Repo</th>
             <th class="py-2 px-3">Detail</th>
+            <th class="py-2 px-3"></th>
           </tr></thead>
           <tbody>${rows}</tbody>
         </table>`;
@@ -1744,7 +1812,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
                 <select id="validation-lang-filter" class="bg-ovos-input border border-ovos-card text-sm rounded-lg px-2 py-1 text-ovos-text">${langOptions}</select>
                 <select id="validation-type-filter" class="bg-ovos-input border border-ovos-card text-sm rounded-lg px-2 py-1 text-ovos-text">${validationTypeOptions}</select>
               </div>
-              <div id="validation-table" class="overflow-x-auto">${buildTable(defaultLang === 'all' ? validationIssues : validationIssues.filter(i => (i.langs||[]).includes(defaultLang)), true)}</div>
+              <div id="validation-table" class="overflow-x-auto">${buildValidationTable(defaultLang === 'all' ? validationIssues : validationIssues.filter(i => (i.langs||[]).includes(defaultLang)))}</div>
             </div>
           </div>
 
@@ -1759,7 +1827,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
                 <span class="text-sm font-semibold">${repoIssues.length} repo issue${repoIssues.length !== 1 ? 's' : ''}</span>
                 ${repoTypes.length > 1 ? `<select id="repo-type-filter" class="bg-ovos-input border border-ovos-card text-sm rounded-lg px-2 py-1 text-ovos-text"><option value="all">All types</option>${repoTypeOptions}</select>` : ''}
               </div>
-              <div id="repo-table" class="overflow-x-auto">${buildTable(repoIssues, repoTypes.length > 1)}</div>
+              <div id="repo-table" class="overflow-x-auto">${buildRepoTable(repoIssues)}</div>
             </div>
           </div>
 
@@ -1783,7 +1851,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         document.getElementById('repo-type-filter').addEventListener('change', function() {
           const val = this.value;
           const filtered = val === 'all' ? repoIssues : repoIssues.filter(i => i.type === val);
-          document.getElementById('repo-table').innerHTML = buildTable(filtered, repoTypes.length > 1);
+          document.getElementById('repo-table').innerHTML = buildRepoTable(filtered);
         });
       }
 
@@ -1793,7 +1861,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         let filtered = validationIssues;
         if (type !== 'all') filtered = filtered.filter(i => i.type === type);
         if (lang !== 'all') filtered = filtered.filter(i => (i.langs || []).includes(lang));
-        document.getElementById('validation-table').innerHTML = buildTable(filtered, true);
+        document.getElementById('validation-table').innerHTML = buildValidationTable(filtered);
         document.getElementById('validation-count').textContent = `${filtered.length} issue${filtered.length !== 1 ? 's' : ''}`;
         document.getElementById('validation-callout').innerHTML = buildCallout(type === 'all' ? '_default' : type);
       }
