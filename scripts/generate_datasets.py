@@ -175,6 +175,14 @@ def main() -> None:
         for pool in (cls_writers, tra_writers, sf_writers, rp_writers, tts_writers, meta_writers):
             _close_all(pool)
 
+    # Write index.json: which files actually exist per dataset type
+    index: dict = {}
+    for type_dir in (cls_dir, tra_dir, sf_dir, rp_dir, tts_dir, meta_dir):
+        key = type_dir.name
+        index[key] = sorted(p.name for p in type_dir.glob("*.jsonl"))
+    index_path = DATASETS_DIR / "index.json"
+    index_path.write_text(json.dumps(index, ensure_ascii=False, indent=2))
+
     print(f"Datasets generated successfully in {DATASETS_DIR}")
 
 

@@ -1366,20 +1366,26 @@ Right now in {location} it's {condition}
     // OPEN DATA (ML DATASETS)
     // =========================================================================
     async function renderOpenData(el) {
-      const coverage = await fetchJSON('data/coverage.json');
+      const [coverage, dsIndex] = await Promise.all([
+        fetchJSON('data/coverage.json'),
+        fetchJSON('data/datasets/index.json').catch(() => ({})),
+      ]);
       const meta = coverage.lang_meta || {};
-      const langs = coverage.languages || [];
 
-      // Build per-language download list for a given directory + file pattern
-      function langDownloadList(dir, fileFn, labelFn) {
-        return langs.map(lang => {
-          const file = fileFn(lang);
-          const label = labelFn(lang);
-          if (!file) return '';
+      // Build per-language download list filtered to files that actually exist
+      function langDownloadList(typeKey, fileFn, labelFn) {
+        const existing = new Set(dsIndex[typeKey] || []);
+        const dir = `data/datasets/${typeKey}`;
+        // Collect all langs that have a file for this type
+        return [...existing].sort().map(filename => {
+          const file = `${dir}/${filename}`;
+          // Derive lang/pair key from filename (strip .jsonl)
+          const key = filename.replace(/\.jsonl$/, '');
+          const label = labelFn(key);
           return `<a href="${file}" download class="flex items-center justify-between p-2 rounded hover:bg-ovos-hover group transition-colors hover:no-underline">
             <div>
               <div class="text-sm font-medium text-ovos-text group-hover:text-ovos-accent">${escapeHtml(label)}</div>
-              <div class="text-xs text-ovos-muted mono">${escapeHtml(file.split('/').pop())}</div>
+              <div class="text-xs text-ovos-muted mono">${escapeHtml(filename)}</div>
             </div>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-ovos-muted group-hover:text-ovos-accent flex-shrink-0"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           </a>`;
@@ -1396,7 +1402,7 @@ Right now in {location} it's {condition}
           schema: '{ lang, skill, intent, file_type, text }',
           sample: '{ "lang":"en-US", "skill":"ovos-skill-alerts", "intent":"cancel_alarm.intent", "file_type":"intent", "text":"cancel my alarm" }',
           list: langDownloadList('classification',
-            l => `data/datasets/classification/${l}.jsonl`,
+            null,
             l => meta[l]?.native || l),
         },
         {
@@ -1408,8 +1414,8 @@ Right now in {location} it's {condition}
           schema: '{ pair, base_lang, target_lang, skill, file_type, file_name, base_texts[], target_texts[] }',
           sample: '{ "pair":"en-US_fr-FR", "base_texts":["set alarm for {time}"], "target_texts":["mettre une alarme pour {time}"] }',
           list: langDownloadList('translation',
-            l => l === 'en-US' ? null : `data/datasets/translation/en-US_${l}.jsonl`,
-            l => `English → ${meta[l]?.native || l}`),
+            null,
+            key => { const t = key.replace(/^en-US_/, ''); return `English → ${meta[t]?.native || t}`; }),
         },
         {
           id: 'slot_filling',
@@ -1420,7 +1426,7 @@ Right now in {location} it's {condition}
           schema: '{ lang, skill, intent, template, slots[], entity_values{} }',
           sample: '{ "lang":"en-US", "template":"open {application}", "slots":["application"], "entity_values":{"application":["firefox","chrome"]} }',
           list: langDownloadList('slot_filling',
-            l => `data/datasets/slot_filling/${l}.jsonl`,
+            null,
             l => meta[l]?.native || l),
         },
         {
@@ -1432,7 +1438,7 @@ Right now in {location} it's {condition}
           schema: '{ lang, skill, intent, handler, utterance, responses[] }',
           sample: '{ "lang":"en-US", "utterance":"did i miss a alarm", "handler":"handle_missed_alerts", "responses":["here\'s what you missed:", "you haven\'t missed any alerts."] }',
           list: langDownloadList('response_pairs',
-            l => `data/datasets/response_pairs/${l}.jsonl`,
+            null,
             l => meta[l]?.native || l),
         },
         {
@@ -1444,7 +1450,7 @@ Right now in {location} it's {condition}
           schema: '{ lang, skill, dialog, text }',
           sample: '{ "lang":"en-US", "skill":"ovos-skill-alerts", "dialog":"alarm.beep.dialog", "text":"your alarm is going off" }',
           list: langDownloadList('tts',
-            l => `data/datasets/tts/${l}.jsonl`,
+            null,
             l => meta[l]?.native || l),
         },
         {
@@ -1456,7 +1462,7 @@ Right now in {location} it's {condition}
           schema: '{ lang, skill, name, description, examples[], tags[] }',
           sample: '{ "lang":"fr-FR", "name":"Réveil", "description":"Gérez vos alarmes...", "examples":["réveille-moi à 7h"], "tags":["utilities"] }',
           list: langDownloadList('skill_metadata',
-            l => `data/datasets/skill_metadata/${l}.jsonl`,
+            null,
             l => meta[l]?.native || l),
         },
       ];
