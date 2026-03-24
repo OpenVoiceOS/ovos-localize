@@ -9,7 +9,15 @@ from typing import Dict, List, Tuple
 import langcodes
 
 # Explicit normalization for OVOS specific usage
+# needed for skills that don't provide full lang-code
+# ideally this should be fixed skill side
 EXPLICIT_MAPPING = {
+    "da": "da-DK",
+    "cs": "cs-CZ",
+    "hu": "hu-HU",
+    "pl": "pl-PL",
+    "ru": "ru-RU",
+    "sv": "sv-SE",
     "ca": "ca-ES",
     "de": "de-DE",
     "en": "en-US",
