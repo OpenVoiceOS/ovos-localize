@@ -1,0 +1,148 @@
+name: Fix Bare Lang Code PR
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  create-pr:
+    if: contains(github.event.issue.labels.*.name, 'fix-lang-code') || startsWith(github.event.issue.title, '[fix-lang-code]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Parse issue body
+        id: parse
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body || '';
+            const meta = {};
+            // Parse <!-- FIX_LANG_CODE_META ... --> block
+            const match = body.match(/<!--\s*FIX_LANG_CODE_META\s+([\s\S]*?)-->/);
+            if (!match) {
+              core.setFailed('No FIX_LANG_CODE_META block found in issue body');
+              return;
+            }
+            for (const line of match[1].trim().split('\n')) {
+              const [key, ...rest] = line.split(':');
+              if (key && rest.length) meta[key.trim()] = rest.join(':').trim();
+            }
+            // Parse renames array: "rename_0: locale/eu -> locale/eu-ES"
+            const renames = [];
+            for (const [k, v] of Object.entries(meta)) {
+              if (k.startsWith('rename_')) {
+                const parts = v.split('->').map(s => s.trim());
+                if (parts.length === 2) renames.push({ from: parts[0], to: parts[1] });
+              }
+            }
+            if (!meta.org || !meta.repo) {
+              core.setFailed('Missing org or repo in FIX_LANG_CODE_META');
+              return;
+            }
+            if (!renames.length) {
+              core.setFailed('No rename_ entries found in FIX_LANG_CODE_META');
+              return;
+            }
+            core.setOutput('org', meta.org);
+            core.setOutput('repo', meta.repo);
+            core.setOutput('branch', meta.branch || 'dev');
+            core.setOutput('renames_json', JSON.stringify(renames));
+            core.setOutput('author', context.payload.issue.user.login);
+
+      - name: Generate GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.LOCALIZE_APP_ID }}
+          private-key: ${{ secrets.LOCALIZE_APP_PRIVATE_KEY }}
+          owner: ${{ steps.parse.outputs.org }}
+          repositories: ${{ steps.parse.outputs.repo }}
+
+      - name: Checkout target repo
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ steps.parse.outputs.org }}/${{ steps.parse.outputs.repo }}
+          ref: ${{ steps.parse.outputs.branch }}
+          token: ${{ steps.app-token.outputs.token }}
+
+      - name: Rename locale directories
+        id: rename
+        env:
+          RENAMES_JSON: ${{ steps.parse.outputs.renames_json }}
+          AUTHOR: ${{ steps.parse.outputs.author }}
+        run: |
+          BRANCH_NAME="fix/lang-code-$(date +%s)"
+          git checkout -b "$BRANCH_NAME"
+          git config user.name "ovos-localize[bot]"
+          git config user.email "ovos-localize[bot]@users.noreply.github.com"
+
+          echo "$RENAMES_JSON" | python3 -c "
+          import json, sys, os, shutil
+          renames = json.load(sys.stdin)
+          for r in renames:
+              src, dst = r['from'], r['to']
+              if os.path.isdir(src):
+                  os.makedirs(os.path.dirname(dst), exist_ok=True)
+                  shutil.move(src, dst)
+                  print(f'Renamed {src} -> {dst}')
+              else:
+                  print(f'SKIP: {src} not found', file=sys.stderr)
+          "
+
+          git add -A
+          git diff --cached --quiet && echo "no_changes=true" >> "$GITHUB_OUTPUT" && exit 0
+          git commit -m "fix: rename bare lang code locale directories" \
+            -m "Automated rename submitted by @${AUTHOR} via OVOS Localize."
+          git push origin "$BRANCH_NAME"
+          echo "branch_name=$BRANCH_NAME" >> "$GITHUB_OUTPUT"
+          echo "no_changes=false" >> "$GITHUB_OUTPUT"
+
+      - name: Create Pull Request
+        if: steps.rename.outputs.no_changes != 'true'
+        id: pr
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          PR_URL=$(gh pr create \
+            --repo "${{ steps.parse.outputs.org }}/${{ steps.parse.outputs.repo }}" \
+            --base "${{ steps.parse.outputs.branch }}" \
+            --head "${{ steps.rename.outputs.branch_name }}" \
+            --title "fix: rename bare lang code locale directories" \
+            --body "## Fix: Bare lang code locale directories
+
+          Locale directory names without a region subtag are ambiguous. This PR renames them to their canonical BCP-47 form.
+
+          | Old path | New path |
+          |----------|----------|
+          $(echo '${{ steps.parse.outputs.renames_json }}' | python3 -c "
+          import json,sys
+          for r in json.load(sys.stdin): print(f'| \`{r[\"from\"]}\` | \`{r[\"to\"]}\` |')
+          ")
+
+          - **Submitted by**: @${{ steps.parse.outputs.author }}
+          - **Triggered by**: ${{ github.server_url }}/${{ github.repository }}/issues/${{ github.event.issue.number }}
+
+          Submitted via [OVOS Localize](https://openvoiceos.github.io/ovos-localize/).")
+          echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
+
+      - name: Close issue with result
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const noChanges = '${{ steps.rename.outputs.no_changes }}' === 'true';
+            const prUrl = '${{ steps.pr.outputs.pr_url }}';
+            const body = noChanges
+              ? '⚠️ **No changes made** — the locale directories may have already been renamed, or the paths could not be found in the repository.'
+              : `✅ **Fix PR created!**\n\n${prUrl}\n\nThe skill maintainer will review and merge it.`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed',
+              state_reason: noChanges ? 'not_planned' : 'completed'
+            });

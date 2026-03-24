@@ -1,0 +1,17 @@
+name: Fix Bare Lang Code
+description: Automated locale directory rename request from OVOS Localize
+labels: ["fix-lang-code"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > This issue was created automatically by [OVOS Localize](https://openvoiceos.github.io/ovos-localize/).
+        > A bot will process it and open a pull request on the target skill repo.
+        > **Do not edit the content below.**
+  - type: textarea
+    id: payload
+    attributes:
+      label: Fix payload
+      description: Machine-readable rename data
+    validations:
+      required: true
