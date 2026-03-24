@@ -468,8 +468,9 @@ def build_validation_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
 def build_issues_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
     """Build aggregated repo-level issues JSON.
 
-    Currently tracks:
+    Tracks:
     - ``bad_lang_code``: locale directory names without a region subtag.
+    - ``validation.<rule>``: per-rule validation issues aggregated per skill.
 
     Args:
         all_skills: List of per-skill JSON dicts (must include ``bad_lang_codes``).
@@ -478,6 +479,8 @@ def build_issues_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
         Dict with ``total``, ``by_type``, and ``issues`` list.
     """
     issues: List[Dict[str, Any]] = []
+
+    # Repo-level: bare lang codes
     for skill in all_skills:
         for code in skill.get("bad_lang_codes", []):
             issues.append({
@@ -486,6 +489,25 @@ def build_issues_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
                 "repo": skill["repo"],
                 "skill_id": skill["id"],
                 "detail": f"Locale dir '{code}' is missing a region subtag — normalised automatically, but should be fixed upstream",
+            })
+
+    # File-level: validation rule violations aggregated per skill+rule
+    for skill in all_skills:
+        rule_counts: Dict[str, int] = {}
+        rule_severity: Dict[str, str] = {}
+        for file_data in skill["files"].values():
+            for lang_data in file_data["langs"].values():
+                for v in lang_data.get("validation", []):
+                    rule = v["rule_name"]
+                    rule_counts[rule] = rule_counts.get(rule, 0) + 1
+                    rule_severity[rule] = v["severity"]
+        for rule, count in sorted(rule_counts.items()):
+            issues.append({
+                "type": f"validation.{rule}",
+                "severity": rule_severity[rule],
+                "repo": skill["repo"],
+                "skill_id": skill["id"],
+                "detail": f"{count} occurrence{'s' if count != 1 else ''} of {rule} across translated files",
             })
 
     by_type: Dict[str, int] = {}

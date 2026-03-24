@@ -1536,6 +1536,21 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
 
       const typeLabels = {
         bad_lang_code: 'Bare lang code',
+        'validation.dialog.few_variants': 'dialog.few_variants',
+        'validation.dialog.missing_variables': 'dialog.missing_variables',
+        'validation.dialog.extra_variables': 'dialog.extra_variables',
+        'validation.intent.low_diversity': 'intent.low_diversity',
+        'validation.intent.min_lines': 'intent.min_lines',
+        'validation.intent.missing_slots': 'intent.missing_slots',
+        'validation.intent.extra_slots': 'intent.extra_slots',
+        'validation.intent.no_pipe_in_alt': 'intent.no_pipe_in_alt',
+        'validation.intent.unbalanced_parens': 'intent.unbalanced_parens',
+        'validation.vocab.long_keyword': 'vocab.long_keyword',
+        'validation.vocab.empty': 'vocab.empty',
+        'validation.regex.missing_named_groups': 'regex.missing_named_groups',
+        'validation.entity.few_examples': 'entity.few_examples',
+        'validation.value.missing_system_values': 'value.missing_system_values',
+        'validation.value.parse_error': 'value.parse_error',
       };
 
       const typeDescriptions = {
@@ -1544,10 +1559,85 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
           impact: 'OVOS Localize normalises these automatically using a built-in mapping, so translations still work. However, the mapping may not always pick the right region, and the skill repo itself will be confusing to human translators.',
           action: 'Open a PR on the skill\'s GitHub repo renaming the locale directory to include the region subtag (e.g. <code class="mono text-yellow-400">locale/eu/</code> → <code class="mono text-yellow-400">locale/eu-ES/</code>). Update any internal references to the path as well.',
         },
+        'validation.dialog.few_variants': {
+          what: 'A <code class="mono text-yellow-400">.dialog</code> file has fewer than 2 response variants. OVOS picks a random variant each time it speaks, so more variants make the assistant feel less robotic and more natural.',
+          impact: 'The voice assistant will repeat the exact same phrasing every time this dialog fires, which sounds monotonous to users.',
+          action: 'Open the skill in the translation editor and add at least one more phrasing variant. Each line in a <code class="mono text-yellow-400">.dialog</code> file is an alternative, so just add a new line with a different wording.',
+        },
+        'validation.intent.min_lines': {
+          what: 'An <code class="mono text-yellow-400">.intent</code> file has very few training phrases (fewer than the recommended minimum). More phrases help the intent recogniser understand natural variations of the same request.',
+          impact: 'The skill may fail to trigger when users phrase their request slightly differently than the few examples provided.',
+          action: 'Add more trigger phrases to the intent file — think of different ways a user might ask for the same thing and add one phrase per line.',
+        },
+        'validation.intent.low_diversity': {
+          what: 'The training phrases in an <code class="mono text-yellow-400">.intent</code> file are too similar to each other. Diversity in phrasing helps the intent recogniser generalise beyond the exact examples.',
+          impact: 'The skill may only trigger for very narrow phrasings, missing synonyms or natural variations.',
+          action: 'Rewrite some phrases to use different words and sentence structures, not just minor variations of the same sentence.',
+        },
+        'validation.dialog.missing_variables': {
+          what: 'A translated <code class="mono text-yellow-400">.dialog</code> file is missing one or more <code class="mono text-yellow-400">{variable}</code> placeholders that exist in the English source. OVOS fills these slots at runtime with dynamic values (e.g. <code class="mono text-yellow-400">{name}</code>, <code class="mono text-yellow-400">{time}</code>).',
+          impact: 'The skill will crash or produce broken output when it tries to fill in the missing slot. This is a functional bug in the translation.',
+          action: 'Open the translation editor, compare with the English source, and add the missing <code class="mono text-yellow-400">{variable}</code> placeholders in the correct positions.',
+        },
+        'validation.dialog.extra_variables': {
+          what: 'A translated <code class="mono text-yellow-400">.dialog</code> file contains <code class="mono text-yellow-400">{variable}</code> placeholders that do not exist in the English source.',
+          impact: 'The skill may crash at runtime when it tries to fill in a slot name that the skill code never provides.',
+          action: 'Open the translation editor and remove or correct the extra <code class="mono text-yellow-400">{variable}</code> placeholders so they match exactly what the English source uses.',
+        },
+        'validation.intent.missing_slots': {
+          what: 'A translated <code class="mono text-yellow-400">.intent</code> file is missing <code class="mono text-yellow-400">{slot}</code> capture groups that the English source uses to extract entities from the utterance.',
+          impact: 'The skill will not extract the intended data from the user\'s speech, causing incorrect or broken behaviour.',
+          action: 'Add the missing <code class="mono text-yellow-400">{slot}</code> markers in the appropriate place within the translated phrases.',
+        },
+        'validation.intent.extra_slots': {
+          what: 'A translated <code class="mono text-yellow-400">.intent</code> file defines <code class="mono text-yellow-400">{slot}</code> capture groups that are not present in the English source.',
+          impact: 'The skill code is not written to handle these extra slots, so the captured values will be silently ignored or may cause unexpected behaviour.',
+          action: 'Remove the extra <code class="mono text-yellow-400">{slot}</code> markers from the translation so they match the English source.',
+        },
+        'validation.intent.no_pipe_in_alt': {
+          what: 'An intent phrase uses a pipe character (<code class="mono text-yellow-400">|</code>) inside an alternative group (<code class="mono text-yellow-400">(a|b)</code>) where it is not valid syntax for the Padatious intent parser.',
+          impact: 'The phrase will not parse correctly, reducing the number of valid training examples.',
+          action: 'Split the phrase into separate lines instead of using a pipe — e.g. replace <code class="mono text-yellow-400">(turn on|enable) the light</code> on one line with two separate lines.',
+        },
+        'validation.intent.unbalanced_parens': {
+          what: 'An intent phrase has mismatched parentheses, such as an opening <code class="mono text-yellow-400">(</code> without a closing <code class="mono text-yellow-400">)</code>.',
+          impact: 'The phrase cannot be parsed and will be silently ignored by the intent recogniser.',
+          action: 'Fix the parentheses in the affected phrase so they are balanced.',
+        },
+        'validation.vocab.long_keyword': {
+          what: 'A <code class="mono text-yellow-400">.voc</code> vocabulary keyword is longer than 3 words. Vocabulary files are used for simple keyword matching, and long phrases are better expressed as intent files.',
+          impact: 'Long keywords are less reliable for matching and may indicate a design issue in the skill.',
+          action: 'Shorten the keyword to its essential words, or consider whether this entry belongs in an <code class="mono text-yellow-400">.intent</code> file instead.',
+        },
+        'validation.vocab.empty': {
+          what: 'A <code class="mono text-yellow-400">.voc</code> vocabulary file has no content.',
+          impact: 'The skill will never match this vocabulary, potentially breaking features that depend on it.',
+          action: 'Add at least one keyword to the vocabulary file, or remove the file if it is no longer needed.',
+        },
+        'validation.regex.missing_named_groups': {
+          what: 'A <code class="mono text-yellow-400">.rx</code> regex file is missing named capture groups (<code class="mono text-yellow-400">(?P&lt;name&gt;...)</code>). Named groups are how the skill extracts entities from matched utterances.',
+          impact: 'The regex will match utterances but not extract any useful data from them.',
+          action: 'Add named capture groups to the regex pattern to capture the intended entities.',
+        },
+        'validation.entity.few_examples': {
+          what: 'An <code class="mono text-yellow-400">.entity</code> file has very few example values. Entity files are used to help the intent recogniser understand what kinds of words can fill a slot.',
+          impact: 'The intent recogniser may fail to match utterances that use entity values not close to the few examples provided.',
+          action: 'Add more representative example values to the entity file — include common synonyms and variations.',
+        },
+        'validation.value.missing_system_values': {
+          what: 'A <code class="mono text-yellow-400">.value</code> file is missing entries for system-defined values that exist in the English source.',
+          impact: 'The skill may fall back to English for the missing values, producing mixed-language output.',
+          action: 'Add the missing value mappings in the translated file, matching the system value keys from the English source.',
+        },
+        'validation.value.parse_error': {
+          what: 'A <code class="mono text-yellow-400">.value</code> file could not be parsed. The file may be malformed (wrong number of columns, encoding issues, etc.).',
+          impact: 'The entire value file is unusable, causing the skill to fall back to English for all values it defines.',
+          action: 'Open the file on GitHub and check for formatting errors. Each line should have exactly two comma-separated values: display name and system value.',
+        },
         _default: {
           what: 'A potential problem was detected in this skill repository during the last data sync.',
           impact: 'The exact impact depends on the issue type. Translation quality or coverage may be affected.',
-          action: 'Click the repo link to inspect the skill on GitHub and open an issue or PR to address it.',
+          action: 'Click the skill link to open the translation editor, or click the repo link to inspect it on GitHub.',
         },
       };
 
@@ -1585,16 +1675,26 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         </table>`;
       }
 
-      const typeOptions = ['all', ...allTypes].map(t =>
-        `<option value="${escapeHtml(t)}">${t === 'all' ? 'All types' : (typeLabels[t] || t)}</option>`
-      ).join('');
+      const repoTypes = allTypes.filter(t => !t.startsWith('validation.'));
+      const validationTypes = allTypes.filter(t => t.startsWith('validation.')).sort((a, b) => (byType[b] || 0) - (byType[a] || 0));
+      const typeOptions = `
+        <option value="all">All types</option>
+        ${repoTypes.length ? `<optgroup label="Repo issues">${repoTypes.map(t => `<option value="${escapeHtml(t)}">${typeLabels[t] || t} (${byType[t]})</option>`).join('')}</optgroup>` : ''}
+        ${validationTypes.length ? `<optgroup label="Translation quality">${validationTypes.map(t => `<option value="${escapeHtml(t)}">${typeLabels[t] || t} (${byType[t]})</option>`).join('')}</optgroup>` : ''}
+      `;
 
-      const statCards = Object.entries(byType).map(([type, count]) =>
-        `<div class="bg-ovos-card rounded-lg p-4 border border-ovos-card">
-          <div class="text-2xl font-bold text-yellow-400">${count}</div>
-          <div class="text-xs text-ovos-muted mt-1">${typeLabels[type] || type}</div>
-        </div>`
-      ).join('');
+      const repoIssueCount = repoTypes.reduce((n, t) => n + (byType[t] || 0), 0);
+      const validationIssueCount = validationTypes.reduce((n, t) => n + (byType[t] || 0), 0);
+      const statCards = `
+        <div class="bg-ovos-card rounded-lg p-4 border border-ovos-card">
+          <div class="text-2xl font-bold text-ovos-accent">${repoIssueCount}</div>
+          <div class="text-xs text-ovos-muted mt-1">Repo issues</div>
+        </div>
+        <div class="bg-ovos-card rounded-lg p-4 border border-ovos-card">
+          <div class="text-2xl font-bold text-yellow-400">${validationIssueCount}</div>
+          <div class="text-xs text-ovos-muted mt-1">Translation quality</div>
+        </div>
+      `;
 
       function buildCallout(type) {
         const desc = typeDescriptions[type] || typeDescriptions._default;
@@ -1605,7 +1705,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         </div>`;
       }
 
-      const initialCalloutType = allTypes.length === 1 ? allTypes[0] : '_default';
+      const initialCalloutType = '_default';
 
       el.innerHTML = `
         <div class="max-w-6xl mx-auto px-4 py-8">
@@ -1614,10 +1714,10 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
             <p class="text-ovos-muted text-sm">Problems detected in skill repositories during the last data sync. Each issue is corrected automatically so translations still work, but the upstream skill should be fixed so human translators aren't confused.</p>
           </div>
 
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
             <div class="bg-ovos-card rounded-lg p-4 border border-ovos-card">
-              <div class="text-2xl font-bold text-ovos-accent">${data.total}</div>
-              <div class="text-xs text-ovos-muted mt-1">Total issues</div>
+              <div class="text-2xl font-bold text-ovos-text">${data.total}</div>
+              <div class="text-xs text-ovos-muted mt-1">Total flagged</div>
             </div>
             ${statCards}
           </div>
