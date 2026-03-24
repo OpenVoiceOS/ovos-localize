@@ -1921,14 +1921,35 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
       }
 
       function applyValidationFilters() {
-        const type = document.getElementById('validation-type-filter').value;
-        const lang = document.getElementById('validation-lang-filter').value;
+        const typeSel = document.getElementById('validation-type-filter');
+        const langSel = document.getElementById('validation-lang-filter');
+        const type = typeSel.value;
+        const lang = langSel.value;
+
         let filtered = validationIssues;
         if (type !== 'all') filtered = filtered.filter(i => i.type === type);
         if (lang !== 'all') filtered = filtered.filter(i => (i.langs || []).includes(lang));
+
         document.getElementById('validation-table').innerHTML = buildValidationTable(filtered);
         document.getElementById('validation-count').textContent = `${filtered.length} issue${filtered.length !== 1 ? 's' : ''}`;
         document.getElementById('validation-callout').innerHTML = buildCallout(type === 'all' ? '_default' : type);
+
+        // Rebuild language dropdown: only show langs that exist for the selected type
+        const byType = type === 'all' ? validationIssues : validationIssues.filter(i => i.type === type);
+        const availLangs = [...new Set(byType.flatMap(i => i.langs || []))].sort();
+        const curLang = availLangs.includes(lang) ? lang : 'all';
+        langSel.innerHTML = `<option value="all">All languages</option>` +
+          availLangs.map(l => `<option value="${escapeHtml(l)}"${l === curLang ? ' selected' : ''}>${escapeHtml(l)}</option>`).join('');
+
+        // Rebuild type dropdown: only show types that exist for the selected lang
+        const byLang = lang === 'all' ? validationIssues : validationIssues.filter(i => (i.langs || []).includes(lang));
+        const availTypes = [...new Set(byLang.map(i => i.type))].sort();
+        const curType = availTypes.includes(type) ? type : 'all';
+        typeSel.innerHTML = `<option value="all">All rules</option>` +
+          availTypes.map(t => {
+            const count = byLang.filter(i => i.type === t).length;
+            return `<option value="${escapeHtml(t)}"${t === curType ? ' selected' : ''}>${escapeHtml(typeLabels[t] || t)} (${count})</option>`;
+          }).join('');
       }
       document.getElementById('validation-type-filter').addEventListener('change', applyValidationFilters);
       document.getElementById('validation-lang-filter').addEventListener('change', applyValidationFilters);
