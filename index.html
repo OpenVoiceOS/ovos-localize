@@ -1736,29 +1736,42 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
               }
             }
 
-            // Build markdown table
-            const tableRows = findings.map(f => {
-              const lineRef = f.line ? ` (line ${f.line})` : '';
-              const editorUrl = `${EDITOR_BASE}/${encodeURIComponent(skillId)}/${encodeURIComponent(f.fileKey)}/${encodeURIComponent(f.lang)}`;
-              return `| \`${f.filePath}\`${lineRef} | \`${f.lang}\` | ${f.message} | [Open editor](${editorUrl}) |`;
-            }).join('\n');
-
             const uniqueLangs = [...new Set(findings.map(f => f.lang))].sort();
+            const issuesUrl = `https://openvoiceos.github.io/ovos-localize/#/issues`;
             const title = encodeURIComponent(`[translation-quality] ${ruleLabel} in ${skillId}`);
-            const body = encodeURIComponent(
-              `## Translation quality issue: \`${ruleLabel}\`\n\n` +
-              `**Skill**: \`${skillId}\`\n` +
-              `**Severity**: ${severity}\n` +
-              `**Affected languages**: ${uniqueLangs.join(', ')}\n` +
-              `**Occurrences**: ${findings.length}\n\n` +
+
+            // Build rows, but keep URL under GitHub's ~8 000-char limit.
+            // Prioritise rows with a line number (most actionable), then sort by lang.
+            const sorted = [...findings].sort((a, b) => (b.line ? 1 : 0) - (a.line ? 1 : 0) || a.lang.localeCompare(b.lang));
+            const makeRow = f => {
+              const lineRef = f.line ? ` line ${f.line}` : '';
+              const editorUrl = `${EDITOR_BASE}/${encodeURIComponent(skillId)}/${encodeURIComponent(f.fileKey)}/${encodeURIComponent(f.lang)}`;
+              return `| \`${f.lang}\` | \`${f.filePath}\`${lineRef} | ${f.message} | [edit](${editorUrl}) |`;
+            };
+
+            const header =
+              `## Translation quality: \`${ruleLabel}\`\n\n` +
+              `**Skill**: \`${skillId}\` · **Severity**: ${severity} · **Occurrences**: ${findings.length}\n` +
+              `**Languages**: ${uniqueLangs.join(', ')}\n\n` +
               `### Affected files\n\n` +
-              `| File | Language | Message | Editor |\n` +
-              `|------|----------|---------|--------|\n` +
-              `${tableRows}\n\n` +
-              `---\n` +
-              `Detected automatically by [OVOS Localize](https://openvoiceos.github.io/ovos-localize/#/issues).\n` +
-              `Translations can be fixed directly in the editor links above — no coding required.`
-            );
+              `| Language | File | Message | |\n` +
+              `|----------|------|---------|---|\n`;
+            const footer =
+              `\n---\n` +
+              `Detected by [OVOS Localize](${issuesUrl}). ` +
+              `Fix translations in the editor links above — no coding required.`;
+
+            // Add rows until we'd exceed 7 500 encoded chars (leaving room for title + overhead)
+            const MAX = 7500;
+            let tableRows = '';
+            let truncated = 0;
+            for (const f of sorted) {
+              const row = makeRow(f) + '\n';
+              if (encodeURIComponent(header + tableRows + row + footer).length > MAX) { truncated++; continue; }
+              tableRows += row;
+            }
+            const truncNote = truncated ? `\n_${truncated} more occurrence${truncated > 1 ? 's' : ''} not shown — see [OVOS Localize](${issuesUrl}) for the full list._` : '';
+            const body = encodeURIComponent(header + tableRows + truncNote + footer);
             window.open(`https://github.com/${repo}/issues/new?title=${title}&body=${body}`, '_blank');
           } catch(e) {
             toast('Failed to load skill data: ' + e.message, 'red');
