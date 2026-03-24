@@ -199,9 +199,9 @@
     }
     function getUserLangs() {
       const p = getProfile();
-      return p?.languages || [];
+      return p?.languages || ['en-US'];
     }
-    function hasCompletedOnboarding() { return !!getProfile(); }
+    function hasCompletedOnboarding() { return true; }
 
     function updateProfileUI() {
       const btn = document.getElementById('profile-btn');
@@ -836,9 +836,9 @@
           ${statsHtml}
 
           <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="${hasCompletedOnboarding() ? '#/dashboard' : '#/'}" onclick="${hasCompletedOnboarding() ? '' : 'event.preventDefault();showOnboarding()'}" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-ovos-accent text-ovos-bg font-bold rounded-xl hover:opacity-90 hover:no-underline text-base">
+            <a href="#/dashboard" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-ovos-accent text-ovos-bg font-bold rounded-xl hover:opacity-90 hover:no-underline text-base">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
-              ${hasCompletedOnboarding() ? 'Browse skills to translate' : 'Choose your languages'}
+              Browse skills to translate
             </a>
             <a href="#/how-it-works" class="inline-flex items-center justify-center gap-2 px-6 py-3 border border-ovos-card text-ovos-text rounded-xl hover:bg-ovos-hover hover:no-underline text-base">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
