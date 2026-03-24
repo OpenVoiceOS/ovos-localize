@@ -22,6 +22,7 @@ EXPLICIT_MAPPING = {
     "de": "de-DE",
     "en": "en-US",
     "es": "es-ES",
+    "fa": "fa-IR",
     "fa-FA": "fa-IR",
     "fr": "fr-FR",
     "gl": "gl-ES",
@@ -30,7 +31,32 @@ EXPLICIT_MAPPING = {
     "pt": "pt-BR",
     "eu": "eu-ES",
     "eu-EU": "eu-ES",
-    "es-LM": "es-419"
+    "es-LM": "es-419",
+    "az": "az-AZ",
+    "tr": "tr-TR",
+    "uk": "uk-UA",
+    "lt": "lt-LT",
+    "nb": "nb-NO",
+    "no": "nb-NO",  # Standardizing generic 'no' to Bokmål
+    "nn": "nn-NO",
+    "fi": "fi-FI",
+    "el": "el-GR",
+    "he": "he-IL",
+    "hi": "hi-IN",
+    "id": "id-ID",
+    "ja": "ja-JP",
+    "ko": "ko-KR",
+    "ro": "ro-RO",
+    "sk": "sk-SK",
+    "sl": "sl-SI",
+    "th": "th-TH",
+    "vi": "vi-VN",
+    "zh": "zh-CN",
+    # Common redundancy fixes
+    "en-EN": "en-US",
+    "en-UK": "en-GB",
+    "fr-FA": "fr-FR",
+    "jp": "ja-JP",    # 'jp' is a common mistake for 'ja'
 }
 
 
