@@ -284,6 +284,7 @@ def build_skill_json(
         "skill_class": scan.skill_class_name,
         "source_file": scan.skill_analysis.source_file if scan.skill_analysis else "",
         "languages": scan.languages,
+        "bad_lang_codes": scan.bad_lang_codes,
         "files": files_json,
     }
 
@@ -461,6 +462,40 @@ def build_validation_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
         "total_warnings": total_warnings,
         "by_rule": by_rule,
         "by_skill": by_skill,
+    }
+
+
+def build_issues_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Build aggregated repo-level issues JSON.
+
+    Currently tracks:
+    - ``bad_lang_code``: locale directory names without a region subtag.
+
+    Args:
+        all_skills: List of per-skill JSON dicts (must include ``bad_lang_codes``).
+
+    Returns:
+        Dict with ``total``, ``by_type``, and ``issues`` list.
+    """
+    issues: List[Dict[str, Any]] = []
+    for skill in all_skills:
+        for code in skill.get("bad_lang_codes", []):
+            issues.append({
+                "type": "bad_lang_code",
+                "severity": "warning",
+                "repo": skill["repo"],
+                "skill_id": skill["id"],
+                "detail": f"Locale dir '{code}' is missing a region subtag — normalised automatically, but should be fixed upstream",
+            })
+
+    by_type: Dict[str, int] = {}
+    for issue in issues:
+        by_type[issue["type"]] = by_type.get(issue["type"], 0) + 1
+
+    return {
+        "total": len(issues),
+        "by_type": by_type,
+        "issues": issues,
     }
 
 
@@ -787,6 +822,10 @@ def main() -> None:
     validation_path = DATA_DIR / "validation.json"
     validation_path.write_text(json.dumps(build_validation_json(all_skills), ensure_ascii=False))
 
+    issues_data = build_issues_json(all_skills)
+    issues_path = DATA_DIR / "issues.json"
+    issues_path.write_text(json.dumps(issues_data, ensure_ascii=False))
+
     stats_data = build_stats_json(all_skills, coverage_data)
     stats_path = DATA_DIR / "stats.json"
     stats_path.write_text(json.dumps(stats_data, ensure_ascii=False))
@@ -799,10 +838,15 @@ def main() -> None:
     entities_path.write_text(json.dumps(entities_data, ensure_ascii=False))
     gaps = sum(1 for e in entities_data if not e["has_entity_file"])
 
+    # Strip internal-only fields from per-skill JSON files already written
+    for skill in all_skills:
+        skill.pop("bad_lang_codes", None)
+
     print(f"\nDone. {len(all_skills)} skills → data/")
     print(f"  repos.json: {len(all_skills)} entries")
     print(f"  coverage.json: {len(coverage_data['languages'])} languages")
     print(f"  stats.json: {len(stats_data['languages'])} languages")
+    print(f"  issues.json: {issues_data['total']} issues")
     print(f"  dataset.tsv: {dataset_rows} rows")
     print(f"  entities.json: {len(entities_data)} entities ({gaps} missing .entity files)")
 

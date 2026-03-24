@@ -96,6 +96,7 @@
       <a href="#/entities" class="text-ovos-muted hover:text-ovos-text">Entities</a>
       <a href="#/open-data" class="text-ovos-muted hover:text-ovos-text">Open Data</a>
       <a href="#/how-it-works" class="text-ovos-muted hover:text-ovos-text">How it works</a>
+      <a href="#/issues" class="text-ovos-muted hover:text-ovos-text">Issues</a>
     </nav>
     <div class="ml-auto flex items-center gap-2">
       <button onclick="showOnboarding()" id="profile-btn" class="text-sm px-3 py-1.5 rounded-lg border border-ovos-card hover:bg-ovos-hover flex items-center gap-2" title="Your languages">
@@ -755,7 +756,7 @@
 
       // Show onboarding on first visit — only for pages that need a user profile
       // Informational pages (stats, entities, open-data) are accessible without a profile
-      const publicPages = ['#/', '', '#/how-it-works', '#/stats', '#/entities', '#/open-data'];
+      const publicPages = ['#/', '', '#/how-it-works', '#/stats', '#/entities', '#/open-data', '#/issues'];
       // Skill editor pages with an explicit lang in the URL are accessible without a profile
       // (the lang is encoded in the route, so no profile is needed to determine what to show)
       const isSkillEditorWithLang = /^#\/skill\/[^/]+\/[^/]+\/.+/.test(hash);
@@ -770,6 +771,7 @@
         else if (hash === '#/stats') await renderStats(app);
         else if (hash === '#/entities') await renderEntities(app);
         else if (hash === '#/open-data') await renderOpenData(app);
+        else if (hash === '#/issues') await renderIssues(app);
         else if (hash === '#/dashboard') await renderDashboard(app);
         else if (hash.match(/^#\/skill\/([^/]+)\/([^/]+)\/(.+)$/)) {
           // Editor: #/skill/{id}/{file}/{lang}
@@ -1525,6 +1527,97 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
     }
 
     // =========================================================================
+    // ISSUES VIEW
+    // =========================================================================
+    async function renderIssues(el) {
+      const data = await fetchJSON('data/issues.json');
+      const issues = data.issues || [];
+      const byType = data.by_type || {};
+
+      const typeLabels = {
+        bad_lang_code: 'Bare lang code',
+      };
+
+      // Collect unique types for the filter dropdown
+      const allTypes = Object.keys(byType);
+
+      function buildTable(filtered) {
+        if (!filtered.length) {
+          return `<p class="text-ovos-muted text-sm py-8 text-center">No issues match the current filter.</p>`;
+        }
+        const rows = filtered.map(issue => {
+          const severityBadge = issue.severity === 'error'
+            ? `<span class="badge badge-red">● error</span>`
+            : `<span class="badge badge-amber">▲ warning</span>`;
+          const typeLabel = typeLabels[issue.type] || issue.type;
+          return `<tr class="border-t border-ovos-card hover:bg-ovos-hover">
+            <td class="py-2 px-3">${severityBadge}</td>
+            <td class="py-2 px-3 font-mono text-xs text-ovos-muted">${escapeHtml(typeLabel)}</td>
+            <td class="py-2 px-3"><a href="#/skill/${escapeHtml(issue.skill_id)}" class="text-ovos-accent hover:underline text-sm">${escapeHtml(issue.skill_id)}</a></td>
+            <td class="py-2 px-3"><a href="https://github.com/${escapeHtml(issue.repo)}" target="_blank" rel="noopener" class="text-ovos-muted hover:text-ovos-text text-xs">${escapeHtml(issue.repo)} ↗</a></td>
+            <td class="py-2 px-3 text-sm text-ovos-muted">${escapeHtml(issue.detail)}</td>
+          </tr>`;
+        }).join('');
+        return `<table class="w-full text-left text-sm">
+          <thead>
+            <tr class="text-ovos-muted text-xs uppercase">
+              <th class="py-2 px-3">Severity</th>
+              <th class="py-2 px-3">Type</th>
+              <th class="py-2 px-3">Skill</th>
+              <th class="py-2 px-3">Repo</th>
+              <th class="py-2 px-3">Detail</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>`;
+      }
+
+      const typeOptions = ['all', ...allTypes].map(t =>
+        `<option value="${escapeHtml(t)}">${t === 'all' ? 'All types' : (typeLabels[t] || t)}</option>`
+      ).join('');
+
+      const statCards = Object.entries(byType).map(([type, count]) =>
+        `<div class="bg-ovos-card rounded-lg p-4 border border-ovos-card">
+          <div class="text-2xl font-bold text-yellow-400">${count}</div>
+          <div class="text-xs text-ovos-muted mt-1">${typeLabels[type] || type}</div>
+        </div>`
+      ).join('');
+
+      el.innerHTML = `
+        <div class="max-w-6xl mx-auto px-4 py-8">
+          <div class="mb-6">
+            <h1 class="text-2xl font-bold mb-1">Repo Issues</h1>
+            <p class="text-ovos-muted text-sm">Flagged problems detected across all skill repositories. These are normalised automatically but should be fixed upstream.</p>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+            <div class="bg-ovos-card rounded-lg p-4 border border-ovos-card">
+              <div class="text-2xl font-bold text-ovos-accent">${data.total}</div>
+              <div class="text-xs text-ovos-muted mt-1">Total issues</div>
+            </div>
+            ${statCards}
+          </div>
+
+          <div class="bg-ovos-card rounded-xl border border-ovos-card overflow-hidden">
+            <div class="flex items-center justify-between px-4 py-3 border-b border-ovos-input">
+              <span class="text-sm font-semibold">All flagged issues</span>
+              <select id="issues-type-filter" class="bg-ovos-input border border-ovos-card text-sm rounded-lg px-2 py-1 text-ovos-text">
+                ${typeOptions}
+              </select>
+            </div>
+            <div id="issues-table" class="overflow-x-auto">
+              ${buildTable(issues)}
+            </div>
+          </div>
+        </div>`;
+
+      document.getElementById('issues-type-filter').addEventListener('change', function() {
+        const val = this.value;
+        const filtered = val === 'all' ? issues : issues.filter(i => i.type === val);
+        document.getElementById('issues-table').innerHTML = buildTable(filtered);
+      });
+    }
+
     // ENTITY DATABASE
     // =========================================================================
     async function renderEntities(el) {
