@@ -33,18 +33,30 @@ jobs:
             core.setOutput('repo', meta.repo);
             core.setOutput('author', context.payload.issue.user.login);
 
-      - name: Validate repo has locale directory
+      - name: Validate repo has locale or res directory
         id: validate
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           ORG="${{ steps.parse.outputs.org }}"
           REPO="${{ steps.parse.outputs.repo }}"
-          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+          # Fetch recursive tree and look for a 'locale' or 'res' directory anywhere
+          FOUND=$(curl -s \
             -H "Authorization: Bearer $GH_TOKEN" \
             -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/${ORG}/${REPO}/contents/locale")
-          if [ "$HTTP_STATUS" != "200" ]; then
+            "https://api.github.com/repos/${ORG}/${REPO}/git/trees/HEAD?recursive=1" \
+            | python3 -c "
+          import json, sys
+          data = json.load(sys.stdin)
+          for e in data.get('tree', []):
+              if e.get('type') == 'tree':
+                  name = e['path'].split('/')[-1]
+                  if name in ('locale', 'res'):
+                      print(e['path'])
+                      sys.exit(0)
+          sys.exit(1)
+          " 2>/dev/null && echo "found" || echo "not_found")
+          if [ "$FOUND" = "not_found" ]; then
             echo "no_locale=true" >> "$GITHUB_OUTPUT"
           else
             echo "no_locale=false" >> "$GITHUB_OUTPUT"
@@ -131,7 +143,7 @@ jobs:
 
             let body;
             if (noLocale) {
-              body = '⚠️ **Skill not added** — no `locale/` directory was found in the repository. Only OVOS skills with locale files can be tracked.';
+              body = '⚠️ **Skill not added** — no `locale/` or `res/` directory was found anywhere in the repository. Only OVOS skills with locale files can be tracked.';
             } else if (alreadyTracked) {
               body = '⚠️ **Skill not added** — this skill is already tracked in `skills.txt`.';
             } else {

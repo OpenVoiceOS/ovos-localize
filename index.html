@@ -3096,19 +3096,26 @@ optionally: [${(ctx.builder_chain.optionally||[]).join(', ')}]</pre>
           const repoData = await repoResp.json();
           if (repoData.private) { fail('Repository is private. Only public repos can be tracked.'); return; }
 
-          // 3. Check locale/ directory exists
-          const localeResp = await fetch(`https://api.github.com/repos/${repoStr}/contents/locale`, {
-            headers: { Accept: 'application/vnd.github+json' }
-          });
-          if (localeResp.status === 404) { fail('No <code>locale/</code> directory found. Is this an OVOS skill?'); return; }
-          if (!localeResp.ok) { fail(`Could not read locale directory (HTTP ${localeResp.status}).`); return; }
-          const localeContents = await localeResp.json();
-          if (!Array.isArray(localeContents) || localeContents.length === 0) {
-            fail('The <code>locale/</code> directory is empty.');
+          // 3. Find locale/ or res/ directory anywhere in the repo tree
+          const treeResp = await fetch(
+            `https://api.github.com/repos/${repoStr}/git/trees/HEAD?recursive=1`,
+            { headers: { Accept: 'application/vnd.github+json' } }
+          );
+          if (!treeResp.ok) { fail(`Could not read repository tree (HTTP ${treeResp.status}).`); return; }
+          const treeData = await treeResp.json();
+          const entries = treeData.tree || [];
+          // Find a tree node named 'locale' or 'res' that contains language subdirs
+          const localeNode = entries.find(e =>
+            e.type === 'tree' && (e.path === 'locale' || e.path.endsWith('/locale') ||
+                                  e.path === 'res'    || e.path.endsWith('/res'))
+          );
+          if (!localeNode) {
+            fail('No <code>locale/</code> or <code>res/</code> directory found anywhere in the repository. Is this an OVOS skill?');
             return;
           }
+          const localePath = localeNode.path;
 
-          ok(`Ready — ${repoData.full_name} has a locale directory with ${localeContents.length} language(s).`);
+          ok(`Ready — ${repoData.full_name} has a locale directory at <code>${localePath}/</code>.`);
         } catch (e) {
           fail(`Validation failed: ${e.message}`);
         }
