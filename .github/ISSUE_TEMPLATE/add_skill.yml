@@ -1,0 +1,17 @@
+name: Submit Skill
+description: Request to add a skill repository to OVOS Localize
+labels: ["add-skill"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > This issue was created automatically by [OVOS Localize](https://openvoiceos.github.io/ovos-localize/).
+        > A bot will process it and open a pull request adding the skill to `skills.txt`.
+        > **Do not edit the content below.**
+  - type: textarea
+    id: payload
+    attributes:
+      label: Skill payload
+      description: Machine-readable skill metadata
+    validations:
+      required: true

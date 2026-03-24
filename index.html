@@ -97,6 +97,7 @@
       <a href="#/open-data" class="text-ovos-muted hover:text-ovos-text">Open Data</a>
       <a href="#/how-it-works" class="text-ovos-muted hover:text-ovos-text">How it works</a>
       <a href="#/issues" class="text-ovos-muted hover:text-ovos-text">Issues</a>
+      <a href="#/submit-skill" class="text-ovos-muted hover:text-ovos-text">Submit Skill</a>
     </nav>
     <div class="ml-auto flex items-center gap-2">
       <button onclick="showOnboarding()" id="profile-btn" class="text-sm px-3 py-1.5 rounded-lg border border-ovos-card hover:bg-ovos-hover flex items-center gap-2" title="Your languages">
@@ -756,7 +757,7 @@
 
       // Show onboarding on first visit — only for pages that need a user profile
       // Informational pages (stats, entities, open-data) are accessible without a profile
-      const publicPages = ['#/', '', '#/how-it-works', '#/stats', '#/entities', '#/open-data', '#/issues'];
+      const publicPages = ['#/', '', '#/how-it-works', '#/stats', '#/entities', '#/open-data', '#/issues', '#/submit-skill'];
       // Skill editor pages with an explicit lang in the URL are accessible without a profile
       // (the lang is encoded in the route, so no profile is needed to determine what to show)
       const isSkillEditorWithLang = /^#\/skill\/[^/]+\/[^/]+\/.+/.test(hash);
@@ -772,6 +773,7 @@
         else if (hash === '#/entities') await renderEntities(app);
         else if (hash === '#/open-data') await renderOpenData(app);
         else if (hash === '#/issues') await renderIssues(app);
+        else if (hash === '#/submit-skill') await renderSubmitSkill(app);
         else if (hash === '#/dashboard') await renderDashboard(app);
         else if (hash.match(/^#\/skill\/([^/]+)\/([^/]+)\/(.+)$/)) {
           // Editor: #/skill/{id}/{file}/{lang}
@@ -2996,6 +2998,138 @@ optionally: [${(ctx.builder_chain.optionally||[]).join(', ')}]</pre>
         btn.disabled = false;
         btn.textContent = 'Submit translation';
       }
+    }
+
+    // =========================================================================
+    // SUBMIT SKILL
+    // =========================================================================
+    async function renderSubmitSkill(el) {
+      el.innerHTML = `
+        <div class="max-w-xl mx-auto py-10">
+          <h1 class="text-2xl font-bold mb-2">Submit a Skill</h1>
+          <p class="text-ovos-muted mb-6">Add an OpenVoiceOS skill to OVOS Localize so the community can translate it. The skill must be a public GitHub repository with a <code>locale/</code> directory.</p>
+
+          <div class="bg-ovos-card rounded-xl p-6 space-y-4">
+            <div>
+              <label class="block text-sm font-medium mb-1" for="skill-repo-input">GitHub repository <span class="text-ovos-muted font-normal">(org/repo)</span></label>
+              <input id="skill-repo-input" type="text" placeholder="e.g. OpenVoiceOS/ovos-skill-weather"
+                class="w-full bg-ovos-bg border border-ovos-card rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-ovos-accent font-mono"
+                oninput="window._skillRepoInputChanged()" />
+            </div>
+
+            <div id="skill-validation-status" class="text-sm min-h-[1.5rem]"></div>
+
+            <button id="skill-submit-btn" disabled
+              onclick="window._submitSkillIssue()"
+              class="w-full py-2 px-4 rounded-lg text-sm font-medium bg-ovos-accent text-white disabled:opacity-40 disabled:cursor-not-allowed hover:enabled:opacity-90 transition-opacity">
+              Validate &amp; Submit
+            </button>
+          </div>
+
+          <div class="mt-6 text-xs text-ovos-muted space-y-1">
+            <p>Submitting opens a GitHub Issue. A bot reviews it and opens a pull request adding your skill to <code>skills.txt</code>. The skill will appear in OVOS Localize after the next daily data refresh.</p>
+            <p>Already tracked skills will be rejected automatically.</p>
+          </div>
+        </div>`;
+
+      // Wire up debounced validation
+      let _debounceTimer = null;
+      window._skillValidationState = null;
+
+      window._skillRepoInputChanged = () => {
+        clearTimeout(_debounceTimer);
+        const input = document.getElementById('skill-repo-input');
+        const status = document.getElementById('skill-validation-status');
+        const btn = document.getElementById('skill-submit-btn');
+        const val = (input?.value || '').trim();
+
+        window._skillValidationState = null;
+        btn.disabled = true;
+
+        if (!val) { status.innerHTML = ''; return; }
+
+        if (!/^[^/]+\/[^/]+$/.test(val)) {
+          status.innerHTML = '<span class="text-amber-400">⚠ Enter in <code>org/repo</code> format</span>';
+          return;
+        }
+
+        status.innerHTML = '<span class="text-ovos-muted">Checking…</span>';
+
+        _debounceTimer = setTimeout(() => window._validateSkillRepo(val), 600);
+      };
+
+      window._validateSkillRepo = async (repoStr) => {
+        const status = document.getElementById('skill-validation-status');
+        const btn = document.getElementById('skill-submit-btn');
+
+        const fail = (msg) => {
+          window._skillValidationState = null;
+          btn.disabled = true;
+          status.innerHTML = `<span class="text-red-400">✗ ${msg}</span>`;
+        };
+        const ok = (msg) => {
+          window._skillValidationState = repoStr;
+          btn.disabled = false;
+          status.innerHTML = `<span class="text-green-400">✓ ${msg}</span>`;
+        };
+
+        try {
+          // 1. Check if already tracked
+          const skillsResp = await fetch('skills.txt');
+          if (skillsResp.ok) {
+            const skillsText = await skillsResp.text();
+            const tracked = skillsText.split('\n')
+              .map(l => l.trim())
+              .filter(l => l && !l.startsWith('#'));
+            if (tracked.some(l => l.toLowerCase() === repoStr.toLowerCase())) {
+              fail('This skill is already tracked in OVOS Localize.');
+              return;
+            }
+          }
+
+          // 2. Check repo exists and is public
+          const repoResp = await fetch(`https://api.github.com/repos/${repoStr}`, {
+            headers: { Accept: 'application/vnd.github+json' }
+          });
+          if (repoResp.status === 404) { fail('Repository not found. Is it public?'); return; }
+          if (!repoResp.ok) { fail(`GitHub API error ${repoResp.status}.`); return; }
+          const repoData = await repoResp.json();
+          if (repoData.private) { fail('Repository is private. Only public repos can be tracked.'); return; }
+
+          // 3. Check locale/ directory exists
+          const localeResp = await fetch(`https://api.github.com/repos/${repoStr}/contents/locale`, {
+            headers: { Accept: 'application/vnd.github+json' }
+          });
+          if (localeResp.status === 404) { fail('No <code>locale/</code> directory found. Is this an OVOS skill?'); return; }
+          if (!localeResp.ok) { fail(`Could not read locale directory (HTTP ${localeResp.status}).`); return; }
+          const localeContents = await localeResp.json();
+          if (!Array.isArray(localeContents) || localeContents.length === 0) {
+            fail('The <code>locale/</code> directory is empty.');
+            return;
+          }
+
+          ok(`Ready — ${repoData.full_name} has a locale directory with ${localeContents.length} language(s).`);
+        } catch (e) {
+          fail(`Validation failed: ${e.message}`);
+        }
+      };
+
+      window._submitSkillIssue = () => {
+        const repo = window._skillValidationState;
+        if (!repo) return;
+        const [org, repoName] = repo.split('/');
+        const title = encodeURIComponent(`[add-skill] ${repo}`);
+        const body = encodeURIComponent(
+          `> Submitted via [OVOS Localize](https://openvoiceos.github.io/ovos-localize/). ` +
+          `A bot will open a PR automatically.\n\n` +
+          `<!-- ADD_SKILL_META\n` +
+          `org: ${org}\n` +
+          `repo: ${repoName}\n` +
+          `-->`
+        );
+        window.open(`https://github.com/${LOCALIZE_REPO}/issues/new?title=${title}&labels=add-skill&body=${body}`, '_blank');
+        toast('GitHub issue page opened — click "Submit new issue" to complete.', 'green', 6000);
+      };
     }
   </script>
 </body>

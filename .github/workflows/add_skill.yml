@@ -1,0 +1,153 @@
+name: Add Skill PR
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  create-pr:
+    if: contains(github.event.issue.labels.*.name, 'add-skill') || startsWith(github.event.issue.title, '[add-skill]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Parse issue body
+        id: parse
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body || '';
+            const match = body.match(/<!--\s*ADD_SKILL_META\s+([\s\S]*?)-->/);
+            if (!match) {
+              core.setFailed('No ADD_SKILL_META block found in issue body');
+              return;
+            }
+            const meta = {};
+            for (const line of match[1].trim().split('\n')) {
+              const [key, ...rest] = line.split(':');
+              if (key && rest.length) meta[key.trim()] = rest.join(':').trim();
+            }
+            if (!meta.org || !meta.repo) {
+              core.setFailed('Missing org or repo in ADD_SKILL_META');
+              return;
+            }
+            core.setOutput('org', meta.org);
+            core.setOutput('repo', meta.repo);
+            core.setOutput('author', context.payload.issue.user.login);
+
+      - name: Validate repo has locale directory
+        id: validate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ORG="${{ steps.parse.outputs.org }}"
+          REPO="${{ steps.parse.outputs.repo }}"
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${ORG}/${REPO}/contents/locale")
+          if [ "$HTTP_STATUS" != "200" ]; then
+            echo "no_locale=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "no_locale=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout ovos-localize
+        if: steps.validate.outputs.no_locale != 'true'
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Add skill to skills.txt and open PR
+        if: steps.validate.outputs.no_locale != 'true'
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ORG: ${{ steps.parse.outputs.org }}
+          REPO_NAME: ${{ steps.parse.outputs.repo }}
+          AUTHOR: ${{ steps.parse.outputs.author }}
+        run: |
+          ENTRY="${ORG}/${REPO_NAME}"
+
+          # Check if already tracked
+          if grep -qiF "$ENTRY" skills.txt; then
+            echo "already_tracked=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          BRANCH_NAME="feat/add-skill-$(echo "$ENTRY" | tr '/' '-')-$(date +%s)"
+          git checkout -b "$BRANCH_NAME"
+          git config user.name "ovos-localize[bot]"
+          git config user.email "ovos-localize[bot]@users.noreply.github.com"
+
+          # Append under the Skills section (before the first blank line after # Skills)
+          python3 - <<'PYEOF'
+          import os, re
+          entry = os.environ['ENTRY']
+          path = 'skills.txt'
+          with open(path) as f:
+              lines = f.readlines()
+          # Insert after the '# Skills' header line
+          insert_at = None
+          for i, line in enumerate(lines):
+              if line.strip() == '# Skills':
+                  insert_at = i + 1
+                  break
+          if insert_at is None:
+              # Fallback: append to end
+              lines.append(entry + '\n')
+          else:
+              lines.insert(insert_at, entry + '\n')
+          with open(path, 'w') as f:
+              f.writelines(lines)
+          print(f'Added {entry} to skills.txt')
+          PYEOF
+
+          git add skills.txt
+          git commit -m "feat: add ${ENTRY} to skills.txt" \
+            -m "Requested by @${AUTHOR} via OVOS Localize."
+          git push origin "$BRANCH_NAME"
+
+          PR_URL=$(gh pr create \
+            --base dev \
+            --head "$BRANCH_NAME" \
+            --title "feat: add ${ENTRY} to skills.txt" \
+            --body "## Add skill: \`${ENTRY}\`
+
+          Adds **\`${ENTRY}\`** to the tracked skills list so it is included in the next OVOS Localize data refresh.
+
+          - **Submitted by**: @${AUTHOR}
+          - **Triggered by**: ${{ github.server_url }}/${{ github.repository }}/issues/${{ github.event.issue.number }}
+
+          Submitted via [OVOS Localize](https://openvoiceos.github.io/ovos-localize/).")
+          echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
+          echo "already_tracked=false" >> "$GITHUB_OUTPUT"
+
+      - name: Close issue with result
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const noLocale = '${{ steps.validate.outputs.no_locale }}' === 'true';
+            const alreadyTracked = '${{ steps.pr.outputs.already_tracked }}' === 'true';
+            const prUrl = '${{ steps.pr.outputs.pr_url }}';
+
+            let body;
+            if (noLocale) {
+              body = '⚠️ **Skill not added** — no `locale/` directory was found in the repository. Only OVOS skills with locale files can be tracked.';
+            } else if (alreadyTracked) {
+              body = '⚠️ **Skill not added** — this skill is already tracked in `skills.txt`.';
+            } else {
+              body = `✅ **PR created!**\n\n${prUrl}\n\nThe skill will appear in OVOS Localize after a maintainer merges this PR and the next daily data refresh runs.`;
+            }
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed',
+              state_reason: (!noLocale && !alreadyTracked) ? 'completed' : 'not_planned'
+            });
