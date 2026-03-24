@@ -12,6 +12,12 @@ ovos-localize-cli validate /path/to/skill-repo
 ### Why does it need `language_data`?
 The `langcodes` library uses `language_data` to provide human-readable display names for language codes (e.g., "en-US" → "English (United States)").
 
+### Why is a skill in skills.txt not being picked up?
+
+The most common cause is a missing `dev` branch. The scanner defaults to cloning `dev`, and falls back to `main` then `master`. If none of those branches exist the clone will fail and the skill will be silently skipped. Check that the remote has at least one of those branches.
+
+Also verify the skill has a `locale/` or `res/` directory with BCP-47 language subdirectories (e.g. `locale/en-us/`). Skills with no locale files are skipped even after a successful clone.
+
 ### How do I run tests?
 Ensure you have the `dev` dependencies installed:
 ```bash

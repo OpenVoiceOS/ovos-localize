@@ -213,10 +213,13 @@ class RepoScanner:
     def clone_or_pull(self, org: str, repo: str, branch: str = "dev") -> Path:
         """Clone or update a GitHub repository.
 
+        Falls back to ``main`` then ``master`` if the requested branch does not
+        exist on the remote.
+
         Args:
             org: GitHub organization.
             repo: Repository name.
-            branch: Branch to checkout.
+            branch: Preferred branch to checkout.
 
         Returns:
             Path to the local repository.
@@ -238,10 +241,24 @@ class RepoScanner:
         else:
             repo_dir.parent.mkdir(parents=True, exist_ok=True)
             url = f"https://github.com/{org}/{repo}.git"
-            subprocess.run(
-                ["git", "clone", "--branch", branch, "--single-branch", url, str(repo_dir)],
-                capture_output=True, check=True,
-            )
+            fallback_branches = [branch] + [b for b in ("dev", "main", "master") if b != branch]
+            cloned = False
+            for attempt in fallback_branches:
+                result = subprocess.run(
+                    ["git", "clone", "--branch", attempt, "--single-branch", url, str(repo_dir)],
+                    capture_output=True, check=False,
+                )
+                if result.returncode == 0:
+                    cloned = True
+                    break
+                # Remove partial clone directory before retrying
+                if repo_dir.exists():
+                    import shutil
+                    shutil.rmtree(repo_dir)
+            if not cloned:
+                raise RuntimeError(
+                    f"Failed to clone {org}/{repo}: none of {fallback_branches} exist on remote."
+                )
         return repo_dir
 
     def scan(self, repo_path: str) -> ScanResult:
