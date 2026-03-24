@@ -1538,9 +1538,21 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
     // ISSUES VIEW
     // =========================================================================
     async function renderIssues(el) {
-      const data = await fetchJSON('data/issues.json');
+      const [data, openFixIssues] = await Promise.all([
+        fetchJSON('data/issues.json'),
+        fetch(`https://api.github.com/repos/${LOCALIZE_REPO}/issues?state=open&labels=fix-lang-code&per_page=100`, {
+          headers: { Accept: 'application/vnd.github+json' }
+        }).then(r => r.ok ? r.json() : []).catch(() => []),
+      ]);
       const issues = data.issues || [];
       const byType = data.by_type || {};
+
+      // Repos that already have an open fix-lang-code issue: repo -> issue URL
+      const reposWithOpenFixIssue = new Map();
+      for (const issue of openFixIssues) {
+        const m = issue.title?.match(/\[fix-lang-code\]\s+(.+)/);
+        if (m) reposWithOpenFixIssue.set(m[1].trim(), issue.html_url);
+      }
 
       const typeLabels = {
         bad_lang_code: 'Bare lang code',
@@ -1691,20 +1703,25 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         }
 
         const rows = Object.values(byRepo).map(entry => {
-          const fixUrl = makeAutoFixUrl(entry);
+          const existingIssueUrl = reposWithOpenFixIssue.get(entry.repo);
           const renameList = entry.renames.map(r =>
             `<div class="font-mono text-xs text-ovos-muted">${escapeHtml(r.from)} → ${escapeHtml(r.to)}</div>`
           ).join('');
+          const actionCell = existingIssueUrl
+            ? `<a href="${escapeHtml(existingIssueUrl)}" target="_blank" rel="noopener"
+                title="An open issue already exists for this repo"
+                class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-lg border border-ovos-card text-ovos-muted hover:text-ovos-text hover:no-underline">
+                ⏳ Fix in progress ↗
+               </a>`
+            : `<a href="${makeAutoFixUrl(entry)}" target="_blank" rel="noopener"
+                class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-lg bg-ovos-accent text-ovos-bg hover:opacity-80 hover:no-underline">
+                ⚡ Request auto-fix
+               </a>`;
           return `<tr class="border-t border-ovos-card hover:bg-ovos-hover">
             <td class="py-2 px-3"><a href="#/skill/${escapeHtml(entry.skill_id)}" class="text-ovos-accent hover:underline text-sm">${escapeHtml(entry.skill_id)}</a></td>
             <td class="py-2 px-3"><a href="https://github.com/${escapeHtml(entry.repo)}" target="_blank" rel="noopener" class="text-ovos-muted hover:text-ovos-text text-xs">${escapeHtml(entry.repo)} ↗</a></td>
             <td class="py-2 px-3">${renameList}</td>
-            <td class="py-2 px-3">
-              <a href="${fixUrl}" target="_blank" rel="noopener"
-                class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-lg bg-ovos-accent text-ovos-bg hover:opacity-80 hover:no-underline">
-                ⚡ Request auto-fix
-              </a>
-            </td>
+            <td class="py-2 px-3">${actionCell}</td>
           </tr>`;
         }).join('');
         return `<table class="w-full text-left text-sm">
@@ -3121,7 +3138,23 @@ optionally: [${(ctx.builder_chain.optionally||[]).join(', ')}]</pre>
             }
           }
 
-          // 2. Check repo exists and is public
+          // 2. Check if a submission is already in progress
+          const openResp = await fetch(
+            `https://api.github.com/repos/${LOCALIZE_REPO}/issues?state=open&labels=add-skill&per_page=100`,
+            { headers: { Accept: 'application/vnd.github+json' } }
+          ).catch(() => null);
+          if (openResp?.ok) {
+            const openIssues = await openResp.json();
+            const existing = openIssues.find(i => i.title?.toLowerCase().includes(repoStr.toLowerCase()));
+            if (existing) {
+              window._skillValidationState = null;
+              btn.disabled = true;
+              status.innerHTML = `<span class="text-amber-400">⏳ A submission for this skill is already open — <a href="${escapeHtml(existing.html_url)}" target="_blank" rel="noopener" class="underline">view issue ↗</a></span>`;
+              return;
+            }
+          }
+
+          // 3. Check repo exists and is public
           const repoResp = await fetch(`https://api.github.com/repos/${repoStr}`, {
             headers: { Accept: 'application/vnd.github+json' }
           });
