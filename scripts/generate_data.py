@@ -285,6 +285,7 @@ def build_skill_json(
         "source_file": scan.skill_analysis.source_file if scan.skill_analysis else "",
         "languages": scan.languages,
         "bad_lang_codes": scan.bad_lang_codes,
+        "locale_dir": scan.locale_dir,
         "files": files_json,
     }
 
@@ -482,6 +483,7 @@ def build_issues_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
 
     # Repo-level: bare lang codes
     for skill in all_skills:
+        locale_dir = skill.get("locale_dir", "locale")
         for code in skill.get("bad_lang_codes", []):
             normalized = normalize_lang_code(code)
             issues.append({
@@ -491,7 +493,8 @@ def build_issues_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
                 "skill_id": skill["id"],
                 "code": code,
                 "normalized": normalized,
-                "detail": f"locale/{code}/ → locale/{normalized}/",
+                "locale_dir": locale_dir,
+                "detail": f"{locale_dir}/{code}/ → {locale_dir}/{normalized}/",
             })
 
     # File-level: validation rule violations aggregated per skill+rule
@@ -869,6 +872,7 @@ def main() -> None:
     # Strip internal-only fields from per-skill JSON files already written
     for skill in all_skills:
         skill.pop("bad_lang_codes", None)
+        skill.pop("locale_dir", None)
 
     print(f"\nDone. {len(all_skills)} skills → data/")
     print(f"  repos.json: {len(all_skills)} entries")

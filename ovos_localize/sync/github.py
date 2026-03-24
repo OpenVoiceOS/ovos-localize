@@ -79,6 +79,7 @@ class ScanResult:
     locale_files: List[ScannedFile] = field(default_factory=list)
     languages: List[str] = field(default_factory=list)
     bad_lang_codes: List[str] = field(default_factory=list)
+    locale_dir: str = ""  # Path to locale dir relative to repo root (e.g. "locale" or "skill/locale")
 
 
 # Map file extensions to FileType enum
@@ -294,6 +295,7 @@ class RepoScanner:
         locale_dir = self._find_locale_dir(path)
         if locale_dir:
             result.locale_files, result.bad_lang_codes = scan_locale_directory(str(locale_dir), repo_path)
+            result.locale_dir = str(locale_dir.relative_to(path))
 
         # Collect languages
         langs = set()

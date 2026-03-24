@@ -1669,7 +1669,10 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         const byRepo = {};
         for (const issue of filtered) {
           if (!byRepo[issue.repo]) byRepo[issue.repo] = { repo: issue.repo, skill_id: issue.skill_id, renames: [] };
-          if (issue.code && issue.normalized) byRepo[issue.repo].renames.push({ from: `locale/${issue.code}`, to: `locale/${issue.normalized}` });
+          if (issue.code && issue.normalized) {
+            const ldir = issue.locale_dir || 'locale';
+            byRepo[issue.repo].renames.push({ from: `${ldir}/${issue.code}`, to: `${ldir}/${issue.normalized}` });
+          }
         }
 
         function makeAutoFixUrl(entry) {
