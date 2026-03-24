@@ -1708,27 +1708,72 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
       function buildValidationTable(filtered) {
         if (!filtered.length) return `<p class="text-ovos-muted text-sm py-8 text-center">No issues match the current filter.</p>`;
 
-        function makeReportUrl(issue) {
-          const ruleLabel = typeLabels[issue.type] || issue.type;
-          const title = encodeURIComponent(`[translation-quality] ${ruleLabel} in ${issue.skill_id}`);
-          const langList = (issue.langs || []).join(', ') || 'unknown';
-          const body = encodeURIComponent(
-            `## Translation quality issue: \`${ruleLabel}\`\n\n` +
-            `**Skill**: \`${issue.skill_id}\`\n` +
-            `**Affected languages**: ${langList}\n` +
-            `**Detail**: ${issue.detail}\n\n` +
-            `Detected by [OVOS Localize](https://openvoiceos.github.io/ovos-localize/#/issues). ` +
-            `Please review the affected locale files and fix them in the translation editor or directly in the repo.`
-          );
-          return `https://github.com/${escapeHtml(issue.repo)}/issues/new?title=${title}&body=${body}`;
-        }
+        // Attach a global handler; data-* attributes carry the needed values
+        window._openValidationReport = async function(btn) {
+          btn.disabled = true;
+          btn.textContent = '…';
+          try {
+            const skillId  = btn.dataset.skillId;
+            const repo     = btn.dataset.repo;
+            const ruleName = btn.dataset.rule;       // e.g. "dialog.few_variants"
+            const ruleType = btn.dataset.type;       // e.g. "validation.dialog.few_variants"
+            const ruleLabel = typeLabels[ruleType] || ruleName;
+            const severity  = btn.dataset.severity;
+
+            const skillData = await fetchSkill(skillId);
+            const EDITOR_BASE = 'https://openvoiceos.github.io/ovos-localize/#/skill';
+
+            // Collect every (file, lang) pair that has this rule violation
+            const findings = [];
+            for (const [fileKey, fileData] of Object.entries(skillData.files || {})) {
+              for (const [lang, langData] of Object.entries(fileData.langs || {})) {
+                const matches = (langData.validation || []).filter(v => v.rule_name === ruleName);
+                if (!matches.length) continue;
+                const filePath = langData.file_path || fileKey;
+                for (const v of matches) {
+                  findings.push({ fileKey, filePath, lang, message: v.message, line: v.line_number });
+                }
+              }
+            }
+
+            // Build markdown table
+            const tableRows = findings.map(f => {
+              const lineRef = f.line ? ` (line ${f.line})` : '';
+              const editorUrl = `${EDITOR_BASE}/${encodeURIComponent(skillId)}/${encodeURIComponent(f.fileKey)}/${encodeURIComponent(f.lang)}`;
+              return `| \`${f.filePath}\`${lineRef} | \`${f.lang}\` | ${f.message} | [Open editor](${editorUrl}) |`;
+            }).join('\n');
+
+            const uniqueLangs = [...new Set(findings.map(f => f.lang))].sort();
+            const title = encodeURIComponent(`[translation-quality] ${ruleLabel} in ${skillId}`);
+            const body = encodeURIComponent(
+              `## Translation quality issue: \`${ruleLabel}\`\n\n` +
+              `**Skill**: \`${skillId}\`\n` +
+              `**Severity**: ${severity}\n` +
+              `**Affected languages**: ${uniqueLangs.join(', ')}\n` +
+              `**Occurrences**: ${findings.length}\n\n` +
+              `### Affected files\n\n` +
+              `| File | Language | Message | Editor |\n` +
+              `|------|----------|---------|--------|\n` +
+              `${tableRows}\n\n` +
+              `---\n` +
+              `Detected automatically by [OVOS Localize](https://openvoiceos.github.io/ovos-localize/#/issues).\n` +
+              `Translations can be fixed directly in the editor links above — no coding required.`
+            );
+            window.open(`https://github.com/${repo}/issues/new?title=${title}&body=${body}`, '_blank');
+          } catch(e) {
+            toast('Failed to load skill data: ' + e.message, 'red');
+          } finally {
+            btn.disabled = false;
+            btn.textContent = '↗ Report';
+          }
+        };
 
         const rows = filtered.map(issue => {
           const severityBadge = issue.severity === 'error'
             ? `<span class="badge badge-red">● error</span>`
             : `<span class="badge badge-amber">▲ warning</span>`;
           const typeLabel = typeLabels[issue.type] || issue.type;
-          const reportUrl = makeReportUrl(issue);
+          const ruleName = issue.type.replace(/^validation\./, '');
           return `<tr class="border-t border-ovos-card hover:bg-ovos-hover">
             <td class="py-2 px-3">${severityBadge}</td>
             <td class="py-2 px-3 font-mono text-xs text-ovos-muted">${escapeHtml(typeLabel)}</td>
@@ -1736,10 +1781,15 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
             <td class="py-2 px-3"><a href="https://github.com/${escapeHtml(issue.repo)}" target="_blank" rel="noopener" class="text-ovos-muted hover:text-ovos-text text-xs">${escapeHtml(issue.repo)} ↗</a></td>
             <td class="py-2 px-3 text-sm text-ovos-muted">${escapeHtml(issue.detail)}</td>
             <td class="py-2 px-3">
-              <a href="${reportUrl}" target="_blank" rel="noopener"
-                class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-lg border border-ovos-card text-ovos-muted hover:text-ovos-text hover:no-underline">
+              <button onclick="window._openValidationReport(this)"
+                data-skill-id="${escapeHtml(issue.skill_id)}"
+                data-repo="${escapeHtml(issue.repo)}"
+                data-rule="${escapeHtml(ruleName)}"
+                data-type="${escapeHtml(issue.type)}"
+                data-severity="${escapeHtml(issue.severity)}"
+                class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-lg border border-ovos-card text-ovos-muted hover:text-ovos-text disabled:opacity-40">
                 ↗ Report
-              </a>
+              </button>
             </td>
           </tr>`;
         }).join('');
