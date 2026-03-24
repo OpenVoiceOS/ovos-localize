@@ -36,7 +36,7 @@ def validate_repo(repo_path: str, report_format: str = "text") -> int:
         print("No locale/ directory found.")
         return 0
 
-    scanned_files = scan_locale_directory(str(locale_dir))
+    scanned_files, _ = scan_locale_directory(str(locale_dir))
     if not scanned_files:
         print("No locale files found.")
         return 0

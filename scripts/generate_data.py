@@ -770,6 +770,8 @@ def main() -> None:
             else:
                 skill_path.write_text(content)
                 print(f"{len(scan.languages)} langs, {len(scan.locale_files)} files")
+            if scan.bad_lang_codes:
+                print(f"    WARNING: bare lang codes (missing region) in {org}/{repo}: {', '.join(sorted(scan.bad_lang_codes))}", file=sys.stderr)
         except Exception as e:
             print(f"FAILED: {e}", file=sys.stderr)
             continue

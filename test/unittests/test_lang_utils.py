@@ -20,9 +20,10 @@ class TestNormalizeLangCode:
         assert normalize_lang_code("en-US") == "en-US"
 
     def test_bare_code(self) -> None:
-        """Bare codes stay bare (langcodes doesn't add region)."""
-        result = normalize_lang_code("da")
-        assert result == "da"
+        """Bare codes are expanded to full BCP-47 via EXPLICIT_MAPPING."""
+        assert normalize_lang_code("da") == "da-DK"
+        assert normalize_lang_code("en") == "en-US"
+        assert normalize_lang_code("pt") == "pt-BR"
 
     def test_mixed_case(self) -> None:
         """pt-br → pt-BR."""

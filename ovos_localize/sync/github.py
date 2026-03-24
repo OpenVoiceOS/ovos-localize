@@ -68,6 +68,9 @@ class ScanResult:
         skill_analysis: AST analysis of skill source.
         locale_files: All discovered locale files.
         languages: Set of discovered language codes.
+        bad_lang_codes: Raw locale directory names that lack a region subtag
+            (e.g. ``"en"`` instead of ``"en-US"``).  These are normalised
+            automatically but should be fixed in the upstream skill repo.
     """
 
     repo_path: str
@@ -75,6 +78,7 @@ class ScanResult:
     skill_analysis: Optional[SkillAnalysis] = None
     locale_files: List[ScannedFile] = field(default_factory=list)
     languages: List[str] = field(default_factory=list)
+    bad_lang_codes: List[str] = field(default_factory=list)
 
 
 # Map file extensions to FileType enum
@@ -139,7 +143,9 @@ def _extract_lang_from_path(file_path: Path, locale_root: Path) -> Optional[str]
     return None
 
 
-def scan_locale_directory(locale_dir: str, repo_root: str = "") -> List[ScannedFile]:
+def scan_locale_directory(
+    locale_dir: str, repo_root: str = ""
+) -> Tuple[List[ScannedFile], List[str]]:
     """Scan a locale directory for all OVOS locale files.
 
     Args:
@@ -147,14 +153,20 @@ def scan_locale_directory(locale_dir: str, repo_root: str = "") -> List[ScannedF
         repo_root: Path to the repository root (for relative paths).
 
     Returns:
-        List of ScannedFile objects.
+        Tuple of (list of ScannedFile objects, list of bad raw lang codes).
+        A "bad" lang code is one that has no region subtag (e.g. ``"en"``
+        instead of ``"en-US"``).  These are normalised automatically but
+        should be fixed in the upstream skill repo.
     """
     locale_path = Path(locale_dir)
     if not locale_path.is_dir():
-        return []
+        return [], []
     root_path = Path(repo_root) if repo_root else locale_path.parent
 
     files: List[ScannedFile] = []
+    bad_codes: List[str] = []
+    seen_bad: set = set()
+
     for file_path in sorted(locale_path.rglob("*")):
         if not file_path.is_file():
             continue
@@ -166,6 +178,11 @@ def scan_locale_directory(locale_dir: str, repo_root: str = "") -> List[ScannedF
         raw_lang = _extract_lang_from_path(file_path, locale_path)
         if not raw_lang:
             continue
+
+        if "-" not in raw_lang and raw_lang not in seen_bad:
+            bad_codes.append(raw_lang)
+            seen_bad.add(raw_lang)
+
         lang = normalize_lang_code(raw_lang)
 
         base_name = file_path.stem
@@ -187,7 +204,7 @@ def scan_locale_directory(locale_dir: str, repo_root: str = "") -> List[ScannedF
             parsed=parsed,
         ))
 
-    return files
+    return files, bad_codes
 
 
 class RepoScanner:
@@ -276,7 +293,7 @@ class RepoScanner:
         # Find locale directory
         locale_dir = self._find_locale_dir(path)
         if locale_dir:
-            result.locale_files = scan_locale_directory(str(locale_dir), repo_path)
+            result.locale_files, result.bad_lang_codes = scan_locale_directory(str(locale_dir), repo_path)
 
         # Collect languages
         langs = set()

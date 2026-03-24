@@ -23,8 +23,9 @@ class TestScanLocaleDirectory:
         (en / "weather.voc").write_text("weather\nforecast\n")
         (en / "greeting.dialog").write_text("Hello {name}\nHi {name}\n")
 
-        files = scan_locale_directory(str(locale))
+        files, bad = scan_locale_directory(str(locale))
         assert len(files) == 3
+        assert bad == []
 
         types = {f.file_type for f in files}
         assert FileType.INTENT in types
@@ -39,14 +40,16 @@ class TestScanLocaleDirectory:
             d.mkdir(parents=True)
             (d / "hello.intent").write_text("hello\n")
 
-        files = scan_locale_directory(str(locale))
+        files, bad = scan_locale_directory(str(locale))
         langs = {f.lang for f in files}
         assert langs == {"en-US", "de-DE", "fr-FR"}
+        assert bad == []
 
     def test_empty_directory(self, tmp_path: Path) -> None:
         """Return empty list for nonexistent directory."""
-        files = scan_locale_directory(str(tmp_path / "nonexistent"))
+        files, bad = scan_locale_directory(str(tmp_path / "nonexistent"))
         assert files == []
+        assert bad == []
 
     def test_parsed_content(self, tmp_path: Path) -> None:
         """Verify files are parsed during scan."""
@@ -55,8 +58,9 @@ class TestScanLocaleDirectory:
         en.mkdir(parents=True)
         (en / "hello.intent").write_text("hello world\nhi there\n")
 
-        files = scan_locale_directory(str(locale))
+        files, bad = scan_locale_directory(str(locale))
         assert len(files) == 1
+        assert bad == []
         assert files[0].parsed is not None
         assert files[0].parsed.line_count == 2
 
@@ -74,7 +78,8 @@ class TestScanLocaleDirectory:
         (en / "test.value").write_text("display,system\n")
         (en / "skill.json").write_text('{"name": "Test"}')
 
-        files = scan_locale_directory(str(locale))
+        files, bad = scan_locale_directory(str(locale))
+        assert bad == []
         types = {f.file_type for f in files}
         assert FileType.INTENT in types
         assert FileType.VOCAB in types
@@ -83,6 +88,21 @@ class TestScanLocaleDirectory:
         assert FileType.REGEX in types
         assert FileType.VALUE in types
         assert FileType.SKILL_JSON in types
+
+
+    def test_bad_lang_codes_flagged(self, tmp_path: Path) -> None:
+        """Bare lang codes without region subtag are reported in bad_lang_codes."""
+        locale = tmp_path / "locale"
+        (locale / "en").mkdir(parents=True)
+        (locale / "en" / "hello.intent").write_text("hello\n")
+        (locale / "en-US").mkdir(parents=True)
+        (locale / "en-US" / "hello.intent").write_text("hello\n")
+
+        files, bad = scan_locale_directory(str(locale))
+        assert "en" in bad
+        assert "en-US" not in bad
+        # Both files should still be present and normalised to en-US
+        assert all(f.lang == "en-US" for f in files)
 
 
 class TestRepoScanner:
