@@ -77,7 +77,7 @@ jobs:
           REPO_NAME: ${{ steps.parse.outputs.repo }}
           AUTHOR: ${{ steps.parse.outputs.author }}
         run: |
-          ENTRY="${ORG}/${REPO_NAME}"
+          export ENTRY="${ORG}/${REPO_NAME}"
 
           # Check if already tracked
           if grep -qiF "$ENTRY" skills.txt; then
