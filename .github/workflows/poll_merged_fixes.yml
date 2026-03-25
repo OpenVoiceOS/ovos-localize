@@ -1,0 +1,58 @@
+name: Poll for merged locale fixes
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # every 30 minutes
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dev
+          fetch-depth: 10
+
+      - name: Check for merged PRs since last data update
+        id: poll
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Timestamp of the last "chore: update translation data" commit
+          LAST_UPDATE=$(git log --all --format='%aI' --grep='chore: update translation data' -1)
+          if [ -z "$LAST_UPDATE" ]; then
+            echo "No previous data update commit found, triggering refresh"
+            echo "should_update=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "Last data update: $LAST_UPDATE"
+
+          # Search for merged locale-fix PRs since that timestamp
+          COUNT=$(gh search prs \
+            "fix: rename bare lang code" \
+            org:OpenVoiceOS \
+            --merged-at ">=$LAST_UPDATE" \
+            --json url --jq 'length' 2>/dev/null || echo "0")
+
+          # Also check for merged translation submissions
+          TX_COUNT=$(gh search prs \
+            "OVOS Localize" \
+            org:OpenVoiceOS \
+            --merged-at ">=$LAST_UPDATE" \
+            --json url --jq 'length' 2>/dev/null || echo "0")
+
+          TOTAL=$((COUNT + TX_COUNT))
+          echo "Merged locale PRs since last update: $TOTAL (fixes=$COUNT, translations=$TX_COUNT)"
+
+          if [ "$TOTAL" -gt 0 ]; then
+            echo "should_update=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_update=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Trigger data update
+        if: steps.poll.outputs.should_update == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run update_data.yml --ref dev
