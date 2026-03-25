@@ -431,6 +431,14 @@
 {"lang": "da-DK", "skill": "ovos-skill-mark1-ctrl", "intent": "eye.color.intent", "template": "(ændre|indstil) (øje|øjne) (farve|farver|) til {farve}", "slots": ["farve"], "entity_values": {"farve": []}}
 {"lang": "da-DK", "skill": "ovos-skill-mark1-ctrl", "intent": "eye.color.intent", "template": "(ændre|indstil) (øje|øjne) til (a|en) {color} farve", "slots": ["color"], "entity_values": {"color": []}}
 {"lang": "da-DK", "skill": "ovos-skill-mark1-ctrl", "intent": "eye.color.intent", "template": "(ændre|indstil) øje (farve|farver) til noget {color}", "slots": ["color"], "entity_values": {"color": []}}
+{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "genre.movie.search.intent", "template": "(list | find) film der er (i genren | en) {genre}", "slots": ["genre"], "entity_values": {"genre": []}}
+{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "genre.movie.search.intent", "template": "(list | find) {genre} film", "slots": ["genre"], "entity_values": {"genre": []}}
+{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "genre.tv.search.intent", "template": "(list | find) (tv-shows | fjernsynsprogrammer | programmer) der er (en |) {genre}", "slots": ["genre"], "entity_values": {"genre": []}}
+{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "genre.tv.search.intent", "template": "(list | find) {genre} (tv-shows | fjernsnsprogrammer | programmer)", "slots": ["genre"], "entity_values": {"genre": []}}
+{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie.cast.intent", "template": "hvem (spiller | er) i filmen {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie.description.intent", "template": "fortæl (mig | os) om (filmen|) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie.description.intent", "template": "giv (mig | os) en (beskrivelse | synopsis) af (filmen|) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie.description.intent", "template": "hvad handler (filmen|flicken) {movie} om", "slots": ["movie"], "entity_values": {"movie": []}}
 {"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie.genre.search.intent", "template": "(liste|find) (film|film|film) der er (a| ) {genre}", "slots": ["genre"], "entity_values": {"genre": []}}
 {"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie.genre.search.intent", "template": "(liste|find) {genre} (film|film|film)", "slots": ["genre"], "entity_values": {"genre": []}}
 {"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie.genres.intent", "template": "hvad (genrer | genre) er (filmem | ) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
@@ -440,6 +448,13 @@
 {"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie.information.intent", "template": "(giv | fortæl | hent) (| mig | os) (information | info) (på | om) (filmen | ) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
 {"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie.information.intent", "template": "(har du | kan du få) (info | information) (på| om) (filmen | ) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
 {"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie.production.intent", "template": "(hvem | hvilket firma) ahr (produceret | lavet) filmen {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie.recommendations.intent", "template": "(list | få) (gode|) film (der ligner | der lignende) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie.recommendations.intent", "template": "anbefal en film der (ligner | lignende) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie.recommendations.intent", "template": "hvilke film (ville | kan) du anbefale (der ligner | der lignende) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie.runtime.intent", "template": "Få (runtime | længden) af (film | film | flick) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie.runtime.intent", "template": "Hvad er (runtime|længde) af (film|film|flick) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie.runtime.intent", "template": "Hvor lang tid (er|varer) (filmen|) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie.year.intent", "template": "(hvilket år | hvornår | hvilken dato) var filmen {movie} (lavet | frigivet)", "slots": ["movie"], "entity_values": {"movie": []}}
 {"lang": "da-DK", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "gentag {sætning}", "slots": ["sætning"], "entity_values": {"sætning": []}}
 {"lang": "da-DK", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "gentag {sætning} efter mig", "slots": ["sætning"], "entity_values": {"sætning": []}}
 {"lang": "da-DK", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "sig efter mig {sætning}", "slots": ["sætning"], "entity_values": {"sætning": []}}
