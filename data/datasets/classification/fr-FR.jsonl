@@ -86,6 +86,8 @@
 {"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "alma_mater.intent", "text": "dans quelle université {query} a-t-elle étudié"}
 {"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "alma_mater.intent", "text": "dans quelle université {query} a-t-il étudié"}
 {"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "alma_mater.intent", "text": "quelle est l'alma mater de {query}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "birthdate.intent", "text": "à quelle date {query} est-il né"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "birthdate.intent", "text": "à quelle date {query} est-elle née"}
 {"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "born.intent", "text": "date de naissance de {query}"}
 {"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "born.intent", "text": "quand {query} est-elle née"}
 {"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "born.intent", "text": "quand {query} est-il né"}
@@ -112,7 +114,12 @@
 {"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "resting_place.intent", "text": "où est enterrée {query}"}
 {"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "resting_place.intent", "text": "où repose {query}"}
 {"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "resting_place.intent", "text": "où se trouve la tombe de {query}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "search_duck.intent", "text": "demande à duckduckgo des informations sur {query}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "search_duck.intent", "text": "cherche {query} sur duckduckgo"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "search_duck.intent", "text": "que dit duckduckgo sur {query}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "search_duck.intent", "text": "cherche des informations sur {query} avec duckduckgo"}
 {"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "thesis.intent", "text": "quel est le sujet de thèse de {query}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "who.intent", "text": "qui est {query}"}
 {"lang": "fr-FR", "skill": "ovos-ocp-pipeline-plugin", "file_type": "voc", "intent": "ADKeyword.voc", "text": "audiodescription"}
 {"lang": "fr-FR", "skill": "ovos-ocp-pipeline-plugin", "file_type": "voc", "intent": "ADKeyword.voc", "text": "description audio"}
 {"lang": "fr-FR", "skill": "ovos-ocp-pipeline-plugin", "file_type": "voc", "intent": "ADKeyword.voc", "text": "description du film"}
@@ -1795,6 +1802,9 @@
 {"lang": "fr-FR", "skill": "ovos-skill-camera", "file_type": "intent", "intent": "have_camera.intent", "text": "puis-je utiliser la caméra"}
 {"lang": "fr-FR", "skill": "ovos-skill-camera", "file_type": "intent", "intent": "have_camera.intent", "text": "y a t-il une caméra"}
 {"lang": "fr-FR", "skill": "ovos-skill-camera", "file_type": "intent", "intent": "take_picture.intent", "text": "prendre une photo"}
+{"lang": "fr-FR", "skill": "ovos-skill-cave-adventure-game", "file_type": "voc", "intent": "Advent.voc", "text": "colossal cave adventure"}
+{"lang": "fr-FR", "skill": "ovos-skill-cave-adventure-game", "file_type": "voc", "intent": "Advent.voc", "text": "jeu colossal cave adventure"}
+{"lang": "fr-FR", "skill": "ovos-skill-cave-adventure-game", "file_type": "voc", "intent": "Advent.voc", "text": "cave adventure"}
 {"lang": "fr-FR", "skill": "ovos-skill-cmd", "file_type": "voc", "intent": "Run.voc", "text": "démarre commande"}
 {"lang": "fr-FR", "skill": "ovos-skill-cmd", "file_type": "voc", "intent": "Run.voc", "text": "démarre la commande"}
 {"lang": "fr-FR", "skill": "ovos-skill-cmd", "file_type": "voc", "intent": "Run.voc", "text": "démarre la script"}
@@ -2544,18 +2554,17 @@
 {"lang": "fr-FR", "skill": "ovos-skill-iss-location", "file_type": "voc", "intent": "who.voc", "text": "personnes"}
 {"lang": "fr-FR", "skill": "ovos-skill-iss-location", "file_type": "voc", "intent": "who.voc", "text": "qui"}
 {"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "intent", "intent": "Laugh.intent", "text": "rire"}
-{"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "intent", "intent": "Laugh.intent", "text": "ris"}
-{"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "intent", "intent": "RandomLaugh.intent", "text": "active le rire aléatoire"}
-{"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "intent", "intent": "RandomLaugh.intent", "text": "rigole aléatoirement"}
-{"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "intent", "intent": "RandomLaugh.intent", "text": "rire aléatoire"}
-{"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "intent", "intent": "RandomLaugh.intent", "text": "ris aléatoirement"}
+{"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "intent", "intent": "Laugh.intent", "text": "rigoler"}
+{"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "intent", "intent": "RandomLaugh.intent", "text": "active le mode rire aléatoire"}
+{"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "intent", "intent": "RandomLaugh.intent", "text": "déclenche un rire aléatoire"}
+{"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "intent", "intent": "RandomLaugh.intent", "text": "fais des rires aléatoires"}
 {"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "voc", "intent": "Stop.voc", "text": "abandonne"}
 {"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "voc", "intent": "Stop.voc", "text": "annule"}
 {"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "voc", "intent": "Stop.voc", "text": "arrête"}
-{"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "voc", "intent": "Stop.voc", "text": "c'est pas drôle"}
 {"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "voc", "intent": "Stop.voc", "text": "stop"}
 {"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "intent", "intent": "haunted.intent", "text": "as-tu besoin d'un exorcisme"}
-{"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "intent", "intent": "haunted.intent", "text": "es-tu hanté?"}
+{"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "intent", "intent": "haunted.intent", "text": "es-tu hanté"}
+{"lang": "fr-FR", "skill": "ovos-skill-laugh", "file_type": "intent", "intent": "haunted.intent", "text": "es-tu possédé"}
 {"lang": "fr-FR", "skill": "ovos-skill-local-media", "file_type": "voc", "intent": "local_media.voc", "text": "navigateur de fichiers"}
 {"lang": "fr-FR", "skill": "ovos-skill-local-media", "file_type": "voc", "intent": "local_media.voc", "text": "médias locaux"}
 {"lang": "fr-FR", "skill": "ovos-skill-local-media", "file_type": "intent", "intent": "open.file.browser.intent", "text": "ouvre l'explorateur de fichiers"}
@@ -2854,6 +2863,86 @@
 {"lang": "fr-FR", "skill": "ovos-skill-mark1-ctrl", "file_type": "voc", "intent": "unmute.voc", "text": "remets le son du mark one"}
 {"lang": "fr-FR", "skill": "ovos-skill-mark1-ctrl", "file_type": "voc", "intent": "unmute.voc", "text": "rétablis le son du mark one"}
 {"lang": "fr-FR", "skill": "ovos-skill-mark1-ctrl", "file_type": "voc", "intent": "up.voc", "text": "haut"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "CodeResetKeyword.voc", "text": "réinitialise"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "CodeResetKeyword.voc", "text": "remets à zéro"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "MoonGameKeyword.voc", "text": "apollo 11"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "MoonGameKeyword.voc", "text": "jeu apollo 11"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "MoonGameKeyword.voc", "text": "mission apollo 11"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "abortKeyword.voc", "text": "interrompre"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "abortKeyword.voc", "text": "annuler"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "abortKeyword.voc", "text": "1"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "boardKeyword.voc", "text": "embarquer"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "boardKeyword.voc", "text": "monter à bord"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "boardKeyword.voc", "text": "entrer"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "bootsKeyword.voc", "text": "bottes"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "bootsKeyword.voc", "text": "chaussures"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "bootsKeyword.voc", "text": "bottes spatiales"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "dothisKeyword.voc", "text": "3"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "dothisKeyword.voc", "text": "allons-y"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "dothisKeyword.voc", "text": "on y va"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "evacuateKeyword.voc", "text": "évacuer"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "evacuateKeyword.voc", "text": "fuir"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "evacuateKeyword.voc", "text": "s'échapper"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "evacuateKeyword.voc", "text": "partir"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "evacuateKeyword.voc", "text": "1"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "examineKeyword.voc", "text": "examiner"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "examineKeyword.voc", "text": "inspecter"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "examineKeyword.voc", "text": "vérifier"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "examineKeyword.voc", "text": "1"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "glovesKeyword.voc", "text": "gant"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "glovesKeyword.voc", "text": "gants"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "harshKeyword.voc", "text": "sèchement"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "harshKeyword.voc", "text": "durement"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "harshKeyword.voc", "text": "méchamment"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "harshKeyword.voc", "text": "2"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "helmetKeyword.voc", "text": "casque"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "helmetKeyword.voc", "text": "casques"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "ignoreKeyword.voc", "text": "ignorer"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "ignoreKeyword.voc", "text": "2"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "landKeyword.voc", "text": "atterrir"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "landKeyword.voc", "text": "se poser"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "landKeyword.voc", "text": "1"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "noKeyword.voc", "text": "non"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "noKeyword.voc", "text": "négatif"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "noKeyword.voc", "text": "jamais"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "noKeyword.voc", "text": "je refuse"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "orbitKeyword.voc", "text": "orbite"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "questions.voc", "text": "est-ce que tu m'apprécies ?"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "questions.voc", "text": "tu crois qu'on va survivre ?"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "questions.voc", "text": "tu fais confiance à l'équipe ?"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "questions.voc", "text": "le centre de contrôle a-t-il confiance en nous ?"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "questions.voc", "text": "tu crois que nous ne sommes pas seuls dans l'univers ?"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "questions.voc", "text": "est-ce que je vais mourir pendant cette mission ?"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "silentKeyword.voc", "text": "rien"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "silentKeyword.voc", "text": "silence"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "silentKeyword.voc", "text": "aucune réponse"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "silentKeyword.voc", "text": "3"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "silentKeyword.voc", "text": "pas du tout"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "spacesuitKeyword.voc", "text": "combinaison"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "spacesuitKeyword.voc", "text": "combinaison spatiale"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "speechKeyword.voc", "text": "2"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "speechKeyword.voc", "text": "discours"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "speechKeyword.voc", "text": "terrible"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "stayKeyword.voc", "text": "rester"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "stayKeyword.voc", "text": "à bord"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "stayKeyword.voc", "text": "dedans"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "stayKeyword.voc", "text": "2"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "stopKeyword.voc", "text": "arrête"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "stopKeyword.voc", "text": "annule"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "stopKeyword.voc", "text": "quitter"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "stopKeyword.voc", "text": "abandonner"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "survivalKeyword.voc", "text": "1"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "survivalKeyword.voc", "text": "pourcentage"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "survivalKeyword.voc", "text": "pour cent"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "survivalKeyword.voc", "text": "survie"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "warmKeyword.voc", "text": "gentiment"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "warmKeyword.voc", "text": "chaleureusement"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "warmKeyword.voc", "text": "amicalement"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "warmKeyword.voc", "text": "1"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "yesKeyword.voc", "text": "oui"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "yesKeyword.voc", "text": "affirmatif"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "yesKeyword.voc", "text": "bien sûr"}
+{"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "yesKeyword.voc", "text": "j'accepte"}
 {"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre.movie.search.intent", "text": "quels sont les films du genre {genre}"}
 {"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre.movie.search.intent", "text": "trouve-moi des films du genre {genre}"}
 {"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre.tv.search.intent", "text": "quelles sont les émissions télé du genre {genre}"}
