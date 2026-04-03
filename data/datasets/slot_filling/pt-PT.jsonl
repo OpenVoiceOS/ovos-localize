@@ -73,6 +73,11 @@
 {"lang": "pt-PT", "skill": "ovos-skill-audio-recording", "intent": "start_recording.intent", "template": "(começar|ativar) (a|) (captura|gravação) de áudio chamada {name}", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-audio-recording", "intent": "start_recording.intent", "template": "(começar|ativar) (a|) (captura|gravação) de áudio com (o|) (nome|titulo) {name}", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-audio-recording", "intent": "start_recording.intent", "template": "(começar|ativar) (a|) (captura|gravação) de áudio como {name}", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-color-picker", "intent": "request-color.intent", "template": "qual é a cor {requested_color}", "slots": ["requested_color"], "entity_values": {"requested_color": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-color-picker", "intent": "request-color-by-hex.intent", "template": "(qual|que) cor tem um código hexadecimal de {hex_code}", "slots": ["hex_code"], "entity_values": {"hex_code": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-color-picker", "intent": "request-color-by-name.intent", "template": "Mostre-me a cor {cor}", "slots": ["cor"], "entity_values": {"cor": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-color-picker", "intent": "request-color-by-name.intent", "template": "como é a cor {cor}", "slots": ["cor"], "entity_values": {"cor": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-color-picker", "intent": "request-color-by-rgb.intent", "template": "qual cor tem um valor RGB de {rgb}", "slots": ["rgb"], "entity_values": {"rgb": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "Preciso de saber a data do calendário em {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "Preciso de saber a data em {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "Quero saber a data em {location}", "slots": ["location"], "entity_values": {"location": []}}
