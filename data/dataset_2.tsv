@@ -1,4 +1,26 @@
 lang	skill	file	utterance
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 10 de la tarda a {location}.
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 10 de la tarda de {location}.
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 10 de la vesprada .
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 10 de la vesprada a {location}.
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 10 de la vesprada de {location}.
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 10 del matí .
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 10 del matí a {location}.
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 10 del matí de {location}.
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 10 del migdia .
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 10 del migdia a {location}.
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 10 del migdia de {location}.
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 10 del vespre .
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 10 del vespre a {location}.
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 10 del vespre de {location}.
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 11 de la nit .
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 11 de la nit a {location}.
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 11 de la nit de {location}.
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 11 de la tarda .
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 11 de la tarda a {location}.
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 11 de la tarda de {location}.
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 11 de la vesprada .
+ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 11 de la vesprada a {location}.
 ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 11 de la vesprada de {location}.
 ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 11 del matí .
 ca-ES	ovos-skill-weather	hourly_forecast.intent	previsió per dilluns a les 11 del matí a {location}.
@@ -48616,10 +48638,20 @@ en-US	skill-meal-plan	add.meal.intent	add meal
 en-US	skill-meal-plan	add.meal.intent	new dinner
 en-US	skill-meal-plan	add.meal.intent	save a meal
 en-US	skill-meal-plan	add.meal.intent	save meal
+fr-FR	skill-meal-plan	add.meal.intent	ajoute un repas à ma liste de repas
+fr-FR	skill-meal-plan	add.meal.intent	ajoute un plat à ma liste de repas
+fr-FR	skill-meal-plan	add.meal.intent	enregistre un nouveau repas dans ma liste
+fr-FR	skill-meal-plan	add.meal.intent	ajoute une idée de repas à ma liste
 en-US	skill-meal-plan	confirm.list.meals.dialog	are you sure? you have {num_meals} meals listed. this may take some time.
+fr-FR	skill-meal-plan	confirm.list.meals.dialog	vous avez {num_meals} repas enregistrés. voulez-vous vraiment que je vous les lise tous ?
 en-US	skill-meal-plan	confirm.remove.meal.dialog	just to confirm, we're removing {meal}, right?
+fr-FR	skill-meal-plan	confirm.remove.meal.dialog	je retire bien {meal}, c'est ça ?
 en-US	skill-meal-plan	failed.to.add.meal.dialog	i wasn't able to add that meal. i'm sorry.
+fr-FR	skill-meal-plan	failed.to.add.meal.dialog	je n'ai pas réussi à ajouter ce repas.
+fr-FR	skill-meal-plan	failed.to.add.meal.dialog	désolé, je n'ai pas pu ajouter ce repas.
 en-US	skill-meal-plan	failed.to.remove.meal.dialog	i couldn't remove that meal. i'm sorry.
+fr-FR	skill-meal-plan	failed.to.remove.meal.dialog	je n'ai pas réussi à retirer ce repas.
+fr-FR	skill-meal-plan	failed.to.remove.meal.dialog	désolé, je n'ai pas pu retirer ce repas.
 en-US	skill-meal-plan	list.meal.intent	what are my food options?
 en-US	skill-meal-plan	list.meal.intent	what are my meal choices?
 en-US	skill-meal-plan	list.meal.intent	can you tell me all my meals?
@@ -48629,9 +48661,20 @@ en-US	skill-meal-plan	list.meal.intent	read all my meals
 en-US	skill-meal-plan	list.meal.intent	tell me all my meals
 en-US	skill-meal-plan	list.meal.intent	list my meals
 en-US	skill-meal-plan	list.meal.intent	list meals
+fr-FR	skill-meal-plan	list.meal.intent	quels sont mes repas
+fr-FR	skill-meal-plan	list.meal.intent	quels sont tous mes repas
+fr-FR	skill-meal-plan	list.meal.intent	quelles sont mes options de repas
+fr-FR	skill-meal-plan	list.meal.intent	liste mes repas
+fr-FR	skill-meal-plan	list.meal.intent	lis mes repas
+fr-FR	skill-meal-plan	list.meal.intent	peux-tu me lire tous mes repas
 en-US	skill-meal-plan	list.meals.dialog	okay, here are all your meal options: {meals}
+fr-FR	skill-meal-plan	list.meals.dialog	voici vos idées de repas : {meals}
 en-US	skill-meal-plan	meal.added.dialog	okay, i've added {new_meal} to your list of meals. yum!
+fr-FR	skill-meal-plan	meal.added.dialog	c'est noté, j'ajoute {new_meal} à votre liste de repas.
+fr-FR	skill-meal-plan	meal.added.dialog	{new_meal} a bien été ajouté à votre liste de repas.
 en-US	skill-meal-plan	meal.removed.dialog	ok, i won't recommend that anymore.
+fr-FR	skill-meal-plan	meal.removed.dialog	d'accord, je retire ce repas de votre liste.
+fr-FR	skill-meal-plan	meal.removed.dialog	très bien, je ne vous proposerai plus ce repas.
 en-US	skill-meal-plan	plan.meal.intent	what should i make for dinner?
 en-US	skill-meal-plan	plan.meal.intent	what should i have for dinner?
 en-US	skill-meal-plan	plan.meal.intent	what should i eat for dinner?
@@ -48639,12 +48682,22 @@ en-US	skill-meal-plan	plan.meal.intent	what should i eat?
 en-US	skill-meal-plan	plan.meal.intent	what should i eat tonight?
 en-US	skill-meal-plan	plan.meal.intent	i'm hungry
 en-US	skill-meal-plan	plan.meal.intent	what's for dinner?
+fr-FR	skill-meal-plan	plan.meal.intent	propose-moi une idée de repas
+fr-FR	skill-meal-plan	plan.meal.intent	quel repas me proposes-tu
+fr-FR	skill-meal-plan	plan.meal.intent	donne-moi une idée de repas
+fr-FR	skill-meal-plan	plan.meal.intent	aide-moi à choisir un repas
+fr-FR	skill-meal-plan	plan.meal.intent	que me conseilles-tu comme repas
 en-US	skill-meal-plan	remove.meal.intent	remove a meal
 en-US	skill-meal-plan	remove.meal.intent	remove meal
 en-US	skill-meal-plan	remove.meal.intent	get rid of a meal
 en-US	skill-meal-plan	remove.meal.intent	delete a meal
 en-US	skill-meal-plan	remove.meal.intent	delete meal
+fr-FR	skill-meal-plan	remove.meal.intent	supprime un repas de ma liste
+fr-FR	skill-meal-plan	remove.meal.intent	retire un repas de ma liste
+fr-FR	skill-meal-plan	remove.meal.intent	enlève un repas de ma liste
+fr-FR	skill-meal-plan	remove.meal.intent	supprime une option de repas
 en-US	skill-meal-plan	skip.list.meals.dialog	okay, i won't bore you.
+fr-FR	skill-meal-plan	skip.list.meals.dialog	d'accord, je ne vous lis pas toute la liste.
 en-US	skill-monster-scanner	bed.voc	bed
 fr-FR	skill-monster-scanner	bed.voc	lit
 fr-FR	skill-monster-scanner	bed.voc	le lit
