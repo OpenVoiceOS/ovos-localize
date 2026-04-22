@@ -4627,6 +4627,13 @@
 {"lang": "pl-PL", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "{offset} sekundy od teraz która jest godzina", "slots": ["offset"], "entity_values": {"offset": []}}
 {"lang": "pl-PL", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "{offset} sekundy od teraz która jest godzina w {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
 {"lang": "pl-PL", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "{offset} sekundy od teraz która jest godzina we {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "duckduckgo {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "wyszukaj w DuckDuckGo {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "DuckDuckGo {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "zapytaj DuckDuckGo o {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "znajdź {query} na DuckDuckGo", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "szukaj w WordNet {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "zapytaj WordNet o {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "pl-PL", "skill": "skill-homeassistant", "intent": "assist.intent", "template": "Powiedz asystentowi domowemu (|aby|żeby) {command}", "slots": ["command"], "entity_values": {"command": []}}
 {"lang": "pl-PL", "skill": "skill-homeassistant", "intent": "lights.decrease.brightness.intent", "template": "(zmniejsz|zredukuj|obniż) (|poziom) (jasność|jasności|oświetlenia|oświetlenie) (|w|na|mojej|mojego|moich) {entity}", "slots": ["entity"], "entity_values": {"entity": []}}
 {"lang": "pl-PL", "skill": "skill-homeassistant", "intent": "lights.decrease.brightness.intent", "template": "(przyciemnij|ściemnij) {entity}", "slots": ["entity"], "entity_values": {"entity": []}}

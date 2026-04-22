@@ -1,16 +1,480 @@
-{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "birthdate.intent", "template": "cuando nació {persona}", "slots": ["persona"], "entity_values": {"persona": []}}
-{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "birthdate.intent", "template": "lo que es {persona} fecha de nacimiento", "slots": ["persona"], "entity_values": {"persona": []}}
-{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "born.intent", "template": "cuando es {query} cumpleaños", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "fields.intent", "template": "lo que es {query} campo de experiencia", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "official_website.intent", "template": "lo que es {query} sitio oficial", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "resting_place.intent", "template": "donde está {query} lugar de descanso", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "Pregúntale al pato sobre {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "Qué dice el pato del pato sobre {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "Qué dice el pato sobre {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "buscar el pato para {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "buscar pato de pato ir por {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "búsqueda de pato para {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "who.intent", "template": "que es {persona}", "slots": ["persona"], "entity_values": {"persona": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age.intent", "template": "cuántos años tiene {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age.intent", "template": "qué edad tiene {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age.intent", "template": "{person} edad", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age_at_death.intent", "template": "cuántos años tenía {keyword} cuando (murió|falleció)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age_at_death.intent", "template": "cuántos años tenía {keyword} el día que (murió|falleció)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age_at_death.intent", "template": "qué edad tenía {keyword} en su (muerte|fallecimiento)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age_at_death.intent", "template": "cuántos años vivió {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age_at_death.intent", "template": "con cuántos años murió {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "alma_mater.intent", "template": "cuál es el alma mater de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "alma_mater.intent", "template": "dónde estudió {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "alma_mater.intent", "template": "en qué universidad estudió {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "alma_mater.intent", "template": "cuál fue la universidad de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "alma_mater.intent", "template": "alma mater de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "cuál es el área de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "{place} área", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "cuán grande es {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "cuál es la superficie de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "{place} superficie", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "qué extensión tiene {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "cuántos kilómetros cuadrados tiene {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "cuál es el tamaño de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "quién (escribió|es el autor de) {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "{book} autor", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "quién es el autor de {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "quién redactó {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "{book} escrito por quién", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "quién firmó {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "de quién es el libro {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "cuál es el autor de {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "baptised.intent", "template": "cuándo fue bautizado {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "baptised.intent", "template": "cuándo fue bautizada {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "baptised.intent", "template": "cuál es la fecha de bautismo de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "baptised.intent", "template": "cuándo tuvo lugar el bautismo de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "baptised.intent", "template": "{keyword} fecha de (bautismo|bautización)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "born.intent", "template": "cuándo nació {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "born.intent", "template": "cuándo es el cumpleaños de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "born.intent", "template": "cuál es la fecha de nacimiento de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "born.intent", "template": "{keyword} (día|fecha) de nacimiento", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "born.intent", "template": "cuándo es el (nacimiento|aniversario) de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "cuánto recaudó {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "{movie} taquilla", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "cuánto dinero ganó {movie} en taquilla", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "cuál fue la recaudación de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "{movie} recaudación en taquilla", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "cuánto ingresó {movie} en el cine", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "qué recaudación tuvo {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "cuál fue el presupuesto de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "{movie} presupuesto", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "cuánto costó producir {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "cuánto dinero se gastó en {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "{movie} coste de producción", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "cuál fue el coste de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "cuánto invirtieron en {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "cuál es la capital de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "{place} capital", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "qué ciudad es la capital de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "cuál es la ciudad capital de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "capital de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "dime la capital de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "qué ciudad actúa como capital de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "quién es el (ceo|director ejecutivo|jefe) de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "{company} ceo", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "quién dirige {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "quién es el presidente de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "{company} director ejecutivo", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "quién está al frente de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "cuál es el CEO de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "quién encabeza {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "cuántos (campeonatos|títulos|trofeos) ha ganado {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "{team} campeonatos", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "{team} palmarés", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "cuántos títulos tiene {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "cuántas ligas ha ganado {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "{team} títulos ganados", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "cuántos trofeos ha conseguido {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "qué campeonatos ha ganado {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "children.intent", "template": "cuántos hijos (tuvo|tiene) {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "children.intent", "template": "cuántos hijos (tiene|tenía|tuvo) {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "children.intent", "template": "hijos de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "children.intent", "template": "tiene {keyword} (hijos|descendencia)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "children.intent", "template": "cuántos (niños|hijos) tiene {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "citizenship.intent", "template": "cuál es la ciudadanía de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "citizenship.intent", "template": "{person} ciudadanía", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "citizenship.intent", "template": "{person} nacionalidad", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "coached_by.intent", "template": "quién es el entrenador de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "coached_by.intent", "template": "{person} entrenador", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "quién (compuso|escribió) la (música|banda sonora) de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "{movie} compositor", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "quién es el compositor de la banda sonora de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "{movie} banda sonora", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "quién hizo la música de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "quién compuso la partitura de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "{movie} música compuesta por quién", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "está {animal} (en peligro|amenazado|extinto)", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "cuál es el estado de conservación de {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "{animal} estado de conservación", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "está {animal} en peligro de extinción", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "{animal} especie amenazada", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "cómo está clasificado {animal} según la UICN", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "{animal} en la lista roja", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "cuál es el nivel de amenaza de {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "en qué país está {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "{place} país", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "a qué país pertenece {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "en qué nación se encuentra {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "{place} en qué país", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "de qué país es {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "qué país incluye {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "quién diseñó {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "{place} diseñador", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "quién fue el arquitecto de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "quién es el autor del diseño de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "{place} arquitecto", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "quién concibió el diseño de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "por quién fue diseñado {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "quién (desarrolló|creó) {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "{software} desarrollador", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "qué (empresa|estudio) desarrolló {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "quién está detrás de {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "{software} creado por quién", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "quién programó {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "cuál es el desarrollador de {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "died.intent", "template": "cuándo murió {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "died.intent", "template": "cuándo fue la muerte de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "died.intent", "template": "cuál es la fecha de fallecimiento de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "died.intent", "template": "{keyword} (día|fecha) de (muerte|fallecimiento)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "died.intent", "template": "cuándo falleció {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "qué come {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "{animal} dieta", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "{animal} alimentación", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "de qué se alimenta {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "cuál es la dieta de {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "qué alimentos consume {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "qué ingiere {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "quién dirigió {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "quién es el director de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "{movie} director", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "quién fue el director de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "{movie} dirigida por quién", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "quién llevó la dirección de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "qué director hizo {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "doctoral_students.intent", "template": "quiénes fueron los doctorandos de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "doctoral_students.intent", "template": "a quiénes supervisó {keyword} en su (tesis|doctorado)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "doctoral_students.intent", "template": "quiénes hicieron el doctorado con {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "doctoral_students.intent", "template": "{keyword} (doctorandos|estudiantes de doctorado|tutorados)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "doctoral_students.intent", "template": "qué investigadores dirigió {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "education.intent", "template": "dónde se educó {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "education.intent", "template": "dónde se formó {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "education.intent", "template": "qué estudios cursó {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "education.intent", "template": "dónde realizó {keyword} sus estudios", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "education.intent", "template": "cuál fue la formación académica de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "cuál es la altitud de {mountain}", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "{mountain} altitud", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "{mountain} elevación", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "a qué altura está {mountain}", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "cuántos metros tiene {mountain}", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "cuál es la altura de {mountain}", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "{mountain} altura sobre el nivel del mar", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "father.intent", "template": "quién es el padre de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "father.intent", "template": "quién fue el padre de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "father.intent", "template": "cómo se llama el padre de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "father.intent", "template": "{keyword} (padre|papá)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "father.intent", "template": "quién es {keyword} padre", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "fields.intent", "template": "cuál es el campo de especialización de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "fields.intent", "template": "en qué área (trabajó|trabaja|es experto) {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "fields.intent", "template": "cuál es la especialidad de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "fields.intent", "template": "en qué disciplina destacó {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "fields.intent", "template": "{keyword} campo de (especialización|conocimiento|expertise)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "cuándo fue fundado {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "cuándo se fundó {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "{organization} fecha de fundación", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "en qué año se creó {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "{organization} año de fundación", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "cuándo nació {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "en qué año fue establecido {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "quién fundó {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "{organization} fundador", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "quiénes son los fundadores de {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "quién creó {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "{organization} fue fundado por quién", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "cuáles son los fundadores de {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "quién estableció {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "qué género es {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "{movie} género", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "de qué género es {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "a qué género pertenece {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "cómo se clasifica {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "{movie} tipo de género", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "cuál es el género de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "dónde vive {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "cuál es el hábitat de {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "{animal} hábitat", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "en qué entorno habita {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "dónde habita {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "en qué ecosistema vive {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "{animal} zona de vida", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "quién es el (entrenador|director técnico) de {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "{team} entrenador", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "{team} técnico", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "quién entrena a {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "quién dirige al {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "cuál es el entrenador principal de {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "quién lleva el banquillo de {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "dónde está la sede de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "{company} sede", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "dónde tiene su sede {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "en qué ciudad tiene la sede {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "{company} oficina central", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "cuál es la sede principal de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "dónde está ubicada la central de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "height.intent", "template": "cuánto mide {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "height.intent", "template": "cuál es la altura de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "height.intent", "template": "{person} altura", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "en qué industria está {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "{company} sector", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "{company} industria", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "a qué sector pertenece {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "en qué ramo opera {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "cuál es el sector de actividad de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "qué tipo de empresa es {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "institutions.intent", "template": "dónde trabajó {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "institutions.intent", "template": "dónde enseñó {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "institutions.intent", "template": "en qué instituciones estuvo {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "institutions.intent", "template": "a qué instituciones estuvo vinculado {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "institutions.intent", "template": "dónde realizó su investigación {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "institutions.intent", "template": "{keyword} instituciones (académicas|de investigación|)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "quién inventó {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "{keyword} inventor", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "quién creó {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "a quién se le atribuye la invención de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "{keyword} fue inventado por quién", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "quién desarrolló {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "quién es el inventor de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "known_for.intent", "template": "por qué es famoso {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "known_for.intent", "template": "por qué se conoce a {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "known_for.intent", "template": "qué es lo que {person} es conocido", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "known_for.intent", "template": "qué hizo famoso a {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "known_for.intent", "template": "{person} es famoso por qué", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "a qué (sello discográfico|sello|discográfica) pertenece {artist}", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "{artist} sello discográfico", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "{artist} discográfica", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "qué sello tiene {artist}", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "con qué discográfica trabaja {artist}", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "bajo qué sello publica {artist}", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "cuál es el sello de {artist}", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "en qué idioma está (escrito|) {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "{book} idioma", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "{book} idioma original", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "en qué lengua fue escrito {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "cuál es el idioma de {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "qué idioma usa {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "{book} en qué lengua", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "cuál es la longitud de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "{place} longitud", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "cuánto mide {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "qué extensión tiene {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "{place} medida", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "cuán largo es {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "cuántos kilómetros tiene {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "bajo qué licencia está {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "{software} licencia", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "qué tipo de licencia tiene {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "{software} es software libre", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "{software} licencia de uso", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "cómo está licenciado {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "cuál es la licencia de {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "dónde se encuentra {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "{place} ubicación", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "dónde está {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "dónde queda {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "en qué lugar está {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "{place} localización", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "dónde puedo encontrar {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "quiénes son los integrantes de {group}", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "{group} integrantes", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "quién forma parte de {group}", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "quiénes son los miembros de {group}", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "{group} miembros", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "cuántos miembros tiene {group}", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "quiénes componen {group}", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "mother.intent", "template": "quién es la madre de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "mother.intent", "template": "quién fue la madre de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "mother.intent", "template": "cómo se llama la madre de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "mother.intent", "template": "{keyword} (madre|mamá)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "mother.intent", "template": "quién es {keyword} madre", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "movement.intent", "template": "a qué (movimiento artístico|corriente filosófica|movimiento científico) pertenece {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "movement.intent", "template": "con qué movimiento se asocia a {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "movement.intent", "template": "a qué corriente de pensamiento pertenece {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "movement.intent", "template": "qué estilo representa {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "movement.intent", "template": "{keyword} (movimiento|corriente|escuela) (artística|filosófica|intelectual|)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "net_worth.intent", "template": "cuál es el patrimonio neto de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "net_worth.intent", "template": "{person} patrimonio neto", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "net_worth.intent", "template": "cuánto dinero tiene {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "cuál es el apodo de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "{person} apodo", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "{person} también conocido como", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "{person} cómo se le llama", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "qué mote tiene {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "cómo apodan a {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "{person} sobrenombre", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_awards.intent", "template": "qué premios (ganó|recibió) {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_awards.intent", "template": "qué (galardones|distinciones) obtuvo {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_awards.intent", "template": "cuáles son los premios de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_awards.intent", "template": "ganó {person} algún premio", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_awards.intent", "template": "{person} (premios|reconocimientos|galardones)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_awards.intent", "template": "qué honores recibió {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_work.intent", "template": "cuál es la obra más (famosa|conocida|importante) de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_work.intent", "template": "cuál es el trabajo más notable de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_work.intent", "template": "qué (creó|escribió|compuso) {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_work.intent", "template": "cuál es el (mayor|principal) logro de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_work.intent", "template": "{person} obra (más famosa|más importante|más conocida)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_work.intent", "template": "por qué (obra|creación) es conocido {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "cuántos empleados tiene {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "{company} número de empleados", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "cuántas personas trabajan en {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "cuál es la plantilla de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "{company} trabajadores", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "cuánta gente emplea {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "qué tamaño tiene la plantilla de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "occupation.intent", "template": "cuál es la profesión de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "occupation.intent", "template": "a qué se dedica {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "occupation.intent", "template": "cuál fue la ocupación de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "occupation.intent", "template": "en qué trabaja (o trabajaba) {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "occupation.intent", "template": "{keyword} (profesión|oficio|carrera)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "occupation.intent", "template": "qué (trabajo|profesión) tenía {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "official_website.intent", "template": "cuál es el (sitio|página) web oficial de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "official_website.intent", "template": "cuál es la página oficial de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "official_website.intent", "template": "dónde puedo encontrar el sitio web de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "official_website.intent", "template": "{keyword} (página|sitio) (web|) oficial", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "cuándo fue (inaugurado|abierto|construido|completado) {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "{place} fecha de inauguración", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "{place} fecha de apertura", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "en qué año se inauguró {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "cuándo abrió {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "cuándo se construyó {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "{place} año de apertura", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "cuál es el título original de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "{movie} título original", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "cómo se llamaba originalmente {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "cuál es el nombre original de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "{movie} título en versión original", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "en qué idioma se llama {movie} originalmente", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "cuál era el título en su país de origen de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "cuáles son otros nombres de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "{keyword} otros nombres", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "{keyword} también conocido como", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "cómo se llama también {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "qué otros nombres recibe {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "{keyword} alias", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "cuáles son los nombres alternativos de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "quién es el dueño de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "{keyword} dueño", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "a quién pertenece {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "quién posee {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "{keyword} propietario", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "quién es el propietario de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "de quién es {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "partner.intent", "template": "quién es la pareja de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "partner.intent", "template": "{person} pareja", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "en qué (plataformas|consolas|sistemas) está {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "{software} plataformas", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "{software} sistemas compatibles", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "en qué dispositivos funciona {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "para qué plataformas está disponible {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "{software} compatible con qué sistemas", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "en qué consolas se puede jugar {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "political_party.intent", "template": "a qué partido (político|) pertenece {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "political_party.intent", "template": "cuál es el partido de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "political_party.intent", "template": "{person} partido político", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "cuál es la población de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "cuántos habitantes tiene {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "{place} población", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "{place} habitantes", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "cuánta gente vive en {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "qué población tiene {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "cuántas personas hay en {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "predecessor.intent", "template": "quién precedió a {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "predecessor.intent", "template": "quién fue el predecesor de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "predecessor.intent", "template": "quién ocupó el (cargo|puesto|trono) antes que {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "predecessor.intent", "template": "quién gobernó antes de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "predecessor.intent", "template": "a quién sucedió {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "quién produjo {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "{movie} productor", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "quién es el productor de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "quién fue el productor de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "{movie} producida por quién", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "quién se encargó de la producción de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "cuál es el productor de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "quién publicó {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "{book} editorial", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "qué editorial publicó {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "cuál es la editorial de {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "quién editó {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "por qué editorial fue publicado {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "{book} publicado por quién", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "cuándo se estrenó {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "fecha de estreno de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "{movie} fecha de estreno", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "cuándo salió {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "en qué año se estrenó {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "cuándo fue lanzado {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "{movie} año de estreno", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "religion.intent", "template": "qué religión (practica|practicaba) {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "religion.intent", "template": "cuál es la religión de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "religion.intent", "template": "a qué fe pertenece {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "religion.intent", "template": "{keyword} (religión|fe|confesión)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "religion.intent", "template": "es {keyword} (creyente|religioso|practicante)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "religion.intent", "template": "de qué confesión es {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "resting_place.intent", "template": "dónde está enterrado {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "resting_place.intent", "template": "dónde está (la tumba|el sepulcro) de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "resting_place.intent", "template": "dónde descansan los restos de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "resting_place.intent", "template": "cuál es el lugar de descanso de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "resting_place.intent", "template": "dónde fue sepultado {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "cuáles son los ingresos de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "{company} ingresos", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "cuánto factura {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "cuál es la facturación de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "{company} facturación anual", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "cuánto gana {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "qué ingresos tiene {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "cuánto dura {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "{movie} duración", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "cuántos minutos dura {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "cuál es la duración de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "{movie} cuánto tiempo dura", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "qué duración tiene {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "cuántas horas dura {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "cuál es el nombre (científico|latino) de {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "{animal} nombre científico", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "{animal} nombre latino", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "cuál es la denominación científica de {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "cómo se llama {animal} en latín", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "{animal} nombre en taxonomía", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "cuál es el nombre taxonómico de {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "qué deporte practica {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "{person} deporte", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "a qué deporte se dedica {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "en qué deporte compite {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "cuál es el deporte de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "qué deporte juega {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "{person} atleta de qué deporte", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "spouse.intent", "template": "quién es el (cónyuge|esposo|esposa) de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "spouse.intent", "template": "{person} (esposo|esposa)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "spouse.intent", "template": "con quién está casado {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "en qué (estadio|arena) juega {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "dónde juega {team} de local", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "{team} estadio", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "{team} campo", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "cuál es el estadio de {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "dónde disputa sus partidos {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "en qué recinto juega {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "quiénes actúan en {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "{movie} reparto", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "qué actores salen en {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "quién protagoniza {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "cuál es el elenco de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "{movie} actores principales", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "quién aparece en {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "successor.intent", "template": "quién sucedió a {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "successor.intent", "template": "quién fue el sucesor de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "successor.intent", "template": "quién ocupó el (cargo|puesto|trono) después de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "successor.intent", "template": "quién reemplazó a {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "successor.intent", "template": "quién siguió a {keyword} en el (poder|cargo|)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "thesis.intent", "template": "cuál es el tema de la tesis de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "thesis.intent", "template": "sobre qué versó la tesis de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "thesis.intent", "template": "cuál fue el título de la tesis de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "thesis.intent", "template": "de qué trata la tesis doctoral de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "thesis.intent", "template": "tesis de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "quién escribió el (guión|argumento) de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "{movie} guionista", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "{movie} guión escrito por quién", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "quién es el guionista de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "quién redactó el guión de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "{movie} escrito por quién", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "cuál es el guionista de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "years_active.intent", "template": "cuándo estuvo activo {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "es-ES", "skill": "ovos-ddg-solver-plugin", "intent": "years_active.intent", "template": "{person} años activo", "slots": ["person"], "entity_values": {"person": []}}
 {"lang": "es-ES", "skill": "ovos-ocp-pipeline-plugin", "intent": "featured.intent", "template": "abrir  {media} catálogo", "slots": ["media"], "entity_values": {"media": []}}
 {"lang": "es-ES", "skill": "ovos-ocp-pipeline-plugin", "intent": "featured.intent", "template": "abrir  {media} colección", "slots": ["media"], "entity_values": {"media": []}}
 {"lang": "es-ES", "skill": "ovos-ocp-pipeline-plugin", "intent": "featured.intent", "template": "abrir  {media} lista de reproducción", "slots": ["media"], "entity_values": {"media": []}}
@@ -470,6 +934,11 @@
 {"lang": "es-ES", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "¿qué marcará el reloj si espero {offset} minutos en {location}?", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "¿qué marcará el reloj si espero {offset} segundos ?", "slots": ["offset"], "entity_values": {"offset": []}}
 {"lang": "es-ES", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "¿qué marcará el reloj si espero {offset} segundos en {location}?", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
+{"lang": "es-ES", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "busca en duckduckgo {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "es-ES", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "duckduckgo {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "es-ES", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "pregunta a duckduckgo {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "es-ES", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "busca {query} en duckduckgo", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "es-ES", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "duck duck go {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "es-ES", "skill": "ovos-skill-dictation", "intent": "start_dictation.intent", "template": "Activar el modo de transcripción de texto con el nombre {name}", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "es-ES", "skill": "ovos-skill-dictation", "intent": "start_dictation.intent", "template": "Comienza a escribir el texto como {name}", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "es-ES", "skill": "ovos-skill-dictation", "intent": "start_dictation.intent", "template": "Comienza a tomar dictado llamado {name}", "slots": ["name"], "entity_values": {"name": []}}
@@ -4140,29 +4609,12 @@
 {"lang": "es-ES", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "¿qué dice Wolfram Alpha sobre {query}?", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "es-ES", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "¿qué dice Wolfram sobre {query}?", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "es-ES", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "¿qué dice el lobo sobre {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "antonym.intent", "template": "¿Cuál es el antónimo de {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "antonym.intent", "template": "¿Cuál es un antónimo de {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "antonym.intent", "template": "¿Cuáles son los antónimos de {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "definition.intent", "template": "¿Cuál es la definición de {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "definition.intent", "template": "¿Qué es {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "holonym.intent", "template": "¿Cuál es el holónimo de {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "holonym.intent", "template": "¿Cuál es un holónimo de {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "holonym.intent", "template": "¿Cuáles son los holónimos de {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "hypernym.intent", "template": "¿Cuál es el hiperónimo de {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "hypernym.intent", "template": "¿Cuál es un hiperónimo de {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "hypernym.intent", "template": "¿Cuáles son los hiperónimos de {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "hyponym.intent", "template": "¿Cuál es el hipónimo de {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "hyponym.intent", "template": "¿Cuál es un hipónimo de {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "hyponym.intent", "template": "¿Cuáles son los hipónimos de {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "lemma.intent", "template": "¿Cuál es el lema de {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "lemma.intent", "template": "¿Cuáles son los lemas de {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "lemma.intent", "template": "¿Qué es un lema de {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "Busca {query} en Word Net", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "Busca {query} en WordNet", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "Pregunta a Word Net sobre {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "Pregunta a WordNet sobre {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "¿Qué dice Word Net sobre {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "¿Qué dice WordNet sobre {query}?", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "Busca {word} en Word Net", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "Busca {word} en WordNet", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "Pregunta a Word Net sobre {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "Pregunta a WordNet sobre {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "¿Qué dice Word Net sobre {word}?", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "es-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "¿Qué dice WordNet sobre {word}?", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "es-ES", "skill": "skill-homeassistant", "intent": "assist.intent", "template": "dile a home assistant (|que) {command}", "slots": ["command"], "entity_values": {"command": []}}
 {"lang": "es-ES", "skill": "skill-homeassistant", "intent": "lights.decrease.brightness.intent", "template": "disminuye (|el) brillo de (|el|la|las) {entity}", "slots": ["entity"], "entity_values": {"entity": []}}
 {"lang": "es-ES", "skill": "skill-homeassistant", "intent": "lights.decrease.brightness.intent", "template": "haz que (|el|la|las) {entity} sea mas tenue", "slots": ["entity"], "entity_values": {"entity": []}}

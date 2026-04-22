@@ -23,60 +23,533 @@
 {"lang": "fr-FR", "skill": "ovos-core", "file_type": "voc", "intent": "stop.voc", "text": "arrête ce que tu fais"}
 {"lang": "fr-FR", "skill": "ovos-core", "file_type": "voc", "intent": "stop.voc", "text": "ne fais plus ça"}
 {"lang": "fr-FR", "skill": "ovos-core", "file_type": "voc", "intent": "stop.voc", "text": "on arrête là"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "installer des compétences"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "installer une compétence"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "que peux-tu faire"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "que sais-tu faire"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "quelle heure est-il"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "quelles sont tes capacités"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "quelles sont tes compétences"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "voc", "intent": "More.voc", "text": "continue"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "voc", "intent": "More.voc", "text": "dis-m'en plus"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "voc", "intent": "More.voc", "text": "encore"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "voc", "intent": "More.voc", "text": "plus de détails"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "voc", "intent": "Weather.voc", "text": "météo actuelle"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "voc", "intent": "Weather.voc", "text": "quel temps fait-il"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "voc", "intent": "Weather.voc", "text": "quelle est la météo"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "age_at_death.intent", "text": "quel âge avait {query} lorsqu'elle est morte"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "age_at_death.intent", "text": "quel âge avait {query} lorsqu'il est mort"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "age_at_death.intent", "text": "quel âge avait {query} à sa mort"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "alma_mater.intent", "text": "dans quelle université {query} a-t-elle étudié"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "alma_mater.intent", "text": "dans quelle université {query} a-t-il étudié"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "alma_mater.intent", "text": "quelle est l'alma mater de {query}"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "birthdate.intent", "text": "à quelle date {query} est-elle née"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "birthdate.intent", "text": "à quelle date {query} est-il né"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "born.intent", "text": "date de naissance de {query}"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "born.intent", "text": "quand {query} est-elle née"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "born.intent", "text": "quand {query} est-il né"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "born.intent", "text": "quel est l'anniversaire de {query}"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "born.intent", "text": "quelle est la date de naissance de {query}"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "children.intent", "text": "combien d'enfants a {query}"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "children.intent", "text": "combien d'enfants {query} a-t-elle"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "children.intent", "text": "combien d'enfants {query} a-t-il"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "died.intent", "text": "quand {query} est-elle morte"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "died.intent", "text": "quand {query} est-il mort"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "died.intent", "text": "quelle est la date de décès de {query}"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "education.intent", "text": "où {query} a fait ses études"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "education.intent", "text": "où {query} a-t-elle fait ses études"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "education.intent", "text": "où {query} a-t-il fait ses études"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "fields.intent", "text": "dans quel domaine {query} est-elle spécialiste"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "fields.intent", "text": "dans quel domaine {query} est-il spécialiste"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "fields.intent", "text": "quel est le domaine d'expertise de {query}"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "known_for.intent", "text": "pour quoi {query} est-elle connue"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "known_for.intent", "text": "pour quoi {query} est-il connu"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "known_for.intent", "text": "qu'est-ce qui a rendu {query} célèbre"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "official_website.intent", "text": "quel est le site officiel de {query}"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "official_website.intent", "text": "quel est le site web officiel de {query}"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "resting_place.intent", "text": "où est enterré {query}"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "resting_place.intent", "text": "où est enterrée {query}"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "resting_place.intent", "text": "où repose {query}"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "resting_place.intent", "text": "où se trouve la tombe de {query}"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "search_duck.intent", "text": "cherche des informations sur {query} avec duckduckgo"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "search_duck.intent", "text": "cherche {query} sur duckduckgo"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "search_duck.intent", "text": "demande à duckduckgo des informations sur {query}"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "search_duck.intent", "text": "que dit duckduckgo sur {query}"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "thesis.intent", "text": "quel est le sujet de thèse de {query}"}
-{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "who.intent", "text": "qui est {query}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "age.intent", "text": "quel âge a {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "age.intent", "text": "{person} âge"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "age.intent", "text": "quel était l âge de {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "age_at_death.intent", "text": "quel âge avait {keyword} lorsqu'elle est morte"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "age_at_death.intent", "text": "quel âge avait {keyword} lorsqu'il est mort"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "age_at_death.intent", "text": "quel âge avait {keyword} à sa mort"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "alma_mater.intent", "text": "dans quelle université {keyword} a-t-elle étudié"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "alma_mater.intent", "text": "dans quelle université {keyword} a-t-il étudié"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "alma_mater.intent", "text": "quelle est l'alma mater de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "area.intent", "text": "quelle est la superficie de {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "area.intent", "text": "{place} superficie"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "area.intent", "text": "quelle est la taille de {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "area.intent", "text": "combien mesure {place} en superficie"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "area.intent", "text": "{place} étendue"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "area.intent", "text": "quelle est la surface totale de {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "area.intent", "text": "{place} couvre combien de kilomètres carrés"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "author.intent", "text": "qui a rédigé {book}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "author.intent", "text": "qui a écrit {book}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "author.intent", "text": "qui est l auteur de {book}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "author.intent", "text": "{book} auteur"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "author.intent", "text": "qui est derrière {book}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "author.intent", "text": "{book} écrit par qui"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "author.intent", "text": "quel écrivain a écrit {book}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "author.intent", "text": "{book} signé par qui"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "baptised.intent", "text": "quand {keyword} a-t-il été baptisé"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "baptised.intent", "text": "quand {keyword} a-t-elle été baptisée"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "baptised.intent", "text": "quelle est la date de baptême de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "baptised.intent", "text": "quand a eu lieu le baptême de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "baptised.intent", "text": "{keyword} date de baptisation"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "baptised.intent", "text": "{keyword} date de baptême"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "born.intent", "text": "date de naissance de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "born.intent", "text": "quand {keyword} est-elle née"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "born.intent", "text": "quand {keyword} est-il né"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "born.intent", "text": "quel est l'anniversaire de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "born.intent", "text": "quelle est la date de naissance de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "box_office.intent", "text": "combien a rapporté {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "box_office.intent", "text": "{movie} recettes au box office"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "box_office.intent", "text": "quel est le chiffre du box office de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "box_office.intent", "text": "combien {movie} a gagné au cinéma"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "box_office.intent", "text": "{movie} résultats au box office"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "box_office.intent", "text": "quelles sont les recettes totales de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "box_office.intent", "text": "{movie} succès commercial"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "budget.intent", "text": "quel était le budget de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "budget.intent", "text": "{movie} budget"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "budget.intent", "text": "combien a coûté {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "budget.intent", "text": "quel est le coût de production de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "budget.intent", "text": "{movie} budget de production"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "budget.intent", "text": "combien a été dépensé pour {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "budget.intent", "text": "{movie} coût total"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "capital.intent", "text": "quelle est la capitale de {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "capital.intent", "text": "{place} capitale"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "capital.intent", "text": "quelle ville est la capitale de {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "capital.intent", "text": "où se trouve la capitale de {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "capital.intent", "text": "dis moi la capitale de {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "capital.intent", "text": "{place} ville capitale"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "capital.intent", "text": "quelle est la capitale nationale de {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "ceo.intent", "text": "qui est le chef de {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "ceo.intent", "text": "qui est le directeur général de {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "ceo.intent", "text": "qui est le pdg de {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "ceo.intent", "text": "{company} pdg"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "ceo.intent", "text": "qui dirige {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "ceo.intent", "text": "quel est le dirigeant de {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "ceo.intent", "text": "{company} directeur général"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "ceo.intent", "text": "qui est à la tête de {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "ceo.intent", "text": "{company} patron"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "championships.intent", "text": "combien de championnats {team} a remporté"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "championships.intent", "text": "combien de titres {team} a remporté"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "championships.intent", "text": "combien de trophées {team} a remporté"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "championships.intent", "text": "{team} championnats"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "championships.intent", "text": "{team} palmarès"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "championships.intent", "text": "combien de titres a gagné {team}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "championships.intent", "text": "{team} nombre de championnats"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "championships.intent", "text": "quels titres a remporté {team}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "championships.intent", "text": "combien de fois {team} a été champion"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "championships.intent", "text": "{team} victoires au championnat"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "children.intent", "text": "combien d'enfants a {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "children.intent", "text": "combien d'enfants {keyword} a-t-elle"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "children.intent", "text": "combien d'enfants {keyword} a-t-il"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "citizenship.intent", "text": "quelle est la nationalité de {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "citizenship.intent", "text": "{person} nationalité"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "citizenship.intent", "text": "{person} citoyenneté"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "coached_by.intent", "text": "qui entraîne {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "coached_by.intent", "text": "{person} entraîneur"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "composers.intent", "text": "qui a composé la bande originale de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "composers.intent", "text": "qui a composé la musique de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "composers.intent", "text": "qui a écrit la bande originale de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "composers.intent", "text": "qui a écrit la musique de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "composers.intent", "text": "{movie} compositeur"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "composers.intent", "text": "qui est le compositeur de la bande sonore de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "composers.intent", "text": "{movie} bande originale compositeur"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "composers.intent", "text": "quelle est la musique de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "composers.intent", "text": "qui a signé la bande originale de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "composers.intent", "text": "qui a signé la musique de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "composers.intent", "text": "{movie} auteur de la musique"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "conservation_status.intent", "text": "est ce que {animal} est en danger"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "conservation_status.intent", "text": "est ce que {animal} est menacé"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "conservation_status.intent", "text": "est ce que {animal} est éteint"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "conservation_status.intent", "text": "quel est le statut de conservation de {animal}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "conservation_status.intent", "text": "{animal} statut de conservation"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "conservation_status.intent", "text": "{animal} est il une espèce menacée"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "conservation_status.intent", "text": "quelle est la situation de {animal} dans la nature"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "conservation_status.intent", "text": "{animal} espèce en danger ou non"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "conservation_status.intent", "text": "comment se porte la population de {animal} dans la nature"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "country.intent", "text": "dans quel pays est {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "country.intent", "text": "{place} pays"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "country.intent", "text": "{place} se trouve dans quel pays"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "country.intent", "text": "quel pays contient {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "country.intent", "text": "dans quelle nation se trouve {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "country.intent", "text": "{place} appartient à quel pays"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "country.intent", "text": "{place} localisation pays"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "designed_by.intent", "text": "qui a conçu {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "designed_by.intent", "text": "{place} concepteur"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "designed_by.intent", "text": "qui est le designer de {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "designed_by.intent", "text": "quel architecte a créé {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "designed_by.intent", "text": "{place} architecte"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "designed_by.intent", "text": "qui est le créateur de {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "designed_by.intent", "text": "quel designer est derrière {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "designed_by.intent", "text": "{place} dessiné par qui"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "developer.intent", "text": "qui a conçu {software}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "developer.intent", "text": "qui a créé {software}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "developer.intent", "text": "qui a développé {software}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "developer.intent", "text": "{software} développeur"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "developer.intent", "text": "quel entreprise a développé {software}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "developer.intent", "text": "quel studio a développé {software}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "developer.intent", "text": "qui est derrière {software}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "developer.intent", "text": "{software} créé par qui"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "developer.intent", "text": "quelle équipe a réalisé {software}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "developer.intent", "text": "{software} développé par qui"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "died.intent", "text": "quand {keyword} est-elle morte"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "died.intent", "text": "quand {keyword} est-il mort"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "died.intent", "text": "quelle est la date de décès de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "diet.intent", "text": "que mange {animal}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "diet.intent", "text": "{animal} régime alimentaire"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "diet.intent", "text": "{animal} alimentation"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "diet.intent", "text": "de quoi se nourrit {animal}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "diet.intent", "text": "{animal} nourriture"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "diet.intent", "text": "qu est ce que {animal} consomme"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "diet.intent", "text": "{animal} est il carnivore"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "diet.intent", "text": "{animal} est il herbivore"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "diet.intent", "text": "{animal} est il omnivore"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "director.intent", "text": "qui a réalisé {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "director.intent", "text": "qui est le réalisateur de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "director.intent", "text": "{movie} réalisateur"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "director.intent", "text": "quel cinéaste a tourné {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "director.intent", "text": "{movie} mis en scène par qui"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "director.intent", "text": "qui se cache derrière la réalisation de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "director.intent", "text": "{movie} direction de qui"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "doctoral_students.intent", "text": "qui étaient les doctorants de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "doctoral_students.intent", "text": "qui {keyword} a-t-il encadré pour un doctorat"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "doctoral_students.intent", "text": "qui a fait sa thèse sous la direction de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "doctoral_students.intent", "text": "{keyword} doctorants"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "doctoral_students.intent", "text": "{keyword} étudiants en thèse"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "doctoral_students.intent", "text": "{keyword} étudiants supervisés"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "doctoral_students.intent", "text": "quels chercheurs ont été dirigés par {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "education.intent", "text": "où {keyword} a fait ses études"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "education.intent", "text": "où {keyword} a-t-elle fait ses études"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "education.intent", "text": "où {keyword} a-t-il fait ses études"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "elevation.intent", "text": "quelle est l altitude de {mountain}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "elevation.intent", "text": "{mountain} altitude"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "elevation.intent", "text": "{mountain} élévation"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "elevation.intent", "text": "à quelle hauteur se trouve {mountain}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "elevation.intent", "text": "combien de mètres fait {mountain}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "elevation.intent", "text": "{mountain} point culminant"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "elevation.intent", "text": "quelle est la hauteur de {mountain}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "father.intent", "text": "qui est le père de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "father.intent", "text": "qui était le père de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "father.intent", "text": "quel est le nom du père de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "father.intent", "text": "{keyword} papa"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "father.intent", "text": "{keyword} père"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "father.intent", "text": "qui est {keyword} père"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "fields.intent", "text": "dans quel domaine {keyword} est-elle spécialiste"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "fields.intent", "text": "dans quel domaine {keyword} est-il spécialiste"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "fields.intent", "text": "quel est le domaine d'expertise de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "founded.intent", "text": "quand a été fondé {organization}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "founded.intent", "text": "{organization} date de fondation"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "founded.intent", "text": "quand a été créé {organization}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "founded.intent", "text": "en quelle année {organization} a été fondé"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "founded.intent", "text": "{organization} année de création"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "founded.intent", "text": "depuis quand existe {organization}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "founded.intent", "text": "{organization} fondé en quelle année"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "founders.intent", "text": "qui a fondé {organization}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "founders.intent", "text": "{organization} fondateur"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "founders.intent", "text": "qui a créé {organization}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "founders.intent", "text": "qui est à l origine de {organization}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "founders.intent", "text": "{organization} créateur"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "founders.intent", "text": "qui est le fondateur de {organization}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "founders.intent", "text": "qui a lancé {organization}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "founders.intent", "text": "{organization} fondé par qui"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "genre.intent", "text": "quel genre est {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "genre.intent", "text": "{movie} genre"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "genre.intent", "text": "de quel genre est {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "genre.intent", "text": "{movie} quel type de film"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "genre.intent", "text": "comment classer {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "genre.intent", "text": "{movie} appartient à quel genre"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "genre.intent", "text": "dans quelle catégorie entre {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "habitat.intent", "text": "où vit {animal}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "habitat.intent", "text": "quel est l habitat de {animal}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "habitat.intent", "text": "quel est l habitat naturel de {animal}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "habitat.intent", "text": "{animal} habitat"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "habitat.intent", "text": "dans quel milieu vit {animal}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "habitat.intent", "text": "{animal} vit où dans la nature"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "habitat.intent", "text": "quel est l environnement naturel de {animal}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "habitat.intent", "text": "{animal} zone de vie"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "head_coach.intent", "text": "qui est l entraîneur de {team}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "head_coach.intent", "text": "qui est l entraîneur principal de {team}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "head_coach.intent", "text": "qui est l manager de {team}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "head_coach.intent", "text": "{team} entraîneur"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "head_coach.intent", "text": "{team} manager"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "head_coach.intent", "text": "qui entraîne {team}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "head_coach.intent", "text": "quel est le coach de {team}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "head_coach.intent", "text": "{team} coach principal"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "head_coach.intent", "text": "qui dirige l équipe de {team}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "headquarters.intent", "text": "où est le siège de {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "headquarters.intent", "text": "où est le siège social de {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "headquarters.intent", "text": "{company} siège social"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "headquarters.intent", "text": "où est basé {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "headquarters.intent", "text": "dans quelle ville se trouve le siège de {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "headquarters.intent", "text": "{company} quartier général"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "headquarters.intent", "text": "{company} où est installé"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "headquarters.intent", "text": "quel est le siège central de {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "height.intent", "text": "quelle est la taille de {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "height.intent", "text": "{person} taille"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "height.intent", "text": "combien mesure {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "industry.intent", "text": "dans quel secteur est {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "industry.intent", "text": "{company} secteur"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "industry.intent", "text": "{company} industrie"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "industry.intent", "text": "{company} quel domaine d activité"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "industry.intent", "text": "dans quel domaine opère {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "industry.intent", "text": "{company} type d activité"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "industry.intent", "text": "quel secteur économique pour {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "institutions.intent", "text": "où {keyword} a-t-il travaillé"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "institutions.intent", "text": "où {keyword} a-t-elle travaillé"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "institutions.intent", "text": "où {keyword} a-t-il enseigné"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "institutions.intent", "text": "où {keyword} a-t-elle enseigné"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "institutions.intent", "text": "à quelles institutions {keyword} était-il affilié"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "institutions.intent", "text": "à quelles institutions {keyword} était-elle affiliée"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "institutions.intent", "text": "où {keyword} a mené ses recherches"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "inventor.intent", "text": "qui a inventé {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "inventor.intent", "text": "{keyword} inventeur"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "inventor.intent", "text": "qui est l inventeur de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "inventor.intent", "text": "à qui doit on l invention de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "inventor.intent", "text": "{keyword} invention par qui"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "inventor.intent", "text": "qui a découvert ou inventé {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "inventor.intent", "text": "{keyword} créé par qui"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "known_for.intent", "text": "pour quoi {person} est-elle connue"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "known_for.intent", "text": "pour quoi {person} est-il connu"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "known_for.intent", "text": "qu'est-ce qui a rendu {person} célèbre"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "label.intent", "text": "à quel label appartient {artist}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "label.intent", "text": "à quel maison de disques appartient {artist}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "label.intent", "text": "{artist} label"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "label.intent", "text": "{artist} maison de disques"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "label.intent", "text": "sous quel label est signé {artist}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "label.intent", "text": "{artist} produit par quel label"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "label.intent", "text": "quel label distribue {artist}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "label.intent", "text": "{artist} contrat avec quel label"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "language.intent", "text": "en quelle langue est {book}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "language.intent", "text": "en quelle langue est écrit {book}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "language.intent", "text": "{book} langue"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "language.intent", "text": "{book} langue originale"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "language.intent", "text": "dans quelle langue a été rédigé {book}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "language.intent", "text": "{book} écrit en quelle langue"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "language.intent", "text": "quelle est la langue de {book}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "language.intent", "text": "{book} version originale quelle langue"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "length.intent", "text": "quelle est la longueur de {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "length.intent", "text": "{place} longueur"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "length.intent", "text": "quelle est l étendue de {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "length.intent", "text": "combien mesure {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "length.intent", "text": "{place} combien de kilomètres"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "length.intent", "text": "quelle est la dimension de {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "length.intent", "text": "{place} mesure combien"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "license.intent", "text": "sous quelle licence est {software}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "license.intent", "text": "{software} licence"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "license.intent", "text": "quelle est la licence de {software}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "license.intent", "text": "{software} est il open source"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "license.intent", "text": "{software} type de licence"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "license.intent", "text": "sous quel type de licence est distribué {software}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "license.intent", "text": "{software} licence logicielle"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "location.intent", "text": "où se trouve {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "location.intent", "text": "{place} emplacement"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "location.intent", "text": "où est situé {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "location.intent", "text": "dans quelle région se trouve {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "location.intent", "text": "{place} localisation"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "location.intent", "text": "comment trouver {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "location.intent", "text": "{place} où est ce"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "members.intent", "text": "qui sont les membres de {group}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "members.intent", "text": "{group} membres"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "members.intent", "text": "qui fait partie de {group}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "members.intent", "text": "combien de membres compte {group}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "members.intent", "text": "{group} composition"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "members.intent", "text": "quels sont les membres actuels de {group}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "members.intent", "text": "qui appartient à {group}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "mother.intent", "text": "qui est la mère de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "mother.intent", "text": "qui était la mère de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "mother.intent", "text": "quel est le nom de la mère de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "mother.intent", "text": "{keyword} maman"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "mother.intent", "text": "{keyword} mère"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "mother.intent", "text": "qui est {keyword} mère"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "movement.intent", "text": "à quel courant philosophique {keyword} était-il associé"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "movement.intent", "text": "à quel mouvement artistique {keyword} était-il associé"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "movement.intent", "text": "à quel mouvement scientifique {keyword} était-il associé"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "movement.intent", "text": "à quel mouvement {keyword} appartenait-il"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "movement.intent", "text": "à quel courant de pensée {keyword} est-il rattaché"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "movement.intent", "text": "à quelle école de pensée {keyword} appartenait-elle"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "movement.intent", "text": "{keyword} courant intellectuel"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "movement.intent", "text": "{keyword} mouvement artistique"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "movement.intent", "text": "{keyword} école philosophique"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "net_worth.intent", "text": "quelle est la fortune de {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "net_worth.intent", "text": "{person} fortune nette"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "net_worth.intent", "text": "quelle est la richesse de {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "nickname.intent", "text": "quel est le surnom de {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "nickname.intent", "text": "{person} surnom"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "nickname.intent", "text": "{person} aussi connu sous le nom de"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "nickname.intent", "text": "{person} surnommé comment"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "nickname.intent", "text": "comment appelle t on {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "nickname.intent", "text": "{person} alias"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "nickname.intent", "text": "quel sobriquet porte {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_awards.intent", "text": "quels prix {person} a-t-il remportés"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_awards.intent", "text": "quels prix {person} a-t-il reçus"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_awards.intent", "text": "quels prix {person} a-t-elle remportés"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_awards.intent", "text": "quels prix {person} a-t-elle reçus"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_awards.intent", "text": "quelles distinctions {person} a-t-il reçues"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_awards.intent", "text": "quelles récompenses a reçues {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_awards.intent", "text": "{person} prix et distinctions"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_awards.intent", "text": "{person} récompenses"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_awards.intent", "text": "quels honneurs ont été décernés à {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_work.intent", "text": "quelle est l'œuvre la plus connue de {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_work.intent", "text": "quelle est l'œuvre la plus célèbre de {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_work.intent", "text": "quelle est l'œuvre la plus importante de {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_work.intent", "text": "qu'est-ce que {person} a composé de plus célèbre"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_work.intent", "text": "qu'est-ce que {person} a créé de plus célèbre"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_work.intent", "text": "qu'est-ce que {person} a écrit de plus célèbre"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_work.intent", "text": "quelle est la plus grande création de {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_work.intent", "text": "quelle est la plus grande œuvre de {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_work.intent", "text": "{person} chef-d'œuvre"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_work.intent", "text": "{person} œuvre la plus connue"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_work.intent", "text": "{person} œuvre majeure"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_work.intent", "text": "pour quelle création {person} est-il connu"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_work.intent", "text": "pour quelle œuvre {person} est-il connu"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_work.intent", "text": "pour quelle création {person} est-elle connue"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "notable_work.intent", "text": "pour quelle œuvre {person} est-elle connue"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "number_of_employees.intent", "text": "combien d employés a {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "number_of_employees.intent", "text": "{company} nombre d employés"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "number_of_employees.intent", "text": "combien de personnes travaillent chez {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "number_of_employees.intent", "text": "quel est l effectif de {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "number_of_employees.intent", "text": "{company} combien de salariés"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "number_of_employees.intent", "text": "{company} taille de l effectif"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "number_of_employees.intent", "text": "combien de travailleurs chez {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "occupation.intent", "text": "quelle est la profession de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "occupation.intent", "text": "quelle est le métier de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "occupation.intent", "text": "quel était l'occupation de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "occupation.intent", "text": "quel était la profession de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "occupation.intent", "text": "quel était le métier de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "occupation.intent", "text": "dans quel domaine travaillait {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "occupation.intent", "text": "que faisait {keyword} dans la vie"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "occupation.intent", "text": "{keyword} carrière"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "occupation.intent", "text": "{keyword} métier"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "occupation.intent", "text": "{keyword} profession"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "occupation.intent", "text": "quel était le travail de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "official_website.intent", "text": "quel est le site officiel de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "official_website.intent", "text": "quel est le site web officiel de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "opened.intent", "text": "quand {place} a été achevé"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "opened.intent", "text": "quand {place} a été construit"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "opened.intent", "text": "quand {place} a été inauguré"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "opened.intent", "text": "quand {place} a été ouvert"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "opened.intent", "text": "{place} date d inauguration"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "opened.intent", "text": "{place} date d ouverture"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "opened.intent", "text": "en quelle année {place} a été inauguré"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "opened.intent", "text": "{place} ouvert en quelle année"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "opened.intent", "text": "quand est ce que {place} a ouvert ses portes"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "opened.intent", "text": "{place} année d ouverture"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "original_title.intent", "text": "quel est le titre original de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "original_title.intent", "text": "{movie} titre original"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "original_title.intent", "text": "comment s appelait {movie} à l origine"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "original_title.intent", "text": "{movie} titre en langue originale"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "original_title.intent", "text": "quel était le vrai titre de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "original_title.intent", "text": "{movie} titre d origine"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "original_title.intent", "text": "sous quel titre {movie} est sorti à l étranger"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "other_names.intent", "text": "quels sont les autres noms de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "other_names.intent", "text": "{keyword} autres noms"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "other_names.intent", "text": "{keyword} aussi connu sous le nom de"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "other_names.intent", "text": "comment appelle t on {keyword} autrement"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "other_names.intent", "text": "{keyword} alias"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "other_names.intent", "text": "{keyword} noms alternatifs"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "other_names.intent", "text": "sous quels autres noms connaît on {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "owner.intent", "text": "qui possède {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "owner.intent", "text": "{keyword} propriétaire"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "owner.intent", "text": "qui est le propriétaire de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "owner.intent", "text": "à qui appartient {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "owner.intent", "text": "{keyword} appartient à qui"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "owner.intent", "text": "qui détient {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "owner.intent", "text": "{keyword} entre les mains de qui"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "partner.intent", "text": "qui est le partenaire de {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "partner.intent", "text": "{person} partenaire"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "platforms.intent", "text": "sur quelles consoles est disponible {software}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "platforms.intent", "text": "sur quelles plateformes est disponible {software}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "platforms.intent", "text": "sur quelles systèmes est disponible {software}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "platforms.intent", "text": "{software} plateformes"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "platforms.intent", "text": "{software} systèmes compatibles"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "platforms.intent", "text": "sur quoi peut on jouer à {software}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "platforms.intent", "text": "{software} disponible sur quels appareils"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "platforms.intent", "text": "{software} compatible avec quoi"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "platforms.intent", "text": "sur quelles machines fonctionne {software}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "political_party.intent", "text": "quel est le parti politique de {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "political_party.intent", "text": "à quel parti appartient {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "political_party.intent", "text": "{person} parti politique"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "population.intent", "text": "quelle est la population de {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "population.intent", "text": "combien d habitants y a t il à {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "population.intent", "text": "{place} population"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "population.intent", "text": "{place} habitants"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "population.intent", "text": "combien de personnes vivent à {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "population.intent", "text": "quelle est la démographie de {place}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "population.intent", "text": "{place} nombre d habitants"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "predecessor.intent", "text": "qui a précédé {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "predecessor.intent", "text": "qui était le prédécesseur de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "predecessor.intent", "text": "qui occupait la fonction avant {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "predecessor.intent", "text": "qui occupait le poste avant {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "predecessor.intent", "text": "qui occupait le trône avant {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "predecessor.intent", "text": "qui régnait avant {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "predecessor.intent", "text": "qui {keyword} a-t-il succédé"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "produced_by.intent", "text": "qui a produit {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "produced_by.intent", "text": "{movie} producteur"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "produced_by.intent", "text": "qui est le producteur de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "produced_by.intent", "text": "quelle société a produit {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "produced_by.intent", "text": "{movie} production"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "produced_by.intent", "text": "{movie} produit par qui"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "produced_by.intent", "text": "qui a financé la production de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "publisher.intent", "text": "qui a publié {book}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "publisher.intent", "text": "{book} éditeur"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "publisher.intent", "text": "quel éditeur a publié {book}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "publisher.intent", "text": "{book} publié par qui"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "publisher.intent", "text": "quelle maison d édition a sorti {book}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "publisher.intent", "text": "{book} maison d édition"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "publisher.intent", "text": "chez quel éditeur est paru {book}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "released.intent", "text": "quand est sorti {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "released.intent", "text": "date de sortie de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "released.intent", "text": "{movie} date de sortie"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "released.intent", "text": "en quelle année est sorti {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "released.intent", "text": "{movie} sorti quand"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "released.intent", "text": "quand {movie} est il sorti en salle"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "released.intent", "text": "{movie} première sortie"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "religion.intent", "text": "quelle religion pratiquait {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "religion.intent", "text": "quelle religion pratique {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "religion.intent", "text": "quelle est la religion de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "religion.intent", "text": "à quelle foi {keyword} appartient-il"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "religion.intent", "text": "{keyword} confession"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "religion.intent", "text": "{keyword} foi"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "religion.intent", "text": "{keyword} religion"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "religion.intent", "text": "est-ce que {keyword} est croyant"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "religion.intent", "text": "est-ce que {keyword} est religieux"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "religion.intent", "text": "quelle confession est celle de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "resting_place.intent", "text": "où est enterré {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "resting_place.intent", "text": "où est enterrée {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "resting_place.intent", "text": "où repose {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "resting_place.intent", "text": "où se trouve la tombe de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "revenue.intent", "text": "quel est le chiffre d affaires de {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "revenue.intent", "text": "{company} chiffre d affaires"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "revenue.intent", "text": "{company} revenus"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "revenue.intent", "text": "combien gagne {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "revenue.intent", "text": "quels sont les revenus de {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "revenue.intent", "text": "{company} recettes annuelles"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "revenue.intent", "text": "quel est le chiffre d affaires annuel de {company}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "revenue.intent", "text": "{company} bénéfices"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "running_time.intent", "text": "quelle est la durée de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "running_time.intent", "text": "{movie} durée"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "running_time.intent", "text": "combien de minutes dure {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "running_time.intent", "text": "{movie} combien d heures"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "running_time.intent", "text": "quelle est la longueur de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "running_time.intent", "text": "{movie} durée totale"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "running_time.intent", "text": "combien de temps dure {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "scientific_name.intent", "text": "quel est le nom latin de {animal}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "scientific_name.intent", "text": "quel est le nom scientifique de {animal}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "scientific_name.intent", "text": "{animal} nom scientifique"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "scientific_name.intent", "text": "{animal} nom latin"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "scientific_name.intent", "text": "quelle est la dénomination scientifique de {animal}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "scientific_name.intent", "text": "{animal} classification scientifique"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "scientific_name.intent", "text": "comment s appelle {animal} en latin"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "scientific_name.intent", "text": "{animal} appellation latine"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "sport.intent", "text": "quel sport pratique {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "sport.intent", "text": "{person} sport"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "sport.intent", "text": "dans quel sport évolue {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "sport.intent", "text": "{person} joue à quel sport"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "sport.intent", "text": "quelle est la discipline sportive de {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "sport.intent", "text": "{person} athlète de quel sport"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "sport.intent", "text": "quel sport est associé à {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "spouse.intent", "text": "qui est le conjoint de {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "spouse.intent", "text": "qui est le femme de {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "spouse.intent", "text": "qui est le mari de {person}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "spouse.intent", "text": "{person} conjoint"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "spouse.intent", "text": "{person} femme"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "spouse.intent", "text": "{person} mari"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "spouse.intent", "text": "qui {person} a épousé"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "stadium.intent", "text": "quel arena utilise {team}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "stadium.intent", "text": "quel stade utilise {team}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "stadium.intent", "text": "où joue {team} à domicile"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "stadium.intent", "text": "{team} stade"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "stadium.intent", "text": "{team} domicile"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "stadium.intent", "text": "dans quel stade évolue {team}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "stadium.intent", "text": "{team} enceinte sportive"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "stadium.intent", "text": "quel est le terrain de {team}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "starring.intent", "text": "qui joue dans {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "starring.intent", "text": "{movie} acteurs"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "starring.intent", "text": "{movie} distribution"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "starring.intent", "text": "quels acteurs jouent dans {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "starring.intent", "text": "qui figure au casting de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "starring.intent", "text": "{movie} avec quels acteurs"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "starring.intent", "text": "{movie} casting"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "starring.intent", "text": "qui sont les stars de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "successor.intent", "text": "qui a succédé à {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "successor.intent", "text": "qui était le successeur de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "successor.intent", "text": "qui occupait la fonction après {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "successor.intent", "text": "qui occupait le poste après {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "successor.intent", "text": "qui occupait le trône après {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "successor.intent", "text": "qui a remplacé {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "successor.intent", "text": "qui a pris la suite de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "thesis.intent", "text": "quel est le sujet de thèse de {keyword}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "written_by.intent", "text": "qui a rédigé le script de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "written_by.intent", "text": "qui a rédigé le scénario de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "written_by.intent", "text": "qui a écrit le script de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "written_by.intent", "text": "qui a écrit le scénario de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "written_by.intent", "text": "{movie} scénariste"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "written_by.intent", "text": "{movie} scénario écrit par qui"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "written_by.intent", "text": "qui est le scénariste de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "written_by.intent", "text": "{movie} script de qui"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "written_by.intent", "text": "quel auteur a écrit le scénario de {movie}"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "written_by.intent", "text": "{movie} histoire écrite par qui"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "years_active.intent", "text": "quand était {person} actif"}
+{"lang": "fr-FR", "skill": "ovos-ddg-solver-plugin", "file_type": "intent", "intent": "years_active.intent", "text": "{person} années d activité"}
 {"lang": "fr-FR", "skill": "ovos-ocp-pipeline-plugin", "file_type": "voc", "intent": "ADKeyword.voc", "text": "audiodescription"}
 {"lang": "fr-FR", "skill": "ovos-ocp-pipeline-plugin", "file_type": "voc", "intent": "ADKeyword.voc", "text": "description audio"}
 {"lang": "fr-FR", "skill": "ovos-ocp-pipeline-plugin", "file_type": "voc", "intent": "ADKeyword.voc", "text": "description du film"}
@@ -2212,6 +2685,39 @@
 {"lang": "fr-FR", "skill": "ovos-skill-days-in-history_1", "file_type": "intent", "intent": "today_in_history.intent", "text": "quels événements ont marqué cette date dans l'histoire"}
 {"lang": "fr-FR", "skill": "ovos-skill-days-in-history_1", "file_type": "intent", "intent": "today_in_history.intent", "text": "raconte-moi ce qui s'est passé aujourd'hui dans l'histoire"}
 {"lang": "fr-FR", "skill": "ovos-skill-days-in-history_1", "file_type": "intent", "intent": "today_in_history.intent", "text": "raconte-moi ce qui s'est passé le {date} dans l'histoire"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "météo"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "temps"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "prévisions météo"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "bulletin météo"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "température"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "pluie"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "neige"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "vent"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "rappelle-moi"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "rappel"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "alarme"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "minuterie"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "joue de la musique"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "lis"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "volume"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "appelle"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "Weather.voc", "text": "météo"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "Weather.voc", "text": "temps"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "Weather.voc", "text": "prévisions météo"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "Weather.voc", "text": "bulletin météo"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "Weather.voc", "text": "température"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "Weather.voc", "text": "pluie"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "Weather.voc", "text": "neige"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "Weather.voc", "text": "ensoleillé"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "Weather.voc", "text": "nuageux"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "Weather.voc", "text": "humidité"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "Weather.voc", "text": "vent"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "Weather.voc", "text": "orage"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "intent", "intent": "search_duck.intent", "text": "duckduckgo {query}"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "intent", "intent": "search_duck.intent", "text": "recherche sur duckduckgo {query}"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "intent", "intent": "search_duck.intent", "text": "cherche {query} sur duckduckgo"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "intent", "intent": "search_duck.intent", "text": "demande à duckduckgo {query}"}
+{"lang": "fr-FR", "skill": "ovos-skill-ddg", "file_type": "intent", "intent": "search_duck.intent", "text": "trouve {query} sur duckduckgo"}
 {"lang": "fr-FR", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_cpu_usage.intent", "text": "diagnostic processeur"}
 {"lang": "fr-FR", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_cpu_usage.intent", "text": "quelle est ton utilisation du processeur"}
 {"lang": "fr-FR", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_cpu_usage.intent", "text": "quelle est la charge du processeur"}
@@ -3634,28 +4140,24 @@
 {"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "voc", "intent": "WordOfTheDayKeyword.voc", "text": "mot du jour"}
 {"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "voc", "intent": "WordOfTheDayKeyword.voc", "text": "quel est le mot du jour"}
 {"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "voc", "intent": "WordOfTheDayKeyword.voc", "text": "quel est le mot du jour aujourd'hui"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "antonym.intent", "text": "quels sont les antonymes de {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "antonym.intent", "text": "quel est l'antonyme de {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "antonym.intent", "text": "donne-moi un antonyme de {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "definition.intent", "text": "quelle est la définition de {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "definition.intent", "text": "que signifie {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "definition.intent", "text": "qu'est-ce que {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "holonym.intent", "text": "quels sont les holonymes de {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "holonym.intent", "text": "quel est l'holonyme de {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "holonym.intent", "text": "donne-moi un holonyme de {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "hypernym.intent", "text": "quels sont les hypernymes de {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "hypernym.intent", "text": "quel est l'hypernyme de {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "hypernym.intent", "text": "donne-moi un hypernyme de {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "hyponym.intent", "text": "quels sont les hyponymes de {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "hyponym.intent", "text": "quel est l'hyponyme de {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "hyponym.intent", "text": "donne-moi un hyponyme de {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "lemma.intent", "text": "quels sont les lemmes de {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "lemma.intent", "text": "quel est le lemme de {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "lemma.intent", "text": "donne-moi un lemme de {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "search_wordnet.intent", "text": "demande à wordnet des informations sur {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "search_wordnet.intent", "text": "interroge wordnet sur {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "search_wordnet.intent", "text": "cherche {query} dans wordnet"}
-{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "search_wordnet.intent", "text": "que dit wordnet sur {query}"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "WordnetQuery.voc", "text": "définition"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "WordnetQuery.voc", "text": "signification"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "WordnetQuery.voc", "text": "antonyme"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "WordnetQuery.voc", "text": "synonyme"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "WordnetQuery.voc", "text": "contraire"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "WordnetQuery.voc", "text": "opposé"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "WordnetQuery.voc", "text": "hyperonyme"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "WordnetQuery.voc", "text": "hyponyme"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "WordnetQuery.voc", "text": "holonyme"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "WordnetQuery.voc", "text": "lemme"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "WordnetQuery.voc", "text": "qu'est-ce que"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "WordnetQuery.voc", "text": "qu'est-ce qu'un"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "WordnetQuery.voc", "text": "que signifie"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "WordnetQuery.voc", "text": "définir"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "search_wordnet.intent", "text": "demande à wordnet des informations sur {word}"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "search_wordnet.intent", "text": "interroge wordnet sur {word}"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "search_wordnet.intent", "text": "cherche {word} dans wordnet"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "search_wordnet.intent", "text": "que dit wordnet sur {word}"}
 {"lang": "fr-FR", "skill": "ovos-utterance-plugin-cancel", "file_type": "intent", "intent": "cancel.intent", "text": "annuler cette commande"}
 {"lang": "fr-FR", "skill": "ovos-utterance-plugin-cancel", "file_type": "intent", "intent": "cancel.intent", "text": "annuler la commande"}
 {"lang": "fr-FR", "skill": "ovos-utterance-plugin-cancel", "file_type": "intent", "intent": "cancel.intent", "text": "annuler que"}

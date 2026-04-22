@@ -17,6 +17,11 @@
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "vad är klockan om {offset} timme", "slots": ["offset"], "entity_values": {"offset": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "vad är klockan om {offset} timme i {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "vad är klockan om {offset} timme på {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "duckduckgo {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "sök på DuckDuckGo efter {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "DuckDuckGo {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "fråga DuckDuckGo om {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "hitta {query} på DuckDuckGo", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-mark1-ctrl", "intent": "brightness.intent", "template": "(sätt|ställ) (ner|upp) (ljusstyrkan|belysningen) till {brightness} (percent|)", "slots": ["brightness"], "entity_values": {"brightness": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-mark1-ctrl", "intent": "brightness.intent", "template": "(ändra|ställ in| byt) (ljus|ljushet|styrka|styrkenivå) (på dina ögon|på ögonen|) till {brightness} (procent|)", "slots": ["brightness"], "entity_values": {"brightness": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-mark1-ctrl", "intent": "brightness.intent", "template": "(ändra|ställ in|byt) till {brightness} (percent|)", "slots": ["brightness"], "entity_values": {"brightness": []}}
@@ -51,3 +56,5 @@
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "intent": "movie.runtime.intent", "template": "Hämta (tiden|längden) för (videon|filmen|film) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "intent": "movie.runtime.intent", "template": "Vilken är (tiden|längden) för (videon|filmen|film) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "intent": "movie.year.intent", "template": "(vilket år|när|vilket datum) var (videon|filmen|film) {movie} (gjord|släppt)", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "sök i WordNet efter {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "fråga WordNet om {word}", "slots": ["word"], "entity_values": {"word": []}}

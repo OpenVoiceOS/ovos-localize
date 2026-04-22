@@ -11,6 +11,11 @@
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "когда это {offset} часы", "slots": ["offset"], "entity_values": {"offset": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "когда это {offset} часы в {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "когда это {offset} часы отныне в {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "duckduckgo {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "найди в DuckDuckGo {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "DuckDuckGo {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "спроси DuckDuckGo о {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "поищи {query} в DuckDuckGo", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-mark1-ctrl", "intent": "brightness.intent", "template": "(измени|установи|смени) ((уровень|) (яркость|иллюминацию) (|твоих) (глаз|) на {brightness} (процентов|()", "slots": ["brightness"], "entity_values": {"brightness": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-mark1-ctrl", "intent": "brightness.intent", "template": "(измени|установи|смени) на {brightness} (процент|) (глаз|) (яркости|иллюминации)", "slots": ["brightness"], "entity_values": {"brightness": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-mark1-ctrl", "intent": "brightness.intent", "template": "(поменяй |) (яркость | подсветку) (вниз | вверх | ) до {brightness} (в процентах |)", "slots": ["brightness"], "entity_values": {"brightness": []}}

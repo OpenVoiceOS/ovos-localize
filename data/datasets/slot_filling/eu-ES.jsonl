@@ -1,33 +1,432 @@
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age_at_death.intent", "template": "zenbat urte zituen {query} hil zen egunean", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age_at_death.intent", "template": "zenbat urte zituen {query} hil zenean", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "alma_mater.intent", "template": "zer da {query} alma mater", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "birthdate.intent", "template": "noiz jaio zen {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "birthdate.intent", "template": "zein da {query} jaioteguna", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "birthdate.intent", "template": "zein da {query} jaiotze-data", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "birthdate.intent", "template": "{query} noiz jaio zen", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "born.intent", "template": "noiz da {query} (jaiotze-data|jaioteguna)", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "born.intent", "template": "noiz jaio zen {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "born.intent", "template": "{query} (jaiotze-data|jaioteguna)", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "children.intent", "template": "zenbat haur (izan|) ditu {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "died.intent", "template": "noiz hil zen {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "died.intent", "template": "noiz zendu zen {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "died.intent", "template": "{query} heriotza-(eguna|data)", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "education.intent", "template": "non egin zituen {query} ikasketak", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "education.intent", "template": "non ikasi zuen {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "fields.intent", "template": "zein da {query} espezializaio-arloa", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "known_for.intent", "template": "zergatik da ezagun {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "known_for.intent", "template": "zergatik da ospetsu {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "official_website.intent", "template": "zein da {query} webgune ofiziala", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "resting_place.intent", "template": "non dago lurperatuta {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "resting_place.intent", "template": "non datza {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "bilatu duck duck bilatzailean {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "bilatu duck duck go bilatzailean {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "bilatu the duck bilatzailean {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "zer dio duck duck bilatzaileak honi buruz {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "zer dio duck duck go bilatzaileak honi buruz {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "zer dio the duck bilatzaileak honi buruz {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "thesis.intent", "template": "zein da {query} tesiaren gaia", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "who.intent", "template": "nor da {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age.intent", "template": "zenbat urte ditu {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age.intent", "template": "{person} adina", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age_at_death.intent", "template": "zenbat urte zituen {keyword} hil zen egunean", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age_at_death.intent", "template": "zenbat urte zituen {keyword} hil zenean", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "alma_mater.intent", "template": "zer da {keyword} alma mater", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "zein da {place} azalera", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "{place} azalera", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "zenbat hektarea ditu {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "zenbat kilometro karratu ditu {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "{place} azalera totala", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "zein da {place} neurri geografikoa", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "zenbat zabal da {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "nork idatzi zuen {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "{book} egilea", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "nor da {book} egilea", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "zein idazlek idatzi zuen {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "{book} idazlea", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "nork osatu zuen {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "{book} nork sortu zuen", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "baptised.intent", "template": "noiz bataiatu zuten {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "baptised.intent", "template": "zein da {keyword}ren bataiatu-data", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "baptised.intent", "template": "noiz egin zen {keyword}ren bataioa", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "baptised.intent", "template": "{keyword} (bataio-data|bataioa)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "baptised.intent", "template": "noiz bataiatu zen {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "born.intent", "template": "noiz da {keyword} (jaiotze-data|jaioteguna)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "born.intent", "template": "noiz jaio zen {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "born.intent", "template": "{keyword} (jaiotze-data|jaioteguna)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "zenbat irabazi zuen {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "{movie} taquilla", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "zenbat diru bildu zuen {movie} zinemetan", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "{movie} taquilla irabaziak", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "zein da {movie} taquilla emaitza", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "{movie} diru bilketa", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "zenbat bildu zuen {movie} mundu osoan", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "zein zen {movie} aurrekontua", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "{movie} aurrekontua", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "zenbat diru gastatu zuten {movie} egiteko", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "{movie} ekoizpen kostua", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "zein da {movie} kostu totala", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "zenbat balio zuen {movie} filmatzeak", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "{movie} aurrekontu orokorra", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "zein da {place} hiriburua", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "{place} hiriburua", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "zein hiri da {place} hiriburua", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "non dago {place} hiriburua", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "{place} hiriburu ofiziala", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "zein da {place} hiriburu nagusia", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "non dago {place} gobernua", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "nor da {company} (ceo|zuzendari nagusia|burua)", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "{company} ceo", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "nor zuzentzen du {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "{company} zuzendari nagusia", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "nor dago {company} buruan", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "{company} liderra nor da", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "zein pertsonak gidatzen du {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "zenbat (txapelketa|trofeo|titulu) irabazi ditu {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "{team} txapelketak", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "{team} tituluak", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "zenbat garaipen lortu ditu {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "{team} irabazitako txapelketak", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "zein txapelketa irabazi ditu {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "{team} lorpen nagusiak", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "children.intent", "template": "zenbat haur (izan|) ditu {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "citizenship.intent", "template": "zein da {person} herritartasuna", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "citizenship.intent", "template": "{person} herritartasuna", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "coached_by.intent", "template": "nork entrenatzen du {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "coached_by.intent", "template": "{person} entrenatzailea", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "nork (konposatu|idatzi) zuen {movie} (musika|soinu banda)", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "{movie} konposatzailea", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "nork egin zuen {movie} musika", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "zein da {movie} soinu banda egilea", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "nor arduratu zen {movie} musikaz", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "{movie} musika nork konposatu zuen", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "zein musikagileren lana da {movie} soinu banda", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "{animal} (galzorian|mehatxatuta|desagertuta) dago", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "zein da {animal} kontserbazio egoera", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "{animal} kontserbazio egoera", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "{animal} mehatxatuta al dago", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "zein babes maila du {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "{animal} iraungitze arriskua", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "zein da {animal} egoera orokorra", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "zein herrialdetan dago {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "{place} herrialdea", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "zein naziori dagokio {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "{place} zein herrialdetan kokatzen da", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "non dago {place} herrialdeka", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "zein estatutan dago {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "{place} zein nazio barnean dago", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "nork diseinatu zuen {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "{place} diseinatzailea", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "nor izan zen {place} arkitektoa", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "nork planifikatu zuen {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "{place} arkitektura nork egin zuen", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "zein arkitektoek diseinatu zuten {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "nor arduratu zen {place} diseinuaz", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "nork garatu zuen {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "{software} garatzailea", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "zein (enpresa|estudio)k garatu zuen {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "nor arduratu zen {software} garapenaz", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "{software} sortzaile taldea", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "nork programatu zuen {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "{software} nork egin zuen", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "died.intent", "template": "noiz hil zen {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "died.intent", "template": "noiz zendu zen {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "died.intent", "template": "{keyword} heriotza-(eguna|data)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "zer jaten du {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "{animal} dieta", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "{animal} elikadura", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "zer da {animal} janaria", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "{animal} zer elikatzen da", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "zein da {animal} elikagai nagusia", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "{animal} jana zer da", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "nork zuzendu zuen {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "{movie} zuzendaria", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "nor da {movie} zuzendaria", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "zein zinemagileak zuzendu zuen {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "{movie} film zuzendaria", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "nork egin zuen {movie} zuzendaritza", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "{movie} nork zuzendu zuen", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "doctoral_students.intent", "template": "zeintzuk ziren {keyword}ren doktore-ikasleak", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "doctoral_students.intent", "template": "nork egin zuen doktoretza {keyword}rekin", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "doctoral_students.intent", "template": "zeintzuk gainbegiratu zituen {keyword}ek doktoretzako ikerketan", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "doctoral_students.intent", "template": "{keyword} (doktore-ikasleak|ikerketa-tutoretutakoak)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "doctoral_students.intent", "template": "zein ikertzaile zuzendu zituen {keyword}ek", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "education.intent", "template": "non egin zituen {keyword} ikasketak", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "education.intent", "template": "non ikasi zuen {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "zein da {mountain} altitudea", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "{mountain} altitudea", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "zenbat metro ditu {mountain}", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "{mountain} garaiera", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "zein da {mountain} gailurraren altuera", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "{mountain} altuera totala", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "zenbat altu da {mountain}", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "father.intent", "template": "nor da {keyword}ren aita", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "father.intent", "template": "nor zen {keyword}ren aita", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "father.intent", "template": "nola du izena {keyword}ren aitak", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "father.intent", "template": "{keyword} (aita|aitona)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "father.intent", "template": "nor da {keyword}en aita", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "fields.intent", "template": "zein da {keyword} espezializazio-arloa", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "noiz sortu zen {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "{organization} sorrera data", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "noiz fundatu zen {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "{organization} fundazio urtea", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "zein urtetan sortu zen {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "{organization} noiz ezarri zen", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "noiz hasi zen {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "nork sortu zuen {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "{organization} sortzailea", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "nor da {organization} sortzailea", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "nork ezarri zuen {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "{organization} nork fundatu zuen", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "zein pertsonek sortu zuten {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "nor izan zen {organization} fundatzaile nagusia", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "zein genero da {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "{movie} generoa", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "zer motako da {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "zein estilotakoa da {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "{movie} zein kategoriatan sartzen da", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "{movie} fikzioa edo dokumentala da", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "{movie} sail edo generoa", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "non bizi da {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "zein da {animal} habitata", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "{animal} habitata", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "non aurkitzen da {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "{animal} bizi den lekua", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "zein ingurunetan bizi da {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "{animal} ekosistema", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "nor da {team} entrenatzaile nagusia", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "{team} entrenatzaile nagusia", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "nork entrenatzen du {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "{team} teknikaria nor da", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "zein entrenatzailek zuzentzen du {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "{team} entrenatzaile ofiziala", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "nor dago {team} buruan", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "non dago {company} egoitza nagusia", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "{company} egoitza nagusia", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "non dago {company} kokatuta", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "{company} non du egoitza", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "zein hiritan dago {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "{company} bulegoa non dago", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "{company} egoitza ofiziala", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "height.intent", "template": "zenbat neuritzen du {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "height.intent", "template": "{person} altuera", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "zein sektoretan dago {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "{company} sektorea", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "zein industrian aritzen da {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "{company} zer sektore motakoa da", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "{company} jarduera sektorea", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "zein merkatutan lehiatzen da {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "{company} negozio esparrua", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "institutions.intent", "template": "non lan egin zuen {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "institutions.intent", "template": "non irakatsi zuen {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "institutions.intent", "template": "zein erakundetan aritu zen {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "institutions.intent", "template": "non egin zituen bere ikerketak {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "institutions.intent", "template": "zein unibertsitatetan aritu zen {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "institutions.intent", "template": "{keyword} lotutako (erakundeak|instituzioak|ikerketa zentroak)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "nork asmatu zuen {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "{keyword} asmatzailea", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "nor da {keyword} asmalea", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "nork sortu zuen {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "{keyword} nork garatu zuen", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "zein pertsonak asmatu zuen {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "nor dugu {keyword} asmatzaile", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "known_for.intent", "template": "zergatik da ezagun {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "known_for.intent", "template": "zergatik da ospetsu {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "zein (diskografikatan|zigilutan|) dago {artist}", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "{artist} diskografikoa", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "{artist} zigilua", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "zein diskografikarekin lan egiten du {artist}", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "{artist} diskografikoa zein da", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "{artist} musika etxea", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "nor argitaratzen du {artist} musika", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "zein hizkuntzatan idatzita dago {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "{book} hizkuntza", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "{book} jatorrizko hizkuntza", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "zein hizkuntzatan dago {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "{book} zer hizkuntzatan dago idatzita", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "{book} jatorrizko testua zein hizkuntzatan", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "{book} hizkuntza ofiziala", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "zenbat luzera du {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "{place} luzera", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "zein da {place} luzeera", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "zenbat kilometro ditu {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "{place} zenbat luze da", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "{place} luzera totala", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "zein da {place} neurria", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "zein lizentziapean dago {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "{software} lizentzia", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "zein da {software} lizentzia mota", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "{software} kode irekia al da", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "nola lizentziatu da {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "{software} erabiltzeko lizentzia", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "zein lizentzia du {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "non dago {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "{place} kokapena", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "non kokatzen da {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "zein lekutan dago {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "{place} non dago", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "zein tokitan aurkitzen da {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "{place} helbidea", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "zein dira {group} kideak", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "{group} kideak", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "nor dago {group} taldean", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "zenbat kide ditu {group}", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "{group} taldekideak zerrenda", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "nork osatzen du {group}", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "{group} parte hartzaileak", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "mother.intent", "template": "nor da {keyword}ren ama", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "mother.intent", "template": "nor zen {keyword}ren ama", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "mother.intent", "template": "nola du izena {keyword}ren amak", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "mother.intent", "template": "{keyword} ama", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "mother.intent", "template": "nor da {keyword}en ama", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "movement.intent", "template": "zein (arte|zientzia|filosofia) mugimendu lotzen da {keyword}rekin", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "movement.intent", "template": "zein korrontetan kokatzen da {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "movement.intent", "template": "zein pentsamendu eskolako kide zen {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "movement.intent", "template": "{keyword} (arte|pentsamendu|intelektual) mugimendua", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "movement.intent", "template": "zein estilo edo korronteri dagokio {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "net_worth.intent", "template": "zein da {person} ondare garbia", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "net_worth.intent", "template": "{person} ondare garbia", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "net_worth.intent", "template": "zenbat diру du {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "zein da {person} ezizena", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "{person} ezizena", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "{person} ere ezaguna da zein izenez", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "nola ezagutzen da {person} herrian", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "{person} goitizena", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "zein da {person} izen ezaguna", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "{person} izen alternatiboa", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_awards.intent", "template": "zein sari (irabazi|jaso) zituen {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_awards.intent", "template": "zein (sari|aintzatespen) lortu zituen {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_awards.intent", "template": "{person} saririk irabazi al zuen", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_awards.intent", "template": "{person} (sariak|aintzatespena|omenaldiak)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_awards.intent", "template": "zein ohorezko titulu eman zizkioten {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_work.intent", "template": "zein da {person}ren (lanik|obrarik) (ospetsuena|ezagunena|garrantzitsuena)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_work.intent", "template": "zer (sortu|idatzi|konposatu) zuen {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_work.intent", "template": "zein da {person}ren (maisulana|lorpenik nagusia)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_work.intent", "template": "{person}ren obra (ospetsuena|garrantzitsuena|ezagunena)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_work.intent", "template": "zein (lan|obra)rengatik da ospetsu {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "zenbat langile ditu {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "{company} langile kopurua", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "zenbat pertsona lan egiten du {company}n", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "{company} plantilla tamaina", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "zenbat lan egiten du {company} enpresan", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "{company} langile kopuru totala", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "zein da {company} langile kopurua", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "occupation.intent", "template": "zein da {keyword}ren (lanbidea|ogibidea|profesioa)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "occupation.intent", "template": "zer egiten zuen {keyword}ek", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "occupation.intent", "template": "zein zen {keyword}ren (lanbidea|ogibidea)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "occupation.intent", "template": "zein arlotan lan egin zuen {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "occupation.intent", "template": "{keyword} (lanbidea|karrera|profesioa)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "official_website.intent", "template": "zein da {keyword} webgune ofiziala", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "noiz (inauguratu|ireki|eraiki|bukatu) zen {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "{place} inaugurazioa", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "{place} irekiera data", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "noiz zabaldu zen {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "{place} noiz inauguratu zen", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "{place} eraikuntza data", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "zein urtetan ireki zen {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "zein da {movie} jatorrizko izenburua", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "{movie} jatorrizko izenburua", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "nola deitzen zen {movie} hasieran", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "{movie} izenburua jatorrizkoan", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "zein da {movie} izen ofiziala", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "{movie} jatorrizko titulua", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "zein zen {movie} hasierako izena", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "zein dira {keyword} beste izenak", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "{keyword} beste izenak", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "nola deitzen da {keyword} beste era batean", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "{keyword} izen alternatiboa", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "{keyword} sinonimoak", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "zein izen ditu {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "{keyword} ezizen edo izen alternatiboak", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "noren jabea da {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "{keyword} jabea", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "nor da {keyword} jabe", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "nork du {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "{keyword} nori dagokio", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "zein da {keyword} jabe nagusia", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "nork kontrolatzen du {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "partner.intent", "template": "nor da {person} bikotekidea", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "partner.intent", "template": "{person} bikotekidea", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "zein (plataformatan|kontsola|sistema)n dago {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "{software} plataformak", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "zein gailutan dabil {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "{software} sistema eragileak", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "{software} zein plataformarako dago", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "zein kontsoletarako dago {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "{software} erabilgarria zein sisteman", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "political_party.intent", "template": "zein (alderdi politikotakoa|alderdikoa) da {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "political_party.intent", "template": "{person} alderdi politikoa", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "zenbat biztanle ditu {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "zein da {place} biztanleria", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "{place} biztanleria", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "{place} biztanle kopurua", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "zenbat lagun bizi da {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "{place} populazio kopurua", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "zein da {place} biztanle kopuru ofiziala", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "predecessor.intent", "template": "nor etorri zen {keyword} baino lehen", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "predecessor.intent", "template": "nor zen {keyword}ren aurrekoa", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "predecessor.intent", "template": "nor zegoen (karguan|tronuan|postu) {keyword} baino lehen", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "predecessor.intent", "template": "nor agintzen zuen {keyword} baino lehen", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "predecessor.intent", "template": "nori ondorengoa da {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "nork ekoiztu zuen {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "{movie} ekoizlea", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "nor da {movie} ekoizlea", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "zein estudiotan egin zuten {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "{movie} produkzioa nork egin zuen", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "zein ekoiztetxek sortu zuen {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "{movie} ekoizpen etxea", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "nork argitaratu zuen {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "{book} argitaletxea", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "zein argitaletxek argitaratu zuen {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "nor da {book} argitaletxea", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "{book} nork plazaratu zuen", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "{book} argitalpen etxea", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "zein enpresak kaleratzen du {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "noiz argitaratu zen {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "{movie} argitalpen data", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "noiz estreinatu zen {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "{movie} estreinaldi data", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "zein urtetan kaleratu zen {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "{movie} noiz plazaratu zen", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "{movie} kaleratzeko data", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "religion.intent", "template": "zein erlijio jarraitzen du {keyword}ek", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "religion.intent", "template": "zein da {keyword}ren erlijioa", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "religion.intent", "template": "zein fedetan dago {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "religion.intent", "template": "{keyword} (erlijioa|fedea|konfesioa)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "religion.intent", "template": "erlijiosoa al da {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "resting_place.intent", "template": "non dago lurperatuta {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "resting_place.intent", "template": "non datza {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "zenbat diru egiten du {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "{company} diru sarrerak", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "zein da {company} urteko diru sarrera", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "{company} fakturazio totala", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "zenbat fakturatzen du {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "{company} urteko irabaziak", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "zein da {company} diru sarrera nagusia", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "zenbat irauten du {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "{movie} iraupena", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "zenbat minutu ditu {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "{movie} iraupen totala", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "zein da {movie} iraupena", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "{movie} zenbat luze da", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "{movie} minutu kopurua", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "zein da {animal} izen (zientifikoa|latinoa)", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "{animal} izen zientifikoa", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "{animal} izen latinoa", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "zein da {animal} taxonomia izena", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "{animal} izen akademikoa", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "{animal} latinez nola deitzen da", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "zein da {animal} izen biologikoa", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "zein kirol egiten du {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "{person} kirola", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "zein da {person} kirol diziplina", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "zer kirol praktikatzen du {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "{person} zein kiroletan aritzen da", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "zein da {person} kirol espezialitateak", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "{person} kirolari mota", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "spouse.intent", "template": "nor da {person} (ezkontidea|senarra|emaztea)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "spouse.intent", "template": "{person} (senarra|emaztea)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "spouse.intent", "template": "norekin ezkondu zen {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "zein (estadiotan|arenatan) jokatzen du {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "non jokatzen du {team} etxean", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "{team} estadioa", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "zein da {team} zelaia", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "{team} etxeko estadioaren izena", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "{team} jokatzen den lekua", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "zein estadio du {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "nork jokatzen du {movie} filmean", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "{movie} aktore nagusiak", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "zein aktore agertzen da {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "{movie} protagonistak", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "nor da {movie} protagonista", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "{movie} filmeko aktoreak", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "zein dira {movie} izarrak", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "successor.intent", "template": "nor etorri zen {keyword}ren ondoren", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "successor.intent", "template": "nor zen {keyword}ren ondorengoa", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "successor.intent", "template": "nor hartu zuen {keyword}ren (kargua|postua|tokia)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "successor.intent", "template": "nork ordezkatu zuen {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "successor.intent", "template": "nor etorri zen {keyword}ren (aulkia|agintea) hartzera", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "thesis.intent", "template": "zein da {keyword} tesiaren gaia", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "nork idatzi zuen {movie} (gidoia)", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "{movie} gidoilaria", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "nor da {movie} gidoigillea", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "nork sortu zuen {movie} gidoia", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "{movie} istorioa nork idatzi zuen", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "{movie} gidoia nork egin zuen", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "zein idazlek egin zuen {movie} gidoia", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "years_active.intent", "template": "noiz egon zen {person} aktibo", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "eu-ES", "skill": "ovos-ddg-solver-plugin", "intent": "years_active.intent", "template": "{person} urte aktiboak", "slots": ["person"], "entity_values": {"person": []}}
 {"lang": "eu-ES", "skill": "ovos-ocp-pipeline-plugin", "intent": "featured.intent", "template": "bistaratu  {media} bilduma", "slots": ["media"], "entity_values": {"media": []}}
 {"lang": "eu-ES", "skill": "ovos-ocp-pipeline-plugin", "intent": "featured.intent", "template": "bistaratu  {media} erreprodukzio-zerrenda", "slots": ["media"], "entity_values": {"media": []}}
 {"lang": "eu-ES", "skill": "ovos-ocp-pipeline-plugin", "intent": "featured.intent", "template": "bistaratu  {media} katalogoa", "slots": ["media"], "entity_values": {"media": []}}
@@ -266,24 +665,7 @@
 {"lang": "eu-ES", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "zer dio the wolf bilatzaileak honi buruz: {query}?", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "zer dio wolfram alpha bilatzaileak honi buruz: {query}?", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "zer dio wolfram bilatzaileak honi buruz: {query}?", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "antonym.intent", "template": "zein da honen antonimo bat {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "antonym.intent", "template": "zein da honen antonimoa {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "antonym.intent", "template": "zein dira honen antonimoak {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "definition.intent", "template": "zein da honen definizioa {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "definition.intent", "template": "zer da {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "holonym.intent", "template": "zein da honen holonimo bat {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "holonym.intent", "template": "zein da honen holonimoa {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "holonym.intent", "template": "zein dira honen holonimoak {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "hypernym.intent", "template": "zein da honen holonimo bat {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "hypernym.intent", "template": "zein da honen holonimoa {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "hypernym.intent", "template": "zein dira honen hiperonimoak {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "hyponym.intent", "template": "zein da honen hiponimo bat {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "hyponym.intent", "template": "zein da honen hiponimoa {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "hyponym.intent", "template": "zein dira honen hiponimoak {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "lemma.intent", "template": "zein da honen lema bat {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "lemma.intent", "template": "zein da honen lema {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "lemma.intent", "template": "zein dira honen lemak {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "bilatu word net datu-basean {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "bilatu wordnet datu-basean {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "zer dio word net datu-baseak honi buruz {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "zer dio wordnet datu-baseak honi buruz {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "bilatu word net datu-basean {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "bilatu wordnet datu-basean {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "zer dio word net datu-baseak honi buruz {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "zer dio wordnet datu-baseak honi buruz {word}", "slots": ["word"], "entity_values": {"word": []}}

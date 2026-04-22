@@ -1,36 +1,485 @@
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age_at_death.intent", "template": "quants anys tenia {query} el dia que (ell|ella|) (va morir|morí)", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age_at_death.intent", "template": "quants anys tenia {query} en morir", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age_at_death.intent", "template": "quants anys tenia {query} quan (ell|ella|) (va morir|morí)", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "alma_mater.intent", "template": "quina és l'alma mater de {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "birthdate.intent", "template": "(quan|quin) és l'aniversari (de|d') {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "birthdate.intent", "template": "quan va nàixer {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "birthdate.intent", "template": "quan va néixer {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "birthdate.intent", "template": "quina és la data de naixement (de|d') {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "born.intent", "template": "quan (va néixer|nasqué) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "born.intent", "template": "quan és {query} (naixement|aniversari|dia de naixement)", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "born.intent", "template": "{query} (dia|data) de naixement", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "children.intent", "template": "quants fills (té|te|va tenir|tingué) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "died.intent", "template": "quan (va morir|morí) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "died.intent", "template": "quan (va ser|fou) la mort de {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "died.intent", "template": "{query} (dia|data) de la mort", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "education.intent", "template": "on (va estudiar|estudià) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "education.intent", "template": "on (va estudiar|estudià) {query}(?|)", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "fields.intent", "template": "quin és l'àmbit d'expertesa de {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "known_for.intent", "template": "per a què es coneix {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "known_for.intent", "template": "per què és famós {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "official_website.intent", "template": "quin és el lloc web oficial de {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "resting_place.intent", "template": "on (està|és) enterrat {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "resting_place.intent", "template": "on (és|està) la tomba de {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "(cerca|busca|consulta|demana) (a|al) (duck duck go|ddg|de de ge|l'ànec) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "(cerca|busca|consulta|demana) a (duck duck go|ddg|de de ge|l'ànec) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "(cerca|busca|consulta|demana) {query} (a|al) (duck duck go|ddg|de de ge|l'ànec)", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "(cerca|busca|consulta|demana) {query} a (duck duck go|ddg|de de ge|l'ànec)", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "cerca a l'ànec {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "què diu (el|es|) (duck duck go|ddg|de de ge|l'ànec) (sobre|de) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "què diu l'ànec sobre {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "search_duck.intent", "template": "què posa (a|al) (duck duck go|ddg|de de ge|l'ànec) (sobre|de) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "thesis.intent", "template": "quin és el tema de la tesi de {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "who.intent", "template": "qui és {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age.intent", "template": "quants anys té {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age.intent", "template": "quina és l edat de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age.intent", "template": "{person} edat", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age_at_death.intent", "template": "quants anys tenia {keyword} el dia que (ell|ella|) (va morir|morí)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age_at_death.intent", "template": "quants anys tenia {keyword} en morir", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "age_at_death.intent", "template": "quants anys tenia {keyword} quan (ell|ella|) (va morir|morí)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "alma_mater.intent", "template": "quina és l'alma mater de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "quina és l àrea de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "{place} àrea", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "com de gran és {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "quina és la superfície de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "{place} superfície", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "quants quilòmetres quadrats té {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "{place} extensió", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "area.intent", "template": "quin és el territori de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "qui va (escriure|és l autor de) {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "{book} autor", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "qui és l autor de {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "qui va redactar {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "{book} escrit per qui", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "quin escriptor va fer {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "{book} autoria", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "qui és el creador de {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "baptised.intent", "template": "quan va ser batejat {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "baptised.intent", "template": "quan va ser batejada {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "baptised.intent", "template": "quina és la data de baptisme de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "baptised.intent", "template": "quan va tenir lloc el baptisme de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "baptised.intent", "template": "{keyword} data de (baptisme|bateig)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "born.intent", "template": "quan (va néixer|nasqué) {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "born.intent", "template": "quan és {keyword} (naixement|aniversari|dia de naixement)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "born.intent", "template": "{keyword} (dia|data) de naixement", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "quant va recaptar {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "{movie} taquilla", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "quant va guanyar {movie} a la taquilla", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "quins van ser els ingressos de taquilla de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "{movie} recaptació", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "quant va fer {movie} a les sales de cinema", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "quina va ser la recaptació total de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "box_office.intent", "template": "recaptació de taquilla de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "quin era el pressupost de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "{movie} pressupost", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "quant va costar produir {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "quant es va gastar en {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "{movie} cost de producció", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "quin va ser el cost de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "quants diners es van invertir en {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "budget.intent", "template": "{movie} inversió", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "quina és la capital de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "{place} capital", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "quina ciutat és la capital de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "on és la capital de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "{place} quina és la seva capital", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "capital de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "capital.intent", "template": "quina és la seu del govern de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "qui és el (ceo|director executiu|cap) de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "{company} ceo", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "qui dirigeix {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "qui és el responsable de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "{company} director general", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "qui porta {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "quin és el cap executiu de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "ceo.intent", "template": "{company} qui la lidera", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "quants (campionats|títols|trofeus) ha guanyat {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "{team} campionats", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "{team} títols", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "quantes lligues ha guanyat {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "{team} palmarès", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "quants trofeus té {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "quantes vegades ha estat campió {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "championships.intent", "template": "{team} historial de títols", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "children.intent", "template": "quants fills (té|te|va tenir|tingué) {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "citizenship.intent", "template": "quina és la ciutadania de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "citizenship.intent", "template": "{person} ciutadania", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "citizenship.intent", "template": "{person} nacionalitat", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "coached_by.intent", "template": "qui entrena {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "coached_by.intent", "template": "{person} entrenador", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "qui va (compondre|escriure) la (música|banda sonora) de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "{movie} compositor", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "qui és el compositor de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "{movie} banda sonora compositor", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "qui va fer la música de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "quina és la banda sonora de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "{movie} música original", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "composers.intent", "template": "qui va compondre la partitura de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "{animal} està (en perill|amenaçat|extint)", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "quin és l estat de conservació de {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "{animal} estat de conservació", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "{animal} en perill d extinció", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "està protegit {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "{animal} és una espècie amenaçada", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "quin risc d extinció té {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "conservation_status.intent", "template": "{animal} nivell de protecció", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "a quin país és {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "{place} país", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "en quin país es troba {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "de quin país és {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "{place} a quin país pertany", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "quin és el país de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "on queda {place} quin país", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "country.intent", "template": "{place} nació", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "qui va dissenyar {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "{place} dissenyador", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "qui va (projectar|concebre) {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "qui és l arquitecte de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "{place} arquitecte", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "qui va fer el disseny de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "{place} qui el va dissenyar", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "designed_by.intent", "template": "per qui va ser dissenyat {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "qui va (desenvolupar|crear) {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "{software} desenvolupador", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "quin (estudi|empresa) va desenvolupar {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "qui és el creador de {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "{software} qui el va fer", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "qui programa {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "{software} equip de desenvolupament", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "developer.intent", "template": "qui hi ha darrere de {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "died.intent", "template": "quan (va morir|morí) {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "died.intent", "template": "quan (va ser|fou) la mort de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "died.intent", "template": "{keyword} (dia|data) de la mort", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "que menja {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "{animal} dieta", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "{animal} alimentació", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "de que s alimenta {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "{animal} és (herbívor|carnívor|omnívor)", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "quin tipus d alimentació té {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "{animal} preses", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "diet.intent", "template": "que cacen els {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "qui va dirigir {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "qui és el director de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "{movie} director", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "quin director va fer {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "{movie} qui la va dirigir", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "qui hi ha darrere de la càmera a {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "{movie} realitzador", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "director.intent", "template": "qui porta la direcció de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "doctoral_students.intent", "template": "qui eren els doctorands de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "doctoral_students.intent", "template": "a qui va supervisar {keyword} en el doctorat", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "doctoral_students.intent", "template": "qui va fer el doctorat amb {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "doctoral_students.intent", "template": "{keyword} (doctorands|estudiants de doctorat|supervisats)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "doctoral_students.intent", "template": "quins investigadors va dirigir {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "education.intent", "template": "on (va estudiar|estudià) {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "education.intent", "template": "on (va estudiar|estudià) {keyword}(?|)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "quina és l altitud de {mountain}", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "{mountain} altitud", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "{mountain} elevació", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "quants metres té {mountain}", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "quina alçada té {mountain}", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "{mountain} alçada sobre el nivell del mar", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "fins on arriba {mountain}", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "elevation.intent", "template": "{mountain} a quina altitud arriba", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "father.intent", "template": "qui és el pare de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "father.intent", "template": "qui era el pare de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "father.intent", "template": "com es diu el pare de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "father.intent", "template": "{keyword} (pare|papà)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "father.intent", "template": "qui és {keyword} pare", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "fields.intent", "template": "quin és l'àmbit d'expertesa de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "quan va ser fundat {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "{organization} data de fundació", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "quan es va crear {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "en quin any va néixer {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "{organization} any de fundació", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "quan va ser establert {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "{organization} quan va ser fundat", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founded.intent", "template": "quin any es va fundar {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "qui va fundar {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "{organization} fundador", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "qui és el fundador de {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "qui va crear {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "quines persones van fundar {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "{organization} qui el va fundar", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "qui va establir {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "founders.intent", "template": "fundadors de {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "quin gènere és {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "{movie} gènere", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "de quin gènere és {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "quin tipus de pel·lícula és {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "{movie} és de terror o comèdia", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "{movie} categoria", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "a quin gènere pertany {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "genre.intent", "template": "{movie} gènere cinematogràfic", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "on viu {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "quin és l hàbitat (natural |)de {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "{animal} hàbitat", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "on es pot trobar {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "en quins llocs habita {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "{animal} on viu normalment", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "quin entorn necessita {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "habitat.intent", "template": "{animal} zona de vida", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "qui és l (entrenador|tècnic) de {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "{team} entrenador", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "qui entrena {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "quin entrenador porta {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "{team} qui el dirigeix al camp", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "qui és el míster de {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "{team} tècnic actual", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "head_coach.intent", "template": "qui és el responsable tècnic de {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "on té la seu {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "{company} seu", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "on està ubicada {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "on és la seu central de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "{company} oficines centrals", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "on té la seu social {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "{company} on té la seu", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "headquarters.intent", "template": "en quina ciutat és {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "height.intent", "template": "quant mesura {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "height.intent", "template": "quina és l alçada de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "height.intent", "template": "{person} alçada", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "en quin sector és {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "{company} sector", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "{company} indústria", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "a quina indústria pertany {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "{company} a quin sector es dedica", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "quin és el camp d activitat de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "{company} sector econòmic", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "industry.intent", "template": "en quin àmbit treballa {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "institutions.intent", "template": "on va treballar {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "institutions.intent", "template": "on va ensenyar {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "institutions.intent", "template": "a quines institucions estava vinculat {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "institutions.intent", "template": "on va fer la recerca {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "institutions.intent", "template": "quines institucions tenia {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "institutions.intent", "template": "{keyword} institucions (acadèmiques|de recerca|)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "qui va inventar {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "{keyword} inventor", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "qui és l inventor de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "qui va crear {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "a qui devem la invenció de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "{keyword} qui el va inventar", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "quina persona va inventar {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "inventor.intent", "template": "inventor de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "known_for.intent", "template": "per a què es coneix {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "known_for.intent", "template": "per què és famós {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "a quin (segell discogràfic|segell|) pertany {artist}", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "{artist} segell discogràfic", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "{artist} discogràfica", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "amb quin segell treballa {artist}", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "{artist} quina discogràfica el representa", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "qui distribueix la música de {artist}", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "{artist} companyia discogràfica", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "label.intent", "template": "quin segell ha publicat {artist}", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "en quina llengua és (escrit|) {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "{book} llengua", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "{book} llengua original", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "en quin idioma va ser escrit {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "{book} idioma", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "quin és l idioma original de {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "{book} en quina llengua es va publicar", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "language.intent", "template": "en quina llengua va ser redactat {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "quina és la longitud de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "{place} longitud", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "quant (fa|mesura) de llarg {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "quina és la llargada de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "{place} llargada", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "quants quilòmetres fa {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "{place} mesura quants quilòmetres", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "length.intent", "template": "quin és el recorregut de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "sota quina llicència és {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "{software} llicència", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "quina és la llicència de {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "{software} és de codi obert", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "{software} llicència d ús", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "com està llicenciat {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "{software} tipus de llicència", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "license.intent", "template": "quins drets té {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "on es troba {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "{place} ubicació", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "on és {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "on queda {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "{place} on està situat", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "on podem trobar {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "{place} localització", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "en quina part del món és {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "location.intent", "template": "quin és el lloc de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "qui són els membres de {group}", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "{group} membres", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "qui forma part de {group}", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "quantes persones integren {group}", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "{group} qui en forma part", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "qui pertany a {group}", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "{group} composició", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "members.intent", "template": "quins integrants té {group}", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "mother.intent", "template": "qui és la mare de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "mother.intent", "template": "qui era la mare de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "mother.intent", "template": "com es diu la mare de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "mother.intent", "template": "{keyword} (mare|mamà)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "mother.intent", "template": "qui és {keyword} mare", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "movement.intent", "template": "a quin (moviment artístic|corrent filosòfic|moviment científic) pertanyia {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "movement.intent", "template": "amb quin moviment s'associa {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "movement.intent", "template": "a quina corrent de pensament pertany {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "movement.intent", "template": "{keyword} (moviment|corrent|escola) (artística|filosòfica|intel·lectual|)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "movement.intent", "template": "quin estil o moviment representa {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "net_worth.intent", "template": "quin és el patrimoni net de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "net_worth.intent", "template": "{person} patrimoni net", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "net_worth.intent", "template": "com de ric és {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "quin és el sobrenom de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "{person} sobrenom", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "{person} també conegut com", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "com anomenen {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "{person} àlies", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "quin malnom té {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "{person} com el coneixen popularment", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "nickname.intent", "template": "{person} nom artístic", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_awards.intent", "template": "quins premis va (guanyar|rebre) {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_awards.intent", "template": "quins (guardons|distincions) va obtenir {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_awards.intent", "template": "{person} va guanyar algun premi", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_awards.intent", "template": "{person} (premis|reconeixements|guardons)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_awards.intent", "template": "quins honors va rebre {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_work.intent", "template": "quina és l'obra més (famosa|coneguda|important) de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_work.intent", "template": "quin és el treball més notable de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_work.intent", "template": "què va (crear|escriure|compondre) {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_work.intent", "template": "quina és la (gran|principal) obra de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_work.intent", "template": "{person} obra (més famosa|més important|més coneguda)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "notable_work.intent", "template": "per quina (obra|creació) és conegut {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "quants empleats té {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "{company} nombre d empleats", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "quantes persones treballen a {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "quanta gent hi ha a {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "{company} plantilla", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "quants treballadors té {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "{company} quants empleats", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "number_of_employees.intent", "template": "mida de la plantilla de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "occupation.intent", "template": "quina és la professió de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "occupation.intent", "template": "a què es dedicava {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "occupation.intent", "template": "quina era l'ocupació de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "occupation.intent", "template": "en què treballava {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "occupation.intent", "template": "{keyword} (professió|ofici|carrera)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "occupation.intent", "template": "quin treball tenia {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "official_website.intent", "template": "quin és el lloc web oficial de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "quan va ser (inaugurat|obert|construït|completat) {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "{place} data d inauguració", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "{place} any d obertura", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "quan es va obrir {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "{place} quan va obrir les portes", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "en quin any va ser inaugurat {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "{place} data d obertura", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "opened.intent", "template": "quan va ser construït {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "quin és el títol original de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "{movie} títol original", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "com es deia originalment {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "quin és el nom original de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "{movie} com s anomena en versió original", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "{movie} títol en versió original", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "en quin idioma és el títol de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "original_title.intent", "template": "{movie} títol sense traduir", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "quins altres noms té {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "{keyword} altres noms", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "{keyword} també conegut com", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "com més es coneix {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "{keyword} àlies", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "{keyword} denominació alternativa", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "quins sinònims té {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "other_names.intent", "template": "{keyword} altres denominacions", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "qui és el propietari de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "{keyword} propietari", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "a qui pertany {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "qui posseeix {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "{keyword} qui el té", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "de qui és {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "{keyword} qui n és el propietari", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "owner.intent", "template": "propietari de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "partner.intent", "template": "qui és la parella de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "partner.intent", "template": "{person} parella", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "en quines (plataformes|consoles|sistemes) és {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "{software} plataformes", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "per a quines plataformes està disponible {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "{software} sistemes compatibles", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "{software} en quins dispositius funciona", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "{software} és disponible per a Windows", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "{software} compatibilitat", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "platforms.intent", "template": "on es pot executar {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "political_party.intent", "template": "a quin (partit polític|partit) pertany {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "political_party.intent", "template": "quin és el partit de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "political_party.intent", "template": "{person} partit polític", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "quina és la població de {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "quants habitants té {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "{place} població", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "quanta gent viu a {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "{place} quants habitants", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "{place} cens de població", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "quants residents hi ha a {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "population.intent", "template": "{place} nombre d habitants", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "predecessor.intent", "template": "qui va precedir {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "predecessor.intent", "template": "qui era el predecessor de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "predecessor.intent", "template": "qui ocupava (el càrrec|el tron) abans de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "predecessor.intent", "template": "qui governava abans de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "predecessor.intent", "template": "a qui va succeir {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "qui va produir {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "{movie} productor", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "qui és el productor de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "quina productora hi ha darrere de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "{movie} qui la va produir", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "{movie} companyia productora", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "qui finança {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "produced_by.intent", "template": "quina empresa va produir {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "qui va publicar {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "{book} editorial", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "quina editorial va publicar {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "quina empresa va editar {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "{book} editor", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "qui és l editor de {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "{book} qui el va editar", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "publisher.intent", "template": "{book} quina editorial el va treure", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "quan es va estrenar {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "data d estrena de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "{movie} data d estrena", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "quan va sortir {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "{movie} quan va ser estrenada", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "en quin any es va estrenar {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "{movie} any d estrena", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "released.intent", "template": "quan va arribar als cinemes {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "religion.intent", "template": "quina religió (practica|practicava) {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "religion.intent", "template": "quina és la religió de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "religion.intent", "template": "a quina fe pertany {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "religion.intent", "template": "{keyword} (religió|fe|confessió)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "religion.intent", "template": "és {keyword} (creient|religiós|practicant)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "resting_place.intent", "template": "on (està|és) enterrat {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "resting_place.intent", "template": "on (és|està) la tomba de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "quins són els ingressos de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "{company} ingressos", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "quant factura {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "quina és la facturació de {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "{company} facturació anual", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "quant guanya {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "{company} xifra de negoci", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "revenue.intent", "template": "quins ingressos té {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "quant dura {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "{movie} durada", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "quants minuts dura {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "quina és la durada de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "{movie} quantes hores dura", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "{movie} temps de projecció", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "quant de temps dura {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "running_time.intent", "template": "{movie} durada total", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "quin és el nom (científic|llatí) de {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "{animal} nom científic", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "{animal} nom llatí", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "com s anomena científicament {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "{animal} nomenclatura científica", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "quin és el nom taxonòmic de {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "{animal} en llatí com es diu", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "scientific_name.intent", "template": "{animal} classificació científica", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "quin esport practica {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "{person} esport", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "a quin esport es dedica {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "quin esport juga {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "{person} quin esport fa", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "en quin esport és {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "sport.intent", "template": "{person} esportista de quin esport", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "spouse.intent", "template": "qui és el (cònjuge|marit|muller) de {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "spouse.intent", "template": "{person} (marit|muller)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "spouse.intent", "template": "amb qui es va casar {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "en quin (estadi|arena) juga {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "on juga {team} a casa", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "{team} estadi", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "com s anomena l estadi de {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "{team} camp de joc", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "on és la seu de {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "quin és el camp de {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "stadium.intent", "template": "{team} on juga els partits de casa", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "qui actua a {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "{movie} repartiment", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "quins actors surten a {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "qui protagonitza {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "{movie} actors principals", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "qui hi surt a {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "{movie} qui hi actua", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "starring.intent", "template": "quins intèrprets té {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "successor.intent", "template": "qui va succeir {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "successor.intent", "template": "qui era el successor de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "successor.intent", "template": "qui va ocupar (el càrrec|el tron) després de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "successor.intent", "template": "qui va substituir {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "successor.intent", "template": "qui va seguir {keyword} en (el poder|el càrrec|)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "thesis.intent", "template": "quin és el tema de la tesi de {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "qui va (escriure|redactar) el (guió|) de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "{movie} guionista", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "qui va fer el guió de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "qui és l autor del guió de {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "{movie} guió escrit per", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "{movie} qui va escriure el guió", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "quins guionistes van treballar a {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "{movie} autor del guió", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "years_active.intent", "template": "quan va estar actiu {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "ca-ES", "skill": "ovos-ddg-solver-plugin", "intent": "years_active.intent", "template": "{person} anys d activitat", "slots": ["person"], "entity_values": {"person": []}}
 {"lang": "ca-ES", "skill": "ovos-ocp-pipeline-plugin", "intent": "featured.intent", "template": "mostra  catàleg  {media} destacada", "slots": ["media"], "entity_values": {"media": []}}
 {"lang": "ca-ES", "skill": "ovos-ocp-pipeline-plugin", "intent": "featured.intent", "template": "mostra  catàleg  {media} destacades", "slots": ["media"], "entity_values": {"media": []}}
 {"lang": "ca-ES", "skill": "ovos-ocp-pipeline-plugin", "intent": "featured.intent", "template": "mostra  catàleg  {media} destacat", "slots": ["media"], "entity_values": {"media": []}}
@@ -2279,6 +2728,11 @@
 {"lang": "ca-ES", "skill": "ovos-skill-days-in-history_1", "intent": "today_in_history.intent", "template": "què fets històrics van succeir en {date}", "slots": ["date"], "entity_values": {"date": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-days-in-history_1", "intent": "today_in_history.intent", "template": "què fets històrics van succeir en {date} a la història", "slots": ["date"], "entity_values": {"date": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-days-in-history_1", "intent": "today_in_history.intent", "template": "què fets històrics van succeir en {date} en la història", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "duckduckgo {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "cerca a DuckDuckGo {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "busca {query} a DuckDuckGo", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "pregunta a DuckDuckGo sobre {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "cerca DuckDuckGo per {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-dictation", "intent": "start_dictation.intent", "template": "activa el dictat amb el nom {name}", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-dictation", "intent": "start_dictation.intent", "template": "activa el dictat amb es nom {name}", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-dictation", "intent": "start_dictation.intent", "template": "activa el mode de dictat per a {name}", "slots": ["name"], "entity_values": {"name": []}}
@@ -10851,26 +11305,9 @@
 {"lang": "ca-ES", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "què (diu|explica) (el|es) llop (sobre|de) {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "què (diu|explica) wolfram  (sobre|de) {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "què (diu|explica) wolfram alfa (sobre|de) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "antonym.intent", "template": "(digues|digue'm|digues-me|dona|dóna|dona'm|dóna'm|indica|indica'm|quin és|vull saber) (l'|s'|)antònim de {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "antonym.intent", "template": "(digues|digue'm|digues-me|dona|dóna|dona'm|dóna'm|indica|indica'm|quins són|vull saber) els antònims de {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "antonym.intent", "template": "(digues|digue'm|digues-me|dona|dóna|dona'm|dóna'm|indica|indica'm|què és|vull saber) un antònim de {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "definition.intent", "template": "quina és (la|sa) definició (de|d') {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "definition.intent", "template": "què és {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "holonym.intent", "template": "(digues|digue'm|digues-me|dona|dóna|dona'm|dóna'm|indica|indica'm|quin és|vull saber) (l'|s'|)holònim de {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "holonym.intent", "template": "(digues|digue'm|digues-me|dona|dóna|dona'm|dóna'm|indica|indica'm|quins són|vull saber) els holònims de {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "holonym.intent", "template": "(digues|digue'm|digues-me|dona|dóna|dona'm|dóna'm|indica|indica'm|què és|vull saber) un holònim de {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "hypernym.intent", "template": "(digues|digue'm|digues-me|dona|dóna|dona'm|dóna'm|indica|indica'm|quin és|vull saber) (el |es |l'|s')(hiperònim|sinònim) de {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "hypernym.intent", "template": "(digues|digue'm|digues-me|dona|dóna|dona'm|dóna'm|indica|indica'm|quins són|vull saber) els (hiperònims|sinònims) de {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "hypernym.intent", "template": "(digues|digue'm|digues-me|dona|dóna|dona'm|dóna'm|indica|indica'm|què és|vull saber) un (hiperònim|sinònim) de {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "hyponym.intent", "template": "(digues|digue'm|digues-me|dona|dóna|dona'm|dóna'm|indica|indica'm|quin és|vull saber) (els |es |l'|s')(hipònims|termes més específics|termes més especialitzats) de {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "hyponym.intent", "template": "(digues|digue'm|digues-me|dona|dóna|dona'm|dóna'm|indica|indica'm|què és|vull saber) (el |es |l'|s')(hipònim|terme més específic|terme més especialitzat) de {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "hyponym.intent", "template": "(digues|digue'm|digues-me|dona|dóna|dona'm|dóna'm|indica|indica'm|què és|vull saber) un (hipònim|terme més específic|terme més especialitzat) de {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "lemma.intent", "template": "(digues |digue'me |dis-me |)quin lema té {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "lemma.intent", "template": "(digues |digue'me |dis-me |)quin és el lema (de|d'|per a|per) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "lemma.intent", "template": "(digues |digue'me |dis-me |)quins són els lemes (de|d'|per a|per) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "(cerca|busca) (en el tesaure|al tesaure|en la xarxa de mots|a la xarxa de mots|en el diccionari de sinònims|al diccionari de sinònims) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "(cerca|busca) {query} (al tesaure|a la xarxa de mots|al diccionari de sinònims)", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "(demana|pregunta) (al tesaure|a la xarxa de mots|al diccionari de sinònims) sobre {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "(demana|pregunta) (al tesaure|a la xarxa de mots|al diccionari de sinònims) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "què diu (el tesaure|la xarxa de mots|el diccionari de sinònims)(sobre |de |d'|) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "què diu (es tesaure|sa xarxa de mots|es diccionari de sinònims)(sobre |de|d'|) {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "(cerca|busca) (en el tesaure|al tesaure|en la xarxa de mots|a la xarxa de mots|en el diccionari de sinònims|al diccionari de sinònims) {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "(cerca|busca) {word} (al tesaure|a la xarxa de mots|al diccionari de sinònims)", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "(demana|pregunta) (al tesaure|a la xarxa de mots|al diccionari de sinònims) sobre {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "(demana|pregunta) (al tesaure|a la xarxa de mots|al diccionari de sinònims) {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "què diu (el tesaure|la xarxa de mots|el diccionari de sinònims)(sobre |de |d'|) {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "què diu (es tesaure|sa xarxa de mots|es diccionari de sinònims)(sobre |de|d'|) {word}", "slots": ["word"], "entity_values": {"word": []}}
