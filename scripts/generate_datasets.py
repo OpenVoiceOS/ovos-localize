@@ -133,42 +133,42 @@ def main() -> None:
             for sample in generate_intent_classification(skill_id, skill_data):
                 if lang := sample.get("lang"):
                     _get_writer(cls_writers, lang, cls_dir).write(
-                        json.dumps(sample, ensure_ascii=False) + "\n"
+                        json.dumps(sample, ensure_ascii=False, sort_keys=True) + "\n"
                     )
 
             # 2. Parallel corpora (machine translation)
             for sample in generate_parallel_corpora(skill_id, skill_data):
                 if pair := sample.get("pair"):
                     _get_writer(tra_writers, pair, tra_dir).write(
-                        json.dumps(sample, ensure_ascii=False) + "\n"
+                        json.dumps(sample, ensure_ascii=False, sort_keys=True) + "\n"
                     )
 
             # 3. Slot filling / NER
             for sample in generate_slot_filling(skill_id, skill_data):
                 if lang := sample.get("lang"):
                     _get_writer(sf_writers, lang, sf_dir).write(
-                        json.dumps(sample, ensure_ascii=False) + "\n"
+                        json.dumps(sample, ensure_ascii=False, sort_keys=True) + "\n"
                     )
 
             # 4. Intent → dialog response pairs (AST-derived)
             for sample in generate_response_pairs(skill_id, skill_data):
                 if lang := sample.get("lang"):
                     _get_writer(rp_writers, lang, rp_dir).write(
-                        json.dumps(sample, ensure_ascii=False) + "\n"
+                        json.dumps(sample, ensure_ascii=False, sort_keys=True) + "\n"
                     )
 
             # 5. TTS corpus (dialog sentences)
             for sample in generate_tts_corpus(skill_id, skill_data):
                 if lang := sample.get("lang"):
                     _get_writer(tts_writers, lang, tts_dir).write(
-                        json.dumps(sample, ensure_ascii=False) + "\n"
+                        json.dumps(sample, ensure_ascii=False, sort_keys=True) + "\n"
                     )
 
             # 6. Skill metadata
             for sample in generate_skill_metadata(skill_id, skill_data):
                 if lang := sample.get("lang"):
                     _get_writer(meta_writers, lang, meta_dir).write(
-                        json.dumps(sample, ensure_ascii=False) + "\n"
+                        json.dumps(sample, ensure_ascii=False, sort_keys=True) + "\n"
                     )
 
     finally:
@@ -181,7 +181,7 @@ def main() -> None:
         key = type_dir.name
         index[key] = sorted(p.name for p in type_dir.glob("*.jsonl"))
     index_path = DATASETS_DIR / "index.json"
-    index_path.write_text(json.dumps(index, ensure_ascii=False, indent=2))
+    index_path.write_text(encoding="utf-8", data=json.dumps(index, ensure_ascii=False, sort_keys=True, indent=2))
 
     print(f"Datasets generated successfully in {DATASETS_DIR}")
 

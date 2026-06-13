@@ -789,7 +789,7 @@ def main() -> None:
             skill_path = SKILLS_DATA_DIR / f"{skill_id}.json"
             
             # Remove indent to save space
-            content = json.dumps(skill_json, ensure_ascii=False)
+            content = json.dumps(skill_json, ensure_ascii=False, sort_keys=True)
             content_bytes = content.encode("utf-8")
             if len(content_bytes) > MAX_FILE_SIZE:
                 # Split 'files' key if too large
@@ -806,14 +806,14 @@ def main() -> None:
                 
                 for fk, fv in all_files:
                     # Quick size estimation for this entry
-                    file_content = json.dumps({fk: fv}, ensure_ascii=False)
+                    file_content = json.dumps({fk: fv}, ensure_ascii=False, sort_keys=True)
                     file_size = len(file_content.encode("utf-8"))
                     
                     if current_chunk_size + file_size > MAX_FILE_SIZE and current_chunk_json["files"]:
                         # Save current chunk
                         chunk_name = f"{skill_id}_{chunk_index}.json"
-                        (SKILLS_DATA_DIR / chunk_name).write_text(
-                            json.dumps(current_chunk_json, ensure_ascii=False)
+                        (SKILLS_DATA_DIR / chunk_name).write_text(encoding="utf-8", data=
+                            json.dumps(current_chunk_json, ensure_ascii=False, sort_keys=True)
                         )
                         main_json["chunks"].append(chunk_name)
                         chunk_index += 1
@@ -826,15 +826,15 @@ def main() -> None:
                 # Save last chunk
                 if current_chunk_json["files"]:
                     chunk_name = f"{skill_id}_{chunk_index}.json"
-                    (SKILLS_DATA_DIR / chunk_name).write_text(
-                        json.dumps(current_chunk_json, ensure_ascii=False)
+                    (SKILLS_DATA_DIR / chunk_name).write_text(encoding="utf-8", data=
+                        json.dumps(current_chunk_json, ensure_ascii=False, sort_keys=True)
                     )
                     main_json["chunks"].append(chunk_name)
                 
-                skill_path.write_text(json.dumps(main_json, ensure_ascii=False))
+                skill_path.write_text(encoding="utf-8", data=json.dumps(main_json, ensure_ascii=False, sort_keys=True))
                 print(f"{len(scan.languages)} langs, {len(scan.locale_files)} files (SPLIT into {len(main_json['chunks'])} chunks)")
             else:
-                skill_path.write_text(content)
+                skill_path.write_text(encoding="utf-8", data=content)
                 print(f"{len(scan.languages)} langs, {len(scan.locale_files)} files")
             if scan.bad_lang_codes:
                 print(f"    WARNING: bare lang codes (missing region) in {org}/{repo}: {', '.join(sorted(scan.bad_lang_codes))}", file=sys.stderr)
@@ -844,29 +844,29 @@ def main() -> None:
 
     # Write aggregate files
     repos_path = DATA_DIR / "repos.json"
-    repos_path.write_text(json.dumps(build_repos_json(all_skills), ensure_ascii=False))
+    repos_path.write_text(encoding="utf-8", data=json.dumps(build_repos_json(all_skills), ensure_ascii=False, sort_keys=True))
 
     coverage_data = build_coverage_json(all_skills)
     coverage_path = DATA_DIR / "coverage.json"
-    coverage_path.write_text(json.dumps(coverage_data, ensure_ascii=False))
+    coverage_path.write_text(encoding="utf-8", data=json.dumps(coverage_data, ensure_ascii=False, sort_keys=True))
 
     validation_path = DATA_DIR / "validation.json"
-    validation_path.write_text(json.dumps(build_validation_json(all_skills), ensure_ascii=False))
+    validation_path.write_text(encoding="utf-8", data=json.dumps(build_validation_json(all_skills), ensure_ascii=False, sort_keys=True))
 
     issues_data = build_issues_json(all_skills)
     issues_path = DATA_DIR / "issues.json"
-    issues_path.write_text(json.dumps(issues_data, ensure_ascii=False))
+    issues_path.write_text(encoding="utf-8", data=json.dumps(issues_data, ensure_ascii=False, sort_keys=True))
 
     stats_data = build_stats_json(all_skills, coverage_data)
     stats_path = DATA_DIR / "stats.json"
-    stats_path.write_text(json.dumps(stats_data, ensure_ascii=False))
+    stats_path.write_text(encoding="utf-8", data=json.dumps(stats_data, ensure_ascii=False, sort_keys=True))
 
     dataset_path = DATA_DIR / "dataset.tsv"
     dataset_rows = export_intent_dataset(all_skills, dataset_path)
 
     entities_data = build_entities_json(all_skills)
     entities_path = DATA_DIR / "entities.json"
-    entities_path.write_text(json.dumps(entities_data, ensure_ascii=False))
+    entities_path.write_text(encoding="utf-8", data=json.dumps(entities_data, ensure_ascii=False, sort_keys=True))
     gaps = sum(1 for e in entities_data if not e["has_entity_file"])
 
     # Strip internal-only fields from per-skill JSON files already written
