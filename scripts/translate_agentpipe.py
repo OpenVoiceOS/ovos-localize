@@ -382,10 +382,6 @@ async def main_async(args: argparse.Namespace) -> None:
         print_status(en_by_intent, data_dir, target_langs)
         return
 
-    if args.upload:
-        upload_translated(data_dir, list(LANG_LABELS.keys()))
-        return
-
     semaphore = asyncio.Semaphore(args.concurrency)
     tasks = [
         fill_language(lang, LANG_LABELS[lang], en_by_intent, data_dir,
