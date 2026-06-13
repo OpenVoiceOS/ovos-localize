@@ -131,7 +131,8 @@ async def fill_language(
                     line = line.strip()
                     if line:
                         r = json.loads(line)
-                        existing.add((r["skill"], r["intent"]))
+                        if r.get("file_type") == "intent":
+                            existing.add((r["skill"], r["intent"]))
 
         missing_keys = [k for k in en_by_intent if k not in existing]
         total_utterances = sum(len(en_by_intent[k]) for k in missing_keys)
@@ -285,6 +286,8 @@ async def main_async(args: argparse.Namespace) -> None:
             line = line.strip()
             if line:
                 r = json.loads(line)
+                if r.get("file_type") != "intent":
+                    continue
                 en_by_intent[(r["skill"], r["intent"])].append(r)
 
     print(f"en-US: {sum(len(v) for v in en_by_intent.values()):,} utterances, "

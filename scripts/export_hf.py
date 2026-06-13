@@ -86,6 +86,8 @@ def read_jsonl_dir(data_dir: Path) -> list[dict]:
                 if not line:
                     continue
                 rec = json.loads(line)
+                if rec.get("file_type") != "intent":
+                    continue
                 rows.append({
                     "lang": rec["lang"],
                     "domain": rec["skill"],
