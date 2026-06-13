@@ -64,7 +64,7 @@ jobs:
 
       - name: Checkout ovos-localize
         if: steps.validate.outputs.no_locale != 'true'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 

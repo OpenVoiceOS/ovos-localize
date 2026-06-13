@@ -58,7 +58,7 @@ jobs:
           repositories: ${{ steps.parse.outputs.repo }}
 
       - name: Checkout target repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: ${{ steps.parse.outputs.org }}/${{ steps.parse.outputs.repo }}
           ref: ${{ steps.parse.outputs.branch }}
