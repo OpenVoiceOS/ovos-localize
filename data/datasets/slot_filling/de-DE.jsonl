@@ -1415,10 +1415,10 @@
 {"lang": "de-DE", "skill": "ovos-skill-moviemaster", "intent": "movie.runtime.intent", "template": "Wie (lange|lang) ist der (movie|film|streifen) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
 {"lang": "de-DE", "skill": "ovos-skill-moviemaster", "intent": "movie.runtime.intent", "template": "suche die (Laufzeit | Länge) des (Films|Movies|streifen) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
 {"lang": "de-DE", "skill": "ovos-skill-moviemaster", "intent": "movie.year.intent", "template": "(in welchem Jahr | wann | zu welchem Datum) wurde der (Movie | Film | streifen) {movie} (gemacht | veröffentlicht)", "slots": ["movie"], "entity_values": {"movie": []}}
-{"lang": "de-DE", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "sage mir nach {Satz}", "slots": ["Satz"], "entity_values": {"Satz": []}}
-{"lang": "de-DE", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "sage {Satz}", "slots": ["Satz"], "entity_values": {"Satz": []}}
-{"lang": "de-DE", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "spreche {Satz}", "slots": ["Satz"], "entity_values": {"Satz": []}}
-{"lang": "de-DE", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "wiederhole {Satz}", "slots": ["Satz"], "entity_values": {"Satz": []}}
+{"lang": "de-DE", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "sage mir nach {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
+{"lang": "de-DE", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "sage {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
+{"lang": "de-DE", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "spreche {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
+{"lang": "de-DE", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "wiederhole {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "de-DE", "skill": "ovos-skill-wallpapers", "intent": "picture.about.intent", "template": "(zeige|lade) ein (zufälliges|anderes) (bild|foto) mit {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "de-DE", "skill": "ovos-skill-wallpapers", "intent": "picture.about.intent", "template": "(zeige|lade) mir ein (Bild|Foto|Abbildung) (über|für|mit) {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "de-DE", "skill": "ovos-skill-wallpapers", "intent": "picture.about.intent", "template": "(zeige|lade) mir ein (zufälliges|neues|anderes|noch ein anderes) (Bild|Foto|Abbild) (über|für|mit) {query}", "slots": ["query"], "entity_values": {"query": []}}
