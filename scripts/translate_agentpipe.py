@@ -63,6 +63,16 @@ LANG_LABELS: dict[str, str] = {
     "bg-BG": "Bulgarian (bg-BG)",
 }
 
+# Languages intentionally excluded from machine translation — the free-tier
+# agentpipe cascade (see free_model_list()) has little to no training signal
+# for these, so MT output would be unreliable and risks anchoring human
+# translators to a bad suggestion. These languages are human-first: enabled
+# for manual translation in the SPA, with no MT-suggestion affordance.
+# Kept as an explicit set (rather than relying on omission from LANG_LABELS)
+# so the exclusion is documented and a future addition of the language to
+# LANG_LABELS doesn't accidentally start machine-translating it.
+LOW_RESOURCE_LANGS: frozenset[str] = frozenset({"kab"})  # Kabyle — issue #208
+
 
 # ---------------------------------------------------------------------------
 # Progress tracking
@@ -359,6 +369,13 @@ collection.
 # ---------------------------------------------------------------------------
 
 async def main_async(args: argparse.Namespace) -> None:
+    if args.lang in LOW_RESOURCE_LANGS:
+        sys.exit(
+            f"{args.lang} is a human-first language (LOW_RESOURCE_LANGS) — "
+            "machine translation is intentionally not available for it. "
+            "Translate directly in the SPA instead."
+        )
+
     data_dir = Path(args.data_dir)
     en_path = data_dir / "en-US.jsonl"
     if not en_path.exists():
@@ -402,7 +419,12 @@ async def main_async(args: argparse.Namespace) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-dir", default="data/datasets/classification")
-    parser.add_argument("--lang", choices=list(LANG_LABELS), default=None)
+    # LOW_RESOURCE_LANGS is included in choices (not just LANG_LABELS) so a
+    # low-resource language hits the friendly guard message in main_async
+    # instead of argparse's generic "invalid choice" error.
+    parser.add_argument(
+        "--lang", choices=list(LANG_LABELS) + list(LOW_RESOURCE_LANGS), default=None
+    )
     parser.add_argument("--status", action="store_true",
                         help="Show per-language progress and exit")
     parser.add_argument("--upload", action="store_true",
