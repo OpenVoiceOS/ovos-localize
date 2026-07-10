@@ -13,7 +13,7 @@ Fully GitHub-native: no server, no database, no Docker.
 | Component | Tech | Purpose |
 |-----------|------|---------|
 | Data generation | `scripts/generate_data.py` | Clones skills, scans, outputs JSON to `data/` |
-| Scheduling | GitHub Actions cron | Daily data refresh + auto-commit |
+| Scheduling | GitHub Actions cron | Daily data refresh + auto-commit + polling for merged fixes |
 | Frontend | `index.html` (static SPA) | Tailwind + vanilla JS, served via GitHub Pages |
 | CLI | `ovos-localize-cli` | CI pipeline validation |
 
@@ -45,6 +45,7 @@ Fully GitHub-native: no server, no database, no Docker.
 | `#/` | Dashboard + heatmap | `repos.json`, `coverage.json` |
 | `#/skill/{id}` | Skill detail + file list | `skills/{id}.json` |
 | `#/skill/{id}/{file}/{lang}` | Three-panel translation viewer | `skills/{id}.json` |
+| `#/issues` | Locale issues + validation problems | `data/issues.json`, GitHub API |
 
 ## Supported File Types
 
@@ -92,6 +93,13 @@ You can load these directly via HuggingFace:
 from datasets import load_dataset
 dataset = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localize/data/datasets/classification/en-US.jsonl")
 ```
+
+## Data Refresh
+
+Data refreshes automatically in three ways:
+1. **Daily cron** — `update_data.yml` runs at 02:00 UTC
+2. **On push** — when `skills.txt`, `scripts/`, or `ovos_localize/` change on `dev`
+3. **Polling** — `poll_merged_fixes.yml` runs every 30 minutes, searches for recently merged locale-fix or translation PRs across the org, and triggers `update_data.yml` if any are found since the last data commit
 
 ## CI Integration
 

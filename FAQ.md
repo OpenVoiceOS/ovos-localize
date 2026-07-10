@@ -63,5 +63,11 @@ A maintainer must review and merge the automatically-created PR before the langu
 ### Why wasn't the automation triggered when I submitted a language request?
 GitHub ignores `?labels=` query parameters for users without write access to the repo, so issues created via the frontend URL arrive without any labels. The `enable_new_language.yml` workflow now detects language requests by title prefix (`Add language:`) or body content (`NEW_LANGUAGE_META`) in addition to the `new-language` label, so label-less issues are handled correctly.
 
+### How often does the data refresh?
+Three ways: (1) daily cron at 02:00 UTC, (2) on push to `dev` when `skills.txt`/`scripts/`/`ovos_localize/` change, and (3) a polling workflow (`poll_merged_fixes.yml`) that runs every 30 minutes, checks if any locale-fix or translation PRs were merged across the org since the last data commit, and triggers a full refresh if so. This means the UI reflects upstream fixes within ~30 minutes instead of waiting for the next daily run.
+
+### How do I add a new skill to the tracked list?
+Click the "Submit a skill" button in the UI. Enter the GitHub repository URL. This opens a GitHub issue with a machine-readable `ADD_SKILL_META` block. The `add_skill` workflow parses the URL, appends it to `skills.txt`, and opens a PR. The UI checks for duplicate submissions before allowing a new one.
+
 ### Why were eu-EU, eu, and es-LM dataset files removed?
 After BCP-47 normalization was added (`lang_utils.EXPLICIT_MAPPING`), `eu-EU` and `eu` both normalize to `eu-ES`, and `es-LM` normalizes to `es-419`. The old files contained data tagged with deprecated codes; they were replaced by `eu-ES.jsonl` and `es-419.jsonl`.
