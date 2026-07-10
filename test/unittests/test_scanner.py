@@ -104,6 +104,20 @@ class TestScanLocaleDirectory:
         # Both files should still be present and normalised to en-US
         assert all(f.lang == "en-US" for f in files)
 
+    def test_kabyle_bare_code_not_flagged_as_bad(self, tmp_path: Path) -> None:
+        """kab has no commonly-used region subtag and normalizes to itself
+        — it must not be reported in bad_lang_codes just for lacking a
+        hyphen, and the scan must not throw on a region-less 3-letter
+        locale directory name."""
+        locale = tmp_path / "locale"
+        (locale / "kab").mkdir(parents=True)
+        (locale / "kab" / "hello.intent").write_text("azul\n")
+
+        files, bad = scan_locale_directory(str(locale))
+        assert "kab" not in bad
+        assert len(files) == 1
+        assert files[0].lang == "kab"
+
 
 class TestRepoScanner:
     """Tests for RepoScanner."""

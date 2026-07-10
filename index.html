@@ -128,6 +128,13 @@
     // =========================================================================
     const LOCALIZE_REPO = 'OpenVoiceOS/ovos-localize';
 
+    // Human-first languages — the editor's per-string auto-translate
+    // suggestion is intentionally hidden. These languages have little to no
+    // machine-translation signal, so a suggestion would be unreliable and
+    // risks anchoring the translator to a bad first draft instead of
+    // translating directly from the English source.
+    const HUMAN_FIRST_LANGS = new Set(['kab']); // Kabyle — issue #208
+
     /**
      * Submit a translation by opening a pre-filled GitHub Issue.
      * A GitHub Action picks it up, creates a PR, and closes the issue.
@@ -2313,6 +2320,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
           : (FILE_TYPE_HELP[fileData.type] || 'Translate this file to your language.');
       const isJsonFile = !isCreateMode && (fileData.type === 'skill.json' || fileData.type === 'settingsmeta' || fileData.type === 'resource_json');
       const hasExpansion = isCreateMode ? false : ['intent', 'voc', 'dialog'].includes(fileData.type);
+      const isHumanFirstLang = HUMAN_FIRST_LANGS.has(lang);
 
       // Source language
       const availableSrcLangs = isCreateMode ? [] : Object.keys(fileData.langs).filter(l => l !== lang);
@@ -2355,12 +2363,19 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
           </div>
         </div>
 
+        ${isHumanFirstLang ? `
+        <div class="mb-4 px-4 py-3 rounded-lg border border-ovos-card bg-ovos-card text-sm flex items-start gap-2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span>Machine translation is not reliable for this language yet — please translate directly from English. Your human translation is exactly what this language needs most.</span>
+        </div>
+        ` : ''}
+
         <!-- Action bar -->
         <div class="flex items-center gap-2 mb-3 flex-wrap">
           <span id="editor-status" class="text-xs text-ovos-muted"></span>
           ${isNew ? '<span class="badge badge-amber">new file</span>' : ''}
           <div class="ml-auto flex gap-2">
-            ${!isJsonFile ? `
+            ${!isJsonFile && !isHumanFirstLang ? `
             <!-- Auto-translate button + server picker -->
             <div class="flex items-center gap-0">
               <button id="auto-tx-btn" onclick="handleAutoTranslate('${lang}')" class="text-xs px-3 py-1.5 rounded-l-lg border border-ovos-card hover:bg-ovos-hover flex items-center gap-1" title="Auto-translate English source using OVOS community translation servers">

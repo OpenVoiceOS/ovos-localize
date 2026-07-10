@@ -184,11 +184,16 @@ def scan_locale_directory(
         if not raw_lang:
             continue
 
-        if "-" not in raw_lang and raw_lang not in seen_bad:
+        lang = normalize_lang_code(raw_lang)
+
+        # A bare code (no region subtag) is only "bad" when normalization
+        # actually changes it — i.e. OVOS's EXPLICIT_MAPPING or langcodes
+        # itself considers it deficient (e.g. "da" -> "da-DK"). A macro-
+        # language that is legitimately region-less in BCP-47 (e.g. "kab"
+        # for Kabyle) normalizes to itself and must not be flagged.
+        if "-" not in raw_lang and lang != raw_lang and raw_lang not in seen_bad:
             bad_codes.append(raw_lang)
             seen_bad.add(raw_lang)
-
-        lang = normalize_lang_code(raw_lang)
 
         base_name = file_path.stem
         parser_cls = get_parser(file_path.name)
