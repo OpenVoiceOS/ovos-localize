@@ -155,6 +155,14 @@
     // was named.
     const isHumanFirst = (lang) => HUMAN_FIRST_LANGS.has(String(lang || '').split('-')[0].toLowerCase());
 
+    // Right-to-left languages, keyed on the BCP-47 primary subtag.
+    // MUST stay in sync with _RTL_LANGS in ovos_localize/lang_utils.py.
+    const RTL_LANGS = new Set(['ar', 'arc', 'ckb', 'dv', 'fa', 'he', 'ps', 'sd', 'ug', 'ur', 'yi']);
+    function isRtlLang(lang) {
+      if (!lang) return false;
+      return RTL_LANGS.has(lang.toLowerCase().split('-')[0]);
+    }
+
     /**
      * Submit a translation by opening a pre-filled GitHub Issue.
      * A GitHub Action picks it up, creates a PR, and closes the issue.
@@ -673,7 +681,9 @@
       const cls = pct >= 80 ? 'badge-green' : pct >= 50 ? 'badge-amber' : 'badge-red';
       return `<span class="badge ${cls}">${pct.toFixed(0)}%</span>`;
     }
-    function highlightSlots(text) { return text.replace(/\{(\w+)\}/g, '<span class="slot">{$1}</span>'); }
+    // <bdi> isolates the (Latin) slot name so it doesn't scramble the
+    // surrounding text's bidirectional ordering in RTL languages.
+    function highlightSlots(text) { return text.replace(/\{(\w+)\}/g, '<bdi class="slot">{$1}</bdi>'); }
     function highlightCodeStrings(code) {
       // Highlight string literals (single and double quoted)
       return code
@@ -2555,6 +2565,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
                       // Screen readers announce a field by its label, and a
                       // label only names a field it points at.
                       const fieldId = 'jf-' + key.replace(/[^A-Za-z0-9_-]/g, '-');
+                      const fieldDir = isRtlLang(lang) ? 'rtl' : 'auto';
                       const srcItems = sourceEntries.filter(e => e.key === key);
                       const tgtItems = targetEntries.filter(e => e.key === key);
                       const translatable = srcItems[0]?.translatable !== false;
@@ -2567,16 +2578,16 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
                         // List field: textarea
                         const tgtText = tgtItems.length ? tgtItems.map(e=>e.text).join('\n') : '';
                         const srcText = srcItems.map(e=>e.text).join('\n');
-                        return '<div class="p-2 bg-ovos-bg rounded-lg"><label for="' + fieldId + '" class="text-xs font-bold text-ovos-accent">' + escapeHtml(key) + ' <span class="text-ovos-muted font-normal">(one per line)</span></label><div class="text-xs text-ovos-muted mt-0.5 mb-1">English: ' + escapeHtml(srcText.substring(0,80)) + (srcText.length > 80 ? '...' : '') + '</div><textarea class="json-field w-full bg-ovos-input text-ovos-text p-2 rounded border border-ovos-card text-sm mono resize-none" rows="' + Math.max(3, srcItems.length) + '" id="' + fieldId + '" data-key="' + escapeHtml(key) + '" data-list="1" spellcheck="true">' + escapeHtml(tgtText) + '</textarea></div>';
+                        return '<div class="p-2 bg-ovos-bg rounded-lg"><label for="' + fieldId + '" class="text-xs font-bold text-ovos-accent">' + escapeHtml(key) + ' <span class="text-ovos-muted font-normal">(one per line)</span></label><div class="text-xs text-ovos-muted mt-0.5 mb-1">English: ' + escapeHtml(srcText.substring(0,80)) + (srcText.length > 80 ? '...' : '') + '</div><textarea dir="' + fieldDir + '" class="json-field w-full bg-ovos-input text-ovos-text p-2 rounded border border-ovos-card text-sm mono resize-none" rows="' + Math.max(3, srcItems.length) + '" id="' + fieldId + '" data-key="' + escapeHtml(key) + '" data-list="1" spellcheck="true">' + escapeHtml(tgtText) + '</textarea></div>';
                       } else {
                         // Single field: input
                         const tgtText = tgtItems.length ? tgtItems[0].text : '';
                         const srcText = srcItems[0]?.text || '';
                         const isLong = srcText.length > 80;
                         if (isLong) {
-                          return '<div class="p-2 bg-ovos-bg rounded-lg"><label for="' + fieldId + '" class="text-xs font-bold text-ovos-accent">' + escapeHtml(key) + '</label><div class="text-xs text-ovos-muted mt-0.5 mb-1">English: ' + escapeHtml(srcText.substring(0,120)) + (srcText.length > 120 ? '...' : '') + '</div><textarea class="json-field w-full bg-ovos-input text-ovos-text p-2 rounded border border-ovos-card text-sm" rows="3" id="' + fieldId + '" data-key="' + escapeHtml(key) + '" spellcheck="true">' + escapeHtml(tgtText) + '</textarea></div>';
+                          return '<div class="p-2 bg-ovos-bg rounded-lg"><label for="' + fieldId + '" class="text-xs font-bold text-ovos-accent">' + escapeHtml(key) + '</label><div class="text-xs text-ovos-muted mt-0.5 mb-1">English: ' + escapeHtml(srcText.substring(0,120)) + (srcText.length > 120 ? '...' : '') + '</div><textarea dir="' + fieldDir + '" class="json-field w-full bg-ovos-input text-ovos-text p-2 rounded border border-ovos-card text-sm" rows="3" id="' + fieldId + '" data-key="' + escapeHtml(key) + '" spellcheck="true">' + escapeHtml(tgtText) + '</textarea></div>';
                         }
-                        return '<div class="p-2 bg-ovos-bg rounded-lg"><label for="' + fieldId + '" class="text-xs font-bold text-ovos-accent">' + escapeHtml(key) + '</label><div class="text-xs text-ovos-muted mt-0.5 mb-1">English: ' + escapeHtml(srcText) + '</div><input type="text" class="json-field w-full bg-ovos-input text-ovos-text p-2 rounded border border-ovos-card text-sm" id="' + fieldId + '" data-key="' + escapeHtml(key) + '" value="' + escapeHtml(tgtText) + '" spellcheck="true"></div>';
+                        return '<div class="p-2 bg-ovos-bg rounded-lg"><label for="' + fieldId + '" class="text-xs font-bold text-ovos-accent">' + escapeHtml(key) + '</label><div class="text-xs text-ovos-muted mt-0.5 mb-1">English: ' + escapeHtml(srcText) + '</div><input type="text" dir="' + fieldDir + '" class="json-field w-full bg-ovos-input text-ovos-text p-2 rounded border border-ovos-card text-sm" id="' + fieldId + '" data-key="' + escapeHtml(key) + '" value="' + escapeHtml(tgtText) + '" spellcheck="true"></div>';
                       }
                     }).join('');
                   })()}
@@ -2586,6 +2597,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
               ` : `
                 <textarea id="translation-editor"
                   class="flex-1 w-full bg-ovos-input text-ovos-text p-3 rounded-lg border border-ovos-card text-sm resize-none leading-relaxed mono"
+                  dir="${isRtlLang(lang) ? 'rtl' : 'ltr'}"
                   placeholder="${hasEntityContext ? `Example values that {${fileKey.replace('.entity','')}} can be replaced with, one per line.&#10;&#10;Example:&#10;value one&#10;value two&#10;value three` : isNew ? 'Type your translation here, one line per entry...&#10;&#10;Look at the source on the left for reference.&#10;Keep {variables} exactly as they are.' : 'Edit the translation...'}"
                   spellcheck="true"
                 >${escapeHtml(currentText)}</textarea>

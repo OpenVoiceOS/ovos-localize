@@ -1,11 +1,36 @@
 """Unit tests for language utilities."""
 
+import pytest
+
 from ovos_localize.lang_utils import (
+    is_rtl,
     lang_display_name,
     lang_display_name_native,
     merge_equivalent_langs,
     normalize_lang_code,
 )
+
+
+class TestIsRtl:
+    """Tests for is_rtl()."""
+
+    @pytest.mark.parametrize("code", [
+        "ar", "ar-EG", "AR", "fa", "fa-IR", "he", "he-IL",
+        "ur", "ur-PK", "ps", "sd", "ug", "dv", "yi", "ckb",
+    ])
+    def test_rtl_languages(self, code: str) -> None:
+        """Right-to-left languages are detected regardless of region/case."""
+        assert is_rtl(code) is True
+
+    @pytest.mark.parametrize("code", [
+        "en", "en-US", "de-DE", "fr-FR", "pt-BR", "zh-CN",
+        "kab",  # Kabyle: Latin script, LTR — must never be flagged RTL
+        "ber",  # Berber / Tifinagh script is LTR
+        "", "zzz",
+    ])
+    def test_ltr_languages(self, code: str) -> None:
+        """Left-to-right (and unknown/empty) codes are not RTL."""
+        assert is_rtl(code) is False
 
 
 class TestNormalizeLangCode:
@@ -164,3 +189,24 @@ class TestCanonicalCodeWins:
         name = lang_display_name_native("kab")
         assert name != "kab"
         assert "Taqbaylit" in name
+
+
+class TestRtlListParity:
+    """The editor has its own copy of the RTL list, in JavaScript.
+
+    Nothing at runtime reads the Python one, so the two can drift apart
+    without any symptom until a translator sees a left-to-right editor for a
+    right-to-left language.
+    """
+
+    def test_python_and_javascript_agree(self) -> None:
+        import re
+        from pathlib import Path
+
+        from ovos_localize import lang_utils
+
+        html = (Path(__file__).resolve().parents[2] / "index.html").read_text()
+        match = re.search(r"const RTL_LANGS = new Set\(\[([^\]]*)\]\)", html)
+        assert match, "index.html no longer declares RTL_LANGS"
+        js = set(re.findall(r"'([a-z]{2,3})'", match.group(1)))
+        assert js == set(lang_utils._RTL_LANGS)
