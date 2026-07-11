@@ -1,5 +1,11 @@
 """Translate missing .intent patterns to all languages using agentpipe free cascade.
 
+SCOPE — read this first. This produces **ML training data only** (the intent
+classification corpora under data/datasets/), never official translations.
+Machine-translated text must NEVER be submitted as a skill's locale files:
+those are always written by human translators through the editor + review flow.
+The only consumer of this output is dataset generation for intent training.
+
 Resumable: progress is tracked in data/datasets/classification/.progress/<lang>.json
 (set of completed "skill::intent" keys). Rows are written immediately after each
 intent batch so a kill never loses more than one batch.

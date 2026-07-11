@@ -269,6 +269,20 @@ Every translation contributed through OVOS Localize becomes part of a publicly a
 
 Datasets are written as JSONL files to `data/datasets/`, split at 100 MB for GitHub compatibility, and compatible with HuggingFace Datasets via direct URL reference.
 
+### 8.1 Machine translation is for training data only
+
+To make the intent-classification corpora usable in languages that humans have
+not yet fully translated, missing `.intent` patterns are gap-filled with a
+free-tier machine-translation cascade (`scripts/translate_agentpipe.py`). This
+is strictly a **training-data** device: the machine-translated rows exist only
+in the ML datasets under `data/datasets/`. They are **never** promoted to a
+skill's official locale files — those are always produced by human translators
+through the editor and review flow. The two paths never cross: batch MT writes
+only to the dataset directory, and the human-translation submission pipeline
+(editor → issue → PR) is the only route into a skill repository. For
+human-first languages such as Kabyle, even the optional per-string suggestion
+in the editor is disabled, so their human translations never anchor on MT.
+
 ---
 
 ## 9. Results
