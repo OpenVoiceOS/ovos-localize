@@ -2821,9 +2821,6 @@
 {"lang": "fr-FR", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_location.intent", "text": "où suis-je"}
 {"lang": "fr-FR", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_location.intent", "text": "quelle est ma position"}
 {"lang": "fr-FR", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_location.intent", "text": "donne-moi ma localisation"}
-{"lang": "fr-FR", "skill": "ovos-skill-dictation", "file_type": "voc", "intent": "StopKeyword.voc", "text": "annule"}
-{"lang": "fr-FR", "skill": "ovos-skill-dictation", "file_type": "voc", "intent": "StopKeyword.voc", "text": "arrête"}
-{"lang": "fr-FR", "skill": "ovos-skill-dictation", "file_type": "voc", "intent": "StopKeyword.voc", "text": "stop"}
 {"lang": "fr-FR", "skill": "ovos-skill-dictation", "file_type": "intent", "intent": "start_dictation.intent", "text": "active la dictée"}
 {"lang": "fr-FR", "skill": "ovos-skill-dictation", "file_type": "intent", "intent": "start_dictation.intent", "text": "active la dictée sous le nom {name}"}
 {"lang": "fr-FR", "skill": "ovos-skill-dictation", "file_type": "intent", "intent": "start_dictation.intent", "text": "active la transcription"}
@@ -2849,6 +2846,9 @@
 {"lang": "fr-FR", "skill": "ovos-skill-dictation", "file_type": "intent", "intent": "stop_dictation.intent", "text": "cesse la dictée"}
 {"lang": "fr-FR", "skill": "ovos-skill-dictation", "file_type": "intent", "intent": "stop_dictation.intent", "text": "stoppe la dictée"}
 {"lang": "fr-FR", "skill": "ovos-skill-dictation", "file_type": "intent", "intent": "stop_dictation.intent", "text": "stoppe la transcription"}
+{"lang": "fr-FR", "skill": "ovos-skill-dictation", "file_type": "voc", "intent": "stop_keyword.voc", "text": "annule"}
+{"lang": "fr-FR", "skill": "ovos-skill-dictation", "file_type": "voc", "intent": "stop_keyword.voc", "text": "arrête"}
+{"lang": "fr-FR", "skill": "ovos-skill-dictation", "file_type": "voc", "intent": "stop_keyword.voc", "text": "stop"}
 {"lang": "fr-FR", "skill": "ovos-skill-easter-eggs", "file_type": "voc", "intent": "adult_mode_keyword.voc", "text": "hurt me plenty"}
 {"lang": "fr-FR", "skill": "ovos-skill-easter-eggs", "file_type": "voc", "intent": "adult_mode_keyword.voc", "text": "ça va chauffer"}
 {"lang": "fr-FR", "skill": "ovos-skill-easter-eggs", "file_type": "voc", "intent": "arnold_keyword.voc", "text": "arnold parle"}
@@ -3500,36 +3500,36 @@
 {"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "yesKeyword.voc", "text": "bien sûr"}
 {"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "yesKeyword.voc", "text": "je veux"}
 {"lang": "fr-FR", "skill": "ovos-skill-moon-game", "file_type": "voc", "intent": "yesKeyword.voc", "text": "j'accepte"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre.movie.search.intent", "text": "quels sont les films du genre {genre}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre.movie.search.intent", "text": "trouve-moi des films du genre {genre}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre.tv.search.intent", "text": "quelles sont les émissions télé du genre {genre}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre.tv.search.intent", "text": "trouve-moi des émissions télé du genre {genre}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.cast.intent", "text": "qui joue dans le film {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.description.intent", "text": "de quoi parle le film {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.description.intent", "text": "donne-moi le synopsis du film {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.description.intent", "text": "raconte-moi le film {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.genres.intent", "text": "à quels genres appartient le film {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.genres.intent", "text": "de quel genre est le film {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.genres.intent", "text": "quels sont les genres du film {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.information.intent", "text": "donne-moi des informations sur le film {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.information.intent", "text": "as-tu des informations sur le film {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.information.intent", "text": "trouve des informations sur le film {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.popular.intent", "text": "liste les films populaires du moment"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.popular.intent", "text": "quels sont les films populaires du moment"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.production.intent", "text": "quel studio a fait le film {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.production.intent", "text": "quel studio a produit le film {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.production.intent", "text": "qui a fait le film {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.production.intent", "text": "qui a produit le film {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.recommendations.intent", "text": "recommande-moi des films comme {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.recommendations.intent", "text": "propose-moi des films comme {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.recommendations.intent", "text": "quels films recommandes-tu comme {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.runtime.intent", "text": "combien de temps dure le film {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.runtime.intent", "text": "combien dure le film {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.runtime.intent", "text": "quelle est la durée du film {movie}"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.top.intent", "text": "liste les films les mieux notés du moment"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.top.intent", "text": "quels sont les films les mieux notés du moment"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.year.intent", "text": "en quelle année le film {movie} est-il sorti"}
-{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie.year.intent", "text": "quand le film {movie} est-il sorti"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "quelles sont les émissions télé du genre {genre}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "trouve-moi des émissions télé du genre {genre}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_cast.intent", "text": "qui joue dans le film {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_description.intent", "text": "de quoi parle le film {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_description.intent", "text": "donne-moi le synopsis du film {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_description.intent", "text": "raconte-moi le film {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "quels sont les films du genre {genre}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "trouve-moi des films du genre {genre}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genres.intent", "text": "à quels genres appartient le film {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genres.intent", "text": "de quel genre est le film {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genres.intent", "text": "quels sont les genres du film {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "donne-moi des informations sur le film {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "as-tu des informations sur le film {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "trouve des informations sur le film {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "liste les films populaires du moment"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "quels sont les films populaires du moment"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_production.intent", "text": "quel studio a fait le film {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_production.intent", "text": "quel studio a produit le film {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_production.intent", "text": "qui a fait le film {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_production.intent", "text": "qui a produit le film {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_recommendations.intent", "text": "recommande-moi des films comme {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_recommendations.intent", "text": "propose-moi des films comme {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_recommendations.intent", "text": "quels films recommandes-tu comme {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_runtime.intent", "text": "combien de temps dure le film {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_runtime.intent", "text": "combien dure le film {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_runtime.intent", "text": "quelle est la durée du film {movie}"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_top.intent", "text": "liste les films les mieux notés du moment"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_top.intent", "text": "quels sont les films les mieux notés du moment"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_year.intent", "text": "en quelle année le film {movie} est-il sorti"}
+{"lang": "fr-FR", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_year.intent", "text": "quand le film {movie} est-il sorti"}
 {"lang": "fr-FR", "skill": "ovos-skill-naptime", "file_type": "voc", "intent": "SleepCommand.voc", "text": "sieste"}
 {"lang": "fr-FR", "skill": "ovos-skill-naptime", "file_type": "voc", "intent": "SleepCommand.voc", "text": "va te coucher"}
 {"lang": "fr-FR", "skill": "ovos-skill-naptime", "file_type": "intent", "intent": "naptime.intent", "text": "va te coucher"}

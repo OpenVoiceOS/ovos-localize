@@ -82,12 +82,12 @@
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_duration_ask.dialog", "text": "a aquesta hora teniu {event} entre {begin} i {end}. voleu desar-ho de tota manera?"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "alert_prenotification.dialog", "text": "recordeu {remimder} d'aquí a {time_until}"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "alert_prenotification_ask.dialog", "text": "voleu una breu notificació abans d'aquest esdeveniment?"}
-{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "alert_rescheduled.dialog", "text": "s'ha ajustat {name} {type}"}
+{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "alert_rescheduled.dialog", "text": "s'ha ajustat {name} del tipus {type}"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "alert_rescheduled_all_day.dialog", "text": "{kind} ara és per a tot el dia."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "alert_rescheduled_end.dialog", "text": "s'ha canviat la finalització de l'entrada {kind} a {end}."}
-{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "alert_rescheduled_prenotification.dialog", "text": "la notificació prèvia també ha canviat a {prenotificació}. he d'ajustar l'horari amb antelació?"}
+{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "alert_rescheduled_prenotification.dialog", "text": "la notificació prèvia també ha canviat a {prenotification}. he d'ajustar l'horari amb antelació?"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "alert_rescheduled_repeat.dialog", "text": "s'ha canviat la repetició a {repeat}."}
-{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "at_time.dialog", "text": "{begin}"}
+{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "at_time.dialog", "text": "a les {begin}"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "audio.dialog", "text": "àudio"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "audiobook.dialog", "text": "audiollibre"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "confirm_alert_playback.dialog", "text": "l'enregistrament {name} es reproduirà {begin}, d'aquí a {remaining}."}
@@ -96,7 +96,7 @@
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "confirm_alert_recurring_script.dialog", "text": "{name} s'executarà {begin}, cada {repeat}."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "confirm_alert_script.dialog", "text": "l'script {name} s'executarà a {begin}, d'aquí a {remaining}."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "confirm_alert_set.dialog", "text": "l'entranda {kind} començarà {begin}, d'aquí a {remaining}."}
-{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "confirm_cancel_alert.dialog", "text": "s'han cancel·lat {kind} {name}."}
+{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "confirm_cancel_alert.dialog", "text": "s'han cancel·lat {kind} amb nom {name}."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "confirm_cancel_all.dialog", "text": "d'acord, cancel·lo tots els {kind}, {num} en total."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "confirm_cancel_timeframe.dialog", "text": "d'acord, cancel·lo totes les entrades {kind} en aquesta estona, {num} en total."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "confirm_dismiss_alert.dialog", "text": "{kind} perduda."}
@@ -124,15 +124,15 @@
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "friday.dialog", "text": "divendres"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "in_time.dialog", "text": "d'aquí a {remaining}"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_alert_intro.dialog", "text": "teniu els següents {kind}s:"}
-{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_alert_missed.dialog", "text": "{name} {kind}, ha finalitzat {begin}"}
+{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_alert_missed.dialog", "text": "{name} del tipus {kind}, ha finalitzat {begin}"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_alert_missed_intro.dialog", "text": "aquí teniu què us heu perdut:"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_alert_none_missed.dialog", "text": "no heu perdut cap alerta."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_alert_none_upcoming.dialog", "text": "no teniu {kind} propers."}
-{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_alert_timeframe_intro.dialog", "text": "en aquesta estona teniu {num} {type}s:"}
+{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_alert_timeframe_intro.dialog", "text": "en aquesta estona teniu {num} del tipus {type}:"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_alert_timeframe_none.dialog", "text": "no hi ha res previst a aquest hora."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_alert_timeframe_none.dialog", "text": "no hi ha res previst en aquesta franja de temps."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_alert_w_duration.dialog", "text": "{name} de {begin} a {end}."}
-{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_alert_wo_duration.dialog", "text": "{name} {begin}."}
+{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_alert_wo_duration.dialog", "text": "{name} a les {begin}."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_deleted.dialog", "text": "s'ha suprimit la llista {name}"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_item_delete_selection_intro.dialog", "text": "de quina llista?"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_todo_add_ask.dialog", "text": "quines entrades hauria d'afegir a la llista {name}?"}
@@ -30439,27 +30439,28 @@
 {"lang": "ca-ES", "skill": "ovos-skill-mark1-ctrl", "dialog": "set.color.success.dialog", "text": "és un bon color. mireu-m ara."}
 {"lang": "ca-ES", "skill": "ovos-skill-mark1-ctrl", "dialog": "set.custom.color.dialog", "text": "el meu cervell està connectat per entendre els colors de r g b."}
 {"lang": "ca-ES", "skill": "ovos-skill-mark1-ctrl", "dialog": "set.default.eye.color.dialog", "text": "voleu que aquest sigui el vostre color d'ulls predeterminat?"}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "bad.movie.genre.catagory.dialog", "text": "no trobo cap xou de televisió del gènere {genre}"}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "bad.tv.genre.catagory.dialog", "text": "no trobo cap xou de televisió del gènere {genre}"}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "fallback.api.dialog", "text": "s'està tornant a l'api predeterminada"}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie.description.error.dialog", "text": "sembla que no trobo informació sobre la pel·lícula {movie}."}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie.genre.multiple.dialog", "text": "el film es pot trobar en un dels gèneres; {genrelist} i {genrelistlast}"}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie.genre.multiple.dialog", "text": "la pel·lícula es pot trobar en un dels gèneres; {genrelist} i {genrelistlast}"}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie.genre.multiple.dialog", "text": "hom considera que el film com a {genrelist} o {genrelistlast}"}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie.genre.multiple.dialog", "text": "hom considera que la pel·lícula com a {genrelist} o {genrelistlast}"}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie.genre.single.dialog", "text": "el film {movie} es podria considerar un {genre}"}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie.genre.single.dialog", "text": "la pel·lícula {movie} es podria considerar un {genre}"}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie.genre.single.dialog", "text": "podeu trobar la pel·lícula {movie} a la secció {genre}"}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie.info.response.dialog", "text": "{movie} es va estrenar el {year}, amb un pressupost de {budget} dòlars."}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie.production.multiple.dialog", "text": "les companyies {companies} i {lastcompany} produiren la pel·lícula {movie}"}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie.production.multiple.dialog", "text": "{companies} i {lastcompany} van produir la pel·lícula {movie}"}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie.production.single.dialog", "text": "la companyia {company}, va produir la pel·lícula {movie}"}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie.year.error.dialog", "text": "no trobo la data d'estrena de la pel·lícula {movie}"}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "no.api.dialog", "text": "heu d'introduir la vostra clau a p i de t m d b a h o m e punt maicroft punt a i per a usar l'habilitat movie master"}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "no.info.dialog", "text": "no trobo cap informació sobre el film {movie}"}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "no.info.dialog", "text": "no trobo cap informació sobre la pel·lícula {movie}"}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "no.info.general.dialog", "text": "no trobo la llista que busqueu; torneu a provar-ho més tard."}
-{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "no.valid.api.dialog", "text": "la clau api que heu introduït no és vàlida. vegeu el fitxer llegeix-me per a saber com obtenir-ne una."}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "bad_movie_genre_catagory.dialog", "text": "no trobo cap xou de televisió del gènere {genre}"}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "bad_tv_genre_catagory.dialog", "text": "no trobo cap xou de televisió del gènere {genre}"}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "fallback_api.dialog", "text": "s'està tornant a l'api predeterminada"}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "genre_movie_search.dialog", "text": "les pel·lícules del gènere {genre} són;"}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_description_error.dialog", "text": "sembla que no trobo informació sobre la pel·lícula {movie}."}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_genre_multiple.dialog", "text": "el film es pot trobar en un dels gèneres; {genrelist} i {genrelistlast}"}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_genre_multiple.dialog", "text": "la pel·lícula es pot trobar en un dels gèneres; {genrelist} i {genrelistlast}"}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_genre_multiple.dialog", "text": "hom considera que el film com a {genrelist} o {genrelistlast}"}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_genre_multiple.dialog", "text": "hom considera que la pel·lícula com a {genrelist} o {genrelistlast}"}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_genre_single.dialog", "text": "el film {movie} es podria considerar un {genre}"}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_genre_single.dialog", "text": "la pel·lícula {movie} es podria considerar un {genre}"}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_genre_single.dialog", "text": "podeu trobar la pel·lícula {movie} a la secció {genre}"}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_info_response.dialog", "text": "{movie} es va estrenar el {year}, amb un pressupost de {budget} dòlars."}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_production_multiple.dialog", "text": "les companyies {companies} i {lastcompany} produiren la pel·lícula {movie}"}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_production_multiple.dialog", "text": "{companies} i {lastcompany} van produir la pel·lícula {movie}"}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_production_single.dialog", "text": "la companyia {company}, va produir la pel·lícula {movie}"}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_year_error.dialog", "text": "no trobo la data d'estrena de la pel·lícula {movie}"}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "no_api.dialog", "text": "heu d'introduir la vostra clau a p i de t m d b a h o m e punt maicroft punt a i per a usar l'habilitat movie master"}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "no_info.dialog", "text": "no trobo cap informació sobre el film {movie}"}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "no_info.dialog", "text": "no trobo cap informació sobre la pel·lícula {movie}"}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "no_info_general.dialog", "text": "no trobo la llista que busqueu; torneu a provar-ho més tard."}
+{"lang": "ca-ES", "skill": "ovos-skill-moviemaster", "dialog": "no_valid_api.dialog", "text": "la clau api que heu introduït no és vàlida. vegeu el fitxer llegeix-me per a saber com obtenir-ne una."}
 {"lang": "ca-ES", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.dialog", "text": "d'acord, vaig a dormir. podeu despertar-me dient '{wake_word}, desperta'."}
 {"lang": "ca-ES", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.dialog", "text": "vaig a dormir ara. digueu '{wake_word}, desperta' per aixecar-me."}
 {"lang": "ca-ES", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.dialog", "text": "vaig a dormir. digueu '{wake_word}, desperta' per tornar a cridar la meva atenció."}
