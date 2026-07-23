@@ -1829,6 +1829,27 @@
 {"lang": "sv-SE", "skill": "ovos-skill-personal", "file_type": "intent", "intent": "WhoMadeYou.intent", "text": "vem har skapat dig"}
 {"lang": "sv-SE", "skill": "ovos-skill-personal", "file_type": "intent", "intent": "WhoMadeYou.intent", "text": "vem skapade dig"}
 {"lang": "sv-SE", "skill": "ovos-skill-personal", "file_type": "intent", "intent": "WhoMadeYou.intent", "text": "vem skapades du av"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "intent", "intent": "flip-a-coin.intent", "text": "singla slant"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "intent", "intent": "fortune-teller.intent", "text": "berätta om framtid"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "intent", "intent": "fortune-teller.intent", "text": "berätta om min framtid"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "intent", "intent": "fortune-teller.intent", "text": "berätta om min öde"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "intent", "intent": "fortune-teller.intent", "text": "berätta om öde"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "voc", "intent": "heads.voc", "text": "krona"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "intent", "intent": "make-a-choice.intent", "text": "hjälp mig att bestämma något"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "intent", "intent": "make-a-choice.intent", "text": "hjälp mig att fatta ett beslut"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "voc", "intent": "no.voc", "text": "nej"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "intent", "intent": "pick-a-number.intent", "text": "peka på ett tal mellan {lower} och {upper}"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "intent", "intent": "pick-a-number.intent", "text": "utse ett tal mellan {lower} och {upper}"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "intent", "intent": "pick-a-number.intent", "text": "välj ett tal mellan {lower} och {upper}"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "intent", "intent": "roll-multiple-dice.intent", "text": "kasta {number} d {faces}"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "intent", "intent": "roll-multiple-dice.intent", "text": "kasta {number} tärningar med {faces} sidor"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "intent", "intent": "roll-multiple-dice.intent", "text": "kasta {number} tärningar"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "intent", "intent": "roll-single-die.intent", "text": "kasta en tärning med {faces} sidor"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "intent", "intent": "roll-single-die.intent", "text": "kasta en {faces}-sidig tärning"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "intent", "intent": "roll-single-die.intent", "text": "kasta en tärning"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "intent", "intent": "roll-single-die.intent", "text": "kasta tärning"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "voc", "intent": "tails.voc", "text": "klave"}
+{"lang": "sv-SE", "skill": "ovos-skill-randomness", "file_type": "voc", "intent": "yes.voc", "text": "ja"}
 {"lang": "sv-SE", "skill": "ovos-skill-soundcloud", "file_type": "voc", "intent": "soundcloud.voc", "text": "i sound cloud"}
 {"lang": "sv-SE", "skill": "ovos-skill-soundcloud", "file_type": "voc", "intent": "soundcloud.voc", "text": "i soundcloud"}
 {"lang": "sv-SE", "skill": "ovos-skill-soundcloud", "file_type": "voc", "intent": "soundcloud.voc", "text": "på sound cloud"}
@@ -2057,7 +2078,7 @@
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "windy.voc", "text": "vindar"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "windy.voc", "text": "vindbyar"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "windy.voc", "text": "vindhastighet"}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "assist.intent", "text": "säg till home assistant att{command}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "assist.intent", "text": "säg till home assistant att {command}"}
 {"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "assist.intent", "text": "säg till home assistant {command}"}
 {"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "disable.intent", "text": "inaktivera home assistant"}
 {"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "disable.intent", "text": "jag använder inte home assistant"}
@@ -2232,174 +2253,43 @@
 {"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "lights.set.color.intent", "text": "ändra lampa {entity} {color}"}
 {"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "lights.set.color.intent", "text": "ändra min lampa {entity} till {color}"}
 {"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "lights.set.color.intent", "text": "ändra min lampa {entity} {color}"}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig avläsningen för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig avläsningen för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig avläsningen för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig avläsningen för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig avläsningen för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig avläsningen för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig nyansen för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig nyansen för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig nyansen för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig nyansen för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig nyansen för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig nyansen för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig status för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig status för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig status för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig status för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig status för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig status för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig temperaturen för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig temperaturen för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig temperaturen för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig temperaturen för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig temperaturen för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig temperaturen för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig tillståndet för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig tillståndet för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig tillståndet för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig tillståndet för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig tillståndet för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig tillståndet för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig värdet för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig värdet för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig värdet för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig värdet för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig värdet för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig värdet för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig avläsningen för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig avläsningen för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig avläsningen för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig avläsningen för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig avläsningen för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig avläsningen för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig nyansen för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig nyansen för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig nyansen för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig nyansen för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig nyansen för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig nyansen för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig status för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig status för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig status för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig status för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig status för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig status för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig temperaturen för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig temperaturen för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig temperaturen för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig temperaturen för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig temperaturen för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig temperaturen för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig tillståndet för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig tillståndet för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig tillståndet för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig tillståndet för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig tillståndet för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig tillståndet för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig värdet för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig värdet för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig värdet för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig värdet för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig värdet för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig värdet för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta avläsningen för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta avläsningen för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta avläsningen för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta avläsningen för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta avläsningen för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta avläsningen för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta nyansen för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta nyansen för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta nyansen för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta nyansen för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta nyansen för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta nyansen för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta status för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta status för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta status för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta status för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta status för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta status för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta temperaturen för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta temperaturen för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta temperaturen för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta temperaturen för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta temperaturen för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta temperaturen för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta tillståndet för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta tillståndet för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta tillståndet för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta tillståndet för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta tillståndet för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta tillståndet för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta värdet för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta värdet för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta värdet för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta värdet för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta värdet för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta värdet för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är avläsningen för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är avläsningen för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är avläsningen för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är avläsningen för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är avläsningen för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är avläsningen för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är nyansen för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är nyansen för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är nyansen för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är nyansen för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är nyansen för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är nyansen för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är status för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är status för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är status för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är status för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är status för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är status för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är temperaturen för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är temperaturen för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är temperaturen för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är temperaturen för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är temperaturen för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är temperaturen för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är tillståndet för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är tillståndet för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är tillståndet för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är tillståndet för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är tillståndet för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är tillståndet för {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är värdet för den {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är värdet för den {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är värdet för min {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är värdet för min {entity} snälla."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är värdet för {entity} ."}
-{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är värdet för {entity} snälla."}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är status för den {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är status för min {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är status för {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är temperaturen för den {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är temperaturen för min {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är temperaturen för {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är tillståndet för den {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är tillståndet för min {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är tillståndet för {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är värdet för den {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är värdet för min {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är värdet för {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig avläsningen för den {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig avläsningen för {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig status för den {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig status för {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig temperaturen för den {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig temperaturen för {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig tillståndet för den {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "berätta för mig tillståndet för {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig avläsningen för den {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig avläsningen för {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig status för den {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig status för {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig temperaturen för den {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig temperaturen för {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig tillståndet för den {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "ge mig tillståndet för {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta avläsningen för den {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta avläsningen för {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta status för den {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta status för {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta temperaturen för den {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta temperaturen för {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta tillståndet för den {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "hämta tillståndet för {entity}"}
+{"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "vad är status för den {entity} snälla"}
 {"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "är den {entity} ansluten"}
 {"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "är den {entity} av"}
 {"lang": "sv-SE", "skill": "skill-homeassistant", "file_type": "intent", "intent": "sensor.intent", "text": "är den {entity} frånkopplad"}

@@ -902,6 +902,12 @@
 {"lang": "da-DK", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "sig {sentence} efter mig", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "da-DK", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "tal {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "da-DK", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "tal {sentence} efter mig", "slots": ["sentence"], "entity_values": {"sentence": []}}
+{"lang": "da-DK", "skill": "ovos-skill-randomness", "intent": "pick-a-number.intent", "template": "(vælg|udvælg|peg på) et tal mellem {lower} og {upper}", "slots": ["lower", "upper"], "entity_values": {"lower": [], "upper": []}}
+{"lang": "da-DK", "skill": "ovos-skill-randomness", "intent": "roll-multiple-dice.intent", "template": "kast {number} d {faces}", "slots": ["number", "faces"], "entity_values": {"number": [], "faces": []}}
+{"lang": "da-DK", "skill": "ovos-skill-randomness", "intent": "roll-multiple-dice.intent", "template": "kast {number} terninger med {faces} sider", "slots": ["number", "faces"], "entity_values": {"number": [], "faces": []}}
+{"lang": "da-DK", "skill": "ovos-skill-randomness", "intent": "roll-multiple-dice.intent", "template": "kast {number} terninger", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "da-DK", "skill": "ovos-skill-randomness", "intent": "roll-single-die.intent", "template": "kast en terning med {faces} sider", "slots": ["faces"], "entity_values": {"faces": []}}
+{"lang": "da-DK", "skill": "ovos-skill-randomness", "intent": "roll-single-die.intent", "template": "kast en {faces}-sidet terning", "slots": ["faces"], "entity_values": {"faces": []}}
 {"lang": "da-DK", "skill": "ovos-skill-wallpapers", "intent": "picture.about.intent", "template": "(vis|vis) mig en (tilfældig|ny|anden|anden) (billede|foto|billede) (om|for|med) {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "da-DK", "skill": "ovos-skill-wallpapers", "intent": "picture.about.intent", "template": "(vis|vis) mig et (billede|foto|billede) (om|for|med) {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "da-DK", "skill": "ovos-skill-wallpapers", "intent": "picture.about.intent", "template": "(vis|visning) (tilfældig|ny|andet|andet) (billede|foto|billede) (om|for|med) {forespørgsel}", "slots": ["forespørgsel"], "entity_values": {"forespørgsel": []}}
@@ -2459,7 +2465,8 @@
 {"lang": "da-DK", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "søg i ulven efter {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "da-DK", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "søg i wolfram alpha efter {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "da-DK", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "søg i wolfram efter {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "da-DK", "skill": "skill-homeassistant", "intent": "assist.intent", "template": "sig til home assistant (|at){command}", "slots": ["command"], "entity_values": {"command": []}}
+{"lang": "da-DK", "skill": "skill-homeassistant", "intent": "assist.intent", "template": "sig til home assistant at {command}", "slots": ["command"], "entity_values": {"command": []}}
+{"lang": "da-DK", "skill": "skill-homeassistant", "intent": "assist.intent", "template": "sig til home assistant {command}", "slots": ["command"], "entity_values": {"command": []}}
 {"lang": "da-DK", "skill": "skill-homeassistant", "intent": "lights.decrease.brightness.intent", "template": "sænk (|lysstyrken) for (|den|min) {entity}", "slots": ["entity"], "entity_values": {"entity": []}}
 {"lang": "da-DK", "skill": "skill-homeassistant", "intent": "lights.decrease.brightness.intent", "template": "gør (|den|min) {entity} svagere", "slots": ["entity"], "entity_values": {"entity": []}}
 {"lang": "da-DK", "skill": "skill-homeassistant", "intent": "lights.decrease.brightness.intent", "template": "dæmp (|ned) (|lysstyrken) (|for) (|den|min) {entity}", "slots": ["entity"], "entity_values": {"entity": []}}
@@ -2474,9 +2481,11 @@
 {"lang": "da-DK", "skill": "skill-homeassistant", "intent": "lights.set.brightness.intent", "template": "sæt (|den|min) {entity}s lysstyrke til {brightness} (|procent)", "slots": ["entity", "brightness"], "entity_values": {"entity": [], "brightness": []}}
 {"lang": "da-DK", "skill": "skill-homeassistant", "intent": "lights.set.color.intent", "template": "(juster|ændr|gør) (|den|min) {entity}s farve (til |){color}", "slots": ["entity", "color"], "entity_values": {"entity": [], "color": []}}
 {"lang": "da-DK", "skill": "skill-homeassistant", "intent": "lights.set.color.intent", "template": "(juster|ændr|gør) (|den|min) lys {entity} (til |){color}", "slots": ["entity", "color"], "entity_values": {"entity": [], "color": []}}
-{"lang": "da-DK", "skill": "skill-homeassistant", "intent": "sensor.intent", "template": "(hvad er|giv mig|fortæl mig|hent) (|temperaturen|farvetonen|værdien|tilstanden|status|aflæsningen) for (|den|min) {entity} (venligst|).", "slots": ["entity"], "entity_values": {"entity": []}}
-{"lang": "da-DK", "skill": "skill-homeassistant", "intent": "sensor.intent", "template": "er (|den|min) {entity} (tændt|slukket|høj|lav|kold|varm|meget varm|forbundet|afbrudt|åben|lukket|mørk|i bevægelse|optaget|tilsluttet|sikret|usikret|opladning|tilgængelig)", "slots": ["entity"], "entity_values": {"entity": []}}
-{"lang": "da-DK", "skill": "skill-homeassistant", "intent": "sensor.intent", "template": "har (|den|min) {entity} registreret (|en) (fugt|energi|problem|vibration|gas|lyd)", "slots": ["entity"], "entity_values": {"entity": []}}
+{"lang": "da-DK", "skill": "skill-homeassistant", "intent": "sensor.intent", "template": "hvad er (temperaturen|værdien|tilstanden|status) for (den|min|) {entity}", "slots": ["entity"], "entity_values": {"entity": []}}
+{"lang": "da-DK", "skill": "skill-homeassistant", "intent": "sensor.intent", "template": "(giv mig|fortæl mig|hent) (temperaturen|tilstanden|status|aflæsningen) for (den|) {entity}", "slots": ["entity"], "entity_values": {"entity": []}}
+{"lang": "da-DK", "skill": "skill-homeassistant", "intent": "sensor.intent", "template": "hvad er status for den {entity} venligst", "slots": ["entity"], "entity_values": {"entity": []}}
+{"lang": "da-DK", "skill": "skill-homeassistant", "intent": "sensor.intent", "template": "er (den|min|) {entity} (tændt|slukket|høj|lav|kold|varm|meget varm|forbundet|afbrudt|åben|lukket|mørk|i bevægelse|optaget|tilsluttet|sikret|usikret|opladning|tilgængelig)", "slots": ["entity"], "entity_values": {"entity": []}}
+{"lang": "da-DK", "skill": "skill-homeassistant", "intent": "sensor.intent", "template": "har (den|min|) {entity} registreret (en|) (fugt|energi|problem|vibration|gas|lyd)", "slots": ["entity"], "entity_values": {"entity": []}}
 {"lang": "da-DK", "skill": "skill-homeassistant", "intent": "stop.intent", "template": "stop (|den|min) {entity}", "slots": ["entity"], "entity_values": {"entity": []}}
 {"lang": "da-DK", "skill": "skill-homeassistant", "intent": "stop.intent", "template": "Kan du stoppe (|den|min) {entity} venligst?", "slots": ["entity"], "entity_values": {"entity": []}}
 {"lang": "da-DK", "skill": "skill-homeassistant", "intent": "stop.intent", "template": "Jeg vil gerne stoppe (|den|min) {entity}", "slots": ["entity"], "entity_values": {"entity": []}}
