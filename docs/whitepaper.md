@@ -101,7 +101,7 @@ data/
 GitHub Pages → index.html (SPA)
 ```
 
-The pipeline runs daily at 02:00 UTC, on manual dispatch, and whenever `skills.txt` changes. Additionally, a lightweight polling workflow (`poll_merged_fixes.yml`) runs every 30 minutes and triggers a data refresh if any locale-fix or translation PRs were merged across the org since the last data commit — ensuring the UI reflects upstream fixes within 30 minutes instead of waiting for the next daily run. All output is committed back to the `dev` branch and served immediately via Pages.
+The pipeline runs daily at 02:00 UTC, on manual dispatch, and whenever `skills.txt`, `scripts/**`, or `ovos_localize/**` change on `dev`. Additionally, a lightweight polling workflow (`poll_merged_fixes.yml`) runs every 30 minutes and triggers a data refresh if any locale-fix or translation PRs were merged across the org since the last data commit — ensuring the UI reflects upstream fixes within 30 minutes instead of waiting for the next daily run. All output is committed back to the `dev` branch and served immediately via Pages.
 
 ### 3.3 Single-Page Application
 

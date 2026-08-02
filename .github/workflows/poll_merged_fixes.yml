@@ -8,6 +8,9 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -19,6 +22,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -euo pipefail
+
           # Timestamp of the last "chore: update translation data" commit
           LAST_UPDATE=$(git log --all --format='%aI' --grep='chore: update translation data' -1)
           if [ -z "$LAST_UPDATE" ]; then
@@ -28,19 +33,22 @@ jobs:
           fi
           echo "Last data update: $LAST_UPDATE"
 
-          # Search for merged locale-fix PRs since that timestamp
+          # Search for merged locale-fix PRs since that timestamp.
+          # Let real gh/API failures (auth, rate-limit) fail the job instead
+          # of being silently treated as "no matches", which would leave
+          # generated data stale without any signal.
           COUNT=$(gh search prs \
             "fix: rename bare lang code" \
             org:OpenVoiceOS \
             --merged-at ">=$LAST_UPDATE" \
-            --json url --jq 'length' 2>/dev/null || echo "0")
+            --json url --jq 'length')
 
           # Also check for merged translation submissions
           TX_COUNT=$(gh search prs \
             "OVOS Localize" \
             org:OpenVoiceOS \
             --merged-at ">=$LAST_UPDATE" \
-            --json url --jq 'length' 2>/dev/null || echo "0")
+            --json url --jq 'length')
 
           TOTAL=$((COUNT + TX_COUNT))
           echo "Merged locale PRs since last update: $TOTAL (fixes=$COUNT, translations=$TX_COUNT)"
@@ -55,4 +63,14 @@ jobs:
         if: steps.poll.outputs.should_update == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run update_data.yml --ref dev
+        run: |
+          set -euo pipefail
+          # Skip dispatch if update_data.yml already has a queued or
+          # in-progress run for dev, to avoid piling up duplicate refreshes.
+          PENDING=$(gh run list --workflow update_data.yml --branch dev \
+            --json status --jq '[.[] | select(.status == "queued" or .status == "in_progress")] | length')
+          if [ "$PENDING" -gt 0 ]; then
+            echo "update_data.yml already queued/running for dev ($PENDING run(s)), skipping dispatch"
+            exit 0
+          fi
+          gh workflow run update_data.yml --ref dev
