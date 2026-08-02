@@ -33,10 +33,19 @@ jobs:
         run: |
           set -euo pipefail
 
-          # Timestamp of the last "chore: update translation data" commit
-          LAST_UPDATE=$(git log --all --format='%aI' --grep='chore: update translation data' -1)
+          # Watermark: the last successful update_data.yml run. A refresh
+          # that produces no data changes makes no commit, so the run time
+          # is what advances the watermark and stops the poller from
+          # re-dispatching the same merged PRs every 30 minutes.
+          LAST_UPDATE=$(gh run list --workflow update_data.yml --branch dev \
+            --status success --limit 1 --json updatedAt --jq '.[0].updatedAt // empty')
           if [ -z "$LAST_UPDATE" ]; then
-            echo "No previous data update commit found, triggering refresh"
+            # Fallback (first run, or run history expired): the last data
+            # commit on dev. Needs the full fetch history above.
+            LAST_UPDATE=$(git log --format='%aI' --grep='chore: update translation data' -1)
+          fi
+          if [ -z "$LAST_UPDATE" ]; then
+            echo "No previous data update found, triggering refresh"
             echo "should_update=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
