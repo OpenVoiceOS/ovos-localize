@@ -5,6 +5,12 @@ on:
     - cron: "*/30 * * * *"   # every 30 minutes
   workflow_dispatch:
 
+# Shared with update_data.yml so the poller and the refresh serialize on a
+# server-side lock instead of racing the check-then-dispatch below.
+concurrency:
+  group: translation-data-refresh-dev
+  cancel-in-progress: false
+
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -15,7 +21,10 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: dev
-          fetch-depth: 10
+          # full history: the marker lookup below must see the last
+          # "chore: update translation data" commit however old it is
+          fetch-depth: 0
+          persist-credentials: false
 
       - name: Check for merged PRs since last data update
         id: poll
