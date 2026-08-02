@@ -10,6 +10,11 @@ on:
       - scripts/**
       - ovos_localize/**
 
+# Shared with poll_merged_fixes.yml so refreshes serialize with the poller.
+concurrency:
+  group: translation-data-refresh-dev
+  cancel-in-progress: false
+
 jobs:
   generate:
     runs-on: ubuntu-latest

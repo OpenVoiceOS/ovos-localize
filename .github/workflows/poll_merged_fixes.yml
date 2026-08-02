@@ -1,0 +1,94 @@
+name: Poll for merged locale fixes
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # every 30 minutes
+  workflow_dispatch:
+
+# Shared with update_data.yml so the poller and the refresh serialize on a
+# server-side lock instead of racing the check-then-dispatch below.
+concurrency:
+  group: translation-data-refresh-dev
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dev
+          # full history: the marker lookup below must see the last
+          # "chore: update translation data" commit however old it is
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Check for merged PRs since last data update
+        id: poll
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          # Watermark: the last successful update_data.yml run. A refresh
+          # that produces no data changes makes no commit, so the run time
+          # is what advances the watermark and stops the poller from
+          # re-dispatching the same merged PRs every 30 minutes.
+          LAST_UPDATE=$(gh run list --workflow update_data.yml --branch dev \
+            --status success --limit 1 --json updatedAt --jq '.[0].updatedAt // empty')
+          if [ -z "$LAST_UPDATE" ]; then
+            # Fallback (first run, or run history expired): the last data
+            # commit on dev. Needs the full fetch history above.
+            LAST_UPDATE=$(git log --format='%aI' --grep='chore: update translation data' -1)
+          fi
+          if [ -z "$LAST_UPDATE" ]; then
+            echo "No previous data update found, triggering refresh"
+            echo "should_update=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "Last data update: $LAST_UPDATE"
+
+          # Search for merged locale-fix PRs since that timestamp.
+          # Let real gh/API failures (auth, rate-limit) fail the job instead
+          # of being silently treated as "no matches", which would leave
+          # generated data stale without any signal.
+          COUNT=$(gh search prs \
+            "fix: rename bare lang code" \
+            org:OpenVoiceOS \
+            --merged-at ">=$LAST_UPDATE" \
+            --json url --jq 'length')
+
+          # Also check for merged translation submissions
+          TX_COUNT=$(gh search prs \
+            "OVOS Localize" \
+            org:OpenVoiceOS \
+            --merged-at ">=$LAST_UPDATE" \
+            --json url --jq 'length')
+
+          TOTAL=$((COUNT + TX_COUNT))
+          echo "Merged locale PRs since last update: $TOTAL (fixes=$COUNT, translations=$TX_COUNT)"
+
+          if [ "$TOTAL" -gt 0 ]; then
+            echo "should_update=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_update=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Trigger data update
+        if: steps.poll.outputs.should_update == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          # Skip dispatch if update_data.yml already has a queued or
+          # in-progress run for dev, to avoid piling up duplicate refreshes.
+          PENDING=$(gh run list --workflow update_data.yml --branch dev \
+            --json status --jq '[.[] | select(.status == "queued" or .status == "in_progress")] | length')
+          if [ "$PENDING" -gt 0 ]; then
+            echo "update_data.yml already queued/running for dev ($PENDING run(s)), skipping dispatch"
+            exit 0
+          fi
+          gh workflow run update_data.yml --ref dev

@@ -101,7 +101,7 @@ data/
 GitHub Pages → index.html (SPA)
 ```
 
-The pipeline runs daily at 02:00 UTC, on manual dispatch, and whenever `skills.txt` changes. All output is committed back to the `dev` branch and served immediately via Pages.
+The pipeline runs daily at 02:00 UTC, on manual dispatch, and whenever `skills.txt`, `scripts/**`, or `ovos_localize/**` change on `dev`. Additionally, a lightweight polling workflow (`poll_merged_fixes.yml`) runs every 30 minutes and triggers a data refresh if any locale-fix or translation PRs were merged across the org since the last data commit — ensuring the UI reflects upstream fixes within 30 minutes instead of waiting for the next daily run. All output is committed back to the `dev` branch and served immediately via Pages.
 
 ### 3.3 Single-Page Application
 
@@ -196,14 +196,16 @@ Wettervorhersage für {location}
 
 The SPA generates this block automatically when the user clicks "Submit as PR". The user only sees the issue form; they never write the metadata block manually.
 
-### 6.2 Four Workflows
+### 6.2 Six Workflows
 
 | Workflow | Trigger | Action |
 |----------|---------|--------|
 | `update_data` | Daily 02:00 UTC; manual; `skills.txt` push | Run data pipeline, commit results to `dev` |
+| `poll_merged_fixes` | Every 30 min (cron) | Search for recently merged locale-fix/translation PRs; trigger `update_data` if any found since last data commit |
 | `submit_translation` | Issue opened with `translation` label or `[translate]` title | Create branch, commit translation, open PR on skill repo |
 | `enable_new_language` | Issue opened with `new-language` label | Open PR adding BCP-47 code to `config/enabled_languages.txt` |
 | `fix_lang_code` | Issue opened with `fix-lang-code` label | Rename locale directories from bare code to BCP-47 form, open PR |
+| `add_skill` | Issue opened with `add-skill` label | Add skill to `skills.txt`, open PR |
 
 ### 6.3 Auto-Fix for Mechanical Issues
 
@@ -212,6 +214,16 @@ The `fix_lang_code` workflow handles a class of problems that are safe to automa
 The workflow parses a `FIX_LANG_CODE_META` block from the issue body, checks out the target skill repo using a scoped GitHub App token, runs a Python snippet to rename the directories, and opens a PR. The skill maintainer reviews and merges — no manual file editing required.
 
 Issues with translation *content* (diversity, variable preservation, sentence count) are surfaced in the Issues view with a "Report" button that opens a pre-filled issue in the skill repository with per-file, per-line detail. These require human judgment and are handled by maintainers.
+
+### 6.4 Reactive Data Refresh via Polling
+
+A known limitation of the daily data pipeline is staleness: when a `fix_lang_code` PR is merged on a target repo, the Issues view continues to show the problem until the next pipeline run. Since the fix PRs live on external repos (not on ovos-localize itself), GitHub's built-in event triggers cannot detect the merge.
+
+The `poll_merged_fixes` workflow addresses this by running every 30 minutes. It compares the timestamp of the last `chore: update translation data` commit against GitHub's search API for recently merged PRs matching the bot's title patterns (`"fix: rename bare lang code"` and `"OVOS Localize"`). If any merges occurred since the last data commit, it triggers the full `update_data` pipeline via `workflow_dispatch`. This keeps the polling step lightweight (two API calls, no checkout beyond the git log) while ensuring the UI reflects upstream fixes within 30 minutes.
+
+### 6.5 Skill Submission
+
+The `add_skill` workflow allows community members to add new skill repositories to the tracked list via a GitHub Issue. The issue body contains an `ADD_SKILL_META` block with the repository URL. The workflow parses the URL, verifies the repository exists, appends it to `skills.txt`, and opens a PR. The UI pre-checks for duplicate submissions by querying open issues before allowing a new submission.
 
 ---
 
@@ -284,7 +296,7 @@ As of March 2026:
 | Validation rules | 15+ |
 | Issues surfaced | 263 |
 | ML dataset formats | 6 |
-| Data refresh cadence | Daily |
+| Data refresh cadence | Daily + reactive (≤30 min after merged fixes) |
 | Infrastructure cost | $0/month |
 
 Languages span European, Slavic, Middle Eastern, and Baltic families including both Portuguese variants (`pt-BR`, `pt-PT`), both Spanish variants (`es-ES`, `es-419`), both Swedish variants (`sv-SE`, `sv-FI`), and both Dutch variants (`nl-NL`, `nl-BE`).
