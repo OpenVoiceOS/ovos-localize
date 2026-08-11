@@ -1145,6 +1145,7 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "alarm.voc", "text": "maak mij wakker"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "alarm.voc", "text": "wekker"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "alarm.voc", "text": "zet een wekker"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "alarm.voc", "text": "wek me"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "alert.voc", "text": "waarschuwing"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "alert.voc", "text": "waarschuwingen"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "all_day.voc", "text": "de hele dag"}
@@ -2500,7 +2501,6 @@
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "current.voc", "text": "momentan"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "current.voc", "text": "momentane"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "louder.voc", "text": "hoger"}
-{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "louder.voc", "text": "hoog"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "louder.voc", "text": "luider"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "louder.voc", "text": "luidruchtiger"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "louder.voc", "text": "meer"}
@@ -2515,13 +2515,21 @@
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "quieter.voc", "text": "vermindere"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "quieter.voc", "text": "verminderen"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "volume.voc", "text": "volume"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "volume gemiddeld"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "volume op gemiddeld"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "zet het volume gemiddeld"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "zet het volume op gemiddeld"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "volume op standaard"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "volume standaard"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "zet het volume op standaard"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "zet het volume standaard"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "gemiddeld volume"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "standaardvolume"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "volume herstellen"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "volume resetten"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "volume instellen op standaard"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "volumeniveau instellen op standaard"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "volumeniveau standaard"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.high.intent", "text": "hoog volume"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.high.intent", "text": "volume hoog"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.high.intent", "text": "volume naar hoog"}
@@ -2534,7 +2542,14 @@
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.low.intent", "text": "volume laag"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.low.intent", "text": "volume naar laag"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.low.intent", "text": "volumeniveau naar laag"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.max.intent", "text": "het volume maximaal"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.max.intent", "text": "het volume op maximaal"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.max.intent", "text": "volume maximaal"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.max.intent", "text": "volume op maximaal"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.max.intent", "text": "zet het volume maximaal"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.max.intent", "text": "zet het volume op maximaal"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.max.intent", "text": "zet volume maximaal"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.max.intent", "text": "zet volume op maximaal"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.max.intent", "text": "hoogste volume"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.max.intent", "text": "maximaal volume"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.mute.intent", "text": "dempen"}
