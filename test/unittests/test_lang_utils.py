@@ -53,6 +53,13 @@ class TestNormalizeLangCode:
         assert normalize_lang_code("CA") == "ca-ES"
         assert normalize_lang_code("EU-eu") == "eu-ES"
 
+    def test_kabyle_stays_bare(self) -> None:
+        """Kabyle (kab) has no commonly-used region subtag — normalization
+        MUST NOT invent one (e.g. kab-DZ); it stays the bare macrolanguage
+        code, same as it would appear in a locale directory name."""
+        assert normalize_lang_code("kab") == "kab"
+        assert normalize_lang_code("KAB") == "kab"
+
 
 class TestMergeEquivalentLangs:
     """Tests for merge_equivalent_langs()."""
@@ -145,3 +152,15 @@ class TestCanonicalCodeWins:
         merged = merge_equivalent_langs(["mwl", "mwl-PT"], canonical_codes=["mwl"])
         assert merged["mwl"] == "mwl"
         assert merged["mwl-PT"] == "mwl-PT"
+    def test_kabyle_display_name(self) -> None:
+        """langcodes resolves kab without an explicit override — verify the
+        installed langcodes/language_data actually has Kabyle coverage
+        rather than trusting it blindly."""
+        name = lang_display_name("kab")
+        assert name != "kab"
+        assert "Kabyle" in name
+
+    def test_kabyle_native_name(self) -> None:
+        name = lang_display_name_native("kab")
+        assert name != "kab"
+        assert "Taqbaylit" in name
