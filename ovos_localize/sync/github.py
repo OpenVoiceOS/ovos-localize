@@ -68,9 +68,12 @@ class ScanResult:
         skill_analysis: AST analysis of skill source.
         locale_files: All discovered locale files.
         languages: Set of discovered language codes.
-        bad_lang_codes: Raw locale directory names that lack a region subtag
-            (e.g. ``"en"`` instead of ``"en-US"``).  These are normalised
-            automatically but should be fixed in the upstream skill repo.
+        bad_lang_codes: Raw locale directory names that normalisation would
+            rename (e.g. ``"en"`` becomes ``"en-US"``).  Codes that already
+            normalise to themselves are correct and are not listed: some
+            languages are legitimately region-less, such as Kabyle.  The
+            listed ones are handled automatically but should be fixed in the
+            upstream skill repo.
         branch: The branch actually checked out.  Repos differ -- OVOS uses
             ``dev``, others use ``main`` or ``master`` -- and translation
             submissions must target the branch that exists.
@@ -159,9 +162,9 @@ def scan_locale_directory(
 
     Returns:
         Tuple of (list of ScannedFile objects, list of bad raw lang codes).
-        A "bad" lang code is one that has no region subtag (e.g. ``"en"``
-        instead of ``"en-US"``).  These are normalised automatically but
-        should be fixed in the upstream skill repo.
+        A "bad" lang code is one that normalisation would rename (e.g.
+        ``"en"`` becomes ``"en-US"``).  A region-less code that normalises to
+        itself, such as Kabyle, is correct and is not reported.
     """
     locale_path = Path(locale_dir)
     if not locale_path.is_dir():

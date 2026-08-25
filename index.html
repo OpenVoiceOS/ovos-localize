@@ -134,6 +134,10 @@
     // risks anchoring the translator to a bad first draft instead of
     // translating directly from the English source.
     const HUMAN_FIRST_LANGS = new Set(['kab']); // Kabyle — issue #208
+    // Match the primary subtag: the same language reaches us as 'kab' from one
+    // repo and 'kab-DZ' from another, depending on how each locale directory
+    // was named.
+    const isHumanFirst = (lang) => HUMAN_FIRST_LANGS.has(String(lang || '').split('-')[0].toLowerCase());
 
     /**
      * Submit a translation by opening a pre-filled GitHub Issue.
@@ -2320,7 +2324,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
           : (FILE_TYPE_HELP[fileData.type] || 'Translate this file to your language.');
       const isJsonFile = !isCreateMode && (fileData.type === 'skill.json' || fileData.type === 'settingsmeta' || fileData.type === 'resource_json');
       const hasExpansion = isCreateMode ? false : ['intent', 'voc', 'dialog'].includes(fileData.type);
-      const isHumanFirstLang = HUMAN_FIRST_LANGS.has(lang);
+      const isHumanFirstLang = isHumanFirst(lang);
 
       // Source language
       const availableSrcLangs = isCreateMode ? [] : Object.keys(fileData.langs).filter(l => l !== lang);

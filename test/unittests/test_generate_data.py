@@ -243,8 +243,11 @@ class TestEnabledLanguagesReachProduction:
         assert cov["merge_map"]["da"] == "da-DK"
 
 
-class TestNoOpLangCodeIssues:
-    """A rename that renames nothing is not a defect report."""
+class TestBareLangCodeIssues:
+    """Codes the scanner reports as bad become actionable rename requests.
+
+    Whether a region-less code counts as bad is decided by the scanner, in
+    ``scan_locale_directory``; see ``test_scanner.py``."""
 
     @staticmethod
     def _skill(bad):
@@ -253,11 +256,6 @@ class TestNoOpLangCodeIssues:
             "languages": ["en-US"], "bad_lang_codes": list(bad),
             "locale_dir": "locale", "files": {},
         }
-
-    def test_region_less_language_is_not_reported(self) -> None:
-        """kab normalizes to kab, so there is nothing to fix."""
-        issues = build_issues_json([self._skill(["kab"])])["issues"]
-        assert not [i for i in issues if i["type"] == "bad_lang_code"]
 
     def test_genuinely_bare_code_is_still_reported(self) -> None:
         """de -> de-DE is a real fix and must survive."""

@@ -493,11 +493,6 @@ def build_issues_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
         locale_dir = skill.get("locale_dir", "locale")
         for code in skill.get("bad_lang_codes", []):
             normalized = normalize_lang_code(code)
-            if normalized == code:
-                # Some languages are legitimately region-less: Kabyle is "kab",
-                # never "kab-DZ". Reporting them produced a "rename locale/kab
-                # to locale/kab" fix button that committed nothing.
-                continue
             issues.append({
                 "type": "bad_lang_code",
                 "severity": "warning",

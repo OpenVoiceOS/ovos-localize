@@ -226,3 +226,23 @@ class TestResolvedBranch:
         repo = self._git_repo(tmp_path / "d", "main")
         os.system(f"git -C {repo} checkout -q --detach")
         assert RepoScanner._current_branch(repo) == ""
+
+
+class TestHumanFirstLanguageGate:
+    """The SPA hides machine-translation suggestions for human-first languages.
+
+    The gate is JavaScript, so this asserts the contract it relies on: the
+    same language arrives as ``kab`` from one repo and ``kab-DZ`` from
+    another, depending on how each locale directory was named, so matching
+    the full tag would leave the suggestion button visible on most repos.
+    """
+
+    def test_gate_matches_on_primary_subtag(self) -> None:
+        html = (Path(__file__).resolve().parents[2] / "index.html").read_text()
+        assert "const isHumanFirst = (lang) =>" in html
+        assert "split('-')[0].toLowerCase()" in html
+
+    def test_gate_is_used_instead_of_exact_match(self) -> None:
+        html = (Path(__file__).resolve().parents[2] / "index.html").read_text()
+        assert "isHumanFirstLang = isHumanFirst(lang)" in html
+        assert "HUMAN_FIRST_LANGS.has(lang)" not in html
