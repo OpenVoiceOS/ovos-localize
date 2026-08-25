@@ -12,6 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent / "scripts"
 
 from generate_data import (
     build_coverage_json,
+    build_issues_json,
     build_repos_json,
     build_skill_json,
     build_validation_json,
@@ -212,3 +213,55 @@ class TestBuildValidationJson:
         assert result["by_rule"]["intent.missing_slots"] == 1
         assert result["by_skill"][0]["id"] == "skill-a"
         assert result["by_skill"][0]["errors"] == 1
+
+
+class TestEnabledLanguagesReachProduction:
+    """The wiring, not just the library function.
+
+    Every other test calls ``merge_equivalent_langs`` directly, so deleting
+    ``canonical_codes=enabled_langs`` from ``build_coverage_json`` left the
+    whole suite green while the bug returned in production.
+    """
+
+    @staticmethod
+    def _skill(langs):
+        return {
+            "id": "s", "repo": "o/s", "skill_class": "", "branch": "dev",
+            "languages": list(langs), "bad_lang_codes": [], "locale_dir": "locale",
+            "files": {},
+        }
+
+    def test_enabled_code_wins_through_build_coverage_json(self) -> None:
+        """kab is enabled, so a stray kab-DZ must merge into it, not vice versa."""
+        cov = build_coverage_json([self._skill(["kab", "kab-DZ", "en-US"])])
+        assert cov["merge_map"]["kab-DZ"] == "kab"
+        assert cov["merge_map"]["kab"] == "kab"
+        assert "kab-DZ" not in cov["languages"]
+
+    def test_unenabled_pair_still_prefers_the_specific_tag(self) -> None:
+        cov = build_coverage_json([self._skill(["da", "da-DK"])])
+        assert cov["merge_map"]["da"] == "da-DK"
+
+
+class TestNoOpLangCodeIssues:
+    """A rename that renames nothing is not a defect report."""
+
+    @staticmethod
+    def _skill(bad):
+        return {
+            "id": "s", "repo": "o/s", "skill_class": "", "branch": "dev",
+            "languages": ["en-US"], "bad_lang_codes": list(bad),
+            "locale_dir": "locale", "files": {},
+        }
+
+    def test_region_less_language_is_not_reported(self) -> None:
+        """kab normalizes to kab, so there is nothing to fix."""
+        issues = build_issues_json([self._skill(["kab"])])["issues"]
+        assert not [i for i in issues if i["type"] == "bad_lang_code"]
+
+    def test_genuinely_bare_code_is_still_reported(self) -> None:
+        """de -> de-DE is a real fix and must survive."""
+        issues = build_issues_json([self._skill(["de"])])["issues"]
+        bad = [i for i in issues if i["type"] == "bad_lang_code"]
+        assert len(bad) == 1
+        assert bad[0]["code"] == "de" and bad[0]["normalized"] == "de-DE"

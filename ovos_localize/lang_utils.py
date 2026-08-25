@@ -4,7 +4,7 @@ Normalizes inconsistent casing and merges equivalent tags using BCP-47
 tag distance. Provides display names for the SPA frontend.
 """
 
-from typing import Dict, List, Tuple
+from typing import Dict, Iterable, List, Optional, Tuple
 
 import langcodes
 
@@ -91,25 +91,41 @@ def normalize_lang_code(code: str) -> str:
         return code.lower()
 
 
-def merge_equivalent_langs(lang_list: List[str], max_distance: int = 0) -> Dict[str, str]:
+def merge_equivalent_langs(
+    lang_list: List[str],
+    max_distance: int = 0,
+    canonical_codes: Optional[Iterable[str]] = None,
+) -> Dict[str, str]:
     """Build a mapping that merges equivalent language codes.
 
     Codes within ``max_distance`` of each other (using ``langcodes.tag_distance``)
-    are merged to the more specific tag (the one with a region subtag).
+    are merged to a single representative.
 
     With ``max_distance=0`` (default), only truly equivalent codes merge:
     ``da`` and ``da-DK`` (distance 0) merge, but ``sv-FI`` and ``sv-SE``
     (distance 4) stay separate.
 
+    A code in ``canonical_codes`` always wins, because it was chosen
+    deliberately.  Otherwise the more specific tag wins.  Some languages have
+    no commonly-used region -- Kabyle is ``kab``, never ``kab-DZ`` -- so
+    without this a single stray region-tagged directory anywhere in the corpus
+    would promote an invented tag over the real one, and every subsequent
+    translation would be filed under it.
+
     Args:
         lang_list: List of normalized language codes.
         max_distance: Maximum tag distance to consider equivalent.
+        canonical_codes: Codes that were deliberately enabled and must win.
 
     Returns:
         Dict mapping each input code to its canonical representative.
     """
-    # Sort: codes with region subtags first (more specific = better canonical form)
-    sorted_codes = sorted(lang_list, key=lambda c: (0 if "-" in c else 1, c))
+    preferred = set(canonical_codes or ())
+    # Sort: deliberately enabled codes first, then more specific tags.
+    sorted_codes = sorted(
+        lang_list,
+        key=lambda c: (0 if c in preferred else 1, 0 if "-" in c else 1, c),
+    )
     canonical: Dict[str, str] = {}
 
     for code in sorted_codes:
