@@ -198,3 +198,38 @@ class MySkill(OVOSSkill):
 '''
         result = self.analyzer.analyze_source(source)
         assert result.dialog_calls[0].variables == ["name"]
+
+
+class TestModernAstNodes:
+    """``ast.Str`` was removed in Python 3.14; only ``ast.Constant`` remains.
+
+    ``ast.Constant`` also carries ints, bytes and ``None``, so the string
+    check must be on the value, not just the node type.
+    """
+
+    def test_padatious_decorator_parsed(self, tmp_path):
+        src = tmp_path / "__init__.py"
+        src.write_text(
+            "from ovos_workshop.decorators import intent_handler\n"
+            "from ovos_workshop.skills.ovos import OVOSSkill\n"
+            "class S(OVOSSkill):\n"
+            "    @intent_handler('hello.intent')\n"
+            "    def handle(self, message):\n"
+            "        pass\n"
+        )
+        analysis = SkillAnalyzer().analyze_file(str(src))
+        assert any(h.intent_file == "hello.intent" for h in analysis.intent_handlers)
+
+    def test_non_string_constant_is_not_an_intent_file(self, tmp_path):
+        """A numeric argument must not be read as a filename."""
+        src = tmp_path / "__init__.py"
+        src.write_text(
+            "from ovos_workshop.decorators import intent_handler\n"
+            "from ovos_workshop.skills.ovos import OVOSSkill\n"
+            "class S(OVOSSkill):\n"
+            "    @intent_handler(42)\n"
+            "    def handle(self, message):\n"
+            "        pass\n"
+        )
+        analysis = SkillAnalyzer().analyze_file(str(src))
+        assert not [h for h in analysis.intent_handlers if h.intent_file == "42"]

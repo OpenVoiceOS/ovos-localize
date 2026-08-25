@@ -297,8 +297,8 @@ class SkillAnalyzer:
         arg = decorator.args[0]
 
         # Case 1: @intent_handler("filename.intent") — Padatious
-        if isinstance(arg, (ast.Constant, ast.Str)):
-            intent_file = arg.value if isinstance(arg, ast.Constant) else arg.s
+        if isinstance(arg, ast.Constant) and isinstance(arg.value, str):
+            intent_file = arg.value
             voc_blacklist = self._extract_keyword_arg_list(decorator, "voc_blacklist")
             return IntentHandlerInfo(
                 method_name=method_name,
