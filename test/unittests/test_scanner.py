@@ -164,3 +164,51 @@ class MySkill(OVOSSkill):
         assert "en-US" in result.languages
         assert result.skill_analysis is not None
         assert "hello.intent" in result.skill_analysis.intent_file_to_handler
+
+
+class TestResolvedBranch:
+    """The branch a repo actually uses must survive into the scan result.
+
+    Skill repos do not agree on a branch name: OVOS uses ``dev``, many
+    community repos use ``main`` or ``master``.  Assuming ``dev`` makes
+    translation submissions target a ref that does not exist, and the
+    submission is lost with no feedback to the translator.
+    """
+
+    @staticmethod
+    def _git_repo(path: Path, branch: str) -> Path:
+        path.mkdir(parents=True, exist_ok=True)
+        os.system(f"git -C {path} init -q -b {branch}")
+        os.system(f"git -C {path} config user.email t@t.t")
+        os.system(f"git -C {path} config user.name t")
+        (path / "README.md").write_text("x\n")
+        os.system(f"git -C {path} add -A && git -C {path} commit -qm init")
+        return path
+
+    def test_current_branch_reports_main(self, tmp_path: Path) -> None:
+        """A repo checked out on ``main`` reports ``main``, not ``dev``."""
+        repo = self._git_repo(tmp_path / "r", "main")
+        assert RepoScanner._current_branch(repo) == "main"
+
+    def test_scan_result_defaults_to_empty_branch(self) -> None:
+        """``branch`` is unset until a sync resolves it."""
+        from ovos_localize.sync.github import ScanResult
+        assert ScanResult(repo_path="/tmp/x").branch == ""
+
+    def test_clone_or_pull_returns_resolved_branch(self, tmp_path: Path) -> None:
+        """An existing checkout reports the branch it is really on."""
+        scanner = RepoScanner(str(tmp_path / "repos"))
+        self._git_repo(tmp_path / "repos" / "org" / "repo", "master")
+        _, branch = scanner.clone_or_pull("org", "repo", "dev")
+        assert branch == "master"
+
+    def test_detached_head_reports_no_branch(self, tmp_path: Path) -> None:
+        """A detached HEAD has no branch name.
+
+        ``git rev-parse --abbrev-ref HEAD`` answers the literal ``"HEAD"``
+        there.  Passing that through would put ``branch: HEAD`` into a
+        translation submission and lose it exactly as a wrong branch does.
+        """
+        repo = self._git_repo(tmp_path / "d", "main")
+        os.system(f"git -C {repo} checkout -q --detach")
+        assert RepoScanner._current_branch(repo) == ""

@@ -71,6 +71,9 @@ class ScanResult:
         bad_lang_codes: Raw locale directory names that lack a region subtag
             (e.g. ``"en"`` instead of ``"en-US"``).  These are normalised
             automatically but should be fixed in the upstream skill repo.
+        branch: The branch actually checked out.  Repos differ -- OVOS uses
+            ``dev``, others use ``main`` or ``master`` -- and translation
+            submissions must target the branch that exists.
     """
 
     repo_path: str
@@ -80,6 +83,7 @@ class ScanResult:
     languages: List[str] = field(default_factory=list)
     bad_lang_codes: List[str] = field(default_factory=list)
     locale_dir: str = ""  # Path to locale dir relative to repo root (e.g. "locale" or "skill/locale")
+    branch: str = ""
 
 
 # Map file extensions to FileType enum
@@ -228,7 +232,7 @@ class RepoScanner:
         self.repos_dir.mkdir(parents=True, exist_ok=True)
         self._analyzer = SkillAnalyzer()
 
-    def clone_or_pull(self, org: str, repo: str, branch: str = "dev") -> Path:
+    def clone_or_pull(self, org: str, repo: str, branch: str = "dev") -> Tuple[Path, str]:
         """Clone or update a GitHub repository.
 
         Falls back to ``main`` then ``master`` if the requested branch does not
@@ -240,7 +244,7 @@ class RepoScanner:
             branch: Preferred branch to checkout.
 
         Returns:
-            Path to the local repository.
+            The local repository path and the branch that was checked out.
         """
         repo_dir = self.repos_dir / org / repo
         if repo_dir.exists() and (repo_dir / ".git").exists():
@@ -256,18 +260,19 @@ class RepoScanner:
                 ["git", "-C", str(repo_dir), "pull", "--ff-only"],
                 capture_output=True, check=False,
             )
+            return repo_dir, self._current_branch(repo_dir)
         else:
             repo_dir.parent.mkdir(parents=True, exist_ok=True)
             url = f"https://github.com/{org}/{repo}.git"
             fallback_branches = [branch] + [b for b in ("dev", "main", "master") if b != branch]
-            cloned = False
+            cloned = ""
             for attempt in fallback_branches:
                 result = subprocess.run(
                     ["git", "clone", "--branch", attempt, "--single-branch", url, str(repo_dir)],
                     capture_output=True, check=False,
                 )
                 if result.returncode == 0:
-                    cloned = True
+                    cloned = attempt
                     break
                 # Remove partial clone directory before retrying
                 if repo_dir.exists():
@@ -277,7 +282,24 @@ class RepoScanner:
                 raise RuntimeError(
                     f"Failed to clone {org}/{repo}: none of {fallback_branches} exist on remote."
                 )
-        return repo_dir
+            return repo_dir, self._current_branch(repo_dir) or cloned
+
+    @staticmethod
+    def _current_branch(repo_dir: Path) -> str:
+        """Return the branch currently checked out in ``repo_dir``.
+
+        Returns an empty string when there is no branch.  A detached HEAD
+        reports the literal ``"HEAD"``, which is not a ref anything can be
+        submitted against -- callers must fall back rather than pass it on.
+        """
+        result = subprocess.run(
+            ["git", "-C", str(repo_dir), "rev-parse", "--abbrev-ref", "HEAD"],
+            capture_output=True, check=False, text=True,
+        )
+        if result.returncode != 0:
+            return ""
+        branch = result.stdout.strip()
+        return "" if branch == "HEAD" else branch
 
     def scan(self, repo_path: str) -> ScanResult:
         """Scan a local repository for locale files and skill code.
@@ -332,8 +354,10 @@ class RepoScanner:
         Returns:
             ScanResult from the scan.
         """
-        repo_path = self.clone_or_pull(org, repo, branch)
-        return self.scan(str(repo_path))
+        repo_path, resolved = self.clone_or_pull(org, repo, branch)
+        result = self.scan(str(repo_path))
+        result.branch = resolved
+        return result
 
     @staticmethod
     def _find_locale_dir(repo_path: Path) -> Optional[Path]:
