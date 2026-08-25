@@ -104,6 +104,20 @@ class TestScanLocaleDirectory:
         # Both files should still be present and normalised to en-US
         assert all(f.lang == "en-US" for f in files)
 
+    def test_kabyle_bare_code_not_flagged_as_bad(self, tmp_path: Path) -> None:
+        """kab has no commonly-used region subtag and normalizes to itself
+        — it must not be reported in bad_lang_codes just for lacking a
+        hyphen, and the scan must not throw on a region-less 3-letter
+        locale directory name."""
+        locale = tmp_path / "locale"
+        (locale / "kab").mkdir(parents=True)
+        (locale / "kab" / "hello.intent").write_text("azul\n")
+
+        files, bad = scan_locale_directory(str(locale))
+        assert "kab" not in bad
+        assert len(files) == 1
+        assert files[0].lang == "kab"
+
 
 class TestRepoScanner:
     """Tests for RepoScanner."""
@@ -212,3 +226,23 @@ class TestResolvedBranch:
         repo = self._git_repo(tmp_path / "d", "main")
         os.system(f"git -C {repo} checkout -q --detach")
         assert RepoScanner._current_branch(repo) == ""
+
+
+class TestHumanFirstLanguageGate:
+    """The SPA hides machine-translation suggestions for human-first languages.
+
+    The gate is JavaScript, so this asserts the contract it relies on: the
+    same language arrives as ``kab`` from one repo and ``kab-DZ`` from
+    another, depending on how each locale directory was named, so matching
+    the full tag would leave the suggestion button visible on most repos.
+    """
+
+    def test_gate_matches_on_primary_subtag(self) -> None:
+        html = (Path(__file__).resolve().parents[2] / "index.html").read_text()
+        assert "const isHumanFirst = (lang) =>" in html
+        assert "split('-')[0].toLowerCase()" in html
+
+    def test_gate_is_used_instead_of_exact_match(self) -> None:
+        html = (Path(__file__).resolve().parents[2] / "index.html").read_text()
+        assert "isHumanFirstLang = isHumanFirst(lang)" in html
+        assert "HUMAN_FIRST_LANGS.has(lang)" not in html
