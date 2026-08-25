@@ -101,7 +101,9 @@ The token is stored in `localStorage` only — never sent anywhere except the Gi
 - The fork may not be ready yet — wait a few seconds and retry
 
 **"Edit on GitHub" links point to wrong branch:**
-- `generate_data.py` defaults to `dev` branch. The `RepoScanner.clone_or_pull()` also defaults to `dev`.
+- Links follow the branch the scan resolved for that repo, recorded as `branch`
+  in `data/repos.json`. Regenerate the data if a repo changed its default branch.
+- `dev` is used only as a last resort, when no branch was resolved.
 
 ## 3. Validate a Single Skill
 

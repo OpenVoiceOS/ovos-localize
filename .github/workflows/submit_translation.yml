@@ -47,11 +47,29 @@ jobs:
           owner: ${{ steps.parse.outputs.org }}
           repositories: ${{ steps.parse.outputs.repo }}
 
+      - name: Resolve base branch
+        id: base
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          ORG: ${{ steps.parse.outputs.org }}
+          REPO: ${{ steps.parse.outputs.repo }}
+          WANTED: ${{ steps.parse.outputs.branch }}
+        run: |
+          # The submitted branch is a hint. Repos differ (dev / main / master),
+          # so verify it exists and fall back to the repo's default branch.
+          if [ -n "$WANTED" ] && gh api "repos/$ORG/$REPO/branches/$WANTED" --silent 2>/dev/null; then
+            RESOLVED="$WANTED"
+          else
+            RESOLVED="$(gh api "repos/$ORG/$REPO" --jq .default_branch)"
+            echo "::warning::branch '$WANTED' not found on $ORG/$REPO; using default '$RESOLVED'"
+          fi
+          echo "branch=$RESOLVED" >> "$GITHUB_OUTPUT"
+
       - name: Checkout target repo
         uses: actions/checkout@v4
         with:
           repository: ${{ steps.parse.outputs.org }}/${{ steps.parse.outputs.repo }}
-          ref: ${{ steps.parse.outputs.branch }}
+          ref: ${{ steps.base.outputs.branch }}
           token: ${{ steps.app-token.outputs.token }}
 
       - name: Create branch and commit
@@ -81,7 +99,7 @@ jobs:
         run: |
           PR_URL=$(gh pr create \
             --repo "${{ steps.parse.outputs.org }}/${{ steps.parse.outputs.repo }}" \
-            --base "${{ steps.parse.outputs.branch }}" \
+            --base "${{ steps.base.outputs.branch }}" \
             --head "${{ steps.commit.outputs.branch_name }}" \
             --title "translate(${{ steps.parse.outputs.lang }}): update ${{ steps.parse.outputs.file_key }}" \
             --body "## Translation update
@@ -111,4 +129,20 @@ jobs:
               issue_number: context.issue.number,
               state: 'closed',
               state_reason: 'completed'
+            });
+
+      - name: Report failure on the issue
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const run = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `⚠️ **This translation could not be turned into a pull request.**\n\n` +
+                    `Your translation is safe -- it is stored in this issue and nothing is lost. ` +
+                    `A maintainer has been alerted and will re-run it.\n\n` +
+                    `Details: ${run}`
             });

@@ -265,3 +265,43 @@ class TestNoOpLangCodeIssues:
         bad = [i for i in issues if i["type"] == "bad_lang_code"]
         assert len(bad) == 1
         assert bad[0]["code"] == "de" and bad[0]["normalized"] == "de-DE"
+class TestBranchPropagation:
+    """The resolved branch must reach the SPA, which submits against it.
+
+    Before this, every generated edit URL and every submission targeted
+    ``dev``, so any skill repo on ``main`` or ``master`` silently lost the
+    translation.
+    """
+
+    @staticmethod
+    def _scan(tmp_path: Path):
+        locale = tmp_path / "locale" / "en-US"
+        locale.mkdir(parents=True)
+        (locale / "test.voc").write_text("test\n")
+        return RepoScanner(str(tmp_path / "repos")).scan(str(tmp_path))
+
+    def test_skill_json_carries_resolved_branch(self, tmp_path: Path) -> None:
+        scan = self._scan(tmp_path)
+        scan.branch = "main"
+        result = build_skill_json(scan, "TestOrg", "test-skill")
+        assert result["branch"] == "main"
+
+    def test_edit_urls_use_resolved_branch(self, tmp_path: Path) -> None:
+        scan = self._scan(tmp_path)
+        scan.branch = "master"
+        result = build_skill_json(scan, "TestOrg", "test-skill")
+        urls = [u for fd in result["files"].values() for u in fd["edit_urls"].values()]
+        assert urls, "expected at least one edit URL"
+        assert all("/edit/master/" in u for u in urls)
+
+    def test_explicit_branch_overrides_scan(self, tmp_path: Path) -> None:
+        scan = self._scan(tmp_path)
+        scan.branch = "main"
+        result = build_skill_json(scan, "TestOrg", "test-skill", branch="release")
+        assert result["branch"] == "release"
+
+    def test_repos_json_exposes_branch(self, tmp_path: Path) -> None:
+        scan = self._scan(tmp_path)
+        scan.branch = "main"
+        skill = build_skill_json(scan, "TestOrg", "test-skill")
+        assert build_repos_json([skill])[0]["branch"] == "main"

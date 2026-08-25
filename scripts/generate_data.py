@@ -190,7 +190,7 @@ def build_skill_json(
     scan: ScanResult,
     org: str,
     repo: str,
-    branch: str = "dev",
+    branch: str = "",
 ) -> Dict[str, Any]:
     """Build per-skill JSON from a scan result.
 
@@ -198,12 +198,14 @@ def build_skill_json(
         scan: Scan result from RepoScanner.
         org: GitHub organization.
         repo: Repository name.
-        branch: Git branch.
+        branch: Git branch override.  Defaults to the branch the scan
+            resolved, which is the only branch known to exist on the remote.
 
     Returns:
         Dict representing the full skill detail JSON.
     """
     skill_id = _make_skill_id(repo)
+    branch = branch or scan.branch or "dev"
 
     # Group files by base_name across languages
     files_by_base: Dict[str, Dict[str, ScannedFile]] = {}
@@ -286,6 +288,7 @@ def build_skill_json(
         "languages": scan.languages,
         "bad_lang_codes": scan.bad_lang_codes,
         "locale_dir": scan.locale_dir,
+        "branch": branch,
         "files": files_json,
     }
 
@@ -421,6 +424,7 @@ def build_repos_json(all_skills: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
             "repo": skill["repo"],
             "skill_class": skill["skill_class"],
             "languages": skill["languages"],
+            "branch": skill.get("branch", "dev"),
             "file_count": file_count,
         })
     return repos
@@ -502,6 +506,7 @@ def build_issues_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
                 "code": code,
                 "normalized": normalized,
                 "locale_dir": locale_dir,
+                "branch": skill.get("branch", "dev"),
                 "detail": f"{locale_dir}/{code}/ → {locale_dir}/{normalized}/",
             })
 

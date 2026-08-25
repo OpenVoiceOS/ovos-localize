@@ -133,7 +133,7 @@
      * A GitHub Action picks it up, creates a PR, and closes the issue.
      * The user only needs to be logged into GitHub — zero tokens required.
      */
-    function submitTranslation(org, repo, filePath, newContent, lang, fileKey, branch = 'dev') {
+    function submitTranslation(org, repo, filePath, newContent, lang, fileKey, branch) {
       const b64Content = btoa(unescape(encodeURIComponent(newContent)));
 
       const title = encodeURIComponent(`[translate] ${lang}: ${org}/${repo} — ${fileKey}`);
@@ -1683,7 +1683,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         // Group bad_lang_code issues by repo so one button fires one issue per repo
         const byRepo = {};
         for (const issue of filtered) {
-          if (!byRepo[issue.repo]) byRepo[issue.repo] = { repo: issue.repo, skill_id: issue.skill_id, renames: [] };
+          if (!byRepo[issue.repo]) byRepo[issue.repo] = { repo: issue.repo, skill_id: issue.skill_id, branch: issue.branch || 'dev', renames: [] };
           if (issue.code && issue.normalized) {
             const ldir = issue.locale_dir || 'locale';
             byRepo[issue.repo].renames.push({ from: `${ldir}/${issue.code}`, to: `${ldir}/${issue.normalized}` });
@@ -1693,7 +1693,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         function makeAutoFixUrl(entry) {
           const [org, repo] = entry.repo.split('/');
           const renameLines = entry.renames.map((r, i) => `rename_${i}: ${r.from} -> ${r.to}`).join('\n');
-          const meta = `<!-- FIX_LANG_CODE_META\norg: ${org}\nrepo: ${repo}\nbranch: dev\n${renameLines}\n-->`;
+          const meta = `<!-- FIX_LANG_CODE_META\norg: ${org}\nrepo: ${repo}\nbranch: ${entry.branch || 'dev'}\n${renameLines}\n-->`;
           const title = encodeURIComponent(`[fix-lang-code] ${entry.repo}`);
           const body = encodeURIComponent(`${meta}\n\nAutomated locale directory rename request from OVOS Localize.\n\nRenames:\n${entry.renames.map(r => `- \`${r.from}\` → \`${r.to}\``).join('\n')}`);
           return `https://github.com/${LOCALIZE_REPO}/issues/new?title=${title}&body=${body}&labels=fix-lang-code`;
@@ -2586,6 +2586,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
       editor.dataset.lang = lang;
       editor.dataset.fileKey = fileKey;
       editor.dataset.skillId = skillId;
+      editor.dataset.branch = skill.branch || 'dev';
       editor.dataset.srcLang = srcLang;
       editor.dataset.originalText = currentText;
 
@@ -3028,7 +3029,7 @@ optionally: [${(ctx.builder_chain.optionally||[]).join(', ')}]</pre>
       const newContent = editor.value;
       if (newContent === editor.dataset.originalText) { toast('No changes to submit', 'amber'); return; }
       if (!newContent.trim()) { toast('Translation is empty', 'red'); return; }
-      const { org, repo, filePath, lang, fileKey } = editor.dataset;
+      const { org, repo, filePath, lang, fileKey, branch } = editor.dataset;
       if (!filePath) { toast('Cannot determine file path — use "Edit on GitHub" instead', 'red'); return; }
       const lines = newContent.split('\n').filter(l => l.trim()).length;
       if (!confirm(`Submit ${lines} line(s) for "${fileKey}" (${lang})?\n\nA bot will open a pull request to ${org}/${repo} on your behalf.`)) return;
@@ -3037,7 +3038,7 @@ optionally: [${(ctx.builder_chain.optionally||[]).join(', ')}]</pre>
       btn.innerHTML = '<span class="spinner"></span> Submitting...';
       try {
         const content = newContent.endsWith('\n') ? newContent : newContent + '\n';
-        await submitTranslation(org, repo, filePath, content, lang, fileKey);
+        await submitTranslation(org, repo, filePath, content, lang, fileKey, branch);
         editor.dataset.originalText = editor.value;
         document.getElementById('editor-status').innerHTML = '<span class="badge badge-green">submitted!</span>';
       } catch (e) {
