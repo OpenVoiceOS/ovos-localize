@@ -101,3 +101,47 @@ class TestLangDisplayName:
         """Unknown code for native returns the code."""
         name = lang_display_name_native("zzz")
         assert isinstance(name, str)
+
+
+class TestCanonicalCodeWins:
+    """A deliberately enabled code must not lose to a stray region tag.
+
+    Kabyle is ``kab``; there is no commonly-used ``kab-DZ``.  One stray
+    ``kab-DZ`` locale directory in the scanned corpus was enough to make the
+    platform serve Kabyle as ``kab-DZ`` and file every translation under it.
+    """
+
+    def test_enabled_bare_code_beats_invented_region(self) -> None:
+        merged = merge_equivalent_langs(["kab", "kab-DZ"], canonical_codes=["kab"])
+        assert merged["kab"] == "kab"
+        assert merged["kab-DZ"] == "kab"
+
+    def test_without_enabled_list_specific_still_wins(self) -> None:
+        """Unchanged behaviour when nothing is declared canonical."""
+        merged = merge_equivalent_langs(["da", "da-DK"])
+        assert merged["da"] == "da-DK"
+
+    def test_enabled_regional_code_still_wins(self) -> None:
+        merged = merge_equivalent_langs(["da", "da-DK"], canonical_codes=["da-DK"])
+        assert merged["da"] == "da-DK"
+        assert merged["da-DK"] == "da-DK"
+
+    def test_distant_tags_never_merge(self) -> None:
+        """sv-FI and sv-SE are different languages to a translator."""
+        merged = merge_equivalent_langs(["sv-FI", "sv-SE"], canonical_codes=["sv-SE"])
+        assert merged["sv-FI"] == "sv-FI"
+        assert merged["sv-SE"] == "sv-SE"
+
+    def test_other_bare_enabled_codes_protected(self) -> None:
+        """an and ast are region-less in enabled_languages.txt too."""
+        codes = ["an", "an-ES", "ast", "ast-ES"]
+        merged = merge_equivalent_langs(codes, canonical_codes=["an", "ast"])
+        assert merged["an-ES"] == "an"
+        assert merged["ast-ES"] == "ast"
+
+    def test_mirandese_region_is_not_equivalent(self) -> None:
+        """``mwl`` and ``mwl-PT`` are distance 4, so they never merge -- the
+        enabled-code preference must not force unrelated tags together."""
+        merged = merge_equivalent_langs(["mwl", "mwl-PT"], canonical_codes=["mwl"])
+        assert merged["mwl"] == "mwl"
+        assert merged["mwl-PT"] == "mwl-PT"

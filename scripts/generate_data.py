@@ -325,7 +325,8 @@ def build_coverage_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
     Returns:
         Coverage matrix dict.
     """
-    all_langs: set = set(_load_enabled_languages())
+    enabled_langs = _load_enabled_languages()
+    all_langs: set = set(enabled_langs)
     skill_ids: List[str] = []
     matrix: Dict[str, Dict[str, Dict[str, float]]] = {}
 
@@ -364,8 +365,10 @@ def build_coverage_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
 
         matrix[sid] = lang_coverage
 
-    # Merge equivalent language codes (e.g. "ca" + "ca-ES" → "ca-ES")
-    merge_map = merge_equivalent_langs(list(all_langs))
+    # Merge equivalent language codes (e.g. "ca" + "ca-ES" → "ca-ES").
+    # Deliberately enabled codes win, so a stray region-tagged directory
+    # cannot rename a language out from under its translators.
+    merge_map = merge_equivalent_langs(list(all_langs), canonical_codes=enabled_langs)
     merged_langs = sorted(set(merge_map.values()))
 
     # Merge matrix entries
@@ -486,6 +489,11 @@ def build_issues_json(all_skills: List[Dict[str, Any]]) -> Dict[str, Any]:
         locale_dir = skill.get("locale_dir", "locale")
         for code in skill.get("bad_lang_codes", []):
             normalized = normalize_lang_code(code)
+            if normalized == code:
+                # Some languages are legitimately region-less: Kabyle is "kab",
+                # never "kab-DZ". Reporting them produced a "rename locale/kab
+                # to locale/kab" fix button that committed nothing.
+                continue
             issues.append({
                 "type": "bad_lang_code",
                 "severity": "warning",
