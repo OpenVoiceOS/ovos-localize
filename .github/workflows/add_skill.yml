@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Parse issue body
         id: parse
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const body = context.payload.issue.body || '';
@@ -139,7 +139,7 @@ jobs:
           echo "already_tracked=false" >> "$GITHUB_OUTPUT"
 
       - name: Close issue with result
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const noLocale = '${{ steps.validate.outputs.no_locale }}' === 'true';
