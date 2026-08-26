@@ -4,6 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OVOS Localize — Help translate OpenVoiceOS skills</title>
+  <meta name="description" content="Translate OpenVoiceOS voice-assistant skills into your language. A GitHub-native, human-first localization platform with source-code context for accurate translations.">
+  <link rel="canonical" href="https://openvoiceos.github.io/ovos-localize/">
+  <meta name="theme-color" content="#0a0a0a">
+  <!-- Open Graph / social unfurl (crawlers do not run the hash router, so the
+       landing page carries the shared card) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OVOS Localize">
+  <meta property="og:title" content="OVOS Localize — Help translate OpenVoiceOS skills">
+  <meta property="og:description" content="A GitHub-native, human-first platform for translating OpenVoiceOS voice-assistant skills into your language.">
+  <meta property="og:url" content="https://openvoiceos.github.io/ovos-localize/">
+  <meta property="og:image" content="https://openvoiceos.github.io/ovos-localize/logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="OVOS Localize — Help translate OpenVoiceOS skills">
+  <meta name="twitter:description" content="A GitHub-native, human-first platform for translating OpenVoiceOS voice-assistant skills into your language.">
+  <meta name="twitter:image" content="https://openvoiceos.github.io/ovos-localize/logo.png">
   <link rel="icon" type="image/png" href="logo.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -143,6 +158,25 @@
     // SUBMISSION (via GitHub Issues — zero auth required)
     // =========================================================================
     const LOCALIZE_REPO = 'OpenVoiceOS/ovos-localize';
+
+    // Per-route document title (tab UX + crawlers that execute JS).
+    const ROUTE_TITLES = {
+      '#/': 'OVOS Localize — Help translate OpenVoiceOS skills',
+      '': 'OVOS Localize — Help translate OpenVoiceOS skills',
+      '#/dashboard': 'Dashboard — OVOS Localize',
+      '#/stats': 'Translation Stats — OVOS Localize',
+      '#/entities': 'Entities — OVOS Localize',
+      '#/open-data': 'Open Data — OVOS Localize',
+      '#/how-it-works': 'How it works — OVOS Localize',
+      '#/issues': 'Issues — OVOS Localize',
+      '#/submit-skill': 'Submit a Skill — OVOS Localize',
+    };
+    function setRouteTitle(hash) {
+      if (ROUTE_TITLES[hash]) { document.title = ROUTE_TITLES[hash]; return; }
+      const m = hash.match(/^#\/skill\/([^/]+)/);
+      document.title = m ? `Translate ${decodeURIComponent(m[1])} — OVOS Localize`
+                         : 'OVOS Localize';
+    }
 
     // Human-first languages — the editor's per-string auto-translate
     // suggestion is intentionally hidden. These languages have little to no
@@ -789,6 +823,7 @@
     // =========================================================================
     async function route() {
       const hash = location.hash || '#/';
+      setRouteTitle(hash);
       const app = document.getElementById('app');
       app.innerHTML = '<div class="flex items-center gap-2 py-12 justify-center text-ovos-muted"><span class="spinner"></span> Loading...</div>';
 

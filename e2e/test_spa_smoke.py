@@ -51,3 +51,21 @@ def test_nav_has_all_primary_links(page, base_url):
     nav = page.locator("header nav")
     for label in ["Dashboard", "Stats", "Open Data", "How it works"]:
         assert nav.get_by_text(label, exact=True).count() >= 1
+
+
+def test_document_title_follows_the_route(page, base_url):
+    """Each view sets its own title.
+
+    A hash router leaves the tab title on whatever loaded first, so a
+    translator with several views open cannot tell them apart, and a crawler
+    that runs the script sees one title for the whole site.
+    """
+    page.goto(base_url + "/")
+    page.wait_for_function("document.title.length > 0")
+    landing = page.title()
+
+    page.locator("header nav").get_by_role("link", name="Stats").click()
+    page.wait_for_function("location.hash === '#/stats'")
+    page.wait_for_function("(prev) => document.title !== prev", arg=landing)
+    assert page.title() != landing
+    assert "OVOS Localize" in page.title()
