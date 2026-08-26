@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.0a13](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a13) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a12...0.1.0a13)
+
+**Merged pull requests:**
+
+- fix\(ci\): commit the browse data before generating corpora [\#435](https://github.com/OpenVoiceOS/ovos-localize/pull/435) ([JarbasAl](https://github.com/JarbasAl))
+- fix\(ci\): publish the browse data even when corpus generation fails [\#434](https://github.com/OpenVoiceOS/ovos-localize/pull/434) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.0a12](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a12) (2026-08-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a11...0.1.0a12)
@@ -10,15 +19,15 @@
 
 ## [0.1.0a11](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a11) (2026-08-26)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a9...0.1.0a11)
-
-## [0.1.0a9](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a9) (2026-08-26)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a10...0.1.0a9)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a10...0.1.0a11)
 
 ## [0.1.0a10](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a10) (2026-08-26)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a8...0.1.0a10)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a9...0.1.0a10)
+
+## [0.1.0a9](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a9) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a8...0.1.0a9)
 
 ## [0.1.0a8](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a8) (2026-08-26)
 
