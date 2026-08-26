@@ -52,7 +52,7 @@ jobs:
             core.setOutput('author', context.payload.issue.user.login);
 
       - name: Checkout ovos-localize
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: dev
           token: ${{ secrets.GITHUB_TOKEN }}
