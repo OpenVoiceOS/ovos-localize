@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.1.0a12](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a12) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a11...0.1.0a12)
+
+**Merged pull requests:**
+
+- feat\(sync\): session/batch submission payload contract \(B3.1\) [\#221](https://github.com/OpenVoiceOS/ovos-localize/pull/221) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.1.0a11](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a11) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a9...0.1.0a11)
+
+## [0.1.0a9](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a9) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a10...0.1.0a9)
+
+## [0.1.0a10](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a10) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a8...0.1.0a10)
+
 ## [0.1.0a8](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a8) (2026-08-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a7...0.1.0a8)
