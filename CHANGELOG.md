@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.0a3](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a3) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a2...0.1.0a3)
+
+**Merged pull requests:**
+
+- test\(e2e\): Playwright SPA smoke-test harness \(B3.0\) [\#220](https://github.com/OpenVoiceOS/ovos-localize/pull/220) ([JarbasAl](https://github.com/JarbasAl))
+- chore\(lint\): ruff config + mechanical autofixes [\#217](https://github.com/OpenVoiceOS/ovos-localize/pull/217) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.0a2](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a2) (2026-08-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/f4ba9383492c11f5cdf593d1f787dec826ba4bf5...0.1.0a2)
