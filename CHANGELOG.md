@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.0a4](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a4) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a3...0.1.0a4)
+
+**Merged pull requests:**
+
+- chore\(ci\): run the unit tests on every change [\#210](https://github.com/OpenVoiceOS/ovos-localize/pull/210) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.0a3](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a3) (2026-08-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a2...0.1.0a3)
