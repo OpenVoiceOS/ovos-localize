@@ -36,16 +36,24 @@ jobs:
         env:
           GIT_TERMINAL_PROMPT: 0
 
-      # The training corpora are a side product. What translators see is the
-      # browse data generated above, so a failure here must not stop that
-      # from being published -- it did, and merged translations sat
-      # unpublished while every refresh failed at this step.
+      # Publish what the site serves before anything else runs. Marking the
+      # corpus step continue-on-error is not enough: it ends as cancelled
+      # rather than failed, which skips everything after it regardless.
+      - name: Publish browse data
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "chore: update translation data"
+          file_pattern: "data/**"
+
+      # The training corpora are a side product and are allowed to fail.
       - name: Generate ML datasets
         run: python scripts/generate_datasets.py
         continue-on-error: true
         timeout-minutes: 15
 
-      - uses: stefanzweifel/git-auto-commit-action@v7
+      - name: Publish training corpora
+        if: always()
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
-          commit_message: "chore: update translation data"
-          file_pattern: "data/**"
+          commit_message: "chore: update training corpora"
+          file_pattern: "data/datasets/**"
