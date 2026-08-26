@@ -2389,6 +2389,8 @@
 {"lang": "it-IT", "skill": "ovos-skill-color-picker", "dialog": "report-color-by-name.dialog", "text": "i valori r g b per {color_name} sono, rosso {red_value}, verde {green_value}, blu {blue_value}"}
 {"lang": "it-IT", "skill": "ovos-skill-color-picker", "dialog": "report-color-by-rgb-name-known.dialog", "text": "il colore {color_name} corrisponde a {hex_code}"}
 {"lang": "it-IT", "skill": "ovos-skill-color-picker", "dialog": "report-color-by-rgb-name-not-known.dialog", "text": "il colore corrisponde a {hex_code}"}
+{"lang": "it-IT", "skill": "ovos-skill-count", "dialog": "count_to_N.error.dialog", "text": "non ho capito fino a che numero volevi che contassi"}
+{"lang": "it-IT", "skill": "ovos-skill-count", "dialog": "count_to_N.error.dialog", "text": "non ho capito quale numero hai indicato come limite"}
 {"lang": "it-IT", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "oggi è il {date}"}
 {"lang": "it-IT", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "{date}"}
 {"lang": "it-IT", "skill": "ovos-skill-date-time", "dialog": "date.not.found.dialog", "text": "non ho potuto trovare la data esatta"}
@@ -2460,15 +2462,54 @@
 {"lang": "it-IT", "skill": "ovos-skill-dictation", "dialog": "start.dialog", "text": "modo dettato attivato"}
 {"lang": "it-IT", "skill": "ovos-skill-dictation", "dialog": "start.dialog", "text": "ok, ho attivato il modo dettato"}
 {"lang": "it-IT", "skill": "ovos-skill-dictation", "dialog": "stop.dialog", "text": "modo dettato interrotto"}
-{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "forse puoi ridirlo in un modo diverso."}
-{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "mi spiace ma non capisco."}
-{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "mi spiace, ma non ho capito."}
-{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non capisco, ma imparo nuove cose tutti i giorni."}
-{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non capisco."}
-{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non credo di aver capito."}
-{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non ho capito."}
-{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non so cosa significa quello che hai detto."}
-{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "per piacere, usa un'altra frase per fare la tua richiesta."}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non ho idea di che cosa significhi"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non ho idea di che cosa vuol dire"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non ho idea di cosa significhi"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non ho idea di cosa vuol dire"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non so che cosa significhi"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non so che cosa vuol dire"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non so cosa significhi"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non so cosa vuol dire"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non capisco, e imparo cose ogni giorno"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non capisco, e imparo nuove cose ogni giorno"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non capisco, e sto imparando cose ogni giorno"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non capisco, e sto imparando nuove cose ogni giorno"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non capisco, ma imparo cose ogni giorno"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non capisco, ma imparo nuove cose ogni giorno"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non capisco, ma sto imparando cose ogni giorno"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non capisco, ma sto imparando nuove cose ogni giorno"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non ho capito, e imparo cose ogni giorno"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non ho capito, e imparo nuove cose ogni giorno"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non ho capito, e sto imparando cose ogni giorno"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non ho capito, e sto imparando nuove cose ogni giorno"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non ho capito, ma imparo cose ogni giorno"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non ho capito, ma imparo nuove cose ogni giorno"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non ho capito, ma sto imparando cose ogni giorno"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non ho capito, ma sto imparando nuove cose ogni giorno"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non sono sicuro di aver capito"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "non sono sicuro di capire"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "mi dispiace, non capisco"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "mi dispiace, non ho capito"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "scusa, non capisco"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "scusa, non ho capito"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "per favore riformula la tua domanda"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "per favore riformula la tua richiesta"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "per favore ripeti la tua domanda"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "per favore ripeti la tua richiesta"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "ti prego riformula la tua domanda"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "ti prego riformula la tua richiesta"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "ti prego ripeti la tua domanda"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "ti prego ripeti la tua richiesta"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "mi dispiace, non ho capito quello che hai detto"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "mi dispiace, non ho sentito quello che hai detto"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "scusa, non ho capito quello che hai detto"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "scusa, non ho sentito quello che hai detto"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "dovresti ripetere in modo alternativo"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "dovresti ripetere in modo diverso"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "potresti ripetere in modo alternativo"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "potresti ripetere in modo diverso"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "puoi ripetere in modo alternativo"}
+{"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "puoi ripetere in modo diverso"}
 {"lang": "it-IT", "skill": "ovos-skill-ggwave", "dialog": "ggwave_already_disabled.dialog", "text": "codici qr audio già disattivati"}
 {"lang": "it-IT", "skill": "ovos-skill-ggwave", "dialog": "ggwave_already_enabled.dialog", "text": "codici qr audio già attivati"}
 {"lang": "it-IT", "skill": "ovos-skill-ggwave", "dialog": "ggwave_disabled.dialog", "text": "disabilito i codici qr audio"}
