@@ -5,13 +5,13 @@ tags) per language.  Useful as a zero-shot classification baseline, skill
 discovery corpus, or multilingual short-text benchmark.
 """
 
-from typing import Any, Dict, Iterator
-
+from collections.abc import Iterator
+from typing import Any
 
 _TRANSLATABLE_KEYS = ("name", "description", "examples")
 
 
-def generate_skill_metadata(skill_id: str, skill_data: dict) -> Iterator[Dict[str, Any]]:
+def generate_skill_metadata(skill_id: str, skill_data: dict) -> Iterator[dict[str, Any]]:
     """Yield skill metadata records from ``skill.json`` locale files.
 
     Only emits records that have at least a ``name`` and ``description`` in
@@ -33,7 +33,7 @@ def generate_skill_metadata(skill_id: str, skill_data: dict) -> Iterator[Dict[st
 
         for lang, lang_data in file_info.get("langs", {}).items():
             # Build a flat key→value dict from entries
-            kv: Dict[str, str] = {}
+            kv: dict[str, str] = {}
             for entry in lang_data.get("entries", []):
                 key = entry.get("key", "")
                 text = entry.get("text", "").strip()

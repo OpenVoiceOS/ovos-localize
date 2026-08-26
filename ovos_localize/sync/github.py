@@ -11,7 +11,6 @@ import re
 import subprocess
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
 
 from ovos_localize.analyzers.ast_analyzer import SkillAnalysis, SkillAnalyzer
 from ovos_localize.enums import FileType, IntentSystem
@@ -55,7 +54,7 @@ class ScannedFile:
     lang: str
     base_name: str
     intent_system: IntentSystem = IntentSystem.NONE
-    parsed: Optional[ParsedFile] = None
+    parsed: ParsedFile | None = None
 
 
 @dataclass
@@ -81,16 +80,16 @@ class ScanResult:
 
     repo_path: str
     skill_class_name: str = ""
-    skill_analysis: Optional[SkillAnalysis] = None
-    locale_files: List[ScannedFile] = field(default_factory=list)
-    languages: List[str] = field(default_factory=list)
-    bad_lang_codes: List[str] = field(default_factory=list)
+    skill_analysis: SkillAnalysis | None = None
+    locale_files: list[ScannedFile] = field(default_factory=list)
+    languages: list[str] = field(default_factory=list)
+    bad_lang_codes: list[str] = field(default_factory=list)
     locale_dir: str = ""  # Path to locale dir relative to repo root (e.g. "locale" or "skill/locale")
     branch: str = ""
 
 
 # Map file extensions to FileType enum
-_EXT_TO_FILE_TYPE: Dict[str, FileType] = {
+_EXT_TO_FILE_TYPE: dict[str, FileType] = {
     ".intent": FileType.INTENT,
     ".voc": FileType.VOCAB,
     ".dialog": FileType.DIALOG,
@@ -99,7 +98,7 @@ _EXT_TO_FILE_TYPE: Dict[str, FileType] = {
     ".value": FileType.VALUE,
 }
 
-_EXACT_NAME_TO_FILE_TYPE: Dict[str, FileType] = {
+_EXACT_NAME_TO_FILE_TYPE: dict[str, FileType] = {
     "skill.json": FileType.SKILL_JSON,
     "settingsmeta.json": FileType.SETTINGS_META,
     "settingsmeta.yml": FileType.SETTINGS_META,
@@ -109,7 +108,7 @@ _EXACT_NAME_TO_FILE_TYPE: Dict[str, FileType] = {
 }
 
 
-def _detect_file_type(filename: str) -> Optional[FileType]:
+def _detect_file_type(filename: str) -> FileType | None:
     """Detect OVOS file type from filename.
 
     Args:
@@ -129,7 +128,7 @@ def _detect_file_type(filename: str) -> Optional[FileType]:
     return None
 
 
-def _extract_lang_from_path(file_path: Path, locale_root: Path) -> Optional[str]:
+def _extract_lang_from_path(file_path: Path, locale_root: Path) -> str | None:
     """Extract language code from a locale file path.
 
     Expected structure: locale/<lang-code>/...
@@ -153,7 +152,7 @@ def _extract_lang_from_path(file_path: Path, locale_root: Path) -> Optional[str]
 
 def scan_locale_directory(
     locale_dir: str, repo_root: str = ""
-) -> Tuple[List[ScannedFile], List[str]]:
+) -> tuple[list[ScannedFile], list[str]]:
     """Scan a locale directory for all OVOS locale files.
 
     Args:
@@ -171,8 +170,8 @@ def scan_locale_directory(
         return [], []
     root_path = Path(repo_root) if repo_root else locale_path.parent
 
-    files: List[ScannedFile] = []
-    bad_codes: List[str] = []
+    files: list[ScannedFile] = []
+    bad_codes: list[str] = []
     seen_bad: set = set()
 
     for file_path in sorted(locale_path.rglob("*")):
@@ -240,7 +239,7 @@ class RepoScanner:
         self.repos_dir.mkdir(parents=True, exist_ok=True)
         self._analyzer = SkillAnalyzer()
 
-    def clone_or_pull(self, org: str, repo: str, branch: str = "dev") -> Tuple[Path, str]:
+    def clone_or_pull(self, org: str, repo: str, branch: str = "dev") -> tuple[Path, str]:
         """Clone or update a GitHub repository.
 
         Falls back to ``main`` then ``master`` if the requested branch does not
@@ -368,7 +367,7 @@ class RepoScanner:
         return result
 
     @staticmethod
-    def _find_locale_dir(repo_path: Path) -> Optional[Path]:
+    def _find_locale_dir(repo_path: Path) -> Path | None:
         """Find the locale directory in a repository.
 
         Searches for ``locale/`` or ``res/`` directories containing language
@@ -390,7 +389,7 @@ class RepoScanner:
         return None
 
     @staticmethod
-    def _find_skill_source(repo_path: Path) -> Optional[Path]:
+    def _find_skill_source(repo_path: Path) -> Path | None:
         """Find the main skill Python source file.
 
         Looks for ``__init__.py`` in a package directory that imports from

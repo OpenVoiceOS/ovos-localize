@@ -1,8 +1,7 @@
 """Unit tests for the AST-based skill analyzer."""
 
-import pytest
 
-from ovos_localize.analyzers.ast_analyzer import SkillAnalyzer, SkillAnalysis
+from ovos_localize.analyzers.ast_analyzer import SkillAnalyzer
 
 
 class TestSkillAnalyzer:

@@ -4,7 +4,6 @@ Format: CSV with ``display_name,system_value`` per line.
 The right column (system_value) is immutable during translation.
 """
 
-from typing import List
 
 from ovos_localize.parsers.base import BaseParser, ParsedFile, ParsedLine
 
@@ -29,8 +28,8 @@ class ValueParser(BaseParser):
             ParsedFile with each mapping as a ParsedLine. Metadata contains
             ``display`` and ``system_value`` keys.
         """
-        lines: List[ParsedLine] = []
-        errors: List[str] = []
+        lines: list[ParsedLine] = []
+        errors: list[str] = []
 
         for i, raw_line in enumerate(content.splitlines(), start=1):
             stripped = raw_line.strip()

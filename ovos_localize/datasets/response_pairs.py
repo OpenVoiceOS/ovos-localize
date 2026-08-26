@@ -11,12 +11,13 @@ Records where a language has intent utterances but no matching dialog
 translation are skipped.
 """
 
-from typing import Any, Dict, Iterator, List, Set
+from collections.abc import Iterator
+from typing import Any
 
-from ovos_localize.bracket_expansion import expand_template, clean_text
+from ovos_localize.bracket_expansion import clean_text, expand_template
 
 
-def generate_response_pairs(skill_id: str, skill_data: dict) -> Iterator[Dict[str, Any]]:
+def generate_response_pairs(skill_id: str, skill_data: dict) -> Iterator[dict[str, Any]]:
     """Yield (utterance, responses) pairs extracted via AST handler analysis.
 
     For every intent file whose ``context.triggers_dialog`` is non-empty,
@@ -40,15 +41,15 @@ def generate_response_pairs(skill_id: str, skill_data: dict) -> Iterator[Dict[st
     files = skill_data.get("files", {})
 
     # Index dialog files: filename stem → {lang: [expanded texts]}
-    dialog_index: Dict[str, Dict[str, List[str]]] = {}
+    dialog_index: dict[str, dict[str, list[str]]] = {}
     for filename, file_info in files.items():
         if file_info.get("type") != "dialog":
             continue
         stem = filename.replace(".dialog", "")
         dialog_index[stem] = {}
         for lang, lang_data in file_info.get("langs", {}).items():
-            texts: List[str] = []
-            seen_d: Set[str] = set()
+            texts: list[str] = []
+            seen_d: set[str] = set()
             for entry in lang_data.get("entries", []):
                 template = entry.get("text", "").strip()
                 if not template or template.startswith("#"):
@@ -66,7 +67,7 @@ def generate_response_pairs(skill_id: str, skill_data: dict) -> Iterator[Dict[st
             continue
 
         ctx = file_info.get("context") or {}
-        triggered: List[str] = ctx.get("triggers_dialog") or []
+        triggered: list[str] = ctx.get("triggers_dialog") or []
         handler: str = ctx.get("handler_method") or ""
 
         if not triggered:
@@ -75,13 +76,13 @@ def generate_response_pairs(skill_id: str, skill_data: dict) -> Iterator[Dict[st
         intent_langs = file_info.get("langs", {})
         for lang, lang_data in intent_langs.items():
             # Collect all dialog response texts for this lang
-            responses: List[str] = []
+            responses: list[str] = []
             for dialog_stem in triggered:
                 responses.extend(dialog_index.get(dialog_stem, {}).get(lang, []))
             if not responses:
                 continue
 
-            seen_u: Set[str] = set()
+            seen_u: set[str] = set()
             for entry in lang_data.get("entries", []):
                 template = entry.get("text", "").strip()
                 if not template or template.startswith("#"):

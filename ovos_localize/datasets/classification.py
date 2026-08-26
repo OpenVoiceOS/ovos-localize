@@ -1,10 +1,12 @@
 """Dataset generator for NLU intent classification."""
 
-from typing import Any, Dict, Iterator, Set
-from ovos_localize.bracket_expansion import expand_template, clean_text
+from collections.abc import Iterator
+from typing import Any
+
+from ovos_localize.bracket_expansion import clean_text, expand_template
 
 
-def generate_intent_classification(skill_id: str, skill_data: dict) -> Iterator[Dict[str, Any]]:
+def generate_intent_classification(skill_id: str, skill_data: dict) -> Iterator[dict[str, Any]]:
     """Yield intent classification samples from a skill's parsed data.
 
     Expands templates, lowercases, and deduplicates phrases.
@@ -24,7 +26,7 @@ def generate_intent_classification(skill_id: str, skill_data: dict) -> Iterator[
 
         langs = file_info.get("langs", {})
         for lang, lang_data in langs.items():
-            seen: Set[str] = set()
+            seen: set[str] = set()
             entries = lang_data.get("entries", [])
             for entry in entries:
                 template = entry.get("text", "").strip()

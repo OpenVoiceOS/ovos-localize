@@ -5,7 +5,7 @@ how it's used in skill code, and translation tips per file type.
 """
 
 from dataclasses import dataclass, field
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 from ovos_localize.analyzers.ast_analyzer import SkillAnalysis
 from ovos_localize.enums import FileType
@@ -34,22 +34,22 @@ class ContextCard:
 
     file_name: str
     file_type_label: str
-    intent_system: Optional[str] = None
-    handler_method: Optional[str] = None
-    handler_file: Optional[str] = None
-    handler_line: Optional[int] = None
-    triggers_dialog: List[str] = field(default_factory=list)
-    slots: List[str] = field(default_factory=list)
-    slot_descriptions: Dict[str, str] = field(default_factory=dict)
-    related_files: List[str] = field(default_factory=list)
-    builder_chain: Optional[Dict[str, Any]] = None
-    tips: List[str] = field(default_factory=list)
-    used_by_intents: List[str] = field(default_factory=list)
-    handler_source: Optional[str] = None
+    intent_system: str | None = None
+    handler_method: str | None = None
+    handler_file: str | None = None
+    handler_line: int | None = None
+    triggers_dialog: list[str] = field(default_factory=list)
+    slots: list[str] = field(default_factory=list)
+    slot_descriptions: dict[str, str] = field(default_factory=dict)
+    related_files: list[str] = field(default_factory=list)
+    builder_chain: dict[str, Any] | None = None
+    tips: list[str] = field(default_factory=list)
+    used_by_intents: list[str] = field(default_factory=list)
+    handler_source: str | None = None
 
 
 # Per-file-type translation tips
-_TIPS: Dict[FileType, List[str]] = {
+_TIPS: dict[FileType, list[str]] = {
     FileType.INTENT: [
         "Provide 10+ natural phrasings with varied sentence structure.",
         "Keep all {slot} placeholders exactly as in the source.",
@@ -84,8 +84,8 @@ _TIPS: Dict[FileType, List[str]] = {
 
 def build_context_card(
     scanned: ScannedFile,
-    analysis: Optional[SkillAnalysis] = None,
-    all_files: Optional[List[ScannedFile]] = None,
+    analysis: SkillAnalysis | None = None,
+    all_files: list[ScannedFile] | None = None,
 ) -> ContextCard:
     """Build a context card for a scanned locale file.
 
@@ -199,9 +199,9 @@ def _file_type_label(ft: FileType) -> str:
 
 def _find_related_files(
     scanned: ScannedFile,
-    all_files: List[ScannedFile],
-    analysis: Optional[SkillAnalysis],
-) -> List[str]:
+    all_files: list[ScannedFile],
+    analysis: SkillAnalysis | None,
+) -> list[str]:
     """Find locale files related to this one.
 
     Args:
@@ -212,7 +212,7 @@ def _find_related_files(
     Returns:
         List of related file paths.
     """
-    related: List[str] = []
+    related: list[str] = []
 
     if not analysis:
         return related

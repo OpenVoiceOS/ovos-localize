@@ -7,12 +7,9 @@ import argparse
 import json
 import sys
 from pathlib import Path
-from typing import List
 
-from ovos_localize.parsers import get_parser
-from ovos_localize.parsers.base import ParsedFile
 from ovos_localize.sync.github import scan_locale_directory
-from ovos_localize.validators.rules import ValidationIssue, validate_file
+from ovos_localize.validators.rules import validate_file
 
 
 def validate_repo(repo_path: str, report_format: str = "text") -> int:
@@ -49,7 +46,7 @@ def validate_repo(repo_path: str, report_format: str = "text") -> int:
 
     total_errors = 0
     total_warnings = 0
-    all_issues: List[dict] = []
+    all_issues: list[dict] = []
 
     for sf in scanned_files:
         if not sf.parsed:
@@ -83,7 +80,7 @@ def validate_repo(repo_path: str, report_format: str = "text") -> int:
     return 1 if total_errors > 0 else 0
 
 
-def _print_text_format(issues: List[dict], errors: int, warnings: int) -> None:
+def _print_text_format(issues: list[dict], errors: int, warnings: int) -> None:
     """Print validation results as human-readable text.
 
     Args:
@@ -103,7 +100,7 @@ def _print_text_format(issues: List[dict], errors: int, warnings: int) -> None:
     print(f"\nTotal: {errors} error(s), {warnings} warning(s)")
 
 
-def _print_github_format(issues: List[dict]) -> None:
+def _print_github_format(issues: list[dict]) -> None:
     """Print validation results as GitHub Actions annotations.
 
     Args:

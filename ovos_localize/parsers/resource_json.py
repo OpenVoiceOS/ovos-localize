@@ -5,7 +5,6 @@ lists of strings (e.g., color names, yes/no synonyms).
 """
 
 import json
-from typing import List
 
 from ovos_localize.parsers.base import BaseParser, ParsedFile, ParsedLine
 
@@ -30,8 +29,8 @@ class ResourceJsonParser(BaseParser):
         Returns:
             ParsedFile with each value as a ParsedLine.
         """
-        lines: List[ParsedLine] = []
-        errors: List[str] = []
+        lines: list[ParsedLine] = []
+        errors: list[str] = []
 
         try:
             data = json.loads(content)

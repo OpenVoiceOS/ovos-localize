@@ -2,13 +2,13 @@
 
 from ovos_localize.validators.rules import (
     ValidationIssue,
-    validate_intent,
-    validate_vocab,
     validate_dialog,
     validate_entity,
+    validate_file,
+    validate_intent,
     validate_regex,
     validate_value,
-    validate_file,
+    validate_vocab,
 )
 
 __all__ = [

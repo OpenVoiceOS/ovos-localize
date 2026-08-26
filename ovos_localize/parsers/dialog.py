@@ -3,7 +3,6 @@
 Format: one response variant per line, with {variable} placeholders.
 """
 
-from typing import List
 
 from ovos_localize.parsers.base import BaseParser, ParsedFile, ParsedLine
 
@@ -27,7 +26,7 @@ class DialogParser(BaseParser):
         Returns:
             ParsedFile with each variant as a ParsedLine.
         """
-        lines: List[ParsedLine] = []
+        lines: list[ParsedLine] = []
         all_slots: set = set()
 
         for i, raw_line in enumerate(content.splitlines(), start=1):

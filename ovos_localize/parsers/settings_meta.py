@@ -1,7 +1,6 @@
 """Parser for settingsmeta.json / settingsmeta.yml files."""
 
 import json
-from typing import List
 
 from ovos_localize.parsers.base import BaseParser, ParsedFile, ParsedLine
 
@@ -28,8 +27,8 @@ class SettingsMetaParser(BaseParser):
         Returns:
             ParsedFile with translatable fields as ParsedLines.
         """
-        lines: List[ParsedLine] = []
-        errors: List[str] = []
+        lines: list[ParsedLine] = []
+        errors: list[str] = []
         data = None
 
         # Try JSON first, then YAML
@@ -56,7 +55,7 @@ class SettingsMetaParser(BaseParser):
         )
 
     def _extract_translatable(
-        self, obj: object, lines: List[ParsedLine],
+        self, obj: object, lines: list[ParsedLine],
         line_num: int, json_path: str
     ) -> int:
         """Recursively extract translatable fields from settingsmeta structure.

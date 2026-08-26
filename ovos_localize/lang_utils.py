@@ -4,7 +4,7 @@ Normalizes inconsistent casing and merges equivalent tags using BCP-47
 tag distance. Provides display names for the SPA frontend.
 """
 
-from typing import Dict, Iterable, List, Optional, Tuple
+from collections.abc import Iterable
 
 import langcodes
 
@@ -92,10 +92,10 @@ def normalize_lang_code(code: str) -> str:
 
 
 def merge_equivalent_langs(
-    lang_list: List[str],
+    lang_list: list[str],
     max_distance: int = 0,
-    canonical_codes: Optional[Iterable[str]] = None,
-) -> Dict[str, str]:
+    canonical_codes: Iterable[str] | None = None,
+) -> dict[str, str]:
     """Build a mapping that merges equivalent language codes.
 
     Codes within ``max_distance`` of each other (using ``langcodes.tag_distance``)
@@ -126,7 +126,7 @@ def merge_equivalent_langs(
         lang_list,
         key=lambda c: (0 if c in preferred else 1, 0 if "-" in c else 1, c),
     )
-    canonical: Dict[str, str] = {}
+    canonical: dict[str, str] = {}
 
     for code in sorted_codes:
         # Check if this code is equivalent to an already-seen canonical

@@ -1,10 +1,10 @@
 """Unit tests for language utilities."""
 
 from ovos_localize.lang_utils import (
-    normalize_lang_code,
-    merge_equivalent_langs,
     lang_display_name,
     lang_display_name_native,
+    merge_equivalent_langs,
+    normalize_lang_code,
 )
 
 

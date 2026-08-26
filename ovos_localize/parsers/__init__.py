@@ -1,15 +1,15 @@
 """OVOS locale file parsers — one per file type."""
 
 from ovos_localize.parsers.base import ParsedFile, ParsedLine
-from ovos_localize.parsers.intent import IntentParser
-from ovos_localize.parsers.vocab import VocabParser
 from ovos_localize.parsers.dialog import DialogParser
 from ovos_localize.parsers.entity import EntityParser
+from ovos_localize.parsers.intent import IntentParser
 from ovos_localize.parsers.regex import RegexParser
-from ovos_localize.parsers.value import ValueParser
-from ovos_localize.parsers.skill_json import SkillJsonParser
 from ovos_localize.parsers.resource_json import ResourceJsonParser
 from ovos_localize.parsers.settings_meta import SettingsMetaParser
+from ovos_localize.parsers.skill_json import SkillJsonParser
+from ovos_localize.parsers.value import ValueParser
+from ovos_localize.parsers.vocab import VocabParser
 
 PARSERS = {
     ".intent": IntentParser,

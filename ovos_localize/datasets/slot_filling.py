@@ -5,19 +5,18 @@ entity values from the corresponding .entity file.
 """
 
 import re
-from typing import Any, Dict, Iterator, List, Set
-
-from ovos_localize.bracket_expansion import expand_template, clean_text
+from collections.abc import Iterator
+from typing import Any
 
 _SLOT_RE = re.compile(r"\{(\w+)\}")
 
 
-def _slot_names(text: str) -> List[str]:
+def _slot_names(text: str) -> list[str]:
     """Return all slot names found in *text*."""
     return _SLOT_RE.findall(text)
 
 
-def generate_slot_filling(skill_id: str, skill_data: dict) -> Iterator[Dict[str, Any]]:
+def generate_slot_filling(skill_id: str, skill_data: dict) -> Iterator[dict[str, Any]]:
     """Yield slot-filling samples from a skill's parsed intent and entity data.
 
     For each intent utterance that contains ``{slot}`` placeholders, emits a
@@ -35,7 +34,7 @@ def generate_slot_filling(skill_id: str, skill_data: dict) -> Iterator[Dict[str,
     files = skill_data.get("files", {})
 
     # Build entity value lookup: slot_name → lang → [values]
-    entity_values: Dict[str, Dict[str, List[str]]] = {}
+    entity_values: dict[str, dict[str, list[str]]] = {}
     for filename, file_info in files.items():
         if file_info.get("type") != "entity":
             continue
@@ -54,7 +53,7 @@ def generate_slot_filling(skill_id: str, skill_data: dict) -> Iterator[Dict[str,
         if file_info.get("type") not in ("intent",):
             continue
 
-        seen: Set[str] = set()
+        seen: set[str] = set()
         for lang, lang_data in file_info.get("langs", {}).items():
             for entry in lang_data.get("entries", []):
                 template = entry.get("text", "").strip()
@@ -69,7 +68,7 @@ def generate_slot_filling(skill_id: str, skill_data: dict) -> Iterator[Dict[str,
                     continue
                 seen.add(key)
 
-                ev: Dict[str, List[str]] = {
+                ev: dict[str, list[str]] = {
                     s: entity_values.get(s, {}).get(lang, []) for s in slots
                 }
 

@@ -4,7 +4,6 @@ Format: one regex pattern per line, with (?P<Name>...) named groups.
 """
 
 import re
-from typing import List
 
 from ovos_localize.parsers.base import BaseParser, ParsedFile, ParsedLine
 
@@ -29,9 +28,9 @@ class RegexParser(BaseParser):
             ParsedFile with each regex as a ParsedLine. Named groups
             are stored in the ``slots`` field.
         """
-        lines: List[ParsedLine] = []
+        lines: list[ParsedLine] = []
         all_slots: set = set()
-        errors: List[str] = []
+        errors: list[str] = []
 
         for i, raw_line in enumerate(content.splitlines(), start=1):
             stripped = raw_line.strip()

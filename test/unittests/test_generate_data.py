@@ -1,11 +1,7 @@
 """Unit tests for the data generation script."""
 
-import json
 import sys
 from pathlib import Path
-from typing import Dict, List
-
-import pytest
 
 # Add scripts/ to path so we can import generate_data
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent / "scripts"))

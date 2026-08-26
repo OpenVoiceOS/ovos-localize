@@ -1,10 +1,12 @@
 """Dataset generator for parallel corpora (machine translation)."""
 
-from typing import Any, Dict, Iterator, Set
-from ovos_localize.bracket_expansion import expand_template, clean_text
+from collections.abc import Iterator
+from typing import Any
+
+from ovos_localize.bracket_expansion import clean_text, expand_template
 
 
-def generate_parallel_corpora(skill_id: str, skill_data: dict, base_lang: str = "en-US") -> Iterator[Dict[str, Any]]:
+def generate_parallel_corpora(skill_id: str, skill_data: dict, base_lang: str = "en-US") -> Iterator[dict[str, Any]]:
     """Yield parallel translations from a skill's parsed data.
 
     Pairs the base language (default en-US) with other languages found in the same file.
@@ -35,7 +37,7 @@ def generate_parallel_corpora(skill_id: str, skill_data: dict, base_lang: str = 
         else:
             base_lang_key = base_lang
 
-        def _get_cleaned_entries(lang_key: str) -> Set[str]:
+        def _get_cleaned_entries(lang_key: str) -> set[str]:
             seen = set()
             for entry in langs[lang_key].get("entries", []):
                 template = entry.get("text", "").strip()
