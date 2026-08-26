@@ -122,24 +122,29 @@ jobs:
               if not os.path.isdir(src):
                   print(f'SKIP: {src} not found', file=sys.stderr)
                   continue
-              os.makedirs(dst, exist_ok=True)
-              if os.path.isdir(dst):
-                  # Destination already exists — merge files from src into dst,
-                  # then remove src. Files already in dst are kept (not overwritten).
-                  for item in os.listdir(src):
-                      s = os.path.join(src, item)
-                      d = os.path.join(dst, item)
-                      if not os.path.exists(d):
+              # Walk the whole tree. Comparing only the top level would skip an
+              # entire subdirectory whenever both sides have one by the same
+              # name, leaving those translations behind in the old directory.
+              for root, _dirs, files in os.walk(src):
+                  rel = os.path.relpath(root, src)
+                  target = dst if rel == '.' else os.path.join(dst, rel)
+                  os.makedirs(target, exist_ok=True)
+                  for name in files:
+                      s = os.path.join(root, name)
+                      d = os.path.join(target, name)
+                      if os.path.exists(d):
+                          print(f'KEEP existing {d} (skipped {s})')
+                      else:
                           shutil.move(s, d)
                           print(f'Moved {s} -> {d}')
-                      else:
-                          print(f'KEEP existing {d} (skipped {s})')
-                  if not os.listdir(src):
-                      os.rmdir(src)
-                      print(f'Removed empty dir {src}')
-              else:
-                  shutil.move(src, dst)
-                  print(f'Renamed {src} -> {dst}')
+              # Prune directories that are now empty, deepest first.
+              for root, _dirs, _files in sorted(os.walk(src), reverse=True):
+                  if not os.listdir(root):
+                      os.rmdir(root)
+                      print(f'Removed empty dir {root}')
+              if os.path.isdir(src):
+                  left = [os.path.join(dp, f) for dp, _, fs in os.walk(src) for f in fs]
+                  print(f'::warning::{src} still holds {len(left)} file(s) that also exist under {dst}: ' + ', '.join(left))
           "
 
           git add -A
