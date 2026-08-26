@@ -1,14 +1,11 @@
 """Unit tests for the four new ML dataset generators."""
 
-from typing import Any, Dict, List
+from typing import Any
 
-import pytest
-
-from ovos_localize.datasets.slot_filling import generate_slot_filling
 from ovos_localize.datasets.response_pairs import generate_response_pairs
-from ovos_localize.datasets.tts_corpus import generate_tts_corpus
 from ovos_localize.datasets.skill_metadata import generate_skill_metadata
-
+from ovos_localize.datasets.slot_filling import generate_slot_filling
+from ovos_localize.datasets.tts_corpus import generate_tts_corpus
 
 # ---------------------------------------------------------------------------
 # Shared fixtures
@@ -17,11 +14,11 @@ from ovos_localize.datasets.skill_metadata import generate_skill_metadata
 SKILL_ID = "test-skill"
 
 
-def _make_skill(files: Dict[str, Any]) -> dict:
+def _make_skill(files: dict[str, Any]) -> dict:
     return {"id": SKILL_ID, "files": files}
 
 
-def _lang_data(entries: List[str]) -> dict:
+def _lang_data(entries: list[str]) -> dict:
     return {"entries": [{"text": t, "line": i + 1} for i, t in enumerate(entries)]}
 
 

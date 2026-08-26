@@ -10,7 +10,6 @@ Extracts:
 import ast
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Dict, List, Optional, Set
 
 
 @dataclass
@@ -34,14 +33,14 @@ class IntentHandlerInfo:
     file_path: str
     line_number: int
     intent_type: str  # "padatious" or "adapt"
-    intent_file: Optional[str] = None
-    builder_name: Optional[str] = None
-    required_keywords: List[str] = field(default_factory=list)
-    optional_keywords: List[str] = field(default_factory=list)
-    one_of_keywords: List[List[str]] = field(default_factory=list)
-    voc_blacklist: List[str] = field(default_factory=list)
+    intent_file: str | None = None
+    builder_name: str | None = None
+    required_keywords: list[str] = field(default_factory=list)
+    optional_keywords: list[str] = field(default_factory=list)
+    one_of_keywords: list[list[str]] = field(default_factory=list)
+    voc_blacklist: list[str] = field(default_factory=list)
     end_line: int = 0
-    source_code: Optional[str] = None
+    source_code: str | None = None
 
 
 @dataclass
@@ -57,7 +56,7 @@ class DialogCallInfo:
     """
 
     dialog_name: str
-    variables: List[str] = field(default_factory=list)
+    variables: list[str] = field(default_factory=list)
     method_name: str = ""
     file_path: str = ""
     line_number: int = 0
@@ -99,13 +98,13 @@ class SkillAnalysis:
 
     skill_class_name: str = ""
     source_file: str = ""
-    intent_handlers: List[IntentHandlerInfo] = field(default_factory=list)
-    dialog_calls: List[DialogCallInfo] = field(default_factory=list)
-    response_calls: List[ResponseCallInfo] = field(default_factory=list)
-    intent_file_to_handler: Dict[str, IntentHandlerInfo] = field(default_factory=dict)
-    voc_to_intents: Dict[str, List[str]] = field(default_factory=dict)
-    dialog_to_callers: Dict[str, List[str]] = field(default_factory=dict)
-    method_sources: Dict[str, str] = field(default_factory=dict)
+    intent_handlers: list[IntentHandlerInfo] = field(default_factory=list)
+    dialog_calls: list[DialogCallInfo] = field(default_factory=list)
+    response_calls: list[ResponseCallInfo] = field(default_factory=list)
+    intent_file_to_handler: dict[str, IntentHandlerInfo] = field(default_factory=dict)
+    voc_to_intents: dict[str, list[str]] = field(default_factory=dict)
+    dialog_to_callers: dict[str, list[str]] = field(default_factory=dict)
+    method_sources: dict[str, str] = field(default_factory=dict)
 
 
 class SkillAnalyzer:
@@ -202,7 +201,7 @@ class SkillAnalyzer:
 
     def _analyze_class(
         self, class_node: ast.ClassDef, analysis: SkillAnalysis, file_path: str,
-        source_lines: Optional[List[str]] = None,
+        source_lines: list[str] | None = None,
     ) -> None:
         """Analyze all methods in a skill class.
 
@@ -218,7 +217,7 @@ class SkillAnalyzer:
 
     def _analyze_method(
         self, method_node: ast.FunctionDef, analysis: SkillAnalysis, file_path: str,
-        source_lines: Optional[List[str]] = None,
+        source_lines: list[str] | None = None,
     ) -> None:
         """Analyze a single method for intent handlers and dialog calls.
 
@@ -266,7 +265,7 @@ class SkillAnalyzer:
 
     def _parse_intent_handler_decorator(
         self, decorator: ast.expr, method_name: str, file_path: str, line_number: int
-    ) -> Optional[IntentHandlerInfo]:
+    ) -> IntentHandlerInfo | None:
         """Parse an @intent_handler decorator.
 
         Args:
@@ -319,7 +318,7 @@ class SkillAnalyzer:
 
     def _parse_intent_builder_chain(
         self, node: ast.Call, method_name: str, file_path: str, line_number: int
-    ) -> Optional[IntentHandlerInfo]:
+    ) -> IntentHandlerInfo | None:
         """Parse an IntentBuilder(...).require(...).optionally(...) chain.
 
         Args:
@@ -331,9 +330,9 @@ class SkillAnalyzer:
         Returns:
             IntentHandlerInfo or None.
         """
-        required: List[str] = []
-        optional: List[str] = []
-        one_of: List[List[str]] = []
+        required: list[str] = []
+        optional: list[str] = []
+        one_of: list[list[str]] = []
         builder_name = ""
 
         current = node
@@ -393,7 +392,7 @@ class SkillAnalyzer:
 
     def _parse_dialog_call(
         self, node: ast.Call, method_name: str, file_path: str
-    ) -> Optional[DialogCallInfo]:
+    ) -> DialogCallInfo | None:
         """Parse a self.speak_dialog() call.
 
         Args:
@@ -411,7 +410,7 @@ class SkillAnalyzer:
         if not dialog_name:
             return None
 
-        variables: List[str] = []
+        variables: list[str] = []
         # Look for dict literal as second arg or 'data' keyword
         dict_node = None
         if len(node.args) > 1 and isinstance(node.args[1], ast.Dict):
@@ -439,7 +438,7 @@ class SkillAnalyzer:
 
     def _parse_response_call(
         self, node: ast.Call, call_type: str, method_name: str, file_path: str
-    ) -> Optional[ResponseCallInfo]:
+    ) -> ResponseCallInfo | None:
         """Parse a self.get_response() or self.ask_yesno() call.
 
         Args:
@@ -467,7 +466,7 @@ class SkillAnalyzer:
         )
 
     @staticmethod
-    def _get_self_call_name(node: ast.Call) -> Optional[str]:
+    def _get_self_call_name(node: ast.Call) -> str | None:
         """Extract method name from self.method_name() calls.
 
         Args:
@@ -485,7 +484,7 @@ class SkillAnalyzer:
         return None
 
     @staticmethod
-    def _get_string_value(node: ast.expr) -> Optional[str]:
+    def _get_string_value(node: ast.expr) -> str | None:
         """Extract string value from an AST node.
 
         Args:
@@ -499,7 +498,7 @@ class SkillAnalyzer:
         return None
 
     @staticmethod
-    def _extract_keyword_arg_list(call: ast.Call, kwarg_name: str) -> List[str]:
+    def _extract_keyword_arg_list(call: ast.Call, kwarg_name: str) -> list[str]:
         """Extract a list of strings from a keyword argument.
 
         Args:
@@ -520,8 +519,8 @@ class SkillAnalyzer:
 
     @staticmethod
     def _extract_method_source(
-        method_node: ast.FunctionDef, source_lines: Optional[List[str]]
-    ) -> Optional[str]:
+        method_node: ast.FunctionDef, source_lines: list[str] | None
+    ) -> str | None:
         """Extract the source code of a method from the original source lines.
 
         Includes decorator lines. Caps at 40 lines to keep JSON manageable.

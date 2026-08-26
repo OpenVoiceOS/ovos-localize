@@ -3,7 +3,6 @@
 Format: one keyword per line, with optional (alt|alt) expansion.
 """
 
-from typing import List
 
 from ovos_localize.parsers.base import BaseParser, ParsedFile, ParsedLine
 
@@ -26,7 +25,7 @@ class VocabParser(BaseParser):
         Returns:
             ParsedFile with each keyword as a ParsedLine.
         """
-        lines: List[ParsedLine] = []
+        lines: list[ParsedLine] = []
 
         for i, raw_line in enumerate(content.splitlines(), start=1):
             stripped = raw_line.strip()

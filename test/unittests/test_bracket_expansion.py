@@ -1,6 +1,6 @@
 """Unit tests for bracket expansion."""
 
-from ovos_localize.bracket_expansion import expand_template, count_expanded_lines
+from ovos_localize.bracket_expansion import count_expanded_lines, expand_template
 
 
 class TestExpandTemplate:

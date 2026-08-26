@@ -1,13 +1,9 @@
 """Unit tests for the context card builder."""
 
-import pytest
 
 from ovos_localize.analyzers.ast_analyzer import SkillAnalyzer
 from ovos_localize.analyzers.context_builder import build_context_card
-from ovos_localize.enums import FileType, IntentSystem
-from ovos_localize.parsers.intent import IntentParser
-from ovos_localize.parsers.dialog import DialogParser
-from ovos_localize.parsers.vocab import VocabParser
+from ovos_localize.enums import FileType
 from ovos_localize.sync.github import ScannedFile
 
 

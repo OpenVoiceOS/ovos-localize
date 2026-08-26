@@ -6,7 +6,6 @@ ParsedFile (en-us), returning a list of ValidationIssue objects.
 
 import re
 from dataclasses import dataclass
-from typing import List, Optional, Set
 
 from ovos_localize.bracket_expansion import count_expanded_lines
 from ovos_localize.parsers.base import ParsedFile
@@ -27,12 +26,12 @@ class ValidationIssue:
     rule_name: str
     severity: str  # "error", "warning", "info"
     message: str
-    line_number: Optional[int] = None
+    line_number: int | None = None
 
 
 def validate_intent(
-    translated: ParsedFile, source: Optional[ParsedFile] = None
-) -> List[ValidationIssue]:
+    translated: ParsedFile, source: ParsedFile | None = None
+) -> list[ValidationIssue]:
     """Validate a translated .intent file.
 
     Rules:
@@ -48,7 +47,7 @@ def validate_intent(
     Returns:
         List of validation issues.
     """
-    issues: List[ValidationIssue] = []
+    issues: list[ValidationIssue] = []
     content = translated.content_lines
 
     # MIN_LINES — count after template expansion (3 lines with (a|b|c) = 9 sentences)
@@ -88,7 +87,7 @@ def validate_intent(
             issues.append(ValidationIssue(
                 rule_name="intent.unbalanced_parens",
                 severity="error",
-                message=f"Unbalanced parentheses in alternative syntax.",
+                message="Unbalanced parentheses in alternative syntax.",
                 line_number=ln.line_number,
             ))
         # Check for alternatives without pipe
@@ -115,8 +114,8 @@ def validate_intent(
 
 
 def validate_vocab(
-    translated: ParsedFile, source: Optional[ParsedFile] = None
-) -> List[ValidationIssue]:
+    translated: ParsedFile, source: ParsedFile | None = None
+) -> list[ValidationIssue]:
     """Validate a translated .voc file.
 
     Rules:
@@ -130,7 +129,7 @@ def validate_vocab(
     Returns:
         List of validation issues.
     """
-    issues: List[ValidationIssue] = []
+    issues: list[ValidationIssue] = []
     content = translated.content_lines
 
     if not content:
@@ -154,8 +153,8 @@ def validate_vocab(
 
 
 def validate_dialog(
-    translated: ParsedFile, source: Optional[ParsedFile] = None
-) -> List[ValidationIssue]:
+    translated: ParsedFile, source: ParsedFile | None = None
+) -> list[ValidationIssue]:
     """Validate a translated .dialog file.
 
     Rules:
@@ -170,7 +169,7 @@ def validate_dialog(
     Returns:
         List of validation issues.
     """
-    issues: List[ValidationIssue] = []
+    issues: list[ValidationIssue] = []
     content = translated.content_lines
 
     if len(content) < 2:
@@ -202,8 +201,8 @@ def validate_dialog(
 
 
 def validate_entity(
-    translated: ParsedFile, source: Optional[ParsedFile] = None
-) -> List[ValidationIssue]:
+    translated: ParsedFile, source: ParsedFile | None = None
+) -> list[ValidationIssue]:
     """Validate a translated .entity file.
 
     Rules:
@@ -216,7 +215,7 @@ def validate_entity(
     Returns:
         List of validation issues.
     """
-    issues: List[ValidationIssue] = []
+    issues: list[ValidationIssue] = []
     content = translated.content_lines
 
     if len(content) < 5:
@@ -230,8 +229,8 @@ def validate_entity(
 
 
 def validate_regex(
-    translated: ParsedFile, source: Optional[ParsedFile] = None
-) -> List[ValidationIssue]:
+    translated: ParsedFile, source: ParsedFile | None = None
+) -> list[ValidationIssue]:
     """Validate a translated .rx file.
 
     Rules:
@@ -245,14 +244,14 @@ def validate_regex(
     Returns:
         List of validation issues.
     """
-    issues: List[ValidationIssue] = []
+    issues: list[ValidationIssue] = []
 
     for ln in translated.content_lines:
         if not ln.metadata.get("compiles", True):
             issues.append(ValidationIssue(
                 rule_name="regex.compile_error",
                 severity="error",
-                message=f"Regex does not compile.",
+                message="Regex does not compile.",
                 line_number=ln.line_number,
             ))
 
@@ -271,8 +270,8 @@ def validate_regex(
 
 
 def validate_value(
-    translated: ParsedFile, source: Optional[ParsedFile] = None
-) -> List[ValidationIssue]:
+    translated: ParsedFile, source: ParsedFile | None = None
+) -> list[ValidationIssue]:
     """Validate a translated .value file.
 
     Rules:
@@ -286,7 +285,7 @@ def validate_value(
     Returns:
         List of validation issues.
     """
-    issues: List[ValidationIssue] = []
+    issues: list[ValidationIssue] = []
 
     # Inherit any parse errors
     for err in translated.errors:
@@ -297,13 +296,13 @@ def validate_value(
         ))
 
     if source:
-        source_values: Set[str] = set()
+        source_values: set[str] = set()
         for ln in source.content_lines:
             sv = ln.metadata.get("system_value", "")
             if sv:
                 source_values.add(sv)
 
-        translated_values: Set[str] = set()
+        translated_values: set[str] = set()
         for ln in translated.content_lines:
             sv = ln.metadata.get("system_value", "")
             if sv:
@@ -332,8 +331,8 @@ _VALIDATORS = {
 
 
 def validate_file(
-    translated: ParsedFile, source: Optional[ParsedFile] = None
-) -> List[ValidationIssue]:
+    translated: ParsedFile, source: ParsedFile | None = None
+) -> list[ValidationIssue]:
     """Run the appropriate validator for a parsed file.
 
     Args:

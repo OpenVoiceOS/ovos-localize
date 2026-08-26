@@ -3,7 +3,6 @@
 Format: one training utterance per line, with {slot} placeholders and (alt|alt) groups.
 """
 
-from typing import List
 
 from ovos_localize.parsers.base import BaseParser, ParsedFile, ParsedLine
 
@@ -29,7 +28,7 @@ class IntentParser(BaseParser):
         Returns:
             ParsedFile with each utterance as a ParsedLine.
         """
-        lines: List[ParsedLine] = []
+        lines: list[ParsedLine] = []
         all_slots: set = set()
 
         for i, raw_line in enumerate(content.splitlines(), start=1):
@@ -70,7 +69,7 @@ class IntentParser(BaseParser):
         return "\n".join(ln.text for ln in parsed.lines if ln.text or ln.is_blank) + "\n"
 
     @staticmethod
-    def compute_diversity(lines: List[ParsedLine]) -> float:
+    def compute_diversity(lines: list[ParsedLine]) -> float:
         """Compute lexical diversity score for intent training utterances.
 
         Diversity is the ratio of unique trigrams to total trigrams across

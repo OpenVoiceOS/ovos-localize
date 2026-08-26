@@ -1,13 +1,12 @@
 """Unit tests for validation rules."""
 
-import pytest
 
-from ovos_localize.parsers.intent import IntentParser
-from ovos_localize.parsers.vocab import VocabParser
 from ovos_localize.parsers.dialog import DialogParser
 from ovos_localize.parsers.entity import EntityParser
+from ovos_localize.parsers.intent import IntentParser
 from ovos_localize.parsers.regex import RegexParser
 from ovos_localize.parsers.value import ValueParser
+from ovos_localize.parsers.vocab import VocabParser
 from ovos_localize.validators.rules import (
     validate_dialog,
     validate_entity,

@@ -2,7 +2,6 @@
 
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any, List, Optional
 
 
 @dataclass
@@ -23,8 +22,8 @@ class ParsedLine:
     text: str
     is_comment: bool = False
     is_blank: bool = False
-    slots: List[str] = field(default_factory=list)
-    alternatives: List[List[str]] = field(default_factory=list)
+    slots: list[str] = field(default_factory=list)
+    alternatives: list[list[str]] = field(default_factory=list)
     metadata: dict = field(default_factory=dict)
 
 
@@ -43,13 +42,13 @@ class ParsedFile:
 
     path: str
     file_type: str
-    lines: List[ParsedLine] = field(default_factory=list)
-    all_slots: List[str] = field(default_factory=list)
-    errors: List[str] = field(default_factory=list)
+    lines: list[ParsedLine] = field(default_factory=list)
+    all_slots: list[str] = field(default_factory=list)
+    errors: list[str] = field(default_factory=list)
     metadata: dict = field(default_factory=dict)
 
     @property
-    def content_lines(self) -> List[ParsedLine]:
+    def content_lines(self) -> list[ParsedLine]:
         """Return only non-comment, non-blank lines."""
         return [ln for ln in self.lines if not ln.is_comment and not ln.is_blank]
 
@@ -103,7 +102,7 @@ class BaseParser:
         raise NotImplementedError
 
     @staticmethod
-    def _extract_slots(text: str) -> List[str]:
+    def _extract_slots(text: str) -> list[str]:
         """Extract {slot_name} placeholders from text.
 
         Args:
@@ -117,7 +116,7 @@ class BaseParser:
         return re.findall(r"(?<!\{)\{(\w+)\}(?!\})", text)
 
     @staticmethod
-    def _extract_alternatives(text: str) -> List[List[str]]:
+    def _extract_alternatives(text: str) -> list[list[str]]:
         """Extract (alt1|alt2|alt3) groups from text.
 
         Args:

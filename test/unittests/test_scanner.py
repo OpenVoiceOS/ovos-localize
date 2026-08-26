@@ -1,13 +1,10 @@
 """Unit tests for the repo scanner / locale directory scanner."""
 
 import os
-import tempfile
 from pathlib import Path
 
-import pytest
-
 from ovos_localize.enums import FileType
-from ovos_localize.sync.github import scan_locale_directory, RepoScanner
+from ovos_localize.sync.github import RepoScanner, scan_locale_directory
 
 
 class TestScanLocaleDirectory:
@@ -266,7 +263,7 @@ class TestEditorAccessibilityContract:
         an unsaved translation, so it must cancel the navigation.
         """
         html = self._html()
-        line = next(l for l in html.split("\n") if "skip-link" in l and "<a " in l)
+        line = next(x for x in html.split("\n") if "skip-link" in x and "<a " in x)
         assert "event.preventDefault()" in line
 
     def test_skip_target_is_focusable_and_visible(self) -> None:

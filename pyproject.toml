@@ -61,3 +61,12 @@ include = ["ovos_localize*"]
 
 [tool.pytest.ini_options]
 testpaths = ["test"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+# Generated data and the single-file SPA are not linted.
+extend-exclude = ["data", "index.html"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]

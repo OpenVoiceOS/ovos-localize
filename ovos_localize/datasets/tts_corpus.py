@@ -6,12 +6,13 @@ spoken-language sentences and are the largest file type in the corpus
 (~1 500 files across 26 languages).
 """
 
-from typing import Any, Dict, Iterator, Set
+from collections.abc import Iterator
+from typing import Any
 
-from ovos_localize.bracket_expansion import expand_template, clean_text
+from ovos_localize.bracket_expansion import clean_text, expand_template
 
 
-def generate_tts_corpus(skill_id: str, skill_data: dict) -> Iterator[Dict[str, Any]]:
+def generate_tts_corpus(skill_id: str, skill_data: dict) -> Iterator[dict[str, Any]]:
     """Yield TTS corpus samples from a skill's dialog files.
 
     Expands ``(a|b)`` / ``[optional]`` templates so every unique surface form
@@ -31,7 +32,7 @@ def generate_tts_corpus(skill_id: str, skill_data: dict) -> Iterator[Dict[str, A
         if file_info.get("type") != "dialog":
             continue
 
-        seen: Set[str] = set()
+        seen: set[str] = set()
         for lang, lang_data in file_info.get("langs", {}).items():
             for entry in lang_data.get("entries", []):
                 template = entry.get("text", "").strip()

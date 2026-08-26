@@ -21,9 +21,8 @@ skill_metadata/
 
 import json
 import sys
-import os
 from pathlib import Path
-from typing import Dict, TextIO, Optional
+from typing import TextIO
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
@@ -37,10 +36,10 @@ sys.path.insert(0, str(REPO_ROOT))
 from ovos_localize.datasets import (
     generate_intent_classification,
     generate_parallel_corpora,
-    generate_slot_filling,
     generate_response_pairs,
-    generate_tts_corpus,
     generate_skill_metadata,
+    generate_slot_filling,
+    generate_tts_corpus,
 )
 
 
@@ -50,7 +49,7 @@ class SplitFileWriter:
     def __init__(self, base_path: Path) -> None:
         self.base_path = base_path
         self.chunk_index = 0
-        self.current_f: Optional[TextIO] = None
+        self.current_f: TextIO | None = None
         self.current_size = 0
 
     def _get_path(self) -> Path:
@@ -82,7 +81,7 @@ class SplitFileWriter:
             self.current_f.close()
 
 
-WriterPool = Dict[str, SplitFileWriter]
+WriterPool = dict[str, SplitFileWriter]
 
 
 def _get_writer(pool: WriterPool, key: str, directory: Path, suffix: str = ".jsonl") -> SplitFileWriter:
@@ -123,7 +122,7 @@ def main() -> None:
         for skill_file in sorted(SKILLS_DIR.glob("*.json")):
             skill_id = skill_file.stem
             try:
-                with open(skill_file, "r", encoding="utf-8") as f:
+                with open(skill_file, encoding="utf-8") as f:
                     skill_data = json.load(f)
             except Exception as e:
                 print(f"Failed to load {skill_file}: {e}", file=sys.stderr)

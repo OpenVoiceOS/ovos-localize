@@ -15,10 +15,9 @@ Examples:
 
 import itertools
 import re
-from typing import List
 
 
-def expand_template(template: str) -> List[str]:
+def expand_template(template: str) -> list[str]:
     """Expand a template string into all possible utterances.
 
     Handles:
@@ -34,7 +33,7 @@ def expand_template(template: str) -> List[str]:
     # [optional] → (optional|)
     t = re.sub(r"\[([^\[\]]+)\]", r"(\1|)", template)
 
-    def _expand_alternatives(text: str) -> List[str]:
+    def _expand_alternatives(text: str) -> list[str]:
         parts = []
         for segment in re.split(r"(\([^()]+\))", text):
             if segment.startswith("(") and segment.endswith(")"):
@@ -77,7 +76,7 @@ def clean_text(text: str) -> str:
     return text
 
 
-def count_expanded_lines(lines: List[str]) -> int:
+def count_expanded_lines(lines: list[str]) -> int:
     """Count the total number of expanded sentences from a list of template lines.
 
     Skips blank lines and comments.
