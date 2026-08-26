@@ -246,3 +246,38 @@ class TestHumanFirstLanguageGate:
         html = (Path(__file__).resolve().parents[2] / "index.html").read_text()
         assert "isHumanFirstLang = isHumanFirst(lang)" in html
         assert "HUMAN_FIRST_LANGS.has(lang)" not in html
+
+
+class TestEditorAccessibilityContract:
+    """Contracts the editor markup must keep.
+
+    These live in index.html, which no other test executes, so the parts a
+    keyboard or screen-reader user depends on are asserted here.
+    """
+
+    @staticmethod
+    def _html() -> str:
+        return (Path(__file__).resolve().parents[2] / "index.html").read_text()
+
+    def test_skip_link_does_not_navigate(self) -> None:
+        """The router owns location.hash.
+
+        Following the skip link would route to an unknown view and throw away
+        an unsaved translation, so it must cancel the navigation.
+        """
+        html = self._html()
+        line = next(l for l in html.split("\n") if "skip-link" in l and "<a " in l)
+        assert "event.preventDefault()" in line
+
+    def test_skip_target_is_focusable_and_visible(self) -> None:
+        html = self._html()
+        assert 'id="app"' in html
+        assert "#app:focus { outline: none; }" not in html
+
+    def test_json_fields_are_labelled(self) -> None:
+        """Every generated label points at the control it names."""
+        html = self._html()
+        start = html.index("const fieldId")
+        block = html[start:start + 4500]
+        assert block.count("""label for="' + fieldId""") == 3
+        assert block.count("""id="' + fieldId""") == 3

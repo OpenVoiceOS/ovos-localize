@@ -156,3 +156,19 @@ for f in scan.locale_files:
         if card.tips:
             print(f"  Tips: {card.tips[0]}")
 ```
+
+## Accessibility (WCAG 2.2)
+
+The SPA ships with the structural accessibility baseline:
+
+- a skip-to-content link (visually hidden until focused) targeting `<main id="app">`;
+- semantic landmarks (`header` / `nav[aria-label="Primary"]` / `main` / `footer`);
+- **focus management on hash-route change** — after each view renders, focus moves
+  to its heading (or `<main>`) so screen-reader users are told the page changed;
+- a polite live region (`#toast-container`) so toast/status messages are announced;
+- visible keyboard focus rings (`:focus-visible`) on all interactive elements.
+
+Not yet automated (follow-ups): an `axe-core` CI gate (needs the Playwright test
+harness), a per-view single-`h1` audit, and a colour-contrast pass on the dark
+theme. Run a manual keyboard-only + screen-reader pass on the editor before
+release — automated tooling catches only ~30–40% of real issues.
