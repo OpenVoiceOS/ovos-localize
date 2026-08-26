@@ -18,6 +18,7 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v7
         with:
@@ -35,8 +36,14 @@ jobs:
         env:
           GIT_TERMINAL_PROMPT: 0
 
+      # The training corpora are a side product. What translators see is the
+      # browse data generated above, so a failure here must not stop that
+      # from being published -- it did, and merged translations sat
+      # unpublished while every refresh failed at this step.
       - name: Generate ML datasets
         run: python scripts/generate_datasets.py
+        continue-on-error: true
+        timeout-minutes: 15
 
       - uses: stefanzweifel/git-auto-commit-action@v7
         with:
