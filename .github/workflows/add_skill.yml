@@ -37,9 +37,14 @@ jobs:
         id: validate
         env:
           GH_TOKEN: ${{ github.token }}
+          # Environment variables, not template expansion: these come from an
+          # issue anyone can write.
+          ORG: ${{ steps.parse.outputs.org }}
+          REPO: ${{ steps.parse.outputs.repo }}
         run: |
-          ORG="${{ steps.parse.outputs.org }}"
-          REPO="${{ steps.parse.outputs.repo }}"
+          case "$ORG$REPO" in
+            *[!A-Za-z0-9._-]*) echo "::error::Invalid org or repo name"; exit 1 ;;
+          esac
           # Fetch recursive tree and look for a 'locale' or 'res' directory anywhere
           FOUND=$(curl -s \
             -H "Authorization: Bearer $GH_TOKEN" \
