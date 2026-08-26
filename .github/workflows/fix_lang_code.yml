@@ -42,6 +42,27 @@ jobs:
               core.setFailed('No rename_ entries found in FIX_LANG_CODE_META');
               return;
             }
+            // Issue bodies are written by anyone, and these values choose a
+            // repository and the directories to move. Check them first.
+            const NAME = /^[A-Za-z0-9._-]+$/;
+            const SEG = /^[A-Za-z0-9._-]+$/;
+            const fail = (m) => { core.setFailed(m); return false; };
+            if (!NAME.test(meta.org)) return fail(`Invalid org: ${meta.org}`);
+            if (!NAME.test(meta.repo)) return fail(`Invalid repo: ${meta.repo}`);
+            if (meta.branch && !/^[A-Za-z0-9._\/-]+$/.test(meta.branch)) {
+              return fail(`Invalid branch: ${meta.branch}`);
+            }
+            for (const r of renames) {
+              for (const side of [r.from, r.to]) {
+                const parts = side.split('/');
+                if (parts.some((x) => !SEG.test(x))) return fail(`Unsafe path: ${side}`);
+                const rootIdx = parts.findIndex((x) => x === 'locale' || x === 'res');
+                if (rootIdx === -1 || rootIdx > 1 || parts.length !== rootIdx + 2) {
+                  return fail(`Rename must name a language directory under locale/ or res/: ${side}`);
+                }
+              }
+            }
+
             core.setOutput('org', meta.org);
             core.setOutput('repo', meta.repo);
             core.setOutput('branch', meta.branch || 'dev');
@@ -134,11 +155,20 @@ jobs:
         id: pr
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          # Environment variables, not template expansion: these come from an
+          # issue anyone can write.
+          ORG: ${{ steps.parse.outputs.org }}
+          REPO: ${{ steps.parse.outputs.repo }}
+          BASE: ${{ steps.base.outputs.branch }}
+          HEAD_BRANCH: ${{ steps.rename.outputs.branch_name }}
+          RENAMES_JSON: ${{ steps.parse.outputs.renames_json }}
+          AUTHOR: ${{ steps.parse.outputs.author }}
+          ISSUE_URL: ${{ github.server_url }}/${{ github.repository }}/issues/${{ github.event.issue.number }}
         run: |
           PR_URL=$(gh pr create \
-            --repo "${{ steps.parse.outputs.org }}/${{ steps.parse.outputs.repo }}" \
-            --base "${{ steps.base.outputs.branch }}" \
-            --head "${{ steps.rename.outputs.branch_name }}" \
+            --repo "$ORG/$REPO" \
+            --base "$BASE" \
+            --head "$HEAD_BRANCH" \
             --title "fix: rename bare lang code locale directories" \
             --body "## Fix: Bare lang code locale directories
 
@@ -146,13 +176,13 @@ jobs:
 
           | Old path | New path |
           |----------|----------|
-          $(echo '${{ steps.parse.outputs.renames_json }}' | python3 -c "
+          $(echo "$RENAMES_JSON" | python3 -c "
           import json,sys
           for r in json.load(sys.stdin): print(f'| \`{r[\"from\"]}\` | \`{r[\"to\"]}\` |')
           ")
 
-          - **Submitted by**: @${{ steps.parse.outputs.author }}
-          - **Triggered by**: ${{ github.server_url }}/${{ github.repository }}/issues/${{ github.event.issue.number }}
+          - **Submitted by**: @$AUTHOR
+          - **Triggered by**: $ISSUE_URL
 
           Submitted via [OVOS Localize](https://openvoiceos.github.io/ovos-localize/).")
           echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"

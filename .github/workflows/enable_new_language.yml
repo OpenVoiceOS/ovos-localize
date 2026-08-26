@@ -112,12 +112,20 @@ jobs:
 
       - name: Comment on issue
         uses: actions/github-script@v7
+        env:
+          # Read at runtime rather than expanded into the script body: the
+          # language name is free text from an issue anyone can write, and a
+          # quote in it would close the string and run as code.
+          ALREADY_EXISTS: ${{ steps.branch.outputs.already_exists }}
+          LANG_CODE: ${{ steps.parse.outputs.lang_code }}
+          LANG_NAME: ${{ steps.parse.outputs.lang_name }}
+          PR_URL: ${{ steps.pr.outputs.pr_url }}
         with:
           script: |
-            const alreadyExists = '${{ steps.branch.outputs.already_exists }}' === 'true';
-            const code = '${{ steps.parse.outputs.lang_code }}';
-            const name = '${{ steps.parse.outputs.lang_name }}';
-            const prUrl = '${{ steps.pr.outputs.pr_url }}';
+            const alreadyExists = process.env.ALREADY_EXISTS === 'true';
+            const code = process.env.LANG_CODE;
+            const name = process.env.LANG_NAME;
+            const prUrl = process.env.PR_URL;
             const body = alreadyExists
               ? `ℹ️ **\`${code}\` is already enabled.**\n\nThis language is already present in the platform. Head to [OVOS Localize](https://openvoiceos.github.io/ovos-localize/) and select **${name}** from the language list to start translating!`
               : `👀 **A maintainer needs to review and approve this request.**\n\nA pull request has been opened: ${prUrl}\n\nOnce a maintainer merges it, the language will appear in [OVOS Localize](https://openvoiceos.github.io/ovos-localize/) and you can start contributing translations right away. Thank you! 🌍`;

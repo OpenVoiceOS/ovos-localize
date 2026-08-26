@@ -32,6 +32,60 @@ jobs:
               core.setFailed('No <content> block found in issue body');
               return;
             }
+            // Issue bodies are written by anyone. Every value below is used to
+            // pick a repository, a file path and a branch, so each is checked
+            // against what it is allowed to be before it goes any further.
+            const NAME = /^[A-Za-z0-9._-]+$/;
+            const LANG = /^[A-Za-z]{2,3}(-[A-Za-z0-9]{2,8})*$/;
+            const SUFFIX = /\.(intent|voc|dialog|entity|rx|value|json)$/;
+
+            const fail = (m) => { core.setFailed(m); return false; };
+
+            const required = ['org', 'repo', 'file_path', 'lang', 'file_key'];
+            for (const k of required) {
+              if (!meta[k]) return fail(`Missing ${k} in TRANSLATION_META`);
+            }
+            if (!NAME.test(meta.org)) return fail(`Invalid org: ${meta.org}`);
+            if (!NAME.test(meta.repo)) return fail(`Invalid repo: ${meta.repo}`);
+            if (!LANG.test(meta.lang)) return fail(`Invalid lang: ${meta.lang}`);
+            // Resource names may contain spaces ("thats all.dialog"); what they
+            // must not contain is a path separator.
+            if (!/^[A-Za-z0-9._ -]+$/.test(meta.file_key)) {
+              return fail(`Invalid file_key: ${meta.file_key}`);
+            }
+            if (meta.branch && !/^[A-Za-z0-9._\/-]+$/.test(meta.branch)) {
+              return fail(`Invalid branch: ${meta.branch}`);
+            }
+
+            // The path must land inside a locale tree, under a language
+            // directory, and carry a known resource suffix. Anything else is
+            // a write to somewhere it has no business writing to.
+            const parts = meta.file_path.split('/');
+            const bad = parts.some((seg) => seg === '' || seg === '.' || seg === '..')
+              || meta.file_path.includes('\\')
+              || meta.file_path.includes('\0')
+              || meta.file_path.startsWith('/');
+            if (bad) return fail(`Unsafe file_path: ${meta.file_path}`);
+            // The locale root may be nested inside a package directory, e.g.
+            // ovos_core/intent_services/locale/en-US/stop.voc.
+            if (parts.includes('.github')) return fail(`Unsafe file_path: ${meta.file_path}`);
+            const rootIdx = parts.findIndex((seg) => seg === 'locale' || seg === 'res');
+            if (rootIdx === -1) {
+              return fail(`file_path must sit under locale/ or res/: ${meta.file_path}`);
+            }
+            if (parts.length < rootIdx + 3) {
+              return fail(`file_path must include a language directory: ${meta.file_path}`);
+            }
+            if (!LANG.test(parts[rootIdx + 1])) {
+              return fail(`Not a language directory: ${parts[rootIdx + 1]}`);
+            }
+            if (!SUFFIX.test(meta.file_path)) {
+              return fail(`Not a translatable resource: ${meta.file_path}`);
+            }
+            if (!contentMatch[1].trim()) {
+              return fail('Empty <content> block; refusing to blank the file');
+            }
+
             for (const [k, v] of Object.entries(meta)) {
               core.setOutput(k, v);
             }
@@ -96,20 +150,32 @@ jobs:
         id: pr
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          # Passed as environment variables rather than expanded into the
+          # script body: these come from an issue anyone can write, and
+          # template expansion would splice them in as shell source.
+          ORG: ${{ steps.parse.outputs.org }}
+          REPO: ${{ steps.parse.outputs.repo }}
+          BASE: ${{ steps.base.outputs.branch }}
+          HEAD_BRANCH: ${{ steps.commit.outputs.branch_name }}
+          LANG: ${{ steps.parse.outputs.lang }}
+          FILE_KEY: ${{ steps.parse.outputs.file_key }}
+          FILE_PATH: ${{ steps.parse.outputs.file_path }}
+          AUTHOR: ${{ steps.parse.outputs.author }}
+          ISSUE: ${{ github.event.issue.number }}
         run: |
           PR_URL=$(gh pr create \
-            --repo "${{ steps.parse.outputs.org }}/${{ steps.parse.outputs.repo }}" \
-            --base "${{ steps.base.outputs.branch }}" \
-            --head "${{ steps.commit.outputs.branch_name }}" \
-            --title "translate(${{ steps.parse.outputs.lang }}): update ${{ steps.parse.outputs.file_key }}" \
+            --repo "$ORG/$REPO" \
+            --base "$BASE" \
+            --head "$HEAD_BRANCH" \
+            --title "translate($LANG): update $FILE_KEY" \
             --body "## Translation update
 
-          - **Language**: \`${{ steps.parse.outputs.lang }}\`
-          - **File**: \`${{ steps.parse.outputs.file_path }}\`
-          - **Submitted by**: @${{ steps.parse.outputs.author }}
+          - **Language**: \`$LANG\`
+          - **File**: \`$FILE_PATH\`
+          - **Submitted by**: @$AUTHOR
 
           Submitted via [OVOS Localize](https://openvoiceos.github.io/ovos-localize/).
-          Triggered by #${{ github.event.issue.number }}.")
+          Triggered by #$ISSUE.")
           echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
 
       - name: Close issue with PR link
