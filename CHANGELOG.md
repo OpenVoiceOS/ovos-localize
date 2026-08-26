@@ -1,5 +1,53 @@
 # Changelog
 
+## [0.1.0a8](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a8) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a7...0.1.0a8)
+
+## [0.1.0a7](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a7) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a6...0.1.0a7)
+
+**Merged pull requests:**
+
+- chore\(deps\): move the workflows onto current action and Python versions [\#433](https://github.com/OpenVoiceOS/ovos-localize/pull/433) ([JarbasAl](https://github.com/JarbasAl))
+- feat: add andlo/ovos-skill-sound-like to skills.txt [\#354](https://github.com/OpenVoiceOS/ovos-localize/pull/354) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-nato-alphabet to skills.txt [\#351](https://github.com/OpenVoiceOS/ovos-localize/pull/351) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-rhythm-box to skills.txt [\#325](https://github.com/OpenVoiceOS/ovos-localize/pull/325) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-bechstein-tales to skills.txt [\#324](https://github.com/OpenVoiceOS/ovos-localize/pull/324) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-morse-code to skills.txt [\#323](https://github.com/OpenVoiceOS/ovos-localize/pull/323) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-metronome to skills.txt [\#321](https://github.com/OpenVoiceOS/ovos-localize/pull/321) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-calculator to skills.txt [\#319](https://github.com/OpenVoiceOS/ovos-localize/pull/319) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-white-noise to skills.txt [\#318](https://github.com/OpenVoiceOS/ovos-localize/pull/318) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-worldtales to skills.txt [\#317](https://github.com/OpenVoiceOS/ovos-localize/pull/317) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-tuning-fork to skills.txt [\#316](https://github.com/OpenVoiceOS/ovos-localize/pull/316) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-network-scanner to skills.txt [\#315](https://github.com/OpenVoiceOS/ovos-localize/pull/315) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-cosquin-tales to skills.txt [\#314](https://github.com/OpenVoiceOS/ovos-localize/pull/314) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-geometry-practice to skills.txt [\#313](https://github.com/OpenVoiceOS/ovos-localize/pull/313) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-geography-practice to skills.txt [\#312](https://github.com/OpenVoiceOS/ovos-localize/pull/312) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-holidays to skills.txt [\#311](https://github.com/OpenVoiceOS/ovos-localize/pull/311) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-common-reading-example to skills.txt [\#310](https://github.com/OpenVoiceOS/ovos-localize/pull/310) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-intercom to skills.txt [\#309](https://github.com/OpenVoiceOS/ovos-localize/pull/309) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-geometry to skills.txt [\#308](https://github.com/OpenVoiceOS/ovos-localize/pull/308) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-geography to skills.txt [\#307](https://github.com/OpenVoiceOS/ovos-localize/pull/307) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-math-practice to skills.txt [\#305](https://github.com/OpenVoiceOS/ovos-localize/pull/305) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-andrew-lang-tales to skills.txt [\#302](https://github.com/OpenVoiceOS/ovos-localize/pull/302) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-convert to skills.txt [\#282](https://github.com/OpenVoiceOS/ovos-localize/pull/282) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-voices-of-tomorrow to skills.txt [\#246](https://github.com/OpenVoiceOS/ovos-localize/pull/246) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-horoscope-readings to skills.txt [\#244](https://github.com/OpenVoiceOS/ovos-localize/pull/244) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-365tomorrows-stories to skills.txt [\#242](https://github.com/OpenVoiceOS/ovos-localize/pull/242) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-arxiv-papers to skills.txt [\#240](https://github.com/OpenVoiceOS/ovos-localize/pull/240) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-ovosblog to skills.txt [\#238](https://github.com/OpenVoiceOS/ovos-localize/pull/238) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-andersen-tales to skills.txt [\#236](https://github.com/OpenVoiceOS/ovos-localize/pull/236) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-grimm-tales to skills.txt [\#234](https://github.com/OpenVoiceOS/ovos-localize/pull/234) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat: add andlo/ovos-skill-fairytales to skills.txt [\#230](https://github.com/OpenVoiceOS/ovos-localize/pull/230) ([github-actions[bot]](https://github.com/apps/github-actions))
+- feat\(seo\): landing metadata, per-route titles, robots + sitemap [\#216](https://github.com/OpenVoiceOS/ovos-localize/pull/216) ([JarbasAl](https://github.com/JarbasAl))
+- chore\(docs\): consolidate AUDIT/SUGGESTIONS/MAINTENANCE\_REPORT into TODO.md [\#212](https://github.com/OpenVoiceOS/ovos-localize/pull/212) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.1.0a6](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a6) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a5...0.1.0a6)
+
 ## [0.1.0a5](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a5) (2026-08-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a4...0.1.0a5)
