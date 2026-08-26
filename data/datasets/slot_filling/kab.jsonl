@@ -24,6 +24,10 @@
 {"lang": "kab", "skill": "ovos-skill-application-launcher", "intent": "launch.intent", "template": "ldi aseɣẓan {application}", "slots": ["application"], "entity_values": {"application": []}}
 {"lang": "kab", "skill": "ovos-skill-application-launcher", "intent": "launch.intent", "template": "sekker aseɣẓan {application}", "slots": ["application"], "entity_values": {"application": []}}
 {"lang": "kab", "skill": "ovos-skill-application-launcher", "intent": "launch.intent", "template": "sekker ahil n {application}", "slots": ["application"], "entity_values": {"application": []}}
+{"lang": "kab", "skill": "ovos-skill-color-picker", "intent": "request-color-by-name.intent", "template": "Sken-iyi-d (ini|nnul) {color}", "slots": ["color"], "entity_values": {"color": []}}
+{"lang": "kab", "skill": "ovos-skill-color-picker", "intent": "request-color-by-name.intent", "template": "(Senfel|Beddel) (ini|nnul) ɣer {color}", "slots": ["color"], "entity_values": {"color": []}}
+{"lang": "kab", "skill": "ovos-skill-color-picker", "intent": "request-color-by-name.intent", "template": "Amek i yettwaxdam (yini|nnul) {color}?", "slots": ["color"], "entity_values": {"color": []}}
+{"lang": "kab", "skill": "ovos-skill-color-picker", "intent": "request-color-by-name.intent", "template": "Ini-yi-d amek i iga (yini|nnul) {color}", "slots": ["color"], "entity_values": {"color": []}}
 {"lang": "kab", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "{date} yeɣli-d d {weekday}", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
 {"lang": "kab", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "{date} d {weekday}", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
 {"lang": "kab", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "{date} yella d {weekday}", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
@@ -46,6 +50,10 @@
 {"lang": "kab", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "duckduckgo {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "kab", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "Wali {query} deg duck duck go", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "kab", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "duck {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "kab", "skill": "ovos-skill-randomness", "intent": "pick-a-number.intent", "template": "fren amḍan gar {lower} akked {upper}", "slots": ["lower", "upper"], "entity_values": {"lower": [], "upper": []}}
+{"lang": "kab", "skill": "ovos-skill-randomness", "intent": "pick-a-number.intent", "template": "fren uṭṭun gar {lower} d {upper}", "slots": ["lower", "upper"], "entity_values": {"lower": [], "upper": []}}
+{"lang": "kab", "skill": "ovos-skill-randomness", "intent": "pick-a-number.intent", "template": "xtiṛ amḍan gar {lower} d {upper}", "slots": ["lower", "upper"], "entity_values": {"lower": [], "upper": []}}
+{"lang": "kab", "skill": "ovos-skill-randomness", "intent": "pick-a-number.intent", "template": "fren amḍan gar {lower} d {upper}", "slots": ["lower", "upper"], "entity_values": {"lower": [], "upper": []}}
 {"lang": "kab", "skill": "ovos-skill-wikipedia", "intent": "wiki.intent", "template": "Tzemreḍ ad d-tafeḍ {query} deg wiki?", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "kab", "skill": "ovos-skill-wikipedia", "intent": "wiki.intent", "template": "Tzemreḍ ad d-tafeḍ {query} deg Wikipidya?", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "kab", "skill": "ovos-skill-wikipedia", "intent": "wiki.intent", "template": "Senqed wiki ɣef {query}.", "slots": ["query"], "entity_values": {"query": []}}
