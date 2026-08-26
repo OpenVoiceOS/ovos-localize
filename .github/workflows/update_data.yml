@@ -40,10 +40,8 @@ jobs:
       # corpus step continue-on-error is not enough: it ends as cancelled
       # rather than failed, which skips everything after it regardless.
       - name: Publish browse data
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          commit_message: "chore: update translation data"
-          file_pattern: "data/**"
+        run: |
+          ./.github/scripts/commit_data.sh "chore: update translation data" "data/**"
 
       # The training corpora are a side product and are allowed to fail.
       - name: Generate ML datasets
@@ -53,7 +51,5 @@ jobs:
 
       - name: Publish training corpora
         if: always()
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          commit_message: "chore: update training corpora"
-          file_pattern: "data/datasets/**"
+        run: |
+          ./.github/scripts/commit_data.sh "chore: update training corpora" "data/datasets/**"
