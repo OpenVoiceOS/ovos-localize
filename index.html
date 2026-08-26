@@ -31,6 +31,18 @@
     .badge-gray { background: #262626; color: #a3a3a3; }
     textarea { tab-size: 4; }
     textarea:focus { outline: 2px solid #ef4444; outline-offset: -1px; }
+    /* Visible focus for keyboard users across interactive elements */
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, [tabindex]:focus-visible {
+      outline: 2px solid #ef4444; outline-offset: 2px;
+    }
+    #app:focus { outline: 2px solid #4f9cf9; outline-offset: 4px; }
+    /* Skip link: visually hidden until focused */
+    .skip-link {
+      position: absolute; left: 0.5rem; top: -3rem; z-index: 60;
+      background: #ef4444; color: #fff; padding: 0.5rem 1rem; border-radius: 0.5rem;
+      transition: top 0.15s ease;
+    }
+    .skip-link:focus { top: 0.5rem; }
     .toast {
       position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 50;
       padding: 0.75rem 1.25rem; border-radius: 0.5rem; font-size: 0.875rem;
@@ -84,13 +96,17 @@
 </head>
 <body class="min-h-screen">
 
+  <!-- The router owns location.hash, so the link must not navigate: following
+       it would route to an unknown view and discard whatever is on screen. -->
+  <a href="#app" class="skip-link" onclick="event.preventDefault(); document.getElementById('app').focus()">Skip to main content</a>
+
   <!-- ===== HEADER ===== -->
   <header class="border-b border-ovos-card px-6 py-3 flex items-center gap-4 sticky top-0 bg-ovos-bg z-20">
     <a href="#/" class="flex items-center gap-2 hover:no-underline">
       <img src="logo.png" alt="OVOS" width="32" height="32" class="rounded">
       <span class="text-lg font-bold text-ovos-accent">OVOS Localize</span>
     </a>
-    <nav class="hidden sm:flex gap-4 ml-4 text-sm">
+    <nav aria-label="Primary" class="hidden sm:flex gap-4 ml-4 text-sm">
       <a href="#/" class="text-ovos-muted hover:text-ovos-text">Dashboard</a>
       <a href="#/stats" class="text-ovos-muted hover:text-ovos-text">Stats</a>
       <a href="#/entities" class="text-ovos-muted hover:text-ovos-text">Entities</a>
@@ -107,7 +123,7 @@
     </div>
   </header>
 
-  <main id="app" class="mx-auto px-4 sm:px-6 py-6"></main>
+  <main id="app" tabindex="-1" class="mx-auto px-4 sm:px-6 py-6"></main>
 
   <footer class="border-t border-ovos-card mt-12 py-6 px-6 text-center text-xs text-ovos-muted">
     <p>Developed by <a href="https://tigregotico.pt" target="_blank" class="font-medium">TigreGoticoLda</a> with <span class="text-red-500">&hearts;</span> for the <a href="https://openvoiceos.org" target="_blank" class="font-medium">OpenVoiceOS</a> community</p>
@@ -119,7 +135,7 @@
       <a href="https://matrix.to/#/#OpenVoiceOS:matrix.org" target="_blank">Matrix Chat</a>
     </div>
   </footer>
-  <div id="toast-container"></div>
+  <div id="toast-container" role="status" aria-live="polite" aria-atomic="true"></div>
   <div id="modal-container"></div>
 
   <script>
@@ -805,7 +821,18 @@
       } catch(e) {
         app.innerHTML = `<div class="py-12 text-center"><p class="text-red-400 text-lg mb-2">Something went wrong</p><p class="text-ovos-muted text-sm mb-4">${escapeHtml(e.message)}</p><a href="#/" class="text-sm">Go home</a></div>`;
       }
+      // Move focus to the freshly-rendered view so screen-reader users are
+      // told the page changed (SPA route changes are otherwise silent). Skip
+      // the very first load so we don't yank focus off the top of the page.
+      if (!isInitialRoute) {
+        const heading = app.querySelector('h1, h2');
+        const target = heading || app;
+        if (target === heading) heading.tabIndex = -1; // make the heading programmatically focusable
+        target.focus({ preventScroll: true });
+      }
+      isInitialRoute = false;
     }
+    let isInitialRoute = true;
     window.addEventListener('hashchange', route);
     window.addEventListener('load', () => { updateProfileUI(); route(); });
 
@@ -2525,6 +2552,9 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
                       if (e.key && !seen.has(e.key)) { seen.add(e.key); keys.push(e.key); }
                     }
                     return keys.map(key => {
+                      // Screen readers announce a field by its label, and a
+                      // label only names a field it points at.
+                      const fieldId = 'jf-' + key.replace(/[^A-Za-z0-9_-]/g, '-');
                       const srcItems = sourceEntries.filter(e => e.key === key);
                       const tgtItems = targetEntries.filter(e => e.key === key);
                       const translatable = srcItems[0]?.translatable !== false;
@@ -2537,16 +2567,16 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
                         // List field: textarea
                         const tgtText = tgtItems.length ? tgtItems.map(e=>e.text).join('\n') : '';
                         const srcText = srcItems.map(e=>e.text).join('\n');
-                        return '<div class="p-2 bg-ovos-bg rounded-lg"><label class="text-xs font-bold text-ovos-accent">' + escapeHtml(key) + ' <span class="text-ovos-muted font-normal">(one per line)</span></label><div class="text-xs text-ovos-muted mt-0.5 mb-1">English: ' + escapeHtml(srcText.substring(0,80)) + (srcText.length > 80 ? '...' : '') + '</div><textarea class="json-field w-full bg-ovos-input text-ovos-text p-2 rounded border border-ovos-card text-sm mono resize-none" rows="' + Math.max(3, srcItems.length) + '" data-key="' + escapeHtml(key) + '" data-list="1" spellcheck="true">' + escapeHtml(tgtText) + '</textarea></div>';
+                        return '<div class="p-2 bg-ovos-bg rounded-lg"><label for="' + fieldId + '" class="text-xs font-bold text-ovos-accent">' + escapeHtml(key) + ' <span class="text-ovos-muted font-normal">(one per line)</span></label><div class="text-xs text-ovos-muted mt-0.5 mb-1">English: ' + escapeHtml(srcText.substring(0,80)) + (srcText.length > 80 ? '...' : '') + '</div><textarea class="json-field w-full bg-ovos-input text-ovos-text p-2 rounded border border-ovos-card text-sm mono resize-none" rows="' + Math.max(3, srcItems.length) + '" id="' + fieldId + '" data-key="' + escapeHtml(key) + '" data-list="1" spellcheck="true">' + escapeHtml(tgtText) + '</textarea></div>';
                       } else {
                         // Single field: input
                         const tgtText = tgtItems.length ? tgtItems[0].text : '';
                         const srcText = srcItems[0]?.text || '';
                         const isLong = srcText.length > 80;
                         if (isLong) {
-                          return '<div class="p-2 bg-ovos-bg rounded-lg"><label class="text-xs font-bold text-ovos-accent">' + escapeHtml(key) + '</label><div class="text-xs text-ovos-muted mt-0.5 mb-1">English: ' + escapeHtml(srcText.substring(0,120)) + (srcText.length > 120 ? '...' : '') + '</div><textarea class="json-field w-full bg-ovos-input text-ovos-text p-2 rounded border border-ovos-card text-sm" rows="3" data-key="' + escapeHtml(key) + '" spellcheck="true">' + escapeHtml(tgtText) + '</textarea></div>';
+                          return '<div class="p-2 bg-ovos-bg rounded-lg"><label for="' + fieldId + '" class="text-xs font-bold text-ovos-accent">' + escapeHtml(key) + '</label><div class="text-xs text-ovos-muted mt-0.5 mb-1">English: ' + escapeHtml(srcText.substring(0,120)) + (srcText.length > 120 ? '...' : '') + '</div><textarea class="json-field w-full bg-ovos-input text-ovos-text p-2 rounded border border-ovos-card text-sm" rows="3" id="' + fieldId + '" data-key="' + escapeHtml(key) + '" spellcheck="true">' + escapeHtml(tgtText) + '</textarea></div>';
                         }
-                        return '<div class="p-2 bg-ovos-bg rounded-lg"><label class="text-xs font-bold text-ovos-accent">' + escapeHtml(key) + '</label><div class="text-xs text-ovos-muted mt-0.5 mb-1">English: ' + escapeHtml(srcText) + '</div><input type="text" class="json-field w-full bg-ovos-input text-ovos-text p-2 rounded border border-ovos-card text-sm" data-key="' + escapeHtml(key) + '" value="' + escapeHtml(tgtText) + '" spellcheck="true"></div>';
+                        return '<div class="p-2 bg-ovos-bg rounded-lg"><label for="' + fieldId + '" class="text-xs font-bold text-ovos-accent">' + escapeHtml(key) + '</label><div class="text-xs text-ovos-muted mt-0.5 mb-1">English: ' + escapeHtml(srcText) + '</div><input type="text" class="json-field w-full bg-ovos-input text-ovos-text p-2 rounded border border-ovos-card text-sm" id="' + fieldId + '" data-key="' + escapeHtml(key) + '" value="' + escapeHtml(tgtText) + '" spellcheck="true"></div>';
                       }
                     }).join('');
                   })()}
