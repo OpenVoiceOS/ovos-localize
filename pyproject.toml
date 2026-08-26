@@ -44,6 +44,10 @@ dev = [
     "pytest>=7.0",
     "pytest-cov>=4.0",
 ]
+e2e = [
+    "pytest>=7.0",
+    "playwright>=1.40",
+]
 
 [project.scripts]
 ovos-localize-cli = "ovos_localize.cli.validate:main"
