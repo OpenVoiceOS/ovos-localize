@@ -145,6 +145,43 @@ def merge_equivalent_langs(
     return canonical
 
 
+# BCP-47 primary language subtags written right-to-left. Direction is a
+# property of the language, not the script, so this is keyed on the primary
+# subtag and never inferred from a script subtag (e.g. Tifinagh is LTR).
+_RTL_LANGS = frozenset({
+    "ar",   # Arabic
+    "arc",  # Aramaic
+    "ckb",  # Central Kurdish (Sorani)
+    "dv",   # Divehi / Maldivian
+    "fa",   # Persian
+    "he",   # Hebrew
+    "ps",   # Pashto
+    "sd",   # Sindhi
+    "ug",   # Uyghur
+    "ur",   # Urdu
+    "yi",   # Yiddish
+})
+
+
+def is_rtl(code: str) -> bool:
+    """Return ``True`` if a language is written right-to-left.
+
+    Matches the BCP-47 primary language subtag only. Writing direction is a
+    property of the language rather than the script, so it is never inferred
+    from a script or region subtag.
+
+    Args:
+        code: A language code such as ``"fa-IR"`` or ``"ar"``.
+
+    Returns:
+        ``True`` for right-to-left languages, ``False`` otherwise.
+    """
+    if not code:
+        return False
+    primary = code.strip().lower().split("-")[0]
+    return primary in _RTL_LANGS
+
+
 def lang_display_name(code: str) -> str:
     """Get a human-readable display name for a language code.
 

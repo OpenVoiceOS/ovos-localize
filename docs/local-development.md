@@ -188,3 +188,19 @@ pytest e2e/
 CI runs them in a dedicated `E2E` workflow that installs the browser. This is
 the harness that makes further SPA changes (RTL, accessibility, batch editing)
 safe to evolve.
+## Right-to-left (RTL) languages
+
+The editor supports right-to-left languages. `lang_utils.is_rtl(code)` is the
+single source of truth for direction, keyed on the BCP-47 primary subtag
+(`ar`, `he`, `fa`, `ur`, `ps`, `sd`, `ug`, `dv`, `yi`, `ckb`, `arc`). Direction
+is a property of the language, never inferred from the script — Kabyle (`kab`)
+uses Latin script and Tifinagh is itself LTR, so neither is RTL.
+
+The SPA mirrors this set as `RTL_LANGS` / `isRtlLang()` in `index.html` (keep
+the two in sync). The translation textarea receives `dir="rtl"` for RTL
+languages; structured JSON fields use `dir="auto"`; and slot placeholders such
+as `{location}` are wrapped in `<bdi>` so their Latin names do not scramble the
+surrounding RTL text.
+
+Bidi *visual* correctness (caret behaviour, punctuation order) is not fully
+verifiable in CI — QA an RTL language such as `fa-IR` manually in a browser.
