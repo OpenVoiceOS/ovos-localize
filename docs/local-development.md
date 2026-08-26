@@ -168,7 +168,23 @@ The SPA ships with the structural accessibility baseline:
 - a polite live region (`#toast-container`) so toast/status messages are announced;
 - visible keyboard focus rings (`:focus-visible`) on all interactive elements.
 
-Not yet automated (follow-ups): an `axe-core` CI gate (needs the Playwright test
-harness), a per-view single-`h1` audit, and a colour-contrast pass on the dark
+Not yet automated (follow-ups): an `axe-core` CI gate, a per-view
+single-`h1` audit, and a colour-contrast pass on the dark
 theme. Run a manual keyboard-only + screen-reader pass on the editor before
 release — automated tooling catches only ~30–40% of real issues.
+## End-to-end (SPA) tests
+
+Playwright smoke tests for the single-file SPA live in `e2e/` (kept out of the
+unit `test/` directory so they never gate the fast unit suite). They serve the
+repo over HTTP and drive a headless browser; the SPA tolerates missing data, so
+no fixtures are needed.
+
+```bash
+pip install -e ".[e2e]"
+python -m playwright install chromium
+pytest e2e/
+```
+
+CI runs them in a dedicated `E2E` workflow that installs the browser. This is
+the harness that makes further SPA changes (RTL, accessibility, batch editing)
+safe to evolve.

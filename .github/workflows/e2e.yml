@@ -1,0 +1,32 @@
+name: E2E
+
+on:
+  pull_request:
+    branches: [dev]
+    # A browser download is too expensive to repeat for changes that cannot
+    # affect the page, and most pull requests here only add a line to
+    # skills.txt.
+    paths:
+      - 'index.html'
+      - 'e2e/**'
+      - 'pyproject.toml'
+      - '.github/workflows/e2e.yml'
+  workflow_dispatch:
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    # Each failed expectation waits out Playwright's 30s default, so a badly
+    # broken page would otherwise sit here for a long time.
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Install package + e2e extras
+        run: pip install -e ".[e2e]"
+      - name: Install Playwright browser
+        run: python -m playwright install --with-deps chromium
+      - name: Run SPA smoke tests
+        run: pytest e2e/ -q
