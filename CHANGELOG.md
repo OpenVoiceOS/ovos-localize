@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.0a5](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a5) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a4...0.1.0a5)
+
+**Merged pull requests:**
+
+- fix: rename locale directories recursively [\#431](https://github.com/OpenVoiceOS/ovos-localize/pull/431) ([JarbasAl](https://github.com/JarbasAl))
+- feat\(i18n\): right-to-left \(RTL\) language support in the editor [\#214](https://github.com/OpenVoiceOS/ovos-localize/pull/214) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.0a4](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a4) (2026-08-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a3...0.1.0a4)
