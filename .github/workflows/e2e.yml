@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v6
         with:
-          python-version: '3.11'
+          python-version: '3.14'
       - name: Install package + e2e extras
         run: pip install -e ".[e2e]"
       - name: Install Playwright browser
