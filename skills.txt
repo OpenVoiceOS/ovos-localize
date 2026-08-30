@@ -1,39 +1,26 @@
-# Skills
-andlo/ovos-skill-fairytales
-andlo/ovos-skill-grimm-tales
-andlo/ovos-skill-andersen-tales
-andlo/ovos-skill-ovosblog
-andlo/ovos-skill-arxiv-papers
-andlo/ovos-skill-365tomorrows-stories
-andlo/ovos-skill-horoscope-readings
-andlo/ovos-skill-voices-of-tomorrow
-andlo/ovos-skill-convert
-andlo/ovos-skill-andrew-lang-tales
-andlo/ovos-skill-math-practice
-andlo/ovos-skill-geography
-andlo/ovos-skill-geometry
-andlo/ovos-skill-intercom
-andlo/ovos-skill-common-reading-example
-andlo/ovos-skill-holidays
-andlo/ovos-skill-geography-practice
-andlo/ovos-skill-geometry-practice
-andlo/ovos-skill-cosquin-tales
-andlo/ovos-skill-network-scanner
-andlo/ovos-skill-tuning-fork
-andlo/ovos-skill-worldtales
-andlo/ovos-skill-white-noise
-andlo/ovos-skill-calculator
-andlo/ovos-skill-metronome
-andlo/ovos-skill-bechstein-tales
-andlo/ovos-skill-morse-code
-andlo/ovos-skill-rhythm-box
-andlo/ovos-skill-nato-alphabet
-andlo/ovos-skill-sound-like
-andlo/ovos-common-reading-pipeline-plugin
-JarbasHiveMind/ovos-hivemind-pipeline-plugin
-TigreGotico/ovos-skill-cave-adventure-game
-TigreGotico/ovos-skill-moon-game
-TigreGotico/ovos-transcription-validator-plugin
+# Repositories OVOS Localize can open a pull request against.
+#
+# OpenVoiceOS only. Delivering a translation ends with a GitHub App asking for
+# an installation token scoped to the target repository, and that call returns
+# 404 wherever the app is not installed. Anything outside this org would
+# collect translations that can never be delivered.
+#
+# Maintainers of skills elsewhere: fork this repository and run it yourself.
+# It is a static site plus GitHub Actions with no server of any kind, so
+# pointing your own fork at your own repositories costs you nothing but the
+# fork. See FAQ.md.
+#
+# Only repositories owned by OpenVoiceOS, TigreGotico and JarbasHiveMind can
+# appear here. Submitting a translation ends with a GitHub App asking for an
+# installation token scoped to the target repository, and that call returns
+# 404 wherever the app is not installed -- which no third-party owner can be
+# asked to allow on our behalf. A repository outside these orgs therefore
+# collects translations that can never be delivered.
+#
+# Maintainers of skills elsewhere: fork this repository and run it yourself.
+# It is a static site plus GitHub Actions with no server of any kind, so
+# pointing your own fork at your own repositories costs you nothing but the
+# fork. See FAQ.md.
 OpenVoiceOS/ovos-skill-alerts
 OpenVoiceOS/ovos-skill-application-launcher
 OpenVoiceOS/ovos-skill-audio-recording
@@ -79,10 +66,6 @@ OpenVoiceOS/ovos-skill-wolfie
 OpenVoiceOS/ovos-skill-wordnet
 OpenVoiceOS/ovos-skill-word-of-the-day
 OpenVoiceOS/ovos-skill-pokepedia
-OscillateLabsLLC/skill-homeassistant
-OscillateLabsLLC/skill-musicassistant
-OscillateLabsLLC/skill-meal-plan
-OscillateLabsLLC/skill-monster-scanner
 
 # Core (bundled locale files)
 OpenVoiceOS/ovos-core

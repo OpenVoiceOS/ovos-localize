@@ -45,6 +45,13 @@ jobs:
           case "$ORG$REPO" in
             *[!A-Za-z0-9._-]*) echo "::error::Invalid org or repo name"; exit 1 ;;
           esac
+          # OpenVoiceOS only. Anywhere else the token call in
+          # submit_translation.yml returns 404 and the translation cannot be
+          # delivered, so refuse the repository here rather than collecting
+          # work that will strand.
+          if [ "$ORG" != "OpenVoiceOS" ]; then
+            echo "not_official=true" >> "$GITHUB_OUTPUT"
+          fi
           # Fetch recursive tree and look for a 'locale' or 'res' directory anywhere
           FOUND=$(curl -s \
             -H "Authorization: Bearer $GH_TOKEN" \
@@ -68,13 +75,13 @@ jobs:
           fi
 
       - name: Checkout ovos-localize
-        if: steps.validate.outputs.no_locale != 'true'
+        if: steps.validate.outputs.no_locale != 'true' && steps.validate.outputs.not_official != 'true'
         uses: actions/checkout@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Add skill to skills.txt and open PR
-        if: steps.validate.outputs.no_locale != 'true'
+        if: steps.validate.outputs.no_locale != 'true' && steps.validate.outputs.not_official != 'true'
         id: pr
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -143,11 +150,19 @@ jobs:
         with:
           script: |
             const noLocale = '${{ steps.validate.outputs.no_locale }}' === 'true';
+            const notOfficial = '${{ steps.validate.outputs.not_official }}' === 'true';
             const alreadyTracked = '${{ steps.pr.outputs.already_tracked }}' === 'true';
             const prUrl = '${{ steps.pr.outputs.pr_url }}';
 
             let body;
-            if (noLocale) {
+            if (notOfficial) {
+              body = '⚠️ **Skill not added** — OVOS Localize only tracks repositories under the `OpenVoiceOS` org. ' +
+                     'Delivering a translation needs the OVOS Localize GitHub App installed on the target repository, ' +
+                     'which we cannot ask another owner to allow.\n\n' +
+                     'If you maintain skills elsewhere, fork this repository and point your fork at them. It is a static ' +
+                     'site plus GitHub Actions with no server, so a fork is the whole cost. See ' +
+                     '[FAQ](https://github.com/OpenVoiceOS/ovos-localize/blob/dev/FAQ.md).';
+            } else if (noLocale) {
               body = '⚠️ **Skill not added** — no `locale/` or `res/` directory was found anywhere in the repository. Only OVOS skills with locale files can be tracked.';
             } else if (alreadyTracked) {
               body = '⚠️ **Skill not added** — this skill is already tracked in `skills.txt`.';
@@ -166,5 +181,5 @@ jobs:
               repo: context.repo.repo,
               issue_number: context.issue.number,
               state: 'closed',
-              state_reason: (!noLocale && !alreadyTracked) ? 'completed' : 'not_planned'
+              state_reason: (!noLocale && !alreadyTracked && !notOfficial) ? 'completed' : 'not_planned'
             });
