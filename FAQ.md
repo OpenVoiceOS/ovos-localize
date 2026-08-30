@@ -69,6 +69,27 @@ Three ways: (1) daily cron at 02:00 UTC, (2) on push to `dev` when `skills.txt`/
 ### How do I add a new skill to the tracked list?
 Click the "Submit a skill" button in the UI. Enter the GitHub repository URL. This opens a GitHub issue with a machine-readable `ADD_SKILL_META` block. The `add_skill` workflow parses the URL, appends it to `skills.txt`, and opens a PR. The UI checks for duplicate submissions before allowing a new one.
 
+### Why can I only add skills from OpenVoiceOS, TigreGotico and JarbasHiveMind?
+
+Because those are the only accounts where the OVOS Localize GitHub App can be
+installed, and the app is what actually delivers a translation. Submitting one
+ends with a request for an installation token scoped to the target repository;
+where the app is not installed, GitHub answers 404 and no pull request can be
+opened. A repository outside those orgs would collect translations that strand
+in issues, which is worse than refusing it.
+
+Asking every third-party maintainer to install an app so that we can write to
+their repository is not something OVOS wants to be in the business of
+requesting, so the list is scoped instead.
+
+### I maintain skills elsewhere. How do I use this?
+
+Fork it and point your fork at your own repositories. OVOS Localize is a
+static site and a set of GitHub Actions — there is no server, no database and
+nothing to host. Replace `skills.txt` with your own list, install the app (or
+use a token) on your own account, and enable Actions on the fork. Everything
+else works unchanged.
+
 ### Why were eu-EU, eu, and es-LM dataset files removed?
 After BCP-47 normalization was added (`lang_utils.EXPLICIT_MAPPING`), `eu-EU` and `eu` both normalize to `eu-ES`, and `es-LM` normalizes to `es-419`. The old files contained data tagged with deprecated codes; they were replaced by `eu-ES.jsonl` and `es-419.jsonl`.
 
