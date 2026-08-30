@@ -69,18 +69,19 @@ Three ways: (1) daily cron at 02:00 UTC, (2) on push to `dev` when `skills.txt`/
 ### How do I add a new skill to the tracked list?
 Click the "Submit a skill" button in the UI. Enter the GitHub repository URL. This opens a GitHub issue with a machine-readable `ADD_SKILL_META` block. The `add_skill` workflow parses the URL, appends it to `skills.txt`, and opens a PR. The UI checks for duplicate submissions before allowing a new one.
 
-### Why can I only add skills from OpenVoiceOS, TigreGotico and JarbasHiveMind?
+### Why can I only add skills from the OpenVoiceOS org?
 
-Because those are the only accounts where the OVOS Localize GitHub App can be
-installed, and the app is what actually delivers a translation. Submitting one
-ends with a request for an installation token scoped to the target repository;
-where the app is not installed, GitHub answers 404 and no pull request can be
-opened. A repository outside those orgs would collect translations that strand
-in issues, which is worse than refusing it.
+Because that is where the OVOS Localize GitHub App is installed, and the app
+is what actually delivers a translation. Submitting one ends with a request
+for an installation token scoped to the target repository; where the app is
+not installed, GitHub answers 404 and no pull request can be opened. A
+repository outside the org would collect translations that strand in issues,
+which is worse than refusing it.
 
-Asking every third-party maintainer to install an app so that we can write to
-their repository is not something OVOS wants to be in the business of
-requesting, so the list is scoped instead.
+Asking a maintainer to install an app so that we can write to their
+repository is not something OVOS wants to be in the business of requesting,
+so the list is scoped instead. This applies to every other org too, including
+ones sharing maintainers with OpenVoiceOS.
 
 ### I maintain skills elsewhere. How do I use this?
 

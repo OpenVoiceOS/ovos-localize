@@ -1,5 +1,15 @@
 # Repositories OVOS Localize can open a pull request against.
 #
+# OpenVoiceOS only. Delivering a translation ends with a GitHub App asking for
+# an installation token scoped to the target repository, and that call returns
+# 404 wherever the app is not installed. Anything outside this org would
+# collect translations that can never be delivered.
+#
+# Maintainers of skills elsewhere: fork this repository and run it yourself.
+# It is a static site plus GitHub Actions with no server of any kind, so
+# pointing your own fork at your own repositories costs you nothing but the
+# fork. See FAQ.md.
+#
 # Only repositories owned by OpenVoiceOS, TigreGotico and JarbasHiveMind can
 # appear here. Submitting a translation ends with a GitHub App asking for an
 # installation token scoped to the target repository, and that call returns
@@ -11,10 +21,6 @@
 # It is a static site plus GitHub Actions with no server of any kind, so
 # pointing your own fork at your own repositories costs you nothing but the
 # fork. See FAQ.md.
-JarbasHiveMind/ovos-hivemind-pipeline-plugin
-TigreGotico/ovos-skill-cave-adventure-game
-TigreGotico/ovos-skill-moon-game
-TigreGotico/ovos-transcription-validator-plugin
 OpenVoiceOS/ovos-skill-alerts
 OpenVoiceOS/ovos-skill-application-launcher
 OpenVoiceOS/ovos-skill-audio-recording
