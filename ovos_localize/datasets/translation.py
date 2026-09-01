@@ -3,7 +3,11 @@
 from collections.abc import Iterator
 from typing import Any
 
-from ovos_localize.bracket_expansion import clean_text, expand_template
+from ovos_localize.bracket_expansion import (
+    MAX_TEMPLATE_EXPANSIONS,
+    clean_text,
+    expand_template_cached,
+)
 
 
 def generate_parallel_corpora(skill_id: str, skill_data: dict, base_lang: str = "en-US") -> Iterator[dict[str, Any]]:
@@ -43,7 +47,7 @@ def generate_parallel_corpora(skill_id: str, skill_data: dict, base_lang: str = 
                 template = entry.get("text", "").strip()
                 if not template or template.startswith("#"):
                     continue
-                for expanded in expand_template(template):
+                for expanded in expand_template_cached(template, MAX_TEMPLATE_EXPANSIONS):
                     cleaned = clean_text(expanded)
                     if cleaned:
                         seen.add(cleaned)

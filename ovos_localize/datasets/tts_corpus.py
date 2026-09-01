@@ -9,7 +9,11 @@ spoken-language sentences and are the largest file type in the corpus
 from collections.abc import Iterator
 from typing import Any
 
-from ovos_localize.bracket_expansion import clean_text, expand_template
+from ovos_localize.bracket_expansion import (
+    MAX_TEMPLATE_EXPANSIONS,
+    clean_text,
+    expand_template_cached,
+)
 
 
 def generate_tts_corpus(skill_id: str, skill_data: dict) -> Iterator[dict[str, Any]]:
@@ -39,7 +43,7 @@ def generate_tts_corpus(skill_id: str, skill_data: dict) -> Iterator[dict[str, A
                 if not template or template.startswith("#"):
                     continue
 
-                for expanded in expand_template(template):
+                for expanded in expand_template_cached(template, MAX_TEMPLATE_EXPANSIONS):
                     text = clean_text(expanded)
                     if not text:
                         continue

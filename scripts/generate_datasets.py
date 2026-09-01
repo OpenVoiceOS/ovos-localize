@@ -33,6 +33,7 @@ MAX_FILE_SIZE = 48 * 1024 * 1024  # 48 MB — stay under GitHub's 100 MB limit
 
 sys.path.insert(0, str(REPO_ROOT))
 
+from ovos_localize.bracket_expansion import reset_truncation_count, truncation_count
 from ovos_localize.datasets import (
     generate_intent_classification,
     generate_parallel_corpora,
@@ -118,9 +119,14 @@ def main() -> None:
     tts_writers: WriterPool = {}
     meta_writers: WriterPool = {}
 
+    reset_truncation_count()
+    skill_files = sorted(SKILLS_DIR.glob("*.json"))
+    total_skills = len(skill_files)
+
     try:
-        for skill_file in sorted(SKILLS_DIR.glob("*.json")):
+        for i, skill_file in enumerate(skill_files, 1):
             skill_id = skill_file.stem
+            print(f"  [{i}/{total_skills}] {skill_id}...", flush=True)
             try:
                 with open(skill_file, encoding="utf-8") as f:
                     skill_data = json.load(f)
@@ -182,6 +188,12 @@ def main() -> None:
     index_path = DATASETS_DIR / "index.json"
     index_path.write_text(json.dumps(index, ensure_ascii=False, indent=2))
 
+    truncated = truncation_count()
+    if truncated:
+        print(
+            f"Note: {truncated} template(s) exceeded the expansion cap "
+            f"and were deterministically sampled instead of fully expanded."
+        )
     print(f"Datasets generated successfully in {DATASETS_DIR}")
 
 
