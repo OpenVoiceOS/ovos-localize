@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.1.0a15](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a15) (2026-09-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a14...0.1.0a15)
+
+**Merged pull requests:**
+
+- feat: only track repositories a translation can actually reach [\#459](https://github.com/OpenVoiceOS/ovos-localize/pull/459) ([JarbasAl](https://github.com/JarbasAl))
+- chore\(deps\): update actions/setup-python action to v7 [\#437](https://github.com/OpenVoiceOS/ovos-localize/pull/437) ([renovate[bot]](https://github.com/apps/renovate))
+- fix\(ci\): replay the data commit onto dev instead of failing the push [\#436](https://github.com/OpenVoiceOS/ovos-localize/pull/436) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.1.0a14](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a14) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a13...0.1.0a14)
+
 ## [0.1.0a13](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a13) (2026-08-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a12...0.1.0a13)
