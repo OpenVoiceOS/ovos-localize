@@ -29,6 +29,41 @@ class ValidationIssue:
     line_number: int | None = None
 
 
+_SLOT_ONLY_RE = re.compile(r"^(?:\s|[^\w{}]|\{\w+\})+$")
+
+
+def check_slot_only_lines(translated: ParsedFile) -> list[ValidationIssue]:
+    """Reject .entity examples made up entirely of {slot} tokens.
+
+    A line like ``{date}`` in a .entity file carries no fixed wording, so
+    it can never be an example value for the entity it defines.
+
+    Intent, vocab, and dialog lines that are only a slot placeholder are
+    legitimate and ship upstream (e.g. Common Play ``{query}`` intents,
+    ``{begin}`` alert dialogs, ``{location}`` personal-info dialogs), so
+    this check applies to .entity only — callers should not use it for
+    other file types.
+
+    Args:
+        translated: Parsed translated .entity file.
+
+    Returns:
+        List of validation issues (one error per offending line).
+    """
+    issues: list[ValidationIssue] = []
+    for ln in translated.content_lines:
+        if "{" not in ln.text:
+            continue
+        if _SLOT_ONLY_RE.match(ln.text):
+            issues.append(ValidationIssue(
+                rule_name="slot_only_line",
+                severity="error",
+                message=f"Line consists only of slot placeholder(s) and no literal text: {ln.text!r}",
+                line_number=ln.line_number,
+            ))
+    return issues
+
+
 def validate_intent(
     translated: ParsedFile, source: ParsedFile | None = None
 ) -> list[ValidationIssue]:
@@ -224,6 +259,8 @@ def validate_entity(
             severity="warning",
             message=f"Entity file has {len(content)} examples; 5+ recommended.",
         ))
+
+    issues.extend(check_slot_only_lines(translated))
 
     return issues
 

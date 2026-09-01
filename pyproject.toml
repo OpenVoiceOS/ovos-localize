@@ -52,6 +52,7 @@ e2e = [
 
 [project.scripts]
 ovos-localize-cli = "ovos_localize.cli.validate:main"
+ovos-localize-validate-submission = "ovos_localize.cli.validate_submission:main"
 
 [tool.setuptools.dynamic]
 version = {attr = "ovos_localize.version.__version__"}
