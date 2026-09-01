@@ -92,6 +92,31 @@ jobs:
             core.setOutput('content_b64', contentMatch[1].trim());
             core.setOutput('author', context.payload.issue.user.login);
 
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install ovos-localize
+        run: pip install .
+
+      - name: Validate submitted content
+        id: validate
+        env:
+          FILE_PATH: ${{ steps.parse.outputs.file_path }}
+          CONTENT_B64: ${{ steps.parse.outputs.content_b64 }}
+        run: |
+          echo "$CONTENT_B64" | base64 -d > /tmp/submission_content
+          if ! ovos-localize-validate-submission "$FILE_PATH" --content-file /tmp/submission_content > /tmp/validation_output 2>&1; then
+            cat /tmp/validation_output
+            {
+              echo "validation_failed<<EOF"
+              cat /tmp/validation_output
+              echo "EOF"
+            } >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
+
       - name: Generate GitHub App token
         id: app-token
         uses: actions/create-github-app-token@v3
@@ -168,11 +193,14 @@ jobs:
             --base "$BASE" \
             --head "$HEAD_BRANCH" \
             --title "translate($LANG): update $FILE_KEY" \
-            --body "## Translation update
+            --body "> 🤖 Opened automatically by ovos-localize from a community translation submission — the translation text is human-authored by the submitter; the PR itself is tool-generated and NOT reviewed by a maintainer. Verify before merging.
+
+          ## Translation update
 
           - **Language**: \`$LANG\`
           - **File**: \`$FILE_PATH\`
           - **Submitted by**: @$AUTHOR
+          - **Source issue**: $GITHUB_REPOSITORY#$ISSUE
 
           Submitted via [OVOS Localize](https://openvoiceos.github.io/ovos-localize/).
           Triggered by #$ISSUE.")
@@ -199,15 +227,22 @@ jobs:
 
       - name: Report failure on the issue
         if: failure()
+        env:
+          VALIDATION_OUTPUT: ${{ steps.validate.outputs.validation_failed }}
         uses: actions/github-script@v9
         with:
           script: |
             const run = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const validationOutput = process.env.VALIDATION_OUTPUT || '';
+            const validationSection = validationOutput
+              ? `**Your translation did not pass validation:**\n\n\`\`\`\n${validationOutput}\n\`\`\`\n\nPlease fix the flagged line(s) and open a new submission.\n\n`
+              : '';
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
               body: `⚠️ **This translation could not be turned into a pull request.**\n\n` +
+                    validationSection +
                     `Your translation is safe -- it is stored in this issue and nothing is lost. ` +
                     `A maintainer has been alerted and will re-run it.\n\n` +
                     `Details: ${run}`

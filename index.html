@@ -3127,6 +3127,15 @@ optionally: [${(ctx.builder_chain.optionally||[]).join(', ')}]</pre>
       if (!newContent.trim()) { toast('Translation is empty', 'red'); return; }
       const { org, repo, filePath, lang, fileKey, branch } = editor.dataset;
       if (!filePath) { toast('Cannot determine file path — use "Edit on GitHub" instead', 'red'); return; }
+      // Mirrors ovos_localize.validators.rules.check_slot_only_lines, which
+      // only applies to .entity files: a slot-only .intent/.dialog/.voc
+      // line is legal Padatious/Adapt syntax and ships upstream (e.g.
+      // ovos-skill-alerts' bare "{begin}" dialog lines).
+      if (filePath.endsWith('.entity')) {
+        const slotOnlyLine = /^(?:[\s\p{P}\p{S}]|\{[\p{L}\p{N}_]+\})+$/u;
+        const slotOnly = newContent.split('\n').find(l => l.trim() && l.includes('{') && slotOnlyLine.test(l.trim()));
+        if (slotOnly) { toast(`Line "${slotOnly.trim()}" is just a slot placeholder with no literal text — add words around it`, 'red', 6000); return; }
+      }
       const lines = newContent.split('\n').filter(l => l.trim()).length;
       if (!confirm(`Submit ${lines} line(s) for "${fileKey}" (${lang})?\n\nA bot will open a pull request to ${org}/${repo} on your behalf.`)) return;
       const btn = document.getElementById('submit-pr-btn');

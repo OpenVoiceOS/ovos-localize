@@ -60,6 +60,17 @@ class TestIntentValidation:
         issues = validate_intent(translated, source)
         assert not any(i.rule_name == "intent.missing_slots" for i in issues)
 
+    def test_slot_only_line_is_not_rejected(self) -> None:
+        """A bare slot line is legal Padatious syntax and must not error.
+
+        Common Play ships slot-only .intent lines upstream, e.g.
+        ovos-ocp-audio-plugin's ru-ru/tr-tr/hu-hu locales use a bare
+        ``{query}`` line to match "play <query>" style utterances.
+        """
+        parsed = IntentParser().parse_content("play {song} by {artist}\n{song}\n")
+        issues = validate_intent(parsed)
+        assert not any(i.rule_name == "slot_only_line" for i in issues)
+
     def test_unbalanced_parens(self) -> None:
         """Error on unbalanced parentheses."""
         parsed = IntentParser().parse_content("play (some music\n")
@@ -108,6 +119,18 @@ class TestDialogValidation:
         issues = validate_dialog(translated, source)
         assert any(i.rule_name == "dialog.extra_variables" for i in issues)
 
+    def test_slot_only_dialog_line_passes(self) -> None:
+        """A dialog line that is only a variable placeholder must not error.
+
+        Regression: ovos-skill-alerts/locale/*/dialog/at_time.dialog ships
+        a bare ``{begin}`` line in 20+ locales, and
+        ovos-skill-personal's where.was.i.born.dialog is exactly
+        ``{location}``. Rejecting these would break real skills.
+        """
+        parsed = DialogParser().parse_content("{begin}\n")
+        issues = validate_dialog(parsed)
+        assert not any(i.rule_name == "slot_only_line" for i in issues)
+
     def test_few_variants_warning(self) -> None:
         """Warn when dialog has only one variant."""
         parsed = DialogParser().parse_content("Hello\n")
@@ -123,6 +146,25 @@ class TestEntityValidation:
         parsed = EntityParser().parse_content("red\nblue\n")
         issues = validate_entity(parsed)
         assert any(i.rule_name == "entity.few_examples" for i in issues)
+
+    def test_slot_only_line_rejected(self) -> None:
+        """Error when an entity file line is just a slot placeholder.
+
+        Regression for ovos-skill-date-time#282: locale/kab/date.entity line 3
+        was ``{date}``, which is not a valid entity example.
+        """
+        parsed = EntityParser().parse_content("today\ntomorrow\nyesterday\nnow\n{date}\n")
+        issues = validate_entity(parsed)
+        assert any(
+            i.rule_name == "slot_only_line" and i.severity == "error"
+            for i in issues
+        )
+
+    def test_normal_examples_pass(self) -> None:
+        """No slot_only_line error for plain literal entity examples."""
+        parsed = EntityParser().parse_content("today\ntomorrow\nyesterday\nnow\nnext week\n")
+        issues = validate_entity(parsed)
+        assert not any(i.rule_name == "slot_only_line" for i in issues)
 
 
 class TestRegexValidation:
