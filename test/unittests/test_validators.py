@@ -101,6 +101,27 @@ class TestVocabValidation:
         issues = validate_vocab(parsed)
         assert not any(i.rule_name == "vocab.long_keyword" for i in issues)
 
+    def test_context_bleed_rejected(self) -> None:
+        """Error when a .voc submission carries a {slot} placeholder."""
+        parsed = VocabParser().parse_content(
+            "Uhu, {date} d {actual_weekday}, mačči d {weekday}.\n"
+        )
+        issues = validate_vocab(parsed)
+        assert any(i.rule_name == "context_bleed" and i.severity == "error" for i in issues)
+
+    def test_question_vocab_line_not_flagged_as_context_bleed(self) -> None:
+        """A question-style .voc line without a {slot} must not be rejected.
+
+        Regression: ovos-skill-stop and moon-game ship .voc entries like
+        ``"Podes parar agora?"`` — a legitimate keyword-matching phrase,
+        not dialog/intent context that leaked into the submission. An
+        earlier version of this rule flagged sentence punctuation as a
+        heuristic and rejected lines like this across ~99 shipping files.
+        """
+        parsed = VocabParser().parse_content("Podes parar agora?\n")
+        issues = validate_vocab(parsed)
+        assert not any(i.rule_name == "context_bleed" for i in issues)
+
 
 class TestDialogValidation:
     """Tests for .dialog file validation rules."""
@@ -165,6 +186,62 @@ class TestEntityValidation:
         parsed = EntityParser().parse_content("today\ntomorrow\nyesterday\nnow\nnext week\n")
         issues = validate_entity(parsed)
         assert not any(i.rule_name == "slot_only_line" for i in issues)
+
+    def test_context_bleed_rejected(self) -> None:
+        """Error when an entity submission carries dialog/intent context.
+
+        Regression for ovos-skill-date-time#282: the submitted
+        ``locale/kab/date.entity`` content was a mix of dialog lines
+        (``"Uhu, {date} d {actual_weekday}, mačči d {weekday}."``) and
+        intent phrasings pasted from the read-only context panel, not
+        plain date example values.
+        """
+        parsed = EntityParser().parse_content(
+            "D {date}\n"
+            "Uhu, {date} d {actual_weekday}, mačči d {weekday}.\n"
+            "Bɣiɣ ad ẓreɣ anwa wass n umalas ay d {date}\n"
+        )
+        issues = validate_entity(parsed)
+        assert any(i.rule_name == "context_bleed" and i.severity == "error" for i in issues)
+
+    def test_plain_values_not_flagged_as_context_bleed(self) -> None:
+        """No context_bleed error for plain literal entity examples."""
+        parsed = EntityParser().parse_content("12/25/2024\n15th of May\n3 days ago\ntomorrow\nnext week\n")
+        issues = validate_entity(parsed)
+        assert not any(i.rule_name == "context_bleed" for i in issues)
+
+    def test_punctuated_date_examples_not_flagged_as_context_bleed(self) -> None:
+        """No context_bleed error for correctly punctuated date examples.
+
+        Regression: ovos-skill-date-time ships ``locale/en-US/date.entity``
+        lines like ``"April 1st, 2023"`` and ``locale/de-DE/date.entity``
+        lines like ``"1. April 2023"``. An earlier version of this rule
+        used a sentence-punctuation heuristic that rejected these — and
+        hundreds of other legitimate lines across the corpus, including
+        ``"mr. mime"`` in a Pokedex skill — alongside real slot-token
+        defects, so the heuristic was dropped in favor of the {slot} check
+        alone.
+        """
+        parsed = EntityParser().parse_content(
+            "April 1st, 2023\n1. April 2023\n5. Mai 2023\ntomorrow\nnext week\n"
+        )
+        issues = validate_entity(parsed)
+        assert not any(i.rule_name == "context_bleed" for i in issues)
+
+    def test_slot_token_entity_line_still_rejected(self) -> None:
+        """A {slot} placeholder in a shipping-shaped .entity line is still an error.
+
+        Regression: ovos-skill-date-time's ``locale/it-IT/offset.entity``
+        shipped lines like ``"che ora sarà tra {offset} minuti"`` — an
+        intent phrasing, not an offset example value.
+        """
+        parsed = EntityParser().parse_content(
+            "che ora sarà tra {offset} minuti\n"
+            "che ora sarà tra {offset} minuti a {location}\n"
+            "5 minutes\n10 minutes\n15 minutes\n"
+        )
+        issues = validate_entity(parsed)
+        assert any(i.rule_name == "context_bleed" and i.severity == "error" for i in issues)
 
 
 class TestRegexValidation:

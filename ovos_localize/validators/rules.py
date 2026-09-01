@@ -30,6 +30,7 @@ class ValidationIssue:
 
 
 _SLOT_ONLY_RE = re.compile(r"^(?:\s|[^\w{}]|\{\w+\})+$")
+_SLOT_TOKEN_RE = re.compile(r"\{[^{}]*\}")
 
 
 def check_slot_only_lines(translated: ParsedFile) -> list[ValidationIssue]:
@@ -59,6 +60,52 @@ def check_slot_only_lines(translated: ParsedFile) -> list[ValidationIssue]:
                 rule_name="slot_only_line",
                 severity="error",
                 message=f"Line consists only of slot placeholder(s) and no literal text: {ln.text!r}",
+                line_number=ln.line_number,
+            ))
+    return issues
+
+
+def check_context_bleed_lines(translated: ParsedFile) -> list[ValidationIssue]:
+    """Reject .entity/.voc lines that carry a {slot} placeholder.
+
+    An .entity/.voc submission is a flat list of example values (e.g.
+    ``12/25/2024`` or ``please``); it never carries a ``{slot}``
+    placeholder — that is intent/dialog syntax, not a literal value. The
+    translation editor shows dialog and intent lines that reference a slot
+    as read-only context next to the entity's value box (see
+    ``entityContextIntents`` in index.html); when a translator pastes that
+    context panel into the value box instead of extracting example values
+    from it, the .entity file ends up holding a mangled slot template
+    verbatim. This is what caught the real shipping defect in
+    ovos-skill-date-time's ``locale/it-IT/offset.entity``, whose lines were
+    literally ``"che ora sarà tra {offset} minuti"`` — an intent phrasing,
+    not an offset example.
+
+    An earlier version of this rule also flagged lines containing
+    sentence-ending punctuation or a comma, on the theory that dialog
+    context reads like full sentences. That heuristic false-positived on
+    hundreds of legitimate shipping .voc/.entity lines — question-style
+    .voc entries (``"Podes parar agora?"``), and .entity date examples
+    that are correctly punctuated (``"April 1st, 2023"``, ``"1. April
+    2023"``, ``"mr. mime"``) — so it was removed; the {slot} check alone
+    is precise over the corpus.
+
+    Args:
+        translated: Parsed translated .entity or .voc file.
+
+    Returns:
+        List of validation issues (one error per offending line).
+    """
+    issues: list[ValidationIssue] = []
+    for ln in translated.content_lines:
+        text = ln.text.strip()
+        if not text:
+            continue
+        if _SLOT_TOKEN_RE.search(text):
+            issues.append(ValidationIssue(
+                rule_name="context_bleed",
+                severity="error",
+                message=f"Line {ln.text!r} contains a {{slot}} placeholder, not a plain example value.",
                 line_number=ln.line_number,
             ))
     return issues
@@ -184,6 +231,8 @@ def validate_vocab(
                 line_number=ln.line_number,
             ))
 
+    issues.extend(check_context_bleed_lines(translated))
+
     return issues
 
 
@@ -261,6 +310,7 @@ def validate_entity(
         ))
 
     issues.extend(check_slot_only_lines(translated))
+    issues.extend(check_context_bleed_lines(translated))
 
     return issues
 
