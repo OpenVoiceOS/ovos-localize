@@ -1302,6 +1302,8 @@
 {"lang": "pt-PT", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "soletrar {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "soletração da palavra {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "soletração de {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-weather", "intent": "is_cloudy.intent", "template": "(está|estará|vai estar) nublado [hoje|amanhã] [em {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-weather", "intent": "is_cloudy.intent", "template": "(há|haverá) nuvens [hoje|amanhã] [em {location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-wikihow", "intent": "howto.intent", "template": "(explica as|explicar) (etapas para|como|como é que) {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-wikihow", "intent": "howto.intent", "template": "(explicar|) passo a passo (como é que|) {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-wikihow", "intent": "howto.intent", "template": "como (é que|)  faço para {query}", "slots": ["query"], "entity_values": {"query": []}}

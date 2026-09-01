@@ -995,6 +995,8 @@
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "est-ce couvert au {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "est-ce couvert aux {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "est-ce couvert dans {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "intent": "is_cloudy.intent", "template": "(est-ce|est-ce que c'est|est-ce que ce sera) nuageux [aujourd'hui|demain] [à {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "intent": "is_cloudy.intent", "template": "(y a-t-il|y aura-t-il) des nuages [aujourd'hui|demain] [à {location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "intent": "is_fog.intent", "template": "le brouillard est-il prévu à {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "intent": "is_fog.intent", "template": "le brouillard est-il prévu en {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "intent": "is_fog.intent", "template": "le brouillard est-il prévu au {location}", "slots": ["location"], "entity_values": {"location": []}}

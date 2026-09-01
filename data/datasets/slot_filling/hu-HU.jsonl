@@ -32,3 +32,5 @@
 {"lang": "hu-HU", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "DuckDuckGo {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "hu-HU", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "kérdezd meg a DuckDuckGot {query} felöl", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "hu-HU", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "keress rá {query} a DuckDuckGon", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "hu-HU", "skill": "ovos-skill-weather", "intent": "is_cloudy.intent", "template": "felhős (van|lesz) [ma|holnap] [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "hu-HU", "skill": "ovos-skill-weather", "intent": "is_cloudy.intent", "template": "(vannak|lesznek) felhők [ma|holnap] [{location}]", "slots": ["location"], "entity_values": {"location": []}}

@@ -66,6 +66,8 @@
 {"lang": "sv-SE", "skill": "ovos-skill-randomness", "intent": "roll-multiple-dice.intent", "template": "kasta {number} tärningar", "slots": ["number"], "entity_values": {"number": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-randomness", "intent": "roll-single-die.intent", "template": "kasta en tärning med {faces} sidor", "slots": ["faces"], "entity_values": {"faces": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-randomness", "intent": "roll-single-die.intent", "template": "kasta en {faces}-sidig tärning", "slots": ["faces"], "entity_values": {"faces": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_cloudy.intent", "template": "(är det|blir det|kommer det vara) molnigt [idag|imorgon] [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_cloudy.intent", "template": "(finns det|kommer det) moln [idag|imorgon] [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "sök i WordNet efter {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "fråga WordNet om {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "sv-SE", "skill": "skill-homeassistant", "intent": "assist.intent", "template": "säg till home assistant att {command}", "slots": ["command"], "entity_values": {"command": []}}

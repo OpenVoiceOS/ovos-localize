@@ -868,3 +868,5 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "DuckDuckGo {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "cs-CZ", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "zeptej se DuckDuckGo na {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "cs-CZ", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "najdi {query} na DuckDuckGo", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "cs-CZ", "skill": "ovos-skill-weather", "intent": "is_cloudy.intent", "template": "(je|bude) zamračeno [dnes|zítra] [v {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "cs-CZ", "skill": "ovos-skill-weather", "intent": "is_cloudy.intent", "template": "(jsou|budou) [tam] mraky [dnes|zítra] [v {location}]", "slots": ["location"], "entity_values": {"location": []}}

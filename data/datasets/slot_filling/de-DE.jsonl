@@ -3226,6 +3226,8 @@
 {"lang": "de-DE", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "scheint heute in {location} die Sonne", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "de-DE", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "wie klar ist es in {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "de-DE", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "wird es heute in {location} sonnig sein", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "de-DE", "skill": "ovos-skill-weather", "intent": "is_cloudy.intent", "template": "(ist es|wird es) bewölkt [sein] [heute|morgen] [in {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "de-DE", "skill": "ovos-skill-weather", "intent": "is_cloudy.intent", "template": "(gibt es|wird es) Wolken [geben] [heute|morgen] [in {location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "de-DE", "skill": "ovos-skill-weather", "intent": "is_fog.intent", "template": "gibt es draußen Nebel in {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "de-DE", "skill": "ovos-skill-weather", "intent": "is_fog.intent", "template": "gibt es gerade Nebel in {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "de-DE", "skill": "ovos-skill-weather", "intent": "is_fog.intent", "template": "gibt es in {location} Nebelwarnungen", "slots": ["location"], "entity_values": {"location": []}}
