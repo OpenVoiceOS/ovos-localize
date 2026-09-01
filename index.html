@@ -2390,7 +2390,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
       const hasEntityContext = fileType === 'entity';
 
       const fileHelp = hasEntityContext && entityContextIntents.length
-        ? `<strong>{${fileKey.replace('.entity','')}}</strong> is used in ${entityContextIntents.length} intent file${entityContextIntents.length>1?'s':''}. Add example values that can fill this slot — one per line.`
+        ? `<strong>{${fileKey.replace('.entity','')}}</strong> is referenced by ${entityContextIntents.length} file${entityContextIntents.length>1?'s':''} shown for context (intents, dialogs...). Do NOT translate those files here — this box only takes plain example values that can fill the slot, one per line.`
         : isCreateMode
           ? `Create a new ${fileKey} file. Add example values, one per line.`
           : (FILE_TYPE_HELP[fileData.type] || 'Translate this file to your language.');
@@ -2498,7 +2498,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
           <div class="flex flex-col gap-3 overflow-hidden">
             <div class="bg-ovos-card rounded-xl p-3 flex flex-col overflow-hidden ${hasExpansion ? '' : 'flex-1'}">
               <div class="flex items-center gap-2 mb-2 flex-shrink-0">
-                <h3 class="text-sm font-bold">${hasEntityContext ? `Intents using <span class="slot">{${escapeHtml(fileKey.replace('.entity',''))}}</span>` : 'Source'}</h3>
+                <h3 class="text-sm font-bold">${hasEntityContext ? `Files using <span class="slot">{${escapeHtml(fileKey.replace('.entity',''))}}</span> (context only — do not translate)` : 'Source'}</h3>
                 ${!isCreateMode ? `<select id="src-lang-select" class="text-xs py-0.5 px-1.5 rounded bg-ovos-bg border border-ovos-card text-ovos-muted" onchange="changeSrcLang(this.value,'${skillId}','${encodeURIComponent(fileKey)}','${lang}')">
                   ${availableSrcLangs.map(l => `<option value="${l}" ${l === srcLang ? 'selected' : ''}>${l}</option>`).join('')}
                   ${!availableSrcLangs.length ? `<option value="${lang}" selected>${lang}</option>` : ''}
@@ -3135,6 +3135,27 @@ optionally: [${(ctx.builder_chain.optionally||[]).join(', ')}]</pre>
         const slotOnlyLine = /^(?:[\s\p{P}\p{S}]|\{[\p{L}\p{N}_]+\})+$/u;
         const slotOnly = newContent.split('\n').find(l => l.trim() && l.includes('{') && slotOnlyLine.test(l.trim()));
         if (slotOnly) { toast(`Line "${slotOnly.trim()}" is just a slot placeholder with no literal text — add words around it`, 'red', 6000); return; }
+      }
+      // Mirrors ovos_localize.validators.rules.check_context_bleed_lines:
+      // .entity/.voc submissions are plain example values and never carry
+      // a {slot} placeholder — that's intent/dialog syntax. Catches
+      // translators pasting the read-only "files using {slot}" context
+      // panel (dialog and intent lines) into the value box instead of
+      // typing values (regression for ovos-skill-date-time#282, and it
+      // also catches real shipping defects like ovos-skill-date-time's
+      // it-IT offset.entity). A sentence-punctuation heuristic was tried
+      // here too but false-positived on legitimate shipping lines like
+      // "Podes parar agora?" and "April 1st, 2023", so it was dropped.
+      if (filePath.endsWith('.entity') || filePath.endsWith('.voc')) {
+        const slotTokenRe = /\{[^{}]*\}/;
+        const bleedLine = newContent.split('\n').find(l => {
+          const t = l.trim();
+          return t && slotTokenRe.test(t);
+        });
+        if (bleedLine) {
+          toast(`Line "${bleedLine.trim()}" contains a {slot} placeholder, not a plain example value — this box only takes example values, one per line`, 'red', 7000);
+          return;
+        }
       }
       const lines = newContent.split('\n').filter(l => l.trim()).length;
       if (!confirm(`Submit ${lines} line(s) for "${fileKey}" (${lang})?\n\nA bot will open a pull request to ${org}/${repo} on your behalf.`)) return;
