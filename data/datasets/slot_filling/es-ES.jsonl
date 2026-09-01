@@ -577,6 +577,13 @@
 {"lang": "es-ES", "skill": "ovos-skill-color-picker", "intent": "request-color-by-name.intent", "template": "Muéstrame el color {color}", "slots": ["color"], "entity_values": {"color": []}}
 {"lang": "es-ES", "skill": "ovos-skill-color-picker", "intent": "request-color-by-name.intent", "template": "¿Cómo (es|se ve) el color {color}?", "slots": ["color"], "entity_values": {"color": []}}
 {"lang": "es-ES", "skill": "ovos-skill-color-picker", "intent": "request-color-by-rgb.intent", "template": "¿Qué color tiene un valor RGB de {rgb}?", "slots": ["rgb"], "entity_values": {"rgb": []}}
+{"lang": "es-ES", "skill": "ovos-skill-convert", "intent": "convert.intent", "template": "convierte {value} {from_unit} a {to_unit}", "slots": ["value", "from_unit", "to_unit"], "entity_values": {"value": [], "from_unit": [], "to_unit": []}}
+{"lang": "es-ES", "skill": "ovos-skill-convert", "intent": "convert.intent", "template": "convierte {value} {from_unit} en {to_unit}", "slots": ["value", "from_unit", "to_unit"], "entity_values": {"value": [], "from_unit": [], "to_unit": []}}
+{"lang": "es-ES", "skill": "ovos-skill-convert", "intent": "convert.intent", "template": "cuántos {to_unit} son {value} {from_unit}", "slots": ["to_unit", "value", "from_unit"], "entity_values": {"to_unit": [], "value": [], "from_unit": []}}
+{"lang": "es-ES", "skill": "ovos-skill-convert", "intent": "convert.intent", "template": "qué son {value} {from_unit} en {to_unit}", "slots": ["value", "from_unit", "to_unit"], "entity_values": {"value": [], "from_unit": [], "to_unit": []}}
+{"lang": "es-ES", "skill": "ovos-skill-convert", "intent": "convert_last.intent", "template": "qué es eso en {to_unit}", "slots": ["to_unit"], "entity_values": {"to_unit": []}}
+{"lang": "es-ES", "skill": "ovos-skill-convert", "intent": "convert_last.intent", "template": "cuántos {to_unit} son eso", "slots": ["to_unit"], "entity_values": {"to_unit": []}}
+{"lang": "es-ES", "skill": "ovos-skill-convert", "intent": "convert_last.intent", "template": "convíertelo a {to_unit}", "slots": ["to_unit"], "entity_values": {"to_unit": []}}
 {"lang": "es-ES", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "cuál es la fecha de hoy en {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "dame la fecha completa de hoy en {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "dame la fecha del calendario en {location}", "slots": ["location"], "entity_values": {"location": []}}
@@ -1022,6 +1029,47 @@
 {"lang": "es-ES", "skill": "ovos-skill-dictation", "intent": "start_dictation.intent", "template": "puedes iniciar un dictado llamado {name}", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "es-ES", "skill": "ovos-skill-dictation", "intent": "start_dictation.intent", "template": "registra el texto como {name} ahora", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "es-ES", "skill": "ovos-skill-dictation", "intent": "start_dictation.intent", "template": "registrar texto como {name}", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "es-ES", "skill": "ovos-skill-fairytales", "intent": "Tales.intent", "template": "(Cuéntame|Léeme) un (buen| ) (cuento|cuento de hadas) {tale}", "slots": ["tale"], "entity_values": {"tale": []}}
+{"lang": "es-ES", "skill": "ovos-skill-fairytales", "intent": "Tales.intent", "template": "(Cuéntame|Léeme) el cuento {tale}", "slots": ["tale"], "entity_values": {"tale": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geography-practice", "intent": "teach_me.intent", "template": "enséñame sobre {region}", "slots": ["region"], "entity_values": {"region": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geography-practice", "intent": "teach_me.intent", "template": "enséñame geografía de {region}", "slots": ["region"], "entity_values": {"region": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geography", "intent": "about_country.intent", "template": "háblame de {country}", "slots": ["country"], "entity_values": {"country": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geography", "intent": "about_country.intent", "template": "qué sabes sobre {country}", "slots": ["country"], "entity_values": {"country": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geography", "intent": "area_of.intent", "template": "qué tan grande es {country}", "slots": ["country"], "entity_values": {"country": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geography", "intent": "area_of.intent", "template": "cuál es el área de {country}", "slots": ["country"], "entity_values": {"country": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geography", "intent": "borders_of.intent", "template": "qué países limitan con {country}", "slots": ["country"], "entity_values": {"country": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geography", "intent": "borders_of.intent", "template": "qué países hacen frontera con {country}", "slots": ["country"], "entity_values": {"country": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geography", "intent": "capital_of.intent", "template": "cuál es la capital de {country}", "slots": ["country"], "entity_values": {"country": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geography", "intent": "capital_of.intent", "template": "cuál es la capital del {country}", "slots": ["country"], "entity_values": {"country": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geography", "intent": "continent_of.intent", "template": "en qué continente está {country}", "slots": ["country"], "entity_values": {"country": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geography", "intent": "continent_of.intent", "template": "en qué continente se encuentra {country}", "slots": ["country"], "entity_values": {"country": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geography", "intent": "currency_of.intent", "template": "qué moneda usa {country}", "slots": ["country"], "entity_values": {"country": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geography", "intent": "currency_of.intent", "template": "cuál es la moneda de {country}", "slots": ["country"], "entity_values": {"country": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geography", "intent": "language_of.intent", "template": "qué idioma se habla en {country}", "slots": ["country"], "entity_values": {"country": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geography", "intent": "language_of.intent", "template": "qué idioma hablan en {country}", "slots": ["country"], "entity_values": {"country": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geometry-practice", "intent": "teach_me.intent", "template": "enséñame sobre {category}", "slots": ["category"], "entity_values": {"category": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geometry-practice", "intent": "teach_me.intent", "template": "enséñame geometría de {category}", "slots": ["category"], "entity_values": {"category": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geometry", "intent": "area_of_circle.intent", "template": "cuál es el área de un círculo con radio {radius}", "slots": ["radius"], "entity_values": {"radius": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geometry", "intent": "area_of_rectangle.intent", "template": "cuál es el área de un rectángulo con largo {length} y ancho {width}", "slots": ["length", "width"], "entity_values": {"length": [], "width": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geometry", "intent": "area_of_square.intent", "template": "cuál es el área de un cuadrado con lado {side}", "slots": ["side"], "entity_values": {"side": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geometry", "intent": "area_of_triangle.intent", "template": "cuál es el área de un triángulo con base {base} y altura {height}", "slots": ["base", "height"], "entity_values": {"base": [], "height": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geometry", "intent": "circumference_of_circle.intent", "template": "cuál es la circunferencia de un círculo con radio {radius}", "slots": ["radius"], "entity_values": {"radius": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geometry", "intent": "formula_of.intent", "template": "cuál es la fórmula para {property} de un {shape}", "slots": ["property", "shape"], "entity_values": {"property": [], "shape": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geometry", "intent": "hypotenuse_of_right_triangle.intent", "template": "cuál es la hipotenusa de un triángulo rectángulo con catetos {leg_a} y {leg_b}", "slots": ["leg_a", "leg_b"], "entity_values": {"leg_a": [], "leg_b": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geometry", "intent": "perimeter_of_rectangle.intent", "template": "cuál es el perímetro de un rectángulo con largo {length} y ancho {width}", "slots": ["length", "width"], "entity_values": {"length": [], "width": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geometry", "intent": "perimeter_of_square.intent", "template": "cuál es el perímetro de un cuadrado con lado {side}", "slots": ["side"], "entity_values": {"side": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geometry", "intent": "what_is.intent", "template": "qué es un {term}", "slots": ["term"], "entity_values": {"term": []}}
+{"lang": "es-ES", "skill": "ovos-skill-geometry", "intent": "what_is.intent", "template": "qué es {term}", "slots": ["term"], "entity_values": {"term": []}}
+{"lang": "es-ES", "skill": "ovos-skill-holidays", "intent": "days_until_holiday.intent", "template": "cuántos días faltan para {holiday}", "slots": ["holiday"], "entity_values": {"holiday": []}}
+{"lang": "es-ES", "skill": "ovos-skill-holidays", "intent": "days_until_holiday.intent", "template": "cuánto falta para {holiday}", "slots": ["holiday"], "entity_values": {"holiday": []}}
+{"lang": "es-ES", "skill": "ovos-skill-holidays", "intent": "weekday_for_date.intent", "template": "qué día de la semana es {date_utterance}", "slots": ["date_utterance"], "entity_values": {"date_utterance": []}}
+{"lang": "es-ES", "skill": "ovos-skill-holidays", "intent": "weekday_for_date.intent", "template": "qué día de la semana era {date_utterance}", "slots": ["date_utterance"], "entity_values": {"date_utterance": []}}
+{"lang": "es-ES", "skill": "ovos-skill-holidays", "intent": "when_is_holiday.intent", "template": "cuándo es {holiday}", "slots": ["holiday"], "entity_values": {"holiday": []}}
+{"lang": "es-ES", "skill": "ovos-skill-intercom", "intent": "send_message.intent", "template": "envía un mensaje a {target}", "slots": ["target"], "entity_values": {"target": []}}
+{"lang": "es-ES", "skill": "ovos-skill-intercom", "intent": "send_message.intent", "template": "envía un mensaje de intercomunicador a {target}", "slots": ["target"], "entity_values": {"target": []}}
+{"lang": "es-ES", "skill": "ovos-skill-intercom", "intent": "set_intercom_code.intent", "template": "establece el código de intercomunicador en {code}", "slots": ["code"], "entity_values": {"code": []}}
+{"lang": "es-ES", "skill": "ovos-skill-intercom", "intent": "set_intercom_name.intent", "template": "establece el nombre de intercomunicador en {name}", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "es-ES", "skill": "ovos-skill-intercom", "intent": "set_intercom_name.intent", "template": "llama a este dispositivo {name} para el intercomunicador", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "es-ES", "skill": "ovos-skill-mark1-ctrl", "intent": "brightness.intent", "template": "(bajar|subir) (el|la) (brillo|iluminacion) a un {brightness} por ciento", "slots": ["brightness"], "entity_values": {"brightness": []}}
 {"lang": "es-ES", "skill": "ovos-skill-mark1-ctrl", "intent": "brightness.intent", "template": "(bajar|subir|cambiar) (el|la) (brillo|iluminacion) a un {brightness} por ciento", "slots": ["brightness"], "entity_values": {"brightness": []}}
 {"lang": "es-ES", "skill": "ovos-skill-mark1-ctrl", "intent": "brightness.intent", "template": "(cambiar|setear) (el|la) (nivel del|) (brillo|iluminacion) a un {brightness} por ciento", "slots": ["brightness"], "entity_values": {"brightness": []}}
@@ -3836,7 +3884,6 @@
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Está el cielo despejado hoy en {location}?", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Está el cielo feo en {location}?", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Está el cielo gris en {location}?", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Está el cielo nublado en {location}?", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Está el cielo sin nubes  en {location}?", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Está el cielo sin nubes hoy en {location}?", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Está el cielo sin una nube  en {location}?", "slots": ["location"], "entity_values": {"location": []}}
@@ -3847,11 +3894,7 @@
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Está el día apagado en {location}?", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Está el día feo en {location}?", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Está el día gris en {location}?", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Está el día nublado en {location}?", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Está el día triste en {location}?", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Está nublado  en {location}?", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Está nublado ahora mismo en {location}?", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Está nublado hoy en {location}?", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Hace sol  en {location}?", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Hace sol hoy en {location}?", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Hará sol hoy en {location}?", "slots": ["location"], "entity_values": {"location": []}}
@@ -3862,7 +3905,6 @@
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Puedo esperar cielos despejados en {location}?", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Puedo esperar sol en {location}?", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Qué tan despejado está el cielo en {location}?", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_clear.intent", "template": "¿Qué tan nublado está el cielo en {location}?", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_fog.intent", "template": "¿Debería alarmarme por la niebla  en {location}?", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_fog.intent", "template": "¿Debería alarmarme por la niebla hoy en {location}?", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "es-ES", "skill": "ovos-skill-weather", "intent": "is_fog.intent", "template": "¿Debería preocuparme por la niebla  en {location}?", "slots": ["location"], "entity_values": {"location": []}}

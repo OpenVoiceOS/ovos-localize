@@ -43,15 +43,11 @@
 {"lang": "nl-NL", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lees  boek {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "nl-NL", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lees  luister boek {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "nl-NL", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lees  luisterboek {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "nl-NL", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lees audio boek {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "nl-NL", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lees audioboek {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "nl-NL", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lees boek {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "nl-NL", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lees het audio boek {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "nl-NL", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lees het audioboek {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "nl-NL", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lees het boek {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "nl-NL", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lees het luister boek {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "nl-NL", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lees het luisterboek {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "nl-NL", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lees luisterboek {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "nl-NL", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lees {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "nl-NL", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lees {query} audio boek", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "nl-NL", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lees {query} audioboek", "slots": ["query"], "entity_values": {"query": []}}
@@ -64,6 +60,12 @@
 {"lang": "nl-NL", "skill": "ovos-skill-application-launcher", "intent": "launch.intent", "template": "draai {application}", "slots": ["application"], "entity_values": {"application": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-application-launcher", "intent": "launch.intent", "template": "open {application}", "slots": ["application"], "entity_values": {"application": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-application-launcher", "intent": "launch.intent", "template": "start {application}", "slots": ["application"], "entity_values": {"application": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-convert", "intent": "convert.intent", "template": "converteer {value} {from_unit} naar {to_unit}", "slots": ["value", "from_unit", "to_unit"], "entity_values": {"value": [], "from_unit": [], "to_unit": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-convert", "intent": "convert.intent", "template": "hoeveel {to_unit} is {value} {from_unit}", "slots": ["to_unit", "value", "from_unit"], "entity_values": {"to_unit": [], "value": [], "from_unit": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-convert", "intent": "convert.intent", "template": "wat is {value} {from_unit} in {to_unit}", "slots": ["value", "from_unit", "to_unit"], "entity_values": {"value": [], "from_unit": [], "to_unit": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-convert", "intent": "convert_last.intent", "template": "wat is dat in {to_unit}", "slots": ["to_unit"], "entity_values": {"to_unit": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-convert", "intent": "convert_last.intent", "template": "hoeveel {to_unit} is dat", "slots": ["to_unit"], "entity_values": {"to_unit": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-convert", "intent": "convert_last.intent", "template": "converteer dat naar {to_unit}", "slots": ["to_unit"], "entity_values": {"to_unit": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "ik (moet | wil) de (kalender | huidige) (datum | dag) in {location} weten", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "ik (moet | wil) de (datum | dag) in {location} weten", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "kan je de (kalender | huidige) (datum | dag) in {location} vertellen", "slots": ["location"], "entity_values": {"location": []}}
@@ -119,6 +121,8 @@
 {"lang": "nl-NL", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "DuckDuckGo {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "vraag DuckDuckGo naar {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "vind {query} op DuckDuckGo", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-fairytales", "intent": "Tales.intent", "template": "(Vertel|Lees) (mij| ) een (goed| ) (verhaal|sprookje) {tale}", "slots": ["tale"], "entity_values": {"tale": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-fairytales", "intent": "Tales.intent", "template": "(Vertel|Lees) mij het verhaal {tale}", "slots": ["tale"], "entity_values": {"tale": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-mark1-ctrl", "intent": "brightness.intent", "template": "(verander|zet|switch) (de|je) (oog|) (helderheid|felheid) (niveau|) naar {brightness} (procent|)", "slots": ["brightness"], "entity_values": {"brightness": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-mark1-ctrl", "intent": "brightness.intent", "template": "(verander|zet|switch) naar {brightness} (procent|) (oog|) (helderheid|felheid)", "slots": ["brightness"], "entity_values": {"brightness": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-mark1-ctrl", "intent": "brightness.intent", "template": "dim (de|jouw) ogen naar {brightness} (procent|)", "slots": ["brightness"], "entity_values": {"brightness": []}}

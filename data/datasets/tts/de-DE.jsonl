@@ -246,6 +246,11 @@
 {"lang": "de-DE", "skill": "ovos-skill-color-picker", "dialog": "report-color-by-name.dialog", "text": "{color_name} hat einen hexadezimalwert von {hex_code}. in r. g. b. ist dies rot {red_value}, grün {green_value}, blau {blue_value}"}
 {"lang": "de-DE", "skill": "ovos-skill-color-picker", "dialog": "report-color-by-rgb-name-known.dialog", "text": "{color_name} hat einen hex-wert von {hex_code}"}
 {"lang": "de-DE", "skill": "ovos-skill-color-picker", "dialog": "report-color-by-rgb-name-not-known.dialog", "text": "diese farbe hat einen hex-wert von {hex_code}"}
+{"lang": "de-DE", "skill": "ovos-skill-convert", "dialog": "conversion_failed.dialog", "text": "da ist etwas schiefgegangen, tut mir leid"}
+{"lang": "de-DE", "skill": "ovos-skill-convert", "dialog": "conversion_result.dialog", "text": "{value} {from_unit} sind {result} {to_unit}"}
+{"lang": "de-DE", "skill": "ovos-skill-convert", "dialog": "incompatible_units.dialog", "text": "ich kann {from_unit} und {to_unit} nicht ineinander umrechnen, das sind unterschiedliche größenarten"}
+{"lang": "de-DE", "skill": "ovos-skill-convert", "dialog": "nothing_to_convert.dialog", "text": "ich habe vor kurzem keine zahl gehört, die ich umrechnen kann"}
+{"lang": "de-DE", "skill": "ovos-skill-convert", "dialog": "unit_not_understood.dialog", "text": "ich kenne diese einheit noch nicht"}
 {"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "es ist {date}"}
 {"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "das datum ist {date}"}
 {"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "{date}"}
@@ -318,6 +323,21 @@
 {"lang": "de-DE", "skill": "ovos-skill-easter-eggs", "dialog": "stardate.dialog", "text": "sternenzeit {{ stardate }}"}
 {"lang": "de-DE", "skill": "ovos-skill-easter-eggs", "dialog": "stardate.dialog", "text": "der aktulle sternenzeit ist {{ stardate }}"}
 {"lang": "de-DE", "skill": "ovos-skill-easter-eggs", "dialog": "stardate.dialog", "text": "heute ist sternenzeit {{ stardate }}"}
+{"lang": "de-DE", "skill": "ovos-skill-fairytales", "dialog": "from_Tales.dialog", "text": "dieses märchen wurde dir von andersenstories.com oder grimmstories.com vorgelesen"}
+{"lang": "de-DE", "skill": "ovos-skill-fairytales", "dialog": "i_know_that.dialog", "text": "{story} ist eine gute geschichte. fangen wir an..."}
+{"lang": "de-DE", "skill": "ovos-skill-fairytales", "dialog": "i_know_that.dialog", "text": "ja, {story} ist eine gute geschichte. sie geht so..."}
+{"lang": "de-DE", "skill": "ovos-skill-fairytales", "dialog": "is_it_that.dialog", "text": "ist es diese?"}
+{"lang": "de-DE", "skill": "ovos-skill-fairytales", "dialog": "is_it_that.dialog", "text": "könnte es diese sein?"}
+{"lang": "de-DE", "skill": "ovos-skill-fairytales", "dialog": "is_it_that.dialog", "text": "soll ich dir diese erzählen?"}
+{"lang": "de-DE", "skill": "ovos-skill-fairytales", "dialog": "is_it_that.dialog", "text": "möchtest du diese hören?"}
+{"lang": "de-DE", "skill": "ovos-skill-fairytales", "dialog": "no_story.dialog", "text": "dann weiß ich nicht, welche geschichte du hören möchtest."}
+{"lang": "de-DE", "skill": "ovos-skill-fairytales", "dialog": "no_story_to_continue.dialog", "text": "du hast gerade keine geschichte, die ich fortsetzen kann."}
+{"lang": "de-DE", "skill": "ovos-skill-fairytales", "dialog": "stop_telling_tales.dialog", "text": "ok. ich höre für jetzt auf zu erzählen."}
+{"lang": "de-DE", "skill": "ovos-skill-fairytales", "dialog": "stop_telling_tales.dialog", "text": "gut. wir können ein andermal weitermachen."}
+{"lang": "de-DE", "skill": "ovos-skill-fairytales", "dialog": "story_unavailable.dialog", "text": "entschuldigung, ich konnte die geschichte gerade nicht abrufen. bitte versuche es gleich noch einmal."}
+{"lang": "de-DE", "skill": "ovos-skill-fairytales", "dialog": "that_would_be.dialog", "text": "ich kann die geschichte {story} erzählen."}
+{"lang": "de-DE", "skill": "ovos-skill-fairytales", "dialog": "that_would_be.dialog", "text": "ich erinnere mich an {story}."}
+{"lang": "de-DE", "skill": "ovos-skill-fairytales", "dialog": "title_by_author.dialog", "text": "{title}. {subtitle}"}
 {"lang": "de-DE", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "bitte formuliere deinen befehl um."}
 {"lang": "de-DE", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "entschuldigung, dass habe ich nicht verstanden."}
 {"lang": "de-DE", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "entschuldigung, ich verstehe nicht."}
@@ -327,6 +347,59 @@
 {"lang": "de-DE", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "ich verstehe nicht."}
 {"lang": "de-DE", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "ich weiß nicht, was das bedeutet."}
 {"lang": "de-DE", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "möglicherweise musst du das anders sagen."}
+{"lang": "de-DE", "skill": "ovos-skill-geography-practice", "dialog": "about_country.dialog", "text": "{country} liegt auf dem kontinent {continent}, hat die hauptstadt {capital}, und grenzt an {countries}"}
+{"lang": "de-DE", "skill": "ovos-skill-geography-practice", "dialog": "about_country_no_borders.dialog", "text": "{country} liegt auf dem kontinent {continent}, hat die hauptstadt {capital}, und grenzt an kein anderes land"}
+{"lang": "de-DE", "skill": "ovos-skill-geography-practice", "dialog": "continue_teaching_prompt.dialog", "text": "sag wiederholen um das nochmal zu hören, oder sag etwas anderes um fortzufahren"}
+{"lang": "de-DE", "skill": "ovos-skill-geography-practice", "dialog": "nothing_taught_yet.dialog", "text": "ich habe dir diese sitzung noch nichts beigebracht - versuche zuerst bring mir etwas über europa bei"}
+{"lang": "de-DE", "skill": "ovos-skill-geography-practice", "dialog": "quiz_correct.dialog", "text": "richtig"}
+{"lang": "de-DE", "skill": "ovos-skill-geography-practice", "dialog": "quiz_correct.dialog", "text": "korrekt"}
+{"lang": "de-DE", "skill": "ovos-skill-geography-practice", "dialog": "quiz_finished.dialog", "text": "du hast {correct} von {total} richtig beantwortet"}
+{"lang": "de-DE", "skill": "ovos-skill-geography-practice", "dialog": "quiz_incorrect_border_no.dialog", "text": "leider falsch, {country} grenzt nicht an {other}"}
+{"lang": "de-DE", "skill": "ovos-skill-geography-practice", "dialog": "quiz_incorrect_border_yes.dialog", "text": "leider falsch, {country} grenzt an {other}"}
+{"lang": "de-DE", "skill": "ovos-skill-geography-practice", "dialog": "quiz_incorrect_capital.dialog", "text": "leider falsch, die hauptstadt von {country} ist {capital}"}
+{"lang": "de-DE", "skill": "ovos-skill-geography-practice", "dialog": "quiz_incorrect_continent.dialog", "text": "leider falsch, {country} liegt in {continent}"}
+{"lang": "de-DE", "skill": "ovos-skill-geography-practice", "dialog": "quiz_no_answer.dialog", "text": "ich habe keine antwort gehört"}
+{"lang": "de-DE", "skill": "ovos-skill-geography-practice", "dialog": "quiz_question_border.dialog", "text": "grenzt {country} an {other}"}
+{"lang": "de-DE", "skill": "ovos-skill-geography-practice", "dialog": "quiz_question_capital.dialog", "text": "was ist die hauptstadt von {country}"}
+{"lang": "de-DE", "skill": "ovos-skill-geography-practice", "dialog": "quiz_question_continent.dialog", "text": "auf welchem kontinent liegt {country}"}
+{"lang": "de-DE", "skill": "ovos-skill-geography-practice", "dialog": "region_not_understood.dialog", "text": "ich kenne keine region namens {region}"}
+{"lang": "de-DE", "skill": "ovos-skill-geography-practice", "dialog": "teaching_finished.dialog", "text": "das waren {count} länder - sag quiz mich zu dem was du mir beigebracht hast um zu üben"}
+{"lang": "de-DE", "skill": "ovos-skill-geography", "dialog": "about_country_no_borders.dialog", "text": "{country} liegt auf dem kontinent {continent}, hat die hauptstadt {capital}, und grenzt an kein anderes land"}
+{"lang": "de-DE", "skill": "ovos-skill-geography", "dialog": "area_of_unknown.dialog", "text": "ich habe keine flächendaten für {country}"}
+{"lang": "de-DE", "skill": "ovos-skill-geography", "dialog": "borders_of_none.dialog", "text": "{country} grenzt an kein anderes land"}
+{"lang": "de-DE", "skill": "ovos-skill-geography", "dialog": "capital_of_multi.dialog", "text": "{country} hat mehrere hauptstädte: {capitals}"}
+{"lang": "de-DE", "skill": "ovos-skill-geography", "dialog": "country_not_understood.dialog", "text": "ich kenne kein land namens {country}"}
+{"lang": "de-DE", "skill": "ovos-skill-geography", "dialog": "currency_of_unknown.dialog", "text": "ich habe keine währungsdaten für {country}"}
+{"lang": "de-DE", "skill": "ovos-skill-geography", "dialog": "language_of_unknown.dialog", "text": "ich habe keine sprachdaten für {country}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "area_of_circle.dialog", "text": "die fläche eines kreises mit dem radius {radius} ist {area}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "area_of_rectangle.dialog", "text": "die fläche eines rechtecks mit der länge {length} und der breite {width} ist {area}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "area_of_square.dialog", "text": "die fläche eines quadrats mit der seite {side} ist {area}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "area_of_triangle.dialog", "text": "die fläche eines dreiecks mit der grundseite {base} und der höhe {height} ist {area}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "category_not_understood.dialog", "text": "ich kenne keine kategorie namens {category} - versuche begriffe, 2d formen, oder 3d formen"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "circumference_of_circle.dialog", "text": "der umfang eines kreises mit dem radius {radius} ist {circumference}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "continue_teaching_prompt.dialog", "text": "sag wiederholen um das nochmal zu hören, oder sag etwas anderes um fortzufahren"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "nothing_taught_yet.dialog", "text": "ich habe dir diese sitzung noch nichts beigebracht - versuche zuerst bring mir etwas über begriffe bei"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "perimeter_of_rectangle.dialog", "text": "der umfang eines rechtecks mit der länge {length} und der breite {width} ist {perimeter}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "perimeter_of_square.dialog", "text": "der umfang eines quadrats mit der seite {side} ist {perimeter}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "quiz_correct.dialog", "text": "das ist richtig"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "quiz_finished.dialog", "text": "du hattest {correct} von {total}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "quiz_incorrect_definition.dialog", "text": "nicht ganz - die richtige antwort war {letter}: ein {term} ist {definition}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "quiz_incorrect_numeric.dialog", "text": "das habe ich nicht richtig verstanden, die richtige antwort war {answer}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "quiz_no_answer.dialog", "text": "ich habe keine antwort gehört"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "quiz_question_circle.dialog", "text": "für einen kreis mit dem radius {radius}, was ist {property}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "quiz_question_definition.dialog", "text": "was von diesen ist die definition eines {term}? {options}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "quiz_question_pythagoras.dialog", "text": "ein rechtwinkliges dreieck hat die katheten {leg_a} und {leg_b} - was ist die hypotenuse"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "quiz_question_rectangle.dialog", "text": "für ein rechteck mit der länge {length} und der breite {width}, was ist {property}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "quiz_question_square.dialog", "text": "für ein quadrat mit der seite {side}, was ist {property}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "quiz_question_triangle.dialog", "text": "für ein dreieck mit der grundseite {base} und der höhe {height}, was ist {property}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "teach_definition.dialog", "text": "ein {term} ist {definition}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "teach_example_pythagoras.dialog", "text": "zum beispiel hat ein rechtwinkliges dreieck mit den katheten {leg_a} und {leg_b} eine hypotenuse von {hypotenuse}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "teach_formula.dialog", "text": "{property} eines {shape} ist {formula}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry-practice", "dialog": "teaching_finished.dialog", "text": "das waren {count} dinge - sag quiz mich zu dem was du mir beigebracht hast um zu üben"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry", "dialog": "definition.dialog", "text": "ein {term} ist {definition}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry", "dialog": "formula_not_understood.dialog", "text": "ich habe keine formel für {property} eines {shape}"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry", "dialog": "number_not_understood.dialog", "text": "ich habe die zahl nicht verstanden"}
+{"lang": "de-DE", "skill": "ovos-skill-geometry", "dialog": "term_not_understood.dialog", "text": "ich kenne keinen begriff namens {term}"}
 {"lang": "de-DE", "skill": "ovos-skill-ggwave", "dialog": "ggwave_already_disabled.dialog", "text": "audio-qr-codes sind bereits deaktiviert"}
 {"lang": "de-DE", "skill": "ovos-skill-ggwave", "dialog": "ggwave_already_enabled.dialog", "text": "audio-qr-codes sind bereits aktiviert"}
 {"lang": "de-DE", "skill": "ovos-skill-ggwave", "dialog": "ggwave_disabled.dialog", "text": "deaktiviere audio-qr-codes"}
@@ -353,6 +426,11 @@
 {"lang": "de-DE", "skill": "ovos-skill-hello-world", "dialog": "welcome.dialog", "text": "kein problem."}
 {"lang": "de-DE", "skill": "ovos-skill-hello-world", "dialog": "welcome.dialog", "text": "stehe gerne zur verfügung."}
 {"lang": "de-DE", "skill": "ovos-skill-hello-world", "dialog": "welcome.dialog", "text": "jeder zeit."}
+{"lang": "de-DE", "skill": "ovos-skill-holidays", "dialog": "date_not_understood.dialog", "text": "entschuldigung, das datum habe ich nicht verstanden"}
+{"lang": "de-DE", "skill": "ovos-skill-holidays", "dialog": "holiday_is_today.dialog", "text": "{holiday} ist heute"}
+{"lang": "de-DE", "skill": "ovos-skill-holidays", "dialog": "holiday_not_understood.dialog", "text": "ich kenne keinen feiertag namens {holiday}"}
+{"lang": "de-DE", "skill": "ovos-skill-holidays", "dialog": "today_is_holiday.dialog", "text": "heute ist {holiday}"}
+{"lang": "de-DE", "skill": "ovos-skill-holidays", "dialog": "today_is_not_holiday.dialog", "text": "nein, heute ist kein feiertag"}
 {"lang": "de-DE", "skill": "ovos-skill-icanhazdadjokes", "dialog": "chuck_norris_jokes.dialog", "text": "alle menschen malen den teufel an die wand, der teufel aber malt chuck norris an die wand."}
 {"lang": "de-DE", "skill": "ovos-skill-icanhazdadjokes", "dialog": "chuck_norris_jokes.dialog", "text": "besser mit chuck norris teilen als von chuck norris geteilt zu werden."}
 {"lang": "de-DE", "skill": "ovos-skill-icanhazdadjokes", "dialog": "chuck_norris_jokes.dialog", "text": "bill gates lebt in ständiger angst, dass der pc von chuck norris abstürzt."}
@@ -482,6 +560,24 @@
 {"lang": "de-DE", "skill": "ovos-skill-icanhazdadjokes", "dialog": "general_jokes.dialog", "text": "wieso eigentlich legen hühner eier? - schmeißen geht nicht. gehen doch sonst kaputt."}
 {"lang": "de-DE", "skill": "ovos-skill-icanhazdadjokes", "dialog": "general_jokes.dialog", "text": "zahnarzt zum patienten: sie brauchen eine krone - patient: endlich versteht mich jemand."}
 {"lang": "de-DE", "skill": "ovos-skill-icanhazdadjokes", "dialog": "no_joke.dialog", "text": "ich konnte keinen witz über {query} finden"}
+{"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "code_not_understood.dialog", "text": "entschuldigung, den code habe ich nicht verstanden"}
+{"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "code_set.dialog", "text": "intercom-code ist gesetzt"}
+{"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "message_from.dialog", "text": "nachricht von {sender}"}
+{"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "message_sent.dialog", "text": "nachricht gesendet"}
+{"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "name_not_understood.dialog", "text": "entschuldigung, den namen habe ich nicht verstanden"}
+{"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "name_set.dialog", "text": "dieses gerät heißt jetzt {name} für intercom"}
+{"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "own_code_not_set.dialog", "text": "dieses gerät hat noch keinen intercom-code. sage \"setze intercom-code auf\" gefolgt von einem code"}
+{"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "own_name_not_set.dialog", "text": "dieses gerät hat noch keinen intercom-namen. sage \"setze intercom-namen auf\" gefolgt von einem namen für dieses gerät"}
+{"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "reply_failed.dialog", "text": "ich konnte deine antwort nicht senden"}
+{"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "reply_sent.dialog", "text": "antwort gesendet"}
+{"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "say_your_reply.dialog", "text": "sag deine antwort"}
+{"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "target_code_mismatch.dialog", "text": "{target} hat einen anderen intercom-code als du. stelle sicher, dass auf beiden geräten derselbe code gesetzt ist"}
+{"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "target_no_code_set.dialog", "text": "{target} hat noch keinen intercom-code gesetzt. sage \"setze intercom-code auf\" gefolgt von einem code, auf dem gerät namens {target}"}
+{"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "target_not_found.dialog", "text": "ich kann kein gerät namens {target} im netzwerk finden"}
+{"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "target_not_understood.dialog", "text": "entschuldigung, welches gerät meintest du?"}
+{"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "target_unreachable.dialog", "text": "ich konnte {target} nicht erreichen"}
+{"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "want_to_reply.dialog", "text": "möchtest du antworten?"}
+{"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "what_to_say.dialog", "text": "was soll ich sagen?"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "dot.dialog", "text": "punkt"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "ethernet.connection.dialog", "text": "ich bin per kabel verbunden"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "ethernet.connection.dialog", "text": "ich bin per netzwerkkabel verbunden"}
@@ -621,19 +717,19 @@
 {"lang": "de-DE", "skill": "ovos-skill-parrot", "dialog": "please_repeat.dialog", "text": "was hast du gesagt?"}
 {"lang": "de-DE", "skill": "ovos-skill-parrot", "dialog": "repeat_stt_old.dialog", "text": "das letzte was du gesagt hast war {stt}."}
 {"lang": "de-DE", "skill": "ovos-skill-parrot", "dialog": "repeat_stt_old.dialog", "text": "vor einer weile hast du gesagt: {stt}."}
-{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "what.am.i.dialog", "text": "ich bin eine open-source-künstliche intelligenz."}
-{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "what.am.i.dialog", "text": "ich bin eine intelligente software für die kommunikation mit maschinen"}
-{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "when.was.i.born.dialog", "text": "ich wurde {year} geboren."}
-{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "when.was.i.born.dialog", "text": "{year} ist das jahr meiner geburt."}
-{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "when.was.i.born.dialog", "text": "{year} wurde ich geboren."}
-{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "where.was.i.born.dialog", "text": "das {location}"}
-{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "who.am.i.dialog", "text": "ich bin {name}, eine open-source-k.i."}
-{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "who.am.i.dialog", "text": "mein name ist {name} und ich bin ein intelligenter, persönlicher assistent"}
-{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "who.made.me.dialog", "text": "die wunderbare {creator} community mit team."}
-{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "who.made.me.dialog", "text": "jeder in der {creator} community und im team."}
-{"lang": "de-DE", "skill": "ovos-skill-screenshot", "dialog": "screenshot.failed.dialog", "text": "ich konnte den screenshot nicht machen"}
-{"lang": "de-DE", "skill": "ovos-skill-screenshot", "dialog": "screenshot.failed.dialog", "text": "screenshot fehlgeschlagen"}
-{"lang": "de-DE", "skill": "ovos-skill-screenshot", "dialog": "screenshot.taken.dialog", "text": "screenshot gemacht"}
+{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "what_am_i.dialog", "text": "ich bin eine open-source-künstliche intelligenz."}
+{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "what_am_i.dialog", "text": "ich bin eine intelligente software für die kommunikation mit maschinen"}
+{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "when_was_i_born.dialog", "text": "ich wurde {year} geboren."}
+{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "when_was_i_born.dialog", "text": "{year} ist das jahr meiner geburt."}
+{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "when_was_i_born.dialog", "text": "{year} wurde ich geboren."}
+{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "where_was_i_born.dialog", "text": "das {location}"}
+{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "who_am_i.dialog", "text": "ich bin {name}, eine open-source-k.i."}
+{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "who_am_i.dialog", "text": "mein name ist {name} und ich bin ein intelligenter, persönlicher assistent"}
+{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "who_made_me.dialog", "text": "die wunderbare {creator} community mit team."}
+{"lang": "de-DE", "skill": "ovos-skill-personal", "dialog": "who_made_me.dialog", "text": "jeder in der {creator} community und im team."}
+{"lang": "de-DE", "skill": "ovos-skill-screenshot", "dialog": "screenshot_failed.dialog", "text": "ich konnte den screenshot nicht machen"}
+{"lang": "de-DE", "skill": "ovos-skill-screenshot", "dialog": "screenshot_failed.dialog", "text": "screenshot fehlgeschlagen"}
+{"lang": "de-DE", "skill": "ovos-skill-screenshot", "dialog": "screenshot_taken.dialog", "text": "screenshot gemacht"}
 {"lang": "de-DE", "skill": "ovos-skill-speedtest", "dialog": "error.dialog", "text": "es ist ein fehler aufgetreten, ich konnte keinen geschwindigkeitstest durchführen ... entschuldigung."}
 {"lang": "de-DE", "skill": "ovos-skill-speedtest", "dialog": "result.dialog", "text": "deine downloadgeschwindigkeit beträgt {down} megabit pro sekunde und deine uploadgeschwindigkeit beträgt {up} megabit pro sekunde."}
 {"lang": "de-DE", "skill": "ovos-skill-speedtest", "dialog": "running.dialog", "text": "ich starte jetzt den geschwindigkeitstest und melde mich in kürze mit den ergebnissen."}

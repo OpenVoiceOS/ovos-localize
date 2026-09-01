@@ -555,10 +555,8 @@
 {"lang": "pt-PT", "skill": "ovos-ocp-pipeline-plugin", "intent": "play.intent", "template": "reproduz {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "pt-PT", "skill": "ovos-ocp-pipeline-plugin", "intent": "play.intent", "template": "reproduzir {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "pt-PT", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "ler   audiolivro  {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "pt-PT", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "ler   audiolivro {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "pt-PT", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "ler  livro  {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "pt-PT", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "ler o  audiolivro  {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "pt-PT", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "ler o  audiolivro {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "pt-PT", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "ler o livro  {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "pt-PT", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lê {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "pt-PT", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lê {query} audiobook", "slots": ["query"], "entity_values": {"query": []}}
@@ -579,6 +577,62 @@
 {"lang": "pt-PT", "skill": "ovos-skill-color-picker", "intent": "request-color-by-name.intent", "template": "Mostre-me a cor {cor}", "slots": ["cor"], "entity_values": {"cor": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-color-picker", "intent": "request-color-by-name.intent", "template": "como é a cor {cor}", "slots": ["cor"], "entity_values": {"cor": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-color-picker", "intent": "request-color-by-rgb.intent", "template": "qual cor tem um valor RGB de {rgb}", "slots": ["rgb"], "entity_values": {"rgb": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-convert", "intent": "convert.intent", "template": "converte {value} {from_unit} para {to_unit}", "slots": ["value", "from_unit", "to_unit"], "entity_values": {"value": [], "from_unit": [], "to_unit": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-convert", "intent": "convert.intent", "template": "quantos {to_unit} são {value} {from_unit}", "slots": ["to_unit", "value", "from_unit"], "entity_values": {"to_unit": [], "value": [], "from_unit": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-convert", "intent": "convert.intent", "template": "o que é {value} {from_unit} em {to_unit}", "slots": ["value", "from_unit", "to_unit"], "entity_values": {"value": [], "from_unit": [], "to_unit": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-convert", "intent": "convert_last.intent", "template": "o que é isso em {to_unit}", "slots": ["to_unit"], "entity_values": {"to_unit": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-convert", "intent": "convert_last.intent", "template": "quantos {to_unit} são isso", "slots": ["to_unit"], "entity_values": {"to_unit": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-convert", "intent": "convert_last.intent", "template": "converte isso para {to_unit}", "slots": ["to_unit"], "entity_values": {"to_unit": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number}", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number}  em escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number}  em escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number}  usando escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number}  usando escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} com números cardinais", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} com números cardinais em escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} com números cardinais em escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} com números cardinais usando escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} com números cardinais usando escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} com números ordinais", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} com números ordinais em escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} com números ordinais em escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} com números ordinais usando escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} com números ordinais usando escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} usando números cardinais", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} usando números cardinais em escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} usando números cardinais em escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} usando números cardinais usando escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} usando números cardinais usando escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} usando números ordinais", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} usando números ordinais em escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} usando números ordinais em escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} usando números ordinais usando escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "começar a contar até {number} usando números ordinais usando escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number}", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number}  em escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number}  em escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number}  usando escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number}  usando escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} com números cardinais", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} com números cardinais em escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} com números cardinais em escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} com números cardinais usando escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} com números cardinais usando escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} com números ordinais", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} com números ordinais em escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} com números ordinais em escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} com números ordinais usando escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} com números ordinais usando escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} usando números cardinais", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} usando números cardinais em escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} usando números cardinais em escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} usando números cardinais usando escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} usando números cardinais usando escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} usando números ordinais", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} usando números ordinais em escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} usando números ordinais em escala longa", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} usando números ordinais usando escala curta", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "contar até {number} usando números ordinais usando escala longa", "slots": ["number"], "entity_values": {"number": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "Preciso de saber a data do calendário em {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "Preciso de saber a data em {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "Quero saber a data em {location}", "slots": ["location"], "entity_values": {"location": []}}
@@ -1211,6 +1265,8 @@
 {"lang": "pt-PT", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "pergunta ao duckduckgo {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "busca {query} no duckduckgo", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "duck duck go {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-fairytales", "intent": "Tales.intent", "template": "(Conta|Lê)-me uma (boa| ) (história|conto) {tale}", "slots": ["tale"], "entity_values": {"tale": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-fairytales", "intent": "Tales.intent", "template": "(Conta|Lê)-me a história {tale}", "slots": ["tale"], "entity_values": {"tale": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-icanhazdadjokes", "intent": "search_joke.intent", "template": "(conta|conta-me|diz-me) uma (piada|anedota) sobre {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-icanhazdadjokes", "intent": "search_joke.intent", "template": "(piada|anedota) sobre {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-icanhazdadjokes", "intent": "search_joke.intent", "template": "sabes alguma (piada|anedota) sobre {query}", "slots": ["query"], "entity_values": {"query": []}}

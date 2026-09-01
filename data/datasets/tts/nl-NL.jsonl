@@ -240,6 +240,11 @@
 {"lang": "nl-NL", "skill": "ovos-skill-boot-finished", "dialog": "deny_ready.dialog", "text": "nog niet alles is klaar."}
 {"lang": "nl-NL", "skill": "ovos-skill-boot-finished", "dialog": "deny_ready.dialog", "text": "sommige diensten zijn nog aan het opstarten."}
 {"lang": "nl-NL", "skill": "ovos-skill-boot-finished", "dialog": "ready.dialog", "text": "ik ben er klaar voor!"}
+{"lang": "nl-NL", "skill": "ovos-skill-convert", "dialog": "conversion_failed.dialog", "text": "er ging iets mis, sorry"}
+{"lang": "nl-NL", "skill": "ovos-skill-convert", "dialog": "conversion_result.dialog", "text": "{value} {from_unit} is {result} {to_unit}"}
+{"lang": "nl-NL", "skill": "ovos-skill-convert", "dialog": "incompatible_units.dialog", "text": "ik kan {from_unit} en {to_unit} niet omrekenen, dat zijn geen vergelijkbare eenheden"}
+{"lang": "nl-NL", "skill": "ovos-skill-convert", "dialog": "nothing_to_convert.dialog", "text": "ik heb recent geen getal gehoord om om te rekenen"}
+{"lang": "nl-NL", "skill": "ovos-skill-convert", "dialog": "unit_not_understood.dialog", "text": "ik ken die eenheid nog niet"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "de huidige datum is {date}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "het is {date}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "{date}"}
@@ -262,6 +267,21 @@
 {"lang": "nl-NL", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "ik kon geen antwoord vinden op duckduckgo."}
 {"lang": "nl-NL", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "sorry, duckduckgo heeft geen resultaat teruggegeven."}
 {"lang": "nl-NL", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "ik heb niets gevonden op duckduckgo hiervoor."}
+{"lang": "nl-NL", "skill": "ovos-skill-fairytales", "dialog": "from_Tales.dialog", "text": "dit sprookje werd aan je voorgelezen van andersenstories.com of grimmstories.com"}
+{"lang": "nl-NL", "skill": "ovos-skill-fairytales", "dialog": "i_know_that.dialog", "text": "{story} is een goede. laten we beginnen..."}
+{"lang": "nl-NL", "skill": "ovos-skill-fairytales", "dialog": "i_know_that.dialog", "text": "ja, {story} is een goede. het gaat zo..."}
+{"lang": "nl-NL", "skill": "ovos-skill-fairytales", "dialog": "is_it_that.dialog", "text": "is het die?"}
+{"lang": "nl-NL", "skill": "ovos-skill-fairytales", "dialog": "is_it_that.dialog", "text": "zou het die kunnen zijn?"}
+{"lang": "nl-NL", "skill": "ovos-skill-fairytales", "dialog": "is_it_that.dialog", "text": "zal ik je die vertellen?"}
+{"lang": "nl-NL", "skill": "ovos-skill-fairytales", "dialog": "is_it_that.dialog", "text": "wil je die horen?"}
+{"lang": "nl-NL", "skill": "ovos-skill-fairytales", "dialog": "no_story.dialog", "text": "dan weet ik niet welk verhaal je wilt horen."}
+{"lang": "nl-NL", "skill": "ovos-skill-fairytales", "dialog": "no_story_to_continue.dialog", "text": "je hebt geen verhaal dat ik kan voortzetten."}
+{"lang": "nl-NL", "skill": "ovos-skill-fairytales", "dialog": "stop_telling_tales.dialog", "text": "oké. ik stop met vertellen voor nu."}
+{"lang": "nl-NL", "skill": "ovos-skill-fairytales", "dialog": "stop_telling_tales.dialog", "text": "prima. we kunnen een andere keer verdergaan."}
+{"lang": "nl-NL", "skill": "ovos-skill-fairytales", "dialog": "story_unavailable.dialog", "text": "sorry, ik kon het verhaal nu niet ophalen. probeer het straks nog eens."}
+{"lang": "nl-NL", "skill": "ovos-skill-fairytales", "dialog": "that_would_be.dialog", "text": "ik kan het verhaal {story} vertellen."}
+{"lang": "nl-NL", "skill": "ovos-skill-fairytales", "dialog": "that_would_be.dialog", "text": "ik herinner me {story}."}
+{"lang": "nl-NL", "skill": "ovos-skill-fairytales", "dialog": "title_by_author.dialog", "text": "{title}. {subtitle}"}
 {"lang": "nl-NL", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "excuseer me, dat kreeg ik niet mee."}
 {"lang": "nl-NL", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "excuseer me, ik begrijp het niet."}
 {"lang": "nl-NL", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "ik aarzel of ik je begrepen heb."}
@@ -791,16 +811,16 @@
 {"lang": "nl-NL", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.short.dialog", "text": "oké"}
 {"lang": "nl-NL", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.short.dialog", "text": "gaat slapen"}
 {"lang": "nl-NL", "skill": "ovos-skill-naptime", "dialog": "i.am.awake.dialog", "text": "ik ben wakker"}
-{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "what.am.i.dialog", "text": "ik ben een intelligent stukje software voor communicatie met machines"}
-{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "what.am.i.dialog", "text": "ik ben een open source kunstmatige intelligentie."}
-{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "when.was.i.born.dialog", "text": "ik ben geboren in {year}."}
-{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "when.was.i.born.dialog", "text": "ik sprak voor het eerst in {year}."}
-{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "when.was.i.born.dialog", "text": "{year} is het jaar waarin ik geboren ben."}
-{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "where.was.i.born.dialog", "text": "ik ben geboren in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "who.am.i.dialog", "text": "ik ben {name}, een open-source kunstmatige intelligentie."}
-{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "who.am.i.dialog", "text": "mijn naam is {name} en ik ben een intelligente persoonlijke assistent"}
-{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "who.made.me.dialog", "text": "de geweldige {creator} community en team."}
-{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "who.made.me.dialog", "text": "iedereen in de {creator} community en het team."}
+{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "what_am_i.dialog", "text": "ik ben een intelligent stukje software voor communicatie met machines"}
+{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "what_am_i.dialog", "text": "ik ben een open source kunstmatige intelligentie."}
+{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "when_was_i_born.dialog", "text": "ik ben geboren in {year}."}
+{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "when_was_i_born.dialog", "text": "ik sprak voor het eerst in {year}."}
+{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "when_was_i_born.dialog", "text": "{year} is het jaar waarin ik geboren ben."}
+{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "where_was_i_born.dialog", "text": "ik ben geboren in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "who_am_i.dialog", "text": "ik ben {name}, een open-source kunstmatige intelligentie."}
+{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "who_am_i.dialog", "text": "mijn naam is {name} en ik ben een intelligente persoonlijke assistent"}
+{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "who_made_me.dialog", "text": "de geweldige {creator} community en team."}
+{"lang": "nl-NL", "skill": "ovos-skill-personal", "dialog": "who_made_me.dialog", "text": "iedereen in de {creator} community en het team."}
 {"lang": "nl-NL", "skill": "ovos-skill-speedtest", "dialog": "error.dialog", "text": "er is iets fout gegaan, ik kon geen snelheidstest uitvoeren... sorry."}
 {"lang": "nl-NL", "skill": "ovos-skill-speedtest", "dialog": "result.dialog", "text": "de download snelheid is {down} megabit per seconde en de upload snelheid is {up} megabit per seconde."}
 {"lang": "nl-NL", "skill": "ovos-skill-speedtest", "dialog": "running.dialog", "text": "de snelheidstest wordt nu gestart, ik ben zo terug met de resultaten."}
