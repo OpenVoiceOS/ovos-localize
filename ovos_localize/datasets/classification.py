@@ -3,7 +3,11 @@
 from collections.abc import Iterator
 from typing import Any
 
-from ovos_localize.bracket_expansion import clean_text, expand_template
+from ovos_localize.bracket_expansion import (
+    MAX_TEMPLATE_EXPANSIONS,
+    clean_text,
+    expand_template_cached,
+)
 
 
 def generate_intent_classification(skill_id: str, skill_data: dict) -> Iterator[dict[str, Any]]:
@@ -34,7 +38,7 @@ def generate_intent_classification(skill_id: str, skill_data: dict) -> Iterator[
                     continue
 
                 # Expand templates: "(hello|hi) world" -> "hello world", "hi world"
-                for expanded in expand_template(template):
+                for expanded in expand_template_cached(template, MAX_TEMPLATE_EXPANSIONS):
                     cleaned = clean_text(expanded)
                     if not cleaned or cleaned in seen:
                         continue

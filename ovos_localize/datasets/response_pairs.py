@@ -14,7 +14,11 @@ translation are skipped.
 from collections.abc import Iterator
 from typing import Any
 
-from ovos_localize.bracket_expansion import clean_text, expand_template
+from ovos_localize.bracket_expansion import (
+    MAX_TEMPLATE_EXPANSIONS,
+    clean_text,
+    expand_template_cached,
+)
 
 
 def generate_response_pairs(skill_id: str, skill_data: dict) -> Iterator[dict[str, Any]]:
@@ -54,7 +58,7 @@ def generate_response_pairs(skill_id: str, skill_data: dict) -> Iterator[dict[st
                 template = entry.get("text", "").strip()
                 if not template or template.startswith("#"):
                     continue
-                for expanded in expand_template(template):
+                for expanded in expand_template_cached(template, MAX_TEMPLATE_EXPANSIONS):
                     text = clean_text(expanded)
                     if text and text not in seen_d:
                         seen_d.add(text)
@@ -87,7 +91,7 @@ def generate_response_pairs(skill_id: str, skill_data: dict) -> Iterator[dict[st
                 template = entry.get("text", "").strip()
                 if not template or template.startswith("#"):
                     continue
-                for expanded in expand_template(template):
+                for expanded in expand_template_cached(template, MAX_TEMPLATE_EXPANSIONS):
                     utterance = clean_text(expanded)
                     if not utterance or utterance in seen_u:
                         continue
