@@ -1,3 +1,30 @@
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "lisää (asioita|kohteita) listaan [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "lisää (asioita|kohteita) {name} listaan", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "(aseta|luo|lisää) hälytys [kello {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "uusi hälytys [{time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "aseta hälytys kello {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateAlarmAlt.intent", "template": "herätä minut [kello {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "(luo|lisää) (tapahtuma|tapaaminen) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "uusi (tapahtuma|tapaaminen) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "(luo|tee|lisää) [uusi] lista [nimeltä {name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "uusi lista [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "(luo|tee|lisää) [uusi] {name} lista", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "(luo|lisää|aseta) [uusi] muistutus [{reminder}] [kello {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "uusi muistutus [{reminder}]", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "muistuta minua [{reminder}(:sta|sta)] [kello {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "kerro minulle että {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "muistuta minua {duration}(:n|n) päästä [{reminder}(:sta|sta)]", "slots": ["duration", "reminder"], "entity_values": {"duration": [], "reminder": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "(aseta|käynnistä|luo) ajastin [{duration}(:ksi|ksi)]", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "uusi ajastin [{duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "(aseta|käynnistä|luo) {duration}(:n|n) ajastin", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(poista|hävitä) lista [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(poista|hävitä) {name} lista", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "DeleteListEntries.intent", "template": "(poista|tyhjennä) listan [{name}] (kohteet|kaikki)", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "DeleteListEntries.intent", "template": "(poista|tyhjennä) {name} listan (kohteet|kaikki)", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(mitä|mitkä kohteet) on listalla [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(lue|näytä) listan [{name}] kohteet", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(mitä|mitkä kohteet) on {name} listalla", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(lue|näytä) {name} listan kohteet", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "next.leap.year.intent", "template": "seuraava karkausvuosi on {year}", "slots": ["year"], "entity_values": {"year": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "kuinka paljon kello on {offset} sekuntia {location}:ssä", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "kun se on {offset} minuutin kuluttua {location}:ssä.", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}

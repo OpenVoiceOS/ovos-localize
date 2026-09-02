@@ -517,6 +517,25 @@
 {"lang": "gl-ES", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "ler {query} audio libro", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "gl-ES", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "ler {query} audiolibro", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "gl-ES", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "ler {query} libro", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "engade (elementos|entradas|cousas) á [miña] lista [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "(pon|crea|engade) unha alarma [para {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "alarma nova [para {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "CreateAlarmAlt.intent", "template": "(espértame|acórdame) [ás {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "(crea|engade|agenda) (un evento|unha cita) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "evento novo [{event}]", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "teño (un evento|unha cita) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "(crea|fai|engade) unha lista [nova] [chamada {name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "lista nova [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "(pon|crea|engade) un [novo] lembrete [para {reminder}] [ás {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "lembrete novo [{reminder}]", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "lémbrame [que {reminder}] [ás {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "dime que {reminder} [ás {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "(pon|crea|inicia) un temporizador [de {duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "temporizador novo [de {duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(elimina|borra) a [miña] lista [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "DeleteListEntries.intent", "template": "(elimina|borra) (os elementos|as entradas|todo) da [miña] lista [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(que elementos|que entradas) hai na [miña] lista [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(le|mostra) [me] as entradas da [miña] lista [{name}]", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-application-launcher", "intent": "close.intent", "template": "pechar {application}", "slots": ["application"], "entity_values": {"application": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-application-launcher", "intent": "close.intent", "template": "rematar {application}", "slots": ["application"], "entity_values": {"application": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-application-launcher", "intent": "close.intent", "template": "saír de {application}", "slots": ["application"], "entity_values": {"application": []}}
@@ -574,6 +593,7 @@
 {"lang": "gl-ES", "skill": "ovos-skill-audio-recording", "intent": "start_recording.intent", "template": "iniciar unha gravación de audio chamada {name}", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-audio-recording", "intent": "start_recording.intent", "template": "iniciar unha gravación de audio co nome {name}", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-audio-recording", "intent": "start_recording.intent", "template": "nova gravación co nome {name}", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-cmd", "intent": "RunScriptCommandIntent.intent", "template": "(executa[r]|arrinca[r]) [o] (comando|script) {script}", "slots": ["script"], "entity_values": {"script": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "cal día e mes de en {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "cal día e mes é en {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "cal día, mes e ano de en {location}", "slots": ["location"], "entity_values": {"location": []}}
@@ -1492,11 +1512,13 @@
 {"lang": "gl-ES", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "pódese escribir a palabra {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "soletrear palabra {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "soletrear {word}", "slots": ["word"], "entity_values": {"word": []}}
-{"lang": "gl-ES", "skill": "ovos-skill-wallpapers", "intent": "picture.about.intent", "template": "(mostrar|ensinar) (foto|fotografía|imaxe) (nova|aleatoria) (sobre|para|con) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "gl-ES", "skill": "ovos-skill-wallpapers", "intent": "picture.about.intent", "template": "(mostrar|ensinar) (outra) (foto|fotografía|imaxe) (aleatoria|nova|distinta) (sobre|para|con) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "gl-ES", "skill": "ovos-skill-wallpapers", "intent": "picture.about.intent", "template": "(móstrame|ensíname) (unha|outra) (foto|fotografía|imaxe) (aleatoria|nova||distinta) (sobre|para|con) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "gl-ES", "skill": "ovos-skill-wallpapers", "intent": "picture.about.intent", "template": "(móstrame|ensíname) unha (foto|fotografía|imaxe) (sobre|para|con) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "gl-ES", "skill": "ovos-skill-wallpapers", "intent": "wallpaper.about.intent", "template": "(cambiar|mudar) fondo de escritorio (aleatorio|novo) (sobre|para|con|de) {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-volume", "intent": "change_volume.intent", "template": "(muda[r]|define|pon) o volume (a|ao) {level}", "slots": ["level"], "entity_values": {"level": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-volume", "intent": "change_volume.intent", "template": "volume ao {level} por cento", "slots": ["level"], "entity_values": {"level": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-wallpapers", "intent": "picture_about.intent", "template": "(mostrar|ensinar) (foto|fotografía|imaxe) (nova|aleatoria) (sobre|para|con) {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-wallpapers", "intent": "picture_about.intent", "template": "(mostrar|ensinar) (outra) (foto|fotografía|imaxe) (aleatoria|nova|distinta) (sobre|para|con) {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-wallpapers", "intent": "picture_about.intent", "template": "(móstrame|ensíname) (unha|outra) (foto|fotografía|imaxe) (aleatoria|nova||distinta) (sobre|para|con) {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-wallpapers", "intent": "picture_about.intent", "template": "(móstrame|ensíname) unha (foto|fotografía|imaxe) (sobre|para|con) {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-wallpapers", "intent": "wallpaper_about.intent", "template": "(cambiar|mudar) fondo de escritorio (aleatorio|novo) (sobre|para|con|de) {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-weather", "intent": "N_days_forecast.intent", "template": "amosa a previsión para 7 días en {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-weather", "intent": "N_days_forecast.intent", "template": "amosa a previsión semanal en {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-weather", "intent": "N_days_forecast.intent", "template": "cal é a previsión para os próximos 2 días en {location}", "slots": ["location"], "entity_values": {"location": []}}

@@ -489,6 +489,33 @@
 {"lang": "da-DK", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "læs {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "da-DK", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "læs {query} bog", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "da-DK", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "læs {query} lydbog", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "tilføj (punkter|poster|ting) til [min|] liste[n] [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "tilføj (punkter|poster|ting) til {name} liste[n]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "(sæt|lav|tilføj) en alarm [til {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "ny alarm [til {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "sæt en alarm til {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "CreateAlarmAlt.intent", "template": "væk mig [op] [klokken {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "(lav|tilføj|planlæg) (en begivenhed|en aftale) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "ny (begivenhed|aftale) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "(lav|opret|tilføj) en [ny] liste [kaldet {name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "ny liste [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "(lav|opret|tilføj) en [ny] {name} liste", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "(sæt|lav|tilføj) en [ny] påmindelse [om {reminder}] [klokken {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "ny påmindelse [{reminder}]", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "mind mig om [at {reminder}] [klokken {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "fortæl mig at jeg skal {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "mind mig om {duration} [at {reminder}]", "slots": ["duration", "reminder"], "entity_values": {"duration": [], "reminder": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "(sæt|start|lav) en timer [på {duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "ny timer [på {duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "(sæt|start|lav) en {duration} timer", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(slet|fjern) [min|] liste[n] [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(slet|fjern) {name} liste[n]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "DeleteListEntries.intent", "template": "(slet|fjern) (punkterne|posterne|alt) (fra|på) [min|] liste[n] [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "DeleteListEntries.intent", "template": "(slet|fjern) (punkterne|posterne|alt) (fra|på) {name} liste[n]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(hvilke punkter|hvad) (står|er) på [min|] liste[n] [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(læs|vis) [mig] (punkterne|posterne) på liste[n] [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(hvilke punkter|hvad) (står|er) på {name} liste[n]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "da-DK", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(læs|vis) [mig] (punkterne|posterne) på {name} liste[n]", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "da-DK", "skill": "ovos-skill-application-launcher", "intent": "close.intent", "template": "afbryd {application}", "slots": ["application"], "entity_values": {"application": []}}
 {"lang": "da-DK", "skill": "ovos-skill-application-launcher", "intent": "close.intent", "template": "afslut {application}", "slots": ["application"], "entity_values": {"application": []}}
 {"lang": "da-DK", "skill": "ovos-skill-application-launcher", "intent": "close.intent", "template": "dræb {application}", "slots": ["application"], "entity_values": {"application": []}}
@@ -1044,11 +1071,13 @@
 {"lang": "da-DK", "skill": "ovos-skill-tuning-fork", "intent": "play_frequency.intent", "template": "spil {frequency} hertz", "slots": ["frequency"], "entity_values": {"frequency": []}}
 {"lang": "da-DK", "skill": "ovos-skill-tuning-fork", "intent": "play_frequency.intent", "template": "spil en {frequency} hertz tone", "slots": ["frequency"], "entity_values": {"frequency": []}}
 {"lang": "da-DK", "skill": "ovos-skill-tuning-fork", "intent": "play_frequency.intent", "template": "giv mig {frequency} hertz", "slots": ["frequency"], "entity_values": {"frequency": []}}
-{"lang": "da-DK", "skill": "ovos-skill-wallpapers", "intent": "picture.about.intent", "template": "(vis|vis) mig en (tilfældig|ny|anden|anden) (billede|foto|billede) (om|for|med) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "da-DK", "skill": "ovos-skill-wallpapers", "intent": "picture.about.intent", "template": "(vis|vis) mig et (billede|foto|billede) (om|for|med) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "da-DK", "skill": "ovos-skill-wallpapers", "intent": "picture.about.intent", "template": "(vis|visning) (tilfældig|ny|andet|andet) (billede|foto|billede) (om|for|med) {forespørgsel}", "slots": ["forespørgsel"], "entity_values": {"forespørgsel": []}}
-{"lang": "da-DK", "skill": "ovos-skill-wallpapers", "intent": "picture.about.intent", "template": "(vis|vis|tilfældig|ny) (billede|foto|billede) (om|for|med) {forespørgsel}", "slots": ["forespørgsel"], "entity_values": {"forespørgsel": []}}
-{"lang": "da-DK", "skill": "ovos-skill-wallpapers", "intent": "wallpaper.about.intent", "template": "(ændre|tilfældig|ny) (tapet|tapet) (om|for|med|til) {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-skill-volume", "intent": "change_volume.intent", "template": "(sæt|ændre|lav) lydstyrken [til] {level}", "slots": ["level"], "entity_values": {"level": []}}
+{"lang": "da-DK", "skill": "ovos-skill-volume", "intent": "change_volume.intent", "template": "lydstyrke [på] {level} procent", "slots": ["level"], "entity_values": {"level": []}}
+{"lang": "da-DK", "skill": "ovos-skill-wallpapers", "intent": "picture_about.intent", "template": "(vis|vis) mig en (tilfældig|ny|anden|anden) (billede|foto|billede) (om|for|med) {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-skill-wallpapers", "intent": "picture_about.intent", "template": "(vis|vis) mig et (billede|foto|billede) (om|for|med) {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-skill-wallpapers", "intent": "picture_about.intent", "template": "(vis|visning) (tilfældig|ny|andet|andet) (billede|foto|billede) (om|for|med) {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-skill-wallpapers", "intent": "picture_about.intent", "template": "(vis|vis|tilfældig|ny) (billede|foto|billede) (om|for|med) {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-skill-wallpapers", "intent": "wallpaper_about.intent", "template": "(ændre|tilfældig|ny) (tapet|tapet) (om|for|med|til) {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "da-DK", "skill": "ovos-skill-weather", "intent": "N_days_forecast.intent", "template": "Fortæl mig vejrudsigten for denne uge i {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "da-DK", "skill": "ovos-skill-weather", "intent": "N_days_forecast.intent", "template": "Hvad er vejrudsigten for 2 dage i {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "da-DK", "skill": "ovos-skill-weather", "intent": "N_days_forecast.intent", "template": "Hvad er vejrudsigten for 3 dage i {location}", "slots": ["location"], "entity_values": {"location": []}}

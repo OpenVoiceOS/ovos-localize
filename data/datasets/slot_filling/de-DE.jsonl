@@ -455,6 +455,38 @@
 {"lang": "de-DE", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lese {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "de-DE", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lese {query} Buch", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "de-DE", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "lese {query} Hörbuch", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "(füge|ergänze) (Einträge|Sachen) (zur|in die) Liste [{name}] [hinzu]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "erstelle Listeneinträge [{items}]", "slots": ["items"], "entity_values": {"items": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "(füge|ergänze) (Einträge|Sachen) zur {name} Liste [hinzu]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "(stelle|erzeuge|plane) einen Alarm [für {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "neuer Alarm [für {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "stelle einen Alarm (auf|für) {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateAlarmAlt.intent", "template": "(weck|wecke) (mich|uns) [auf] [um {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateAlarmAlt.intent", "template": "(könntest|kannst) du (mich|uns) [um {time}] wecken", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "(erstelle|plane|ergänze) (ein Event|einen Termin|ein Treffen) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "neuer Termin [{event}]", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "ich habe (ein Event|einen Termin) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "(erstelle|erzeuge) eine [neue] Liste [namens {name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "neue Liste [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "(erstelle|erzeuge) eine [neue] {name} Liste", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "(erstelle|setze|plane) eine [neue] Erinnerung [an {reminder}] [um {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "neue Erinnerung [{reminder}]", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "erinnere (mich|uns) [an {reminder}] [um {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "sag mir dass ich {reminder} [soll]", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "erinnere (mich|uns) in {duration} [an {reminder}]", "slots": ["duration", "reminder"], "entity_values": {"duration": [], "reminder": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "(stelle|starte|erzeuge) einen (Timer|Wecker) [für {duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "neuer (Timer|Wecker) [für {duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "(stelle|starte|erzeuge) einen {duration} Timer", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(lösche|entferne) (meine|die) Liste [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(lösche|entferne) (meine|die) {name} Liste", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "DeleteListEntries.intent", "template": "(lösche|entferne) [die] Einträge (von|aus) (meiner|der) Liste [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "DeleteListEntries.intent", "template": "(lösche|entferne) alles (von|aus) (meiner|der) Liste [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "DeleteListEntries.intent", "template": "(lösche|entferne) [die] Einträge (von|aus) (meiner|der) {name} Liste", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "DeleteListEntries.intent", "template": "(lösche|entferne) alles (von|aus) (meiner|der) {name} Liste", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(welche Einträge|was) (steht|stehen) auf (meiner|der) Liste [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(lies|zeige) [mir] die Einträge (auf|von) (meiner|der) Liste [{name}] [vor]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(welche Einträge|was) (steht|stehen) (auf|in) (meiner|der) {name} Liste", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(lies|zeige) [mir] die Einträge (auf|in) (meiner|der) {name} Liste", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "de-DE", "skill": "ovos-skill-application-launcher", "intent": "close.intent", "template": "beende {application}", "slots": ["application"], "entity_values": {"application": []}}
 {"lang": "de-DE", "skill": "ovos-skill-application-launcher", "intent": "close.intent", "template": "schließe {application}", "slots": ["application"], "entity_values": {"application": []}}
 {"lang": "de-DE", "skill": "ovos-skill-application-launcher", "intent": "close.intent", "template": "{application} beenden", "slots": ["application"], "entity_values": {"application": []}}
@@ -1480,10 +1512,12 @@
 {"lang": "de-DE", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "sage {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "de-DE", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "spreche {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "de-DE", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "wiederhole {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
-{"lang": "de-DE", "skill": "ovos-skill-wallpapers", "intent": "picture.about.intent", "template": "(zeige|lade) ein (zufälliges|anderes) (bild|foto) mit {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "de-DE", "skill": "ovos-skill-wallpapers", "intent": "picture.about.intent", "template": "(zeige|lade) mir ein (Bild|Foto|Abbildung) (über|für|mit) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "de-DE", "skill": "ovos-skill-wallpapers", "intent": "picture.about.intent", "template": "(zeige|lade) mir ein (zufälliges|neues|anderes|noch ein anderes) (Bild|Foto|Abbild) (über|für|mit) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "de-DE", "skill": "ovos-skill-wallpapers", "intent": "wallpaper.about.intent", "template": "(zeige|lade|öffne|neues) (Hintergrundbild|Wallpaper) (über|mit|) {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "de-DE", "skill": "ovos-skill-volume", "intent": "change_volume.intent", "template": "(ändere|stelle) die Lautstärke auf {level}", "slots": ["level"], "entity_values": {"level": []}}
+{"lang": "de-DE", "skill": "ovos-skill-volume", "intent": "change_volume.intent", "template": "Lautstärke auf {level} [Prozent]", "slots": ["level"], "entity_values": {"level": []}}
+{"lang": "de-DE", "skill": "ovos-skill-wallpapers", "intent": "picture_about.intent", "template": "(zeige|lade) ein (zufälliges|anderes) (bild|foto) mit {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "de-DE", "skill": "ovos-skill-wallpapers", "intent": "picture_about.intent", "template": "(zeige|lade) mir ein (Bild|Foto|Abbildung) (über|für|mit) {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "de-DE", "skill": "ovos-skill-wallpapers", "intent": "picture_about.intent", "template": "(zeige|lade) mir ein (zufälliges|neues|anderes|noch ein anderes) (Bild|Foto|Abbild) (über|für|mit) {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "de-DE", "skill": "ovos-skill-wallpapers", "intent": "wallpaper_about.intent", "template": "(zeige|lade|öffne|neues) (Hintergrundbild|Wallpaper) (über|mit|) {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "de-DE", "skill": "ovos-skill-weather", "intent": "N_days_forecast.intent", "template": "Sag mir die  Wettervorhersage für diese Woche in {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "de-DE", "skill": "ovos-skill-weather", "intent": "N_days_forecast.intent", "template": "Sag mir die Vorhersage  für diese Woche in {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "de-DE", "skill": "ovos-skill-weather", "intent": "N_days_forecast.intent", "template": "Wetter für der Woche in {location}", "slots": ["location"], "entity_values": {"location": []}}

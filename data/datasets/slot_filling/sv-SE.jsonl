@@ -1,3 +1,30 @@
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "lägg till (saker|poster|artiklar) (i|till) [min|] lista[n] [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "lägg till (saker|poster|artiklar) (i|till) {name} lista[n]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "(sätt|skapa|lägg till) ett larm [till {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "nytt larm [till {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "sätt ett larm till {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "CreateAlarmAlt.intent", "template": "väck (mig|oss) [klockan {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "(skapa|lägg till|planera) (ett evenemang|ett möte) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "nytt (evenemang|möte) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "(skapa|gör|lägg till) en [ny] lista [som heter {name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "ny lista [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "(skapa|gör|lägg till) en [ny] {name} lista", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "(sätt|skapa|lägg till) en [ny] påminnelse [om {reminder}] [klockan {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "ny påminnelse [{reminder}]", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "påminn (mig|oss) [om att {reminder}] [klockan {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "berätta att jag ska {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "påminn (mig|oss) om {duration} [att {reminder}]", "slots": ["duration", "reminder"], "entity_values": {"duration": [], "reminder": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "(sätt|starta|skapa) en timer [på {duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "ny timer [på {duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "(sätt|starta|skapa) en {duration} timer", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(radera|ta bort) [min|] lista[n] [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(radera|ta bort) {name} lista[n]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "DeleteListEntries.intent", "template": "(radera|ta bort) (posterna|allt) (från|på) [min|] lista[n] [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "DeleteListEntries.intent", "template": "(radera|ta bort) (posterna|allt) (från|på) {name} lista[n]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(vilka poster|vad) (står|finns) på [min|] lista[n] [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(läs|visa) [mig] posterna på lista[n] [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(vilka poster|vad) (står|finns) på {name} lista[n]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(läs|visa) [mig] posterna på {name} lista[n]", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "intent": "next.leap.year.intent", "template": "nästa skottår är {year}", "slots": ["year"], "entity_values": {"year": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "vad är klockan om {offset} minut", "slots": ["offset"], "entity_values": {"offset": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "vad är klockan om {offset} minut i {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}

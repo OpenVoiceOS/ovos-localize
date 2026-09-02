@@ -16,6 +16,24 @@
 {"lang": "pl-PL", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "czytaj {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "pl-PL", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "czytaj {query} audiobook", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "pl-PL", "skill": "ovos-ocp-pipeline-plugin", "intent": "read.intent", "template": "czytaj {query} książka", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "dodaj (pozycje|rzeczy) do [mojej] listy [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "(ustaw|utwórz|dodaj) (alarm|budzik) [na {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "nowy (alarm|budzik) [na {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "intent": "CreateAlarmAlt.intent", "template": "obudź (mnie|nas) [o {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "(utwórz|dodaj|zaplanuj) (wydarzenie|spotkanie) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "nowe (wydarzenie|spotkanie) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "(utwórz|zrób|dodaj) [nową] listę [o nazwie {name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "nowa lista [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "(ustaw|utwórz|dodaj) [nowe] przypomnienie [o {reminder}] [o {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "nowe przypomnienie [{reminder}]", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "przypomnij (mi|nam) [o {reminder}] [o {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "powiedz mi żebym {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "(ustaw|uruchom|utwórz) (timer|minutnik) [na {duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "nowy timer [na {duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(usuń|wykasuj) [moją] listę [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "intent": "DeleteListEntries.intent", "template": "(usuń|wykasuj) (pozycje|wszystko) z [mojej] listy [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(jakie pozycje|co) (jest|są) na [mojej] liście [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(przeczytaj|pokaż) [mi] pozycje z [mojej] listy [{name}]", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "pl-PL", "skill": "ovos-skill-date-time", "intent": "next.leap.year.intent", "template": "Następny rok przestępny to {year}", "slots": ["year"], "entity_values": {"year": []}}
 {"lang": "pl-PL", "skill": "ovos-skill-date-time", "intent": "next.leap.year.intent", "template": "Następnym rokiem przestępnym będzie {year}", "slots": ["year"], "entity_values": {"year": []}}
 {"lang": "pl-PL", "skill": "ovos-skill-date-time", "intent": "next.leap.year.intent", "template": "Następnym rokiem przestępnym jest {year}", "slots": ["year"], "entity_values": {"year": []}}

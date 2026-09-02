@@ -1,3 +1,21 @@
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "добавь (пункты|вещи|записи) в [мой] список [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "(поставь|создай|добавь) (будильник|сигнализацию) [на {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "новый будильник [на {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateAlarmAlt.intent", "template": "разбуди (меня|нас) [в {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "(создай|добавь|запланируй) (мероприятие|встречу) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "(новое мероприятие|новая встреча) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "(создай|сделай|добавь) [новый] список [под названием {name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "новый список [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "(создай|добавь|поставь) [новое] напоминание [о {reminder}] [в {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "новое напоминание [{reminder}]", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "напомни (мне|нам) [{reminder}] [в {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "скажи мне {reminder} [в {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "(поставь|запусти|создай) таймер [на {duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "новый таймер [на {duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(удали|сотри) [мой] список [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "DeleteListEntries.intent", "template": "(удали|сотри) (пункты|всё) из [моего] списка [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(какие пункты|что) (в списке|в моём списке) [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(прочитай|покажи) [мне] (пункты|записи) списка [{name}]", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "next.leap.year.intent", "template": "следующий високосный год {year}", "slots": ["year"], "entity_values": {"year": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "когда это {offset} за считанные минуты", "slots": ["offset"], "entity_values": {"offset": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "когда это {offset} минут от этого в {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
