@@ -93,7 +93,7 @@ jobs:
             core.setOutput('author', context.payload.issue.user.login);
 
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
