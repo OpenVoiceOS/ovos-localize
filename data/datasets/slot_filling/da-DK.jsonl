@@ -18,6 +18,448 @@
 {"lang": "da-DK", "skill": "ovos-common-reading-pipeline-plugin", "intent": "ReadContentByCollection.intent", "template": "(Fortæl mig|Fortæl|Læs mig|Læs|Kan du fortælle mig|Kan du fortælle|Kan du læse mig|Kan du læse|Kunne du fortælle mig|Kunne du fortælle|Kunne du læse mig|Kunne du læse|Vil du fortælle mig|Vil du fortælle|Vil du læse mig|Vil du læse|Fortæl mig venligst|Venligst fortæl mig|Læs mig venligst|Venligst læs mig) (seneste|nyeste) (historie|eventyr|artikel|nyhed|dokument|rapport|horoskop|almanak|paper|afhandling|blogindlæg|blog|resumé|opdatering|anmeldelse|guide|essay) fra {collection}", "slots": ["collection"], "entity_values": {"collection": []}}
 {"lang": "da-DK", "skill": "ovos-common-reading-pipeline-plugin", "intent": "ReadContentByType.intent", "template": "(Fortæl mig|Fortæl|Læs mig|Læs|Kan du fortælle mig|Kan du fortælle|Kan du læse mig|Kan du læse|Kunne du fortælle mig|Kunne du fortælle|Kunne du læse mig|Kunne du læse|Vil du fortælle mig|Vil du fortælle|Vil du læse mig|Vil du læse|Fortæl mig venligst|Venligst fortæl mig|Læs mig venligst|Venligst læs mig) dagens {content_type}", "slots": ["content_type"], "entity_values": {"content_type": []}}
 {"lang": "da-DK", "skill": "ovos-common-reading-pipeline-plugin", "intent": "ReadContentByType.intent", "template": "(Fortæl|Læs|Kan du fortælle|Kan du læse|Kunne du fortælle|Kunne du læse|Vil du fortælle|Vil du læse|Venligst fortæl|Venligst læs) dagens {content_type} for mig", "slots": ["content_type"], "entity_values": {"content_type": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "age.intent", "template": "hvor gammel er {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "age.intent", "template": "hvad er {person} alder", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "age.intent", "template": "{person} alder", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "age_at_death.intent", "template": "hvor gammel var {keyword} den dag (han|hun) døde", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "age_at_death.intent", "template": "hvor gammel var {keyword} ved hans død", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "age_at_death.intent", "template": "hvor gammel var {keyword} ​​da (han|hun) døde", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "alma_mater.intent", "template": "hvad er {keyword} alma mater", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "area.intent", "template": "hvad er arealet af {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "area.intent", "template": "{place} areal", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "area.intent", "template": "hvor stort er {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "area.intent", "template": "hvad er {place} samlede areal", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "area.intent", "template": "{place} størrelse", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "area.intent", "template": "hvad måler {place} i areal", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "area.intent", "template": "hvad er det samlede areal for {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "author.intent", "template": "hvem (har skrevet|skrev) {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "author.intent", "template": "{book} forfatter", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "author.intent", "template": "hvem er forfatteren til {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "author.intent", "template": "hvem forfattede {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "author.intent", "template": "hvem har skrevet bogen {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "author.intent", "template": "hvem er ophavsmanden til {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "author.intent", "template": "{book} skrevet af hvem", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "baptised.intent", "template": "hvornår blev {keyword} døbt", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "baptised.intent", "template": "hvad er {keyword}s dåbsdato", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "baptised.intent", "template": "hvornår fandt {keyword}s dåb sted", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "baptised.intent", "template": "{keyword} dåbsdato", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "baptised.intent", "template": "hvornår blev {keyword} (døbt|kristnet)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "born.intent", "template": "hvornår blev {keyword} født", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "born.intent", "template": "hvornår er {keyword} (fødselsdag|fødselsdag|fødselsdag)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "born.intent", "template": "{keyword} (dag|dato) for fødsel", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "box_office.intent", "template": "hvor meget tjente {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "box_office.intent", "template": "{movie} box office", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "box_office.intent", "template": "hvad indbragte {movie} i biograferne", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "box_office.intent", "template": "hvad var {movie} indtjening i biografen", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "box_office.intent", "template": "hvor meget indspillede {movie} i billetsalg", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "box_office.intent", "template": "hvad var billetindtægterne for {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "box_office.intent", "template": "{movie} biografindtægt", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "box_office.intent", "template": "hvor stor var {movie} kassesucces", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "budget.intent", "template": "hvad var budgettet for {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "budget.intent", "template": "{movie} budget", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "budget.intent", "template": "hvad kostede det at lave {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "budget.intent", "template": "hvad var produktionsbudgettet for {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "budget.intent", "template": "{movie} produktionsomkostninger", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "budget.intent", "template": "hvor meget kostede {movie} at producere", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "budget.intent", "template": "hvad var {movie} budget", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "capital.intent", "template": "hvad er hovedstaden i {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "capital.intent", "template": "{place} hovedstad", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "capital.intent", "template": "hvad hedder hovedstaden i {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "capital.intent", "template": "hvilken by er hovedstad i {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "capital.intent", "template": "hvad er {place} hovedstad", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "capital.intent", "template": "{place} hovedby", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "capital.intent", "template": "hvad er landets hovedstad i {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "ceo.intent", "template": "hvem er (ceo|direktør|leder) for {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "ceo.intent", "template": "{company} ceo", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "ceo.intent", "template": "hvem leder {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "ceo.intent", "template": "hvem er administrerende direktør for {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "ceo.intent", "template": "hvem er chef for {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "ceo.intent", "template": "hvem styrer {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "ceo.intent", "template": "{company} topchef", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "ceo.intent", "template": "hvem er {company} direktør", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "championships.intent", "template": "hvor mange (mesterskaber|titler|trofæer) har {team} vundet", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "championships.intent", "template": "{team} mesterskaber", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "championships.intent", "template": "{team} titler", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "championships.intent", "template": "hvor mange pokaler har {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "championships.intent", "template": "hvad har {team} vundet", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "championships.intent", "template": "{team} trofæer", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "championships.intent", "template": "{team} antal mesterskaber", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "championships.intent", "template": "hvad er {team} mesterskabsrekord", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "children.intent", "template": "hvor mange børn (har|har) {keyword} har", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "citizenship.intent", "template": "hvad er {person} statsborgerskab", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "citizenship.intent", "template": "{person} statsborgerskab", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "citizenship.intent", "template": "{person} nationalitet", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "coached_by.intent", "template": "hvem træner {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "coached_by.intent", "template": "{person} træner", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "composers.intent", "template": "hvem (komponerede|wrote) (musikken|soundtracket) til {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "composers.intent", "template": "{movie} komponist", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "composers.intent", "template": "hvem lavede musikken til {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "composers.intent", "template": "hvem stod for soundtracket til {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "composers.intent", "template": "hvem komponerede filmmusikken til {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "composers.intent", "template": "{movie} filmmusik komponist", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "composers.intent", "template": "hvem er komponisten bag {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "conservation_status.intent", "template": "er {animal} (truet|udrydningstruet|uddød)", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "conservation_status.intent", "template": "hvad er {animal} bevaringsstatus", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "conservation_status.intent", "template": "{animal} bevaringsstatus", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "conservation_status.intent", "template": "er {animal} på rødlisten", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "conservation_status.intent", "template": "hvor truet er {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "conservation_status.intent", "template": "{animal} trusselsstatus", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "conservation_status.intent", "template": "er {animal} i fare for udryddelse", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "conservation_status.intent", "template": "hvad er trusselsniveauet for {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "country.intent", "template": "i hvilket land er {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "country.intent", "template": "{place} land", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "country.intent", "template": "hvilket land tilhører {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "country.intent", "template": "i hvilket land finder man {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "country.intent", "template": "hvad er {place} land", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "country.intent", "template": "{place} tilhørende land", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "country.intent", "template": "hvilket land ligger {place} i", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "designed_by.intent", "template": "hvem designede {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "designed_by.intent", "template": "{place} designer", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "designed_by.intent", "template": "hvem tegnede {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "designed_by.intent", "template": "hvem stod bag designet af {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "designed_by.intent", "template": "hvem er arkitekten bag {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "designed_by.intent", "template": "hvem projekterede {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "designed_by.intent", "template": "{place} arkitekt", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "developer.intent", "template": "hvem (udviklede|lavede) {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "developer.intent", "template": "{software} udvikler", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "developer.intent", "template": "hvilket (studie|firma) udviklede {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "developer.intent", "template": "hvem skabte {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "developer.intent", "template": "hvem programmerede {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "developer.intent", "template": "hvem stod bag udviklingen af {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "developer.intent", "template": "{software} skabt af hvem", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "died.intent", "template": "hvornår døde {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "died.intent", "template": "hvornår var {keyword} død", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "died.intent", "template": "{keyword} (dag|dato) for død", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "diet.intent", "template": "hvad spiser {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "diet.intent", "template": "{animal} kost", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "diet.intent", "template": "{animal} føde", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "diet.intent", "template": "hvad lever {animal} af", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "diet.intent", "template": "er {animal} et rovdyr", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "diet.intent", "template": "hvad er {animal} fødegrundlag", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "diet.intent", "template": "{animal} spisevaner", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "diet.intent", "template": "hvad ernærer {animal} sig med", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "director.intent", "template": "hvem instruerede {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "director.intent", "template": "hvem er instruktøren på {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "director.intent", "template": "{movie} instruktør", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "director.intent", "template": "hvem stod bag {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "director.intent", "template": "hvem er filminstruktøren for {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "director.intent", "template": "hvem lavede filmen {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "director.intent", "template": "{movie} regissør", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "doctoral_students.intent", "template": "hvem var {keyword}s ph.d.-studerende", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "doctoral_students.intent", "template": "hvem vejledte {keyword} i ph.d.-arbejde", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "doctoral_students.intent", "template": "hvem tog en doktorgrad under {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "doctoral_students.intent", "template": "{keyword} (ph.d.-studerende|vejledte studerende|doktorander)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "doctoral_students.intent", "template": "hvilke forskere blev vejledt af {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "education.intent", "template": "hvor fik {keyword} (sin|hendes) uddannelse", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "education.intent", "template": "hvor studerede {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "elevation.intent", "template": "hvad er højden på {mountain}", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "elevation.intent", "template": "{mountain} højde over havet", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "elevation.intent", "template": "{mountain} elevation", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "elevation.intent", "template": "hvad er {mountain} toppens højde", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "elevation.intent", "template": "hvor højt er {mountain}", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "elevation.intent", "template": "{mountain} meter over havet", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "elevation.intent", "template": "hvad er toppen af {mountain} i meters højde", "slots": ["mountain"], "entity_values": {"mountain": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "father.intent", "template": "hvem er {keyword}s far", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "father.intent", "template": "hvem var {keyword}s far", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "father.intent", "template": "hvad hedder {keyword}s far", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "father.intent", "template": "{keyword} (far|fader)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "father.intent", "template": "hvem er far til {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "fields.intent", "template": "hvad er {keyword} ekspertiseområde", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "founded.intent", "template": "hvornår blev {organization} grundlagt", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "founded.intent", "template": "{organization} grundlæggelsesdato", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "founded.intent", "template": "hvornår blev {organization} stiftet", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "founded.intent", "template": "hvornår opstod {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "founded.intent", "template": "hvornår blev {organization} etableret", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "founded.intent", "template": "i hvilket år blev {organization} grundlagt", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "founded.intent", "template": "{organization} stiftelsesår", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "founders.intent", "template": "hvem grundlagde {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "founders.intent", "template": "{organization} grundlægger", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "founders.intent", "template": "hvem stiftede {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "founders.intent", "template": "hvem er grundlæggeren af {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "founders.intent", "template": "hvem oprettede {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "founders.intent", "template": "hvem startede {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "founders.intent", "template": "{organization} stifter", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "founders.intent", "template": "hvem etablerede {organization}", "slots": ["organization"], "entity_values": {"organization": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "genre.intent", "template": "hvilket genre er {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "genre.intent", "template": "{movie} genre", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "genre.intent", "template": "hvilken slags er {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "genre.intent", "template": "hvad er {movie} genre", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "genre.intent", "template": "hvilken kategori tilhører {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "genre.intent", "template": "{movie} filmtype", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "genre.intent", "template": "inden for hvilket genre falder {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "habitat.intent", "template": "hvor lever {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "habitat.intent", "template": "hvad er {animal} (naturlige |)levested", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "habitat.intent", "template": "{animal} levested", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "habitat.intent", "template": "i hvilke omgivelser lever {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "habitat.intent", "template": "hvor finder man {animal} i naturen", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "habitat.intent", "template": "{animal} naturlige habitat", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "habitat.intent", "template": "{animal} biotop", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "habitat.intent", "template": "hvad er det naturlige miljø for {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "head_coach.intent", "template": "hvem er (cheftræner|træner|manager) for {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "head_coach.intent", "template": "{team} cheftræner", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "head_coach.intent", "template": "hvem træner {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "head_coach.intent", "template": "hvem er {team} nuværende træner", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "head_coach.intent", "template": "hvem er manager for {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "head_coach.intent", "template": "{team} træner navn", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "head_coach.intent", "template": "hvem er ansvarlig for {team} træning", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "headquarters.intent", "template": "hvor er {company} (hovedkontor|base|hjemsted)", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "headquarters.intent", "template": "{company} hovedkontor", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "headquarters.intent", "template": "hvor er {company} hjemhørende", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "headquarters.intent", "template": "i hvilken by har {company} sit hovedkvarter", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "headquarters.intent", "template": "{company} hjemby", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "headquarters.intent", "template": "hvor er {company} baseret", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "headquarters.intent", "template": "hvad er adressen på {company} hovedkontor", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "height.intent", "template": "hvor høj er {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "height.intent", "template": "{person} højde", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "industry.intent", "template": "hvilken branche er {company} i", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "industry.intent", "template": "{company} branche", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "industry.intent", "template": "hvad laver {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "industry.intent", "template": "inden for hvilken industri opererer {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "industry.intent", "template": "{company} sektor", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "industry.intent", "template": "hvad er {company} forretningsområde", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "industry.intent", "template": "hvilken sektor tilhører {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "institutions.intent", "template": "hvor arbejdede {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "institutions.intent", "template": "hvor underviste {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "institutions.intent", "template": "hvilke institutioner var {keyword} tilknyttet", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "institutions.intent", "template": "hvor forskte {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "institutions.intent", "template": "hvilke (universiteter|institutioner) var {keyword} forbundet med", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "institutions.intent", "template": "{keyword} (akademiske|videnskabelige) institutioner", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "inventor.intent", "template": "hvem opfandt {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "inventor.intent", "template": "{keyword} opfinder", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "inventor.intent", "template": "hvem skabte {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "inventor.intent", "template": "hvem er ophavsmanden til {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "inventor.intent", "template": "hvem fandt på {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "inventor.intent", "template": "hvem stod bag opfindelsen af {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "inventor.intent", "template": "{keyword} opfindelse hvem", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "known_for.intent", "template": "hvad er {person} berømt for", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "known_for.intent", "template": "hvad er {person} kendt for", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "label.intent", "template": "hvilket (pladeselskab|label|) er {artist} tilknyttet", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "label.intent", "template": "{artist} pladeselskab", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "label.intent", "template": "{artist} label", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "label.intent", "template": "hvilket pladeselskab udgiver {artist}", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "label.intent", "template": "hvem distribuerer {artist} musik", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "label.intent", "template": "{artist} musikselskab", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "label.intent", "template": "under hvilket label udgiver {artist}", "slots": ["artist"], "entity_values": {"artist": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "language.intent", "template": "hvilket sprog er {book} (skrevet på|på|)", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "language.intent", "template": "{book} sprog", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "language.intent", "template": "{book} originalsprog", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "language.intent", "template": "på hvilket sprog er {book} skrevet", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "language.intent", "template": "hvad er sproget i {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "language.intent", "template": "{book} sprogversion", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "language.intent", "template": "hvilket sprog bruges i {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "length.intent", "template": "hvor lang er {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "length.intent", "template": "{place} længde", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "length.intent", "template": "hvad er længden på {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "length.intent", "template": "hvad måler {place} i længden", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "length.intent", "template": "{place} udstrækning", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "length.intent", "template": "hvor langt strækker {place} sig", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "length.intent", "template": "hvad er {place} længde", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "license.intent", "template": "under hvilken licens er {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "license.intent", "template": "{software} licens", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "license.intent", "template": "hvilken licens bruger {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "license.intent", "template": "hvad er licensen for {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "license.intent", "template": "{software} licenstype", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "license.intent", "template": "er {software} open source", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "license.intent", "template": "hvad er {software} licensbetingelser", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "location.intent", "template": "hvor ligger {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "location.intent", "template": "{place} placering", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "location.intent", "template": "hvor befinder {place} sig", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "location.intent", "template": "i hvilken region ligger {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "location.intent", "template": "hvor er {place} beliggende", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "location.intent", "template": "{place} beliggenhed", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "location.intent", "template": "hvad er beliggenheden for {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "members.intent", "template": "hvem er (medlemmerne|) i {group}", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "members.intent", "template": "{group} medlemmer", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "members.intent", "template": "hvem spiller i {group}", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "members.intent", "template": "hvem er med i {group}", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "members.intent", "template": "hvem udgør {group}", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "members.intent", "template": "{group} besætning", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "members.intent", "template": "hvem er en del af {group}", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "members.intent", "template": "hvem er med i bandet {group}", "slots": ["group"], "entity_values": {"group": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "mother.intent", "template": "hvem er {keyword}s mor", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "mother.intent", "template": "hvem var {keyword}s mor", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "mother.intent", "template": "hvad hedder {keyword}s mor", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "mother.intent", "template": "{keyword} (mor|moder)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "mother.intent", "template": "hvem er mor til {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "movement.intent", "template": "hvilken (kunstnerisk|videnskabelig|filosofisk) bevægelse var {keyword} tilknyttet", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "movement.intent", "template": "hvilken bevægelse tilhørte {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "movement.intent", "template": "hvilken tankestrøm er {keyword} en del af", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "movement.intent", "template": "{keyword} (kunstnerisk|intellektuel|filosofisk) bevægelse", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "movement.intent", "template": "hvilken stil repræsenterer {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "net_worth.intent", "template": "hvad er {person} formue", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "net_worth.intent", "template": "{person} nettoformue", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "net_worth.intent", "template": "hvor rig er {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "nickname.intent", "template": "hvad er {person} kaldenavn", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "nickname.intent", "template": "{person} kaldenavn", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "nickname.intent", "template": "{person} også kendt som", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "nickname.intent", "template": "hvad kaldes {person} til daglig", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "nickname.intent", "template": "hvad er {person} øgenavn", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "nickname.intent", "template": "{person} kælenavn", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "nickname.intent", "template": "hvad er {person} alias", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "notable_awards.intent", "template": "hvilke priser (vandt|modtog) {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "notable_awards.intent", "template": "hvilke (hæderspriser|udmærkelser) fik {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "notable_awards.intent", "template": "{person} (priser|udmærkelser|hædersbeviser)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "notable_awards.intent", "template": "har {person} vundet nogen priser", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "notable_awards.intent", "template": "hvilke æresbevisninger modtog {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "notable_work.intent", "template": "hvad er {person}s mest (berømte|kendte|betydningsfulde) (værk|arbejde)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "notable_work.intent", "template": "hvad skabte {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "notable_work.intent", "template": "hvad er {person}s (mesterværk|vigtigste bidrag)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "notable_work.intent", "template": "{person} mest berømte (værk|skabelse|bidrag)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "notable_work.intent", "template": "hvad er {person} (bedst|mest) kendt for at (skabe|skrive|komponere)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "number_of_employees.intent", "template": "hvor mange ansatte har {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "number_of_employees.intent", "template": "{company} antal ansatte", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "number_of_employees.intent", "template": "hvor mange arbejder hos {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "number_of_employees.intent", "template": "hvad er medarbejderantallet i {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "number_of_employees.intent", "template": "{company} medarbejdere", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "number_of_employees.intent", "template": "hvor stor er arbejdsstyrken i {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "number_of_employees.intent", "template": "{company} ansatte", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "occupation.intent", "template": "hvad er {keyword}s (erhverv|profession|beskæftigelse)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "occupation.intent", "template": "hvad lavede {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "occupation.intent", "template": "hvad var {keyword}s (yrke|profession)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "occupation.intent", "template": "inden for hvilken branche arbejdede {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "occupation.intent", "template": "{keyword} (erhverv|karriere|profession)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "official_website.intent", "template": "hvad er {keyword} officielle hjemmeside", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "opened.intent", "template": "hvornår blev {place} (åbnet|indviet|bygget|færdiggjort)", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "opened.intent", "template": "{place} åbningsdato", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "opened.intent", "template": "{place} indvielsesdato", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "opened.intent", "template": "hvornår åbnede {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "opened.intent", "template": "i hvilket år blev {place} indviet", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "opened.intent", "template": "hvornår stod {place} færdig", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "opened.intent", "template": "{place} åbningsår", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "original_title.intent", "template": "hvad er originaltitlen på {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "original_title.intent", "template": "{movie} originaltitel", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "original_title.intent", "template": "hvad hed {movie} oprindeligt", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "original_title.intent", "template": "hvad er den originale titel på {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "original_title.intent", "template": "{movie} oprindelige titel", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "original_title.intent", "template": "hvad er {movie} originale navn", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "original_title.intent", "template": "hvad hedder {movie} på originalsproget", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "other_names.intent", "template": "hvad er {keyword} andre navne", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "other_names.intent", "template": "{keyword} andre navne", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "other_names.intent", "template": "{keyword} også kendt som", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "other_names.intent", "template": "hvad er {keyword} andre betegnelser", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "other_names.intent", "template": "hvad kaldes {keyword} ellers", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "other_names.intent", "template": "{keyword} alternative navne", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "other_names.intent", "template": "hvad er andre ord for {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "owner.intent", "template": "hvem ejer {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "owner.intent", "template": "{keyword} ejer", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "owner.intent", "template": "hvem er indehaver af {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "owner.intent", "template": "hvem er ejeren af {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "owner.intent", "template": "hvem har {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "owner.intent", "template": "hvem tilhører {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "owner.intent", "template": "{keyword} ejerskab", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "partner.intent", "template": "hvem er {person} partner", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "partner.intent", "template": "{person} partner", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "platforms.intent", "template": "hvilke (platforme|systemer|konsoller) kører {software} på", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "platforms.intent", "template": "{software} platforme", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "platforms.intent", "template": "{software} systemer", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "platforms.intent", "template": "hvilke enheder understøtter {software}", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "platforms.intent", "template": "{software} kompatible platforme", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "platforms.intent", "template": "på hvilke platforme er {software} tilgængeligt", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "platforms.intent", "template": "{software} tilgængelighed", "slots": ["software"], "entity_values": {"software": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "political_party.intent", "template": "hvilket (politisk parti|parti) tilhører {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "political_party.intent", "template": "hvad er {person} parti", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "political_party.intent", "template": "{person} politisk parti", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "population.intent", "template": "hvad er befolkningstallet i {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "population.intent", "template": "hvor mange (bor|lever) i {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "population.intent", "template": "{place} befolkning", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "population.intent", "template": "hvor mange mennesker bor der i {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "population.intent", "template": "hvad er {place} befolkningstal", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "population.intent", "template": "{place} indbyggertal", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "population.intent", "template": "hvor mange indbyggere har {place}", "slots": ["place"], "entity_values": {"place": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "predecessor.intent", "template": "hvem gik forud for {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "predecessor.intent", "template": "hvem var {keyword}s forgænger", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "predecessor.intent", "template": "hvem havde (stillingen|tronen|posten) før {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "predecessor.intent", "template": "hvem regerede før {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "produced_by.intent", "template": "hvem producerede {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "produced_by.intent", "template": "{movie} producent", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "produced_by.intent", "template": "hvem er producenten af {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "produced_by.intent", "template": "hvem stod bag produktionen af {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "produced_by.intent", "template": "hvem finansierede {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "produced_by.intent", "template": "hvem er filmproducenten for {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "produced_by.intent", "template": "{movie} produceret af hvem", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "publisher.intent", "template": "hvem udgav {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "publisher.intent", "template": "{book} forlag", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "publisher.intent", "template": "hvilket forlag udgav {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "publisher.intent", "template": "hvem er forlaget bag {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "publisher.intent", "template": "{book} udgiver", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "publisher.intent", "template": "hvem publicerede {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "publisher.intent", "template": "hvem stod for udgivelsen af {book}", "slots": ["book"], "entity_values": {"book": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "released.intent", "template": "hvornår udkom {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "released.intent", "template": "{movie} udgivelsesdato", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "released.intent", "template": "hvornår blev {movie} udgivet", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "released.intent", "template": "hvornår havde {movie} premiere", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "released.intent", "template": "i hvilket år udkom {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "released.intent", "template": "{movie} premieredato", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "released.intent", "template": "hvornår kom {movie} ud", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "religion.intent", "template": "hvilken religion (praktiserer|praktiserede) {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "religion.intent", "template": "hvad er {keyword}s religion", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "religion.intent", "template": "hvilken tro tilhører {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "religion.intent", "template": "{keyword} (religion|tro|konfession)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "religion.intent", "template": "er {keyword} (troende|religiøs)", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "resting_place.intent", "template": "hvor er {keyword} hvilested", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "resting_place.intent", "template": "hvor ligger {keyword} begravet", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "revenue.intent", "template": "hvad er {company} omsætning", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "revenue.intent", "template": "{company} omsætning", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "revenue.intent", "template": "hvad tjener {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "revenue.intent", "template": "hvad er den årlige omsætning for {company}", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "revenue.intent", "template": "{company} indtægt", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "revenue.intent", "template": "{company} finansielle resultater", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "revenue.intent", "template": "hvor meget omsætter {company} for", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "revenue.intent", "template": "hvad er {company} årsindtægt", "slots": ["company"], "entity_values": {"company": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "running_time.intent", "template": "hvor lang tid varer {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "running_time.intent", "template": "{movie} varighed", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "running_time.intent", "template": "{movie} spilletid", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "running_time.intent", "template": "hvor mange minutter er {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "running_time.intent", "template": "hvad er spilletiden for {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "running_time.intent", "template": "{movie} løbetid", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "running_time.intent", "template": "hvad varer {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "scientific_name.intent", "template": "hvad er det videnskabelige navn for {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "scientific_name.intent", "template": "{animal} videnskabeligt navn", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "scientific_name.intent", "template": "{animal} latinsk navn", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "scientific_name.intent", "template": "hvad hedder {animal} på latin", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "scientific_name.intent", "template": "hvad er {animal} latinske navn", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "scientific_name.intent", "template": "{animal} biologisk navn", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "scientific_name.intent", "template": "hvad er den latinske betegnelse for {animal}", "slots": ["animal"], "entity_values": {"animal": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "sport.intent", "template": "hvilken sport dyrker {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "sport.intent", "template": "{person} sport", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "sport.intent", "template": "hvilken sport spiller {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "sport.intent", "template": "hvad er {person} sport", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "sport.intent", "template": "inden for hvilken sport er {person} aktiv", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "sport.intent", "template": "{person} sportsgren", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "sport.intent", "template": "hvad spiller {person}", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "spouse.intent", "template": "hvem er {person} (ægtefælle|mand|kone)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "spouse.intent", "template": "{person} (mand|kone)", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "spouse.intent", "template": "hvem giftede {person} sig med", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "stadium.intent", "template": "hvilken (stadion|arena) bruger {team}", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "stadium.intent", "template": "hvor spiller {team} hjemmekampe", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "stadium.intent", "template": "{team} stadion", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "stadium.intent", "template": "hvad hedder {team} hjemmebane", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "stadium.intent", "template": "{team} hjemmestadion", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "stadium.intent", "template": "hvad er {team} stadions navn", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "stadium.intent", "template": "hvor holder {team} til", "slots": ["team"], "entity_values": {"team": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "starring.intent", "template": "hvem spiller i {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "starring.intent", "template": "{movie} rollebesætning", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "starring.intent", "template": "whilke skuespillere er i {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "starring.intent", "template": "hvem medvirker i {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "starring.intent", "template": "hvem er med i {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "starring.intent", "template": "{movie} skuespillere", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "starring.intent", "template": "hvem optræder i {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "starring.intent", "template": "hvad er castet i {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "successor.intent", "template": "hvem afløste {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "successor.intent", "template": "hvem var {keyword}s efterfølger", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "successor.intent", "template": "hvem fik (stillingen|tronen|posten) efter {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "successor.intent", "template": "hvem tog over fra {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "successor.intent", "template": "hvem fulgte efter {keyword}", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "thesis.intent", "template": "hvad er {keyword} specialeemne", "slots": ["keyword"], "entity_values": {"keyword": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "written_by.intent", "template": "hvem (skrev|forfattede) (manuskriptet|scriptet) til {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "written_by.intent", "template": "{movie} manuskriptforfatter", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "written_by.intent", "template": "hvem lavede manuskriptet til {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "written_by.intent", "template": "hvem er manuskriptforfatteren bag {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "written_by.intent", "template": "hvem skrev filmmanualet til {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "written_by.intent", "template": "{movie} screenplay forfatter", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "written_by.intent", "template": "hvem stod for manuskriptet til {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "years_active.intent", "template": "hvornår var {person} aktiv", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-ddg-plugin", "intent": "years_active.intent", "template": "{person} aktive år", "slots": ["person"], "entity_values": {"person": []}}
 {"lang": "da-DK", "skill": "ovos-ddg-solver-plugin", "intent": "age.intent", "template": "hvor gammel er {person}", "slots": ["person"], "entity_values": {"person": []}}
 {"lang": "da-DK", "skill": "ovos-ddg-solver-plugin", "intent": "age.intent", "template": "hvad er {person} alder", "slots": ["person"], "entity_values": {"person": []}}
 {"lang": "da-DK", "skill": "ovos-ddg-solver-plugin", "intent": "age.intent", "template": "{person} alder", "slots": ["person"], "entity_values": {"person": []}}
@@ -460,6 +902,357 @@
 {"lang": "da-DK", "skill": "ovos-ddg-solver-plugin", "intent": "written_by.intent", "template": "hvem stod for manuskriptet til {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
 {"lang": "da-DK", "skill": "ovos-ddg-solver-plugin", "intent": "years_active.intent", "template": "hvornår var {person} aktiv", "slots": ["person"], "entity_values": {"person": []}}
 {"lang": "da-DK", "skill": "ovos-ddg-solver-plugin", "intent": "years_active.intent", "template": "{person} aktive år", "slots": ["person"], "entity_values": {"person": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "display fremhævede {media}", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "vis  {media} afspilningsliste", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "vis  {media} katalog", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "vis  {media} samling", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "vis fremhævede {media}", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "vis udvalgt {media} afspilningsliste", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "vis udvalgt {media} katalog", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "vis udvalgt {media} samling", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "visning  {media} afspilningsliste", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "visning  {media} katalog", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "visning  {media} samling", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "visning udvalgt {media} afspilningsliste", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "visning udvalgt {media} katalog", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "visning udvalgt {media} samling", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "åben  {media} afspilningsliste", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "åben  {media} katalog", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "åben  {media} samling", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "åben fremhævede {media}", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "åben udvalgt {media} afspilningsliste", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "åben udvalgt {media} katalog", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "featured.intent", "template": "åben udvalgt {media} samling", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "play.intent", "template": "afspil {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "play.intent", "template": "spil {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "play.intent", "template": "start {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "read.intent", "template": "læs bog {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "read.intent", "template": "læs lydbog {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "read.intent", "template": "læs {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "read.intent", "template": "læs {query} bog", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-media-classifier", "intent": "read.intent", "template": "læs {query} lydbog", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audio.intent", "template": "Afspil {query} lyd kun", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audio.intent", "template": "Start kun lyd {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audio.intent", "template": "Afspil kun lyd {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audio.intent", "template": "Start {query} lyd kun", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "spille radio drama {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Spille {query} radioteater", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Læs {query} lyddrama", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Læs {query} læsning", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Start radiodrama {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Læs bog {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Læs {query} bog", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "{query} historie", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "lydteater {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Spil historie {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Start lyddrama {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Afspil {query} lyddrama", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Start {query} radioteater", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Start {query} læsning", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Afspil lyd drama {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Spil {query} bog", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "{query} læsning", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Læs {query} lydbog", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Læs lydbog {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Begynd historien {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Start {query} bog", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Start {query} radiodrama", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Start {query} historie", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Afspil lydbog {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Læs {query} historie", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Spil {query} læsning", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Start radioteater {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "{query} bog", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Læs historien {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Spil {query} historie", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Læs {query} radioteater", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "radioteater {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Læs radio drama {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Afspil {query} lydteater", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Start {query} lydbog", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "lydbog {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Start {query} lyddrama", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Start lydbog {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Læs lydteater {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Læs {query} radio drama", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "{query} lydbog", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "{query} radiodrama", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Spille radioteater {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "{query} lyddrama", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Læs {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Læs radioteater {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Start lydteater {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Begynd at reservere {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Start {query} lydteater", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Afspil lydteater {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Afspil {query} lydbog", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Læs lyddrama {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "{query} lydteater", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "{query} radioteater", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Læs {query} lydteater", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "lyddrama {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Spillebog {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "radiodrama {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "audiobook.intent", "template": "Afspil {query} radio drama", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "bw_movie.intent", "template": "spille {query} sort hvid film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "bw_movie.intent", "template": "Start sort og hvid film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "bw_movie.intent", "template": "spille {query} sort og hvid film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "bw_movie.intent", "template": "Afspil {query} sort hvid film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "bw_movie.intent", "template": "Start {query} sorte og hvide film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "bw_movie.intent", "template": "Begynd sort hvid film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "bw_movie.intent", "template": "spille sort hvid film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "bw_movie.intent", "template": "Start {query} sort og hvid film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "bw_movie.intent", "template": "Start sort hvid film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "bw_movie.intent", "template": "Start {query} sorte hvide film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "bw_movie.intent", "template": "Start {query} sort hvid film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "bw_movie.intent", "template": "Afspil {query} sorte hvide film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "bw_movie.intent", "template": "spille sort og hvid film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "bw_movie.intent", "template": "Start sorte hvide film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "bw_movie.intent", "template": "spille sorte hvide film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "Spil {query} visuel tegneserie", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "Spil animeret tegneserie {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "Start {query} tegneserie", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "Begynd {query} anime tegneserie", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "begynde bevægelse tegneserie {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "Afspil {query} visuel historie", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "Spil visuel tegneserie {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "Begynd animerede tegneserie {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "Begynde visuelle tegneserie {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "Start {query} visuelle tegneserie", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "Spil visuel historie {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "Start tegneserie {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "Spil bevægelse tegneserie {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "Start {query} bevægelse tegneserie", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "Start {query} visuel historie", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "spil {query} anime tegneserie", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "Spil {query} tegneserie", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "Start visuel historie {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "Spil tegneserie {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "comic.intent", "template": "Spil {query} bevægelse tegneserie", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "documentaries.intent", "template": "Afspil {query} dokumentar", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "documentaries.intent", "template": "Start {query} dokumenter", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "documentaries.intent", "template": "Spil dokumentarfilm {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "documentaries.intent", "template": "Spil {query} dokumentarer", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "documentaries.intent", "template": "Afspil en dokumentarfilm {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "documentaries.intent", "template": "Begynde dokumentlister {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "documentaries.intent", "template": "Start dokumentar {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "documentaries.intent", "template": "Start et dokumentarer {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "documentaries.intent", "template": "Spille dokumentar {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "documentaries.intent", "template": "spille en dokumentar {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "documentaries.intent", "template": "Start {query} dokumentar", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "documentaries.intent", "template": "Start en dokumentar {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Vis {media} katalog", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Vis {media} afspilning", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Åben {media} samling", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Vist {media} kollektion", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Åbn {media} katalog", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Åbne udvalgte {media} kollektion", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Vis med {media} afspilningsliste", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Åbn {media}", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Vis featured {media} kollektion", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Vis featured {media}", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Åbne numre {media}", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Vis {media} kollektion", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Vist {media}", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Vis featured {media} afspilningsliste", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Åbne {media}", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Vis {media} samling", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Vis featured {media} katalog", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Åbnt {media} katalog", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "featured.intent", "template": "Vis {media} afspilningsliste", "slots": ["media"], "entity_values": {"media": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "game.intent", "template": "Start spil {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "game.intent", "template": "spil {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "hentai.intent", "template": "spille {query} tegneserie porno", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "hentai.intent", "template": "Begynd at male porno {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "hentai.intent", "template": "spil {query} animeret porno", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "hentai.intent", "template": "Spil hentai porno {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "hentai.intent", "template": "start hentai {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "hentai.intent", "template": "start {query} hentai porno", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "hentai.intent", "template": "Begynd hentai porno {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "hentai.intent", "template": "Begynd {query} tegneserie porno", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "hentai.intent", "template": "Spil {query} hentai", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "hentai.intent", "template": "Spil animeret porno {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "hentai.intent", "template": "spille hentai {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "hentai.intent", "template": "Spil {query} hentai porno", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "hentai.intent", "template": "Begynd {query} animerede porno", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "hentai.intent", "template": "Spil tegneserie porno {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "hentai.intent", "template": "Begynd animerede porno {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "hentai.intent", "template": "Start {query} hentai", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movie.intent", "template": "Start {query} film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movie.intent", "template": "Begynd en {query} film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movie.intent", "template": "Spille film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movie.intent", "template": "Afspil {query} film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movie.intent", "template": "Afspil en {query} film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movie.intent", "template": "Afspil film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movie.intent", "template": "Start film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movie.intent", "template": "Begynd din film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movie.intent", "template": "spille en {query} film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movie.intent", "template": "Start en {query} film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movie.intent", "template": "Spil en {query} film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movie.intent", "template": "Begynd din anmeldelse af {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movietrailer.intent", "template": "Afspil {query} film preview", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movietrailer.intent", "template": "Begynd at bruge {query} film preview", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movietrailer.intent", "template": "Afspil film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movietrailer.intent", "template": "Spil trailer {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movietrailer.intent", "template": "start trailer {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movietrailer.intent", "template": "Start {query} trailer", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movietrailer.intent", "template": "Spil {query} trailer", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "movietrailer.intent", "template": "Begynd at se {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "music.intent", "template": "Afspil musik {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "music.intent", "template": "Begynd at spille {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "music.intent", "template": "Afspil sang {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "music.intent", "template": "Start {query} sang", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "music.intent", "template": "Start musik {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "music.intent", "template": "Start {query} musik", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "music.intent", "template": "Afspil {query} musik", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "music.intent", "template": "Afspil {query} sang", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "news.intent", "template": "Start nyheder {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "news.intent", "template": "Start nyhedsstation {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "news.intent", "template": "Spil nyheder station {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "news.intent", "template": "Spil {query} nyheder station", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "news.intent", "template": "Spil {query} nyheder", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "news.intent", "template": "Spil nyheder {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "news.intent", "template": "Start {query} nyhedsstation", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "news.intent", "template": "Start {query} nyheder", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "søg ovos medier for {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "søg {query} på åben stemme os medier", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "søg {query} i fælles spil", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "søg O C P for {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "søg {query} på O C P", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "søg {query} på ovos medier", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "Start {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "søg {query} på ovos fælles spil", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "søg ovos fælles spil for {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "søg ocp for {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "søg {query} i ovos fælles spil", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "Spil {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "søg {query} på ocp", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "søg {query} i ovos medier", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "søg fælles spil for {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "søg åben stemme os medier for {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "søg {query} i ocp", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "søg {query} på fælles spil", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "play.intent", "template": "søg {query} i åbne stemmer os medier", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Afspil {query} podcast episode {number}", "slots": ["query", "number"], "entity_values": {"query": [], "number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "start pod {query} nummer {number}", "slots": ["query", "number"], "entity_values": {"query": [], "number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Afspil podcast episode {number}", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Spil {query} pod cast", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Spil podcast {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Start {query} pod cast episode {number}", "slots": ["query", "number"], "entity_values": {"query": [], "number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "play {query} pod nummer {number}", "slots": ["query", "number"], "entity_values": {"query": [], "number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "play pod {query} nummer {number}", "slots": ["query", "number"], "entity_values": {"query": [], "number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Afspil {query} podcast", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Start {query} podcast", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "start pod {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "start podcast {query} nummer {number}", "slots": ["query", "number"], "entity_values": {"query": [], "number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Afspil podcast {query} nummer {number}", "slots": ["query", "number"], "entity_values": {"query": [], "number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Spil pod {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Afspil podcast nummer {number}", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "play pod nummer {number}", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "start podcast {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Start {query} podcast episode {number}", "slots": ["query", "number"], "entity_values": {"query": [], "number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "play {query} podcast nummer {number}", "slots": ["query", "number"], "entity_values": {"query": [], "number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Start pod cast episode {number}", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "start {query} pod nummer {number}", "slots": ["query", "number"], "entity_values": {"query": [], "number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Start podcast episode {number}", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "play {query} pod cast episode {number}", "slots": ["query", "number"], "entity_values": {"query": [], "number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Afspil podcast {query} episode {number}", "slots": ["query", "number"], "entity_values": {"query": [], "number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "play pod cast {query} episode {number}", "slots": ["query", "number"], "entity_values": {"query": [], "number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "start {query} podcast nummer {number}", "slots": ["query", "number"], "entity_values": {"query": [], "number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Start podcast {query} episode {number}", "slots": ["query", "number"], "entity_values": {"query": [], "number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Spil pod støbt episode {number}", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Start {query} pod cast", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Start pod cast {query} episode {number}", "slots": ["query", "number"], "entity_values": {"query": [], "number": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "start pod nummer {nummer}", "slots": ["nummer"], "entity_values": {"nummer": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "podcast.intent", "template": "Start podcast nummer {nummer}", "slots": ["nummer"], "entity_values": {"nummer": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "porn.intent", "template": "Begynd porno {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "porn.intent", "template": "Spil {query} porno", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "porn.intent", "template": "spille porno {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "porn.intent", "template": "Begynd {query} porno", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio.intent", "template": "Afspil {query} radio", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio.intent", "template": "Start {query} radio station", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio.intent", "template": "Start radio station {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio.intent", "template": "Spil internetradio {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio.intent", "template": "Afspil webradio {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio.intent", "template": "Afspil radio {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio.intent", "template": "Afspil {query} webradio", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio.intent", "template": "Afspil {query} internetradio", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio.intent", "template": "Start radio {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio.intent", "template": "Afspil {query} radio station", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio.intent", "template": "Start internetradio {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio.intent", "template": "Start webradio {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio.intent", "template": "Start {query} webradio", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio.intent", "template": "Start {query} radio", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio.intent", "template": "Afspil radio station {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio.intent", "template": "Start {query} internetradio", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio_drama.intent", "template": "Start radiodrama {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio_drama.intent", "template": "Spille radioteater {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio_drama.intent", "template": "spille radio drama {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio_drama.intent", "template": "Spille {query} radioteater", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio_drama.intent", "template": "Start radioteater {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio_drama.intent", "template": "Afspil {query} radio drama", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio_drama.intent", "template": "Start {query} radioteater", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "radio_drama.intent", "template": "Start {query} radiodrama", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "read.intent", "template": "Læs {query} lydbog", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "read.intent", "template": "Læs bog {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "read.intent", "template": "Læs {query} bog", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "read.intent", "template": "Læs lydbog {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "read.intent", "template": "Læs {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "short_movie.intent", "template": "Afspil {query} korte film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "short_movie.intent", "template": "Begynd at bruge {query} kortfilm", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "short_movie.intent", "template": "Begynd en kort film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "short_movie.intent", "template": "Spil kort film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "short_movie.intent", "template": "Start {query} korte film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "short_movie.intent", "template": "Spil korte film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "short_movie.intent", "template": "Begynd korte film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "short_movie.intent", "template": "Start en kort film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "short_movie.intent", "template": "Begynde kortfilm {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "short_movie.intent", "template": "Spil en kort film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "short_movie.intent", "template": "Afspil {query} kortfilm", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "short_movie.intent", "template": "spille en kort film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "short_movie.intent", "template": "Begynd din anmeldelse af {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "silent_movie.intent", "template": "Start tavs film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "silent_movie.intent", "template": "Begynd tavs film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "silent_movie.intent", "template": "Afspil {query} tavs film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "silent_movie.intent", "template": "Afspil {query} tavse film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "silent_movie.intent", "template": "Start tavse film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "silent_movie.intent", "template": "Afspil tavs film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "silent_movie.intent", "template": "Afspil tavse film {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "silent_movie.intent", "template": "Start {query} tavse film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "silent_movie.intent", "template": "Start {query} tavs film", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Start {query} netværk tv", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Begynd ip TV {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Afspil netværks tv {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "spille {query} ip tv", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Start {query} TV", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Start {query} ip tv", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "spille tv {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Start tv-kanal {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Start {query} kanal", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "spille ip tv {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Afspil {query} netværk tv", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Start {query} ip TV", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Spille ip TV {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "spillekanal {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Begynd ip tv {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Start tv {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Spil {query} tv", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Start netværks tv {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "startkanal {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "spille tv-kanal {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Spille tv {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Afspil {query} kanal", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Start {query} tv", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Afspil {query} ip TV", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Afspil {query} tv", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "Start {query} tv-kanal", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "tv.intent", "template": "spille {query} tv-kanal", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "video.intent", "template": "Afspil {query} video", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "video.intent", "template": "Start video {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "video.intent", "template": "Start {query} video", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "video.intent", "template": "start {query} med video", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "video.intent", "template": "leg {query} med video", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "da-DK", "skill": "ovos-ocp-audio-plugin", "intent": "video.intent", "template": "Afspil video {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "da-DK", "skill": "ovos-ocp-pipeline-plugin", "intent": "featured.intent", "template": "display fremhævede {media}", "slots": ["media"], "entity_values": {"media": []}}
 {"lang": "da-DK", "skill": "ovos-ocp-pipeline-plugin", "intent": "featured.intent", "template": "vis  {media} afspilningsliste", "slots": ["media"], "entity_values": {"media": []}}
 {"lang": "da-DK", "skill": "ovos-ocp-pipeline-plugin", "intent": "featured.intent", "template": "vis  {media} katalog", "slots": ["media"], "entity_values": {"media": []}}
@@ -1038,6 +1831,10 @@
 {"lang": "da-DK", "skill": "ovos-skill-network-scanner", "intent": "check_device.intent", "template": "er min {device} på netværket", "slots": ["device"], "entity_values": {"device": []}}
 {"lang": "da-DK", "skill": "ovos-skill-network-scanner", "intent": "check_device.intent", "template": "ser du en {device}", "slots": ["device"], "entity_values": {"device": []}}
 {"lang": "da-DK", "skill": "ovos-skill-network-scanner", "intent": "check_device.intent", "template": "kan du finde min {device}", "slots": ["device"], "entity_values": {"device": []}}
+{"lang": "da-DK", "skill": "ovos-skill-number-facts", "intent": "date_trivia.intent", "template": "(fakta|et faktum) om (datoen|dagen) {date}", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "da-DK", "skill": "ovos-skill-number-facts", "intent": "date_trivia.intent", "template": "(fakta|et faktum) om (januar|februar|marts|april|maj|juni|juli|august|september|oktober|november|december) {date}", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "da-DK", "skill": "ovos-skill-number-facts", "intent": "number_trivia.intent", "template": "[fortæl mig] (et faktum|en trivia|fakta) om tallet {number}", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "da-DK", "skill": "ovos-skill-number-facts", "intent": "year_trivia.intent", "template": "[fortæl mig] (et faktum|fakta|trivia) om året {year}", "slots": ["year"], "entity_values": {"year": []}}
 {"lang": "da-DK", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "gentag {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "da-DK", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "gentag {sentence} efter mig", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "da-DK", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "sig efter mig {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
@@ -2636,6 +3433,23 @@
 {"lang": "da-DK", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "spørg wordnet om {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "da-DK", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "søg i wordnet efter {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "da-DK", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "søgeord net for {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-wordnet-plugin", "intent": "antonym.intent", "template": "hvad er antonymerne til {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-wordnet-plugin", "intent": "antonym.intent", "template": "hvad er antonymet til {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-wordnet-plugin", "intent": "antonym.intent", "template": "hvad er et antonym til {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-wordnet-plugin", "intent": "definition.intent", "template": "hvad er definitionen af ​​{word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-wordnet-plugin", "intent": "definition.intent", "template": "hvad er en {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-wordnet-plugin", "intent": "holonym.intent", "template": "hvad er et holonym til {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-wordnet-plugin", "intent": "holonym.intent", "template": "hvad er holonymerne for {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-wordnet-plugin", "intent": "holonym.intent", "template": "hvad er holonymet til {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-wordnet-plugin", "intent": "hypernym.intent", "template": "hvad er et hypernym af {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-wordnet-plugin", "intent": "hypernym.intent", "template": "hvad er hypernym af {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-wordnet-plugin", "intent": "hypernym.intent", "template": "hvad er hypernymerne for {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-wordnet-plugin", "intent": "hyponym.intent", "template": "hvad er et hyponym af {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-wordnet-plugin", "intent": "hyponym.intent", "template": "hvad er hyponymer af {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-wordnet-plugin", "intent": "hyponym.intent", "template": "hvad er hyponymet for {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-wordnet-plugin", "intent": "lemma.intent", "template": "hvad er et lemma for {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-wordnet-plugin", "intent": "lemma.intent", "template": "hvad er lemmaerne i {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-wordnet-plugin", "intent": "lemma.intent", "template": "hvad er lemmaet for {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "da-DK", "skill": "skill-homeassistant", "intent": "assist.intent", "template": "sig til home assistant at {command}", "slots": ["command"], "entity_values": {"command": []}}
 {"lang": "da-DK", "skill": "skill-homeassistant", "intent": "assist.intent", "template": "sig til home assistant {command}", "slots": ["command"], "entity_values": {"command": []}}
 {"lang": "da-DK", "skill": "skill-homeassistant", "intent": "lights.decrease.brightness.intent", "template": "sænk (|lysstyrken) for (|den|min) {entity}", "slots": ["entity"], "entity_values": {"entity": []}}
