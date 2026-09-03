@@ -52,9 +52,9 @@ OpenVoiceOS/ovos-skill-news
 OpenVoiceOS/ovos-skill-number-facts
 OpenVoiceOS/ovos-skill-parrot
 OpenVoiceOS/ovos-skill-personal
+OpenVoiceOS/ovos-skill-pokepedia
 OpenVoiceOS/ovos-skill-randomness
 OpenVoiceOS/ovos-skill-screenshot
-OpenVoiceOS/ovos-skill-soundcloud
 OpenVoiceOS/ovos-skill-speedtest
 OpenVoiceOS/ovos-skill-spelling
 OpenVoiceOS/ovos-skill-volume
@@ -63,26 +63,53 @@ OpenVoiceOS/ovos-skill-weather
 OpenVoiceOS/ovos-skill-wikihow
 OpenVoiceOS/ovos-skill-wikipedia
 OpenVoiceOS/ovos-skill-wolfie
-OpenVoiceOS/ovos-skill-wordnet
 OpenVoiceOS/ovos-skill-word-of-the-day
-OpenVoiceOS/ovos-skill-pokepedia
+OpenVoiceOS/ovos-skill-wordnet
+
+# TigreGotico skills
+TigreGotico/ovos-skill-white-house-adventure
+TigreGotico/skill-ovos-radio-spain
+TigreGotico/skill-ovos-radio-tuga
 
 # Core (bundled locale files)
 OpenVoiceOS/ovos-core
+
+# Framework
+OpenVoiceOS/ovos-workshop
 
 # Pipeline plugins
 OpenVoiceOS/ovos-ocp-pipeline-plugin
 OpenVoiceOS/ovos-common-query-pipeline-plugin
 OpenVoiceOS/ovos-persona
+JarbasHiveMind/ovos-hivemind-pipeline-plugin
 
 # Utterance transformers
 OpenVoiceOS/ovos-utterance-plugin-cancel
 
 # Solvers
 OpenVoiceOS/ovos-solver-failure-plugin
-OpenVoiceOS/ovos-solver-YesNo-plugin
 OpenVoiceOS/ovos-option-matcher-fuzzy-plugin
-OpenVoiceOS/ovos-ddg-solver-plugin
+OpenVoiceOS/ovos-ddg-plugin
+OpenVoiceOS/ovos-YesNo-plugin
 
 #  NLP
-OpenVoiceOS/ovos-color-parser
+OpenVoiceOS/ovos-date-parser
+OpenVoiceOS/ovos-gguf-plugin
+OpenVoiceOS/ovos-machine-translations
+OpenVoiceOS/ovos-wordnet-plugin
+TigreGotico/bifonia
+TigreGotico/chronologia
+TigreGotico/mediavocab
+TigreGotico/ovos-transcription-validator-plugin
+TigreGotico/phoonnx
+TigreGotico/simple_NER
+
+# Media
+OpenVoiceOS/ovos-media
+OpenVoiceOS/ovos-media-classifier
+OpenVoiceOS/ovos-ocp-audio-plugin
+
+# Tools
+OpenVoiceOS/ovos-spec-tools
+OpenVoiceOS/ovos-tts-plugin-mimic
+OpenVoiceOS/pyhtmx-gui-client
