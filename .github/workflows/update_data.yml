@@ -53,3 +53,29 @@ jobs:
         if: always()
         run: |
           ./.github/scripts/commit_data.sh "chore: update training corpora" "data/datasets/**"
+
+      # Mirrors data/datasets/ into the data/datasets/ path of the published
+      # HF dataset repo, and regenerates ovos_localize_intents.csv at that
+      # repo's root from the current classification corpus so the flat
+      # export and datasets-server stats stay in sync with the daily
+      # refresh instead of freezing at whenever the CSV was last hand-
+      # uploaded. Requires an HF_TOKEN Actions secret with write access to
+      # OpenVoiceOS/ovos-localize-intents; skips quietly if unset so a
+      # missing secret never reddens the daily refresh, and an HF outage
+      # can't either since the step is non-fatal.
+      - name: Publish training corpora to Hugging Face
+        if: always()
+        continue-on-error: true
+        timeout-minutes: 15
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_SERVER_URL: ${{ github.server_url }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          if [ -z "${HF_TOKEN}" ]; then
+            echo "HF_TOKEN secret is not set; skipping Hugging Face publish."
+            exit 0
+          fi
+          pip install -U huggingface_hub
+          python .github/scripts/publish_hf_dataset.py
