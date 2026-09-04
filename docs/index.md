@@ -94,6 +94,12 @@ from datasets import load_dataset
 dataset = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localize/data/datasets/classification/en-US.jsonl")
 ```
 
+`update_data.yml` also publishes `data/datasets/` to the
+[`OpenVoiceOS/ovos-localize-intents`](https://huggingface.co/datasets/OpenVoiceOS/ovos-localize-intents)
+dataset repo on every run, once the repository has an `HF_TOKEN` Actions
+secret configured with write access to that dataset. Without the secret the
+step is skipped and the Hub copy is left as it was last published.
+
 ## Data Refresh
 
 Data refreshes automatically in three ways:
