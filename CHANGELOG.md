@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.1.0a16](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a16) (2026-09-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a15...0.1.0a16)
+
+**Merged pull requests:**
+
+- Add NGI0 funding attribution and AI-assistance line to the footer [\#495](https://github.com/OpenVoiceOS/ovos-localize/pull/495) ([JarbasAl](https://github.com/JarbasAl))
+- chore: drop deprecated media/OCP skills from the registry [\#494](https://github.com/OpenVoiceOS/ovos-localize/pull/494) ([JarbasAl](https://github.com/JarbasAl))
+- chore: sync skills.txt with live org repos carrying locale dirs [\#482](https://github.com/OpenVoiceOS/ovos-localize/pull/482) ([JarbasAl](https://github.com/JarbasAl))
+- fix\(submit\): keep entity/vocab submissions to plain values, stop context bleed [\#481](https://github.com/OpenVoiceOS/ovos-localize/pull/481) ([JarbasAl](https://github.com/JarbasAl))
+- fix\(datasets\): bound and memoize template expansion so generation finishes [\#475](https://github.com/OpenVoiceOS/ovos-localize/pull/475) ([JarbasAl](https://github.com/JarbasAl))
+- fix\(submit\): reject slot-only template lines and disclose tool authorship [\#470](https://github.com/OpenVoiceOS/ovos-localize/pull/470) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.0a15](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a15) (2026-09-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a14...0.1.0a15)
