@@ -157334,18 +157334,27 @@ en-US	ovos-media	WhatSong.intent	name of this song please
 en-US	ovos-media	WhatSong.intent	what tune is this
 en-US	ovos-media	WhatSong.intent	which song is this
 en-US	ovos-media	WhatSong.intent	tell me what song this is
-en-US	ovos-media	cannot.control.device.dialog	i can't control that player from here
-en-US	ovos-media	cannot.control.device.dialog	that request didn't come from this device, so i can't act on it
-en-US	ovos-media	cannot.control.device.dialog	i'm not able to control that device from this session
+en-US	ovos-media	cannot.control.device.dialog	that device can't be controlled from here — try again from the device itself
+en-US	ovos-media	cannot.control.device.dialog	this session can't control that player — control it directly from the device instead
+en-US	ovos-media	cannot.control.device.dialog	remote control isn't allowed for that device — control it directly instead
+en-US	ovos-media	cannot.seek.dialog	seeking isn't supported for what's playing right now
+en-US	ovos-media	cannot.seek.dialog	i can't jump to that position in this stream
+en-US	ovos-media	cannot.seek.dialog	this stream doesn't support seeking, sorry
+en-US	ovos-media	invalid.request.dialog	i can't play that — try a different search
+en-US	ovos-media	invalid.request.dialog	that request isn't something i can play — try asking differently
+en-US	ovos-media	invalid.request.dialog	i can't play what you asked for — try a different track or search
 en-US	ovos-media	no.album.info.dialog	i don't have album information for this track
 en-US	ovos-media	no.album.info.dialog	sorry, i don't know what album this is from
 en-US	ovos-media	no.album.info.dialog	album information isn't available for this track
 en-US	ovos-media	no.artist.info.dialog	i don't know who the artist is
 en-US	ovos-media	no.artist.info.dialog	i don't have artist information for this track
 en-US	ovos-media	no.artist.info.dialog	sorry, i don't know who sings this
-en-US	ovos-media	no.playback.backend.dialog	i don't have a media player installed, so i can't play anything
-en-US	ovos-media	no.playback.backend.dialog	sorry, no media playback plugin is installed on this device
-en-US	ovos-media	no.playback.backend.dialog	i can't play that, no audio or video backend is installed
+en-US	ovos-media	no.playback.backend.dialog	no media player is installed on this device — install a playback plugin to enable it
+en-US	ovos-media	no.playback.backend.dialog	no playback plugin is installed here — install one to enable audio playback
+en-US	ovos-media	no.playback.backend.dialog	this device has no media backend — install a playback plugin to fix it
+en-US	ovos-media	no.track.info.dialog	i don't have details for what's playing
+en-US	ovos-media	no.track.info.dialog	i don't know the name of what's playing right now
+en-US	ovos-media	no.track.info.dialog	something is playing, but i don't have its details
 en-US	ovos-media	nothing.playing.dialog	nothing is playing right now
 en-US	ovos-media	nothing.playing.dialog	there's nothing playing at the moment
 en-US	ovos-media	nothing.playing.dialog	i'm not playing anything right now
@@ -157361,9 +157370,12 @@ en-US	ovos-media	now.playing.song.no.artist.dialog	this is {title}
 en-US	ovos-media	now.playing.song.no.artist.dialog	you're listening to {title}
 en-US	ovos-media	now.playing.song.no.artist.dialog	the song playing is {title}
 en-US	ovos-media	now.playing.song.no.artist.dialog	this track is called {title}
-en-US	ovos-media	player.not.responding.dialog	the media player is not responding
-en-US	ovos-media	player.not.responding.dialog	i can't reach the media player right now
-en-US	ovos-media	player.not.responding.dialog	the media player didn't answer in time
+en-US	ovos-media	playback.failed.dialog	none of those tracks would play — try something else or check your connection
+en-US	ovos-media	playback.failed.dialog	playback failed for all of those tracks — check your connection and try again
+en-US	ovos-media	playback.failed.dialog	those tracks all failed to play — try a different search or check your connection
+en-US	ovos-media	player.not.responding.dialog	the media player stopped responding — try restarting playback
+en-US	ovos-media	player.not.responding.dialog	media playback service isn't responding — try again in a moment
+en-US	ovos-media	player.not.responding.dialog	the player process isn't answering — restart playback to fix it
 en-US	ovos-media	queue.finished.dialog	that's the end of the queue
 en-US	ovos-media	queue.finished.dialog	that was the last track in the queue
 en-US	ovos-media	queue.finished.dialog	the queue has finished playing
@@ -157373,9 +157385,9 @@ en-US	ovos-media	shuffle.off.dialog	shuffle turned off
 en-US	ovos-media	shuffle.on.dialog	shuffle is on
 en-US	ovos-media	shuffle.on.dialog	okay, shuffling now
 en-US	ovos-media	shuffle.on.dialog	shuffle enabled
-en-US	ovos-media	track.failed.dialog	sorry, that track failed to play, skipping to the next one
-en-US	ovos-media	track.failed.dialog	i couldn't play that one, moving on
-en-US	ovos-media	track.failed.dialog	that track wouldn't play, skipping it
+en-US	ovos-media	track.failed.dialog	that track failed to play — skipping to the next one
+en-US	ovos-media	track.failed.dialog	playback failed for that track — moving to the next one
+en-US	ovos-media	track.failed.dialog	that song wouldn't play — skipping ahead
 ca-ES	ovos-media-classifier	ADKeyword.voc	audiodescripció
 ca-ES	ovos-media-classifier	ADKeyword.voc	descripció de la pel·lícula
 da-DK	ovos-media-classifier	ADKeyword.voc	filmbeskrivelse
