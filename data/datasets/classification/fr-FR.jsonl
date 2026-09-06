@@ -10539,13 +10539,13 @@
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "change.voc", "text": "change"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "change.voc", "text": "mets"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "change.voc", "text": "règle"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "change_volume.intent", "text": "change le volume sur {level}"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "change_volume.intent", "text": "change le volume à {level}"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "change_volume.intent", "text": "mets le volume sur {level}"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "change_volume.intent", "text": "mets le volume à {level}"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "change_volume.intent", "text": "règle le volume sur {level}"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "change_volume.intent", "text": "règle le volume à {level}"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "change_volume.intent", "text": "volume à {level} pour cent"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "change_volume.intent", "text": "change le volume sur {amount}"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "change_volume.intent", "text": "change le volume à {amount}"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "change_volume.intent", "text": "mets le volume sur {amount}"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "change_volume.intent", "text": "mets le volume à {amount}"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "change_volume.intent", "text": "règle le volume sur {amount}"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "change_volume.intent", "text": "règle le volume à {amount}"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "change_volume.intent", "text": "volume à {amount} pour cent"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "current.voc", "text": "actuel"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "current_volume.intent", "text": "quel est le volume"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "current_volume.intent", "text": "quel est le volume actuel"}
@@ -10560,6 +10560,20 @@
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "less_volume.intent", "text": "moins de volume"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "less_volume.intent", "text": "mets le volume moins fort"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "less_volume.intent", "text": "baisse le son"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "level.voc", "text": "augmente"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "level.voc", "text": "baisse"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "level.voc", "text": "faible"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "level.voc", "text": "fort"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "level.voc", "text": "maximum"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "level.voc", "text": "moyen"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "level.voc", "text": "par défaut"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "level.default.voc", "text": "moyen"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "level.default.voc", "text": "par défaut"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "level.high.voc", "text": "augmente"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "level.high.voc", "text": "fort"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "level.low.voc", "text": "baisse"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "level.low.voc", "text": "faible"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "level.max.voc", "text": "maximum"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "louder.voc", "text": "monte"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "louder.voc", "text": "plus"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "louder.voc", "text": "plus fort"}
@@ -10567,30 +10581,28 @@
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "quieter.voc", "text": "plus bas"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "quieter.voc", "text": "réduis"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "volume.voc", "text": "volume"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "mets le volume à moyen"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "niveau de volume par défaut"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "remets le volume par défaut"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "rétablis le volume"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.default.intent", "text": "volume moyen"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.high.intent", "text": "augmente le volume"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.high.intent", "text": "mets le volume fort"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.high.intent", "text": "monte le volume"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.high.intent", "text": "volume fort"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.low.intent", "text": "baisse le volume"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.low.intent", "text": "mets le volume faible"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.low.intent", "text": "volume faible"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.max.intent", "text": "mets le volume au maximum"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.max.intent", "text": "règle le volume au maximum"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.max.intent", "text": "volume au maximum"}
-{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.max.intent", "text": "volume maximum"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.max.boost.intent", "text": "monte le volume au maximum"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.max.boost.intent", "text": "mets le volume à fond"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.mute.intent", "text": "coupe l'audio"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.mute.intent", "text": "coupe le son"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.mute.intent", "text": "mets en sourdine"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.mute.toggle.intent", "text": "active ou coupe la sourdine"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.mute.toggle.intent", "text": "bascule la sourdine"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.reset.intent", "text": "rétablis le volume"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.reset.intent", "text": "remets le volume par défaut"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.reset.intent", "text": "réinitialise le volume"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.unmute.intent", "text": "enlève la sourdine"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.unmute.intent", "text": "remets le son"}
 {"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume.unmute.intent", "text": "rétablis le son"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_level.intent", "text": "mets le volume à <level>"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_level.intent", "text": "niveau de volume <level>"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_level.intent", "text": "remets le volume <level>"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_level.intent", "text": "<level> le volume"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_level.intent", "text": "volume <level>"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_level.intent", "text": "mets le volume <level>"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_level.intent", "text": "mets le volume au <level>"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_level.intent", "text": "règle le volume au <level>"}
+{"lang": "fr-FR", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_level.intent", "text": "volume au <level>"}
 {"lang": "fr-FR", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "make_wallpaper.intent", "text": "applique cette image comme fond d'écran"}
 {"lang": "fr-FR", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "make_wallpaper.intent", "text": "applique cette image en fond d'écran"}
 {"lang": "fr-FR", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "make_wallpaper.intent", "text": "applique comme fond d'écran"}

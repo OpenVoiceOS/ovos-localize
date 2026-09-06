@@ -2579,8 +2579,8 @@
 {"lang": "de-DE", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "sage {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "de-DE", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "spreche {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "de-DE", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "wiederhole {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
-{"lang": "de-DE", "skill": "ovos-skill-volume", "intent": "change_volume.intent", "template": "(ändere|stelle) die Lautstärke auf {level}", "slots": ["level"], "entity_values": {"level": []}}
-{"lang": "de-DE", "skill": "ovos-skill-volume", "intent": "change_volume.intent", "template": "Lautstärke auf {level} [Prozent]", "slots": ["level"], "entity_values": {"level": []}}
+{"lang": "de-DE", "skill": "ovos-skill-volume", "intent": "change_volume.intent", "template": "(ändere|stelle) die Lautstärke auf {amount}", "slots": ["amount"], "entity_values": {"amount": []}}
+{"lang": "de-DE", "skill": "ovos-skill-volume", "intent": "change_volume.intent", "template": "Lautstärke auf {amount} [Prozent]", "slots": ["amount"], "entity_values": {"amount": []}}
 {"lang": "de-DE", "skill": "ovos-skill-wallpapers", "intent": "picture_about.intent", "template": "(zeige|lade) ein (zufälliges|anderes) (bild|foto) mit {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "de-DE", "skill": "ovos-skill-wallpapers", "intent": "picture_about.intent", "template": "(zeige|lade) mir ein (Bild|Foto|Abbildung) (über|für|mit) {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "de-DE", "skill": "ovos-skill-wallpapers", "intent": "picture_about.intent", "template": "(zeige|lade) mir ein (zufälliges|neues|anderes|noch ein anderes) (Bild|Foto|Abbild) (über|für|mit) {query}", "slots": ["query"], "entity_values": {"query": []}}
