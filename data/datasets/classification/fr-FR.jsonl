@@ -10369,6 +10369,8 @@
 {"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "voc", "intent": "pokemon.voc", "text": "étourmi"}
 {"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "voc", "intent": "pokemon.voc", "text": "étourvol"}
 {"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "voc", "intent": "pokemon.voc", "text": "évoli"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "voc", "intent": "pokemon.voc", "text": "porygon 2"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "voc", "intent": "pokemon.voc", "text": "nidoran"}
 {"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "voc", "intent": "tell_me.voc", "text": "parle-moi de"}
 {"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "voc", "intent": "tell_me.voc", "text": "parle-moi du pokémon"}
 {"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "voc", "intent": "tell_me.voc", "text": "parle-moi du pokemon"}
@@ -10658,7 +10660,12 @@
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "N_days_forecast.intent", "text": "quel temps fera-t-il cette semaine dans {location}"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear.voc", "text": "clair"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear.voc", "text": "soleil"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear_report.voc", "text": "dégagé"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear_report.voc", "text": "soleil"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear_report.voc", "text": "couvert"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clouds.voc", "text": "nuages épars"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cloudy_report.voc", "text": "nuageux"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cloudy_report.voc", "text": "nuages"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cold.voc", "text": "congélation"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cold.voc", "text": "cool"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cold.voc", "text": "frileux"}
@@ -10771,6 +10778,8 @@
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog.voc", "text": "brouillard"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog.voc", "text": "brume"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog.voc", "text": "brumeux"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog_report.voc", "text": "brouillard"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog_report.voc", "text": "brumeux"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "forecast.voc", "text": "prévision"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "high.voc", "text": "le plus élevé"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "high.voc", "text": "max"}
@@ -10810,73 +10819,6 @@
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "humidity.voc", "text": "brumeux"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "humidity.voc", "text": "humide"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "humidity.voc", "text": "humidité"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_clear.intent", "text": "est-ce que le ciel est dégagé"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_clear.intent", "text": "y a-t-il du soleil"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_clear.intent", "text": "est-ce nuageux"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_clear.intent", "text": "est-ce couvert à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_clear.intent", "text": "est-ce couvert en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_clear.intent", "text": "est-ce couvert au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_clear.intent", "text": "est-ce couvert aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_clear.intent", "text": "est-ce couvert dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "est-ce nuageux"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "est-ce nuageux aujourd'hui"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "est-ce nuageux aujourd'hui à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "est-ce nuageux demain"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "est-ce nuageux demain à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "est-ce nuageux à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "est-ce que c'est nuageux"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "est-ce que c'est nuageux aujourd'hui"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "est-ce que c'est nuageux aujourd'hui à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "est-ce que c'est nuageux demain"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "est-ce que c'est nuageux demain à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "est-ce que c'est nuageux à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "est-ce que ce sera nuageux"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "est-ce que ce sera nuageux aujourd'hui"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "est-ce que ce sera nuageux aujourd'hui à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "est-ce que ce sera nuageux demain"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "est-ce que ce sera nuageux demain à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "est-ce que ce sera nuageux à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "y a-t-il des nuages"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "y a-t-il des nuages aujourd'hui"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "y a-t-il des nuages aujourd'hui à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "y a-t-il des nuages demain"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "y a-t-il des nuages demain à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "y a-t-il des nuages à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "y aura-t-il des nuages"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "y aura-t-il des nuages aujourd'hui"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "y aura-t-il des nuages aujourd'hui à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "y aura-t-il des nuages demain"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "y aura-t-il des nuages demain à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_cloudy.intent", "text": "y aura-t-il des nuages à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_fog.intent", "text": "y a-t-il du brouillard"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_fog.intent", "text": "est-ce brumeux"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_fog.intent", "text": "le brouillard est-il prévu à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_fog.intent", "text": "le brouillard est-il prévu en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_fog.intent", "text": "le brouillard est-il prévu au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_fog.intent", "text": "le brouillard est-il prévu aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_fog.intent", "text": "le brouillard est-il prévu dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_rain.intent", "text": "va-t-il pleuvoir"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_rain.intent", "text": "est-ce qu'il pleut"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_rain.intent", "text": "dois-je prendre un parapluie"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_rain.intent", "text": "y a-t-il de la pluie prévue à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_rain.intent", "text": "y a-t-il de la pluie prévue en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_rain.intent", "text": "y a-t-il de la pluie prévue au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_rain.intent", "text": "y a-t-il de la pluie prévue aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_rain.intent", "text": "y a-t-il de la pluie prévue dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_snow.intent", "text": "va-t-il neiger"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_snow.intent", "text": "est-ce qu'il neige"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_snow.intent", "text": "y a-t-il de la neige prévue à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_snow.intent", "text": "y a-t-il de la neige prévue en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_snow.intent", "text": "y a-t-il de la neige prévue au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_snow.intent", "text": "y a-t-il de la neige prévue aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_snow.intent", "text": "y a-t-il de la neige prévue dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_stormy.intent", "text": "y a-t-il de l'orage"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_stormy.intent", "text": "un orage est-il prévu"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_stormy.intent", "text": "y a-t-il des alertes météo à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_stormy.intent", "text": "y a-t-il des alertes météo en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_stormy.intent", "text": "y a-t-il des alertes météo au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_stormy.intent", "text": "y a-t-il des alertes météo aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_stormy.intent", "text": "y a-t-il des alertes météo dans {location}"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "y a-t-il du vent"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "quel vent fait-il"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "est-ce venteux à {location}"}
@@ -10974,6 +10916,10 @@
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "query.voc", "text": "quel"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "query.voc", "text": "quel est"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain.voc", "text": "précipitations"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "pleuvoir"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "pleut"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "pluie"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "parapluie"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "relative-day.voc", "text": "d'hier"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "relative-day.voc", "text": "de demain"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "relative-day.voc", "text": "demain"}
@@ -10999,6 +10945,10 @@
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "relative-time.voc", "text": "pendant la nuit"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "relative-time.voc", "text": "soirée"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow.voc", "text": "neige fondue"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow_report.voc", "text": "neiger"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow_report.voc", "text": "neige"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "orage"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "alertes météo"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunrise.voc", "text": "aube"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunrise.voc", "text": "lever du soleil"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunset.voc", "text": "coucher du soleil"}
@@ -11011,6 +10961,72 @@
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "unit.voc", "text": "celsius"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "unit.voc", "text": "fahrenheit"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "weather.voc", "text": "temps"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce que le ciel est dégagé"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il du soleil"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce nuageux"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce couvert à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce couvert en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce couvert au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce couvert aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce couvert dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce nuageux à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce nuageux aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce nuageux aujourd'hui à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce nuageux demain"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce nuageux demain à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce que c'est nuageux"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce que c'est nuageux à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce que c'est nuageux aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce que c'est nuageux aujourd'hui à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce que c'est nuageux demain"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce que c'est nuageux demain à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce que ce sera nuageux"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce que ce sera nuageux à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce que ce sera nuageux aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce que ce sera nuageux aujourd'hui à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce que ce sera nuageux demain"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce que ce sera nuageux demain à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il des nuages"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il des nuages à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il des nuages aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il des nuages aujourd'hui à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il des nuages demain"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il des nuages demain à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y aura-t-il des nuages"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y aura-t-il des nuages à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y aura-t-il des nuages aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y aura-t-il des nuages aujourd'hui à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y aura-t-il des nuages demain"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y aura-t-il des nuages demain à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il du brouillard"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce brumeux"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "le brouillard est-il prévu à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "le brouillard est-il prévu en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "le brouillard est-il prévu au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "le brouillard est-il prévu aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "le brouillard est-il prévu dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "va-t-il pleuvoir"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce qu'il pleut"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "dois-je prendre un parapluie"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il de la pluie prévue à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il de la pluie prévue en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il de la pluie prévue au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il de la pluie prévue aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il de la pluie prévue dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "va-t-il neiger"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "est-ce qu'il neige"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il de la neige prévue à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il de la neige prévue en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il de la neige prévue au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il de la neige prévue aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il de la neige prévue dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il de l'orage"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "un orage est-il prévu"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il des alertes météo à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il des alertes météo en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il des alertes météo au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il des alertes météo aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "y a-t-il des alertes météo dans {location}"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "week.voc", "text": "hebdomadaire"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "week.voc", "text": "semaine"}
 {"lang": "fr-FR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "weekend.voc", "text": "week-end"}

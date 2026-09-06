@@ -3349,8 +3349,18 @@
 {"lang": "pl-PL", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "DuckDuckGo {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "pl-PL", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "zapytaj DuckDuckGo o {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "pl-PL", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "znajdź {query} na DuckDuckGo", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "pl-PL", "skill": "ovos-skill-weather", "intent": "is_cloudy.intent", "template": "(jest|będzie) pochmurno [dzisiaj|jutro] [w {location}]", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "pl-PL", "skill": "ovos-skill-weather", "intent": "is_cloudy.intent", "template": "(są|będą) chmury [dzisiaj|jutro] [w {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "jest pochmurno w {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "jest pochmurno dzisiaj w {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "jest pochmurno jutro w {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "będzie pochmurno w {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "będzie pochmurno dzisiaj w {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "będzie pochmurno jutro w {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "są chmury w {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "są chmury dzisiaj w {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "są chmury jutro w {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "będą chmury w {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "będą chmury dzisiaj w {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "pl-PL", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "będą chmury jutro w {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "pl-PL", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "szukaj w WordNet {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "pl-PL", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "zapytaj WordNet o {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "pl-PL", "skill": "skill-homeassistant", "intent": "assist.intent", "template": "Powiedz asystentowi domowemu (|aby|żeby) {command}", "slots": ["command"], "entity_values": {"command": []}}
