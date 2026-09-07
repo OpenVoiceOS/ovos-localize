@@ -1524,6 +1524,9 @@
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "(stelle|erzeuge|plane) einen Alarm [für {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "neuer Alarm [für {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "stelle einen Alarm (auf|für) {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "(stelle|erzeuge|plane) einen Wecker [für {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "neuer Wecker [für {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "stelle einen Wecker (auf|für) {time}", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateAlarmAlt.intent", "template": "(weck|wecke) (mich|uns) [auf] [um {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateAlarmAlt.intent", "template": "(könntest|kannst) du (mich|uns) [um {time}] wecken", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "(erstelle|plane|ergänze) (ein Event|einen Termin|ein Treffen) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
@@ -1537,8 +1540,8 @@
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "erinnere (mich|uns) [an {reminder}] [um {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "sag mir dass ich {reminder} [soll]", "slots": ["reminder"], "entity_values": {"reminder": []}}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "erinnere (mich|uns) in {duration} [an {reminder}]", "slots": ["duration", "reminder"], "entity_values": {"duration": [], "reminder": []}}
-{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "(stelle|starte|erzeuge) einen (Timer|Wecker) [für {duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
-{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "neuer (Timer|Wecker) [für {duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "(stelle|starte|erzeuge) einen Timer [für {duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "neuer Timer [für {duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "(stelle|starte|erzeuge) einen {duration} Timer", "slots": ["duration"], "entity_values": {"duration": []}}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(lösche|entferne) (meine|die) Liste [{name}]", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(lösche|entferne) (meine|die) {name} Liste", "slots": ["name"], "entity_values": {"name": []}}
