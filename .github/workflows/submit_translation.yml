@@ -97,8 +97,15 @@ jobs:
         with:
           python-version: "3.12"
 
+      # Subpath checkout: the target repo is checked out at the workspace
+      # root later in this job and must find no git repo there.
+      - name: Checkout ovos-localize
+        uses: actions/checkout@v7
+        with:
+          path: .ovos-localize
+
       - name: Install ovos-localize
-        run: pip install .
+        run: pip install ./.ovos-localize
 
       - name: Validate submitted content
         id: validate
