@@ -892,6 +892,30 @@
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CancelAlert.intent", "text": "selkeä uusi ajastin"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CancelAlert.intent", "text": "selkeä uusi hälytykset"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CancelAlert.intent", "text": "selkeä uusi hälytys"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangeMediaProperties.intent", "text": "muuta {schedkind} niin että se on kuultavissa"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangeMediaProperties.intent", "text": "säädä seuraava {schedkind} soittamaan {mediakind}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangeMediaProperties.intent", "text": "aseta {schedkind} toistamaan {mediaform}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangeMediaProperties.intent", "text": "vaihda {schedkind} ääneksi {mediakind}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangeMediaProperties.intent", "text": "vaihda {schedkind} hälytys muotoon {mediaform}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangeMediaProperties.intent", "text": "haluan seuraavan {schedkind} soittavan {mediakind}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangePriority.intent", "text": "vaihda {schedkind} prioriteetti tasolle {priority}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangePriority.intent", "text": "nosta {schedkind} prioriteetti tasolle {priority}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangePriority.intent", "text": "säädä seuraavan {schedkind} prioriteettia"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangePriority.intent", "text": "aseta {schedkind} prioriteetiksi {priority}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangePriority.intent", "text": "laske {schedkind} prioriteettia"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangePriority.intent", "text": "vaihda {schedkind} prioriteettitaso arvoon {priority}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangeRepeat.intent", "text": "vaihda {schedkind} toisto joka {repeat}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangeRepeat.intent", "text": "aseta {schedkind} toistumaan joka {repeat}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangeRepeat.intent", "text": "säädä {schedkind} taajuus arvoon {repeat}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangeRepeat.intent", "text": "vaihda seuraava {schedkind} toistumaan joka {repeat}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangeRepeat.intent", "text": "haluan {schedkind} toistuvan joka {repeat}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangeRepeat.intent", "text": "vaihda {schedkind} toisto arvoon {repeat}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangeUntil.intent", "text": "vaihda {schedkind} kesto arvoon {duration}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangeUntil.intent", "text": "jatka {schedkind} kestoa arvoon {duration}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangeUntil.intent", "text": "säädä seuraavan {schedkind} pituus arvoon {duration}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangeUntil.intent", "text": "aseta {schedkind} kestämään {duration}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangeUntil.intent", "text": "vaihda {schedkind} kestämään {duration} asti"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "ChangeUntil.intent", "text": "lyhennä {schedkind} kestoa arvoon {duration}"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateAlarm.intent", "text": "aseta hälytys"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateAlarm.intent", "text": "aseta hälytys kello {time}"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateAlarm.intent", "text": "lisää hälytys"}
@@ -966,19 +990,19 @@
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminder.intent", "text": "aikataulu muistutukset"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminder.intent", "text": "luo muistutukset"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminder.intent", "text": "uusi muistutukset"}
-{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminderAlt.intent", "text": "muistuta minua"}
-{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminderAlt.intent", "text": "muistuta minua kello {time}"}
-{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminderAlt.intent", "text": "muistuta minua {reminder}:sta"}
-{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminderAlt.intent", "text": "muistuta minua {reminder}:sta kello {time}"}
-{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminderAlt.intent", "text": "muistuta minua {reminder}sta"}
-{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminderAlt.intent", "text": "muistuta minua {reminder}sta kello {time}"}
-{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminderAlt.intent", "text": "kerro minulle että {reminder}"}
-{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminderAlt.intent", "text": "muistuta minua {duration}:n päästä"}
-{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminderAlt.intent", "text": "muistuta minua {duration}:n päästä {reminder}:sta"}
-{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminderAlt.intent", "text": "muistuta minua {duration}:n päästä {reminder}sta"}
-{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminderAlt.intent", "text": "muistuta minua {duration}n päästä"}
-{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminderAlt.intent", "text": "muistuta minua {duration}n päästä {reminder}:sta"}
-{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminderAlt.intent", "text": "muistuta minua {duration}n päästä {reminder}sta"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminder.intent", "text": "muistuta minua"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminder.intent", "text": "muistuta minua kello {time}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminder.intent", "text": "muistuta minua {reminder}:sta"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminder.intent", "text": "muistuta minua {reminder}:sta kello {time}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminder.intent", "text": "muistuta minua {reminder}sta"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminder.intent", "text": "muistuta minua {reminder}sta kello {time}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminder.intent", "text": "kerro minulle että {reminder}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminder.intent", "text": "muistuta minua {duration}:n päästä"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminder.intent", "text": "muistuta minua {duration}:n päästä {reminder}:sta"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminder.intent", "text": "muistuta minua {duration}:n päästä {reminder}sta"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminder.intent", "text": "muistuta minua {duration}n päästä"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminder.intent", "text": "muistuta minua {duration}n päästä {reminder}:sta"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateReminder.intent", "text": "muistuta minua {duration}n päästä {reminder}sta"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateTimer.intent", "text": "aseta ajastin"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateTimer.intent", "text": "aseta ajastin {duration}:ksi"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateTimer.intent", "text": "aseta ajastin {duration}ksi"}
@@ -999,6 +1023,12 @@
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateTimer.intent", "text": "minulla on ajastimet"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateTimer.intent", "text": "aikataulu ajastimet"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "CreateTimer.intent", "text": "luo ajastimet"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "DAVSync.intent", "text": "voitko synkronoida {davkind}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "DAVSync.intent", "text": "synkronoi {davkind} nyt"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "DAVSync.intent", "text": "lataa {davkind}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "DAVSync.intent", "text": "lähetä {davkind}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "DAVSync.intent", "text": "synkronoi kaikki {davkind}"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "DAVSync.intent", "text": "synkronoi {davkind} ja {davkind2}"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "DeleteList.intent", "text": "hävitä lista"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "DeleteList.intent", "text": "hävitä lista {name}"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "DeleteList.intent", "text": "poista lista"}
@@ -2109,6 +2139,12 @@
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "create.voc", "text": "set"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "create.voc", "text": "tee"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "create.voc", "text": "uusi"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder_recurring.intent", "text": "muistuta minua menemään töihin joka arkiaamu kello 8"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder_recurring.intent", "text": "muistuta minua joka arkiaamu ottamaan lääkkeeni kello 8"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder_recurring.intent", "text": "muistuta minua ulkoiluttamaan koiraa joka arkiaamu kello 7"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder_recurring.intent", "text": "muistuta minua tarkistamaan sähköpostini joka arkiaamu kello 9"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder_recurring.intent", "text": "muistuta minua joka arki-ilta soittamaan äidille kello 6"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder_recurring.intent", "text": "muistuta minua kastelemaan kasvit joka viikonloppuaamu kello 8"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "days.voc", "text": "keskiviikko"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "days.voc", "text": "keskiviikkoisin"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "days.voc", "text": "lauantai"}
@@ -2544,6 +2580,11 @@
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "weekends.voc", "text": "viikko päättyy"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "weekends.voc", "text": "viikonloppu"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "weekends.voc", "text": "viikonloput"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "mikä on tämän päivän päivämäärä"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "mikä on tämän päivän päivämäärä kiitos"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "kerro tämän päivän päivämäärä"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "mikä on tämän päivän päivämäärä paikassa {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "anna koko tämän päivän päivämäärä"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.future.weekend.intent", "text": "kerro minulle ensi viikonlopuksi suunnitellut päivämäärät."}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.future.weekend.intent", "text": "kerro minulle nykyistä viikonloppua seuraavaksi viikonlopuksi suunnitellut päivämäärät."}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.future.weekend.intent", "text": "kerro minulle tulevan viikonlopun päivämäärät."}
@@ -2660,7 +2701,41 @@
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.last.weekend.intent", "text": "mitkä olivat viime viikonlopun päivät"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.last.weekend.intent", "text": "mitkä päivämäärät olivat viime viikonloppuna"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.last.weekend.intent", "text": "mitkä päivät olivat viime viikonloppuna"}
-{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "seuraava karkausvuosi on {year}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "onko tämä vuosi karkausvuosi"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "onko tämä vuosi karkausvuosi kiitos"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "onko kuluva vuosi karkausvuosi"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "onko tässä vuodessa 366 päivää"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "onko tänä vuonna 29. helmikuuta"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "milloin on seuraava karkausvuosi"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "milloin on seuraava karkausvuosi kiitos"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "mikä vuosi on seuraava karkausvuosi"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "kerro milloin seuraava karkausvuosi on"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "milloin seuraava karkausvuosi koittaa"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "kuinka paljon aikaa on jäljellä päivään {date}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "kuinka paljon aikaa on jäljellä päivään {date} kiitos"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "milloin on {date}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "kuinka monta päivää on jäljellä päivään {date}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "kuinka kaukana on {date}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "mikä viikonpäivä on {date}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "mikä viikonpäivä on {date} kiitos"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "minkä päivän kohdalle {date} osuu"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "kerro mikä päivä {date} on"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "mikä viikonpäivä {date} tulee olemaan"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.matches.date.intent", "text": "osuuko {date} päivälle {weekday}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.matches.date.intent", "text": "osuuko {date} päivälle {weekday} kiitos"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.matches.date.intent", "text": "onko {date} päivä {weekday}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.matches.date.intent", "text": "oliko {date} päivä {weekday}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.matches.date.intent", "text": "tuleeko {date} olemaan {weekday}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "monesko päivä tänään on"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "monesko päivä tänään on kiitos"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "mikä kuukauden päivä tänään on"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "kerro monesko päivä tänään on"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "mikä on tämän päivän numero kuukaudessa"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "mikä kuukausi nyt on"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "mikä kuukausi nyt on kiitos"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "missä kuukaudessa olemme"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "mikä on nykyinen kuukausi"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "kerro mikä kuukausi nyt on"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "aika, kiitos."}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "haluaisin tietää ajan juuri nyt."}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "haluaisin tietää nykyisen kellonajan"}
@@ -2761,16 +2836,40 @@
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "paljonko kello on {offset} sekunnin kuluttua tästä hetkestä?"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "paljonko kello on {offset} sekunnin kuluttua {location}:ssä."}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "paljonko kello on {offset} tunnin kuluttua {location}:ssä?"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "mikä viikonpäivä tänään on"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "mikä viikonpäivä tänään on kiitos"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "mikä päivä tänään on"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "missä viikonpäivässä olemme tänään"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "kerro mikä viikonpäivä tänään on"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "mikä vuosi nyt on"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "mikä vuosi nyt on kiitos"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "missä vuodessa olemme"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "mikä on nykyinen vuosi"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "kerro mikä vuosi nyt on"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear.voc", "text": "aurinko"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear.voc", "text": "aurinkoinen"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear.voc", "text": "hyvä sää"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear.voc", "text": "kaunis sää"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear.voc", "text": "selkeä"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear_report.voc", "text": "selkeä"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear_report.voc", "text": "aurinkoinen"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear_report.voc", "text": "aurinko"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear_report.voc", "text": "selkeä taivas"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear_report.voc", "text": "sininen taivas"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear_report.voc", "text": "pilvetön"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clouds.voc", "text": "hajapilviä"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clouds.voc", "text": "pilvet"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clouds.voc", "text": "pilvi"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clouds.voc", "text": "pilvinen"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clouds.voc", "text": "vähän pilviä"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cloudy_report.voc", "text": "pilvinen"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cloudy_report.voc", "text": "pilvet"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cloudy_report.voc", "text": "pilvi"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cloudy_report.voc", "text": "pilvistä"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cloudy_report.voc", "text": "puolipilvistä"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cloudy_report.voc", "text": "verhoutunut"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cloudy_report.voc", "text": "harmaa"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cloudy_report.voc", "text": "synkkä"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cold.voc", "text": "chilly"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cold.voc", "text": "cool"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cold.voc", "text": "jäädyttäminen"}
@@ -2831,17 +2930,58 @@
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "few.voc", "text": "muutama"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog.voc", "text": "sumu"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog.voc", "text": "sumuinen"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog_report.voc", "text": "sumu"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog_report.voc", "text": "sumuinen"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog_report.voc", "text": "sumua"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog_report.voc", "text": "utu"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog_report.voc", "text": "utuinen"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog_report.voc", "text": "usva"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "forecast.voc", "text": "ennuste"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "high.voc", "text": "korkea"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "high.voc", "text": "korkein"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "high.voc", "text": "maksimi"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "high.voc", "text": "max"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "high.voc", "text": "högsta"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "high.voc", "text": "mest"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "high.voc", "text": "varmt"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "hot.voc", "text": "kuuma"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "hot.voc", "text": "lämmin"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "how.voc", "text": "miten"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "humidity.voc", "text": "höyryävä"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "humidity.voc", "text": "kostea"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "humidity.voc", "text": "kosteus"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "blir det kallt idag"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "blir det kallt idag i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "blir det kallt imorgon"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "blir det kallt imorgon i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "blir det kallt på {day}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "blir det kallt på {day} i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "är det kallt ute nu"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "är det kallt ute nu i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "blir det svalt idag"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "blir det svalt idag i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "blir det svalt imorgon"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "blir det svalt imorgon i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "behöver jag jacka idag"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "behöver jag jacka idag i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "blir det varmt idag"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "blir det varmt idag i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "blir det varmt imorgon"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "blir det varmt imorgon i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "blir det varmt på {day}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "blir det varmt på {day} i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "är det varmt ute nu"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "är det varmt ute nu i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "blir det riktigt varmt idag"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "blir det riktigt varmt idag i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "behöver jag solkräm idag"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "behöver jag solkräm idag i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "blåser det mycket just nu"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "blåser det mycket just nu i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "hur hård är vinden"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "hur hård är vinden i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "kommer det att blåsa idag"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "kommer det att blåsa idag i {location}"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "later.voc", "text": "lähitunteina"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "later.voc", "text": "muutama tunti"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "later.voc", "text": "myöhemmin"}
@@ -2871,8 +3011,17 @@
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "low.voc", "text": "alhaisin"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "low.voc", "text": "min"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "low.voc", "text": "vähintään"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "low.voc", "text": "lägsta"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "low.voc", "text": "kallt"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "low.voc", "text": "frost"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "next.voc", "text": "jälleen"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "next.voc", "text": "seuraava"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "när kommer det att regna igen"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "när kommer det att regna igen i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "när börjar det regna"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "när börjar det regna i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "hur länge till innan det regnar"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "hur länge till innan det regnar i {location}"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "now.voc", "text": "nykyinen"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "now.voc", "text": "nyt"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "number-days.voc", "text": "2 päivää"}
@@ -2922,6 +3071,18 @@
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain.voc", "text": "sataa"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain.voc", "text": "sateinen"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain.voc", "text": "tihkusade"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "sade"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "sataa"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "sateinen"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "märkä"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "tihkusade"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "tihkuttaa"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "kuuro"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "kuuroja"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "sademäärä"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "sateenvarjo"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "sadetakki"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "sadeasu"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "relative-day.voc", "text": "eilen"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "relative-day.voc", "text": "eilinen"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "relative-day.voc", "text": "huomenna"}
@@ -2951,6 +3112,26 @@
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow.voc", "text": "lunta"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow.voc", "text": "sleet"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow.voc", "text": "sleeting"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow_report.voc", "text": "lumi"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow_report.voc", "text": "sataa lunta"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow_report.voc", "text": "luminen"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow_report.voc", "text": "räntä"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow_report.voc", "text": "räntäsade"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow_report.voc", "text": "lumikuuro"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow_report.voc", "text": "lumisade"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow_report.voc", "text": "liukas"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "myrsky"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "myrskyt"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "myrskyää"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "myrskyinen"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "ukkonen"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "ukkosmyrsky"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "jyrisee"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "salamat"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "raju sää"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "myrskyvaroitus"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "säävaroitus"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "huono sää"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunrise.voc", "text": "aamunkoitto"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunrise.voc", "text": "auringonnousu"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunrise.voc", "text": "daybreak"}
@@ -2967,6 +3148,42 @@
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "unit.voc", "text": "celsius"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "unit.voc", "text": "fahrenheit"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "weather.voc", "text": "sää"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "blir det disigt"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "blir det disigt i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "blir det idag disigt"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "blir det idag disigt i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "blir det idag molnigt"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "blir det idag molnigt i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "blir det idag soligt"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "blir det idag soligt i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "blir det molnigt"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "blir det molnigt i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "blir det soligt"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "blir det soligt i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "är det disigt"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "är det disigt i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "är det idag disigt"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "är det idag disigt i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "är det idag molnigt"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "är det idag molnigt i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "är det idag soligt"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "är det idag soligt i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "är det molnigt"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "är det molnigt i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "är det soligt"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "är det soligt i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "regnar det"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "regnar det i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "regnar det just nu"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "regnar det just nu i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "kommer det att snöa idag"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "kommer det att snöa idag i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "kommer det att snöa imorgon"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "kommer det att snöa imorgon i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "är det åska"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "är det åska i {location}"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "hur ser himlen ut idag"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "hur ser himlen ut idag i {location}"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "week.voc", "text": "viikko"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "week.voc", "text": "viikoittain"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "weekend.voc", "text": "viikonloppu"}

@@ -126,6 +126,7 @@
 {"lang": "tr-TR", "skill": "chronologia", "file_type": "voc", "intent": "unit_hour.voc", "text": "saat"}
 {"lang": "tr-TR", "skill": "chronologia", "file_type": "voc", "intent": "unit_minute.voc", "text": "dakika"}
 {"lang": "tr-TR", "skill": "chronologia", "file_type": "voc", "intent": "unit_month.voc", "text": "ay"}
+{"lang": "tr-TR", "skill": "chronologia", "file_type": "voc", "intent": "unit_second.voc", "text": "saniye"}
 {"lang": "tr-TR", "skill": "chronologia", "file_type": "voc", "intent": "unit_week.voc", "text": "hafta"}
 {"lang": "tr-TR", "skill": "chronologia", "file_type": "voc", "intent": "unit_year.voc", "text": "yıl"}
 {"lang": "tr-TR", "skill": "chronologia", "file_type": "voc", "intent": "unit_year.voc", "text": "sene"}
@@ -725,6 +726,11 @@
 {"lang": "tr-TR", "skill": "ovos-ocp-audio-plugin", "file_type": "voc", "intent": "video_only.voc", "text": "video sadece video"}
 {"lang": "tr-TR", "skill": "ovos-ocp-audio-plugin", "file_type": "voc", "intent": "video_only.voc", "text": "sadece video"}
 {"lang": "tr-TR", "skill": "ovos-ocp-audio-plugin", "file_type": "voc", "intent": "video_only.voc", "text": "seslendirmeye dökmeyin"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "bugünün tarihi ne"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "bugünün tarihi ne lütfen"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "bana bugünün tarihini söyle"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "{location} için bugünün tarihi ne"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "bugünün tam tarihini ver"}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.future.weekend.intent", "text": "bu hafta sonu için günler ne"}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.future.weekend.intent", "text": "bu hafta sonu için tarih nedir"}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.future.weekend.intent", "text": "bu hafta sonu için tarihler nedir"}
@@ -750,7 +756,41 @@
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.last.weekend.intent", "text": "hangi gün son hafta sonu oldu"}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.last.weekend.intent", "text": "ne tarihler son hafta sonu"}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.last.weekend.intent", "text": "son hafta sonu için tarihler ne oldu"}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "bir sonraki artık yıl {year}"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "bu yıl artık yıl mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "bu yıl artık yıl mı lütfen"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "içinde bulunduğumuz yıl artık yıl mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "bu yılın 366 günü var mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "bu yıl 29 şubat var mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "bir sonraki artık yıl ne zaman"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "bir sonraki artık yıl ne zaman lütfen"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "gelecek artık yıl hangisi"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "bana bir sonraki artık yılın ne zaman olduğunu söyle"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "sıradaki artık yıl ne zaman gelecek"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "{date} tarihine ne kadar zaman kaldı"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "{date} tarihine ne kadar zaman kaldı lütfen"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "{date} ne zaman"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "{date} tarihine kaç gün kaldı"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "{date} ne kadar uzakta"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "{date} hangi haftanın gününe denk geliyor"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "{date} hangi haftanın gününe denk geliyor lütfen"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "{date} hangi güne rastlıyor"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "bana {date} tarihinin hangi gün olduğunu söyle"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "{date} hangi gün olacak"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.matches.date.intent", "text": "{date} bir {weekday} mi"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.matches.date.intent", "text": "{date} bir {weekday} mi lütfen"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.matches.date.intent", "text": "{date} günü {weekday} gününe denk geliyor mu"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.matches.date.intent", "text": "{date} günü {weekday} müydü"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.matches.date.intent", "text": "{date} günü {weekday} olacak mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "bugün ayın kaçı"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "bugün ayın kaçı lütfen"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "bugün ayın hangi günü"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "bana bugün ayın kaçı olduğunu söyle"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "bugünkü tarih ayın kaçına denk geliyor"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "hangi aydayız"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "hangi aydayız lütfen"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "şu an hangi ay"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "mevcut ay hangisi"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "bana hangi ayda olduğumuzu söyle"}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "bana saati söyle lütfen."}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "bana saati söyle, lütfen."}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "bana saati söylerseniz memnun olurum."}
@@ -826,6 +866,16 @@
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "ne zaman {offset} saniyeler şimdi {location}"}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "{offset} dakika içinde {location}"}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "şu andan itibaren {offset} saatler şimdi {location}"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "bugün haftanın hangi günü"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "bugün haftanın hangi günü lütfen"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "bugün hangi gün"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "haftanın hangi gündeyiz"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "bana bugün haftanın hangi günü olduğunu söyle"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "hangi yıldayız"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "hangi yıldayız lütfen"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "şu an hangi yıl"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "mevcut yıl hangisi"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "bana hangi yılda olduğumuzu söyle"}
 {"lang": "tr-TR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "hava"}
 {"lang": "tr-TR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "hava durumu"}
 {"lang": "tr-TR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "MiscBlacklist.voc", "text": "hava tahmini"}
@@ -871,6 +921,16 @@
 {"lang": "tr-TR", "skill": "ovos-skill-hello-world", "file_type": "voc", "intent": "ThankYouKeyword.voc", "text": "teşkkür ederim"}
 {"lang": "tr-TR", "skill": "ovos-skill-naptime", "file_type": "voc", "intent": "SleepCommand.voc", "text": "uyu"}
 {"lang": "tr-TR", "skill": "ovos-skill-naptime", "file_type": "voc", "intent": "SleepCommand.voc", "text": "şekerleme zamanı"}
+{"lang": "tr-TR", "skill": "ovos-skill-naptime", "file_type": "intent", "intent": "WakeUp.intent", "text": "uyan"}
+{"lang": "tr-TR", "skill": "ovos-skill-naptime", "file_type": "intent", "intent": "WakeUp.intent", "text": "kalk"}
+{"lang": "tr-TR", "skill": "ovos-skill-naptime", "file_type": "intent", "intent": "WakeUp.intent", "text": "dinlemeye başla"}
+{"lang": "tr-TR", "skill": "ovos-skill-naptime", "file_type": "intent", "intent": "WakeUp.intent", "text": "uyumayı bırak"}
+{"lang": "tr-TR", "skill": "ovos-skill-naptime", "file_type": "intent", "intent": "naptime.intent", "text": "uyumaya git"}
+{"lang": "tr-TR", "skill": "ovos-skill-naptime", "file_type": "intent", "intent": "naptime.intent", "text": "biraz kestirelim"}
+{"lang": "tr-TR", "skill": "ovos-skill-naptime", "file_type": "intent", "intent": "naptime.intent", "text": "uyku vakti geldi"}
+{"lang": "tr-TR", "skill": "ovos-skill-naptime", "file_type": "intent", "intent": "naptime.intent", "text": "uyku modunu etkinleştir"}
+{"lang": "tr-TR", "skill": "ovos-skill-naptime", "file_type": "intent", "intent": "naptime.intent", "text": "kestirmeye başla"}
+{"lang": "tr-TR", "skill": "ovos-skill-naptime", "file_type": "intent", "intent": "naptime.intent", "text": "dinlenme moduna geç"}
 {"lang": "tr-TR", "skill": "ovos-skill-speedtest", "file_type": "voc", "intent": "Run.voc", "text": "çalıştır"}
 {"lang": "tr-TR", "skill": "ovos-skill-speedtest", "file_type": "voc", "intent": "Speedtest.voc", "text": "hız testi"}
 {"lang": "tr-TR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "hız testi çalıştır"}
@@ -882,11 +942,25 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear.voc", "text": "güneşli"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear.voc", "text": "güzel hava"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear.voc", "text": "temiz"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear_report.voc", "text": "açık"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear_report.voc", "text": "güneşli"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear_report.voc", "text": "güneş"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear_report.voc", "text": "açık gökyüzü"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear_report.voc", "text": "mavi gökyüzü"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clear_report.voc", "text": "bulutsuz"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clouds.voc", "text": "birkaç bulut"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clouds.voc", "text": "bulut"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clouds.voc", "text": "bulutlar"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clouds.voc", "text": "bulutlu"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "clouds.voc", "text": "dağınık bulutlar"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cloudy_report.voc", "text": "bulutlu"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cloudy_report.voc", "text": "bulutlar"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cloudy_report.voc", "text": "kapalı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cloudy_report.voc", "text": "parçalı bulutlu"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cloudy_report.voc", "text": "çok bulutlu"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cloudy_report.voc", "text": "bulut"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cloudy_report.voc", "text": "gri"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cloudy_report.voc", "text": "kasvetli"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cold.voc", "text": "dondurucu"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cold.voc", "text": "havalı"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "cold.voc", "text": "soğuk"}
@@ -942,15 +1016,55 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "few.voc", "text": "birkaç"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog.voc", "text": "sis"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog.voc", "text": "sisli"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog_report.voc", "text": "sis"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog_report.voc", "text": "sisli"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog_report.voc", "text": "pus"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog_report.voc", "text": "puslu"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog_report.voc", "text": "duman"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "fog_report.voc", "text": "dumanlı"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "forecast.voc", "text": "tahmin"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "high.voc", "text": "en yüksek"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "high.voc", "text": "maksimum"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "high.voc", "text": "yüksek"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "high.voc", "text": "en fazla"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "high.voc", "text": "sıcak"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "hot.voc", "text": "sıcak"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "how.voc", "text": "nasıl"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "humidity.voc", "text": "nem"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "humidity.voc", "text": "nemli"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "humidity.voc", "text": "buharlı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bugün hava soğuk olacak mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bugün hava soğuk olacak mı {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "yarın hava soğuk olacak mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "yarın hava soğuk olacak mı {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "{day} günü hava soğuk olacak mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "{day} günü hava soğuk olacak mı {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "dışarısı şu anda soğuk mu"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "dışarısı şu anda soğuk mu {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bugün hava serin olacak mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bugün hava serin olacak mı {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "yarın hava serin olacak mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "yarın hava serin olacak mı {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bugün mont almalı mıyım"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bugün mont almalı mıyım {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bugün hava sıcak olacak mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bugün hava sıcak olacak mı {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "yarın hava sıcak olacak mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "yarın hava sıcak olacak mı {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "{day} günü hava sıcak olacak mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "{day} günü hava sıcak olacak mı {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "dışarısı şu anda sıcak mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "dışarısı şu anda sıcak mı {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bugün hava çok mu sıcak olacak"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bugün hava çok mu sıcak olacak {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bugün güneş kremi gerekir mi"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bugün güneş kremi gerekir mi {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "şu anda rüzgar var mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "şu anda rüzgar var mı {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "rüzgar ne kadar kuvvetli"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "rüzgar ne kadar kuvvetli {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "bugün rüzgarlı olacak mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "bugün rüzgarlı olacak mı {location} için"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "later.voc", "text": "birkaç saat"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "later.voc", "text": "daha sonra"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "later.voc", "text": "sonraki saat"}
@@ -978,8 +1092,16 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "low.voc", "text": "en düşük"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "low.voc", "text": "min"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "low.voc", "text": "minimum"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "low.voc", "text": "soğuk"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "low.voc", "text": "don"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "next.voc", "text": "sonraki"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "next.voc", "text": "tekrar"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "bir dahaki yağmur ne zaman yağacak"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "bir dahaki yağmur ne zaman yağacak {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "yağmur ne zaman başlayacak"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "yağmur ne zaman başlayacak {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "yağmura ne kadar süre var"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "yağmura ne kadar süre var {location} için"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "now.voc", "text": "güncel"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "now.voc", "text": "şimdi"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "number-days.voc", "text": "2 gün"}
@@ -1029,6 +1151,18 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain.voc", "text": "yağmur yağıyor"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain.voc", "text": "yağmurlu"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain.voc", "text": "çiseleme"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "yağmur"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "yağmur yağıyor"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "yağmurlu"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "ıslak"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "çise"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "çiseliyor"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "sağanak"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "sağanak yağış"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "yağış"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "şemsiye"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "yağmurluk"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "rain_report.voc", "text": "yağmur montu"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "relative-day.voc", "text": "cuma"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "relative-day.voc", "text": "cumartesi̇"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "relative-day.voc", "text": "pazar"}
@@ -1057,6 +1191,26 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow.voc", "text": "kar"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow.voc", "text": "kar yağıyor"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow.voc", "text": "karla karışık yağmur"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow_report.voc", "text": "kar"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow_report.voc", "text": "kar yağıyor"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow_report.voc", "text": "karlı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow_report.voc", "text": "karla karışık yağmur"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow_report.voc", "text": "sulu kar"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow_report.voc", "text": "kar sağanağı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow_report.voc", "text": "kar yağışı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "snow_report.voc", "text": "buzlanma"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "fırtına"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "fırtınalar"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "fırtına var"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "fırtınalı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "gök gürültülü fırtına"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "gök gürültüsü"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "gök gürlüyor"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "şimşek"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "şiddetli hava"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "fırtına uyarısı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "hava uyarısı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "storm_report.voc", "text": "kötü hava"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunrise.voc", "text": "gün arasi"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunrise.voc", "text": "gün doğumu"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunrise.voc", "text": "güneş doğuyor"}
@@ -1073,6 +1227,22 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "unit.voc", "text": "fahrenheit"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "unit.voc", "text": "santigrat"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "weather.voc", "text": "hava durumu"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "bugün hava bulutlu mi"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "bugün hava bulutlu mi {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "bugün hava güneşli mi"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "bugün hava güneşli mi {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "bugün hava sisli mi"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "bugün hava sisli mi {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "şu anda yağmur yağıyor mu"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "şu anda yağmur yağıyor mu {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "bugün kar yağacak mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "bugün kar yağacak mı {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "yarın kar yağacak mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "yarın kar yağacak mı {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "dışarıda fırtına var mı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "dışarıda fırtına var mı {location} için"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "bugün gökyüzü nasıl görünüyor"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "bugün gökyüzü nasıl görünüyor {location} için"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "week.voc", "text": "hafta"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "week.voc", "text": "haftalık"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "weekend.voc", "text": "hafta sonu"}

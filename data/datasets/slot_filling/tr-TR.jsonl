@@ -255,7 +255,19 @@
 {"lang": "tr-TR", "skill": "ovos-ocp-audio-plugin", "intent": "video.intent", "template": "{query} video", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "tr-TR", "skill": "ovos-ocp-audio-plugin", "intent": "video.intent", "template": "Video {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "tr-TR", "skill": "ovos-ocp-audio-plugin", "intent": "video.intent", "template": "Videoya başlayın {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "next.leap.year.intent", "template": "bir sonraki artık yıl {year}", "slots": ["year"], "entity_values": {"year": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "{location} için bugünün tarihi ne", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "time.until.intent", "template": "{date} tarihine ne kadar zaman kaldı [lütfen]", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "time.until.intent", "template": "{date} ne zaman", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "time.until.intent", "template": "{date} tarihine kaç gün kaldı", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "time.until.intent", "template": "{date} ne kadar uzakta", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday.for.date.intent", "template": "{date} hangi haftanın gününe denk geliyor [lütfen]", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday.for.date.intent", "template": "{date} hangi güne rastlıyor", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday.for.date.intent", "template": "bana {date} tarihinin hangi gün olduğunu söyle", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday.for.date.intent", "template": "{date} hangi gün olacak", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "{date} bir {weekday} mi [lütfen]", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "{date} günü {weekday} gününe denk geliyor mu", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "{date} günü {weekday} müydü", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "{date} günü {weekday} olacak mı", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "Ne zaman {offset} dakika", "slots": ["offset"], "entity_values": {"offset": []}}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "Ne zaman {offset} dakika şimdi {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "Ne zaman {offset} dakika şimdiden", "slots": ["offset"], "entity_values": {"offset": []}}
@@ -273,3 +285,22 @@
 {"lang": "tr-TR", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "DuckDuckGo {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "tr-TR", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "DuckDuckGo'ya {query} hakkında sor", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "tr-TR", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "DuckDuckGo'da {query} bul", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "(Bugün|Yarın|{day} günü) hava soğuk olacak mı [{location} için]", "slots": ["day", "location"], "entity_values": {"day": [], "location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Dışarısı şu anda soğuk mu [{location} için]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "(Bugün|Yarın) hava serin olacak mı [{location} için]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Bugün mont almalı mıyım [{location} için]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "(Bugün|Yarın|{day} günü) hava sıcak olacak mı [{location} için]", "slots": ["day", "location"], "entity_values": {"day": [], "location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Dışarısı şu anda sıcak mı [{location} için]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Bugün hava çok mu sıcak olacak [{location} için]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Bugün güneş kremi gerekir mi [{location} için]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Şu anda rüzgar var mı [{location} için]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Rüzgar ne kadar kuvvetli [{location} için]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Bugün rüzgarlı olacak mı [{location} için]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Bir dahaki yağmur ne zaman yağacak [{location} için]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Yağmur ne zaman başlayacak [{location} için]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Yağmura ne kadar süre var [{location} için]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "Bugün hava (güneşli|bulutlu|sisli) mi [{location} için]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "Şu anda yağmur yağıyor mu [{location} için]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "(Bugün|Yarın) kar yağacak mı [{location} için]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "Dışarıda fırtına var mı [{location} için]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "Bugün gökyüzü nasıl görünüyor [{location} için]", "slots": ["location"], "entity_values": {"location": []}}

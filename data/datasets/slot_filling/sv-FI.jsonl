@@ -307,6 +307,30 @@
 {"lang": "sv-FI", "skill": "ovos-ocp-audio-plugin", "intent": "video.intent", "template": "Börja {query} video", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "lisää (asioita|kohteita) listaan [{name}]", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "lisää (asioita|kohteita) {name} listaan", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangeMediaProperties.intent", "template": "muuta {schedkind} niin että se on kuultavissa", "slots": ["schedkind"], "entity_values": {"schedkind": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangeMediaProperties.intent", "template": "säädä seuraava {schedkind} soittamaan {mediakind}", "slots": ["schedkind", "mediakind"], "entity_values": {"schedkind": [], "mediakind": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangeMediaProperties.intent", "template": "aseta {schedkind} toistamaan {mediaform}", "slots": ["schedkind", "mediaform"], "entity_values": {"schedkind": [], "mediaform": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangeMediaProperties.intent", "template": "vaihda {schedkind} ääneksi {mediakind}", "slots": ["schedkind", "mediakind"], "entity_values": {"schedkind": [], "mediakind": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangeMediaProperties.intent", "template": "vaihda {schedkind} hälytys muotoon {mediaform}", "slots": ["schedkind", "mediaform"], "entity_values": {"schedkind": [], "mediaform": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangeMediaProperties.intent", "template": "haluan seuraavan {schedkind} soittavan {mediakind}", "slots": ["schedkind", "mediakind"], "entity_values": {"schedkind": [], "mediakind": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangePriority.intent", "template": "vaihda {schedkind} prioriteetti tasolle {priority}", "slots": ["schedkind", "priority"], "entity_values": {"schedkind": [], "priority": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangePriority.intent", "template": "nosta {schedkind} prioriteetti tasolle {priority}", "slots": ["schedkind", "priority"], "entity_values": {"schedkind": [], "priority": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangePriority.intent", "template": "säädä seuraavan {schedkind} prioriteettia", "slots": ["schedkind"], "entity_values": {"schedkind": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangePriority.intent", "template": "aseta {schedkind} prioriteetiksi {priority}", "slots": ["schedkind", "priority"], "entity_values": {"schedkind": [], "priority": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangePriority.intent", "template": "laske {schedkind} prioriteettia", "slots": ["schedkind"], "entity_values": {"schedkind": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangePriority.intent", "template": "vaihda {schedkind} prioriteettitaso arvoon {priority}", "slots": ["schedkind", "priority"], "entity_values": {"schedkind": [], "priority": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangeRepeat.intent", "template": "vaihda {schedkind} toisto joka {repeat}", "slots": ["schedkind", "repeat"], "entity_values": {"schedkind": [], "repeat": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangeRepeat.intent", "template": "aseta {schedkind} toistumaan joka {repeat}", "slots": ["schedkind", "repeat"], "entity_values": {"schedkind": [], "repeat": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangeRepeat.intent", "template": "säädä {schedkind} taajuus arvoon {repeat}", "slots": ["schedkind", "repeat"], "entity_values": {"schedkind": [], "repeat": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangeRepeat.intent", "template": "vaihda seuraava {schedkind} toistumaan joka {repeat}", "slots": ["schedkind", "repeat"], "entity_values": {"schedkind": [], "repeat": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangeRepeat.intent", "template": "haluan {schedkind} toistuvan joka {repeat}", "slots": ["schedkind", "repeat"], "entity_values": {"schedkind": [], "repeat": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangeRepeat.intent", "template": "vaihda {schedkind} toisto arvoon {repeat}", "slots": ["schedkind", "repeat"], "entity_values": {"schedkind": [], "repeat": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangeUntil.intent", "template": "vaihda {schedkind} kesto arvoon {duration}", "slots": ["schedkind", "duration"], "entity_values": {"schedkind": [], "duration": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangeUntil.intent", "template": "jatka {schedkind} kestoa arvoon {duration}", "slots": ["schedkind", "duration"], "entity_values": {"schedkind": [], "duration": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangeUntil.intent", "template": "säädä seuraavan {schedkind} pituus arvoon {duration}", "slots": ["schedkind", "duration"], "entity_values": {"schedkind": [], "duration": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangeUntil.intent", "template": "aseta {schedkind} kestämään {duration}", "slots": ["schedkind", "duration"], "entity_values": {"schedkind": [], "duration": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangeUntil.intent", "template": "vaihda {schedkind} kestämään {duration} asti", "slots": ["schedkind", "duration"], "entity_values": {"schedkind": [], "duration": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "ChangeUntil.intent", "template": "lyhennä {schedkind} kestoa arvoon {duration}", "slots": ["schedkind", "duration"], "entity_values": {"schedkind": [], "duration": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "(aseta|luo|lisää) hälytys [kello {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "uusi hälytys [{time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "aseta hälytys kello {time}", "slots": ["time"], "entity_values": {"time": []}}
@@ -318,12 +342,18 @@
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "(luo|tee|lisää) [uusi] {name} lista", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "(luo|lisää|aseta) [uusi] muistutus [{reminder}] [kello {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "uusi muistutus [{reminder}]", "slots": ["reminder"], "entity_values": {"reminder": []}}
-{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "muistuta minua [{reminder}(:sta|sta)] [kello {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
-{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "kerro minulle että {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
-{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateReminderAlt.intent", "template": "muistuta minua {duration}(:n|n) päästä [{reminder}(:sta|sta)]", "slots": ["duration", "reminder"], "entity_values": {"duration": [], "reminder": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "muistuta minua [{reminder}(:sta|sta)] [kello {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "kerro minulle että {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "muistuta minua {duration}(:n|n) päästä [{reminder}(:sta|sta)]", "slots": ["duration", "reminder"], "entity_values": {"duration": [], "reminder": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "(aseta|käynnistä|luo) ajastin [{duration}(:ksi|ksi)]", "slots": ["duration"], "entity_values": {"duration": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "uusi ajastin [{duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "(aseta|käynnistä|luo) {duration}(:n|n) ajastin", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "DAVSync.intent", "template": "voitko synkronoida {davkind}", "slots": ["davkind"], "entity_values": {"davkind": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "DAVSync.intent", "template": "synkronoi {davkind} nyt", "slots": ["davkind"], "entity_values": {"davkind": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "DAVSync.intent", "template": "lataa {davkind}", "slots": ["davkind"], "entity_values": {"davkind": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "DAVSync.intent", "template": "lähetä {davkind}", "slots": ["davkind"], "entity_values": {"davkind": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "DAVSync.intent", "template": "synkronoi kaikki {davkind}", "slots": ["davkind"], "entity_values": {"davkind": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "DAVSync.intent", "template": "synkronoi {davkind} ja {davkind2}", "slots": ["davkind", "davkind2"], "entity_values": {"davkind": [], "davkind2": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(poista|hävitä) lista [{name}]", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(poista|hävitä) {name} lista", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "DeleteListEntries.intent", "template": "(poista|tyhjennä) listan [{name}] (kohteet|kaikki)", "slots": ["name"], "entity_values": {"name": []}}
@@ -332,7 +362,19 @@
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(lue|näytä) listan [{name}] kohteet", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(mitä|mitkä kohteet) on {name} listalla", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(lue|näytä) {name} listan kohteet", "slots": ["name"], "entity_values": {"name": []}}
-{"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "next.leap.year.intent", "template": "seuraava karkausvuosi on {year}", "slots": ["year"], "entity_values": {"year": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "mikä on tämän päivän päivämäärä paikassa {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "time.until.intent", "template": "kuinka paljon aikaa on jäljellä päivään {date} [kiitos]", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "time.until.intent", "template": "milloin on {date}", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "time.until.intent", "template": "kuinka monta päivää on jäljellä päivään {date}", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "time.until.intent", "template": "kuinka kaukana on {date}", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "weekday.for.date.intent", "template": "mikä viikonpäivä on {date} [kiitos]", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "weekday.for.date.intent", "template": "minkä päivän kohdalle {date} osuu", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "weekday.for.date.intent", "template": "kerro mikä päivä {date} on", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "weekday.for.date.intent", "template": "mikä viikonpäivä {date} tulee olemaan", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "osuuko {date} päivälle {weekday} [kiitos]", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "onko {date} päivä {weekday}", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "oliko {date} päivä {weekday}", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "tuleeko {date} olemaan {weekday}", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "kuinka paljon kello on {offset} sekuntia {location}:ssä", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "kun se on {offset} minuutin kuluttua {location}:ssä.", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "kun se on {offset} minuuttia {location}:ssä", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
@@ -363,3 +405,22 @@
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "paljonko kello on {offset} sekunnin kuluttua tästä hetkestä?", "slots": ["offset"], "entity_values": {"offset": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "paljonko kello on {offset} sekunnin kuluttua {location}:ssä.", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "paljonko kello on {offset} tunnin kuluttua {location}:ssä?", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Blir det kallt (idag|imorgon|på {day}) [i {location}]", "slots": ["day", "location"], "entity_values": {"day": [], "location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Är det kallt ute nu [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Blir det svalt (idag|imorgon) [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Behöver jag jacka idag [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Blir det varmt (idag|imorgon|på {day}) [i {location}]", "slots": ["day", "location"], "entity_values": {"day": [], "location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Är det varmt ute nu [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Blir det riktigt varmt idag [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Behöver jag solkräm idag [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Blåser det mycket just nu [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Hur hård är vinden [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Kommer det att blåsa idag [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "När kommer det att regna igen [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "När börjar det regna [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Hur länge till innan det regnar [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "(är|blir) det [idag] (soligt|molnigt|disigt) [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "Regnar det [just nu] [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "Kommer det att snöa (idag|imorgon) [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "Är det åska [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "Hur ser himlen ut idag [i {location}]", "slots": ["location"], "entity_values": {"location": []}}

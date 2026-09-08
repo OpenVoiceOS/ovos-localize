@@ -48,6 +48,7 @@
 {"lang": "tr-TR", "skill": "ovos-skill-speedtest", "dialog": "error.dialog", "text": "bir hata oluştu, hız testini çalıştıramadım... üzgünüm."}
 {"lang": "tr-TR", "skill": "ovos-skill-speedtest", "dialog": "result.dialog", "text": "i̇ndirme hızın saniyede {down} megabit ve yükleme hızın saniyede {up} megabit."}
 {"lang": "tr-TR", "skill": "ovos-skill-speedtest", "dialog": "running.dialog", "text": "hız testi şimdi başlıyor, sonuçlar gelince bildireceğim."}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "afternoon.dialog", "text": "öğleden sonra"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "and.dialog", "text": "ve"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "ash.dialog", "text": "kül"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "cant-get-forecast.dialog", "text": "hava durumu raporları şu anda mevcut değil ."}
@@ -170,6 +171,8 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily-temperature-high-local.dialog", "text": "0 sıcaklık {temperature} derece kadar yüksek olacaktır."}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily-temperature-high-location.dialog", "text": "0 en yüksek {temperature} derece {day} olacak"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily-temperature-high-location.dialog", "text": "1'de {day}'de {temperature} derece kadar yüksek olacaktır."}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily-temperature-high-low-local.dialog", "text": "bugünün tahmini en yüksek {high_temperature}, en düşük {low_temperature}."}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily-temperature-high-low-location.dialog", "text": "{location} için bugünün tahmini en yüksek {high_temperature}, en düşük {low_temperature}."}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily-temperature-local.dialog", "text": "0 olacak {temperature} olacak"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily-temperature-local.dialog", "text": "0 olduğunda sıcaklık {temperature} derece olacaktır."}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily-temperature-location.dialog", "text": "0'da {temperature} derece olacak {location}'de"}
@@ -206,7 +209,9 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "drizzle-light-intensity.dialog", "text": "çiseleme, ışık yoğunluğu"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "drizzle-moderate-intensity.dialog", "text": "çiseleme, orta yoğunlukta"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "dust.dialog", "text": "toz"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "early morning.dialog", "text": "sabahın erken saatleri"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "east.dialog", "text": "doğu"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "evening.dialog", "text": "akşam"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "forty-eight-hours-available.dialog", "text": "üzgünüm, sadece 48 saatlik saatlik tahmin verilerim var"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "freezing-drizzle-dense-intensity.dialog", "text": "dondurucu çiseleme, yoğun yoğunluk"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "freezing-drizzle-light-intensity.dialog", "text": "dondurucu çiseleme, ışık yoğunluğu"}
@@ -235,6 +240,7 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly-weather-location.dialog", "text": "daha sonra {location}'de {condition} olacak ve sıcaklıklar {temperature} civarında olacak"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly-weather-location.dialog", "text": "önümüzdeki birkaç saat içinde hava {location}, {condition} ve {temperature} derece olacak"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "inch.dialog", "text": "inç"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "kilometer per hour.dialog", "text": "saatte kilometre"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "location-not-found.dialog", "text": "0 şehri hafıza bankalarımda yok. lütfen tekrar deneyin"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "location-not-found.dialog", "text": "{location} adında bir şehir bulamıyorum. lütfen tekrar deneyin"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "mainly-clear.dialog", "text": "çoğunlukla açık"}
@@ -245,12 +251,14 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "moderate-rain.dialog", "text": "orta dereceli yağmur"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "moderate-rain-showers.dialog", "text": "orta şiddette sağanak yağış"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "moderate-snow-fall.dialog", "text": "orta derecede kar yağışı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "morning.dialog", "text": "sabah"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "no-forecast.dialog", "text": "tahminim yok {day}"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "no-forecast.dialog", "text": "üzgünüm, hava durumunu bilmiyorum {day}"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "north.dialog", "text": "kuzey"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "northeast.dialog", "text": "kuzey doğu"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "northwest.dialog", "text": "kuzey bati"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "overcast.dialog", "text": "bulutlu"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "overnight.dialog", "text": "gece boyunca"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "partly-cloudy.dialog", "text": "parçalı bulutlu"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "percentage-number.dialog", "text": "yüzde 0"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "seven-days-available.dialog", "text": "size önümüzdeki yedi günün hava tahminini söyleyebilirim."}

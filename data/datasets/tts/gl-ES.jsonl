@@ -244,6 +244,14 @@
 {"lang": "gl-ES", "skill": "ovos-skill-cmd", "dialog": "running.dialog", "text": "executando {alias} comando"}
 {"lang": "gl-ES", "skill": "ovos-skill-cmd", "dialog": "running.dialog", "text": "executando {alias} script"}
 {"lang": "gl-ES", "skill": "ovos-skill-cmd", "dialog": "unknown.script.dialog", "text": "non coñezo ningún script chamado {name}"}
+{"lang": "gl-ES", "skill": "ovos-skill-color-picker", "dialog": "color-not-found.dialog", "text": "non puiden atopar esa cor"}
+{"lang": "gl-ES", "skill": "ovos-skill-color-picker", "dialog": "report-color-by-hex-name-known.dialog", "text": "iso é {color_name}. os seus valores r. g. b. son, vermello {red_value}, verde {green_value}, azul {blue_value}"}
+{"lang": "gl-ES", "skill": "ovos-skill-color-picker", "dialog": "report-color-by-hex-name-not-known.dialog", "text": "os valores r. g. b. desta cor son, vermello {red_value}, verde {green_value}, azul {blue_value}"}
+{"lang": "gl-ES", "skill": "ovos-skill-color-picker", "dialog": "report-color-by-name.dialog", "text": "{color_name} ten un valor hexadecimal de {hex_code}. en r. g. b. isto é vermello {red_value}, verde {green_value}, azul {blue_value}"}
+{"lang": "gl-ES", "skill": "ovos-skill-color-picker", "dialog": "report-color-by-rgb-name-known.dialog", "text": "{color_name} ten un valor hexadecimal de {hex_code}"}
+{"lang": "gl-ES", "skill": "ovos-skill-color-picker", "dialog": "report-color-by-rgb-name-not-known.dialog", "text": "esa cor ten un valor hexadecimal de {hex_code}"}
+{"lang": "gl-ES", "skill": "ovos-skill-confucius-quotes", "dialog": "lifespan.dialog", "text": "confucio naceu no ano 551 a.c. e morreu no ano 479 a.c."}
+{"lang": "gl-ES", "skill": "ovos-skill-count", "dialog": "failed_extract_number.dialog", "text": "non entendín ata que número querías que contase"}
 {"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "{date}"}
 {"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "é {date}"}
 {"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date.not.found.dialog", "text": "non che dei atopado esa data."}
@@ -320,6 +328,10 @@
 {"lang": "gl-ES", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "se cadra tes que dicilo doutro xeito."}
 {"lang": "gl-ES", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "síntoo. non entendo."}
 {"lang": "gl-ES", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "síntoo. non entendín."}
+{"lang": "gl-ES", "skill": "ovos-skill-fuster-quotes", "dialog": "lifespan.dialog", "text": "joan fuster naceu o 23 de novembro de 1922 e morreu o 21 de xuño de 1992"}
+{"lang": "gl-ES", "skill": "ovos-skill-fuster-quotes", "dialog": "when_did_joan_fuster_die.dialog", "text": "joan fuster morreu o 21 de xuño de 1992."}
+{"lang": "gl-ES", "skill": "ovos-skill-fuster-quotes", "dialog": "when_was_joan_fuster_born.dialog", "text": "joan fuster naceu o 23 de novembro de 1922"}
+{"lang": "gl-ES", "skill": "ovos-skill-fuster-quotes", "dialog": "who_was_joan_fuster.dialog", "text": "joan fuster foi un ensaísta, poeta e filósofo valenciano, coñecido polas súas influentes obras sobre a cultura e a identidade cataláns."}
 {"lang": "gl-ES", "skill": "ovos-skill-ggwave", "dialog": "ggwave_already_disabled.dialog", "text": "os códigos qr de audio xa están desactivados"}
 {"lang": "gl-ES", "skill": "ovos-skill-ggwave", "dialog": "ggwave_already_enabled.dialog", "text": "os códigos qr de audio xa están activados"}
 {"lang": "gl-ES", "skill": "ovos-skill-ggwave", "dialog": "ggwave_disabled.dialog", "text": "desactivando os códigos qr de audio"}
@@ -501,27 +513,27 @@
 {"lang": "gl-ES", "skill": "ovos-skill-personal", "dialog": "who_am_i.dialog", "text": "son {name}, unha ia de código aberto"}
 {"lang": "gl-ES", "skill": "ovos-skill-personal", "dialog": "who_made_me.dialog", "text": "os marabillosos equipo e comunidade de {creator}."}
 {"lang": "gl-ES", "skill": "ovos-skill-personal", "dialog": "who_made_me.dialog", "text": "todo o mundo da comunidade e o equipo de {creator}."}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "choice-result.dialog", "text": "sen dúbida {choice}."}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "choice-result.dialog", "text": "unha escolla difícil. mais imos escoller {choice}!"}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "coin-result.dialog", "text": "foi {result}"}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "coin-result.dialog", "text": "{result}"}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "die-result.dialog", "text": "sacaches un {result}"}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "die-result.dialog", "text": "{result}"}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "first-choice.dialog", "text": "cal é a túa primeira opción?"}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "first-choice.dialog", "text": "vale. cal é a primeira escolla?"}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "fortune-query.dialog", "text": "eu sei todas as cousas... se son preguntas de si ou non. cal é a túa?"}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "fortune-query.dialog", "text": "que queres saber? responderei si ou non."}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "fortune-result.dialog", "text": "{answer}"}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "multiple-die-result.dialog", "text": "os teus datos son {result_string} cun total de {result_total}"}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "number-range-not-specified.dialog", "text": "non entendín moi ben os teus números. vou escoller entre 1 e 10 daquela."}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "number-range-not-specified.dialog", "text": "non sei moi ben o que dixeches. imos escoller entre 1 e 10."}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "number-result.dialog", "text": "elixín {number}"}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "number-result.dialog", "text": "eu escollín {number}"}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "number-result.dialog", "text": "vale. {number}"}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "number-result.dialog", "text": "{number}"}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "over-dice-limit.dialog", "text": "fixaches un límite de {number} na túa configuración. o que vou facer é lanzar {number} dados."}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "second-choice.dialog", "text": "cal é a túa segunda opción?"}
-{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "second-choice.dialog", "text": "vale. agora cal é a segunda opción?"}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "choice_result.dialog", "text": "sen dúbida {choice}."}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "choice_result.dialog", "text": "unha escolla difícil. mais imos escoller {choice}!"}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "coin_result.dialog", "text": "foi {result}"}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "coin_result.dialog", "text": "{result}"}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "die_result.dialog", "text": "sacaches un {result}"}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "die_result.dialog", "text": "{result}"}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "first_choice.dialog", "text": "cal é a túa primeira opción?"}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "first_choice.dialog", "text": "vale. cal é a primeira escolla?"}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "fortune_query.dialog", "text": "eu sei todas as cousas... se son preguntas de si ou non. cal é a túa?"}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "fortune_query.dialog", "text": "que queres saber? responderei si ou non."}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "fortune_result.dialog", "text": "{answer}"}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "multiple_die_result.dialog", "text": "os teus datos son {result_string} cun total de {result_total}"}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "number_range_not_specified.dialog", "text": "non entendín moi ben os teus números. vou escoller entre 1 e 10 daquela."}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "number_range_not_specified.dialog", "text": "non sei moi ben o que dixeches. imos escoller entre 1 e 10."}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "number_result.dialog", "text": "elixín {number}"}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "number_result.dialog", "text": "eu escollín {number}"}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "number_result.dialog", "text": "vale. {number}"}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "number_result.dialog", "text": "{number}"}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "over_dice_limit.dialog", "text": "fixaches un límite de {number} na túa configuración. o que vou facer é lanzar {number} dados."}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "second_choice.dialog", "text": "cal é a túa segunda opción?"}
+{"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "second_choice.dialog", "text": "vale. agora cal é a segunda opción?"}
 {"lang": "gl-ES", "skill": "ovos-skill-screenshot", "dialog": "screenshot_failed.dialog", "text": "non puiden facer a captura de pantalla"}
 {"lang": "gl-ES", "skill": "ovos-skill-screenshot", "dialog": "screenshot_failed.dialog", "text": "non se puido capturar a pantalla"}
 {"lang": "gl-ES", "skill": "ovos-skill-screenshot", "dialog": "screenshot_taken.dialog", "text": "captura de pantalla feita"}
@@ -840,6 +852,7 @@
 {"lang": "gl-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "unknown.wod.dialog", "text": "non sei cal é a palabra do día"}
 {"lang": "gl-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "word.of.day.dialog", "text": "a palabra do día é {word}"}
 {"lang": "gl-ES", "skill": "ovos-skill-wordnet", "dialog": "no_answer.dialog", "text": "word net does not know the answer"}
+{"lang": "gl-ES", "skill": "ovos-skill-wordnet", "dialog": "unresolved.dialog", "text": "non entendín que palabra queres dicir"}
 {"lang": "gl-ES", "skill": "ovos-transcription-validator-plugin", "dialog": "say_again.dialog", "text": "desculpe, a súa solicitude non estaba clara. por favor, repítaa."}
 {"lang": "gl-ES", "skill": "ovos-transcription-validator-plugin", "dialog": "say_again.dialog", "text": "desculpe, non o captei. por favor, dígao outra vez."}
 {"lang": "gl-ES", "skill": "ovos-transcription-validator-plugin", "dialog": "say_again.dialog", "text": "hmm, non estou seguro de telo escoitado ben. pode repetilo?"}
