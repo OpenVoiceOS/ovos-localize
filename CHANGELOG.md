@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.0a17](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a17) (2026-09-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a16...0.1.0a17)
+
+**Merged pull requests:**
+
+- fix\(submit\): check out ovos-localize before pip install [\#505](https://github.com/OpenVoiceOS/ovos-localize/pull/505) ([JarbasAl](https://github.com/JarbasAl))
+- ci: publish training corpora to the HF Hub dataset [\#496](https://github.com/OpenVoiceOS/ovos-localize/pull/496) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.0a16](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a16) (2026-09-04)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a15...0.1.0a16)
@@ -46,15 +55,15 @@
 
 ## [0.1.0a11](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a11) (2026-08-26)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a10...0.1.0a11)
-
-## [0.1.0a10](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a10) (2026-08-26)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a9...0.1.0a10)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a9...0.1.0a11)
 
 ## [0.1.0a9](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a9) (2026-08-26)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a8...0.1.0a9)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a10...0.1.0a9)
+
+## [0.1.0a10](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a10) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a8...0.1.0a10)
 
 ## [0.1.0a8](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a8) (2026-08-26)
 
