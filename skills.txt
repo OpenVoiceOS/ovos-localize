@@ -1,21 +1,12 @@
 # Repositories OVOS Localize can open a pull request against.
 #
-# OpenVoiceOS only. Delivering a translation ends with a GitHub App asking for
-# an installation token scoped to the target repository, and that call returns
-# 404 wherever the app is not installed. Anything outside this org would
-# collect translations that can never be delivered.
+# Only repositories in orgs where the ovos-localize GitHub App is installed can
+# appear here. Submitting a translation ends with the App requesting an
+# installation token scoped to the target repository; where the App is not
+# installed, GitHub returns 404 and no pull request can be opened.
 #
-# Maintainers of skills elsewhere: fork this repository and run it yourself.
-# It is a static site plus GitHub Actions with no server of any kind, so
-# pointing your own fork at your own repositories costs you nothing but the
-# fork. See FAQ.md.
-#
-# Only repositories owned by OpenVoiceOS, TigreGotico and JarbasHiveMind can
-# appear here. Submitting a translation ends with a GitHub App asking for an
-# installation token scoped to the target repository, and that call returns
-# 404 wherever the app is not installed -- which no third-party owner can be
-# asked to allow on our behalf. A repository outside these orgs therefore
-# collects translations that can never be delivered.
+# Orgs where the App is currently installed:
+#   OpenVoiceOS · TigreGotico · JarbasHiveMind · OscillateLabsLLC
 #
 # Maintainers of skills elsewhere: fork this repository and run it yourself.
 # It is a static site plus GitHub Actions with no server of any kind, so
@@ -109,3 +100,6 @@ OpenVoiceOS/ovos-media-classifier
 OpenVoiceOS/ovos-spec-tools
 OpenVoiceOS/ovos-tts-plugin-mimic
 OpenVoiceOS/pyhtmx-gui-client
+
+# Community (OscillateLabsLLC — app installed 2026-09)
+OscillateLabsLLC/skill-homeassistant
