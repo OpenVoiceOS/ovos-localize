@@ -1397,6 +1397,7 @@
 {"lang": "da-DK", "skill": "ovos-skill-calculator", "intent": "square.intent", "template": "hvad er {a} i anden", "slots": ["a"], "entity_values": {"a": []}}
 {"lang": "da-DK", "skill": "ovos-skill-calculator", "intent": "square_root.intent", "template": "hvad er kvadratroden af {a}", "slots": ["a"], "entity_values": {"a": []}}
 {"lang": "da-DK", "skill": "ovos-skill-calculator", "intent": "subtract.intent", "template": "hvad er {a} minus {b}", "slots": ["a", "b"], "entity_values": {"a": [], "b": []}}
+{"lang": "da-DK", "skill": "ovos-skill-cmd", "intent": "RunScriptCommandIntent.intent", "template": "(kør|udfør|start) (kommando|kommandoen|script|scriptet) {script}", "slots": ["script"], "entity_values": {"script": []}}
 {"lang": "da-DK", "skill": "ovos-skill-color-picker", "intent": "request-color.intent", "template": "hvilken farve er {requested_color}", "slots": ["requested_color"], "entity_values": {"requested_color": []}}
 {"lang": "da-DK", "skill": "ovos-skill-color-picker", "intent": "request-color-by-hex.intent", "template": "hvad (farve|farve) har en hex-kode på {hex_code}", "slots": ["hex_code"], "entity_values": {"hex_code": []}}
 {"lang": "da-DK", "skill": "ovos-skill-color-picker", "intent": "request-color-by-hex.intent", "template": "hvilken farve er [hex-koden] {hex_code}", "slots": ["hex_code"], "entity_values": {"hex_code": []}}
@@ -1900,12 +1901,12 @@
 {"lang": "da-DK", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "sig {sentence} efter mig", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "da-DK", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "tal {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "da-DK", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "tal {sentence} efter mig", "slots": ["sentence"], "entity_values": {"sentence": []}}
-{"lang": "da-DK", "skill": "ovos-skill-randomness", "intent": "pick-a-number.intent", "template": "(vælg|udvælg|peg på) et tal mellem {lower} og {upper}", "slots": ["lower", "upper"], "entity_values": {"lower": [], "upper": []}}
-{"lang": "da-DK", "skill": "ovos-skill-randomness", "intent": "roll-multiple-dice.intent", "template": "kast {number} d {faces}", "slots": ["number", "faces"], "entity_values": {"number": [], "faces": []}}
-{"lang": "da-DK", "skill": "ovos-skill-randomness", "intent": "roll-multiple-dice.intent", "template": "kast {number} terninger med {faces} sider", "slots": ["number", "faces"], "entity_values": {"number": [], "faces": []}}
-{"lang": "da-DK", "skill": "ovos-skill-randomness", "intent": "roll-multiple-dice.intent", "template": "kast {number} terninger", "slots": ["number"], "entity_values": {"number": []}}
-{"lang": "da-DK", "skill": "ovos-skill-randomness", "intent": "roll-single-die.intent", "template": "kast en terning med {faces} sider", "slots": ["faces"], "entity_values": {"faces": []}}
-{"lang": "da-DK", "skill": "ovos-skill-randomness", "intent": "roll-single-die.intent", "template": "kast en {faces}-sidet terning", "slots": ["faces"], "entity_values": {"faces": []}}
+{"lang": "da-DK", "skill": "ovos-skill-randomness", "intent": "pick_a_number.intent", "template": "(vælg|udvælg|peg på) et tal mellem {lower} og {upper}", "slots": ["lower", "upper"], "entity_values": {"lower": [], "upper": []}}
+{"lang": "da-DK", "skill": "ovos-skill-randomness", "intent": "roll_multiple_dice.intent", "template": "kast {number} d {faces}", "slots": ["number", "faces"], "entity_values": {"number": [], "faces": []}}
+{"lang": "da-DK", "skill": "ovos-skill-randomness", "intent": "roll_multiple_dice.intent", "template": "kast {number} terninger med {faces} sider", "slots": ["number", "faces"], "entity_values": {"number": [], "faces": []}}
+{"lang": "da-DK", "skill": "ovos-skill-randomness", "intent": "roll_multiple_dice.intent", "template": "kast {number} terninger", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "da-DK", "skill": "ovos-skill-randomness", "intent": "roll_single_die.intent", "template": "kast en terning med {faces} sider", "slots": ["faces"], "entity_values": {"faces": []}}
+{"lang": "da-DK", "skill": "ovos-skill-randomness", "intent": "roll_single_die.intent", "template": "kast en {faces}-sidet terning", "slots": ["faces"], "entity_values": {"faces": []}}
 {"lang": "da-DK", "skill": "ovos-skill-rhythm-box", "intent": "set_rhythm.intent", "template": "spil et {pattern} beat på {bpm} bpm", "slots": ["pattern", "bpm"], "entity_values": {"pattern": [], "bpm": []}}
 {"lang": "da-DK", "skill": "ovos-skill-rhythm-box", "intent": "set_rhythm.intent", "template": "spil {pattern} beatet på {bpm} bpm", "slots": ["pattern", "bpm"], "entity_values": {"pattern": [], "bpm": []}}
 {"lang": "da-DK", "skill": "ovos-skill-rhythm-box", "intent": "set_rhythm.intent", "template": "start et {pattern} beat på {bpm} bpm", "slots": ["pattern", "bpm"], "entity_values": {"pattern": [], "bpm": []}}

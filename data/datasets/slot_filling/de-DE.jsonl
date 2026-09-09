@@ -1641,6 +1641,8 @@
 {"lang": "de-DE", "skill": "ovos-skill-audio-recording", "intent": "start_recording.intent", "template": "starte eine Aufnahme mit dem Namen {name}", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "de-DE", "skill": "ovos-skill-audio-recording", "intent": "start_recording.intent", "template": "starte eine neue Aufnahme mit dem Namen {name}", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "de-DE", "skill": "ovos-skill-audio-recording", "intent": "start_recording.intent", "template": "starte eine neue Aufnahme mit dem Titel {name}", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "de-DE", "skill": "ovos-skill-cmd", "intent": "RunScriptCommandIntent.intent", "template": "(führe|starte) (das|den|ein|einen|) (skript|befehl|kommando) {script} aus", "slots": ["script"], "entity_values": {"script": []}}
+{"lang": "de-DE", "skill": "ovos-skill-cmd", "intent": "RunScriptCommandIntent.intent", "template": "(starte|führe) (skript|befehl|kommando) {script}", "slots": ["script"], "entity_values": {"script": []}}
 {"lang": "de-DE", "skill": "ovos-skill-color-picker", "intent": "request-color.intent", "template": "welche Farbe hat {requested_color}", "slots": ["requested_color"], "entity_values": {"requested_color": []}}
 {"lang": "de-DE", "skill": "ovos-skill-color-picker", "intent": "request-color-by-hex.intent", "template": "welche (Farbe|Farbe) hat den Hex-Code {hex_code}", "slots": ["hex_code"], "entity_values": {"hex_code": []}}
 {"lang": "de-DE", "skill": "ovos-skill-color-picker", "intent": "request-color-by-name.intent", "template": "Zeig mir die (Farbe|Farbe) {color}", "slots": ["color"], "entity_values": {"color": []}}

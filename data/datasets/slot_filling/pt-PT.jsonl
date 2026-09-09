@@ -2692,10 +2692,13 @@
 {"lang": "pt-PT", "skill": "ovos-skill-number-facts", "intent": "number_trivia.intent", "template": "[diz-me] (uma curiosidade|um facto) sobre o número {number}", "slots": ["number"], "entity_values": {"number": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-number-facts", "intent": "number_trivia.intent", "template": "(curiosidade|facto) [aleatório] (do|sobre o) número {number}", "slots": ["number"], "entity_values": {"number": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-number-facts", "intent": "year_trivia.intent", "template": "[diz-me] (uma curiosidade|um facto) (do ano|sobre o ano) {year}", "slots": ["year"], "entity_values": {"year": []}}
-{"lang": "pt-PT", "skill": "ovos-skill-parrot", "intent": "repeat_stt.intent", "template": "Acabaste de dizer, {stt}.", "slots": ["stt"], "entity_values": {"stt": []}}
-{"lang": "pt-PT", "skill": "ovos-skill-parrot", "intent": "repeat_stt.intent", "template": "Tu disseste, {stt}.", "slots": ["stt"], "entity_values": {"stt": []}}
-{"lang": "pt-PT", "skill": "ovos-skill-parrot", "intent": "repeat_tts.intent", "template": "Eu acabei de dizer, {tts}", "slots": ["tts"], "entity_values": {"tts": []}}
-{"lang": "pt-PT", "skill": "ovos-skill-parrot", "intent": "repeat_tts.intent", "template": "Eu disse, {tts}", "slots": ["tts"], "entity_values": {"tts": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "repete (a seguir a mim|depois de mim) {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "repete {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "repete {sentence} (a seguir a mim|depois de mim)", "slots": ["sentence"], "entity_values": {"sentence": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "diz (a seguir a mim|depois de mim) {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "diz {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "diz {sentence} (a seguir a mim|depois de mim)", "slots": ["sentence"], "entity_values": {"sentence": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "fala {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "(fala-me (de|sobre)|diz-me tudo sobre|conta-me sobre) o pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "(descreve|o que é|quem é) o pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "informação sobre o pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}

@@ -3677,6 +3677,7 @@
 {"lang": "ca-ES", "skill": "ovos-skill-audio-recording", "intent": "start_recording.intent", "template": "gravació nova anomenada {name}", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-audio-recording", "intent": "start_recording.intent", "template": "nou enregistrament anomenat {name}", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-audio-recording", "intent": "start_recording.intent", "template": "enregistrament nou anomenat {name}", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-cmd", "intent": "RunScriptCommandIntent.intent", "template": "(executa|corre|llança) (el|un|) (script|comandament|ordre) {script}", "slots": ["script"], "entity_values": {"script": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-color-picker", "intent": "request-color.intent", "template": "Quin color és {requested_color}", "slots": ["requested_color"], "entity_values": {"requested_color": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-color-picker", "intent": "request-color-by-hex.intent", "template": "Quin color té (un|) codi hexadecimal de {hex_code}", "slots": ["hex_code"], "entity_values": {"hex_code": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-color-picker", "intent": "request-color-by-name.intent", "template": "Mostra('m|) (el|es) color {color}", "slots": ["color"], "entity_values": {"color": []}}
