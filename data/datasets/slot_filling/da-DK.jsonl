@@ -1680,6 +1680,12 @@
 {"lang": "da-DK", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "hvad er klokken om {offset} timer", "slots": ["offset"], "entity_values": {"offset": []}}
 {"lang": "da-DK", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "hvad er klokken om {offset} timtimer i {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
 {"lang": "da-DK", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "hvad er klokken om {offset} timtimer op {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
+{"lang": "da-DK", "skill": "ovos-skill-days-in-history_0", "intent": "births_in_history.intent", "template": "hvem blev født [den] {date} [i historien]", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "da-DK", "skill": "ovos-skill-days-in-history_0", "intent": "births_in_history.intent", "template": "(hvilke|hvem) [berømte|kendte|historiske] (personer|skikkelser) blev født [den] {date} [i historien]", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "da-DK", "skill": "ovos-skill-days-in-history_0", "intent": "births_in_history.intent", "template": "[berømte|kendte] fødsler [den] {date} i historien", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "da-DK", "skill": "ovos-skill-days-in-history_1", "intent": "deaths_in_history.intent", "template": "hvem døde [den] {date} [i historien]", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "da-DK", "skill": "ovos-skill-days-in-history_1", "intent": "deaths_in_history.intent", "template": "(hvilke|hvem) [berømte|kendte|historiske] (personer|skikkelser) døde [den] {date} [i historien]", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "da-DK", "skill": "ovos-skill-days-in-history_1", "intent": "deaths_in_history.intent", "template": "[berømte|kendte] dødsfald [den] {date} i historien", "slots": ["date"], "entity_values": {"date": []}}
 {"lang": "da-DK", "skill": "ovos-skill-days-in-history_1", "intent": "today_in_history.intent", "template": "fortæl mig om  skete den {date}", "slots": ["date"], "entity_values": {"date": []}}
 {"lang": "da-DK", "skill": "ovos-skill-days-in-history_1", "intent": "today_in_history.intent", "template": "fortæl mig om  skete den {date} i historien", "slots": ["date"], "entity_values": {"date": []}}
 {"lang": "da-DK", "skill": "ovos-skill-days-in-history_1", "intent": "today_in_history.intent", "template": "fortæl mig om historiske begivenheder skete den {date}", "slots": ["date"], "entity_values": {"date": []}}
@@ -1793,6 +1799,10 @@
 {"lang": "da-DK", "skill": "ovos-skill-geometry", "intent": "perimeter_of_square.intent", "template": "hvad er omkredsen af et kvadrat med siden {side}", "slots": ["side"], "entity_values": {"side": []}}
 {"lang": "da-DK", "skill": "ovos-skill-geometry", "intent": "what_is.intent", "template": "hvad er en {term}", "slots": ["term"], "entity_values": {"term": []}}
 {"lang": "da-DK", "skill": "ovos-skill-geometry", "intent": "what_is.intent", "template": "hvad er {term}", "slots": ["term"], "entity_values": {"term": []}}
+{"lang": "da-DK", "skill": "ovos-skill-ggwave", "intent": "disable_ggwave.intent", "template": "(deaktiver|stop|afvis|luk ned) {ggwave}", "slots": ["ggwave"], "entity_values": {"ggwave": ["ggwave", "lyd(kode|koder)", "lyd-qr-(kode|koder)", "lyddata"]}}
+{"lang": "da-DK", "skill": "ovos-skill-ggwave", "intent": "disable_ggwave.intent", "template": "{ggwave} fra", "slots": ["ggwave"], "entity_values": {"ggwave": ["ggwave", "lyd(kode|koder)", "lyd-qr-(kode|koder)", "lyddata"]}}
+{"lang": "da-DK", "skill": "ovos-skill-ggwave", "intent": "enable_ggwave.intent", "template": "(aktiver|start|tillad) {ggwave}", "slots": ["ggwave"], "entity_values": {"ggwave": ["ggwave", "lyd(kode|koder)", "lyd-qr-(kode|koder)", "lyddata"]}}
+{"lang": "da-DK", "skill": "ovos-skill-ggwave", "intent": "enable_ggwave.intent", "template": "{ggwave} (til|aktiveret)", "slots": ["ggwave"], "entity_values": {"ggwave": ["ggwave", "lyd(kode|koder)", "lyd-qr-(kode|koder)", "lyddata"]}}
 {"lang": "da-DK", "skill": "ovos-skill-holidays", "intent": "days_until_holiday.intent", "template": "hvor mange dage er der til {holiday}", "slots": ["holiday"], "entity_values": {"holiday": []}}
 {"lang": "da-DK", "skill": "ovos-skill-holidays", "intent": "days_until_holiday.intent", "template": "hvor lang tid er der til {holiday}", "slots": ["holiday"], "entity_values": {"holiday": []}}
 {"lang": "da-DK", "skill": "ovos-skill-holidays", "intent": "weekday_for_date.intent", "template": "hvilken ugedag er {date_utterance}", "slots": ["date_utterance"], "entity_values": {"date_utterance": []}}
@@ -1917,6 +1927,23 @@
 {"lang": "da-DK", "skill": "ovos-skill-sound-like", "intent": "sound_like.intent", "template": "hvilken lyd laver en {subject}", "slots": ["subject"], "entity_values": {"subject": []}}
 {"lang": "da-DK", "skill": "ovos-skill-sound-like", "intent": "sound_like.intent", "template": "spil en {subject} lyd", "slots": ["subject"], "entity_values": {"subject": []}}
 {"lang": "da-DK", "skill": "ovos-skill-sound-like", "intent": "sound_like.intent", "template": "afspil lyden af en {subject}", "slots": ["subject"], "entity_values": {"subject": []}}
+{"lang": "da-DK", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "kan du give mig stavningen af {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "kan du stave {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "kan du stave ordet {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "kan du fortælle mig stavningen af {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "kan du sige mig stavningen af {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "giv mig stavningen af {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "hvordan staver du {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "hvordan staver du ordet {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "hvordan staves {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "hvordan staves ordet {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "stav {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "stav ordet {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "stavningen af ordet {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "stavningen af {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "fortæl mig stavningen af {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "hvad er stavningen af {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "da-DK", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "hvad er stavningen af ordet {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "da-DK", "skill": "ovos-skill-tuning-fork", "intent": "give_note.intent", "template": "giv mig et {note}", "slots": ["note"], "entity_values": {"note": []}}
 {"lang": "da-DK", "skill": "ovos-skill-tuning-fork", "intent": "give_note.intent", "template": "giv mig en {note}", "slots": ["note"], "entity_values": {"note": []}}
 {"lang": "da-DK", "skill": "ovos-skill-tuning-fork", "intent": "give_note.intent", "template": "spil et {note}", "slots": ["note"], "entity_values": {"note": []}}
