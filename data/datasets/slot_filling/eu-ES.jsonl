@@ -966,6 +966,11 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "intent": "DeleteListEntries.intent", "template": "(ezabatu|kendu) [{name}] zerrendako (elementuak|sarrerak|dena)", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(zein elementu|zer) daude [{name}] zerrendan", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(irakurri|erakutsi) [{name}] zerrendako sarrerak", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-application-launcher", "intent": "close.intent", "template": "itxi {application}", "slots": ["application"], "entity_values": {"application": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-application-launcher", "intent": "close.intent", "template": "amaitu {application}", "slots": ["application"], "entity_values": {"application": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-application-launcher", "intent": "close.intent", "template": "irten {application} aplikaziotik", "slots": ["application"], "entity_values": {"application": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-application-launcher", "intent": "close.intent", "template": "itxi {application} aplikazioa", "slots": ["application"], "entity_values": {"application": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-application-launcher", "intent": "close.intent", "template": "amaitu {application} programa", "slots": ["application"], "entity_values": {"application": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-application-launcher", "intent": "launch.intent", "template": "abiarazi {application}", "slots": ["application"], "entity_values": {"application": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-application-launcher", "intent": "launch.intent", "template": "ireki {application}", "slots": ["application"], "entity_values": {"application": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-application-launcher", "intent": "launch.intent", "template": "jarri martxan {application}", "slots": ["application"], "entity_values": {"application": []}}
