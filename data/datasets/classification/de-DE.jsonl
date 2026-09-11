@@ -7,6 +7,7 @@
 {"lang": "de-DE", "skill": "chronologia", "file_type": "voc", "intent": "clock_landmark_720.voc", "text": "mittag"}
 {"lang": "de-DE", "skill": "chronologia", "file_type": "voc", "intent": "clock_meridiem_am.voc", "text": "vormittags"}
 {"lang": "de-DE", "skill": "chronologia", "file_type": "voc", "intent": "clock_meridiem_am.voc", "text": "morgens"}
+{"lang": "de-DE", "skill": "chronologia", "file_type": "voc", "intent": "clock_meridiem_am.voc", "text": "nachts"}
 {"lang": "de-DE", "skill": "chronologia", "file_type": "voc", "intent": "clock_meridiem_pm.voc", "text": "nachmittags"}
 {"lang": "de-DE", "skill": "chronologia", "file_type": "voc", "intent": "clock_meridiem_pm.voc", "text": "abends"}
 {"lang": "de-DE", "skill": "chronologia", "file_type": "voc", "intent": "clock_zone_0.voc", "text": "utc"}
@@ -160,7 +161,6 @@
 {"lang": "de-DE", "skill": "chronologia", "file_type": "voc", "intent": "marker_until.voc", "text": "bis zum"}
 {"lang": "de-DE", "skill": "chronologia", "file_type": "voc", "intent": "marker_until.voc", "text": "bis zur"}
 {"lang": "de-DE", "skill": "chronologia", "file_type": "voc", "intent": "marker_week_num.voc", "text": "woche"}
-{"lang": "de-DE", "skill": "chronologia", "file_type": "voc", "intent": "marker_week_num.voc", "text": "wochen"}
 {"lang": "de-DE", "skill": "chronologia", "file_type": "voc", "intent": "marker_week_num.voc", "text": "kw"}
 {"lang": "de-DE", "skill": "chronologia", "file_type": "voc", "intent": "marker_week_num.voc", "text": "kalenderwoche"}
 {"lang": "de-DE", "skill": "chronologia", "file_type": "voc", "intent": "marker_weekday.voc", "text": "wochentag"}
@@ -18150,6 +18150,11 @@
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_core_version.intent", "text": "welche ovos version läuft bei dir"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_core_version.intent", "text": "welche version von ovos benutzt du"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_core_version.intent", "text": "welche core version hast du"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_core_version.intent", "text": "sag mir deine core-version"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_core_version.intent", "text": "welche version von ovos ist installiert"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_core_version.intent", "text": "ovos core-version"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_core_version.intent", "text": "auf welcher ovos version läufst du"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_core_version.intent", "text": "wie lautet deine core-version"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_cpu_usage.intent", "text": "cpu diagnose"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_cpu_usage.intent", "text": "sag mir deine cpu-auslastung"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_cpu_usage.intent", "text": "aktuelle cpu-auslastung"}
@@ -18157,17 +18162,25 @@
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_cpu_usage.intent", "text": "wie hoch ist die cpu-auslastung"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_cpu_usage.intent", "text": "wie viel cpu verwendest du"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_cpu_usage.intent", "text": "wie viel prozessor wird verwendet"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_cpu_usage.intent", "text": "benutzt du gerade viel cpu"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_disk_space.intent", "text": "wie viel festplattenspeicher habe ich noch übrig"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_disk_space.intent", "text": "wie viel speicherplatz habe ich noch übrig"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_disk_space.intent", "text": "wie viel freien speicherplatz gibt es"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_disk_space.intent", "text": "wie viel freien festplattenspeicher habe ich"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_disk_space.intent", "text": "geht mir der speicherplatz aus"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_disk_space.intent", "text": "festplatten diagnose"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_disk_space.intent", "text": "wie viel platz ist noch auf der festplatte"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_disk_space.intent", "text": "sag mir meine speicherplatznutzung"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_disk_space.intent", "text": "habe ich genug speicherplatz"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_extra_langs.intent", "text": "hast du zusätzliche sprachen"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_extra_langs.intent", "text": "nenne mir deine weiteren sprachen"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_extra_langs.intent", "text": "nenne mir deine zusätzlichen sprachen"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_extra_langs.intent", "text": "was sind deine zusätzlichen sprachen?"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_extra_langs.intent", "text": "welche anderen sprachen hast du"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_extra_langs.intent", "text": "welche zusätzlichen sprachen verwendest du"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_extra_langs.intent", "text": "sprichst du mehr als eine sprache"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_extra_langs.intent", "text": "zähle deine zusätzlichen sprachen auf"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_extra_langs.intent", "text": "gibt es weitere sprachen die du verstehst"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_gpu.intent", "text": "befindet sich in deinem system eine gpu?"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_gpu.intent", "text": "befindet sich in deinem system eine grafikkarte?"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_gpu.intent", "text": "hat ihr system eine gpu"}
@@ -18176,10 +18189,18 @@
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_gpu.intent", "text": "hast du eine grafikkarte"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_gpu.intent", "text": "verwendest du eine gpu"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_gpu.intent", "text": "verwendest du eine grafikkarte"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_gpu.intent", "text": "grafikkarten diagnose"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_gpu.intent", "text": "sag mir ob du eine grafikkarte hast"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_gpu.intent", "text": "ist eine grafikkarte eingebaut"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_gpu.intent", "text": "läufst du auf einer grafikkarte"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_kernel_version.intent", "text": "sag mir deine kernel-version"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_kernel_version.intent", "text": "was ist deine kernel-version?"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_kernel_version.intent", "text": "welche kernel-version verwendest du"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_kernel_version.intent", "text": "welchen kernel hast du"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_kernel_version.intent", "text": "kernel diagnose"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_kernel_version.intent", "text": "erzähl mir von deinem kernel"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_kernel_version.intent", "text": "welcher kernel ist installiert"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_kernel_version.intent", "text": "nenne mir deine kernel-version"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_langs.intent", "text": "liste deine sprachen"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_langs.intent", "text": "liste sprachen"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_langs.intent", "text": "liste unterstützten sprachen"}
@@ -18191,16 +18212,23 @@
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_langs.intent", "text": "welche sprachen kannst du sprechen"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_langs.intent", "text": "welche sprachen kannst du verstehen"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_langs.intent", "text": "welche sprachen verwendest du"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_langs.intent", "text": "wie viele sprachen sprichst du"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_memory_usage.intent", "text": "speicherdiagnose"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_memory_usage.intent", "text": "wie viel speicher ist verfügbar?"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_memory_usage.intent", "text": "aktuelle speichernutzung"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_memory_usage.intent", "text": "nenne mir deinen speicherstatus"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_memory_usage.intent", "text": "wie hoch ist deine speichernutzung"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_memory_usage.intent", "text": "wie viel ram verwendest du"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_memory_usage.intent", "text": "wie viel speicher ist frei"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_memory_usage.intent", "text": "wird dein speicher knapp"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_ovos_location.intent", "text": "sag mir deinen standort"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_ovos_location.intent", "text": "was ist dein aktueller standort"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_ovos_location.intent", "text": "wie ist deine lokation"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_ovos_location.intent", "text": "wo bist du"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_ovos_location.intent", "text": "wo befindest du dich"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_ovos_location.intent", "text": "in welcher stadt bist du"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_ovos_location.intent", "text": "sag mir wo du bist"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_ovos_location.intent", "text": "weißt du wo du bist"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_primary_lang.intent", "text": "nenne mir deine hauptsprache"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_primary_lang.intent", "text": "was ist deine hauptsprache?"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_primary_lang.intent", "text": "was ist deine muttersprache?"}
@@ -18214,14 +18242,28 @@
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_uptime.intent", "text": "wie lange bist du schon an"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_uptime.intent", "text": "wann bist du zuletzt gestartet"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_uptime.intent", "text": "wann hast du zuletzt gebootet"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_uptime.intent", "text": "wie lange läuft das system schon"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_uptime.intent", "text": "nenne mir deine laufzeit"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_uptime.intent", "text": "wie lange ist dein start her"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_uptime.intent", "text": "seit wann bist du in betrieb"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_lang.intent", "text": "welche sprache sprechen wir"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_lang.intent", "text": "welche sprache verwenden wir"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_lang.intent", "text": "welche sprache spreche ich"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_lang.intent", "text": "welche sprache verwende ich"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_lang.intent", "text": "in welcher sprache spreche ich"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_lang.intent", "text": "sag mir welche sprache wir sprechen"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_lang.intent", "text": "welche sprache benutze ich gerade"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_lang.intent", "text": "in welcher sprache rede ich"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_lang.intent", "text": "welche sprache hörst du von mir"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_lang.intent", "text": "was ist die sprache die ich verwende"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_location.intent", "text": "sag mir meinen standort"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_location.intent", "text": "was ist mein aktueller standort?"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_location.intent", "text": "wie ist mein standort"}
 {"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_location.intent", "text": "wo bin ich"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_location.intent", "text": "wo befinde ich mich"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_location.intent", "text": "in welcher stadt bin ich"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_location.intent", "text": "sag mir wo ich bin"}
+{"lang": "de-DE", "skill": "ovos-skill-diagnostics", "file_type": "intent", "intent": "query_user_location.intent", "text": "weißt du wo ich bin"}
 {"lang": "de-DE", "skill": "ovos-skill-dictation", "file_type": "intent", "intent": "start_dictation.intent", "text": "aktiviere text-to-speech-modus"}
 {"lang": "de-DE", "skill": "ovos-skill-dictation", "file_type": "intent", "intent": "start_dictation.intent", "text": "aktiviere textaufzeichnung"}
 {"lang": "de-DE", "skill": "ovos-skill-dictation", "file_type": "intent", "intent": "start_dictation.intent", "text": "aktiviere die texttranskription"}
@@ -22401,13 +22443,13 @@
 {"lang": "de-DE", "skill": "ovos-skill-wolfie", "file_type": "intent", "intent": "search_wolfie.intent", "text": "was sagt wolfram alpha über {query}"}
 {"lang": "de-DE", "skill": "ovos-skill-wolfie", "file_type": "intent", "intent": "search_wolfie.intent", "text": "was sagt wolfram über {query}"}
 {"lang": "de-DE", "skill": "ovos-skill-wolfie", "file_type": "intent", "intent": "search_wolfie.intent", "text": "was sagt der wolf über {query}"}
-{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "file_type": "intent", "intent": "WordOfTheDayIntent.intent", "text": "das wort des tages"}
-{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "file_type": "intent", "intent": "WordOfTheDayIntent.intent", "text": "wort des tages"}
-{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "file_type": "intent", "intent": "WordOfTheDayIntent.intent", "text": "nenne mir das wort des tages"}
-{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "file_type": "intent", "intent": "WordOfTheDayIntent.intent", "text": "sag mir das wort des tages"}
-{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "file_type": "intent", "intent": "WordOfTheDayIntent.intent", "text": "was ist das wort des tages"}
 {"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "file_type": "voc", "intent": "WordOfTheDayKeyword.voc", "text": "wort des tages"}
 {"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "file_type": "voc", "intent": "WordOfTheDayKeyword.voc", "text": "sag mir das wort des tages"}
+{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "file_type": "intent", "intent": "word_of_the_day.intent", "text": "das wort des tages"}
+{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "file_type": "intent", "intent": "word_of_the_day.intent", "text": "wort des tages"}
+{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "file_type": "intent", "intent": "word_of_the_day.intent", "text": "nenne mir das wort des tages"}
+{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "file_type": "intent", "intent": "word_of_the_day.intent", "text": "sag mir das wort des tages"}
+{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "file_type": "intent", "intent": "word_of_the_day.intent", "text": "was ist das wort des tages"}
 {"lang": "de-DE", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "WordnetQuery.voc", "text": "definition"}
 {"lang": "de-DE", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "WordnetQuery.voc", "text": "bedeutung"}
 {"lang": "de-DE", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "WordnetQuery.voc", "text": "antonym"}
