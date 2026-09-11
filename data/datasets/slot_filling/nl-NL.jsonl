@@ -956,6 +956,24 @@
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "zeg {sentence} na mij", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "spreek {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "spreek {sentence} na mij", "slots": ["sentence"], "entity_values": {"sentence": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "(vertel me [alles]|wat weet je) over de pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "(beschrijf|wie is|wat is) de pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "[geef me] (info|informatie) over de pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "pokedex vermelding voor {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "pokedex [vermelding] {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonMoves.intent", "template": "[welke] aanvallen heeft {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonMoves.intent", "template": "aanvallen van {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonMoves.intent", "template": "(moveset|aanvallen) (van|voor) {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonMoves.intent", "template": "welke aanvallen kan {pokemon} (kennen|leren|hebben)", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "welk type is de pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "welk(e) (type|types) heeft de pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "type[s] van de pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "de pokemon {pokemon} is van welk type", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "wie (wint|zou winnen) [tussen] {pokemon_a} (en|of|tegen) {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "wie is sterker {pokemon_a} (of|tegen) {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "(gevecht|vergelijk) [tussen] {pokemon_a} (en|tegen) {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "{pokemon_a} tegen {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "(hoe spel je|hoe schrijf je|hoe zeg je) [(het woord|)] {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "(kun|kan|zou) je [het woord] {word} spellen", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "spel [(het woord|)] {word}", "slots": ["word"], "entity_values": {"word": []}}

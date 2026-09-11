@@ -4930,6 +4930,24 @@
 {"lang": "ca-ES", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "repetix després de mi {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "repetix {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "repetix {sentence} després de mi", "slots": ["sentence"], "entity_values": {"sentence": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "(digue'm [tot]|què saps) sobre el pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "(descriu|qui és|què és) el pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "[dóna'm] (info|informació) sobre el pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "entrada de la pokedex per a {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "pokedex [entrada] {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonMoves.intent", "template": "[quins] moviments té {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonMoves.intent", "template": "moviments de {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonMoves.intent", "template": "(moveset|atacs) (de|per a) {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonMoves.intent", "template": "quins (moviments|atacs) (té|coneix|sap) {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "quin tipus és el pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "quins tipus té el pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "tipus[os] del pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "el pokemon {pokemon} és de quin tipus", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "qui (guanya|guanyaria) [entre] {pokemon_a} (i|o|contra) {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "qui és més fort {pokemon_a} (o|contra) {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "(combat|compara) [entre] {pokemon_a} (i|contra) {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "{pokemon_a} contra {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "com escrius  {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "com escrius la paraula {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "com s'escriu  {word}", "slots": ["word"], "entity_values": {"word": []}}

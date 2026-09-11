@@ -383,11 +383,14 @@
 {"lang": "sv-SE", "skill": "ovos-skill-color-picker", "intent": "request-color-by-rgb.intent", "template": "vilken färg har (ett|det) RGB värde på {rgb}", "slots": ["rgb"], "entity_values": {"rgb": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-color-picker", "intent": "request-color-by-rgb.intent", "template": "vilken färg är [det] RGB [värdet] {rgb}", "slots": ["rgb"], "entity_values": {"rgb": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number}", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number} i lång skala", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number} i kort skala", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number} med kardinaltal", "slots": ["number"], "entity_values": {"number": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number} med ordningstal", "slots": ["number"], "entity_values": {"number": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number}  i lång skala", "slots": ["number"], "entity_values": {"number": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number}  i kort skala", "slots": ["number"], "entity_values": {"number": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number}  med hjälp av lång skala", "slots": ["number"], "entity_values": {"number": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number}  med hjälp av kort skala", "slots": ["number"], "entity_values": {"number": []}}
-{"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number} med kardinaltal", "slots": ["number"], "entity_values": {"number": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number} med kardinaltal i lång skala", "slots": ["number"], "entity_values": {"number": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number} med kardinaltal i kort skala", "slots": ["number"], "entity_values": {"number": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number} med kardinaltal med hjälp av lång skala", "slots": ["number"], "entity_values": {"number": []}}
@@ -397,7 +400,6 @@
 {"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number} genom att använda kardinaltal i kort skala", "slots": ["number"], "entity_values": {"number": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number} genom att använda kardinaltal med hjälp av lång skala", "slots": ["number"], "entity_values": {"number": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number} genom att använda kardinaltal med hjälp av kort skala", "slots": ["number"], "entity_values": {"number": []}}
-{"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number} med ordningstal", "slots": ["number"], "entity_values": {"number": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number} med ordningstal i lång skala", "slots": ["number"], "entity_values": {"number": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number} med ordningstal i kort skala", "slots": ["number"], "entity_values": {"number": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-count", "intent": "count_to_n.intent", "template": "räkna till {number} med ordningstal med hjälp av lång skala", "slots": ["number"], "entity_values": {"number": []}}
@@ -536,6 +538,23 @@
 {"lang": "sv-SE", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "säg {sentence} efter mig", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "tala {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "tala {sentence} efter mig", "slots": ["sentence"], "entity_values": {"sentence": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "(berätta [allt]|vad vet du) om pokemonen {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "(beskriv|vem är|vad är) pokemonen {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "[ge mig] (info|information) om pokemonen {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "pokedex post för {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "pokedex [post] {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonMoves.intent", "template": "[(vilka)] attacker (har|kan) {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonMoves.intent", "template": "(moveset|attacker) för {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonMoves.intent", "template": "vilka attacker kan {pokemon} (kunna|lära sig|ha)", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "vilken typ är pokemonen {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "vilken(a) (typ|typer) har pokemonen {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "typ(er) av pokemonen {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "pokemonen {pokemon} är av vilken typ", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "vem (vinner|skulle vinna) [mellan] {pokemon_a} (och|eller|mot) {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "vem är starkast {pokemon_a} (eller|mot) {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "(strid|jämför) [mellan] {pokemon_a} (och|mot) {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "{pokemon_a} mot {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-randomness", "intent": "pick_a_number.intent", "template": "(välj|utse|peka på) ett tal mellan {lower} och {upper}", "slots": ["lower", "upper"], "entity_values": {"lower": [], "upper": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-randomness", "intent": "roll_multiple_dice.intent", "template": "kasta {number} d {faces}", "slots": ["number", "faces"], "entity_values": {"number": [], "faces": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-randomness", "intent": "roll_multiple_dice.intent", "template": "kasta {number} tärningar med {faces} sidor", "slots": ["number", "faces"], "entity_values": {"number": [], "faces": []}}
@@ -568,12 +587,42 @@
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Är det varmt ute nu [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Blir det riktigt varmt idag [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Behöver jag solkräm idag [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Blir det varmt i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Blir det varmt idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Blir det varmt imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Är det varmt i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Är det varmt idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Är det varmt imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Väntas det varmt i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Väntas det varmt idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Väntas det varmt imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Blir det kallt i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Blir det kallt idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Blir det kallt imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Är det kallt i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Är det kallt idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Är det kallt imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Väntas det kallt i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Väntas det kallt idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Väntas det kallt imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Blåser det mycket just nu [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Hur hård är vinden [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Kommer det att blåsa idag [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Blir det blåsigt i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Blir det blåsigt idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Blir det blåsigt imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Hur mycket vind väntas i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Hur mycket vind väntas idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Hur mycket vind väntas imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "När kommer det att regna igen [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "När börjar det regna [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Hur länge till innan det regnar [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Hur lång tid tills regnet börjar i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Hur lång tid tills regnet börjar idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Hur lång tid tills regnet börjar imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Berätta när det regnar i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Berätta när det regnar idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Berätta när det regnar imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det molnigt i {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det molnigt idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det molnigt imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
@@ -589,6 +638,135 @@
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "kommer det moln i {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "kommer det moln idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "kommer det moln imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "regnar det i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "regnar det idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "regnar det imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "kommer det att regna i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "kommer det att regna idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "kommer det att regna imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det regn i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det regn idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det regn imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "finns det regn i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "finns det regn idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "finns det regn imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas det regn i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas det regn idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas det regn imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "behöver jag paraply i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "behöver jag paraply idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "behöver jag paraply imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det regnigt i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det regnigt idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det regnigt imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas skurar i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas skurar idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas skurar imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "snöar det i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "snöar det idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "snöar det imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "kommer det att snöa i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "kommer det att snöa idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "kommer det att snöa imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det snö i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det snö idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det snö imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "finns det snö i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "finns det snö idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "finns det snö imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas snöfall i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas snöfall idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas snöfall imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det snöigt i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det snöigt idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det snöigt imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det halka i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det halka idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det halka imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "kommer det snöbyar i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "kommer det snöbyar idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "kommer det snöbyar imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det soligt i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det soligt idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det soligt imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det soligt i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det soligt idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det soligt imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det klart i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det klart idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det klart imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det klart i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det klart idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det klart imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "finns det sol i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "finns det sol idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "finns det sol imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det molnfritt i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det molnfritt idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det molnfritt imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas sol i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas sol idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas sol imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det blå himmel i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det blå himmel idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det blå himmel imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas moln i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas moln idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas moln imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det mycket molnigt i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det mycket molnigt idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det mycket molnigt imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det många moln i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det många moln idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det många moln imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det dimma i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det dimma idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det dimma imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det dimma i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det dimma idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det dimma imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas dimma i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas dimma idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas dimma imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det dimmigt i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det dimmigt idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det dimmigt imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det dimmigt i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det dimmigt idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det dimmigt imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "finns det dis i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "finns det dis idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "finns det dis imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det disigt i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det disigt idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det disigt imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "kommer det dimma i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "kommer det dimma idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "kommer det dimma imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det åska i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det åska idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det åska imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det åska i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det åska idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det åska imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas åskväder i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas åskväder idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "väntas åskväder imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "finns det åskväder i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "finns det åskväder idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "finns det åskväder imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "kommer det åska i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "kommer det åska idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "kommer det åska imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det stormigt i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det stormigt idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "är det stormigt imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det storm i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det storm idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "blir det storm imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "finns det vädervarning i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "finns det vädervarning idag i {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "finns det vädervarning imorgon i {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-wikihow", "intent": "howto.intent", "template": "(förklara|) steg för steg {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-wikihow", "intent": "howto.intent", "template": "(hur kan|gör|skulle) jag {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-wikihow", "intent": "howto.intent", "template": "(hur|visa mig hur|berätta hur) jag {query}", "slots": ["query"], "entity_values": {"query": []}}

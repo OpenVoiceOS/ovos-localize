@@ -1894,6 +1894,24 @@
 {"lang": "gl-ES", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "repite o que vou dicir {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "repite {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "repite {sentence} despois de min", "slots": ["sentence"], "entity_values": {"sentence": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "(dime [todo]|que sabes) sobre o pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "(describe|quen é|que é) o pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "[dáme] (info|información) sobre o pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "entrada da pokedex para {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "pokedex [entrada] {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonMoves.intent", "template": "[cales] movementos ten {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonMoves.intent", "template": "movementos de {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonMoves.intent", "template": "(moveset|ataques) (de|para) {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonMoves.intent", "template": "que (movementos|ataques) (ten|coñece|sabe) {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "que tipo é o pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "que tipos ten o pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "tipo[s] do pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "o pokemon {pokemon} é de que tipo", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "quen (gaña|gañaría) [entre] {pokemon_a} (e|ou|contra) {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "quen é máis forte {pokemon_a} (ou|contra) {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "(combate|compara) [entre] {pokemon_a} (e|contra) {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "{pokemon_a} contra {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-randomness", "intent": "pick_a_number.intent", "template": "(escolle|selecciona|elixe) un número entre {lower} e {upper}", "slots": ["lower", "upper"], "entity_values": {"lower": [], "upper": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-randomness", "intent": "roll_multiple_dice.intent", "template": "lanza {number} (dados|dado)", "slots": ["number"], "entity_values": {"number": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-randomness", "intent": "roll_multiple_dice.intent", "template": "lanza {number} (dados|dado) de {faces} caras", "slots": ["number", "faces"], "entity_values": {"number": [], "faces": []}}

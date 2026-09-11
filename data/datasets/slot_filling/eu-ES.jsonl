@@ -1217,6 +1217,21 @@
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "esan nire ondoren {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "esan {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "esan {sentence} nire ondoren", "slots": ["sentence"], "entity_values": {"sentence": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "esan [dena] {pokemon} pokemonari buruz", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "zer da {pokemon} pokemona", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "eman informazioa {pokemon} pokemonari buruz", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "pokedex sarrera {pokemon}rentzat", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonInfo.intent", "template": "pokemon {pokemon}", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonMoves.intent", "template": "zein erasoak ditu {pokemon}k", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonMoves.intent", "template": "{pokemon}ren erasoak", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonMoves.intent", "template": "zer erasoak dakizki {pokemon}k", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "zein motakoa da {pokemon} pokemona", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "{pokemon} pokemonaren mota[k] zein da", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-pokepedia", "intent": "GetPokemonType.intent", "template": "{pokemon} pokemona zein motakoa da", "slots": ["pokemon"], "entity_values": {"pokemon": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "nork (irabazten du|irabaziko luke) {pokemon_a} (eta|ala|kontra) {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "zein da indartsuagoa {pokemon_a} (ala|kontra) {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "{pokemon_a} (kontra) {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-pokepedia", "intent": "battle.intent", "template": "konparatu {pokemon_a} eta {pokemon_b}", "slots": ["pokemon_a", "pokemon_b"], "entity_values": {"pokemon_a": [], "pokemon_b": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-randomness", "intent": "pick_a_number.intent", "template": "(hautatu|aukeratu) {lower} eta {upper} arteko zenbaki bat", "slots": ["lower", "upper"], "entity_values": {"lower": [], "upper": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-randomness", "intent": "roll_multiple_dice.intent", "template": "bota {faces} aldeko {number} dado", "slots": ["faces", "number"], "entity_values": {"faces": [], "number": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-randomness", "intent": "roll_multiple_dice.intent", "template": "bota {number} d {faces}", "slots": ["number", "faces"], "entity_values": {"number": [], "faces": []}}
@@ -1254,17 +1269,191 @@
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Beroa dago kanpoan orain [{location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Bero handia egingo du gaur [{location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Eguzkitako krema behar dut gaur [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Bero egingo du {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Bero egingo du gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Bero egingo du bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Bero dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Bero dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Bero dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Bero espero da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Bero espero da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Bero espero da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Hotz egingo du {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Hotz egingo du gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Hotz egingo du bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Hotz dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Hotz dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Hotz dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Hotz espero da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Hotz espero da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Hotz espero da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Haizea dago orain [{location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Zenbaterainokoa da haizearen indarra [{location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Haizea egingo du gaur [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Haizea izango da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Haizea izango da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Haizea izango da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Zenbat haize espero da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Zenbat haize espero da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Zenbat haize espero da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Noiz egingo du euria berriro [{location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Noiz hasiko da euria egiten [{location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Zenbat denbora falta da euria egin arte [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Zenbat denbora falta da euria hasteko {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Zenbat denbora falta da euria hasteko gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Zenbat denbora falta da euria hasteko bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Esan noiz egingo duen euria {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Esan noiz egingo duen euria gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Esan noiz egingo duen euria bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "(dago|egongo da) (eguzkitsu|hodeitsu|lainotsu) [gaur] [{location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "Euria ari du [orain] [{location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "Elurra egingo du (gaur|bihar) [{location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "Ekaitza dago [{location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "Nolakoa dago zerua gaur [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "euria ari du {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "euria ari du gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "euria ari du bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "euria egingo du {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "euria egingo du gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "euria egingo du bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "euria espero da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "euria espero da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "euria espero da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "zaparradak espero dira {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "zaparradak espero dira gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "zaparradak espero dira bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "aterkia behar dut {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "aterkia behar dut gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "aterkia behar dut bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "euritsu dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "euritsu dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "euritsu dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "euria izango da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "euria izango da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "euria izango da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "prezipitazioa espero da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "prezipitazioa espero da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "prezipitazioa espero da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elurra ari du {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elurra ari du gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elurra ari du bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elurra egingo du {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elurra egingo du gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elurra egingo du bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elurra espero da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elurra espero da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elurra espero da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elur-zaparrada espero da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elur-zaparrada espero da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elur-zaparrada espero da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elurtsu dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elurtsu dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elurtsu dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elurra izango da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elurra izango da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elurra izango da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "izotza egongo da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "izotza egongo da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "izotza egongo da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elurra erortzen ari da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elurra erortzen ari da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "elurra erortzen ari da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "eguzkia dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "eguzkia dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "eguzkia dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "eguzkitsu dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "eguzkitsu dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "eguzkitsu dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "zeru garbia dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "zeru garbia dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "zeru garbia dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "garbi dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "garbi dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "garbi dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "eguzkia egongo da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "eguzkia egongo da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "eguzkia egongo da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "eguzkitsu egongo da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "eguzkitsu egongo da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "eguzkitsu egongo da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "zeru urdina dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "zeru urdina dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "zeru urdina dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodeirik gabe dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodeirik gabe dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodeirik gabe dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodeitsu dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodeitsu dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodeitsu dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodeiak daude {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodeiak daude gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodeiak daude bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodeitsu egongo da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodeitsu egongo da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodeitsu egongo da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodeiak egongo dira {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodeiak egongo dira gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodeiak egongo dira bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "lainotuta dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "lainotuta dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "lainotuta dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodei asko daude {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodei asko daude gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodei asko daude bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodeia dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodeia dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "hodeia dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "grisa dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "grisa dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "grisa dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "lainoa dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "lainoa dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "lainoa dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "lainotsu dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "lainotsu dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "lainotsu dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "lainoa espero da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "lainoa espero da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "lainoa espero da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "behelainoa dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "behelainoa dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "behelainoa dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "gandua dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "gandua dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "gandua dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "lanbroa dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "lanbroa dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "lanbroa dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "lainoa egongo da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "lainoa egongo da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "lainoa egongo da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "behelainoa espero da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "behelainoa espero da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "behelainoa espero da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "ekaitza dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "ekaitza dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "ekaitza dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "ekaitza egongo da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "ekaitza egongo da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "ekaitza egongo da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "ekaitza espero da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "ekaitza espero da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "ekaitza espero da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "trumoi-ekaitza espero da {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "trumoi-ekaitza espero da gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "trumoi-ekaitza espero da bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "trumoia dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "trumoia dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "trumoia dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "tximistak egongo dira {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "tximistak egongo dira gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "tximistak egongo dira bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "eguraldi txarra dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "eguraldi txarra dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "eguraldi txarra dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "ekaitz abisua dago {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "ekaitz abisua dago gaur {location}", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "ekaitz abisua dago bihar {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-wikihow", "intent": "howto.intent", "template": "(azaldu|) urratsez urrats {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-wikihow", "intent": "howto.intent", "template": "nola egin dezaket {query}?", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "eu-ES", "skill": "ovos-skill-wikihow", "intent": "howto.intent", "template": "nola egin {query}", "slots": ["query"], "entity_values": {"query": []}}
