@@ -2420,7 +2420,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
       // Compute file path for new files — guess from locale convention
       let newFilePath = filePath;
       if (!filePath && srcData?.file_path) {
-        newFilePath = srcData.file_path.replace(new RegExp(`/${srcLang.toLowerCase()}/|/${srcLang}/`, 'i'), `/${lang}/`);
+        newFilePath = srcData.file_path.replace(new RegExp(`/${srcLang.toLowerCase()}/|/${srcLang}/`, 'i'), `/${lang.toLowerCase()}/`);
       }
       if (!newFilePath && isCreateMode) {
         // For brand-new files, guess path from other files in this skill

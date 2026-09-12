@@ -79,7 +79,7 @@ the App is not installed, GitHub returns 404 and no pull request can be
 opened. A repository outside an app-installed org would collect translations
 that strand in issues, which is worse than refusing it.
 
-Orgs where the App is currently installed: **OpenVoiceOS**, **TigreGotico**,
+Orgs where the App is installed: **OpenVoiceOS**, **TigreGotico**,
 **JarbasHiveMind**, **OscillateLabsLLC**. See the top of `skills.txt` for the
 full list.
 

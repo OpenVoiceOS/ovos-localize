@@ -80,7 +80,7 @@ submissions cannot be delivered.
 
 Once the App is installed, open a [new issue](https://github.com/OpenVoiceOS/ovos-localize/issues/new?template=add_skill.yml)
 with the skill's repo URL, or ask a maintainer to add it to `skills.txt` directly.
-Orgs where the App is currently installed are listed at the top of `skills.txt`.
+Orgs where the App is installed are listed at the top of `skills.txt`.
 
 ## Documentation
 
