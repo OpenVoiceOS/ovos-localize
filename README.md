@@ -70,6 +70,18 @@ jobs:
     uses: OpenVoiceOS/gh-automations/.github/workflows/validate-translations.yml@dev
 ```
 
+## Community skills
+
+To have a community skill tracked by OVOS Localize, the
+**[ovos-localize GitHub App](https://github.com/apps/ovos-localize)** must be
+installed on the skill's GitHub organization. The App requests an installation
+token to open pull requests. Where the App is not installed, translation
+submissions cannot be delivered.
+
+Once the App is installed, open a [new issue](https://github.com/OpenVoiceOS/ovos-localize/issues/new?template=add_skill.yml)
+with the skill's repo URL, or ask a maintainer to add it to `skills.txt` directly.
+Orgs where the App is installed are listed at the top of `skills.txt`.
+
 ## Documentation
 
 - [docs/index.md](docs/index.md) — Architecture and module reference
