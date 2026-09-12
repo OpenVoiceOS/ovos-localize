@@ -3,18 +3,81 @@ name: Submit Translation PR
 on:
   issues:
     types: [opened]
+  workflow_dispatch:
+    inputs:
+      issues:
+        description: 'Comma-separated issue numbers to re-run; leave empty to reprocess every open translation issue.'
+        required: false
+        type: string
 
 jobs:
-  create-pr:
-    if: contains(github.event.issue.labels.*.name, 'translation') || startsWith(github.event.issue.title, '[translate]')
+  discover:
     runs-on: ubuntu-latest
+    permissions:
+      issues: read
+    outputs:
+      matrix: ${{ steps.select.outputs.matrix }}
+    steps:
+      - name: Select issues to process
+        id: select
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const isTranslation = (it) =>
+              (it.labels || []).some((l) => l.name === 'translation') ||
+              (it.title || '').startsWith('[translate]');
+            let numbers = [];
+            if (context.payload.issue) {
+              if (isTranslation(context.payload.issue)) numbers = [context.payload.issue.number];
+            } else {
+              const raw = (context.payload.inputs && context.payload.inputs.issues || '').trim();
+              if (raw) {
+                numbers = [...new Set(
+                  raw.split(',').map((s) => parseInt(s.trim(), 10)).filter((n) => Number.isInteger(n) && n > 0)
+                )];
+                const open = await github.paginate(github.rest.issues.listForRepo, {
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  state: 'open',
+                  per_page: 100
+                });
+                numbers = numbers
+                  .map((n) => open.find((it) => it.number === n))
+                  .filter((it) => it && !it.pull_request && isTranslation(it))
+                  .map((it) => it.number);
+              } else {
+                const open = await github.paginate(github.rest.issues.listForRepo, {
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  state: 'open',
+                  per_page: 100
+                });
+                numbers = open.filter((it) => !it.pull_request && isTranslation(it)).map((it) => it.number);
+              }
+            }
+            core.setOutput('matrix', JSON.stringify(numbers));
+
+  create-pr:
+    needs: discover
+    if: ${{ needs.discover.outputs.matrix != '[]' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        issue: ${{ fromJSON(needs.discover.outputs.matrix) }}
     steps:
       - name: Parse issue body
         id: parse
         uses: actions/github-script@v9
         with:
           script: |
-            const body = context.payload.issue.body || '';
+            const { data: issue } = await github.rest.issues.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: ${{ matrix.issue }}
+            });
+            const body = issue.body || '';
             const meta = {};
             // Parse <!-- TRANSLATION_META ... --> block
             const match = body.match(/<!--\s*TRANSLATION_META\s+([\s\S]*?)-->/);
@@ -90,7 +153,7 @@ jobs:
               core.setOutput(k, v);
             }
             core.setOutput('content_b64', contentMatch[1].trim());
-            core.setOutput('author', context.payload.issue.user.login);
+            core.setOutput('author', issue.user.login);
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -193,7 +256,7 @@ jobs:
           FILE_KEY: ${{ steps.parse.outputs.file_key }}
           FILE_PATH: ${{ steps.parse.outputs.file_path }}
           AUTHOR: ${{ steps.parse.outputs.author }}
-          ISSUE: ${{ github.event.issue.number }}
+          ISSUE: ${{ matrix.issue }}
         run: |
           PR_URL=$(gh pr create \
             --repo "$ORG/$REPO" \
@@ -218,16 +281,17 @@ jobs:
         with:
           script: |
             const prUrl = '${{ steps.pr.outputs.pr_url }}';
+            const issueNumber = ${{ matrix.issue }};
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: context.issue.number,
+              issue_number: issueNumber,
               body: `✅ **Translation PR created!**\n\n${prUrl}\n\nThe skill maintainer will review and merge it. Thank you for contributing!`
             });
             await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: context.issue.number,
+              issue_number: issueNumber,
               state: 'closed',
               state_reason: 'completed'
             });
@@ -240,6 +304,7 @@ jobs:
         with:
           script: |
             const run = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const issueNumber = ${{ matrix.issue }};
             const validationOutput = process.env.VALIDATION_OUTPUT || '';
             const validationSection = validationOutput
               ? `**Your translation did not pass validation:**\n\n\`\`\`\n${validationOutput}\n\`\`\`\n\nPlease fix the flagged line(s) and open a new submission.\n\n`
@@ -247,7 +312,7 @@ jobs:
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: context.issue.number,
+              issue_number: issueNumber,
               body: `⚠️ **This translation could not be turned into a pull request.**\n\n` +
                     validationSection +
                     `Your translation is safe -- it is stored in this issue and nothing is lost. ` +
