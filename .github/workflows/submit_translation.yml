@@ -13,6 +13,8 @@ on:
 jobs:
   discover:
     runs-on: ubuntu-latest
+    permissions:
+      issues: read
     outputs:
       matrix: ${{ steps.select.outputs.matrix }}
     steps:
@@ -30,7 +32,19 @@ jobs:
             } else {
               const raw = (context.payload.inputs && context.payload.inputs.issues || '').trim();
               if (raw) {
-                numbers = raw.split(',').map((s) => parseInt(s.trim(), 10)).filter((n) => Number.isInteger(n) && n > 0);
+                numbers = [...new Set(
+                  raw.split(',').map((s) => parseInt(s.trim(), 10)).filter((n) => Number.isInteger(n) && n > 0)
+                )];
+                const open = await github.paginate(github.rest.issues.listForRepo, {
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  state: 'open',
+                  per_page: 100
+                });
+                numbers = numbers
+                  .map((n) => open.find((it) => it.number === n))
+                  .filter((it) => it && !it.pull_request && isTranslation(it))
+                  .map((it) => it.number);
               } else {
                 const open = await github.paginate(github.rest.issues.listForRepo, {
                   owner: context.repo.owner,
@@ -38,13 +52,14 @@ jobs:
                   state: 'open',
                   per_page: 100
                 });
-                numbers = open.filter(isTranslation).map((it) => it.number);
+                numbers = open.filter((it) => !it.pull_request && isTranslation(it)).map((it) => it.number);
               }
             }
             core.setOutput('matrix', JSON.stringify(numbers));
 
   create-pr:
     needs: discover
+    if: ${{ needs.discover.outputs.matrix != '[]' }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
