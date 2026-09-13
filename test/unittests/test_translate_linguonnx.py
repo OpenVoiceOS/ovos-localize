@@ -10,6 +10,7 @@ from translate_linguonnx import (  # noqa: E402
     unmask_placeholders,
     translate_line,
     translate_lines,
+    translate_templated,
     target_path,
     translate_tree,
 )
@@ -216,3 +217,48 @@ def test_translate_tree_skips_a_file_with_no_surviving_line(tmp_path):
     written = translate_tree(DropsEveryMask(), src, out, "gl-ES", "en", "gl")
     assert written == []
     assert not (out / "gl-ES" / "spell.word.dialog").exists()
+
+
+def test_translate_templated_splits_alternatives_and_optional_words():
+    def translate_fn(text, s, t):
+        return text.upper()
+
+    masked = "the (movie|film|flick) is playing [tonight]"
+    out = translate_templated(translate_fn, masked, "en", "pt")
+    assert out == "THE (MOVIE|FILM|FLICK) IS PLAYING [TONIGHT]"
+
+
+def test_translate_templated_leaves_a_mask_token_in_the_literal_run():
+    """A ``[0]`` mask token is a bracket of digits, never a template group."""
+
+    def translate_fn(text, s, t):
+        return text  # identity; a group match would rewrite it
+
+    masked = "info about [0] the (movie|film)"
+    out = translate_templated(translate_fn, masked, "en", "pt")
+    assert "[0]" in out
+    assert "(movie|film)" in out
+
+
+def test_translate_line_keeps_each_alternative_distinct_on_a_real_intent_line():
+    """Regression for moviemaster#86 ``(irudiak|irudiak)`` and wallpapers#95
+    ``filme-filme-filme``: a model that collapses distinct alternatives
+    glued together with '|' into copies of one of them must not get the
+    chance to, because each alternative now translates alone."""
+
+    class DuplicatingTranslator:
+        def translate(self, text, s, t):
+            if "|" in text:
+                first = text.split("|")[0]
+                return "|".join([first] * (text.count("|") + 1))
+            return text.upper()
+
+    tx = DuplicatingTranslator()
+
+    def translate_fn(text, s, t):
+        return tx.translate(text, s, t)
+
+    # a real en-US line from ovos-skill-moviemaster's movie.intent
+    line = "tell me about the (movie|film|flick) {movie}"
+    out = translate_line(translate_fn, line, "en", "pt")
+    assert out == "TELL ME ABOUT THE (MOVIE|FILM|FLICK) {movie}"

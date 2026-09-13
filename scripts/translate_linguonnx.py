@@ -13,6 +13,13 @@ after, so a slot name never reaches the model. A line whose mask does not
 come back intact -- some models still mangle a masked slot on a short,
 multi-slot sentence -- is dropped rather than shipped wrong.
 
+A ``(a|b|c)`` alternative group or a ``[optional]`` word is never sent to
+the model as part of running text either: each alternative and each
+optional body is translated on its own and the template punctuation is
+restored around the results, because a small model sent the whole group
+whole has been seen collapsing distinct alternatives into copies of one of
+them, or fusing the group into a single run-together word.
+
 The route linguonnx picks (which model, or chain of models) is logged once
 per locale. A locale with no route between the source and target language is
 reported and skipped -- never silently dropped, and never charged files that
@@ -35,6 +42,15 @@ LOG = logging.getLogger("translate_linguonnx")
 # token, which BPE tokenizers on those models tend to split and mangle.
 PLACEHOLDER_RE = re.compile(r"\{[^{}]+\}")
 MASK_RE = re.compile(r"\[(\d+)\]")
+
+# An OVOS resource template puts ``(a|b|c)`` alternatives and ``[optional]``
+# words next to plain prose. Sent whole, a small MT model has never seen a
+# literal ``|`` or a bare bracketed word in training data and mangles the
+# syntax -- duplicating one alternative into every slot, or fusing the
+# bracket into running text. A mask token is a bracket of digits only and is
+# excluded here so it stays part of the surrounding literal run, which is
+# where the round-trip check above expects to find it.
+TEMPLATE_RE = re.compile(r"\(([^()]+)\)|\[(?!\d+\])([^\[\]]+)\]")
 
 SUFFIXES = (".intent", ".dialog", ".voc", ".entity")
 
@@ -68,6 +84,37 @@ def unmask_placeholders(text, placeholders):
     return MASK_RE.sub(repl, text)
 
 
+def translate_templated(translate_fn, masked_line, src, tgt):
+    """Translate a masked line, keeping ``(a|b|c)`` and ``[optional]`` intact.
+
+    Each literal run between templates, each alternative inside a ``(|)``
+    group, and each ``[optional]`` body is translated on its own and the
+    template punctuation is put back around the results verbatim. This is
+    what keeps a model from ever seeing the literal ``|`` or ``[``/``]``
+    characters mixed into prose, which is what produced shipped defects like
+    ``(irudiak|irudiak)`` (an alternative collapsed into a duplicate) and
+    ``filme-filme-filme`` (a whole alternative group fused into one word).
+    """
+    out = []
+    pos = 0
+    for m in TEMPLATE_RE.finditer(masked_line):
+        alts, optional = m.group(1), m.group(2)
+        literal = masked_line[pos:m.start()]
+        if literal:
+            out.append(translate_fn(literal, src, tgt))
+        if alts is not None:
+            translated_alts = [translate_fn(a, src, tgt) if a.strip() else a
+                                for a in alts.split("|")]
+            out.append("(" + "|".join(translated_alts) + ")")
+        else:
+            out.append("[" + (translate_fn(optional, src, tgt) if optional.strip() else optional) + "]")
+        pos = m.end()
+    tail = masked_line[pos:]
+    if tail:
+        out.append(translate_fn(tail, src, tgt))
+    return "".join(out)
+
+
 def translate_line(translate_fn, line, src, tgt):
     """Translate one line, masking and restoring its placeholders.
 
@@ -80,7 +127,7 @@ def translate_line(translate_fn, line, src, tgt):
     if not line.strip():
         return line
     masked, placeholders = mask_placeholders(line)
-    translated = translate_fn(masked, src, tgt)
+    translated = translate_templated(translate_fn, masked, src, tgt)
     survived = sorted(set(int(i) for i in MASK_RE.findall(translated)))
     if survived != list(range(len(placeholders))):
         return None
