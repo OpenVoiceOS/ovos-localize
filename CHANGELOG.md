@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.0a18](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a18) (2026-09-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a17...0.1.0a18)
+
+**Merged pull requests:**
+
+- feat\(scripts\): slot-preserving MT helper on linguonnx for locale-parity units [\#518](https://github.com/OpenVoiceOS/ovos-localize/pull/518) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+- feat\(submit\): add workflow\_dispatch recovery for stuck translation issues [\#508](https://github.com/OpenVoiceOS/ovos-localize/pull/508) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.0a17](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a17) (2026-09-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a16...0.1.0a17)
@@ -167,7 +176,6 @@
 - feat\(i18n\): enable pt-AO \(Angolan Portuguese\) [\#25](https://github.com/OpenVoiceOS/ovos-localize/pull/25) ([github-actions[bot]](https://github.com/apps/github-actions))
 - feat\(i18n\): enable an \(Aragonese\) [\#20](https://github.com/OpenVoiceOS/ovos-localize/pull/20) ([github-actions[bot]](https://github.com/apps/github-actions))
 - feat\(i18n\): enable ast \(Asturian\) [\#19](https://github.com/OpenVoiceOS/ovos-localize/pull/19) ([github-actions[bot]](https://github.com/apps/github-actions))
-- feat\(i18n\): enable mwl \(Mirandese\) [\#16](https://github.com/OpenVoiceOS/ovos-localize/pull/16) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 
 
