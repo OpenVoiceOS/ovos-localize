@@ -1,0 +1,183 @@
+#!/usr/bin/env python3
+"""Slot-preserving machine translation over linguonnx.
+
+Translates one en-US resource directory (``.intent``/``.dialog``/``.voc``/
+``.entity`` files) into a target locale, line by line, and writes the result
+under that locale's directory next to the source.
+
+linguonnx alone is not safe for these files: ``{city}`` is dropped outright
+translating en->pt, and ``{time}`` becomes ``{Zeit}`` translating en->de,
+because the model treats the brace-delimited slot name as ordinary text.
+Every ``{slot}`` is masked with a token before translation and restored
+after, so a slot name never reaches the model. A line whose mask does not
+come back intact -- some models still mangle a masked slot on a short,
+multi-slot sentence -- is dropped rather than shipped wrong.
+
+The route linguonnx picks (which model, or chain of models) is logged once
+per locale. A locale with no route between the source and target language is
+reported and skipped -- never silently dropped, and never charged files that
+were never produced.
+
+    translate_linguonnx.py <en-US dir> <out dir> <lang>
+    translate_linguonnx.py <en-US dir> <out dir> <lang> --src-lang en
+"""
+import argparse
+import logging
+import re
+import sys
+from pathlib import Path
+
+LOG = logging.getLogger("translate_linguonnx")
+
+# A slot name is never translated: it is masked out before the model sees it
+# and put back verbatim afterwards, by position. A bracketed digit survives
+# tiny int8 Marian/OpenNMT models far more reliably than a longer alnum
+# token, which BPE tokenizers on those models tend to split and mangle.
+PLACEHOLDER_RE = re.compile(r"\{[^{}]+\}")
+MASK_RE = re.compile(r"\[(\d+)\]")
+
+SUFFIXES = (".intent", ".dialog", ".voc", ".entity")
+
+
+def mask_placeholders(line):
+    """Replace every ``{slot}`` with an order-numbered mask token.
+
+    Returns the masked line and the list of placeholders in the order they
+    were found, so :func:`unmask_placeholders` can put them back by index.
+    """
+    placeholders = []
+
+    def repl(m):
+        placeholders.append(m.group(0))
+        return f"[{len(placeholders) - 1}]"
+
+    return PLACEHOLDER_RE.sub(repl, line), placeholders
+
+
+def unmask_placeholders(text, placeholders):
+    """Restore mask tokens to the placeholder they stood in for.
+
+    A mask token the model dropped or mangled beyond ``QQQ<n>QQQ``
+    recognition is not restorable and is left as whatever survived; that
+    failure belongs to slot-survival testing, not to this function.
+    """
+    def repl(m):
+        idx = int(m.group(1))
+        return placeholders[idx] if idx < len(placeholders) else m.group(0)
+
+    return MASK_RE.sub(repl, text)
+
+
+def translate_line(translate_fn, line, src, tgt):
+    """Translate one line, masking and restoring its placeholders.
+
+    A blank line is passed through unchanged rather than sent to the model,
+    which would otherwise translate empty input into filler text. Returns
+    ``None`` when a mask did not come back intact -- some models drop or
+    mangle a masked slot on a short, multi-slot sentence, and a line like
+    that is dropped rather than shipped with a wrong or missing slot.
+    """
+    if not line.strip():
+        return line
+    masked, placeholders = mask_placeholders(line)
+    translated = translate_fn(masked, src, tgt)
+    survived = sorted(set(int(i) for i in MASK_RE.findall(translated)))
+    if survived != list(range(len(placeholders))):
+        return None
+    return unmask_placeholders(translated, placeholders)
+
+
+def translate_lines(translate_fn, lines, src, tgt):
+    """Translate every line, dropping any whose mask did not survive.
+
+    The output may be shorter than the input; a caller that needs to know
+    how many lines were dropped should compare lengths itself.
+    """
+    out = []
+    for line in lines:
+        translated = translate_line(translate_fn, line, src, tgt)
+        if translated is not None:
+            out.append(translated)
+    return out
+
+
+def iter_source_files(src_dir):
+    for path in sorted(Path(src_dir).rglob("*")):
+        if path.is_file() and path.suffix in SUFFIXES:
+            yield path
+
+
+def target_path(src_dir, out_dir, path, tgt_lang_dir):
+    """Map a file under the source locale directory to its target-locale counterpart.
+
+    ``src_dir`` names the source language directory itself (e.g.
+    ``.../locale/en-US``), so the resource tree below it mirrors as-is under
+    ``out_dir/tgt_lang_dir``.
+    """
+    rel = path.relative_to(src_dir)
+    return Path(out_dir) / tgt_lang_dir / rel
+
+
+def translate_tree(tx, src_dir, out_dir, tgt_lang_dir, src_lang, tgt_lang):
+    """Translate every resource file under ``src_dir`` into ``out_dir``.
+
+    Returns the list of files written, or ``None`` when linguonnx has no
+    route between ``src_lang`` and ``tgt_lang`` -- the caller is expected to
+    report that and move on rather than treat it as a crash.
+    """
+    try:
+        route = tx.route(src_lang, tgt_lang)
+    except Exception as exc:  # linguonnx.translate.graph.NoRouteError
+        LOG.warning("no route %s -> %s: %s; skipping %s", src_lang, tgt_lang, exc, tgt_lang_dir)
+        return None
+
+    LOG.info("route %s -> %s: %s", src_lang, tgt_lang,
+              " | ".join(f"{h.model_id}:{h.src}->{h.tgt}" for h in route.hops))
+
+    def translate_fn(text, s, t):
+        return tx.translate(text, src=s, tgt=t)
+
+    written = []
+    for path in iter_source_files(src_dir):
+        lines = path.read_text(encoding="utf-8").splitlines()
+        out_lines = translate_lines(translate_fn, lines, src_lang, tgt_lang)
+        if not out_lines:
+            LOG.warning("no line of %s survived translation; skipping", path)
+            continue
+        if len(out_lines) < len(lines):
+            LOG.warning("%s: %d of %d lines dropped (mask did not survive)",
+                        path, len(lines) - len(out_lines), len(lines))
+        dest = target_path(src_dir, out_dir, path, tgt_lang_dir)
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text("\n".join(out_lines) + "\n", encoding="utf-8")
+        written.append(dest)
+        LOG.info("wrote %s (%d lines)", dest, len(out_lines))
+    return written
+
+
+def main(argv=None):
+    p = argparse.ArgumentParser(description=__doc__,
+                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument("src_dir", help="source locale directory, e.g. .../locale/en-US")
+    p.add_argument("out_dir", help="the tree the target locale directory is written under")
+    p.add_argument("lang", help="target locale tag, e.g. pt-PT")
+    p.add_argument("--src-lang", default="en",
+                   help="the source language code linguonnx should route from (default: en)")
+    p.add_argument("--prefer", default="dedicated",
+                   help="linguonnx routing preference, e.g. dedicated or fewest_hops (default: dedicated)")
+    args = p.parse_args(argv)
+
+    logging.basicConfig(level=logging.INFO, format="%(message)s")
+
+    from linguonnx import load_translator
+    tgt_lang = args.lang.split("-")[0].lower()
+    tx = load_translator(prefer=args.prefer)
+    written = translate_tree(tx, args.src_dir, args.out_dir, args.lang, args.src_lang, tgt_lang)
+    if written is None:
+        print(f"NO ROUTE: {args.src_lang} -> {tgt_lang}; {args.lang} skipped")
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
