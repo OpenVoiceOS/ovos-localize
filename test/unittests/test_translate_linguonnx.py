@@ -8,8 +8,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 from translate_linguonnx import (  # noqa: E402
     mask_placeholders,
     unmask_placeholders,
+    degenerate_reason,
     translate_line,
     translate_lines,
+    translate_templated,
+    _translate_literal,
     target_path,
     translate_tree,
 )
@@ -216,3 +219,241 @@ def test_translate_tree_skips_a_file_with_no_surviving_line(tmp_path):
     written = translate_tree(DropsEveryMask(), src, out, "gl-ES", "en", "gl")
     assert written == []
     assert not (out / "gl-ES" / "spell.word.dialog").exists()
+
+
+def test_translate_templated_splits_alternatives_and_optional_words():
+    def translate_fn(text, s, t):
+        return text.upper()
+
+    masked = "the (movie|film|flick) is playing [tonight]"
+    out = translate_templated(translate_fn, masked, "en", "pt")
+    assert out == "THE (MOVIE|FILM|FLICK) IS PLAYING [TONIGHT]"
+
+
+def test_translate_templated_leaves_a_mask_token_in_the_literal_run():
+    """A ``[0]`` mask token is a bracket of digits, never a template group."""
+
+    def translate_fn(text, s, t):
+        return text  # identity; a group match would rewrite it
+
+    masked = "info about [0] the (movie|film)"
+    out = translate_templated(translate_fn, masked, "en", "pt")
+    assert "[0]" in out
+    assert "(movie|film)" in out
+
+
+def test_translate_line_keeps_each_alternative_distinct_on_a_real_intent_line():
+    """Regression for moviemaster#86 ``(irudiak|irudiak)`` and wallpapers#95
+    ``filme-filme-filme``: a model that collapses distinct alternatives
+    glued together with '|' into copies of one of them must not get the
+    chance to, because each alternative now translates alone."""
+
+    class DuplicatingTranslator:
+        def translate(self, text, s, t):
+            if "|" in text:
+                first = text.split("|")[0]
+                return "|".join([first] * (text.count("|") + 1))
+            return text.upper()
+
+    tx = DuplicatingTranslator()
+
+    def translate_fn(text, s, t):
+        return tx.translate(text, s, t)
+
+    # a real en-US line from ovos-skill-moviemaster's movie.intent
+    line = "tell me about the (movie|film|flick) {movie}"
+    out = translate_line(translate_fn, line, "en", "pt")
+    assert out == "TELL ME ABOUT THE (MOVIE|FILM|FLICK) {movie}"
+
+
+def test_degenerate_reason_none_for_a_clean_translation():
+    assert degenerate_reason("hello", "bonjour") is None
+
+
+def test_degenerate_reason_catches_a_comma_separated_repetition_loop():
+    """Regression for T-1665: pl-PL "hello"/"hello there"/"hey" all
+    degenerated into "Cześć, cześć, cześć..." on the int8 model."""
+    assert degenerate_reason("hello", "Cześć, cześć, cześć") == \
+        "token repeated 3+ times in a row"
+
+
+def test_degenerate_reason_catches_a_space_separated_repetition_loop():
+    """Regression for T-1665: fa-IR "hey there" -> "آه آه آه آه آه"."""
+    assert degenerate_reason("hey there", "آه آه آه آه آه") == \
+        "token repeated 3+ times in a row"
+
+
+def test_degenerate_reason_catches_a_single_stop_word():
+    """Regression for T-1664: fa-IR "yo" -> "من" (the pronoun I/me)."""
+    assert degenerate_reason("yo", "من") == "output is a single stop-word"
+
+
+def test_degenerate_reason_catches_output_identical_to_input():
+    assert degenerate_reason("hello", "hello") == "output identical to input"
+
+
+def test_degenerate_reason_ignores_a_shared_word_on_a_longer_line():
+    """Identical-output and single-stop-word only fire on a short bare-word
+    original; a longer line keeping one shared word (a name, a slot) is not
+    this defect."""
+    assert degenerate_reason("weather in {city}", "weather in {city}") is None
+
+
+def test_degenerate_reason_catches_an_oversized_output():
+    assert degenerate_reason("hello", "one two three four five six") == \
+        "output more than 3x longer than input"
+
+
+def test_translate_line_drops_a_repetition_loop():
+    def translate_fn(text, s, t):
+        return "cześć, cześć, cześć"
+
+    assert translate_line(translate_fn, "hello", "en", "pl") is None
+
+
+def test_translate_lines_reports_the_drop_reason(caplog):
+    def translate_fn(text, s, t):
+        return "cześć, cześć, cześć"
+
+    with caplog.at_level("WARNING"):
+        out = translate_lines(translate_fn, ["hello"], "en", "pl")
+    assert out == []
+    assert any("token repeated 3+ times" in r.message for r in caplog.records)
+
+
+def _stripping_translate_fn(text, s, t):
+    """Mimics the real model: strips edge whitespace and uppercases the
+    stripped core. translate_templated must never send un-stripped text or
+    the group boundary loses its separating space (T-1986 review)."""
+    return text.strip().upper()
+
+
+def test_translate_templated_keeps_a_space_at_a_group_boundary():
+    """Regression for the T-1986 review: joining pieces with "".join lost
+    the space around a group when the model stripped its own edges, giving
+    ``[A maioria]popular(filmes|...)`` instead of the correct spacing."""
+    masked = "tell me about the (movie|film|flick) [0]"
+    out = translate_templated(_stripping_translate_fn, masked, "en", "pt")
+    assert out == "TELL ME ABOUT THE (MOVIE|FILM|FLICK) [0]"
+
+
+def test_translate_templated_parses_a_nested_group():
+    """Regression for the T-1986 review: the old TEMPLATE_RE matched only
+    the innermost group, so the outer alternation's own '(' and '|' reached
+    the model as literal text on a real moviemaster line."""
+    out = translate_templated(_stripping_translate_fn, "(a|(b|c)) d", "en", "pt")
+    assert out == "(A|(B|C)) D"
+
+
+def test_translate_templated_splits_a_bracket_optional_alternation():
+    """Regression for the T-1986 review: '[a|b]' went to the model whole as
+    'a|b', the exact syntax-leak the '(|)' split was supposed to prevent."""
+    out = translate_templated(_stripping_translate_fn, "[a|b] thing", "en", "pt")
+    assert out == "[A|B] THING"
+
+
+def test_translate_templated_recurses_into_a_bracket_holding_a_group():
+    out = translate_templated(_stripping_translate_fn, "[(a|b)] thing", "en", "pt")
+    assert out == "[(A|B)] THING"
+
+
+def test_translate_templated_drops_a_line_with_a_lexical_duplicate():
+    """Regression for the T-1986 review: 'movie' and 'film' both translate
+    to pt 'filmes', so the split alone does not stop moviemaster#86's
+    collapsed alternation -- a real duplicate after translation must drop
+    the line."""
+
+    def translate_fn(text, s, t):
+        return {"movie": "filmes", "film": "filmes", "flick": "flicks"}.get(text, text)
+
+    out = translate_templated(translate_fn, "(movie|film|flick)", "en", "pt")
+    assert out is None
+
+
+def test_translate_templated_keeps_distinct_alternatives():
+    def translate_fn(text, s, t):
+        return {"movie": "filme", "flick": "flicks"}.get(text, text)
+
+    out = translate_templated(translate_fn, "(movie|flick)", "en", "pt")
+    assert out == "(filme|flicks)"
+
+
+def test_translate_line_drops_a_line_whose_group_collapses_to_a_duplicate():
+    def translate_fn(text, s, t):
+        return {"movie": "filmes", "film": "filmes", "flick": "flicks"}.get(text, text)
+
+    out = translate_line(translate_fn, "tell me about the (movie|film|flick) {movie}", "en", "pt")
+    assert out is None
+
+
+def test_translate_templated_drops_a_case_only_duplicate():
+    """Regression for the T-2015 review (finding A): the live es-ES route
+    wrote (películas|Películas|flicks) -- a case-only duplicate the plain
+    .strip() comparison missed."""
+
+    def translate_fn(text, s, t):
+        return {"movies": "películas", "films": "Películas", "flicks": "flicks"}.get(text, text)
+
+    out = translate_templated(translate_fn, "(movies|films|flicks)", "en", "es")
+    assert out is None
+
+
+def test_translate_templated_drops_a_punctuation_only_duplicate():
+    def translate_fn(text, s, t):
+        return {"movies": "filmes.", "films": "filmes", "flicks": "flicks"}.get(text, text)
+
+    out = translate_templated(translate_fn, "(movies|films|flicks)", "en", "pt")
+    assert out is None
+
+
+def test_translate_literal_strips_sentence_punctuation_the_source_never_had():
+    """Regression for the T-2015 review (finding B): a piece translated
+    alone out of sentence context picks up capitals and ¿¡.?! the fragment
+    never asked for -- (búsqueda|Mira.) and (lista|¿Qué son?|buscar)."""
+
+    def translate_fn(text, s, t):
+        return {"search": "Mira.", "what are": "¿Qué son?"}.get(text, text.upper())
+
+    assert _translate_literal(translate_fn, "search", "en", "es") == "mira"
+    assert _translate_literal(translate_fn, "what are", "en", "es") == "qué son"
+
+
+def test_translate_literal_keeps_punctuation_the_source_already_had():
+    def translate_fn(text, s, t):
+        return "¿Qué son?"
+
+    # the source piece itself is a question, so the model's ¿...? is kept
+    assert _translate_literal(translate_fn, "what are?", "en", "es") == "¿Qué son?"
+
+
+def test_degenerate_reason_exempts_a_slot_only_line():
+    """Regression for the T-2015 review (finding C): a slot-only line's
+    mask round-trips unchanged, so it always looks 'identical to input'."""
+    assert degenerate_reason("{query}", "{query}") is None
+
+
+def test_degenerate_reason_exempts_a_bare_brand_word():
+    assert degenerate_reason("spotify", "spotify") is None
+
+
+def test_degenerate_reason_exempts_a_brand_only_group():
+    assert degenerate_reason("(spotify|youtube)", "(spotify|youtube)") is None
+
+
+def test_degenerate_reason_still_catches_a_non_brand_identical_word():
+    assert degenerate_reason("hello", "hello") == "output identical to input"
+
+
+def test_translate_templated_drops_an_unbalanced_group(caplog):
+    """Regression for the T-2015 review (finding D, PLAUSIBLE): an
+    unclosed '(' used to make the parser silently drop everything after
+    it ('(a|(b|c) d' -> '(A|(B|C) )', losing ' d'); it must warn and drop
+    the whole line instead."""
+
+    def translate_fn(text, s, t):
+        return text.upper()
+
+    with caplog.at_level("WARNING"):
+        out = translate_templated(translate_fn, "(a|(b|c) d", "en", "pt")
+    assert out is None
+    assert any("unbalanced" in r.message for r in caplog.records)
