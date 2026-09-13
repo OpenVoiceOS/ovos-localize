@@ -59,3 +59,6 @@
 {"lang": "fa-IR", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "{sentence} را تکرار کن", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "fa-IR", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "بگو {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
 {"lang": "fa-IR", "skill": "ovos-skill-parrot", "intent": "speak.intent", "template": "به تقلید از من بگو {sentence}", "slots": ["sentence"], "entity_values": {"sentence": []}}
+{"lang": "fa-IR", "skill": "ovos-skill-volume", "intent": "change_volume.intent", "template": "(تغییر|تنظیمات|ساختن) [در] حجم [در] {amount}", "slots": ["amount"], "entity_values": {"amount": []}}
+{"lang": "fa-IR", "skill": "ovos-skill-volume", "intent": "change_volume.intent", "template": "حجم [به] {amount} درصد", "slots": ["amount"], "entity_values": {"amount": []}}
+{"lang": "fa-IR", "skill": "ovos-skill-volume", "intent": "change_volume.intent", "template": "تغییر حجم [به {amount}]", "slots": ["amount"], "entity_values": {"amount": []}}
