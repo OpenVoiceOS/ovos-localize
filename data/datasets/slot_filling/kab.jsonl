@@ -92,6 +92,7 @@
 {"lang": "kab", "skill": "ovos-skill-application-launcher", "intent": "launch.intent", "template": "sekker ahil n {application}", "slots": ["application"], "entity_values": {"application": []}}
 {"lang": "kab", "skill": "ovos-skill-camera", "intent": "take_picture.intent", "template": "ṭṭef tawlaft deg {countdown} n tesdatin", "slots": ["countdown"], "entity_values": {"countdown": []}}
 {"lang": "kab", "skill": "ovos-skill-camera", "intent": "take_picture.intent", "template": "tawlaft deg {countdown} n tesdatin", "slots": ["countdown"], "entity_values": {"countdown": []}}
+{"lang": "kab", "skill": "ovos-skill-cmd", "intent": "RunScriptCommandIntent.intent", "template": "(selkem|sekker) (taladna|askript) {script}", "slots": ["script"], "entity_values": {"script": []}}
 {"lang": "kab", "skill": "ovos-skill-color-picker", "intent": "request-color-by-name.intent", "template": "Sken-iyi-d (ini|nnul) {color}", "slots": ["color"], "entity_values": {"color": []}}
 {"lang": "kab", "skill": "ovos-skill-color-picker", "intent": "request-color-by-name.intent", "template": "(Senfel|Beddel) (ini|nnul) ɣer {color}", "slots": ["color"], "entity_values": {"color": []}}
 {"lang": "kab", "skill": "ovos-skill-color-picker", "intent": "request-color-by-name.intent", "template": "Amek i yettwaxdam (yini|nnul) {color}?", "slots": ["color"], "entity_values": {"color": []}}
