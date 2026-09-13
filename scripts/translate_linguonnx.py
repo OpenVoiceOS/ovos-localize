@@ -54,6 +54,29 @@ TEMPLATE_RE = re.compile(r"\(([^()]+)\)|\[(?!\d+\])([^\[\]]+)\]")
 
 SUFFIXES = (".intent", ".dialog", ".voc", ".entity")
 
+# A word or comma-separated token repeated 3 or more times in a row: the
+# shape a tiny int8 model collapses a short bare-word input into (e.g.
+# ``Cześć, cześć, cześć...`` for pl-PL "hello", ``آه آه آه آه آه`` for
+# fa-IR "hey there") -- caught independently on two skills and three
+# languages (T-1664, T-1665), so it is a standing check rather than a
+# per-unit rediscovery.
+REPEAT_RE = re.compile(r"(\b\w+\b)([ ,]+\1){2,}", re.IGNORECASE)
+
+# A single word that means nothing as a standalone intent-trigger phrase --
+# a pronoun, article or other function word a model produces when it has no
+# real translation for a short input (e.g. fa-IR "yo" -> "من", the Persian
+# pronoun "I/me", T-1664). Not exhaustive; it only needs to catch the shape
+# of defect actually seen, and grows as more are found.
+STOP_WORDS = {
+    # English
+    "i", "me", "you", "he", "she", "it", "we", "they", "a", "an", "the",
+    "and", "or", "but", "of", "to", "in", "on", "is", "am", "are",
+    # Persian (fa-IR)
+    "من", "تو", "او", "ما", "شما", "ایشان", "این", "آن",
+    # Polish (pl-PL)
+    "ja", "ty", "on", "ona", "ono", "my", "wy", "oni",
+}
+
 
 def mask_placeholders(line):
     """Replace every ``{slot}`` with an order-numbered mask token.
@@ -115,6 +138,35 @@ def translate_templated(translate_fn, masked_line, src, tgt):
     return "".join(out)
 
 
+def degenerate_reason(original, text):
+    """Return why ``text`` looks like degenerate MT output, or ``None``.
+
+    Checks, in order: a token repeated 3 or more times in a row, an output
+    longer than 3x the input in words, an output identical to the input,
+    and an output that is nothing but a single stop-word. Any one of these
+    is a line a tiny int8 model has been caught producing for a short
+    bare-word input where a real translation should have come back
+    (T-1664, T-1665) -- never worth shipping.
+    """
+    if REPEAT_RE.search(text):
+        return "token repeated 3+ times in a row"
+    orig_words = original.split()
+    out_words = text.split()
+    if orig_words and len(out_words) > 3 * len(orig_words):
+        return "output more than 3x longer than input"
+    # The identical-output and single-stop-word checks only fire on a short
+    # bare-word original: that is the shape of input actually seen
+    # degenerating this way (T-1664, T-1665's "yo", "hello", "hey"). A
+    # longer line legitimately keeping a shared word (a name, a number, a
+    # slot placeholder) is not this defect.
+    if len(orig_words) == 1:
+        if text.strip() == original.strip():
+            return "output identical to input"
+        if len(out_words) == 1 and out_words[0].strip(".,!?;:\"'()").lower() in STOP_WORDS:
+            return "output is a single stop-word"
+    return None
+
+
 def translate_line(translate_fn, line, src, tgt):
     """Translate one line, masking and restoring its placeholders.
 
@@ -122,29 +174,43 @@ def translate_line(translate_fn, line, src, tgt):
     which would otherwise translate empty input into filler text. Returns
     ``None`` when a mask did not come back intact -- some models drop or
     mangle a masked slot on a short, multi-slot sentence, and a line like
-    that is dropped rather than shipped with a wrong or missing slot.
+    that is dropped rather than shipped with a wrong or missing slot -- or
+    when the result looks like degenerate output (see
+    :func:`degenerate_reason`).
     """
+    return _translate_line(translate_fn, line, src, tgt)[0]
+
+
+def _translate_line(translate_fn, line, src, tgt):
+    """Like :func:`translate_line`, also returning the drop reason if any."""
     if not line.strip():
-        return line
+        return line, None
     masked, placeholders = mask_placeholders(line)
     translated = translate_templated(translate_fn, masked, src, tgt)
     survived = sorted(set(int(i) for i in MASK_RE.findall(translated)))
     if survived != list(range(len(placeholders))):
-        return None
-    return unmask_placeholders(translated, placeholders)
+        return None, "mask did not survive"
+    result = unmask_placeholders(translated, placeholders)
+    reason = degenerate_reason(line, result)
+    if reason:
+        return None, reason
+    return result, None
 
 
 def translate_lines(translate_fn, lines, src, tgt):
-    """Translate every line, dropping any whose mask did not survive.
+    """Translate every line, dropping any that failed or looked degenerate.
 
-    The output may be shorter than the input; a caller that needs to know
-    how many lines were dropped should compare lengths itself.
+    A dropped line is reported with its reason, never written. The output
+    may be shorter than the input; a caller that needs to know how many
+    lines were dropped should compare lengths itself.
     """
     out = []
     for line in lines:
-        translated = translate_line(translate_fn, line, src, tgt)
+        translated, reason = _translate_line(translate_fn, line, src, tgt)
         if translated is not None:
             out.append(translated)
+        elif reason:
+            LOG.warning("dropped line %r: %s", line, reason)
     return out
 
 
@@ -192,7 +258,7 @@ def translate_tree(tx, src_dir, out_dir, tgt_lang_dir, src_lang, tgt_lang):
             LOG.warning("no line of %s survived translation; skipping", path)
             continue
         if len(out_lines) < len(lines):
-            LOG.warning("%s: %d of %d lines dropped (mask did not survive)",
+            LOG.warning("%s: %d of %d lines dropped (see reasons above)",
                         path, len(lines) - len(out_lines), len(lines))
         dest = target_path(src_dir, out_dir, path, tgt_lang_dir)
         dest.parent.mkdir(parents=True, exist_ok=True)

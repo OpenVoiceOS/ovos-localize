@@ -8,6 +8,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 from translate_linguonnx import (  # noqa: E402
     mask_placeholders,
     unmask_placeholders,
+    degenerate_reason,
     translate_line,
     translate_lines,
     translate_templated,
@@ -262,3 +263,58 @@ def test_translate_line_keeps_each_alternative_distinct_on_a_real_intent_line():
     line = "tell me about the (movie|film|flick) {movie}"
     out = translate_line(translate_fn, line, "en", "pt")
     assert out == "TELL ME ABOUT THE (MOVIE|FILM|FLICK) {movie}"
+
+
+def test_degenerate_reason_none_for_a_clean_translation():
+    assert degenerate_reason("hello", "bonjour") is None
+
+
+def test_degenerate_reason_catches_a_comma_separated_repetition_loop():
+    """Regression for T-1665: pl-PL "hello"/"hello there"/"hey" all
+    degenerated into "Cześć, cześć, cześć..." on the int8 model."""
+    assert degenerate_reason("hello", "Cześć, cześć, cześć") == \
+        "token repeated 3+ times in a row"
+
+
+def test_degenerate_reason_catches_a_space_separated_repetition_loop():
+    """Regression for T-1665: fa-IR "hey there" -> "آه آه آه آه آه"."""
+    assert degenerate_reason("hey there", "آه آه آه آه آه") == \
+        "token repeated 3+ times in a row"
+
+
+def test_degenerate_reason_catches_a_single_stop_word():
+    """Regression for T-1664: fa-IR "yo" -> "من" (the pronoun I/me)."""
+    assert degenerate_reason("yo", "من") == "output is a single stop-word"
+
+
+def test_degenerate_reason_catches_output_identical_to_input():
+    assert degenerate_reason("hello", "hello") == "output identical to input"
+
+
+def test_degenerate_reason_ignores_a_shared_word_on_a_longer_line():
+    """Identical-output and single-stop-word only fire on a short bare-word
+    original; a longer line keeping one shared word (a name, a slot) is not
+    this defect."""
+    assert degenerate_reason("weather in {city}", "weather in {city}") is None
+
+
+def test_degenerate_reason_catches_an_oversized_output():
+    assert degenerate_reason("hello", "one two three four five six") == \
+        "output more than 3x longer than input"
+
+
+def test_translate_line_drops_a_repetition_loop():
+    def translate_fn(text, s, t):
+        return "cześć, cześć, cześć"
+
+    assert translate_line(translate_fn, "hello", "en", "pl") is None
+
+
+def test_translate_lines_reports_the_drop_reason(caplog):
+    def translate_fn(text, s, t):
+        return "cześć, cześć, cześć"
+
+    with caplog.at_level("WARNING"):
+        out = translate_lines(translate_fn, ["hello"], "en", "pl")
+    assert out == []
+    assert any("token repeated 3+ times" in r.message for r in caplog.records)
