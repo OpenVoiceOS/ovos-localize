@@ -318,3 +318,68 @@ def test_translate_lines_reports_the_drop_reason(caplog):
         out = translate_lines(translate_fn, ["hello"], "en", "pl")
     assert out == []
     assert any("token repeated 3+ times" in r.message for r in caplog.records)
+
+
+def _stripping_translate_fn(text, s, t):
+    """Mimics the real model: strips edge whitespace and uppercases the
+    stripped core. translate_templated must never send un-stripped text or
+    the group boundary loses its separating space (T-1986 review)."""
+    return text.strip().upper()
+
+
+def test_translate_templated_keeps_a_space_at_a_group_boundary():
+    """Regression for the T-1986 review: joining pieces with "".join lost
+    the space around a group when the model stripped its own edges, giving
+    ``[A maioria]popular(filmes|...)`` instead of the correct spacing."""
+    masked = "tell me about the (movie|film|flick) [0]"
+    out = translate_templated(_stripping_translate_fn, masked, "en", "pt")
+    assert out == "TELL ME ABOUT THE (MOVIE|FILM|FLICK) [0]"
+
+
+def test_translate_templated_parses_a_nested_group():
+    """Regression for the T-1986 review: the old TEMPLATE_RE matched only
+    the innermost group, so the outer alternation's own '(' and '|' reached
+    the model as literal text on a real moviemaster line."""
+    out = translate_templated(_stripping_translate_fn, "(a|(b|c)) d", "en", "pt")
+    assert out == "(A|(B|C)) D"
+
+
+def test_translate_templated_splits_a_bracket_optional_alternation():
+    """Regression for the T-1986 review: '[a|b]' went to the model whole as
+    'a|b', the exact syntax-leak the '(|)' split was supposed to prevent."""
+    out = translate_templated(_stripping_translate_fn, "[a|b] thing", "en", "pt")
+    assert out == "[A|B] THING"
+
+
+def test_translate_templated_recurses_into_a_bracket_holding_a_group():
+    out = translate_templated(_stripping_translate_fn, "[(a|b)] thing", "en", "pt")
+    assert out == "[(A|B)] THING"
+
+
+def test_translate_templated_drops_a_line_with_a_lexical_duplicate():
+    """Regression for the T-1986 review: 'movie' and 'film' both translate
+    to pt 'filmes', so the split alone does not stop moviemaster#86's
+    collapsed alternation -- a real duplicate after translation must drop
+    the line."""
+
+    def translate_fn(text, s, t):
+        return {"movie": "filmes", "film": "filmes", "flick": "flicks"}.get(text, text)
+
+    out = translate_templated(translate_fn, "(movie|film|flick)", "en", "pt")
+    assert out is None
+
+
+def test_translate_templated_keeps_distinct_alternatives():
+    def translate_fn(text, s, t):
+        return {"movie": "filme", "flick": "flicks"}.get(text, text)
+
+    out = translate_templated(translate_fn, "(movie|flick)", "en", "pt")
+    assert out == "(filme|flicks)"
+
+
+def test_translate_line_drops_a_line_whose_group_collapses_to_a_duplicate():
+    def translate_fn(text, s, t):
+        return {"movie": "filmes", "film": "filmes", "flick": "flicks"}.get(text, text)
+
+    out = translate_line(translate_fn, "tell me about the (movie|film|flick) {movie}", "en", "pt")
+    assert out is None
