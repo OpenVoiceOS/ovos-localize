@@ -12,6 +12,7 @@ from translate_linguonnx import (  # noqa: E402
     translate_line,
     translate_lines,
     translate_templated,
+    _translate_literal,
     target_path,
     translate_tree,
 )
@@ -383,3 +384,76 @@ def test_translate_line_drops_a_line_whose_group_collapses_to_a_duplicate():
 
     out = translate_line(translate_fn, "tell me about the (movie|film|flick) {movie}", "en", "pt")
     assert out is None
+
+
+def test_translate_templated_drops_a_case_only_duplicate():
+    """Regression for the T-2015 review (finding A): the live es-ES route
+    wrote (películas|Películas|flicks) -- a case-only duplicate the plain
+    .strip() comparison missed."""
+
+    def translate_fn(text, s, t):
+        return {"movies": "películas", "films": "Películas", "flicks": "flicks"}.get(text, text)
+
+    out = translate_templated(translate_fn, "(movies|films|flicks)", "en", "es")
+    assert out is None
+
+
+def test_translate_templated_drops_a_punctuation_only_duplicate():
+    def translate_fn(text, s, t):
+        return {"movies": "filmes.", "films": "filmes", "flicks": "flicks"}.get(text, text)
+
+    out = translate_templated(translate_fn, "(movies|films|flicks)", "en", "pt")
+    assert out is None
+
+
+def test_translate_literal_strips_sentence_punctuation_the_source_never_had():
+    """Regression for the T-2015 review (finding B): a piece translated
+    alone out of sentence context picks up capitals and ¿¡.?! the fragment
+    never asked for -- (búsqueda|Mira.) and (lista|¿Qué son?|buscar)."""
+
+    def translate_fn(text, s, t):
+        return {"search": "Mira.", "what are": "¿Qué son?"}.get(text, text.upper())
+
+    assert _translate_literal(translate_fn, "search", "en", "es") == "mira"
+    assert _translate_literal(translate_fn, "what are", "en", "es") == "qué son"
+
+
+def test_translate_literal_keeps_punctuation_the_source_already_had():
+    def translate_fn(text, s, t):
+        return "¿Qué son?"
+
+    # the source piece itself is a question, so the model's ¿...? is kept
+    assert _translate_literal(translate_fn, "what are?", "en", "es") == "¿Qué son?"
+
+
+def test_degenerate_reason_exempts_a_slot_only_line():
+    """Regression for the T-2015 review (finding C): a slot-only line's
+    mask round-trips unchanged, so it always looks 'identical to input'."""
+    assert degenerate_reason("{query}", "{query}") is None
+
+
+def test_degenerate_reason_exempts_a_bare_brand_word():
+    assert degenerate_reason("spotify", "spotify") is None
+
+
+def test_degenerate_reason_exempts_a_brand_only_group():
+    assert degenerate_reason("(spotify|youtube)", "(spotify|youtube)") is None
+
+
+def test_degenerate_reason_still_catches_a_non_brand_identical_word():
+    assert degenerate_reason("hello", "hello") == "output identical to input"
+
+
+def test_translate_templated_drops_an_unbalanced_group(caplog):
+    """Regression for the T-2015 review (finding D, PLAUSIBLE): an
+    unclosed '(' used to make the parser silently drop everything after
+    it ('(a|(b|c) d' -> '(A|(B|C) )', losing ' d'); it must warn and drop
+    the whole line instead."""
+
+    def translate_fn(text, s, t):
+        return text.upper()
+
+    with caplog.at_level("WARNING"):
+        out = translate_templated(translate_fn, "(a|(b|c) d", "en", "pt")
+    assert out is None
+    assert any("unbalanced" in r.message for r in caplog.records)

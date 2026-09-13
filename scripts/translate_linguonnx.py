@@ -73,6 +73,13 @@ STOP_WORDS = {
     "ja", "ty", "on", "ona", "ono", "my", "wy", "oni",
 }
 
+# A brand or product name a translator legitimately leaves unchanged, so an
+# input made only of these (a bare ``spotify``, a ``(spotify|youtube)``
+# group) coming back identical is a correct translation, not degenerate
+# output. Not exhaustive; it only needs to cover a name actually seen in a
+# unit's resources, and grows as more are found.
+BRAND_WORDS = {"spotify", "youtube", "netflix", "wikipedia", "google", "amazon"}
+
 
 def mask_placeholders(line):
     """Replace every ``{slot}`` with an order-numbered mask token.
@@ -107,12 +114,14 @@ CLOSE_OF = {"(": ")", "[": "]"}
 
 
 def _matching_close(s, open_pos):
-    """Index just past the bracket that closes ``s[open_pos]``.
+    """Index just past the bracket that closes ``s[open_pos]``, or ``None``.
 
     Only the same bracket character nests (``(`` inside ``(...)``, ``[``
     inside ``[...]``); a template never mixes the two at the same nesting
     level, so this is enough to find the real close of a nested group like
-    ``(a|(b|c))`` instead of stopping at the first ``)``.
+    ``(a|(b|c))`` instead of stopping at the first ``)``. Returns ``None``
+    when the bracket is never closed, e.g. ``(a|(b|c) d`` -- unbalanced
+    template syntax, not a group to translate around.
     """
     open_ch = s[open_pos]
     close_ch = CLOSE_OF[open_ch]
@@ -124,7 +133,7 @@ def _matching_close(s, open_pos):
         elif s[i] == close_ch:
             depth -= 1
         i += 1
-    return i
+    return i if depth == 0 else None
 
 
 def _split_top_level(s, sep="|"):
@@ -149,6 +158,14 @@ def _split_top_level(s, sep="|"):
     return parts
 
 
+# Sentence-boundary punctuation a model adds to a piece translated in
+# isolation, treating it as a whole sentence, that the source piece did not
+# ask for -- an inverted Spanish question mark opening a fragment that was
+# never a question, or a period closing one that was never a sentence.
+_LEADING_SENTENCE_PUNCT = re.compile(r"^[¿¡\s]+")
+_TRAILING_SENTENCE_PUNCT = re.compile(r"[.?!\s]+$")
+
+
 def _translate_literal(translate_fn, text, src, tgt):
     """Translate ``text``, keeping its edge whitespace out of the call.
 
@@ -157,12 +174,52 @@ def _translate_literal(translate_fn, text, src, tgt):
     used to have a space between them (``[most]popular`` instead of
     ``[most] popular``). The space is put back around the model's output
     instead of being sent through it.
+
+    A model that translates a fragment alone, out of sentence context, also
+    adds sentence-level dressing the fragment never asked for: an opening
+    ``¿``/``¡``, a closing ``.``/``?``/``!``, and a capital letter, turning
+    ``search`` (one alternative of a template group) into ``Mira.`` inside
+    ``(búsqueda|Mira.)``. Punctuation the stripped source did not have is
+    removed from the result, and the result is decapitalized when the
+    source piece itself started lowercase, so a mid-sentence fragment stays
+    one.
     """
     if not text.strip():
         return text
+    stripped = text.strip()
     lead = text[:len(text) - len(text.lstrip())]
     trail = text[len(text.rstrip()):]
-    return lead + translate_fn(text.strip(), src, tgt) + trail
+    result = translate_fn(stripped, src, tgt)
+    # ¿ and ! /? are a matched pair in Spanish; a source piece that already
+    # signalled a question or exclamation at either end (most often the
+    # trailing mark -- a template alternative rarely opens with ¿/¡ of its
+    # own) keeps whatever the model put at both ends, since it is not
+    # dressing added out of nowhere.
+    if not (_LEADING_SENTENCE_PUNCT.match(stripped) or _TRAILING_SENTENCE_PUNCT.search(stripped)):
+        result = _LEADING_SENTENCE_PUNCT.sub("", result)
+        result = _TRAILING_SENTENCE_PUNCT.sub("", result)
+    # A stub that upper-cases its whole input (used across this test suite
+    # to prove a piece was sent through translate_fn at all) is not the
+    # sentence-capitalization this guards against -- only decapitalize a
+    # normally-cased result, where the rest of the word did not get the
+    # same treatment as its first letter.
+    if stripped[:1].islower() and result[:1].isupper() and not result.isupper():
+        result = result[:1].lower() + result[1:]
+    return lead + result + trail
+
+
+def _dedupe_key(alt):
+    """Normalize a translated alternative for the duplicate-alternative check.
+
+    Casefolded and stripped of the edge punctuation a piece translated
+    alone can pick up, so ``Filmes`` and ``filmes.`` compare equal to
+    ``filmes`` -- an intent matcher normalizes case and punctuation the
+    same way, so a pair that only differs by these has still collapsed.
+    """
+    stripped = alt.strip()
+    stripped = _LEADING_SENTENCE_PUNCT.sub("", stripped)
+    stripped = _TRAILING_SENTENCE_PUNCT.sub("", stripped)
+    return stripped.casefold()
 
 
 def translate_templated(translate_fn, masked_line, src, tgt):
@@ -179,11 +236,18 @@ def translate_templated(translate_fn, masked_line, src, tgt):
     fused into one word).
 
     Returns ``None`` when a group ends up with two identical alternatives
-    after translation -- a small model can translate two distinct source
-    alternatives (``movies``, ``films``) to the same target word
-    (``filmes``), which silently turns a real choice into a no-op the split
-    was supposed to prevent; a line like that is dropped rather than shipped
-    with a collapsed alternation.
+    after translation, compared case- and edge-punctuation-insensitively --
+    a small model can translate two distinct source alternatives
+    (``movies``, ``films``) to the same target word (``filmes``, or the
+    same word with only a case difference like ``Películas``/``películas``,
+    which an intent matcher normalizes away too), which silently turns a
+    real choice into a no-op the split was supposed to prevent; a line like
+    that is dropped rather than shipped with a collapsed alternation.
+
+    Also returns ``None``, with a logged warning, on an unbalanced group
+    (a ``(`` or ``[`` with no matching close) -- malformed template syntax
+    that a regex-free parser would otherwise silently truncate around,
+    losing whatever came after it.
     """
     out = []
     i = 0
@@ -193,6 +257,9 @@ def translate_templated(translate_fn, masked_line, src, tgt):
         c = masked_line[i]
         if c in "([":
             end = _matching_close(masked_line, i)
+            if end is None:
+                LOG.warning("unbalanced %r group in %r; dropping line", c, masked_line)
+                return None
             body = masked_line[i + 1:end - 1]
             if c == "[" and body.isdigit():
                 # a mask token ([0], [1], ...), not an optional group --
@@ -212,8 +279,10 @@ def translate_templated(translate_fn, masked_line, src, tgt):
                     return None
                 translated_alts.append(sub)
             if len(translated_alts) > 1:
-                seen = [a.strip() for a in translated_alts]
+                seen = [_dedupe_key(a) for a in translated_alts]
                 if len(set(seen)) != len(seen):
+                    LOG.warning("duplicate alternative %r in %r after translation; dropping line",
+                                translated_alts, masked_line)
                     return None
             out.append(c + "|".join(translated_alts) + CLOSE_OF[c])
             i = end
@@ -224,6 +293,25 @@ def translate_templated(translate_fn, masked_line, src, tgt):
     if literal:
         out.append(_translate_literal(translate_fn, literal, src, tgt))
     return "".join(out)
+
+
+def _is_slot_or_brand_only(original):
+    """Whether ``original`` has nothing left to translate at all.
+
+    Strips every ``{slot}`` and template punctuation (``()[]|``), then
+    checks whether what remains is empty or made only of words from
+    :data:`BRAND_WORDS`. A slot-only line like ``{query}`` always comes
+    back identical (the mask round-trips unchanged), and a brand or loan
+    word like ``spotify`` is *correctly* translated by staying the same --
+    neither is the degenerate no-real-translation case the identical-output
+    check exists to catch.
+    """
+    core = PLACEHOLDER_RE.sub(" ", original)
+    core = re.sub(r"[()\[\]|]", " ", core)
+    words = core.split()
+    if not words:
+        return True
+    return all(w.casefold() in BRAND_WORDS for w in words)
 
 
 def degenerate_reason(original, text):
@@ -248,7 +336,7 @@ def degenerate_reason(original, text):
     # longer line legitimately keeping a shared word (a name, a number, a
     # slot placeholder) is not this defect.
     if len(orig_words) == 1:
-        if text.strip() == original.strip():
+        if text.strip() == original.strip() and not _is_slot_or_brand_only(original):
             return "output identical to input"
         if len(out_words) == 1 and out_words[0].strip(".,!?;:\"'()").lower() in STOP_WORDS:
             return "output is a single stop-word"
