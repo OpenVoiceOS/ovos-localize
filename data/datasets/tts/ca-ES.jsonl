@@ -165,8 +165,10 @@
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "error_no_list_name.dialog", "text": "heu d'especificar un nom de llista."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "error_no_repeat.dialog", "text": "heu d'indicar un interval de temps. pot ser dies solts o períodes de temps curts."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "error_no_scheduled_kind.dialog", "text": "no teniu cap {kind} a l'agenda."}
+{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "error_no_script.dialog", "text": "no he sentit quin fitxer d'àudio utilitzar per al vostre {kind}."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "error_no_time.dialog", "text": "no he sentit cap hora per a {kind}. torneu a intentar-ho."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "error_nothing_to_cancel.dialog", "text": "no he trobat cap alerta coincident per a cancel·lar-la."}
+{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "error_same_priority.dialog", "text": "la prioritat ja està establerta en aquest valor."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "expired_alert.dialog", "text": "l'alerta {name} és activa."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "expired_audio_alert_intro.dialog", "text": "teniu un recordatori d'àudio"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "expired_reminder.dialog", "text": "aquest és el recordatori: {name}."}
@@ -198,6 +200,8 @@
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_todo_reminder.dialog", "text": "us he de recordar {reminders}"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems.dialog", "text": "en la llista {name} hi ha {items}."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems_added.dialog", "text": "hi he afegit {num} entrades."}
+{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "media_type_changed.dialog", "text": "va canviar el so de {old} a {new}."}
+{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "media_type_set.dialog", "text": "estableix el so a {new}."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "monday.dialog", "text": "dilluns"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "music.dialog", "text": "música"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "next_alert.dialog", "text": "la tasca següent és {name} a {begin}."}
@@ -210,6 +214,7 @@
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "pick_multiple_entries.dialog", "text": "hi ha diverses entrades similars. quina voleu triar?"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "please.repeat.dialog", "text": "ho sento. no t'he entès. repeteix, si us plau."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "podcast.dialog", "text": "pòdcast"}
+{"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "property_changed_priority.dialog", "text": "prioritat ajustada a {num}."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "reminder_ask_time.dialog", "text": "us ho he de recordar a una hora en concret?"}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "remove_list_items_ask.dialog", "text": "llisteu els elements que s'haurien de suprimir, un per un."}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "dialog": "repeating_every.dialog", "text": "cada {repeat}"}
@@ -289,40 +294,52 @@
 {"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "avui és {date}"}
 {"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "som a {date}"}
 {"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "{date}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "date.not.found.dialog", "text": "no us puc trobar aquesta data."}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "{date}, a {num_days}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "{date}, d'avui en {num_days} dies"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "és {date}, a {num_days}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "date.relative.past.dialog", "text": "va ser {date}, fa {num_days} dies"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "date.relative.past.dialog", "text": "{date}, fa {num_days} dies"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "day.current.dialog", "text": "avui és {day}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "day.current.dialog", "text": "el dia actual és {day}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "day.current.dialog", "text": "{day}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "day.current.dialog", "text": "és {day}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "did.you.mean.timezone.dialog", "text": "vols dir la zona horària {zone_name}?"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "extract.date.error.dialog", "text": "no he comprès quina data preguntes."}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "extract.date.error.dialog", "text": "no he entès quina data preguntes."}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "month.current.dialog", "text": "aquest mes és {month}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "month.current.dialog", "text": "ara estem a {month}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "month.current.dialog", "text": "el mes actual és {month}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "month.current.dialog", "text": "{month}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "month.current.dialog", "text": "és {month}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "ara mateix són {time}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "són {time}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "{time}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "time.future.dialog", "text": "serà {time}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "time.future.dialog", "text": "{time}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "time.tz.not.found.dialog", "text": "no puc trobar el fus horari de {location}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "weekday.at.date.future.dialog", "text": "el dia {date} serà {weekday}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "weekday.at.date.past.dialog", "text": "el dia {date} va ser {weekday}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "weekday.current.dialog", "text": "avui és {weekday}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "weekday.current.dialog", "text": "el dia de la setmana actual és {weekday}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "weekday.current.dialog", "text": "és {weekday}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "aquest any és {year}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "l'any actual és {year}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "som al {year} ara mateix"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "{year}"}
-{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "és {year}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "date_not_found.dialog", "text": "no us puc trobar aquesta data."}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, a {num_days}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, d'avui en {num_days} dies"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "és {date}, a {num_days}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "va ser {date}, fa {num_days} dies"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "{date}, fa {num_days} dies"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "avui és {day}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "el dia actual és {day}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "{day}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "és {day}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "did_you_mean_timezone.dialog", "text": "vols dir la zona horària {zone_name}?"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "extract_date_error.dialog", "text": "no he comprès quina data preguntes."}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "extract_date_error.dialog", "text": "no he entès quina data preguntes."}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_no.dialog", "text": "no, {year} no és un any de traspàs."}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_yes.dialog", "text": "sí, {year} és un any de traspàs."}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_no.dialog", "text": "no. l'any de traspàs següent serà {year}."}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_yes.dialog", "text": "sí, {year} és un any de traspàs."}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_no.dialog", "text": "no, {year} no serà un any de traspàs."}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_yes.dialog", "text": "sí, {year} serà un any de traspàs."}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "aquest mes és {month}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "ara estem a {month}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "el mes actual és {month}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "{month}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "és {month}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "ara mateix són {time}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "són {time}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "serà {time}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "{time}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "time_tz_not_found.dialog", "text": "no puc trobar el fus horari de {location}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_future.dialog", "text": "el dia {date} serà {weekday}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_past.dialog", "text": "el dia {date} va ser {weekday}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "avui és {weekday}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "el dia de la setmana actual és {weekday}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "és {weekday}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_no.dialog", "text": "no, {date} serà {actual_weekday}, no {weekday}."}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_yes.dialog", "text": "sí, {date} serà {weekday}."}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_no.dialog", "text": "no, {date} era {actual_weekday}, no {weekday}."}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_yes.dialog", "text": "sí, {date} va ser {weekday}."}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_no.dialog", "text": "no, {date} és {actual_weekday}, no {weekday}."}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_yes.dialog", "text": "sí, {date} és {weekday}."}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "aquest any és {year}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "l'any actual és {year}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "som al {year} ara mateix"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "{year}"}
+{"lang": "ca-ES", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "és {year}"}
 {"lang": "ca-ES", "skill": "ovos-skill-days-in-history_0", "dialog": "day_10_month_10_events.dialog", "text": "1471 - sten sture el vell, el regent de suècia, amb l'ajuda de grangers i miners, repel·leix un atac del rei cristià i de dinamarca."}
 {"lang": "ca-ES", "skill": "ovos-skill-days-in-history_0", "dialog": "day_10_month_10_events.dialog", "text": "1492 - la tripulació del vaixell de cristòfor colom, el santa maria, intenta un motí."}
 {"lang": "ca-ES", "skill": "ovos-skill-days-in-history_0", "dialog": "day_10_month_10_events.dialog", "text": "1575 - les forces catòliques romanes sota el comandament d'enric i, duc de guisa, derroten els protestants, capturant philippe de mornay entre d'altres."}
@@ -31582,11 +31599,19 @@
 {"lang": "ca-ES", "skill": "ovos-skill-ip", "dialog": "last_digits_device.dialog", "text": "la i.p a { device } acaba en { digits }"}
 {"lang": "ca-ES", "skill": "ovos-skill-ip", "dialog": "last_digits_device.dialog", "text": "la meva adreça i.p. a { device } acaba en { digits }"}
 {"lang": "ca-ES", "skill": "ovos-skill-ip", "dialog": "last_digits_device.dialog", "text": "la meva i.p. a { device } acaba en { digits }"}
+{"lang": "ca-ES", "skill": "ovos-skill-ip", "dialog": "my.public.ip.dialog", "text": "la teva adreça pública és {ip}"}
+{"lang": "ca-ES", "skill": "ovos-skill-ip", "dialog": "my.public.ip.dialog", "text": "la i p pública és {ip}"}
 {"lang": "ca-ES", "skill": "ovos-skill-ip", "dialog": "my_address_is.dialog", "text": "la meva adreça de xarxa i.p. és {ip}"}
 {"lang": "ca-ES", "skill": "ovos-skill-ip", "dialog": "my_address_is.dialog", "text": "tinc l'adreça i.p. {ip}"}
 {"lang": "ca-ES", "skill": "ovos-skill-ip", "dialog": "my_address_on_x_is_y.dialog", "text": "la meva adreça i.p. a {interface} és {ip}."}
 {"lang": "ca-ES", "skill": "ovos-skill-ip", "dialog": "no_network_connection.dialog", "text": "encara no tinc una connexió de xarxa"}
 {"lang": "ca-ES", "skill": "ovos-skill-ip", "dialog": "no_network_connection.dialog", "text": "no estic connectat a cap xarxa"}
+{"lang": "ca-ES", "skill": "ovos-skill-ip", "dialog": "public.ip.error.dialog", "text": "no he pogut accedir a internet per comprovar l'adreça pública"}
+{"lang": "ca-ES", "skill": "ovos-skill-ip", "dialog": "wifi.signal.dialog", "text": "el senyal wifi està a {quality}"}
+{"lang": "ca-ES", "skill": "ovos-skill-ip", "dialog": "wifi.signal.dialog", "text": "intensitat del senyal {quality}"}
+{"lang": "ca-ES", "skill": "ovos-skill-iss-location", "dialog": "api_unavailable.dialog", "text": "em sap greu, no puc contactar amb el servei de seguiment de l'estació espacial en aquest moment"}
+{"lang": "ca-ES", "skill": "ovos-skill-iss-location", "dialog": "api_unavailable.dialog", "text": "tinc problemes per obtenir les dades en viu de l'estació espacial en aquest moment, si us plau intenteu-ho més tard"}
+{"lang": "ca-ES", "skill": "ovos-skill-iss-location", "dialog": "api_unavailable.dialog", "text": "el servei de seguiment de l'estació espacial no respon en aquest moment"}
 {"lang": "ca-ES", "skill": "ovos-skill-iss-location", "dialog": "location_current.dialog", "text": "l'e e i és per sobre de latitud {latitude} i longitud {longitude}, que correspon a {toponym}"}
 {"lang": "ca-ES", "skill": "ovos-skill-iss-location", "dialog": "location_current.dialog", "text": "l'estació espacial es troba a latitud {latitude} i longitud {longitude} sobre {toponym}"}
 {"lang": "ca-ES", "skill": "ovos-skill-iss-location", "dialog": "location_current.dialog", "text": "l'estació espacial internacional és ara per sobre de {toponym} a latitud {latitude} i longitud {longitude}"}
@@ -31716,12 +31741,17 @@
 {"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "dialog": "error_no_pokemon.dialog", "text": "no m'has dit de quin pokémon vols saber-ne alguna cosa!"}
 {"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "dialog": "error_not_found.dialog", "text": "no he pogut trobar aquest pokémon ara mateix. torna-ho a provar més tard!"}
 {"lang": "ca-ES", "skill": "ovos-skill-pokepedia", "dialog": "pokemon_type.dialog", "text": "{pokemon_name} és de tipus {types}. {explanation}!"}
+{"lang": "ca-ES", "skill": "ovos-skill-screenshot", "dialog": "screenshot_delayed.dialog", "text": "prendre una captura de pantalla en {delay} segons"}
+{"lang": "ca-ES", "skill": "ovos-skill-screenshot", "dialog": "screenshot_delayed.dialog", "text": "{delay} segons i diguem que el formatge"}
 {"lang": "ca-ES", "skill": "ovos-skill-screenshot", "dialog": "screenshot_failed.dialog", "text": "no he pogut fer la captura de pantalla"}
 {"lang": "ca-ES", "skill": "ovos-skill-screenshot", "dialog": "screenshot_failed.dialog", "text": "la captura de pantalla ha fallat"}
 {"lang": "ca-ES", "skill": "ovos-skill-screenshot", "dialog": "screenshot_taken.dialog", "text": "s'ha capturat la pantalla"}
 {"lang": "ca-ES", "skill": "ovos-skill-speedtest", "dialog": "error.dialog", "text": "s'ha produït un error, no he pogut executar una prova de velocitat."}
+{"lang": "ca-ES", "skill": "ovos-skill-speedtest", "dialog": "ping.dialog", "text": "ping és {ping} mil·lisegons"}
 {"lang": "ca-ES", "skill": "ovos-skill-speedtest", "dialog": "result.dialog", "text": "la vostra velocitat de baixada és de {down} megabits per segon i la de pujada de {up} megabits per segon."}
 {"lang": "ca-ES", "skill": "ovos-skill-speedtest", "dialog": "running.dialog", "text": "comença la prova de velocitat, tornaré amb els resultats en un moment."}
+{"lang": "ca-ES", "skill": "ovos-skill-spelling", "dialog": "what.word.dialog", "text": "quina paraula vols que lletregi?"}
+{"lang": "ca-ES", "skill": "ovos-skill-spelling", "dialog": "what.word.dialog", "text": "quina paraula he d'escriure?"}
 {"lang": "ca-ES", "skill": "ovos-skill-volume", "dialog": "error.get.volume.dialog", "text": "sembla que hi ha un problema. no he pogut consultar el volum actual."}
 {"lang": "ca-ES", "skill": "ovos-skill-volume", "dialog": "volume.change.amount.dialog", "text": "a quin volum? és possible un valor entre 0 i 100."}
 {"lang": "ca-ES", "skill": "ovos-skill-volume", "dialog": "volume.current.dialog", "text": "el volum s'ha establert a {volume}"}
@@ -31959,16 +31989,22 @@
 {"lang": "ca-ES", "skill": "ovos-skill-wikihow", "dialog": "step.dialog", "text": "pas {number}, {step}"}
 {"lang": "ca-ES", "skill": "ovos-skill-wikipedia", "dialog": "no entry found.dialog", "text": "em sembla que no hi ha cap article sobre això"}
 {"lang": "ca-ES", "skill": "ovos-skill-wikipedia", "dialog": "no entry found.dialog", "text": "no puc trobar cap article relacionat en la viquipèdia"}
+{"lang": "ca-ES", "skill": "ovos-skill-wikipedia", "dialog": "no_answer.dialog", "text": "no vaig trobar una resposta per això"}
+{"lang": "ca-ES", "skill": "ovos-skill-wikipedia", "dialog": "no_answer.dialog", "text": "no vaig poder trobar res sobre això"}
+{"lang": "ca-ES", "skill": "ovos-skill-wikipedia", "dialog": "no_query.dialog", "text": "a qui o què t'agradaria que busqués a la viquipèdia?"}
+{"lang": "ca-ES", "skill": "ovos-skill-wikipedia", "dialog": "no_query.dialog", "text": "què he de buscar a la viquipèdia?"}
+{"lang": "ca-ES", "skill": "ovos-skill-wikipedia", "dialog": "nothing.more.dialog", "text": "això és tot el que tinc a {title}"}
+{"lang": "ca-ES", "skill": "ovos-skill-wikipedia", "dialog": "nothing.more.dialog", "text": "això és tot el que em dona la wikipedia sobre {title}"}
 {"lang": "ca-ES", "skill": "ovos-skill-wikipedia", "dialog": "searching.dialog", "text": "deixeu-me cercar {query} a la viquipèdia"}
 {"lang": "ca-ES", "skill": "ovos-skill-wikipedia", "dialog": "searching.dialog", "text": "estic cercant a la viquipèdia sobre {query}"}
 {"lang": "ca-ES", "skill": "ovos-skill-wikipedia", "dialog": "thats all.dialog", "text": "això és tot el que en sé"}
 {"lang": "ca-ES", "skill": "ovos-skill-wikipedia", "dialog": "thats all.dialog", "text": "això és tot el que puc trobar-ne"}
 {"lang": "ca-ES", "skill": "ovos-skill-wolfie", "dialog": "no_answer.dialog", "text": "el llop no en sap la resposta"}
-{"lang": "ca-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "no.word.history.dialog", "text": "no tinc una paraula gravada per a aquest dia"}
-{"lang": "ca-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "no.word.history.dialog", "text": "només conec paraules dels dies que em van preguntar"}
-{"lang": "ca-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "spell.word.dialog", "text": "{word} s'escriu {letters}"}
-{"lang": "ca-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "unknown.wod.dialog", "text": "no sé quin és el mot del dia"}
-{"lang": "ca-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "word.of.day.dialog", "text": "el mot del dia és {word}"}
+{"lang": "ca-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "no_word_history.dialog", "text": "no tinc una paraula gravada per a aquest dia"}
+{"lang": "ca-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "no_word_history.dialog", "text": "només conec paraules dels dies que em van preguntar"}
+{"lang": "ca-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "spell_word.dialog", "text": "{word} s'escriu {letters}"}
+{"lang": "ca-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "unknown_wod.dialog", "text": "no sé quin és el mot del dia"}
+{"lang": "ca-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "word_of_day.dialog", "text": "el mot del dia és {word}"}
 {"lang": "ca-ES", "skill": "ovos-skill-wordnet", "dialog": "no_answer.dialog", "text": "word net does not know the answer"}
 {"lang": "ca-ES", "skill": "ovos-skill-wordnet", "dialog": "unresolved.dialog", "text": "no he entès quina paraula vols dir"}
 {"lang": "ca-ES", "skill": "ovos-transcription-validator-plugin", "dialog": "say_again.dialog", "text": "disculpeu, la vostra sol·licitud no estava clara. si us plau, repetiu-la."}

@@ -256,30 +256,30 @@
 {"lang": "tr-TR", "skill": "ovos-ocp-audio-plugin", "intent": "video.intent", "template": "Video {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "tr-TR", "skill": "ovos-ocp-audio-plugin", "intent": "video.intent", "template": "Videoya başlayın {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "{location} için bugünün tarihi ne", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "time.until.intent", "template": "{date} tarihine ne kadar zaman kaldı [lütfen]", "slots": ["date"], "entity_values": {"date": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "time.until.intent", "template": "{date} ne zaman", "slots": ["date"], "entity_values": {"date": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "time.until.intent", "template": "{date} tarihine kaç gün kaldı", "slots": ["date"], "entity_values": {"date": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "time.until.intent", "template": "{date} ne kadar uzakta", "slots": ["date"], "entity_values": {"date": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday.for.date.intent", "template": "{date} hangi haftanın gününe denk geliyor [lütfen]", "slots": ["date"], "entity_values": {"date": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday.for.date.intent", "template": "{date} hangi güne rastlıyor", "slots": ["date"], "entity_values": {"date": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday.for.date.intent", "template": "bana {date} tarihinin hangi gün olduğunu söyle", "slots": ["date"], "entity_values": {"date": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday.for.date.intent", "template": "{date} hangi gün olacak", "slots": ["date"], "entity_values": {"date": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "{date} bir {weekday} mi [lütfen]", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "{date} günü {weekday} gününe denk geliyor mu", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "{date} günü {weekday} müydü", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "{date} günü {weekday} olacak mı", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "Ne zaman {offset} dakika", "slots": ["offset"], "entity_values": {"offset": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "Ne zaman {offset} dakika şimdi {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "Ne zaman {offset} dakika şimdiden", "slots": ["offset"], "entity_values": {"offset": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "Ne zaman {offset} saat içinde {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "Ne zaman {offset} saatler", "slots": ["offset"], "entity_values": {"offset": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "Ne zaman {offset} saatler şimdiye kadar", "slots": ["offset"], "entity_values": {"offset": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "Ne zaman {offset} saniye", "slots": ["offset"], "entity_values": {"offset": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "Ne zaman {offset} saniyeler {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "Ne zaman {offset} saniyeler şimdi", "slots": ["offset"], "entity_values": {"offset": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "Ne zaman {offset} saniyeler şimdi {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "{offset} dakika içinde {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
-{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "Şu andan itibaren {offset} saatler şimdi {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "time_until.intent", "template": "{date} tarihine ne kadar zaman kaldı [lütfen]", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "time_until.intent", "template": "{date} ne zaman", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "time_until.intent", "template": "{date} tarihine kaç gün kaldı", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "time_until.intent", "template": "{date} ne kadar uzakta", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday_for_date.intent", "template": "{date} hangi haftanın gününe denk geliyor [lütfen]", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday_for_date.intent", "template": "{date} hangi güne rastlıyor", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday_for_date.intent", "template": "bana {date} tarihinin hangi gün olduğunu söyle", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday_for_date.intent", "template": "{date} hangi gün olacak", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday_matches_date.intent", "template": "{date} bir {weekday} mi [lütfen]", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday_matches_date.intent", "template": "{date} günü {weekday} gününe denk geliyor mu", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday_matches_date.intent", "template": "{date} günü {weekday} müydü", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "weekday_matches_date.intent", "template": "{date} günü {weekday} olacak mı", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "Ne zaman {offset} dakika", "slots": ["offset"], "entity_values": {"offset": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "Ne zaman {offset} dakika şimdi {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "Ne zaman {offset} dakika şimdiden", "slots": ["offset"], "entity_values": {"offset": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "Ne zaman {offset} saat içinde {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "Ne zaman {offset} saatler", "slots": ["offset"], "entity_values": {"offset": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "Ne zaman {offset} saatler şimdiye kadar", "slots": ["offset"], "entity_values": {"offset": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "Ne zaman {offset} saniye", "slots": ["offset"], "entity_values": {"offset": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "Ne zaman {offset} saniyeler {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "Ne zaman {offset} saniyeler şimdi", "slots": ["offset"], "entity_values": {"offset": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "Ne zaman {offset} saniyeler şimdi {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "{offset} dakika içinde {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "Şu andan itibaren {offset} saatler şimdi {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
 {"lang": "tr-TR", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "duckduckgo {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "tr-TR", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "DuckDuckGo'da {query} ara", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "tr-TR", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "DuckDuckGo {query}", "slots": ["query"], "entity_values": {"query": []}}

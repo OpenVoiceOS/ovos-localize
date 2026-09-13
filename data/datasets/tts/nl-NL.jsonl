@@ -166,8 +166,10 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "error_no_list_name.dialog", "text": "je moet een naam opgeven voor de lijst"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "error_no_repeat.dialog", "text": "je moet me een tijdsinterval geven. dat kunnen enkele dagen zijn of kortere tijdsperiodes."}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "error_no_scheduled_kind.dialog", "text": "je hebt geen geplande {kind}."}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "error_no_script.dialog", "text": "ik heb niet gehoord welk audiobestand te gebruiken is voor je {kind}."}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "error_no_time.dialog", "text": "ik heb geen tijd verstaan om je {kind} in te stellen. probeer het opnieuw."}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "error_nothing_to_cancel.dialog", "text": "ik kon geen melding vinden die overeenkomt."}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "error_same_priority.dialog", "text": "de prioriteit is al op die waarde gesteld."}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "expired_alert.dialog", "text": "je {name}-melding is actief."}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "expired_audio_alert_intro.dialog", "text": "je hebt een audioherinnering."}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "expired_reminder.dialog", "text": "dit is je herinnering: {name}."}
@@ -199,6 +201,8 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "list_todo_reminder.dialog", "text": "ik herinner je graag aan het volgende: {reminders}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems.dialog", "text": "op de lijst {name} staan {items}."}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems_added.dialog", "text": "ik heb {num} items toegevoegd."}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "media_type_changed.dialog", "text": "veranderde het geluid van {old} naar {new}."}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "media_type_set.dialog", "text": "stel het geluid in op {new}."}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "monday.dialog", "text": "maandag"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "music.dialog", "text": "muziek"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "next_alert.dialog", "text": "je volgende item is {name} op {begin}."}
@@ -209,7 +213,9 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "ocp_searching.dialog", "text": "ik check de media titel"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "once.dialog", "text": "eenmalig"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "pick_multiple_entries.dialog", "text": "er zijn meerdere vergelijkbare items. welke zal ik kiezen?"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "please.repeat.dialog", "text": "sorry, dat kon ik niet horen."}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "podcast.dialog", "text": "podcast"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "property_changed_priority.dialog", "text": "prioriteit aangepast aan {num}."}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "reminder_ask_time.dialog", "text": "moet ik je er op een specifiek tijdstip aan herinneren?"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "remove_list_items_ask.dialog", "text": "maak een lijst van de items die verwijderd moeten worden."}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "dialog": "repeating_every.dialog", "text": "elke {repeat}"}
@@ -286,22 +292,53 @@
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "de huidige datum is {date}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "het is {date}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "{date}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date.not.found.dialog", "text": "ik kan deze datum niet vinden."}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "het is {date}, over {num_days}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "het is {date}, {num_days} vanaf nu"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "{date}, is {num_days} vanaf heden"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "{date}, over {num_days}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date.relative.past.dialog", "text": "het was {date}, {num_days} geleden"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date.relative.past.dialog", "text": "{date}, is {num_days} geleden"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "did.you.mean.timezone.dialog", "text": "bedoelde je {zone_name} tijdzone?"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "de huidige tijd is {time}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "het is {time}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "momenteel is het {time}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "momenteel {time}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "{time}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time.future.dialog", "text": "het zal {time} zijn"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time.future.dialog", "text": "{time}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time.tz.not.found.dialog", "text": "ik kon de tijdzone niet vinden voor {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date_not_found.dialog", "text": "ik kan deze datum niet vinden."}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "het is {date}, over {num_days}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "het is {date}, {num_days} vanaf nu"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, is {num_days} vanaf heden"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, over {num_days}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "het was {date}, {num_days} geleden"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "{date}, is {num_days} geleden"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "het is {day}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "het is vandaag {day}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "de huidige dag is {day}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "vandaag is {day}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "did_you_mean_timezone.dialog", "text": "bedoelde je {zone_name} tijdzone?"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "extract_date_error.dialog", "text": "ik snap niet welke datum je vraagt."}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_no.dialog", "text": "nee, {year} is geen schrikkeljaar."}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_yes.dialog", "text": "ja, {year} is een schrikkeljaar."}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_no.dialog", "text": "nee. het volgende schrikkeljaar daarna zal {year} zijn."}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_yes.dialog", "text": "ja, {year} is een schrikkeljaar."}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_no.dialog", "text": "nee, {year} zal geen schrikkeljaar zijn."}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_yes.dialog", "text": "ja, {year} zal een schrikkeljaar zijn."}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "het is {month}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "het is nu {month}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "de huidige maand is {month}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "deze maand is {month}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "de huidige tijd is {time}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "het is {time}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "momenteel is het {time}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "momenteel {time}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "het zal {time} zijn"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "{time}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time_tz_not_found.dialog", "text": "ik kon de tijdzone niet vinden voor {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_future.dialog", "text": "op {date} wordt het {weekday}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_past.dialog", "text": "op {date} was het {weekday}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "het is {weekday}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "het is vandaag {weekday}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "de huidige weekdag is {weekday}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "vandaag is {weekday}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_no.dialog", "text": "nee, {date} is {actual_weekday}, niet {weekday}."}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_yes.dialog", "text": "ja, {date} is {weekday}."}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_no.dialog", "text": "nee, {date} was {actual_weekday}, niet {weekday}."}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_yes.dialog", "text": "ja, {date} was {weekday}."}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_no.dialog", "text": "nee, {date} is {actual_weekday}, niet {weekday}."}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_yes.dialog", "text": "ja, {date} is {weekday}."}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "het is {year}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "het lopende jaar is {year}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "dit jaar is {year}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "we zitten nu in {year}"}
 {"lang": "nl-NL", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "ik kon geen antwoord vinden op duckduckgo."}
 {"lang": "nl-NL", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "sorry, duckduckgo heeft geen resultaat teruggegeven."}
 {"lang": "nl-NL", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "ik heb niets gevonden op duckduckgo hiervoor."}
@@ -2114,7 +2151,13 @@
 {"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "dialog": "error_no_pokemon.dialog", "text": "je hebt me niet verteld over welke pokemon je iets wilt weten!"}
 {"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "dialog": "error_not_found.dialog", "text": "ik kon die pokemon nu niet vinden. probeer het later opnieuw!"}
 {"lang": "nl-NL", "skill": "ovos-skill-pokepedia", "dialog": "pokemon_type.dialog", "text": "{pokemon_name} is een {types} type. {explanation}!"}
+{"lang": "nl-NL", "skill": "ovos-skill-screenshot", "dialog": "screenshot_delayed.dialog", "text": "een schermafdruk maken in {delay} seconden"}
+{"lang": "nl-NL", "skill": "ovos-skill-screenshot", "dialog": "screenshot_delayed.dialog", "text": "{delay} seconden en zeg kaas"}
+{"lang": "nl-NL", "skill": "ovos-skill-screenshot", "dialog": "screenshot_failed.dialog", "text": "ik kon de screenshot niet maken."}
+{"lang": "nl-NL", "skill": "ovos-skill-screenshot", "dialog": "screenshot_failed.dialog", "text": "schermafdruk mislukt"}
+{"lang": "nl-NL", "skill": "ovos-skill-screenshot", "dialog": "screenshot_taken.dialog", "text": "screenshot gemaakt"}
 {"lang": "nl-NL", "skill": "ovos-skill-speedtest", "dialog": "error.dialog", "text": "er is iets fout gegaan, ik kon geen snelheidstest uitvoeren... sorry."}
+{"lang": "nl-NL", "skill": "ovos-skill-speedtest", "dialog": "ping.dialog", "text": "ping is {ping} milliseconden"}
 {"lang": "nl-NL", "skill": "ovos-skill-speedtest", "dialog": "result.dialog", "text": "de download snelheid is {down} megabit per seconde en de upload snelheid is {up} megabit per seconde."}
 {"lang": "nl-NL", "skill": "ovos-skill-speedtest", "dialog": "running.dialog", "text": "de snelheidstest wordt nu gestart, ik ben zo terug met de resultaten."}
 {"lang": "nl-NL", "skill": "ovos-skill-spelling", "dialog": "what.word.dialog", "text": "welk woord wil je dat ik spel?"}
@@ -2358,16 +2401,22 @@
 {"lang": "nl-NL", "skill": "ovos-skill-wikihow", "dialog": "step.dialog", "text": "stap {number}, {step}"}
 {"lang": "nl-NL", "skill": "ovos-skill-wikipedia", "dialog": "no entry found.dialog", "text": "ik ben bang dat er geen artikel over is"}
 {"lang": "nl-NL", "skill": "ovos-skill-wikipedia", "dialog": "no entry found.dialog", "text": "ik kan hier helaas geen wikipedia-artikel over vinden"}
+{"lang": "nl-NL", "skill": "ovos-skill-wikipedia", "dialog": "no_answer.dialog", "text": "daar heb ik geen antwoord op gevonden."}
+{"lang": "nl-NL", "skill": "ovos-skill-wikipedia", "dialog": "no_answer.dialog", "text": "daar kon ik niets over vinden."}
+{"lang": "nl-NL", "skill": "ovos-skill-wikipedia", "dialog": "no_query.dialog", "text": "wie of wat wil je dat ik opkijk op wikipedia?"}
+{"lang": "nl-NL", "skill": "ovos-skill-wikipedia", "dialog": "no_query.dialog", "text": "waar moet ik wikipedia voor zoeken?"}
+{"lang": "nl-NL", "skill": "ovos-skill-wikipedia", "dialog": "nothing.more.dialog", "text": "dat is alles wat ik heb op {title}"}
+{"lang": "nl-NL", "skill": "ovos-skill-wikipedia", "dialog": "nothing.more.dialog", "text": "dat is alles wat wikipedia me geeft over {title}"}
 {"lang": "nl-NL", "skill": "ovos-skill-wikipedia", "dialog": "searching.dialog", "text": "ik check wikipedia voor {query}"}
 {"lang": "nl-NL", "skill": "ovos-skill-wikipedia", "dialog": "searching.dialog", "text": "ik ga {query} opzoeken op wikipedia"}
 {"lang": "nl-NL", "skill": "ovos-skill-wikipedia", "dialog": "thats all.dialog", "text": "dat is alles wat ik kan vinden"}
 {"lang": "nl-NL", "skill": "ovos-skill-wikipedia", "dialog": "thats all.dialog", "text": "dat is alles wat ik weet"}
 {"lang": "nl-NL", "skill": "ovos-skill-wolfie", "dialog": "no_answer.dialog", "text": "de wolf weet het antwoord niet"}
-{"lang": "nl-NL", "skill": "ovos-skill-word-of-the-day", "dialog": "no.word.history.dialog", "text": "ik heb geen woord voor die dag opgeslagen"}
-{"lang": "nl-NL", "skill": "ovos-skill-word-of-the-day", "dialog": "no.word.history.dialog", "text": "ik ken alleen woorden van dagen waarnaar is gevraagd"}
-{"lang": "nl-NL", "skill": "ovos-skill-word-of-the-day", "dialog": "spell.word.dialog", "text": "{word} wordt gespeld als {letters}"}
-{"lang": "nl-NL", "skill": "ovos-skill-word-of-the-day", "dialog": "unknown.wod.dialog", "text": "ik ken het woord van de dag niet"}
-{"lang": "nl-NL", "skill": "ovos-skill-word-of-the-day", "dialog": "word.of.day.dialog", "text": "het woord van de dag is {word}"}
+{"lang": "nl-NL", "skill": "ovos-skill-word-of-the-day", "dialog": "no_word_history.dialog", "text": "ik heb geen woord voor die dag opgeslagen"}
+{"lang": "nl-NL", "skill": "ovos-skill-word-of-the-day", "dialog": "no_word_history.dialog", "text": "ik ken alleen woorden van dagen waarnaar is gevraagd"}
+{"lang": "nl-NL", "skill": "ovos-skill-word-of-the-day", "dialog": "spell_word.dialog", "text": "{word} wordt gespeld als {letters}"}
+{"lang": "nl-NL", "skill": "ovos-skill-word-of-the-day", "dialog": "unknown_wod.dialog", "text": "ik ken het woord van de dag niet"}
+{"lang": "nl-NL", "skill": "ovos-skill-word-of-the-day", "dialog": "word_of_day.dialog", "text": "het woord van de dag is {word}"}
 {"lang": "nl-NL", "skill": "ovos-skill-wordnet", "dialog": "no_answer.dialog", "text": "wordnet kent het antwoord niet"}
 {"lang": "nl-NL", "skill": "ovos-skill-wordnet", "dialog": "unresolved.dialog", "text": "ik heb niet begrepen welk woord je bedoelt"}
 {"lang": "nl-NL", "skill": "ovos-transcription-validator-plugin", "dialog": "say_again.dialog", "text": "excuses, ik heb het niet opgevangen. wilt u het alstublieft opnieuw zeggen?"}

@@ -350,30 +350,30 @@
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(какие пункты|что) (в списке|в моём списке) [{name}]", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(прочитай|покажи) [мне] (пункты|записи) списка [{name}]", "slots": ["name"], "entity_values": {"name": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "какая сегодня дата в {location}", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "time.until.intent", "template": "сколько времени осталось до {date} [пожалуйста]", "slots": ["date"], "entity_values": {"date": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "time.until.intent", "template": "когда будет {date}", "slots": ["date"], "entity_values": {"date": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "time.until.intent", "template": "сколько дней осталось до {date}", "slots": ["date"], "entity_values": {"date": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "time.until.intent", "template": "как далеко {date}", "slots": ["date"], "entity_values": {"date": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "weekday.for.date.intent", "template": "какой день недели будет {date} [пожалуйста]", "slots": ["date"], "entity_values": {"date": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "weekday.for.date.intent", "template": "на какой день недели выпадает {date}", "slots": ["date"], "entity_values": {"date": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "weekday.for.date.intent", "template": "скажи мне, какой день {date}", "slots": ["date"], "entity_values": {"date": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "weekday.for.date.intent", "template": "каким днём недели будет {date}", "slots": ["date"], "entity_values": {"date": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "выпадает ли {date} на {weekday} [пожалуйста]", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "является ли {date} днём {weekday}", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "был ли {date} днём {weekday}", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "weekday.matches.date.intent", "template": "будет ли {date} днём {weekday}", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "когда это {offset} за считанные минуты", "slots": ["offset"], "entity_values": {"offset": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "когда это {offset} минут от этого в {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "когда это {offset} минуты", "slots": ["offset"], "entity_values": {"offset": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "когда это {offset} минуты в {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "когда это {offset} отныне", "slots": ["offset"], "entity_values": {"offset": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "когда это {offset} секунд", "slots": ["offset"], "entity_values": {"offset": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "когда это {offset} секунд в {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "когда это {offset} секунд от", "slots": ["offset"], "entity_values": {"offset": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "когда это {offset} секунд отныне в {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "когда это {offset} часы", "slots": ["offset"], "entity_values": {"offset": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "когда это {offset} часы в {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what.time.will.it.be.intent", "template": "когда это {offset} часы отныне в {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "time_until.intent", "template": "сколько времени осталось до {date} [пожалуйста]", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "time_until.intent", "template": "когда будет {date}", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "time_until.intent", "template": "сколько дней осталось до {date}", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "time_until.intent", "template": "как далеко {date}", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "weekday_for_date.intent", "template": "какой день недели будет {date} [пожалуйста]", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "weekday_for_date.intent", "template": "на какой день недели выпадает {date}", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "weekday_for_date.intent", "template": "скажи мне, какой день {date}", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "weekday_for_date.intent", "template": "каким днём недели будет {date}", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "weekday_matches_date.intent", "template": "выпадает ли {date} на {weekday} [пожалуйста]", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "weekday_matches_date.intent", "template": "является ли {date} днём {weekday}", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "weekday_matches_date.intent", "template": "был ли {date} днём {weekday}", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "weekday_matches_date.intent", "template": "будет ли {date} днём {weekday}", "slots": ["date", "weekday"], "entity_values": {"date": [], "weekday": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "когда это {offset} за считанные минуты", "slots": ["offset"], "entity_values": {"offset": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "когда это {offset} минут от этого в {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "когда это {offset} минуты", "slots": ["offset"], "entity_values": {"offset": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "когда это {offset} минуты в {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "когда это {offset} отныне", "slots": ["offset"], "entity_values": {"offset": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "когда это {offset} секунд", "slots": ["offset"], "entity_values": {"offset": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "когда это {offset} секунд в {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "когда это {offset} секунд от", "slots": ["offset"], "entity_values": {"offset": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "когда это {offset} секунд отныне в {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "когда это {offset} часы", "slots": ["offset"], "entity_values": {"offset": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "когда это {offset} часы в {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "what_time_will_it_be.intent", "template": "когда это {offset} часы отныне в {location}", "slots": ["offset", "location"], "entity_values": {"offset": [], "location": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "duckduckgo {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "найди в DuckDuckGo {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "DuckDuckGo {query}", "slots": ["query"], "entity_values": {"query": []}}

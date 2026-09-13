@@ -7656,11 +7656,6 @@
 {"lang": "fr-FR", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request-color-by-rgb.intent", "text": "quelle couleur a une valeur rvb de {rgb}"}
 {"lang": "fr-FR", "skill": "ovos-skill-common-reading-example", "file_type": "voc", "intent": "collection.voc", "text": "blog ovos"}
 {"lang": "fr-FR", "skill": "ovos-skill-common-reading-example", "file_type": "voc", "intent": "collection.voc", "text": "blog openvoiceos"}
-{"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "intent", "intent": "ConfuciusQuote.intent", "text": "dis-moi une citation de confucius"}
-{"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "intent", "intent": "ConfuciusQuote.intent", "text": "donne-moi une citation de confucius"}
-{"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "intent", "intent": "ConfuciusQuote.intent", "text": "qu'est-ce que disait confucius"}
-{"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "intent", "intent": "ConfuciusQuote.intent", "text": "que disait confucius"}
-{"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "intent", "intent": "ConfuciusQuote.intent", "text": "citation de confucius"}
 {"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "voc", "intent": "birth.voc", "text": "anniversaire"}
 {"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "voc", "intent": "birth.voc", "text": "naissance"}
 {"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "voc", "intent": "birth.voc", "text": "né"}
@@ -7677,6 +7672,11 @@
 {"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "intent", "intent": "confucius_lifespan.intent", "text": "entre quelles années a vécu confucius"}
 {"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "intent", "intent": "confucius_lifespan.intent", "text": "confucius est-il encore vivant"}
 {"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "intent", "intent": "confucius_lifespan.intent", "text": "confucius est-il vivant"}
+{"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "intent", "intent": "confucius_quote.intent", "text": "dis-moi une citation de confucius"}
+{"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "intent", "intent": "confucius_quote.intent", "text": "donne-moi une citation de confucius"}
+{"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "intent", "intent": "confucius_quote.intent", "text": "qu'est-ce que disait confucius"}
+{"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "intent", "intent": "confucius_quote.intent", "text": "que disait confucius"}
+{"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "intent", "intent": "confucius_quote.intent", "text": "citation de confucius"}
 {"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "voc", "intent": "death.voc", "text": "décès"}
 {"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "voc", "intent": "death.voc", "text": "mort"}
 {"lang": "fr-FR", "skill": "ovos-skill-confucius-quotes", "file_type": "voc", "intent": "death.voc", "text": "mourir"}
@@ -7764,343 +7764,337 @@
 {"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "quelle est la date du jour"}
 {"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "quelle est la date en {location}"}
 {"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "quelle est la date à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.future.weekend.intent", "text": "dis-moi les dates du week-end prochain"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.future.weekend.intent", "text": "peux-tu me dire quand est le prochain week-end"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.future.weekend.intent", "text": "quand est le prochain week-end"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.future.weekend.intent", "text": "quand est le week-end prochain"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.future.weekend.intent", "text": "quelles sont les dates de ce week-end"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.future.weekend.intent", "text": "quelles sont les dates du prochain week-end"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.future.weekend.intent", "text": "quelles sont les dates du week-end prochain"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.future.weekend.intent", "text": "quelles sont les dates du week-end à venir"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.last.weekend.intent", "text": "c'était quand le week-end dernier"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.last.weekend.intent", "text": "dis-moi les dates du week-end dernier"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.last.weekend.intent", "text": "peux-tu me dire quand était le week-end dernier"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.last.weekend.intent", "text": "quand était le week-end dernier"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.last.weekend.intent", "text": "quelle était la date du week-end dernier"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date.last.weekend.intent", "text": "quelles étaient les dates du week-end dernier"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "cette année est-elle bissextile"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "cette année est-elle bissextile ou l'an prochain"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "cette année est-elle bissextile ou l'année prochaine"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "cette année est-elle bissextile ou la prochaine"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "est-ce que cette année est bissextile"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "est-ce que cette année est bissextile ou l'an prochain"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "est-ce que cette année est bissextile ou l'année prochaine"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "est-ce que cette année est bissextile ou la prochaine"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "est-ce que l'an prochain est bissextile"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "est-ce que l'année prochaine est bissextile"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "l'an prochain est-il bissextile"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is.leap.year.intent", "text": "l'année prochaine est-elle bissextile"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "leap.year.scope.either.voc", "text": "ou la prochaine"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "leap.year.scope.either.voc", "text": "ou l'année prochaine"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "leap.year.scope.either.voc", "text": "ou l'an prochain"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "leap.year.scope.either.voc", "text": "ou la suivante"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "leap.year.scope.next.voc", "text": "année prochaine"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "leap.year.scope.next.voc", "text": "an prochain"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "c'est quand la prochaine année bissextile"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "en quelle année aura lieu le prochain 29 février"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "en quelle année tombe la prochaine année bissextile"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "quand aura lieu le prochain 29 février"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "quand aura-t-on une année bissextile de nouveau"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "quand aurons-nous de nouveau un 29 février"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "quand aurons-nous de nouveau une année bissextile"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "quand est la prochaine année bissextile"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "quel est le prochain 29 février"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "quelle est la prochaine année avec 366 jours"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "quelle est la prochaine année avec un 29 février"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "quelle est la prochaine année avec un jour de plus en février"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "quelle est la prochaine année bissextile"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next.leap.year.intent", "text": "quelle sera la prochaine année bissextile"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "c'était il y a combien de temps {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "combien d'heures avant {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "combien d'heures reste-t-il avant {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "combien de jours avant {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "combien de jours jusqu'à {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "combien de jours reste-t-il avant {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "combien de semaines avant {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "combien de semaines reste-t-il avant {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "combien de temps avant {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "combien de temps reste-t-il avant {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "combien de temps reste-t-il jusqu'à {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "dans combien de temps est {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "dans combien de temps sera {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "il y a combien de jours c'était {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time.until.intent", "text": "il y a combien de temps c'était {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "dis-moi quel jour de la semaine était {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "dis-moi quel jour tombe {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "le {date} tombe quel jour"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "peux-tu me dire quel jour de la semaine est {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "peux-tu me dire quel jour tombe {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "quel est le jour de la semaine du {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "quel jour de la semaine est {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "quel jour de la semaine tombe {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "quel jour de la semaine était {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "quel jour est {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "quel jour tombe {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "quel jour était {date}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "{date} c'était quel jour"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.for.date.intent", "text": "{date} tombe quel jour"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.matches.date.intent", "text": "est-ce que {date} tombe un {weekday}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.matches.date.intent", "text": "le {date} tombe-t-il un {weekday}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.matches.date.intent", "text": "le {date} tombait-il un {weekday}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday.matches.date.intent", "text": "le {date} tombera-t-il un {weekday}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "dis-moi le jour du mois"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "dis-moi le quantième"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "donne-moi le jour du mois"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "nous sommes le combien"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "on est le combien"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "on est le combien au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "on est le combien aujourd'hui"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "on est le combien aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "on est le combien dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "on est le combien en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "on est le combien à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "quantième du mois"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "quel est le jour du mois"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "quel est le jour du mois au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "quel est le jour du mois aujourd'hui"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "quel est le jour du mois aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "quel est le jour du mois dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "quel est le jour du mois en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "quel est le jour du mois à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "quel est le quantième du mois"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "quel jour du mois est-ce"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "quel jour du mois sommes-nous"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "quel numéro du jour du mois sommes-nous"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.day.is.it.intent", "text": "quel quantième sommes-nous"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "dis-moi quel mois on est"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "donne-moi le mois actuel"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "est-on en août"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "est-on en avril"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "est-on en décembre"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "est-on en février"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "est-on en janvier"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "est-on en juillet"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "est-on en juin"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "est-on en mai"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "est-on en mars"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "est-on en novembre"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "est-on en octobre"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "est-on en septembre"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "nous sommes en quel mois"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "on est en quel mois"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "quel est le mois actuel"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "quel est le mois en cours"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "quel mois est-ce"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "quel mois sommes-nous"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "sommes-nous en août"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "sommes-nous en avril"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "sommes-nous en décembre"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "sommes-nous en février"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "sommes-nous en janvier"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "sommes-nous en juillet"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "sommes-nous en juin"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "sommes-nous en mai"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "sommes-nous en mars"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "sommes-nous en novembre"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "sommes-nous en octobre"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.month.is.it.intent", "text": "sommes-nous en septembre"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "dis-moi l'heure"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "dis-moi l'heure au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "dis-moi l'heure aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "dis-moi l'heure dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "dis-moi l'heure en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "dis-moi l'heure à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "donne-moi l'heure"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "donne-moi l'heure au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "donne-moi l'heure aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "donne-moi l'heure dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "donne-moi l'heure en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "donne-moi l'heure à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "il est quelle heure"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "il est quelle heure au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "il est quelle heure aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "il est quelle heure dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "il est quelle heure en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "il est quelle heure à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "j'ai besoin de l'heure"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "j'ai besoin de l'heure au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "j'ai besoin de l'heure aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "j'ai besoin de l'heure dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "j'ai besoin de l'heure en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "j'ai besoin de l'heure à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "l'heure actuelle"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "l'heure actuelle au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "l'heure actuelle aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "l'heure actuelle dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "l'heure actuelle en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "l'heure actuelle à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "l'heure du moment"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "l'heure du moment au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "l'heure du moment aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "l'heure du moment dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "l'heure du moment en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "l'heure du moment à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "peux-tu me dire l'heure"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "peux-tu me dire l'heure au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "peux-tu me dire l'heure aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "peux-tu me dire l'heure dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "peux-tu me dire l'heure en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "peux-tu me dire l'heure à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "peux-tu me donner l'heure"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "peux-tu me donner l'heure au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "peux-tu me donner l'heure aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "peux-tu me donner l'heure dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "peux-tu me donner l'heure en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "peux-tu me donner l'heure à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il actuellement"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il actuellement au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il actuellement aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il actuellement dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il actuellement en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il actuellement à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il en ce moment"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il en ce moment au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il en ce moment aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il en ce moment dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il en ce moment en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il en ce moment à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il maintenant"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il maintenant au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il maintenant aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il maintenant dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il maintenant en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il maintenant à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "quelle heure est-il à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "tu as l'heure"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "tu as l'heure au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "tu as l'heure aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "tu as l'heure dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "tu as l'heure en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.is.it.intent", "text": "tu as l'heure à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} heure quelle heure sera-t-il"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} heure quelle heure sera-t-il au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} heure quelle heure sera-t-il aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} heure quelle heure sera-t-il dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} heure quelle heure sera-t-il en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} heure quelle heure sera-t-il à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} heures quelle heure sera-t-il"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} heures quelle heure sera-t-il au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} heures quelle heure sera-t-il aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} heures quelle heure sera-t-il dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} heures quelle heure sera-t-il en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} heures quelle heure sera-t-il à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} minute quelle heure sera-t-il"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} minute quelle heure sera-t-il au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} minute quelle heure sera-t-il aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} minute quelle heure sera-t-il dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} minute quelle heure sera-t-il en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} minute quelle heure sera-t-il à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} minutes quelle heure sera-t-il"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} minutes quelle heure sera-t-il au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} minutes quelle heure sera-t-il aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} minutes quelle heure sera-t-il dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} minutes quelle heure sera-t-il en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} minutes quelle heure sera-t-il à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} seconde quelle heure sera-t-il"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} seconde quelle heure sera-t-il au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} seconde quelle heure sera-t-il aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} seconde quelle heure sera-t-il dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} seconde quelle heure sera-t-il en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} seconde quelle heure sera-t-il à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} secondes quelle heure sera-t-il"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} secondes quelle heure sera-t-il au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} secondes quelle heure sera-t-il aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} secondes quelle heure sera-t-il dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} secondes quelle heure sera-t-il en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "après {offset} secondes quelle heure sera-t-il à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} heure quelle heure sera-t-il"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} heure quelle heure sera-t-il au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} heure quelle heure sera-t-il aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} heure quelle heure sera-t-il dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} heure quelle heure sera-t-il en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} heure quelle heure sera-t-il à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} heures quelle heure sera-t-il"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} heures quelle heure sera-t-il au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} heures quelle heure sera-t-il aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} heures quelle heure sera-t-il dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} heures quelle heure sera-t-il en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} heures quelle heure sera-t-il à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} minute quelle heure sera-t-il"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} minute quelle heure sera-t-il au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} minute quelle heure sera-t-il aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} minute quelle heure sera-t-il dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} minute quelle heure sera-t-il en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} minute quelle heure sera-t-il à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} minutes quelle heure sera-t-il"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} minutes quelle heure sera-t-il au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} minutes quelle heure sera-t-il aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} minutes quelle heure sera-t-il dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} minutes quelle heure sera-t-il en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} minutes quelle heure sera-t-il à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} seconde quelle heure sera-t-il"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} seconde quelle heure sera-t-il au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} seconde quelle heure sera-t-il aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} seconde quelle heure sera-t-il dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} seconde quelle heure sera-t-il en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} seconde quelle heure sera-t-il à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} secondes quelle heure sera-t-il"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} secondes quelle heure sera-t-il au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} secondes quelle heure sera-t-il aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} secondes quelle heure sera-t-il dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} secondes quelle heure sera-t-il en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "dans {offset} secondes quelle heure sera-t-il à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "si j'attends {offset} heures quelle heure sera-t-il"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "si j'attends {offset} heures quelle heure sera-t-il au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "si j'attends {offset} heures quelle heure sera-t-il aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "si j'attends {offset} heures quelle heure sera-t-il dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "si j'attends {offset} heures quelle heure sera-t-il en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "si j'attends {offset} heures quelle heure sera-t-il à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "si j'attends {offset} minutes quelle heure sera-t-il"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "si j'attends {offset} minutes quelle heure sera-t-il au {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "si j'attends {offset} minutes quelle heure sera-t-il aux {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "si j'attends {offset} minutes quelle heure sera-t-il dans {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "si j'attends {offset} minutes quelle heure sera-t-il en {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.time.will.it.be.intent", "text": "si j'attends {offset} minutes quelle heure sera-t-il à {location}"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "c'est quel jour aujourd'hui"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "dis-moi le jour de la semaine"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "donne-moi le jour de la semaine"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "est-ce dimanche aujourd'hui"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "est-ce jeudi aujourd'hui"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "est-ce lundi aujourd'hui"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "est-ce mardi aujourd'hui"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "est-ce mercredi aujourd'hui"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "est-ce samedi aujourd'hui"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "est-ce vendredi aujourd'hui"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "nous sommes quel jour"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "on est quel jour"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "quel jour de la semaine est-on"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "quel jour de la semaine sommes-nous"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "quel jour on est"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "quel jour sommes-nous aujourd'hui"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "sommes-nous dimanche"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "sommes-nous jeudi"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "sommes-nous lundi"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "sommes-nous mardi"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "sommes-nous mercredi"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "sommes-nous samedi"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.weekday.is.it.intent", "text": "sommes-nous vendredi"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "année actuelle"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "année en cours"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "c'est quelle année"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "dis-moi l'année actuelle"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "donne-moi l'année actuelle"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "en quelle année est-on"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "nous sommes en quelle année"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "on est en quelle année"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "quelle année sommes-nous"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "quelle est l'année actuelle"}
-{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what.year.is.it.intent", "text": "quelle est l'année en cours"}
-{"lang": "fr-FR", "skill": "ovos-skill-days-in-history_0", "file_type": "intent", "intent": "TellMeMoreIntent.intent", "text": "dis-m'en plus"}
-{"lang": "fr-FR", "skill": "ovos-skill-days-in-history_0", "file_type": "intent", "intent": "TellMeMoreIntent.intent", "text": "la suite"}
-{"lang": "fr-FR", "skill": "ovos-skill-days-in-history_0", "file_type": "intent", "intent": "TellMeMoreIntent.intent", "text": "raconte la suite"}
-{"lang": "fr-FR", "skill": "ovos-skill-days-in-history_0", "file_type": "intent", "intent": "TellMeMoreIntent.intent", "text": "un autre événement"}
-{"lang": "fr-FR", "skill": "ovos-skill-days-in-history_0", "file_type": "intent", "intent": "TellMeMoreIntent.intent", "text": "continue"}
-{"lang": "fr-FR", "skill": "ovos-skill-days-in-history_0", "file_type": "intent", "intent": "TellMeMoreIntent.intent", "text": "encore"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_future_weekend.intent", "text": "dis-moi les dates du week-end prochain"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_future_weekend.intent", "text": "peux-tu me dire quand est le prochain week-end"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_future_weekend.intent", "text": "quand est le prochain week-end"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_future_weekend.intent", "text": "quand est le week-end prochain"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_future_weekend.intent", "text": "quelles sont les dates de ce week-end"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_future_weekend.intent", "text": "quelles sont les dates du prochain week-end"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_future_weekend.intent", "text": "quelles sont les dates du week-end prochain"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_future_weekend.intent", "text": "quelles sont les dates du week-end à venir"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_last_weekend.intent", "text": "c'était quand le week-end dernier"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_last_weekend.intent", "text": "dis-moi les dates du week-end dernier"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_last_weekend.intent", "text": "peux-tu me dire quand était le week-end dernier"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_last_weekend.intent", "text": "quand était le week-end dernier"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_last_weekend.intent", "text": "quelle était la date du week-end dernier"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_last_weekend.intent", "text": "quelles étaient les dates du week-end dernier"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is_leap_year.intent", "text": "cette année est-elle bissextile"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is_leap_year.intent", "text": "cette année est-elle bissextile ou l'an prochain"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is_leap_year.intent", "text": "cette année est-elle bissextile ou l'année prochaine"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is_leap_year.intent", "text": "cette année est-elle bissextile ou la prochaine"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is_leap_year.intent", "text": "est-ce que cette année est bissextile"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is_leap_year.intent", "text": "est-ce que cette année est bissextile ou l'an prochain"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is_leap_year.intent", "text": "est-ce que cette année est bissextile ou l'année prochaine"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is_leap_year.intent", "text": "est-ce que cette année est bissextile ou la prochaine"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is_leap_year.intent", "text": "est-ce que l'an prochain est bissextile"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is_leap_year.intent", "text": "est-ce que l'année prochaine est bissextile"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is_leap_year.intent", "text": "l'an prochain est-il bissextile"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "is_leap_year.intent", "text": "l'année prochaine est-elle bissextile"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "leap_year_scope_either.voc", "text": "ou la prochaine"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "leap_year_scope_either.voc", "text": "ou l'année prochaine"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "leap_year_scope_either.voc", "text": "ou l'an prochain"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "leap_year_scope_either.voc", "text": "ou la suivante"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "leap_year_scope_next.voc", "text": "année prochaine"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "leap_year_scope_next.voc", "text": "an prochain"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "c'est quand la prochaine année bissextile"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "en quelle année aura lieu le prochain 29 février"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "en quelle année tombe la prochaine année bissextile"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "quand aura lieu le prochain 29 février"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "quand aura-t-on une année bissextile de nouveau"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "quand aurons-nous de nouveau un 29 février"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "quand aurons-nous de nouveau une année bissextile"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "quand est la prochaine année bissextile"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "quel est le prochain 29 février"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "quelle est la prochaine année avec 366 jours"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "quelle est la prochaine année avec un 29 février"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "quelle est la prochaine année avec un jour de plus en février"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "quelle est la prochaine année bissextile"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "quelle sera la prochaine année bissextile"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "c'était il y a combien de temps {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "combien d'heures avant {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "combien d'heures reste-t-il avant {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "combien de jours avant {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "combien de jours jusqu'à {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "combien de jours reste-t-il avant {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "combien de semaines avant {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "combien de semaines reste-t-il avant {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "combien de temps avant {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "combien de temps reste-t-il avant {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "combien de temps reste-t-il jusqu'à {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "dans combien de temps est {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "dans combien de temps sera {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "il y a combien de jours c'était {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "il y a combien de temps c'était {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "dis-moi quel jour de la semaine était {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "dis-moi quel jour tombe {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "le {date} tombe quel jour"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "peux-tu me dire quel jour de la semaine est {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "peux-tu me dire quel jour tombe {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "quel est le jour de la semaine du {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "quel jour de la semaine est {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "quel jour de la semaine tombe {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "quel jour de la semaine était {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "quel jour est {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "quel jour tombe {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "quel jour était {date}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "{date} c'était quel jour"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "{date} tombe quel jour"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "est-ce que {date} tombe un {weekday}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "le {date} tombe-t-il un {weekday}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "le {date} tombait-il un {weekday}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "le {date} tombera-t-il un {weekday}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "dis-moi le jour du mois"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "dis-moi le quantième"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "donne-moi le jour du mois"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "nous sommes le combien"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "on est le combien"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "on est le combien au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "on est le combien aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "on est le combien aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "on est le combien dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "on est le combien en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "on est le combien à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "quantième du mois"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "quel est le jour du mois"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "quel est le jour du mois au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "quel est le jour du mois aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "quel est le jour du mois aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "quel est le jour du mois dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "quel est le jour du mois en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "quel est le jour du mois à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "quel est le quantième du mois"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "quel jour du mois est-ce"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "quel jour du mois sommes-nous"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "quel numéro du jour du mois sommes-nous"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "quel quantième sommes-nous"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "dis-moi quel mois on est"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "donne-moi le mois actuel"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "est-on en août"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "est-on en avril"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "est-on en décembre"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "est-on en février"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "est-on en janvier"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "est-on en juillet"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "est-on en juin"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "est-on en mai"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "est-on en mars"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "est-on en novembre"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "est-on en octobre"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "est-on en septembre"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "nous sommes en quel mois"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "on est en quel mois"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "quel est le mois actuel"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "quel est le mois en cours"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "quel mois est-ce"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "quel mois sommes-nous"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "sommes-nous en août"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "sommes-nous en avril"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "sommes-nous en décembre"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "sommes-nous en février"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "sommes-nous en janvier"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "sommes-nous en juillet"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "sommes-nous en juin"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "sommes-nous en mai"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "sommes-nous en mars"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "sommes-nous en novembre"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "sommes-nous en octobre"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "sommes-nous en septembre"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "dis-moi l'heure"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "dis-moi l'heure au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "dis-moi l'heure aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "dis-moi l'heure dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "dis-moi l'heure en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "dis-moi l'heure à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "donne-moi l'heure"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "donne-moi l'heure au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "donne-moi l'heure aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "donne-moi l'heure dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "donne-moi l'heure en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "donne-moi l'heure à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "il est quelle heure"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "il est quelle heure au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "il est quelle heure aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "il est quelle heure dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "il est quelle heure en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "il est quelle heure à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "j'ai besoin de l'heure"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "j'ai besoin de l'heure au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "j'ai besoin de l'heure aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "j'ai besoin de l'heure dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "j'ai besoin de l'heure en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "j'ai besoin de l'heure à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "l'heure actuelle"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "l'heure actuelle au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "l'heure actuelle aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "l'heure actuelle dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "l'heure actuelle en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "l'heure actuelle à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "l'heure du moment"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "l'heure du moment au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "l'heure du moment aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "l'heure du moment dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "l'heure du moment en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "l'heure du moment à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "peux-tu me dire l'heure"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "peux-tu me dire l'heure au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "peux-tu me dire l'heure aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "peux-tu me dire l'heure dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "peux-tu me dire l'heure en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "peux-tu me dire l'heure à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "peux-tu me donner l'heure"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "peux-tu me donner l'heure au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "peux-tu me donner l'heure aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "peux-tu me donner l'heure dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "peux-tu me donner l'heure en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "peux-tu me donner l'heure à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il actuellement"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il actuellement au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il actuellement aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il actuellement dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il actuellement en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il actuellement à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il en ce moment"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il en ce moment au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il en ce moment aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il en ce moment dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il en ce moment en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il en ce moment à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il maintenant"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il maintenant au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il maintenant aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il maintenant dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il maintenant en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il maintenant à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "quelle heure est-il à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "tu as l'heure"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "tu as l'heure au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "tu as l'heure aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "tu as l'heure dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "tu as l'heure en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "tu as l'heure à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} heure quelle heure sera-t-il"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} heure quelle heure sera-t-il au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} heure quelle heure sera-t-il aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} heure quelle heure sera-t-il dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} heure quelle heure sera-t-il en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} heure quelle heure sera-t-il à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} heures quelle heure sera-t-il"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} heures quelle heure sera-t-il au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} heures quelle heure sera-t-il aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} heures quelle heure sera-t-il dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} heures quelle heure sera-t-il en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} heures quelle heure sera-t-il à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} minute quelle heure sera-t-il"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} minute quelle heure sera-t-il au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} minute quelle heure sera-t-il aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} minute quelle heure sera-t-il dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} minute quelle heure sera-t-il en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} minute quelle heure sera-t-il à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} minutes quelle heure sera-t-il"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} minutes quelle heure sera-t-il au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} minutes quelle heure sera-t-il aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} minutes quelle heure sera-t-il dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} minutes quelle heure sera-t-il en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} minutes quelle heure sera-t-il à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} seconde quelle heure sera-t-il"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} seconde quelle heure sera-t-il au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} seconde quelle heure sera-t-il aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} seconde quelle heure sera-t-il dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} seconde quelle heure sera-t-il en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} seconde quelle heure sera-t-il à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} secondes quelle heure sera-t-il"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} secondes quelle heure sera-t-il au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} secondes quelle heure sera-t-il aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} secondes quelle heure sera-t-il dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} secondes quelle heure sera-t-il en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "après {offset} secondes quelle heure sera-t-il à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} heure quelle heure sera-t-il"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} heure quelle heure sera-t-il au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} heure quelle heure sera-t-il aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} heure quelle heure sera-t-il dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} heure quelle heure sera-t-il en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} heure quelle heure sera-t-il à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} heures quelle heure sera-t-il"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} heures quelle heure sera-t-il au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} heures quelle heure sera-t-il aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} heures quelle heure sera-t-il dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} heures quelle heure sera-t-il en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} heures quelle heure sera-t-il à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} minute quelle heure sera-t-il"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} minute quelle heure sera-t-il au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} minute quelle heure sera-t-il aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} minute quelle heure sera-t-il dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} minute quelle heure sera-t-il en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} minute quelle heure sera-t-il à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} minutes quelle heure sera-t-il"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} minutes quelle heure sera-t-il au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} minutes quelle heure sera-t-il aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} minutes quelle heure sera-t-il dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} minutes quelle heure sera-t-il en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} minutes quelle heure sera-t-il à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} seconde quelle heure sera-t-il"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} seconde quelle heure sera-t-il au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} seconde quelle heure sera-t-il aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} seconde quelle heure sera-t-il dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} seconde quelle heure sera-t-il en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} seconde quelle heure sera-t-il à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} secondes quelle heure sera-t-il"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} secondes quelle heure sera-t-il au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} secondes quelle heure sera-t-il aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} secondes quelle heure sera-t-il dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} secondes quelle heure sera-t-il en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "dans {offset} secondes quelle heure sera-t-il à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "si j'attends {offset} heures quelle heure sera-t-il"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "si j'attends {offset} heures quelle heure sera-t-il au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "si j'attends {offset} heures quelle heure sera-t-il aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "si j'attends {offset} heures quelle heure sera-t-il dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "si j'attends {offset} heures quelle heure sera-t-il en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "si j'attends {offset} heures quelle heure sera-t-il à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "si j'attends {offset} minutes quelle heure sera-t-il"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "si j'attends {offset} minutes quelle heure sera-t-il au {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "si j'attends {offset} minutes quelle heure sera-t-il aux {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "si j'attends {offset} minutes quelle heure sera-t-il dans {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "si j'attends {offset} minutes quelle heure sera-t-il en {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "si j'attends {offset} minutes quelle heure sera-t-il à {location}"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "c'est quel jour aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "dis-moi le jour de la semaine"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "donne-moi le jour de la semaine"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "est-ce dimanche aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "est-ce jeudi aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "est-ce lundi aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "est-ce mardi aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "est-ce mercredi aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "est-ce samedi aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "est-ce vendredi aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "nous sommes quel jour"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "on est quel jour"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "quel jour de la semaine est-on"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "quel jour de la semaine sommes-nous"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "quel jour on est"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "quel jour sommes-nous aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "sommes-nous dimanche"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "sommes-nous jeudi"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "sommes-nous lundi"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "sommes-nous mardi"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "sommes-nous mercredi"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "sommes-nous samedi"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "sommes-nous vendredi"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "année actuelle"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "année en cours"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "c'est quelle année"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "dis-moi l'année actuelle"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "donne-moi l'année actuelle"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "en quelle année est-on"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "nous sommes en quelle année"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "on est en quelle année"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "quelle année sommes-nous"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "quelle est l'année actuelle"}
+{"lang": "fr-FR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "quelle est l'année en cours"}
 {"lang": "fr-FR", "skill": "ovos-skill-days-in-history_0", "file_type": "intent", "intent": "births_in_history.intent", "text": "quelles naissances ont eu lieu aujourd'hui dans l'histoire"}
 {"lang": "fr-FR", "skill": "ovos-skill-days-in-history_0", "file_type": "intent", "intent": "births_in_history.intent", "text": "quelles naissances ont eu lieu le {date} dans l'histoire"}
 {"lang": "fr-FR", "skill": "ovos-skill-days-in-history_0", "file_type": "intent", "intent": "births_in_history.intent", "text": "qui est né aujourd'hui dans l'histoire"}
@@ -8117,6 +8111,12 @@
 {"lang": "fr-FR", "skill": "ovos-skill-days-in-history_1", "file_type": "voc", "intent": "tell_me_more.voc", "text": "la suite"}
 {"lang": "fr-FR", "skill": "ovos-skill-days-in-history_1", "file_type": "voc", "intent": "tell_me_more.voc", "text": "raconte la suite"}
 {"lang": "fr-FR", "skill": "ovos-skill-days-in-history_1", "file_type": "voc", "intent": "tell_me_more.voc", "text": "un autre événement"}
+{"lang": "fr-FR", "skill": "ovos-skill-days-in-history_1", "file_type": "intent", "intent": "tell_me_more_intent.intent", "text": "dis-m'en plus"}
+{"lang": "fr-FR", "skill": "ovos-skill-days-in-history_1", "file_type": "intent", "intent": "tell_me_more_intent.intent", "text": "la suite"}
+{"lang": "fr-FR", "skill": "ovos-skill-days-in-history_1", "file_type": "intent", "intent": "tell_me_more_intent.intent", "text": "raconte la suite"}
+{"lang": "fr-FR", "skill": "ovos-skill-days-in-history_1", "file_type": "intent", "intent": "tell_me_more_intent.intent", "text": "un autre événement"}
+{"lang": "fr-FR", "skill": "ovos-skill-days-in-history_1", "file_type": "intent", "intent": "tell_me_more_intent.intent", "text": "continue"}
+{"lang": "fr-FR", "skill": "ovos-skill-days-in-history_1", "file_type": "intent", "intent": "tell_me_more_intent.intent", "text": "encore"}
 {"lang": "fr-FR", "skill": "ovos-skill-days-in-history_1", "file_type": "intent", "intent": "today_in_history.intent", "text": "aujourd'hui dans l'histoire"}
 {"lang": "fr-FR", "skill": "ovos-skill-days-in-history_1", "file_type": "intent", "intent": "today_in_history.intent", "text": "ce jour dans l'histoire"}
 {"lang": "fr-FR", "skill": "ovos-skill-days-in-history_1", "file_type": "intent", "intent": "today_in_history.intent", "text": "cette date dans l'histoire"}
@@ -9643,77 +9643,6 @@
 {"lang": "fr-FR", "skill": "ovos-skill-personal", "file_type": "voc", "intent": "who_made_you_keyword.voc", "text": "qui t'a conçu"}
 {"lang": "fr-FR", "skill": "ovos-skill-personal", "file_type": "voc", "intent": "who_made_you_keyword.voc", "text": "qui t'a créé"}
 {"lang": "fr-FR", "skill": "ovos-skill-personal", "file_type": "voc", "intent": "who_made_you_keyword.voc", "text": "ton créateur"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "dis-moi tout sur le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "dis-moi tout sur le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "parle-moi le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "parle-moi le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "que sais-tu sur le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "que sais-tu sur le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "décris le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "décris le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "décris-moi le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "décris-moi le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "présente-moi le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "présente-moi le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "donne-moi la fiche pokedex de {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "donne-moi la fiche pokédex de {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "fiche pokedex de {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "fiche pokédex de {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "c'est quoi le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "c'est quoi le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "qu'est-ce que le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "qu'est-ce que le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "qui le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "qui le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonInfo.intent", "text": "pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles sont les attaques de {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles sont les attaques du pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles sont les attaques du pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles sont les capacités de {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles sont les capacités du pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles sont les capacités du pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "donne-moi les attaques de {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "donne-moi les capacités de {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "liste-moi les attaques de {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "liste-moi les capacités de {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "montre-moi les attaques de {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "montre-moi les capacités de {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles attaques connait le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles attaques connait le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles attaques connait {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles attaques connaît le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles attaques connaît le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles attaques connaît {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles attaques peut apprendre le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles attaques peut apprendre le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles attaques peut apprendre {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles capacités connait le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles capacités connait le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles capacités connait {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles capacités connaît le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles capacités connaît le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles capacités connaît {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles capacités peut apprendre le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles capacités peut apprendre le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonMoves.intent", "text": "quelles capacités peut apprendre {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonType.intent", "text": "quel est le type du pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonType.intent", "text": "quel est le type du pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonType.intent", "text": "quel type a le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonType.intent", "text": "quel type a le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonType.intent", "text": "quel types a le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonType.intent", "text": "quel types a le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonType.intent", "text": "quels type a le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonType.intent", "text": "quels type a le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonType.intent", "text": "quels types a le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonType.intent", "text": "quels types a le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonType.intent", "text": "de quel type est le pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonType.intent", "text": "de quel type est le pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonType.intent", "text": "donne-moi le type du pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonType.intent", "text": "donne-moi le type du pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonType.intent", "text": "type du pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonType.intent", "text": "type du pokémon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonType.intent", "text": "types du pokemon {pokemon}"}
-{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "GetPokemonType.intent", "text": "types du pokémon {pokemon}"}
 {"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "battle.intent", "text": "qui gagne entre {pokemon_a} et {pokemon_b}"}
 {"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "battle.intent", "text": "qui gagne dans un combat entre {pokemon_a} et {pokemon_b}"}
 {"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "battle.intent", "text": "qui gagne dans un combat pokémon entre {pokemon_a} et {pokemon_b}"}
@@ -9753,6 +9682,77 @@
 {"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "battle.intent", "text": "{pokemon_a} ou {pokemon_b} lequel est le plus fort"}
 {"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "battle.intent", "text": "entre {pokemon_a} et {pokemon_b} qui gagne"}
 {"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "battle.intent", "text": "entre {pokemon_a} et {pokemon_b} lequel est le plus fort"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "dis-moi tout sur le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "dis-moi tout sur le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "parle-moi le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "parle-moi le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "que sais-tu sur le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "que sais-tu sur le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "décris le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "décris le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "décris-moi le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "décris-moi le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "présente-moi le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "présente-moi le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "donne-moi la fiche pokedex de {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "donne-moi la fiche pokédex de {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "fiche pokedex de {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "fiche pokédex de {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "c'est quoi le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "c'est quoi le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "qu'est-ce que le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "qu'est-ce que le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "qui le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "qui le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_info.intent", "text": "pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles sont les attaques de {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles sont les attaques du pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles sont les attaques du pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles sont les capacités de {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles sont les capacités du pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles sont les capacités du pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "donne-moi les attaques de {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "donne-moi les capacités de {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "liste-moi les attaques de {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "liste-moi les capacités de {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "montre-moi les attaques de {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "montre-moi les capacités de {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles attaques connait le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles attaques connait le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles attaques connait {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles attaques connaît le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles attaques connaît le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles attaques connaît {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles attaques peut apprendre le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles attaques peut apprendre le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles attaques peut apprendre {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles capacités connait le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles capacités connait le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles capacités connait {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles capacités connaît le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles capacités connaît le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles capacités connaît {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles capacités peut apprendre le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles capacités peut apprendre le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_moves.intent", "text": "quelles capacités peut apprendre {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_type.intent", "text": "quel est le type du pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_type.intent", "text": "quel est le type du pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_type.intent", "text": "quel type a le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_type.intent", "text": "quel type a le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_type.intent", "text": "quel types a le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_type.intent", "text": "quel types a le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_type.intent", "text": "quels type a le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_type.intent", "text": "quels type a le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_type.intent", "text": "quels types a le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_type.intent", "text": "quels types a le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_type.intent", "text": "de quel type est le pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_type.intent", "text": "de quel type est le pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_type.intent", "text": "donne-moi le type du pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_type.intent", "text": "donne-moi le type du pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_type.intent", "text": "type du pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_type.intent", "text": "type du pokémon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_type.intent", "text": "types du pokemon {pokemon}"}
+{"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "intent", "intent": "get_pokemon_type.intent", "text": "types du pokémon {pokemon}"}
 {"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "voc", "intent": "moves.voc", "text": "moveset"}
 {"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "voc", "intent": "moves.voc", "text": "moveset de"}
 {"lang": "fr-FR", "skill": "ovos-skill-pokepedia", "file_type": "voc", "intent": "moves.voc", "text": "capacités de"}
@@ -12133,37 +12133,37 @@
 {"lang": "fr-FR", "skill": "ovos-skill-soundcloud", "file_type": "voc", "intent": "soundcloud.voc", "text": "sur soundcloud"}
 {"lang": "fr-FR", "skill": "ovos-skill-soundcloud", "file_type": "voc", "intent": "soundcloud_skill.voc", "text": "sound cloud"}
 {"lang": "fr-FR", "skill": "ovos-skill-soundcloud", "file_type": "voc", "intent": "soundcloud_skill.voc", "text": "soundcloud"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "voc", "intent": "Run.voc", "text": "démarre"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "voc", "intent": "Run.voc", "text": "exécute"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "voc", "intent": "Run.voc", "text": "lance"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "voc", "intent": "Speedtest.voc", "text": "connexion internet"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "voc", "intent": "Speedtest.voc", "text": "test de débit"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "voc", "intent": "Speedtest.voc", "text": "test de vitesse"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "voc", "intent": "Speedtest.voc", "text": "vitesse internet"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "démarre le test de débit"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "démarre le test de vitesse"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "démarre test de débit"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "démarre test de vitesse"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "démarre un test de débit"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "démarre un test de vitesse"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "exécute le test de débit"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "exécute le test de vitesse"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "exécute test de débit"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "exécute test de vitesse"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "exécute un test de débit"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "exécute un test de vitesse"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "lance le test de débit"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "lance le test de vitesse"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "lance test de débit"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "lance test de vitesse"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "lance un test de débit"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "lance un test de vitesse"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "test de débit"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "test de débit internet"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "test de vitesse"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "test de vitesse internet"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "quelle est la vitesse de ma connexion"}
-{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "SpeedtestIntent.intent", "text": "quelle est la vitesse de ma connexion internet"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "voc", "intent": "run.voc", "text": "démarre"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "voc", "intent": "run.voc", "text": "exécute"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "voc", "intent": "run.voc", "text": "lance"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "voc", "intent": "speedtest.voc", "text": "connexion internet"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "voc", "intent": "speedtest.voc", "text": "test de débit"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "voc", "intent": "speedtest.voc", "text": "test de vitesse"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "voc", "intent": "speedtest.voc", "text": "vitesse internet"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "démarre le test de débit"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "démarre le test de vitesse"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "démarre test de débit"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "démarre test de vitesse"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "démarre un test de débit"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "démarre un test de vitesse"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "exécute le test de débit"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "exécute le test de vitesse"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "exécute test de débit"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "exécute test de vitesse"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "exécute un test de débit"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "exécute un test de vitesse"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "lance le test de débit"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "lance le test de vitesse"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "lance test de débit"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "lance test de vitesse"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "lance un test de débit"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "lance un test de vitesse"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "test de débit"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "test de débit internet"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "test de vitesse"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "test de vitesse internet"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "quelle est la vitesse de ma connexion"}
+{"lang": "fr-FR", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "quelle est la vitesse de ma connexion internet"}
 {"lang": "fr-FR", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "épelle {word}"}
 {"lang": "fr-FR", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "épelle le mot {word}"}
 {"lang": "fr-FR", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "peux-tu épeler {word}"}
@@ -12964,6 +12964,19 @@
 {"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "more.voc", "text": "continue"}
 {"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "more.voc", "text": "dis-moi plus"}
 {"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "more.voc", "text": "plus de détails"}
+{"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "pronoun.voc", "text": "elle"}
+{"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "pronoun.voc", "text": "il"}
+{"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "pronoun.voc", "text": "ils"}
+{"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "pronoun.voc", "text": "eux"}
+{"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "pronoun.voc", "text": "lui"}
+{"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "pronoun.voc", "text": "leur"}
+{"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "pronoun.voc", "text": "leurs"}
+{"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "pronoun.voc", "text": "sa"}
+{"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "pronoun.voc", "text": "son"}
+{"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "pronoun.voc", "text": "ceci"}
+{"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "pronoun.voc", "text": "cela"}
+{"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "pronoun.voc", "text": "ceux-ci"}
+{"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "pronoun.voc", "text": "ceux-là"}
 {"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "weather.voc", "text": "météo actuelle"}
 {"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "weather.voc", "text": "quel temps fait-il"}
 {"lang": "fr-FR", "skill": "ovos-skill-wikipedia", "file_type": "voc", "intent": "weather.voc", "text": "quelle est la météo"}
@@ -12997,12 +13010,6 @@
 {"lang": "fr-FR", "skill": "ovos-skill-wolfie", "file_type": "intent", "intent": "search_wolfie.intent", "text": "demande à wolfram alpha {query}"}
 {"lang": "fr-FR", "skill": "ovos-skill-wolfie", "file_type": "intent", "intent": "search_wolfie.intent", "text": "pose la question à wolfram alpha {query}"}
 {"lang": "fr-FR", "skill": "ovos-skill-wolfie", "file_type": "intent", "intent": "search_wolfie.intent", "text": "que dit wolfram alpha sur {query}"}
-{"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "voc", "intent": "WordOfTheDayKeyword.voc", "text": "dis-moi le mot du jour"}
-{"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "voc", "intent": "WordOfTheDayKeyword.voc", "text": "donne-moi le mot du jour"}
-{"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "voc", "intent": "WordOfTheDayKeyword.voc", "text": "donne-moi le mot du jour d'aujourd'hui"}
-{"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "voc", "intent": "WordOfTheDayKeyword.voc", "text": "mot du jour"}
-{"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "voc", "intent": "WordOfTheDayKeyword.voc", "text": "quel est le mot du jour"}
-{"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "voc", "intent": "WordOfTheDayKeyword.voc", "text": "quel est le mot du jour aujourd'hui"}
 {"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "intent", "intent": "past_word.intent", "text": "quel était le mot du jour d'hier"}
 {"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "intent", "intent": "past_word.intent", "text": "quel était le mot d'hier"}
 {"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "intent", "intent": "past_word.intent", "text": "quel était le mot du jour le {date}"}
@@ -13020,6 +13027,28 @@
 {"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "intent", "intent": "word_of_the_day.intent", "text": "mot du jour"}
 {"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "intent", "intent": "word_of_the_day.intent", "text": "quel est le mot du jour"}
 {"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "intent", "intent": "word_of_the_day.intent", "text": "quel est le mot du jour aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "voc", "intent": "word_of_the_day_keyword.voc", "text": "dis-moi le mot du jour"}
+{"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "voc", "intent": "word_of_the_day_keyword.voc", "text": "donne-moi le mot du jour"}
+{"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "voc", "intent": "word_of_the_day_keyword.voc", "text": "donne-moi le mot du jour d'aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "voc", "intent": "word_of_the_day_keyword.voc", "text": "mot du jour"}
+{"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "voc", "intent": "word_of_the_day_keyword.voc", "text": "quel est le mot du jour"}
+{"lang": "fr-FR", "skill": "ovos-skill-word-of-the-day", "file_type": "voc", "intent": "word_of_the_day_keyword.voc", "text": "quel est le mot du jour aujourd'hui"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "determiner.voc", "text": "ce"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "determiner.voc", "text": "ceci"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "determiner.voc", "text": "cela"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "determiner.voc", "text": "ces"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "determiner.voc", "text": "cet"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "determiner.voc", "text": "cette"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "determiner.voc", "text": "ça"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "pronoun.voc", "text": "elle"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "pronoun.voc", "text": "elles"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "pronoun.voc", "text": "il"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "pronoun.voc", "text": "ils"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "pronoun.voc", "text": "leur"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "pronoun.voc", "text": "leurs"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "pronoun.voc", "text": "lui"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "pronoun.voc", "text": "sa"}
+{"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "voc", "intent": "pronoun.voc", "text": "ses"}
 {"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "search_wordnet.intent", "text": "demande à wordnet des informations sur {word}"}
 {"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "search_wordnet.intent", "text": "interroge wordnet sur {word}"}
 {"lang": "fr-FR", "skill": "ovos-skill-wordnet", "file_type": "intent", "intent": "search_wordnet.intent", "text": "cherche {word} dans wordnet"}

@@ -57,8 +57,10 @@
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "error_no_list_name.dialog", "text": "du måste ange ett listnamn."}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "error_no_repeat.dialog", "text": "du måste ge mig ett tidsintervall. det kan vara enstaka dagar eller kortare tidsperioder."}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "error_no_scheduled_kind.dialog", "text": "du har ingen planerad {kind}."}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "error_no_script.dialog", "text": "jag hörde inte vilken ljudfil du skulle använda för din {kind}."}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "error_no_time.dialog", "text": "jag hörde ingen tid att ställa in din {kind} för. vänligen försök igen."}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "error_nothing_to_cancel.dialog", "text": "jag kunde inte hitta en matchande avisering att avboka."}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "error_same_priority.dialog", "text": "prioriteten är redan satt till detta värde."}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "expired_alert.dialog", "text": "din {name}-varning har aktiverats."}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "expired_audio_alert_intro.dialog", "text": "du har en ljudpåminnelse."}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "expired_reminder.dialog", "text": "detta är din påminnelse: {name}."}
@@ -90,6 +92,8 @@
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "list_todo_reminder.dialog", "text": "jag borde påminna dig om att {reminders}"}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems.dialog", "text": "på {name}-listan finns {items}."}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems_added.dialog", "text": "jag har lagt till {num} poster."}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "media_type_changed.dialog", "text": "ändrade ljudet från {old} till {new}."}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "media_type_set.dialog", "text": "ställ in ljudet på {new}."}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "monday.dialog", "text": "måndag"}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "music.dialog", "text": "musik"}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "next_alert.dialog", "text": "din nästa är {name} vid {begin}."}
@@ -100,7 +104,9 @@
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "ocp_searching.dialog", "text": "kontroll av medietiteln."}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "once.dialog", "text": "en gång"}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "pick_multiple_entries.dialog", "text": "det finns flera liknande poster. vilken ska jag välja?"}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "please.repeat.dialog", "text": "förlåt, jag kunde inte fånga den."}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "podcast.dialog", "text": "podcast"}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "property_changed_priority.dialog", "text": "prioritet justerad till {num}."}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "reminder_ask_time.dialog", "text": "ska jag påminna dig vid en viss tidpunkt?"}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "remove_list_items_ask.dialog", "text": "lista en efter en de föremål som ska tas bort."}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "dialog": "repeating_every.dialog", "text": "varje {repeat}"}
@@ -180,21 +186,52 @@
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "det är {date}"}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "idag är det {date}"}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "{date}"}
-{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date.not.found.dialog", "text": "jag kunde inte hitta datumet åt dig"}
-{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "det kommer vara {date}, om {num_days}"}
-{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "det är {date}, om {num_days}"}
-{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "{date}, om {num_days}"}
-{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "{date}, {num_days} från nu"}
-{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date.relative.past.dialog", "text": "det var {date}, för {num_days} sedan"}
-{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date.relative.past.dialog", "text": "{date}, för {num_days} sedan"}
-{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "did.you.mean.timezone.dialog", "text": "menade du tidszonen {zone_name}?"}
-{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "den är {time}"}
-{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "för närvarande {time}"}
-{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "klockan är {time}"}
-{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "{time}"}
-{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time.future.dialog", "text": "det kommer att vara {time}"}
-{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time.future.dialog", "text": "{time}"}
-{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time.tz.not.found.dialog", "text": "jag kunde inte hitta tidszonen för {location}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date_not_found.dialog", "text": "jag kunde inte hitta datumet åt dig"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "det kommer vara {date}, om {num_days}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "det är {date}, om {num_days}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, om {num_days}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, {num_days} från nu"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "det var {date}, för {num_days} sedan"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "{date}, för {num_days} sedan"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "det är {day}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "det är {day} idag"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "den nuvarande dagen är {day}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "idag är {day}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "did_you_mean_timezone.dialog", "text": "menade du tidszonen {zone_name}?"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "extract_date_error.dialog", "text": "jag förstod inte vilket datum du frågar om."}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_no.dialog", "text": "nej, {year} är inte ett skottår."}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_yes.dialog", "text": "ja, {year} är ett skottår."}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_no.dialog", "text": "nej, nästa skottår efter det kommer att bli {year}."}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_yes.dialog", "text": "ja, {year} är ett skottår."}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_no.dialog", "text": "nej, {year} kommer inte att bli ett skottår."}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_yes.dialog", "text": "ja, {year} kommer att bli ett skottår."}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "det är {month}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "det är {month} just nu"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "den nuvarande månaden är {month}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "denna månad är {month}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "den är {time}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "för närvarande {time}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "klockan är {time}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "det kommer att vara {time}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "{time}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time_tz_not_found.dialog", "text": "jag kunde inte hitta tidszonen för {location}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_future.dialog", "text": "på {date} kommer det att vara {weekday}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_past.dialog", "text": "på {date} var det {weekday}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "det är {weekday}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "det är {weekday} idag"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "den nuvarande veckodagen är {weekday}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "idag är {weekday}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_no.dialog", "text": "nej, {date} kommer att vara {actual_weekday}, inte {weekday}."}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_yes.dialog", "text": "ja, {date} kommer att vara {weekday}."}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_no.dialog", "text": "nej, {date} var {actual_weekday}, inte {weekday}."}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_yes.dialog", "text": "ja, {date} var {weekday}."}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_no.dialog", "text": "nej, {date} är {actual_weekday}, inte {weekday}."}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_yes.dialog", "text": "ja, {date} är {weekday}."}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "det är {year}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "det aktuella året är {year}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "detta år är {year}"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "vi är i {year} just nu"}
 {"lang": "sv-SE", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "jag kunde inte hitta ett svar på duckduckgo."}
 {"lang": "sv-SE", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "tyvärr returnerade duckduckgo inget resultat."}
 {"lang": "sv-SE", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "jag hittade ingenting på duckduckgo för det."}
@@ -1282,6 +1319,7 @@
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "dialog": "bad_tv_genre_catagory.dialog", "text": "jag kan inte hitta några television serier med genren {genre}"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "dialog": "fallback_api.dialog", "text": "faller tillbaka till standard a p i"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "dialog": "genre_movie_search.dialog", "text": "filmerna med genren {genre} är;"}
+{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "dialog": "movie_description_error.dialog", "text": "jag verkar inte kunna hitta information om filmen {movie}."}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "dialog": "movie_genre_multiple.dialog", "text": "film finns i en av genrerna; {genrelist} och {genrelistlast}"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "dialog": "movie_genre_multiple.dialog", "text": "filmen finns i en av genrerna; {genrelist} och {genrelistlast}"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "dialog": "movie_genre_multiple.dialog", "text": "videon finns i en av genrerna; {genrelist} och {genrelistlast}"}
@@ -1295,6 +1333,7 @@
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "dialog": "movie_production_multiple.dialog", "text": "företagen {companies} och {lastcompany} producerade filmen {movie}"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "dialog": "movie_production_multiple.dialog", "text": "{companies} och {lastcompany} producerade filmen {movie}"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "dialog": "movie_production_single.dialog", "text": "produktionsföretaget {company}, producerade filmen {movie}"}
+{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "dialog": "movie_year_error.dialog", "text": "jag kan inte hitta ett releasedatum för filmen {movie}"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "dialog": "no_api.dialog", "text": "du måste ange din t m d b a p i-nyckel på home punkt mycroft punkt a i för att använda movie master skickligheten"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "dialog": "no_info.dialog", "text": "jag är ledsen. jag kan inte hitta någon information om filmen {movie}"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "dialog": "no_info.dialog", "text": "jag är ledsen. jag kan inte hitta någon information om videon {movie}"}
@@ -1369,6 +1408,7 @@
 {"lang": "sv-SE", "skill": "ovos-skill-screenshot", "dialog": "screenshot_failed.dialog", "text": "skärmdumpen misslyckades"}
 {"lang": "sv-SE", "skill": "ovos-skill-screenshot", "dialog": "screenshot_taken.dialog", "text": "skärmdump tagen"}
 {"lang": "sv-SE", "skill": "ovos-skill-speedtest", "dialog": "error.dialog", "text": "det uppstod ett fel, jag kunde inte köra en speedtest... ledsen."}
+{"lang": "sv-SE", "skill": "ovos-skill-speedtest", "dialog": "ping.dialog", "text": "ping är {ping} millisekunder"}
 {"lang": "sv-SE", "skill": "ovos-skill-speedtest", "dialog": "result.dialog", "text": "din nedladdningshastighet är {down} megabit per sekund och din uppladdningshastighet är {up} megabit per sekund."}
 {"lang": "sv-SE", "skill": "ovos-skill-speedtest", "dialog": "running.dialog", "text": "startar speedtest nu, jag kommer tillbaka med resultaten om ett ögonblick."}
 {"lang": "sv-SE", "skill": "ovos-skill-spelling", "dialog": "what.word.dialog", "text": "vilket ord vill du att jag stavar?"}
@@ -1672,11 +1712,11 @@
 {"lang": "sv-SE", "skill": "ovos-skill-wikipedia", "dialog": "thats all.dialog", "text": "det är allt jag kan hitta"}
 {"lang": "sv-SE", "skill": "ovos-skill-wikipedia", "dialog": "thats all.dialog", "text": "det är allt jag vet"}
 {"lang": "sv-SE", "skill": "ovos-skill-wolfie", "dialog": "no_answer.dialog", "text": "vargen vet inte svaret"}
-{"lang": "sv-SE", "skill": "ovos-skill-word-of-the-day", "dialog": "no.word.history.dialog", "text": "jag har inget ord registrerat för den dagen"}
-{"lang": "sv-SE", "skill": "ovos-skill-word-of-the-day", "dialog": "no.word.history.dialog", "text": "jag känner bara till ord från dagar jag blev tillfrågad om"}
-{"lang": "sv-SE", "skill": "ovos-skill-word-of-the-day", "dialog": "spell.word.dialog", "text": "{word} stavas {letters}"}
-{"lang": "sv-SE", "skill": "ovos-skill-word-of-the-day", "dialog": "unknown.wod.dialog", "text": "jag vet inte dagens ord"}
-{"lang": "sv-SE", "skill": "ovos-skill-word-of-the-day", "dialog": "word.of.day.dialog", "text": "dagens ord är {word}"}
+{"lang": "sv-SE", "skill": "ovos-skill-word-of-the-day", "dialog": "no_word_history.dialog", "text": "jag har inget ord registrerat för den dagen"}
+{"lang": "sv-SE", "skill": "ovos-skill-word-of-the-day", "dialog": "no_word_history.dialog", "text": "jag känner bara till ord från dagar jag blev tillfrågad om"}
+{"lang": "sv-SE", "skill": "ovos-skill-word-of-the-day", "dialog": "spell_word.dialog", "text": "{word} stavas {letters}"}
+{"lang": "sv-SE", "skill": "ovos-skill-word-of-the-day", "dialog": "unknown_wod.dialog", "text": "jag vet inte dagens ord"}
+{"lang": "sv-SE", "skill": "ovos-skill-word-of-the-day", "dialog": "word_of_day.dialog", "text": "dagens ord är {word}"}
 {"lang": "sv-SE", "skill": "ovos-skill-wordnet", "dialog": "no_answer.dialog", "text": "wordnet vet inte svaret"}
 {"lang": "sv-SE", "skill": "ovos-skill-wordnet", "dialog": "unresolved.dialog", "text": "jag förstod inte vilket ord du menar"}
 {"lang": "sv-SE", "skill": "ovos-solver-failure-plugin", "dialog": "no_brain.dialog", "text": "404 hjärna hittades inte"}

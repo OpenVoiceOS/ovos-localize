@@ -130,8 +130,10 @@
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "error_no_list_name.dialog", "text": "tes que especificar un nome de lista."}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "error_no_repeat.dialog", "text": "tes que darme un intervalo de tempo. pode ser un día ou un período máis curto."}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "error_no_scheduled_kind.dialog", "text": "non tes ningún {kind} programado."}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "error_no_script.dialog", "text": "non oín o ficheiro de audio que usar para o seu {kind}."}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "error_no_time.dialog", "text": "non oín a hora para programar o {kind}. inténtao de novo."}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "error_nothing_to_cancel.dialog", "text": "non atopei unha alerta correspondente para cancelar."}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "error_same_priority.dialog", "text": "a prioridade xa está fixada para ese valor."}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "expired_alert.dialog", "text": "a túa alerta {name} está activada."}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "expired_audio_alert_intro.dialog", "text": "tes un lembrete de audio."}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "expired_reminder.dialog", "text": "velaquí o teu lembrete: {name}."}
@@ -163,6 +165,8 @@
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "list_todo_reminder.dialog", "text": "debo lembrarte de {reminders}"}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems.dialog", "text": "na lista {name} hai {items}."}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems_added.dialog", "text": "engadín {num} rexistros."}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "media_type_changed.dialog", "text": "cambiou o son de {old} a {new}."}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "media_type_set.dialog", "text": "estableceu o son a {new}."}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "monday.dialog", "text": "luns"}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "music.dialog", "text": "música"}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "next_alert.dialog", "text": "a seguinte é {name} ás {begin}."}
@@ -173,7 +177,9 @@
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "ocp_searching.dialog", "text": "comprobando o título do medio."}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "once.dialog", "text": "unha vez"}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "pick_multiple_entries.dialog", "text": "hai varios rexistros semellantes. cal escollemos?"}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "please.repeat.dialog", "text": "desculpe, non puiden captalo. por favor repita."}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "podcast.dialog", "text": "podcast"}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "property_changed_priority.dialog", "text": "prioridade axustada a {num}."}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "reminder_ask_time.dialog", "text": "lémbrocho nun momento concreto?"}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "remove_list_items_ask.dialog", "text": "enumera, un por un, os elementos que haxa que eliminar."}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "dialog": "repeating_every.dialog", "text": "cada {repeat}"}
@@ -256,41 +262,53 @@
 {"lang": "gl-ES", "skill": "ovos-skill-count", "dialog": "failed_extract_number.dialog", "text": "non entendín ata que número querías que contase"}
 {"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "{date}"}
 {"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "é {date}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date.not.found.dialog", "text": "non che dei atopado esa data."}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "{date}, dentro de {num_days}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "{date}, en {num_days}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "é {date}, dentro de {num_days}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "é {date}, en {num_days}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date.relative.past.dialog", "text": "foi {date}, hai {num_days}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date.relative.past.dialog", "text": "{date}, hai {num_days}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "day.current.dialog", "text": "hoxe é {day}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "day.current.dialog", "text": "o día actual é {day}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "day.current.dialog", "text": "{day}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "day.current.dialog", "text": "é {day}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "day.current.dialog", "text": "é {day} hoxe"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "did.you.mean.timezone.dialog", "text": "refíreste ao fuso horario {zone_name}?"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "extract.date.error.dialog", "text": "non entendín a data pola que preguntas"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "month.current.dialog", "text": "agora estamos en {month}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "month.current.dialog", "text": "este mes é {month}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "month.current.dialog", "text": "o mes actual é {month}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "month.current.dialog", "text": "{month}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "month.current.dialog", "text": "é {month}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "neste momento as {time}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "son as {time}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "{time}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "time.future.dialog", "text": "serán as {time}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "time.future.dialog", "text": "{time}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "time.tz.not.found.dialog", "text": "non dei atopado o fuso horario de {location}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "weekday.at.date.future.dialog", "text": "o {date} vai ser {weekday}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "weekday.at.date.past.dialog", "text": "o {date} foi {weekday}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "weekday.current.dialog", "text": "hoxe é {weekday}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "weekday.current.dialog", "text": "o día da semana de hoxe é {weekday}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "weekday.current.dialog", "text": "é {weekday}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "estamos no {year} agora"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "este ano é {year}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "o ano actual é {year}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "{year}"}
-{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "é {year}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date_not_found.dialog", "text": "non che dei atopado esa data."}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, dentro de {num_days}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, en {num_days}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "é {date}, dentro de {num_days}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "é {date}, en {num_days}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "foi {date}, hai {num_days}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "{date}, hai {num_days}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "hoxe é {day}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "o día actual é {day}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "{day}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "é {day}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "é {day} hoxe"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "did_you_mean_timezone.dialog", "text": "refíreste ao fuso horario {zone_name}?"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "extract_date_error.dialog", "text": "non entendín a data pola que preguntas"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_no.dialog", "text": "non, {year} non é un ano bisesto."}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_yes.dialog", "text": "si, {year} é un ano bisesto."}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_no.dialog", "text": "non. o seguinte ano bisesto despois dese será {year}."}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_yes.dialog", "text": "si, {year} é un ano bisesto."}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_no.dialog", "text": "non, {year} non será un ano bisesto."}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_yes.dialog", "text": "si, {year} será un ano bisesto."}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "agora estamos en {month}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "este mes é {month}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "o mes actual é {month}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "{month}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "é {month}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "neste momento as {time}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "son as {time}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "serán as {time}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "{time}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "time_tz_not_found.dialog", "text": "non dei atopado o fuso horario de {location}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_future.dialog", "text": "o {date} vai ser {weekday}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_past.dialog", "text": "o {date} foi {weekday}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "hoxe é {weekday}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "o día da semana de hoxe é {weekday}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "é {weekday}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_no.dialog", "text": "non, {date} será {actual_weekday}, non {weekday}."}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_yes.dialog", "text": "si, {date} será {weekday}."}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_no.dialog", "text": "non, {date} foi {actual_weekday}, non {weekday}."}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_yes.dialog", "text": "si, {date} foi {weekday}."}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_no.dialog", "text": "non, {date} é {actual_weekday}, non {weekday}."}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_yes.dialog", "text": "si, {date} é {weekday}."}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "estamos no {year} agora"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "este ano é {year}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "o ano actual é {year}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "{year}"}
+{"lang": "gl-ES", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "é {year}"}
 {"lang": "gl-ES", "skill": "ovos-skill-diagnostics", "dialog": "available_memory.dialog", "text": "{memory} dispoñible de {total}"}
 {"lang": "gl-ES", "skill": "ovos-skill-diagnostics", "dialog": "core_version.dialog", "text": "estou executando ovos core {version}"}
 {"lang": "gl-ES", "skill": "ovos-skill-diagnostics", "dialog": "cpu_percent.dialog", "text": "estou usando o {cpu} por cento da miña cpu"}
@@ -1275,6 +1293,9 @@
 {"lang": "gl-ES", "skill": "ovos-skill-ip", "dialog": "public.ip.error.dialog", "text": "non puiden conectar a internet para comprobar o enderezo público"}
 {"lang": "gl-ES", "skill": "ovos-skill-ip", "dialog": "wifi.signal.dialog", "text": "o teu sinal wifi está en {quality}"}
 {"lang": "gl-ES", "skill": "ovos-skill-ip", "dialog": "wifi.signal.dialog", "text": "forza do sinal {quality}"}
+{"lang": "gl-ES", "skill": "ovos-skill-iss-location", "dialog": "api_unavailable.dialog", "text": "síntoo, agora mesmo non podo conectar co servizo de seguimento da estación espacial."}
+{"lang": "gl-ES", "skill": "ovos-skill-iss-location", "dialog": "api_unavailable.dialog", "text": "estou tendo problemas para obter os datos en directo da estación espacial agora mesmo, por favor, ténteo de novo máis tarde."}
+{"lang": "gl-ES", "skill": "ovos-skill-iss-location", "dialog": "api_unavailable.dialog", "text": "o servizo de seguimento da estación espacial non responde agora"}
 {"lang": "gl-ES", "skill": "ovos-skill-iss-location", "dialog": "location_current.dialog", "text": "a eei está situada sobre a latitude {latitude} e lonxitude {longitude}, que corresponde a {toponym}"}
 {"lang": "gl-ES", "skill": "ovos-skill-iss-location", "dialog": "location_current.dialog", "text": "a estación espacial internacional está agora sobre {toponym} na latitude {latitude} e lonxitude {longitude}"}
 {"lang": "gl-ES", "skill": "ovos-skill-iss-location", "dialog": "location_current.dialog", "text": "a estación espacial está situada na latitude {latitude} e lonxitude {longitude}, sobre {toponym}"}
@@ -1428,12 +1449,17 @@
 {"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "over_dice_limit.dialog", "text": "fixaches un límite de {number} na túa configuración. o que vou facer é lanzar {number} dados."}
 {"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "second_choice.dialog", "text": "cal é a túa segunda opción?"}
 {"lang": "gl-ES", "skill": "ovos-skill-randomness", "dialog": "second_choice.dialog", "text": "vale. agora cal é a segunda opción?"}
+{"lang": "gl-ES", "skill": "ovos-skill-screenshot", "dialog": "screenshot_delayed.dialog", "text": "facer unha captura de pantalla en {delay} segundos"}
+{"lang": "gl-ES", "skill": "ovos-skill-screenshot", "dialog": "screenshot_delayed.dialog", "text": "{delay} segundos e din queijos"}
 {"lang": "gl-ES", "skill": "ovos-skill-screenshot", "dialog": "screenshot_failed.dialog", "text": "non puiden facer a captura de pantalla"}
 {"lang": "gl-ES", "skill": "ovos-skill-screenshot", "dialog": "screenshot_failed.dialog", "text": "non se puido capturar a pantalla"}
 {"lang": "gl-ES", "skill": "ovos-skill-screenshot", "dialog": "screenshot_taken.dialog", "text": "captura de pantalla feita"}
 {"lang": "gl-ES", "skill": "ovos-skill-speedtest", "dialog": "error.dialog", "text": "produciuse un erro. non puiden facer unha proba de velocidade... síntocho."}
+{"lang": "gl-ES", "skill": "ovos-skill-speedtest", "dialog": "ping.dialog", "text": "ping é {ping} milisegundos"}
 {"lang": "gl-ES", "skill": "ovos-skill-speedtest", "dialog": "result.dialog", "text": "a túa velocidade de descarga é de {down} megabits por segundo e a túa velocidade de carga é de {up} megabits por segundo."}
 {"lang": "gl-ES", "skill": "ovos-skill-speedtest", "dialog": "running.dialog", "text": "a iniciar a proba de velocidade agora. nun momentiño volvo cos resultados."}
+{"lang": "gl-ES", "skill": "ovos-skill-spelling", "dialog": "what.word.dialog", "text": "que palabra queres que che diga?"}
+{"lang": "gl-ES", "skill": "ovos-skill-spelling", "dialog": "what.word.dialog", "text": "que palabra debo dicir?"}
 {"lang": "gl-ES", "skill": "ovos-skill-volume", "dialog": "error.get.volume.dialog", "text": "seica hai un problema. non dei consultado o volume actual."}
 {"lang": "gl-ES", "skill": "ovos-skill-volume", "dialog": "volume.change.amount.dialog", "text": "para que volume? pódese de 0 a 100."}
 {"lang": "gl-ES", "skill": "ovos-skill-volume", "dialog": "volume.current.dialog", "text": "o volume está en {volume}"}
@@ -1739,15 +1765,21 @@
 {"lang": "gl-ES", "skill": "ovos-skill-wikihow", "dialog": "step.dialog", "text": "paso {number}, {step}"}
 {"lang": "gl-ES", "skill": "ovos-skill-wikipedia", "dialog": "no entry found.dialog", "text": "coido que non hai ningún artigo sobre iso"}
 {"lang": "gl-ES", "skill": "ovos-skill-wikipedia", "dialog": "no entry found.dialog", "text": "non atopo ningún artigo relacionado na wikipedia"}
+{"lang": "gl-ES", "skill": "ovos-skill-wikipedia", "dialog": "no_answer.dialog", "text": "non atopei unha resposta para iso."}
+{"lang": "gl-ES", "skill": "ovos-skill-wikipedia", "dialog": "no_answer.dialog", "text": "non puiden atopar nada sobre iso."}
+{"lang": "gl-ES", "skill": "ovos-skill-wikipedia", "dialog": "no_query.dialog", "text": "quen ou que che gustaría que buscases na wikipedia?"}
+{"lang": "gl-ES", "skill": "ovos-skill-wikipedia", "dialog": "no_query.dialog", "text": "que necesito para buscar a wikipedia?"}
+{"lang": "gl-ES", "skill": "ovos-skill-wikipedia", "dialog": "nothing.more.dialog", "text": "é dicir, todo o que teño en {title}"}
+{"lang": "gl-ES", "skill": "ovos-skill-wikipedia", "dialog": "nothing.more.dialog", "text": "isto é todo o que wikipedia me dá sobre {title}"}
 {"lang": "gl-ES", "skill": "ovos-skill-wikipedia", "dialog": "searching.dialog", "text": "espera, vou consultar {query} na wikipedia"}
 {"lang": "gl-ES", "skill": "ovos-skill-wikipedia", "dialog": "searching.dialog", "text": "estou a procurar {query} na wikipedia"}
 {"lang": "gl-ES", "skill": "ovos-skill-wikipedia", "dialog": "thats all.dialog", "text": "isto é todo o que atopei"}
 {"lang": "gl-ES", "skill": "ovos-skill-wikipedia", "dialog": "thats all.dialog", "text": "isto é todo o que sei"}
 {"lang": "gl-ES", "skill": "ovos-skill-wolfie", "dialog": "no_answer.dialog", "text": "wolf non sabe a resposta"}
-{"lang": "gl-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "no.word.history.dialog", "text": "non teño unha palabra gardada para ese día."}
-{"lang": "gl-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "no.word.history.dialog", "text": "só sei palabras de días nos que me preguntaron."}
-{"lang": "gl-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "unknown.wod.dialog", "text": "non sei cal é a palabra do día"}
-{"lang": "gl-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "word.of.day.dialog", "text": "a palabra do día é {word}"}
+{"lang": "gl-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "no_word_history.dialog", "text": "non teño unha palabra gardada para ese día."}
+{"lang": "gl-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "no_word_history.dialog", "text": "só sei palabras de días nos que me preguntaron."}
+{"lang": "gl-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "unknown_wod.dialog", "text": "non sei cal é a palabra do día"}
+{"lang": "gl-ES", "skill": "ovos-skill-word-of-the-day", "dialog": "word_of_day.dialog", "text": "a palabra do día é {word}"}
 {"lang": "gl-ES", "skill": "ovos-skill-wordnet", "dialog": "no_answer.dialog", "text": "word net does not know the answer"}
 {"lang": "gl-ES", "skill": "ovos-skill-wordnet", "dialog": "unresolved.dialog", "text": "non entendín que palabra queres dicir"}
 {"lang": "gl-ES", "skill": "ovos-transcription-validator-plugin", "dialog": "say_again.dialog", "text": "desculpe, a súa solicitude non estaba clara. por favor, repítaa."}

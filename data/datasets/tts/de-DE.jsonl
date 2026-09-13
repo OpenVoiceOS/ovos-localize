@@ -155,8 +155,10 @@
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "dialog": "error_no_list_name.dialog", "text": "du musst den eintrag benennen."}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "dialog": "error_no_repeat.dialog", "text": "du musst mir ein zeitintervall nennen. das können einzelne tage oder auch kürzere wiederholungen sein."}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "dialog": "error_no_scheduled_kind.dialog", "text": "sie haben keinen zeitplan {kind}."}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "dialog": "error_no_script.dialog", "text": "ich habe nicht gehört, welche audiodatei für ihre {kind} zu verwenden."}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "dialog": "error_no_time.dialog", "text": "ich habe keine uhrzeit für den {kind} gehört."}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "dialog": "error_nothing_to_cancel.dialog", "text": "es ist keine solche benachrichtigung gespeichert."}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "dialog": "error_same_priority.dialog", "text": "die priorität ist bereits auf diesen wert gesetzt."}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "dialog": "expired_alert.dialog", "text": "ich sollte dich um {name} wecken."}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "dialog": "expired_audio_alert_intro.dialog", "text": "du hast eine audio benachrichtigung."}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "dialog": "expired_reminder.dialog", "text": "ich sollte dich an {name} erinnern."}
@@ -189,6 +191,8 @@
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "dialog": "list_todo_reminder.dialog", "text": "ich sollte dich erinnern an {reminders}."}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems.dialog", "text": "auf der {name} liste steht {items}."}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems_added.dialog", "text": "ich habe {num} einträge hinzugefügt."}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "dialog": "media_type_changed.dialog", "text": "der ton wurde von {old} auf {new} geändert."}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "dialog": "media_type_set.dialog", "text": "setzen sie den ton auf {new}."}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "dialog": "monday.dialog", "text": "montag"}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "dialog": "music.dialog", "text": "musik"}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "dialog": "next_alert.dialog", "text": "der nächste ist {name}, {begin}."}
@@ -277,42 +281,54 @@
 {"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "es ist {date}"}
 {"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "das datum ist {date}"}
 {"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "{date}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date.not.found.dialog", "text": "ich konnte das datum für dich nicht finden."}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "es ist der {date} in {num_days}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "es ist der {date} in {num_days} tagen von heute an"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "{date}, in {num_days}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "{date}, {num_days} ab heute"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date.relative.past.dialog", "text": "vor {num_days}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date.relative.past.dialog", "text": "{date} war vor {num_days}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "day.current.dialog", "text": "der aktuelle tag ist der {day}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "day.current.dialog", "text": "es ist der {day}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "day.current.dialog", "text": "heute ist der {day}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "day.current.dialog", "text": "{day}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "did.you.mean.timezone.dialog", "text": "meintest du die zeitzone {zone_name}?"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "extract.date.error.dialog", "text": "ich konnte nicht verstehen, nach welchem datum du gefragt hast"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "month.current.dialog", "text": "der aktuelle monat ist {month}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "month.current.dialog", "text": "dieser monat ist {month}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "month.current.dialog", "text": "es ist jetzt {month}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "month.current.dialog", "text": "es ist {month}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "month.current.dialog", "text": "{month}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "aktuell {time}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "es ist {time}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "es ist {time} uhr"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "uhrzeit"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "{time}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "time.future.dialog", "text": "es wird {time} sein"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "time.future.dialog", "text": "uhrzeit"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "time.tz.not.found.dialog", "text": "ich konnte die zeitzone für {location} nicht finden"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "weekday.at.date.future.dialog", "text": "am {date} ist es {weekday}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "weekday.at.date.past.dialog", "text": "am {date} war es {weekday}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "weekday.current.dialog", "text": "der aktuelle wochentag ist {weekday}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "weekday.current.dialog", "text": "heute ist {weekday}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "weekday.current.dialog", "text": "es ist {weekday}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "das aktuelle jahr ist {year}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "dieses jahr ist {year}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "es ist {year}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "wir befinden uns gerade im {year}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "{year}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date_not_found.dialog", "text": "ich konnte das datum für dich nicht finden."}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "es ist der {date} in {num_days}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "es ist der {date} in {num_days} tagen von heute an"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, in {num_days}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, {num_days} ab heute"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "vor {num_days}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "{date} war vor {num_days}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "der aktuelle tag ist der {day}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "es ist der {day}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "heute ist der {day}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "{day}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "did_you_mean_timezone.dialog", "text": "meintest du die zeitzone {zone_name}?"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "extract_date_error.dialog", "text": "ich konnte nicht verstehen, nach welchem datum du gefragt hast"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_no.dialog", "text": "nein, {year} ist kein schaltjahr."}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_yes.dialog", "text": "ja, {year} ist ein schaltjahr."}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_no.dialog", "text": "nein. das nächste schaltjahr danach wird {year} sein."}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_yes.dialog", "text": "ja, {year} ist ein schaltjahr."}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_no.dialog", "text": "nein, {year} wird kein schaltjahr sein."}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_yes.dialog", "text": "ja, {year} wird ein schaltjahr sein."}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "der aktuelle monat ist {month}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "dieser monat ist {month}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "es ist jetzt {month}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "es ist {month}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "{month}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "aktuell {time}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "es ist {time}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "es ist {time} uhr"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "uhrzeit"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "es wird {time} sein"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "uhrzeit"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "time_tz_not_found.dialog", "text": "ich konnte die zeitzone für {location} nicht finden"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_future.dialog", "text": "am {date} ist es {weekday}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_past.dialog", "text": "am {date} war es {weekday}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "der aktuelle wochentag ist {weekday}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "heute ist {weekday}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "es ist {weekday}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_no.dialog", "text": "nein, {date} wird {actual_weekday} sein, nicht {weekday}."}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_yes.dialog", "text": "ja, {date} wird {weekday} sein."}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_no.dialog", "text": "nein, {date} war {actual_weekday}, nicht {weekday}."}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_yes.dialog", "text": "ja, {date} war {weekday}."}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_no.dialog", "text": "nein, {date} ist {actual_weekday}, nicht {weekday}."}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_yes.dialog", "text": "ja, {date} ist {weekday}."}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "das aktuelle jahr ist {year}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "dieses jahr ist {year}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "es ist {year}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "wir befinden uns gerade im {year}"}
+{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "{year}"}
 {"lang": "de-DE", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "ich konnte bei duckduckgo keine antwort finden."}
 {"lang": "de-DE", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "entschuldigung, duckduckgo hat kein ergebnis zurückgegeben."}
 {"lang": "de-DE", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "ich habe dazu nichts bei duckduckgo gefunden."}
@@ -633,6 +649,8 @@
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "last_digits_device.dialog", "text": "auf {{ device }} endet meine ip mit der ziffer {{ digits }}"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "last_digits_device.dialog", "text": "auf {{ device }} endet sie mit der zahl {{ digits }}"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "last_digits_device.dialog", "text": "auf {{ device }} endet sie mit der ziffer {{ digits }}"}
+{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "my.public.ip.dialog", "text": "ihre öffentliche adresse ist {ip}"}
+{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "my.public.ip.dialog", "text": "die öffentliche ip ist {ip}"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "my_address_is.dialog", "text": "meine ip adresse ist {{ ip }}"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "my_address_is.dialog", "text": "meine ip ist {{ ip }}"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "my_address_is.dialog", "text": "sie ist {{ ip }}"}
@@ -641,6 +659,12 @@
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "my_address_on_x_is_y.dialog", "text": "auf {{ device }} ist sie {{ ip }}"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "no_network_connection.dialog", "text": "ich bin gerade nicht mit dem netzwerk verbunden"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "no_network_connection.dialog", "text": "ich habe aktuell kein netzwerk"}
+{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "public.ip.error.dialog", "text": "ich konnte das internet nicht erreichen, um die öffentliche adresse zu überprüfen"}
+{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "wifi.signal.dialog", "text": "ihr wlan-signal liegt bei {quality}"}
+{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "wifi.signal.dialog", "text": "signalstärke {quality}"}
+{"lang": "de-DE", "skill": "ovos-skill-iss-location", "dialog": "api_unavailable.dialog", "text": "tut mir leid, ich kann den raumstations-tracking-service nicht erreichen."}
+{"lang": "de-DE", "skill": "ovos-skill-iss-location", "dialog": "api_unavailable.dialog", "text": "ich habe probleme, die live-daten der raumstation zu bekommen, bitte versuchen sie es später noch einmal."}
+{"lang": "de-DE", "skill": "ovos-skill-iss-location", "dialog": "api_unavailable.dialog", "text": "der raumstations-tracking-service reagiert gerade nicht."}
 {"lang": "de-DE", "skill": "ovos-skill-iss-location", "dialog": "location_current.dialog", "text": "das i s s fliegt über {latitude} breitengrad {longitude} längengrad, was {toponym} entspricht"}
 {"lang": "de-DE", "skill": "ovos-skill-iss-location", "dialog": "location_current.dialog", "text": "die internationale raumstation befindet sich jetzt über {toponym} auf {latitude} breitengrad {longitude} längengrad"}
 {"lang": "de-DE", "skill": "ovos-skill-iss-location", "dialog": "location_current.dialog", "text": "die raumstation befindet sich auf breitengrad {latitude} und längengrad {longitude} über {toponym}"}
@@ -764,12 +788,16 @@
 {"lang": "de-DE", "skill": "ovos-skill-pokepedia", "dialog": "error_no_pokemon.dialog", "text": "du hast mir nicht gesagt, über welches pokémon du etwas wissen willst!"}
 {"lang": "de-DE", "skill": "ovos-skill-pokepedia", "dialog": "error_not_found.dialog", "text": "ich konnte dieses pokémon gerade nicht finden. versuch es später noch einmal!"}
 {"lang": "de-DE", "skill": "ovos-skill-pokepedia", "dialog": "pokemon_type.dialog", "text": "{pokemon_name} ist vom typ {types}. {explanation}!"}
+{"lang": "de-DE", "skill": "ovos-skill-screenshot", "dialog": "screenshot_delayed.dialog", "text": "einen screenshot in {delay} sekunden machen"}
+{"lang": "de-DE", "skill": "ovos-skill-screenshot", "dialog": "screenshot_delayed.dialog", "text": "{delay} sekunden und sagen, käse"}
 {"lang": "de-DE", "skill": "ovos-skill-screenshot", "dialog": "screenshot_failed.dialog", "text": "ich konnte den screenshot nicht machen"}
 {"lang": "de-DE", "skill": "ovos-skill-screenshot", "dialog": "screenshot_failed.dialog", "text": "screenshot fehlgeschlagen"}
 {"lang": "de-DE", "skill": "ovos-skill-screenshot", "dialog": "screenshot_taken.dialog", "text": "screenshot gemacht"}
 {"lang": "de-DE", "skill": "ovos-skill-speedtest", "dialog": "error.dialog", "text": "es ist ein fehler aufgetreten, ich konnte keinen geschwindigkeitstest durchführen ... entschuldigung."}
+{"lang": "de-DE", "skill": "ovos-skill-speedtest", "dialog": "ping.dialog", "text": "ping ist {ping} millisekunden"}
 {"lang": "de-DE", "skill": "ovos-skill-speedtest", "dialog": "result.dialog", "text": "deine downloadgeschwindigkeit beträgt {down} megabit pro sekunde und deine uploadgeschwindigkeit beträgt {up} megabit pro sekunde."}
 {"lang": "de-DE", "skill": "ovos-skill-speedtest", "dialog": "running.dialog", "text": "ich starte jetzt den geschwindigkeitstest und melde mich in kürze mit den ergebnissen."}
+{"lang": "de-DE", "skill": "ovos-skill-spelling", "dialog": "what.word.dialog", "text": "welches wort soll ich buchstabieren?"}
 {"lang": "de-DE", "skill": "ovos-skill-volume", "dialog": "error.get.volume.dialog", "text": "es scheint ein problem zu geben. ich konnte die aktuelle laustärke nicht abfragen."}
 {"lang": "de-DE", "skill": "ovos-skill-volume", "dialog": "volume.change.amount.dialog", "text": "auf welche lautstärke? 0 bis 100 ist möglich."}
 {"lang": "de-DE", "skill": "ovos-skill-volume", "dialog": "volume.current.dialog", "text": "die lautstärke ist auf {volume} eingestellt"}
@@ -1039,6 +1067,12 @@
 {"lang": "de-DE", "skill": "ovos-skill-wikihow", "dialog": "step.dialog", "text": "schritt {number}, {step}"}
 {"lang": "de-DE", "skill": "ovos-skill-wikipedia", "dialog": "no entry found.dialog", "text": "ich fürchte, es gibt keinen artikel darüber"}
 {"lang": "de-DE", "skill": "ovos-skill-wikipedia", "dialog": "no entry found.dialog", "text": "ich kann keinen verwandten wikipedia-artikel finden"}
+{"lang": "de-DE", "skill": "ovos-skill-wikipedia", "dialog": "no_answer.dialog", "text": "ich habe dafür keine antwort gefunden."}
+{"lang": "de-DE", "skill": "ovos-skill-wikipedia", "dialog": "no_answer.dialog", "text": "ich konnte nichts darüber finden."}
+{"lang": "de-DE", "skill": "ovos-skill-wikipedia", "dialog": "no_query.dialog", "text": "wer oder was möchtest du, dass ich bei wikipedia nach oben schaue?"}
+{"lang": "de-DE", "skill": "ovos-skill-wikipedia", "dialog": "no_query.dialog", "text": "wonach soll ich wikipedia durchsuchen?"}
+{"lang": "de-DE", "skill": "ovos-skill-wikipedia", "dialog": "nothing.more.dialog", "text": "das ist alles, was ich habe auf {title}"}
+{"lang": "de-DE", "skill": "ovos-skill-wikipedia", "dialog": "nothing.more.dialog", "text": "das ist alles wikipedia gibt mir über {title}"}
 {"lang": "de-DE", "skill": "ovos-skill-wikipedia", "dialog": "searching.dialog", "text": "ich überprüfe wikipedia für {query}"}
 {"lang": "de-DE", "skill": "ovos-skill-wikipedia", "dialog": "searching.dialog", "text": "lass mich in wikipedia nach {query} suchen"}
 {"lang": "de-DE", "skill": "ovos-skill-wikipedia", "dialog": "searching.dialog", "text": "lass mich bei wikipedia nach {query} nachschlagen"}
@@ -1046,11 +1080,11 @@
 {"lang": "de-DE", "skill": "ovos-skill-wikipedia", "dialog": "thats all.dialog", "text": "mehr kann ich nicht finden"}
 {"lang": "de-DE", "skill": "ovos-skill-wikipedia", "dialog": "thats all.dialog", "text": "mehr weiß ich nicht"}
 {"lang": "de-DE", "skill": "ovos-skill-wolfie", "dialog": "no_answer.dialog", "text": "der wolf nicht weiß, die antwort"}
-{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "dialog": "no.word.history.dialog", "text": "ich habe kein wort für diesen tag aufgezeichnet."}
-{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "dialog": "no.word.history.dialog", "text": "ich kenne nur wörter von tagen, nach denen ich gefragt wurde."}
-{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "dialog": "spell.word.dialog", "text": "{word} wird {letters} buchstabiert"}
-{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "dialog": "unknown.wod.dialog", "text": "ich kenne das wort des tages nicht"}
-{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "dialog": "word.of.day.dialog", "text": "das wort des tages ist {word}"}
+{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "dialog": "no_word_history.dialog", "text": "ich habe kein wort für diesen tag aufgezeichnet."}
+{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "dialog": "no_word_history.dialog", "text": "ich kenne nur wörter von tagen, nach denen ich gefragt wurde."}
+{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "dialog": "spell_word.dialog", "text": "{word} wird {letters} buchstabiert"}
+{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "dialog": "unknown_wod.dialog", "text": "ich kenne das wort des tages nicht"}
+{"lang": "de-DE", "skill": "ovos-skill-word-of-the-day", "dialog": "word_of_day.dialog", "text": "das wort des tages ist {word}"}
 {"lang": "de-DE", "skill": "ovos-skill-wordnet", "dialog": "no_answer.dialog", "text": "word net does not know the answer"}
 {"lang": "de-DE", "skill": "ovos-skill-wordnet", "dialog": "unresolved.dialog", "text": "ich habe nicht verstanden, welches wort du meinst"}
 {"lang": "de-DE", "skill": "ovos-transcription-validator-plugin", "dialog": "say_again.dialog", "text": "das habe ich nicht ganz verstanden. könnten sie es bitte wiederholen?"}

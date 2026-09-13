@@ -119,20 +119,20 @@
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "whole_day.dialog", "text": "целый день"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "{date}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "это {date}"}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date.not.found.dialog", "text": "я не смог найти для тебя это свидание"}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "{date}, {num_days} с этого момента"}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "{date}, в {num_days}"}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "теперь это {date}, {num_days}."}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date.relative.future.dialog", "text": "это {date}, в {num_days}"}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date.relative.past.dialog", "text": "{date}, {num_days} назад"}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date.relative.past.dialog", "text": "это было {date}, {num_days} назад"}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "did.you.mean.timezone.dialog", "text": "вы имели в виду {zone_name} часовую зону?"}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "{time}"}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "в настоящее время {time}"}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time.current.dialog", "text": "это {time}"}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time.future.dialog", "text": "{time}"}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time.future.dialog", "text": "это будет {time}"}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time.tz.not.found.dialog", "text": "я не смог найти часовой пояс для {location}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_not_found.dialog", "text": "я не смог найти для тебя это свидание"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, {num_days} с этого момента"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, в {num_days}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "теперь это {date}, {num_days}."}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "это {date}, в {num_days}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "{date}, {num_days} назад"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "это было {date}, {num_days} назад"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "did_you_mean_timezone.dialog", "text": "вы имели в виду {zone_name} часовую зону?"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "в настоящее время {time}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "это {time}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "{time}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "это будет {time}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_tz_not_found.dialog", "text": "я не смог найти часовой пояс для {location}"}
 {"lang": "ru-RU", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "я не нашёл ответа в duckduckgo."}
 {"lang": "ru-RU", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "извините, duckduckgo не вернул результатов."}
 {"lang": "ru-RU", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "duckduckgo ничего не нашёл по этому запросу."}
@@ -144,6 +144,15 @@
 {"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "я не знаю, что это значит."}
 {"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "я не понимаю, но я изучаю новые вещи каждый день."}
 {"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "я не понимаю."}
+{"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "hello.dialog", "text": "ещё раз привет!"}
+{"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "hello.dialog", "text": "привет!"}
+{"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "hello.dialog", "text": "привет, друг!"}
+{"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "hello.dialog", "text": "эй!"}
+{"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "hello.dialog", "text": "рад тебя слышать."}
+{"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "hello.dialog", "text": "привет, как дела?"}
+{"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "hello.dialog", "text": "и тебе привет!"}
+{"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "hello.dialog", "text": "привет, что нового?"}
+{"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "hello.dialog", "text": "рад тебя видеть!"}
 {"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "hello.world.dialog", "text": "здравствуй"}
 {"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "hello.world.dialog", "text": "и тебе привет"}
 {"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "hello.world.dialog", "text": "привет, мир"}
