@@ -147,7 +147,6 @@
 {"lang": "eu-ES", "skill": "ovos-skill-camera", "dialog": "get_ready.dialog", "text": "esan patata"}
 {"lang": "eu-ES", "skill": "ovos-skill-camera", "dialog": "picture.dialog", "text": "argazkiak ateratzea gustatzen zait"}
 {"lang": "eu-ES", "skill": "ovos-skill-camera", "dialog": "picture.dialog", "text": "argazkia atera da"}
-{"lang": "eu-ES", "skill": "ovos-skill-camera", "dialog": "picture.location.dialog", "text": "argazkiak {path} gordetzen dira"}
 {"lang": "eu-ES", "skill": "ovos-skill-cmd", "dialog": "no.scripts.dialog", "text": "ez daukat scriptik konfiguratuta"}
 {"lang": "eu-ES", "skill": "ovos-skill-cmd", "dialog": "no.scripts.dialog", "text": "oraindik ez dago komandorik konfiguratuta"}
 {"lang": "eu-ES", "skill": "ovos-skill-cmd", "dialog": "running.dialog", "text": "{alias} komandoa exekutatzen"}
@@ -201,12 +200,12 @@
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "{year}"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "{year} da"}
 {"lang": "eu-ES", "skill": "ovos-skill-diagnostics", "dialog": "available_memory.dialog", "text": "{memory} eskuragarri {total}-tik"}
-{"lang": "eu-ES", "skill": "ovos-skill-diagnostics", "dialog": "core.version.dialog", "text": "ovos core {version} exekutatzen ari naiz"}
+{"lang": "eu-ES", "skill": "ovos-skill-diagnostics", "dialog": "core_version.dialog", "text": "ovos core {version} exekutatzen ari naiz"}
 {"lang": "eu-ES", "skill": "ovos-skill-diagnostics", "dialog": "cpu_percent.dialog", "text": "nire cpuaren ehuneko {cpu} erabiltzen ari naiz"}
 {"lang": "eu-ES", "skill": "ovos-skill-diagnostics", "dialog": "current_lang.dialog", "text": "orain {lang} hizkuntzan hitz egiten ari gara"}
 {"lang": "eu-ES", "skill": "ovos-skill-diagnostics", "dialog": "current_memory.dialog", "text": "uneko memoria erabilera ehuneko {memory} da"}
-{"lang": "eu-ES", "skill": "ovos-skill-diagnostics", "dialog": "disk.space.dialog", "text": "{total}-tik {free} libre duzu"}
-{"lang": "eu-ES", "skill": "ovos-skill-diagnostics", "dialog": "disk.space.dialog", "text": "{free} libre {total}-tik"}
+{"lang": "eu-ES", "skill": "ovos-skill-diagnostics", "dialog": "disk_space.dialog", "text": "{total}-tik {free} libre duzu"}
+{"lang": "eu-ES", "skill": "ovos-skill-diagnostics", "dialog": "disk_space.dialog", "text": "{free} libre {total}-tik"}
 {"lang": "eu-ES", "skill": "ovos-skill-diagnostics", "dialog": "has_gpu.dialog", "text": "bai, g p u bat daukat"}
 {"lang": "eu-ES", "skill": "ovos-skill-diagnostics", "dialog": "kernel_version.dialog", "text": "{os_info} sisteman ari naiz exekutatzen"}
 {"lang": "eu-ES", "skill": "ovos-skill-diagnostics", "dialog": "no_gpu.dialog", "text": "ez, ez daukat g p u bat"}
@@ -1212,8 +1211,8 @@
 {"lang": "eu-ES", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.short.dialog", "text": "banoa lotara."}
 {"lang": "eu-ES", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.short.dialog", "text": "okay."}
 {"lang": "eu-ES", "skill": "ovos-skill-naptime", "dialog": "i.am.awake.dialog", "text": "esna nago"}
-{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "dialog": "no.number.found.dialog", "text": "ez dut zenbaki hori aurkitu, hemen ausazko bat ordez"}
-{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "dialog": "no.number.found.dialog", "text": "ez nuen harrapatu zein zenbaki esan nahi zenuen, beraz, hona hemen ausazko gertaera bat."}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "dialog": "no_number_found.dialog", "text": "ez dut zenbaki hori aurkitu, hemen ausazko bat ordez"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "dialog": "no_number_found.dialog", "text": "ez nuen harrapatu zein zenbaki esan nahi zenuen, beraz, hona hemen ausazko gertaera bat."}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "dialog": "did_hear.dialog", "text": "bai."}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "dialog": "did_not_hear.dialog", "text": "ez, ez dizut entzun."}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "dialog": "did_not_hear.dialog", "text": "ez, uste dut ez dizudala entzun."}
@@ -1288,6 +1287,8 @@
 {"lang": "eu-ES", "skill": "ovos-skill-wallpapers", "dialog": "no_more_pictures.dialog", "text": "zuri erakusteko argazkirik gabe geratu naiz"}
 {"lang": "eu-ES", "skill": "ovos-skill-wallpapers", "dialog": "searching.dialog", "text": "hau duten irudiak bilatzen: {query}"}
 {"lang": "eu-ES", "skill": "ovos-skill-wallpapers", "dialog": "searching.dialog", "text": "honi buruzko argazkiak bilatzen: {query}"}
+{"lang": "eu-ES", "skill": "ovos-skill-wallpapers", "dialog": "searching_random.dialog", "text": "ok, argazkiak bilatzen"}
+{"lang": "eu-ES", "skill": "ovos-skill-wallpapers", "dialog": "searching_random.dialog", "text": "ok, irudiak bilatzen"}
 {"lang": "eu-ES", "skill": "ovos-skill-wallpapers", "dialog": "wallpaper_changed.dialog", "text": "gozatu zure horma-paper berriaz"}
 {"lang": "eu-ES", "skill": "ovos-skill-wallpapers", "dialog": "wallpaper_fail.dialog", "text": "ez dakit horma-papera nola aldatu plataforma honetan"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "dialog": "afternoon.dialog", "text": "arratsaldea"}
@@ -1527,9 +1528,9 @@
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "dialog": "weekly-condition.dialog", "text": "{days} {condition} espero da"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "dialog": "weekly-temperature.dialog", "text": "minimoak {low_min} eta {low_max} bitarte, eta maximoak {high_min} eta {high_max} bitarte izango dira"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "dialog": "west.dialog", "text": "mendebaldea"}
-{"lang": "eu-ES", "skill": "ovos-skill-wikihow", "dialog": "howto.failure.dialog", "text": "ez dakit"}
-{"lang": "eu-ES", "skill": "ovos-skill-wikihow", "dialog": "howto.failure.dialog", "text": "ez nago ziur"}
-{"lang": "eu-ES", "skill": "ovos-skill-wikihow", "dialog": "howto.failure.dialog", "text": "saiatu naiz wiki how bilatzen, baina ez dut ezer aurkitu"}
+{"lang": "eu-ES", "skill": "ovos-skill-wikihow", "dialog": "howto_failure.dialog", "text": "ez dakit"}
+{"lang": "eu-ES", "skill": "ovos-skill-wikihow", "dialog": "howto_failure.dialog", "text": "ez nago ziur"}
+{"lang": "eu-ES", "skill": "ovos-skill-wikihow", "dialog": "howto_failure.dialog", "text": "saiatu naiz wiki how bilatzen, baina ez dut ezer aurkitu"}
 {"lang": "eu-ES", "skill": "ovos-skill-wikihow", "dialog": "step.dialog", "text": "{number}. urratsa. {step}"}
 {"lang": "eu-ES", "skill": "ovos-skill-wikipedia", "dialog": "no entry found.dialog", "text": "ez dut aurkitu wikipedian lotutako artikulurik"}
 {"lang": "eu-ES", "skill": "ovos-skill-wikipedia", "dialog": "no entry found.dialog", "text": "tamalez ez dago horri buruzko artikulurik"}

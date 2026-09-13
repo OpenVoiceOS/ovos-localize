@@ -129,7 +129,6 @@
 {"lang": "pt-BR", "skill": "ovos-skill-camera", "dialog": "get_ready.dialog", "text": "diga xis"}
 {"lang": "pt-BR", "skill": "ovos-skill-camera", "dialog": "picture.dialog", "text": "eu gosto de tirar fotos"}
 {"lang": "pt-BR", "skill": "ovos-skill-camera", "dialog": "picture.dialog", "text": "foto tirada"}
-{"lang": "pt-BR", "skill": "ovos-skill-camera", "dialog": "picture.location.dialog", "text": "as fotos são salvas em {path}"}
 {"lang": "pt-BR", "skill": "ovos-skill-cmd", "dialog": "no.scripts.dialog", "text": "eu não tenho nenhum script configurado"}
 {"lang": "pt-BR", "skill": "ovos-skill-cmd", "dialog": "no.scripts.dialog", "text": "nenhum comando está configurado ainda"}
 {"lang": "pt-BR", "skill": "ovos-skill-cmd", "dialog": "running.dialog", "text": "executando comando {alias}"}
@@ -180,12 +179,12 @@
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "{year}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "year.current.dialog", "text": "é {year}"}
 {"lang": "pt-BR", "skill": "ovos-skill-diagnostics", "dialog": "available_memory.dialog", "text": "{memory} disponível de {total}"}
-{"lang": "pt-BR", "skill": "ovos-skill-diagnostics", "dialog": "core.version.dialog", "text": "estou rodando o ovos core {version}"}
+{"lang": "pt-BR", "skill": "ovos-skill-diagnostics", "dialog": "core_version.dialog", "text": "estou rodando o ovos core {version}"}
 {"lang": "pt-BR", "skill": "ovos-skill-diagnostics", "dialog": "cpu_percent.dialog", "text": "estou usando {cpu} por cento da minha cpu"}
 {"lang": "pt-BR", "skill": "ovos-skill-diagnostics", "dialog": "current_lang.dialog", "text": "no momento estamos falando {lang}"}
 {"lang": "pt-BR", "skill": "ovos-skill-diagnostics", "dialog": "current_memory.dialog", "text": "o uso atual de memória é de {memory} por cento"}
-{"lang": "pt-BR", "skill": "ovos-skill-diagnostics", "dialog": "disk.space.dialog", "text": "você tem {free} livre de {total} no total"}
-{"lang": "pt-BR", "skill": "ovos-skill-diagnostics", "dialog": "disk.space.dialog", "text": "{free} livre de {total}"}
+{"lang": "pt-BR", "skill": "ovos-skill-diagnostics", "dialog": "disk_space.dialog", "text": "você tem {free} livre de {total} no total"}
+{"lang": "pt-BR", "skill": "ovos-skill-diagnostics", "dialog": "disk_space.dialog", "text": "{free} livre de {total}"}
 {"lang": "pt-BR", "skill": "ovos-skill-diagnostics", "dialog": "has_gpu.dialog", "text": "sim, eu tenho uma g p u"}
 {"lang": "pt-BR", "skill": "ovos-skill-diagnostics", "dialog": "kernel_version.dialog", "text": "estou rodando em {os_info}"}
 {"lang": "pt-BR", "skill": "ovos-skill-diagnostics", "dialog": "no_gpu.dialog", "text": "não, eu não tenho uma g p u"}
@@ -1497,8 +1496,29 @@
 {"lang": "pt-BR", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.short.dialog", "text": "certo."}
 {"lang": "pt-BR", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.short.dialog", "text": "indo dormir."}
 {"lang": "pt-BR", "skill": "ovos-skill-naptime", "dialog": "i.am.awake.dialog", "text": "estou acordado"}
-{"lang": "pt-BR", "skill": "ovos-skill-number-facts", "dialog": "no.number.found.dialog", "text": "não encontrei esse número, aqui está um aleatório"}
-{"lang": "pt-BR", "skill": "ovos-skill-number-facts", "dialog": "no.number.found.dialog", "text": "não entendi qual número você quis dizer, aqui está uma curiosidade aleatória"}
+{"lang": "pt-BR", "skill": "ovos-skill-number-facts", "dialog": "no_number_found.dialog", "text": "não encontrei esse número, aqui está um aleatório"}
+{"lang": "pt-BR", "skill": "ovos-skill-number-facts", "dialog": "no_number_found.dialog", "text": "não entendi qual número você quis dizer, aqui está uma curiosidade aleatória"}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "did_hear.dialog", "text": "sim."}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "did_not_hear.dialog", "text": "não, não te ouvi."}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "did_not_hear.dialog", "text": "não, acho que não te ouvi."}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "not_parroting.dialog", "text": "eu não estou no modo papagaio"}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "nothing.dialog", "text": "nada"}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "parrot_start.dialog", "text": "eu sou um papagaio"}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "parrot_start.dialog", "text": "sou bom em repetir coisas"}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "parrot_start.dialog", "text": "eu gosto de ser um papagaio"}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "parrot_start.dialog", "text": "eu vou te repetir"}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "parrot_start.dialog", "text": "é bom ser um papagaio"}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "parrot_start.dialog", "text": "modo de papagaio ativado"}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "parrot_start.dialog", "text": "modo de papagaio envolvido"}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "parrot_start.dialog", "text": "modo de papagaio em"}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "parrot_stop.dialog", "text": "vou parar de repetir o que você diz"}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "parrot_stop.dialog", "text": "modo de papagaio desativado"}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "parrot_stop.dialog", "text": "modo de papagaio desengatado"}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "parrot_stop.dialog", "text": "modo de papagaio desligado"}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "please_repeat.dialog", "text": "você pode repetir isso?"}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "please_repeat.dialog", "text": "o que disseste?"}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "repeat_stt_old.dialog", "text": "há um tempo você disse, {stt}."}
+{"lang": "pt-BR", "skill": "ovos-skill-parrot", "dialog": "repeat_stt_old.dialog", "text": "a última coisa que você disse foi {stt}."}
 {"lang": "pt-BR", "skill": "ovos-skill-personal", "dialog": "what_am_i.dialog", "text": "eu sou uma inteligência artificial de código aberto."}
 {"lang": "pt-BR", "skill": "ovos-skill-personal", "dialog": "what_am_i.dialog", "text": "sou um software inteligente para comunicação com máquinas"}
 {"lang": "pt-BR", "skill": "ovos-skill-personal", "dialog": "when_was_i_born.dialog", "text": "eu nasci em {year}."}
@@ -1512,9 +1532,8 @@
 {"lang": "pt-BR", "skill": "ovos-skill-pokepedia", "dialog": "error_no_pokemon.dialog", "text": "você não me disse sobre qual pokémon quer saber!"}
 {"lang": "pt-BR", "skill": "ovos-skill-pokepedia", "dialog": "error_not_found.dialog", "text": "não consegui encontrar esse pokémon agora. tente de novo mais tarde!"}
 {"lang": "pt-BR", "skill": "ovos-skill-pokepedia", "dialog": "pokemon_type.dialog", "text": "{pokemon_name} é do tipo {types}. {explanation}!"}
-{"lang": "pt-BR", "skill": "ovos-skill-screenshot", "dialog": "screenshot.delayed.dialog", "text": "tirando uma captura de tela em {delay} segundos"}
-{"lang": "pt-BR", "skill": "ovos-skill-screenshot", "dialog": "screenshot.delayed.dialog", "text": "{delay} segundos e diga xis"}
-{"lang": "pt-BR", "skill": "ovos-skill-screenshot", "dialog": "screenshot.location.dialog", "text": "as capturas de tela são salvas em {path}"}
+{"lang": "pt-BR", "skill": "ovos-skill-screenshot", "dialog": "screenshot_delayed.dialog", "text": "tirando uma captura de tela em {delay} segundos"}
+{"lang": "pt-BR", "skill": "ovos-skill-screenshot", "dialog": "screenshot_delayed.dialog", "text": "{delay} segundos e diga xis"}
 {"lang": "pt-BR", "skill": "ovos-skill-screenshot", "dialog": "screenshot_failed.dialog", "text": "não consegui tirar a captura de tela"}
 {"lang": "pt-BR", "skill": "ovos-skill-screenshot", "dialog": "screenshot_failed.dialog", "text": "falha na captura de tela"}
 {"lang": "pt-BR", "skill": "ovos-skill-screenshot", "dialog": "screenshot_taken.dialog", "text": "captura de tela feita"}
@@ -1825,9 +1844,9 @@
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "weekly-condition.dialog", "text": "para {days} espere {condition}"}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "weekly-temperature.dialog", "text": "as mínimas estarão entre {low_min} e {low_max}, com as máximas entre {high_min} e {high_max}"}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "west.dialog", "text": "oeste"}
-{"lang": "pt-BR", "skill": "ovos-skill-wikihow", "dialog": "howto.failure.dialog", "text": "não tenho certeza"}
-{"lang": "pt-BR", "skill": "ovos-skill-wikihow", "dialog": "howto.failure.dialog", "text": "não sei"}
-{"lang": "pt-BR", "skill": "ovos-skill-wikihow", "dialog": "howto.failure.dialog", "text": "tentei pesquisar no wikihow mas não encontrei nada"}
+{"lang": "pt-BR", "skill": "ovos-skill-wikihow", "dialog": "howto_failure.dialog", "text": "não tenho certeza"}
+{"lang": "pt-BR", "skill": "ovos-skill-wikihow", "dialog": "howto_failure.dialog", "text": "não sei"}
+{"lang": "pt-BR", "skill": "ovos-skill-wikihow", "dialog": "howto_failure.dialog", "text": "tentei pesquisar no wikihow mas não encontrei nada"}
 {"lang": "pt-BR", "skill": "ovos-skill-wikihow", "dialog": "step.dialog", "text": "passo {number}, {step}"}
 {"lang": "pt-BR", "skill": "ovos-skill-wikipedia", "dialog": "no entry found.dialog", "text": "creio que não haja nenhum artigo sobre esse assunto"}
 {"lang": "pt-BR", "skill": "ovos-skill-wikipedia", "dialog": "no entry found.dialog", "text": "não consigo encontrar um artigo relacionado na wikipédia"}
