@@ -280,6 +280,8 @@
 {"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "anta alarme i ṛẓan"}
 {"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "anta tadyant i ṛẓan"}
 {"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "anta timer i ṛẓan"}
+{"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "timer.voc", "text": "amakud"}
+{"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "timer.voc", "text": "imakuden"}
 {"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "todo.voc", "text": "twuriwin"}
 {"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "weekdays.voc", "text": "ass n ddurt"}
 {"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "weekdays.voc", "text": "ussan n ddurt"}
@@ -5903,11 +5905,786 @@
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "init-iyi-d ssaɛa"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "d acu-t ssaɛa tura di {location}"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "efk-iyi ssaɛa n tura"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu-t ssaɛa ara tilin"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu-t ssaɛa ara tilin ma ulac aɣilif"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu-t ssaɛa ara yilin"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu-t ssaɛa ara tilin ticki"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu-t ssaɛa i d-iteddun"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tasinin acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tasinin acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tasinin acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tasinin acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tasinin seg tura acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tasinin seg tura acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tasinin seg tura acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tasinin seg tura acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesdidin acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesdidin acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesdidin acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesdidin acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesdidin seg tura acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesdidin seg tura acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesdidin seg tura acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesdidin seg tura acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesdidt acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesdidt acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesdidt acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesdidt acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesdidt seg tura acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesdidt seg tura acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesdidt seg tura acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesdidt seg tura acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesint acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesint acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesint acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesint acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesint seg tura acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesint seg tura acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesint seg tura acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n tesint seg tura acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n wesrag acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n wesrag acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n wesrag acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n wesrag acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n wesrag seg tura acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n wesrag seg tura acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n wesrag seg tura acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n wesrag seg tura acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n yesragen acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n yesragen acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n yesragen acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n yesragen acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n yesragen seg tura acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n yesragen seg tura acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n yesragen seg tura acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} n yesragen seg tura acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tasinin acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tasinin acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tasinin acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tasinin acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tasinin seg tura acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tasinin seg tura acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tasinin seg tura acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tasinin seg tura acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesdidin acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesdidin acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesdidin acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesdidin acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesdidin seg tura acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesdidin seg tura acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesdidin seg tura acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesdidin seg tura acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesdidt acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesdidt acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesdidt acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesdidt acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesdidt seg tura acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesdidt seg tura acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesdidt seg tura acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesdidt seg tura acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesint acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesint acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesint acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesint acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesint seg tura acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesint seg tura acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesint seg tura acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} tesint seg tura acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} wesrag acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} wesrag acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} wesrag acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} wesrag acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} wesrag seg tura acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} wesrag seg tura acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} wesrag seg tura acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} wesrag seg tura acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} yesragen acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} yesragen acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} yesragen acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} yesragen acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} yesragen seg tura acḥal ara tili ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} yesragen seg tura acḥal ara tili ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} yesragen seg tura acḥal ara tuɣal ssaɛa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "deg {offset} yesragen seg tura acḥal ara tuɣal ssaɛa deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n tasinin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n tasinin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n tesdidin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n tesdidt seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n tesdidt seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n tesint seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n wesrag seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n wesrag seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n yesragen seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n yesragen seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} tesdidin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} tesdidt seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} tesint seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} tesint seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} wesrag seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} yesragen seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n tasinin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n tasinin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n tesdidin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n tesdidt seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n tesdidt seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n tesint seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n wesrag seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n yesragen seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n yesragen seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} tesdidin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} tesdidin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} wesrag seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} yesragen seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n tasinin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n tesdidin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n tesdidin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n tesdidt seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n tesdidt seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n tesint seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n tesint seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n wesrag seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n wesrag seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n yesragen seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n yesragen seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} tasinin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} tesdidin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} tesint seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} tesint seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} wesrag seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} yesragen seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} yesragen seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n tasinin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n tasinin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n tesdidin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n tesdidin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n tesdidt seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n tesdidt seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n tesint seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n wesrag seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n wesrag seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n yesragen seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n yesragen seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} tasinin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} tasinin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} tesdidin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} tesdidin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} tesint seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} tesint seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} wesrag seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} yesragen seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} n tasinin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} n tesdidin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} n tesdidin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} n tesdidt seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} n tesint seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} n wesrag seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} n yesragen seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} n yesragen seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} tasinin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} tesdidin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} tesdidt seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} tesint seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} wesrag seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} wesrag seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa deg {offset} yesragen seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} n tasinin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} n tasinin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} n tesdidin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} n tesdidin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} n tesdidt seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} n tesint seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} n wesrag seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} n yesragen seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} tasinin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} tasinin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} tesdidin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} tesdidt seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} tesdidt seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} tesint seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} wesrag seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa mbaɛd {offset} yesragen seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma rǧiɣ {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa ma sɛeddaɣ {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma rǧiɣ {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa ma sɛeddaɣ {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma rǧiɣ {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa ma sɛeddaɣ {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n tasinin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n tasinin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n tesdidin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n tesdidin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n tesdidt seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n tesdidt seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n tesint seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n tesint seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n wesrag seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n wesrag seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n yesragen seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} n yesragen seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} tasinin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} tasinin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} tesdidin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} tesdidin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} tesdidt seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} tesdidt seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} tesint seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} tesint seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} wesrag seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} wesrag seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} yesragen seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa {offset} yesragen seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n tasinin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n tasinin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n tesdidin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n tesdidin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n tesdidt seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n tesdidt seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n tesint seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n tesint seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n wesrag seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n wesrag seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n yesragen seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} n yesragen seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} tasinin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} tasinin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} tesdidin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} tesdidin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} tesdidt seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} tesdidt seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} tesint seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} tesint seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} wesrag seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} wesrag seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} yesragen seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal tella ssaɛa {offset} yesragen seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt deg {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt ma rǧiɣ {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "d acu ara d-tini temrilt mbaɛd {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n tasinin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n tasinin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n tesdidin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n tesdidin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n tesdidt seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n tesdidt seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n tesint seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n tesint seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n wesrag seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n wesrag seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n yesragen seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} n yesragen seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} tasinin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} tasinin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} tesdidin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} tesdidin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} tesdidt seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} tesdidt seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} tesint seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} tesint seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} wesrag seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} wesrag seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} yesragen seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili {offset} yesragen seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n tasinin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n tasinin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n tesdidin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n tesdidin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n tesdidt seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n tesdidt seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n tesint seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n tesint seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n wesrag seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n wesrag seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n yesragen seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} n yesragen seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} tasinin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} tasinin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} tesdidin seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} tesdidin seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} tesdidt seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} tesdidt seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} tesint seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} tesint seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} wesrag seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} wesrag seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} yesragen seg tura"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi tella {offset} yesragen seg tura deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma rǧiɣ {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} n tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} n tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} n tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} n tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} n yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "melmi ara tili ma sɛeddaɣ {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} tesdidin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa deg {offset} wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} n wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} tasinin deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} tesdidt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} tesdidt deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} wesrag"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tili ssaɛa mbaɛd {offset} yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} n yesragen deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa deg {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n tesdidin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} n wesrag deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} tasinin"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} tesint"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} tesint deg {location}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} yesragen"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {offset} yesragen deg {location}"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "deg wass n lǧemɛa i nella?"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "deg wass n letnayen i nella?"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "deg wass n ssebt i nella?"}
