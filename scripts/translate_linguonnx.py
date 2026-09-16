@@ -165,6 +165,18 @@ def _split_top_level(s, sep="|"):
 _LEADING_SENTENCE_PUNCT = re.compile(r"^[¿¡\s]+")
 _TRAILING_SENTENCE_PUNCT = re.compile(r"[.?!\s]+$")
 
+# Languages that write every noun with a capital letter. A lowercase
+# English source word (``movies``) translated alone comes back as a
+# correctly capitalized noun (``Filme``), not as sentence dressing, so the
+# decapitalization in :func:`_translate_literal` must not touch it: a
+# ``.dialog`` line is shown to the user and would ship a spelling error.
+NOUN_CAPITALIZING_LANGS = frozenset({"de", "lb"})
+
+
+def _lang_code(lang):
+    """``de`` for ``de``, ``de-DE`` or ``de_DE``."""
+    return re.split(r"[-_]", (lang or "").strip())[0].lower()
+
 
 def _translate_literal(translate_fn, text, src, tgt):
     """Translate ``text``, keeping its edge whitespace out of the call.
@@ -203,9 +215,21 @@ def _translate_literal(translate_fn, text, src, tgt):
     # sentence-capitalization this guards against -- only decapitalize a
     # normally-cased result, where the rest of the word did not get the
     # same treatment as its first letter.
-    if stripped[:1].islower() and result[:1].isupper() and not result.isupper():
+    # Only the first character is ever changed: a capital anywhere else
+    # belongs to the word (a name, a noun in a language that capitalizes
+    # nouns) and is never the sentence-initial capital this removes. In a
+    # noun-capitalizing target the first character is kept too, because
+    # ``movies`` alone comes back as the noun ``Filme`` and lowercasing it
+    # ships a wrong spelling (T-2033 review, finding E).
+    if (stripped[:1].islower() and result[:1].isupper() and not result.isupper()
+            and _lang_code(tgt) not in NOUN_CAPITALIZING_LANGS):
         result = result[:1].lower() + result[1:]
     return lead + result + trail
+
+
+def _has_word(text):
+    """Whether ``text`` has at least one letter or digit to translate."""
+    return any(ch.isalnum() for ch in text)
 
 
 def _dedupe_key(alt):
@@ -217,9 +241,33 @@ def _dedupe_key(alt):
     same way, so a pair that only differs by these has still collapsed.
     """
     stripped = alt.strip()
-    stripped = _LEADING_SENTENCE_PUNCT.sub("", stripped)
-    stripped = _TRAILING_SENTENCE_PUNCT.sub("", stripped)
-    return stripped.casefold()
+    key = _LEADING_SENTENCE_PUNCT.sub("", stripped)
+    key = _TRAILING_SENTENCE_PUNCT.sub("", key)
+    if not key:
+        # A punctuation-only alternative (``(.|)``, ``(?|!)``) is the
+        # punctuation itself, not sentence dressing around a word: keep it
+        # distinct from an empty alternative and from other marks (T-2033
+        # review, finding F).
+        return stripped
+    return key.casefold()
+
+
+def _stray_close(s):
+    """The first ``)`` or ``]`` in ``s`` that closes nothing, or ``None``.
+
+    Counted per bracket kind, the way :func:`_matching_close` nests: a
+    ``)`` at ``(`` depth 0 is stray whatever the ``[`` depth is.
+    """
+    depth = {"(": 0, "[": 0}
+    for ch in s:
+        if ch in depth:
+            depth[ch] += 1
+        elif ch in ")]":
+            open_ch = "(" if ch == ")" else "["
+            if depth[open_ch] == 0:
+                return ch
+            depth[open_ch] -= 1
+    return None
 
 
 def translate_templated(translate_fn, masked_line, src, tgt):
@@ -245,10 +293,17 @@ def translate_templated(translate_fn, masked_line, src, tgt):
     that is dropped rather than shipped with a collapsed alternation.
 
     Also returns ``None``, with a logged warning, on an unbalanced group
-    (a ``(`` or ``[`` with no matching close) -- malformed template syntax
-    that a regex-free parser would otherwise silently truncate around,
-    losing whatever came after it.
+    (a ``(`` or ``[`` with no matching close, or a ``)`` or ``]`` that
+    closes nothing) -- malformed template syntax that a regex-free parser
+    would otherwise silently truncate around or send to the model as text.
     """
+    stray = _stray_close(masked_line)
+    if stray is not None:
+        # ``a) b (c|d)`` or ``(a|b)] c``: the stray close would be sent to
+        # the model as text and shipped back in the output (T-2033 review,
+        # finding G). Malformed template syntax; drop the line.
+        LOG.warning("stray %r in %r; dropping line", stray, masked_line)
+        return None
     out = []
     i = 0
     n = len(masked_line)
@@ -271,7 +326,11 @@ def translate_templated(translate_fn, masked_line, src, tgt):
                 out.append(_translate_literal(translate_fn, literal, src, tgt))
             translated_alts = []
             for alt in _split_top_level(body, "|"):
-                if not alt.strip():
+                if not _has_word(alt):
+                    # An empty or punctuation-only alternative (``( |the)``,
+                    # ``(.|)``) has nothing to translate, and a model given
+                    # a lone ``.`` has been seen returning a run of dots on
+                    # the real de route (T-2033): it is copied as-is.
                     translated_alts.append(alt)
                     continue
                 sub = translate_templated(translate_fn, alt, src, tgt)
@@ -364,7 +423,7 @@ def _translate_line(translate_fn, line, src, tgt):
     masked, placeholders = mask_placeholders(line)
     translated = translate_templated(translate_fn, masked, src, tgt)
     if translated is None:
-        return None, "duplicate alternative after translation"
+        return None, "group dropped (duplicate alternative or unbalanced brackets, see above)"
     survived = sorted(set(int(i) for i in MASK_RE.findall(translated)))
     if survived != list(range(len(placeholders))):
         return None, "mask did not survive"

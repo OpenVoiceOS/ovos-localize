@@ -457,3 +457,98 @@ def test_translate_templated_drops_an_unbalanced_group(caplog):
         out = translate_templated(translate_fn, "(a|(b|c) d", "en", "pt")
     assert out is None
     assert any("unbalanced" in r.message for r in caplog.records)
+
+
+def test_translate_literal_keeps_a_german_noun_capital():
+    """Regression for the T-2033 review (finding E): the live de-DE route
+    wrote (filme|lieder) for (movies|songs) -- German writes every noun
+    with a capital, and the decapitalization added for finding B removed
+    it. The model's capital is kept for a noun-capitalizing target."""
+
+    def translate_fn(text, s, t):
+        return {"movies": "Filme", "songs": "Lieder"}.get(text, text)
+
+    assert _translate_literal(translate_fn, "movies", "en", "de") == "Filme"
+    assert _translate_literal(translate_fn, "movies", "en", "de-DE") == "Filme"
+    assert translate_templated(translate_fn, "(movies|songs)", "en", "de-DE") == "(Filme|Lieder)"
+
+
+def test_translate_literal_still_decapitalizes_a_non_noun_capitalizing_target():
+    def translate_fn(text, s, t):
+        return {"search": "Mira."}.get(text, text)
+
+    assert _translate_literal(translate_fn, "search", "en", "es-ES") == "mira"
+
+
+def test_translate_literal_changes_the_first_character_only():
+    """A capital that is not at index 0 belongs to the word (a name), never
+    to the sentence dressing, so it is kept on every target."""
+
+    def translate_fn(text, s, t):
+        return "Reproduce Spotify"
+
+    assert _translate_literal(translate_fn, "play spotify", "en", "es") == "reproduce Spotify"
+
+
+def test_translate_line_keeps_a_whole_sentence_dialog_line_untouched():
+    """A .dialog line is a whole sentence: its source starts with a capital,
+    so the decapitalization never applies to it on any target."""
+
+    def translate_fn(text, s, t):
+        return {"What is the weather": "Wie ist das Wetter",
+                "The weather is nice": "Das Wetter ist schön"}.get(text, text)
+
+    assert translate_line(translate_fn, "What is the weather", "en", "de-DE") == "Wie ist das Wetter"
+    assert translate_line(translate_fn, "The weather is nice", "en", "de-DE") == "Das Wetter ist schön"
+
+
+def test_translate_templated_keeps_an_optional_punctuation_group():
+    """Regression for the T-2033 review (finding F): '(.|)' gave two empty
+    dedupe keys at 777dad1 and the line was dropped as a duplicate."""
+
+    def translate_fn(text, s, t):
+        return text.upper()
+
+    assert translate_templated(translate_fn, "(.|) x", "en", "pt") == "(.|) X"
+    assert translate_templated(translate_fn, "x (?|!)", "en", "pt") == "X (?|!)"
+
+
+def test_translate_templated_still_drops_a_real_empty_duplicate():
+    def translate_fn(text, s, t):
+        return text.upper()
+
+    assert translate_templated(translate_fn, "(|) x", "en", "pt") is None
+
+
+@pytest.mark.parametrize("line, stray", [("a) b (c|d)", ")"), ("(a|b)] c", "]"), ("x ] (y|z)", "]")])
+def test_translate_templated_drops_a_stray_close_bracket(caplog, line, stray):
+    """Regression for the T-2033 review (finding G): 'a) b (c|d)' shipped
+    as 'A) B (C|D)' -- the stray close went to the model as text."""
+
+    def translate_fn(text, s, t):
+        return text.upper()
+
+    with caplog.at_level("WARNING"):
+        out = translate_templated(translate_fn, line, "en", "pt")
+    assert out is None
+    assert any("stray" in r.message and repr(stray) in r.message for r in caplog.records)
+
+
+def test_translate_templated_keeps_a_mixed_nested_line_with_balanced_brackets():
+    def translate_fn(text, s, t):
+        return text.upper()
+
+    assert translate_templated(translate_fn, "[(a|b) c] (d|[e])", "en", "pt") == "[(A|B) C] (D|[E])"
+
+
+def test_translate_templated_never_sends_a_punctuation_only_alternative():
+    """The real de route turns a lone '.' into a run of dots (T-2033 live
+    probe); punctuation has nothing to translate and is copied as-is."""
+    sent = []
+
+    def translate_fn(text, s, t):
+        sent.append(text)
+        return text.upper()
+
+    assert translate_templated(translate_fn, "try again (.|)", "en", "de") == "TRY AGAIN (.|)"
+    assert sent == ["try again"]
