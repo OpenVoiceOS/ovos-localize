@@ -4566,12 +4566,6 @@
 {"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "voc", "intent": "Run.voc", "text": "exekutatu script-a"}
 {"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "voc", "intent": "Run.voc", "text": "jarri martxan komandoa"}
 {"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "voc", "intent": "Run.voc", "text": "jarri martxan script-a"}
-{"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "RunScriptCommandIntent.intent", "text": "abiarazi komandoa {script}"}
-{"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "RunScriptCommandIntent.intent", "text": "abiarazi script-a {script}"}
-{"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "RunScriptCommandIntent.intent", "text": "exekutatu komandoa {script}"}
-{"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "RunScriptCommandIntent.intent", "text": "exekutatu script-a {script}"}
-{"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "RunScriptCommandIntent.intent", "text": "jarri martxan komandoa {script}"}
-{"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "RunScriptCommandIntent.intent", "text": "jarri martxan script-a {script}"}
 {"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "list_scripts.intent", "text": "zein dira nire aliasak"}
 {"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "list_scripts.intent", "text": "zein dira nire komandoak"}
 {"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "list_scripts.intent", "text": "zein dira nire scriptak"}
@@ -4584,6 +4578,12 @@
 {"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "list_scripts.intent", "text": "zein script ezagutzen dituzu"}
 {"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "list_scripts.intent", "text": "zein komando exekuta ditzakezu"}
 {"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "list_scripts.intent", "text": "zein script exekuta ditzakezu"}
+{"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "abiarazi komandoa {script}"}
+{"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "abiarazi script-a {script}"}
+{"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "exekutatu komandoa {script}"}
+{"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "exekutatu script-a {script}"}
+{"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "jarri martxan komandoa {script}"}
+{"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "jarri martxan script-a {script}"}
 {"lang": "eu-ES", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request-color.intent", "text": "zein koloretakoa da {requested_color}"}
 {"lang": "eu-ES", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request-color-by-hex.intent", "text": "zein koloretakoa da {hex_code} kode hexadezimala duena"}
 {"lang": "eu-ES", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request-color-by-hex.intent", "text": "zein kolore da hex kode {hex_code}"}
@@ -12074,66 +12074,6 @@
 {"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genres.intent", "text": "zein genero dagozkio {movie} pelikulari"}
 {"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genres.intent", "text": "zein generotan sartzen da {movie} filma"}
 {"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genres.intent", "text": "zein generotan sartzen da {movie} pelikula"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "aurkitu {movie} filmari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "aurkitu {movie} filmari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "aurkitu {movie} pelikulari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "aurkitu {movie} pelikulari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "bilatu {movie} filmari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "bilatu {movie} filmari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "bilatu {movie} pelikulari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "bilatu {movie} pelikulari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hona hemen {movie} filmari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hona hemen {movie} filmari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hona hemen {movie} pelikulari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hona hemen {movie} pelikulari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "lortu {movie} filmari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "lortu {movie} filmari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "lortu {movie} pelikulari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "lortu {movie} pelikulari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "baduzu daturik {movie} filmari buruz"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "baduzu daturik {movie} pelikulari buruz"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "baduzu informaziorik {movie} filmari buruz"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "baduzu informaziorik {movie} pelikulari buruz"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "lor dezakezu daturik {movie} filmari buruz"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "lor dezakezu daturik {movie} pelikulari buruz"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "lor dezakezu informaziorik {movie} filmari buruz"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "lor dezakezu informaziorik {movie} pelikulari buruz"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "aurkeztu guri {movie} filmari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "aurkeztu guri {movie} filmari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "aurkeztu guri {movie} pelikulari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "aurkeztu guri {movie} pelikulari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "aurkeztu niri {movie} filmari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "aurkeztu niri {movie} filmari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "aurkeztu niri {movie} pelikulari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "aurkeztu niri {movie} pelikulari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "aurkeztu {movie} filmari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "aurkeztu {movie} filmari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "aurkeztu {movie} pelikulari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "aurkeztu {movie} pelikulari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eman guri {movie} filmari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eman guri {movie} filmari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eman guri {movie} pelikulari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eman guri {movie} pelikulari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eman niri {movie} filmari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eman niri {movie} filmari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eman niri {movie} pelikulari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eman niri {movie} pelikulari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eman {movie} filmari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eman {movie} filmari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eman {movie} pelikulari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eman {movie} pelikulari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eskaini guri {movie} filmari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eskaini guri {movie} filmari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eskaini guri {movie} pelikulari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eskaini guri {movie} pelikulari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eskaini niri {movie} filmari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eskaini niri {movie} filmari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eskaini niri {movie} pelikulari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eskaini niri {movie} pelikulari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eskaini {movie} filmari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eskaini {movie} filmari buruzko informazioa"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eskaini {movie} pelikulari buruzko datuak"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "eskaini {movie} pelikulari buruzko informazioa"}
 {"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "aurkitu film ezagunak"}
 {"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "aurkitu pelikula ezagunak"}
 {"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "bilatu film ezagunak"}
@@ -12148,10 +12088,6 @@
 {"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "zein pelikula ezagun ari dira botatzen orain"}
 {"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "zein pelikula ezagun ari dira ematen"}
 {"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "zein pelikula ezagun ari dira ematen orain"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_production.intent", "text": "nork egin du {movie} filma"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_production.intent", "text": "nork produzitu du {movie} filma"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_production.intent", "text": "zein konpainiak egin du {movie} filma"}
-{"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_production.intent", "text": "zein konpainiak produzitu du {movie} filma"}
 {"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_recommendations.intent", "text": "lortu {movie} filmaren antzeko film"}
 {"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_recommendations.intent", "text": "lortu {movie} filmaren antzeko film onak"}
 {"lang": "eu-ES", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_recommendations.intent", "text": "lortu {movie} filmaren antzeko pelikula"}

@@ -315,11 +315,11 @@
 {"lang": "es-ES", "skill": "ovos-skill-camera", "dialog": "picture.dialog", "text": "me gusta tomar fotos"}
 {"lang": "es-ES", "skill": "ovos-skill-camera", "dialog": "picture.dialog", "text": "fotografía hecha"}
 {"lang": "es-ES", "skill": "ovos-skill-camera", "dialog": "picture.dialog", "text": "fotografía tomada"}
-{"lang": "es-ES", "skill": "ovos-skill-cmd", "dialog": "no.scripts.dialog", "text": "no tengo ningún script configurado"}
-{"lang": "es-ES", "skill": "ovos-skill-cmd", "dialog": "no.scripts.dialog", "text": "todavía no hay comandos configurados"}
+{"lang": "es-ES", "skill": "ovos-skill-cmd", "dialog": "no_scripts.dialog", "text": "no tengo ningún script configurado"}
+{"lang": "es-ES", "skill": "ovos-skill-cmd", "dialog": "no_scripts.dialog", "text": "todavía no hay comandos configurados"}
 {"lang": "es-ES", "skill": "ovos-skill-cmd", "dialog": "running.dialog", "text": "ejecutando {alias} comando"}
 {"lang": "es-ES", "skill": "ovos-skill-cmd", "dialog": "running.dialog", "text": "ejecutando {alias} script"}
-{"lang": "es-ES", "skill": "ovos-skill-cmd", "dialog": "unknown.script.dialog", "text": "no conozco ningún script llamado {name}"}
+{"lang": "es-ES", "skill": "ovos-skill-cmd", "dialog": "unknown_script.dialog", "text": "no conozco ningún script llamado {name}"}
 {"lang": "es-ES", "skill": "ovos-skill-color-picker", "dialog": "color-not-found.dialog", "text": "no he podido encontrar ese color"}
 {"lang": "es-ES", "skill": "ovos-skill-color-picker", "dialog": "report-color-by-hex-name-known.dialog", "text": "esto es {color_name}. sus valores rgb son: rojo {red_value}, verde {green_value}, azul {blue_value}."}
 {"lang": "es-ES", "skill": "ovos-skill-color-picker", "dialog": "report-color-by-hex-name-not-known.dialog", "text": "los valores rgb para este color son: rojo {red_value}, verde {green_value}, azul {blue_value}"}
@@ -1955,10 +1955,6 @@
 {"lang": "es-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_genre_single.dialog", "text": "la filme {movie} se puede considerar del género {genre}"}
 {"lang": "es-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_genre_single.dialog", "text": "la película {movie} se puede considerar del género {genre}"}
 {"lang": "es-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_genre_single.dialog", "text": "puedes encontrar la película {movie} en la sección de {genre}"}
-{"lang": "es-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_info_response.dialog", "text": "la película {movie} se estrenó en el año {year} con un presupuesto de {budget} de dólares."}
-{"lang": "es-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_production_multiple.dialog", "text": "las companías {companies} y {lastcompany} produjeron la película {movie}"}
-{"lang": "es-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_production_multiple.dialog", "text": "{companies} y {lastcompany} produjeron la película {movie}"}
-{"lang": "es-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_production_single.dialog", "text": "la productora {company} produjo la película {movie}"}
 {"lang": "es-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_year_error.dialog", "text": "no encuentro la fecha de estreno de la cinta {movie}"}
 {"lang": "es-ES", "skill": "ovos-skill-moviemaster", "dialog": "movie_year_error.dialog", "text": "no encuentro la fecha de estreno de la película {movie}"}
 {"lang": "es-ES", "skill": "ovos-skill-moviemaster", "dialog": "no_api.dialog", "text": "debes ingresar tu clave a p i t m d b en hombe punto mycroft put a i para usar el skill movie master"}

@@ -10,8 +10,9 @@
 {"lang": "kab", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "(anwa|anta) i yuran {book}", "slots": ["book"], "entity_values": {"book": []}}
 {"lang": "kab", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "(anwa|anta) id amaru n {book}", "slots": ["book"], "entity_values": {"book": []}}
 {"lang": "kab", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "{book} anwa i t-yuran", "slots": ["book"], "entity_values": {"book": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "rnu {items} ɣer tebdart n {name}", "slots": ["items", "name"], "entity_values": {"items": [], "name": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "rnu iferdisen ɣer tebdart {name}", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "rnu (iferdisen|inekcamen|tiɣawsiwin) ɣer tebdart[-iw|-inu] n {name}", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "(snulfu-d|rnu) tabdart n (iferdisen|inekcamen) [{items}]", "slots": ["items"], "entity_values": {"items": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "rnu {items} ar tebdart(-iw|-inu) {name}", "slots": ["items", "name"], "entity_values": {"items": [], "name": []}}
 {"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CancelAlert.intent", "template": "sfeḍ {alertkind}-inu", "slots": ["alertkind"], "entity_values": {"alertkind": []}}
 {"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CancelAlert.intent", "template": "kkes akk {alertkind}-inu", "slots": ["alertkind"], "entity_values": {"alertkind": []}}
 {"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CancelAlert.intent", "template": "sfeḍ {alertkind} n {name}", "slots": ["alertkind", "name"], "entity_values": {"alertkind": [], "name": []}}

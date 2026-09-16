@@ -4871,7 +4871,7 @@
 {"lang": "da-DK", "skill": "ovos-skill-calculator", "intent": "subtract.intent", "template": "hvad er {a} minus {b}", "slots": ["a", "b"], "entity_values": {"a": [], "b": []}}
 {"lang": "da-DK", "skill": "ovos-skill-camera", "intent": "take_picture.intent", "template": "tag (et (billede|foto)|en selfie) (om|med en) {countdown} (sekunder|sekunders nedtælling)", "slots": ["countdown"], "entity_values": {"countdown": []}}
 {"lang": "da-DK", "skill": "ovos-skill-camera", "intent": "take_picture.intent", "template": "(billede|foto) om {countdown} sekunder", "slots": ["countdown"], "entity_values": {"countdown": []}}
-{"lang": "da-DK", "skill": "ovos-skill-cmd", "intent": "RunScriptCommandIntent.intent", "template": "(kør|udfør|start) (kommando|kommandoen|script|scriptet) {script}", "slots": ["script"], "entity_values": {"script": []}}
+{"lang": "da-DK", "skill": "ovos-skill-cmd", "intent": "run_script_command.intent", "template": "(kør|udfør|start) (kommando|kommandoen|script|scriptet) {script}", "slots": ["script"], "entity_values": {"script": []}}
 {"lang": "da-DK", "skill": "ovos-skill-color-picker", "intent": "request-color.intent", "template": "hvilken farve er {requested_color}", "slots": ["requested_color"], "entity_values": {"requested_color": []}}
 {"lang": "da-DK", "skill": "ovos-skill-color-picker", "intent": "request-color-by-hex.intent", "template": "hvad (farve|farve) har en hex-kode på {hex_code}", "slots": ["hex_code"], "entity_values": {"hex_code": []}}
 {"lang": "da-DK", "skill": "ovos-skill-color-picker", "intent": "request-color-by-hex.intent", "template": "hvilken farve er [hex-koden] {hex_code}", "slots": ["hex_code"], "entity_values": {"hex_code": []}}
@@ -5357,10 +5357,6 @@
 {"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie_genres.intent", "template": "hvad (genrer | genre) er (filmem | ) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
 {"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie_genres.intent", "template": "hvad (genrer | genre) tilhører (filmen|) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
 {"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie_genres.intent", "template": "hvad er (genrer | genre) af (filmen|) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
-{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie_information.intent", "template": "(find | led efter | er der) (information | info) (på | om) (filmen |) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
-{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie_information.intent", "template": "(giv | fortæl | hent) (| mig | os) (information | info) (på | om) (filmen | ) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
-{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie_information.intent", "template": "(har du | kan du få) (info | information) (på| om) (filmen | ) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
-{"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie_production.intent", "template": "(hvem | hvilket firma) ahr (produceret | lavet) filmen {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
 {"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie_recommendations.intent", "template": "(list | få) (gode|) film (der ligner | der lignende) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
 {"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie_recommendations.intent", "template": "anbefal en film der (ligner | lignende) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}
 {"lang": "da-DK", "skill": "ovos-skill-moviemaster", "intent": "movie_recommendations.intent", "template": "hvilke film (ville | kan) du anbefale (der ligner | der lignende) {movie}", "slots": ["movie"], "entity_values": {"movie": []}}

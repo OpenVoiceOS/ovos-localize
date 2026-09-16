@@ -41079,12 +41079,6 @@
 {"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "voc", "intent": "Run.voc", "text": "launch script"}
 {"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "voc", "intent": "Run.voc", "text": "run command"}
 {"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "voc", "intent": "Run.voc", "text": "run script"}
-{"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "RunScriptCommandIntent.intent", "text": "execute command {script}"}
-{"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "RunScriptCommandIntent.intent", "text": "execute script {script}"}
-{"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "RunScriptCommandIntent.intent", "text": "launch command {script}"}
-{"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "RunScriptCommandIntent.intent", "text": "launch script {script}"}
-{"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "RunScriptCommandIntent.intent", "text": "run command {script}"}
-{"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "RunScriptCommandIntent.intent", "text": "run script {script}"}
 {"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "list_scripts.intent", "text": "list my aliases"}
 {"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "list_scripts.intent", "text": "list my commands"}
 {"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "list_scripts.intent", "text": "list my scripts"}
@@ -41097,6 +41091,12 @@
 {"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "list_scripts.intent", "text": "what scripts do you know"}
 {"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "list_scripts.intent", "text": "which commands can you run"}
 {"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "list_scripts.intent", "text": "which scripts can you run"}
+{"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "execute command {script}"}
+{"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "execute script {script}"}
+{"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "launch command {script}"}
+{"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "launch script {script}"}
+{"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "run command {script}"}
+{"lang": "en-US", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "run script {script}"}
 {"lang": "en-US", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request-color.intent", "text": "what color is {requested_color}"}
 {"lang": "en-US", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request-color.intent", "text": "what colour is {requested_color}"}
 {"lang": "en-US", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request-color.intent", "text": "which color is {requested_color}"}
@@ -52506,6 +52506,10 @@
 {"lang": "en-US", "skill": "ovos-skill-icanhazdadjokes", "file_type": "intent", "intent": "joke.intent", "text": "make me laugh [with a joke]"}
 {"lang": "en-US", "skill": "ovos-skill-icanhazdadjokes", "file_type": "voc", "intent": "programmer.voc", "text": "programmer"}
 {"lang": "en-US", "skill": "ovos-skill-icanhazdadjokes", "file_type": "voc", "intent": "programmer.voc", "text": "developer"}
+{"lang": "en-US", "skill": "ovos-skill-icanhazdadjokes", "file_type": "voc", "intent": "programmer.voc", "text": "programmers"}
+{"lang": "en-US", "skill": "ovos-skill-icanhazdadjokes", "file_type": "voc", "intent": "programmer.voc", "text": "developers"}
+{"lang": "en-US", "skill": "ovos-skill-icanhazdadjokes", "file_type": "voc", "intent": "programmer.voc", "text": "coders"}
+{"lang": "en-US", "skill": "ovos-skill-icanhazdadjokes", "file_type": "voc", "intent": "programmer.voc", "text": "coder"}
 {"lang": "en-US", "skill": "ovos-skill-icanhazdadjokes", "file_type": "voc", "intent": "pun.voc", "text": "wordplay"}
 {"lang": "en-US", "skill": "ovos-skill-icanhazdadjokes", "file_type": "voc", "intent": "pun.voc", "text": "pun"}
 {"lang": "en-US", "skill": "ovos-skill-icanhazdadjokes", "file_type": "voc", "intent": "pun.voc", "text": "quip"}
@@ -54707,6 +54711,75 @@
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "list {genre} shows"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "list {genre} television shows"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "list {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "get a {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "get a {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "get a {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "get me a {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "get me a {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "get me a {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "get me some {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "get me some {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "get me some {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "get me {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "get me {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "get me {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "get some {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "get some {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "get some {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "show a {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "show a {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "show a {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "show me a {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "show me a {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "show me a {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "show me some {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "show me some {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "show me some {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "show me {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "show me {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "show me {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "show some {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "show some {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "show some {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "show {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "show {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "show {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "suggest a {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "suggest a {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "suggest a {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "suggest me a {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "suggest me a {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "suggest me a {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "suggest me some {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "suggest me some {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "suggest me some {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "suggest me {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "suggest me {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "suggest me {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "suggest some {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "suggest some {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "suggest some {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "suggest {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "suggest {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "suggest {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "i want to watch a {genre} show"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "i want to watch a {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "i want to watch a {genre} television show"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "i want to watch a {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "i want to watch a {genre} tv show"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "i want to watch a {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "i want to watch some {genre} show"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "i want to watch some {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "i want to watch some {genre} television show"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "i want to watch some {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "i want to watch some {genre} tv show"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "i want to watch some {genre} tv shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "i want to watch {genre} show"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "i want to watch {genre} shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "i want to watch {genre} television show"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "i want to watch {genre} television shows"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "i want to watch {genre} tv show"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "genre_tv_search.intent", "text": "i want to watch {genre} tv shows"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_cast.intent", "text": "who acts in the film {movie}"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_cast.intent", "text": "who acts in the flick {movie}"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_cast.intent", "text": "who acts in the movie {movie}"}
@@ -54779,6 +54852,75 @@
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "list {genre} films"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "list {genre} flicks"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "list {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "get a {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "get a {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "get a {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "get me a {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "get me a {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "get me a {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "get me some {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "get me some {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "get me some {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "get me {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "get me {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "get me {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "get some {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "get some {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "get some {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "get {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "get {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "get {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "show a {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "show a {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "show a {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "show me a {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "show me a {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "show me a {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "show me some {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "show me some {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "show me some {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "show me {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "show me {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "show me {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "show some {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "show some {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "show some {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "show {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "show {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "show {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "suggest a {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "suggest a {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "suggest a {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "suggest me a {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "suggest me a {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "suggest me a {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "suggest me some {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "suggest me some {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "suggest me some {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "suggest me {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "suggest me {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "suggest me {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "suggest some {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "suggest some {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "suggest some {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "suggest {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "suggest {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "suggest {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "i want to watch a {genre} film"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "i want to watch a {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "i want to watch a {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "i want to watch a {genre} movie"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "i want to watch a {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "i want to watch some {genre} film"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "i want to watch some {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "i want to watch some {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "i want to watch some {genre} movie"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "i want to watch some {genre} movies"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "i want to watch {genre} film"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "i want to watch {genre} films"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "i want to watch {genre} flicks"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "i want to watch {genre} movie"}
+{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genre_search.intent", "text": "i want to watch {genre} movies"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genres.intent", "text": "what genre are the film {movie}"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genres.intent", "text": "what genre are the flick {movie}"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genres.intent", "text": "what genre are the movie {movie}"}
@@ -54803,174 +54945,6 @@
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genres.intent", "text": "what are the genres of the film {movie}"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genres.intent", "text": "what are the genres of the flick {movie}"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genres.intent", "text": "what are the genres of the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "can you get info about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "can you get info about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "can you get info about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "can you get info on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "can you get info on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "can you get info on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "can you get information about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "can you get information about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "can you get information about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "can you get information on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "can you get information on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "can you get information on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "do you have info about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "do you have info about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "do you have info about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "do you have info on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "do you have info on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "do you have info on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "do you have information about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "do you have information about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "do you have information about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "do you have information on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "do you have information on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "do you have information on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "find info about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "find info about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "find info about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "find info on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "find info on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "find info on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "find information about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "find information about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "find information about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "find information on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "find information on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "find information on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get info about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get info about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get info about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get info on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get info on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get info on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get information about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get information about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get information about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get information on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get information on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get information on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "is there info about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "is there info about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "is there info about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "is there info on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "is there info on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "is there info on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "is there information about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "is there information about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "is there information about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "is there information on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "is there information on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "is there information on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "look for info about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "look for info about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "look for info about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "look for info on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "look for info on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "look for info on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "look for information about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "look for information about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "look for information about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "look for information on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "look for information on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "look for information on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get me info about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get me info about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get me info about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get me info on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get me info on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get me info on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get me information about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get me information about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get me information about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get me information on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get me information on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get me information on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get us info about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get us info about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get us info about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get us info on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get us info on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get us info on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get us information about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get us information about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get us information about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get us information on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get us information on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "get us information on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give info about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give info about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give info about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give info on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give info on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give info on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give information about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give information about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give information about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give information on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give information on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give information on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give me info about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give me info about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give me info about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give me info on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give me info on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give me info on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give me information about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give me information about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give me information about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give me information on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give me information on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give me information on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give us info about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give us info about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give us info about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give us info on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give us info on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give us info on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give us information about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give us information about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give us information about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give us information on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give us information on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "give us information on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell info about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell info about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell info about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell info on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell info on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell info on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell information about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell information about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell information about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell information on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell information on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell information on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell me info about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell me info about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell me info about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell me info on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell me info on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell me info on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell me information about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell me information about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell me information about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell me information on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell me information on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell me information on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell us info about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell us info about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell us info about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell us info on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell us info on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell us info on the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell us information about the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell us information about the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell us information about the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell us information on the film {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell us information on the flick {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "tell us information on the movie {movie}"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "list most popular films"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "list most popular flicks"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "list most popular movies"}
@@ -55139,10 +55113,6 @@
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "what are the popular movies out now"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "what are the popular movies playing"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "what are the popular movies playing now"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_production.intent", "text": "what company made the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_production.intent", "text": "what company produced the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_production.intent", "text": "who made the movie {movie}"}
-{"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_production.intent", "text": "who produced the movie {movie}"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_recommendations.intent", "text": "get films like {movie}"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_recommendations.intent", "text": "get films similar to {movie}"}
 {"lang": "en-US", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_recommendations.intent", "text": "get flicks like {movie}"}
@@ -57749,33 +57719,121 @@
 {"lang": "en-US", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "what's my download speed"}
 {"lang": "en-US", "skill": "ovos-skill-speedtest", "file_type": "intent", "intent": "speedtest_intent.intent", "text": "what's my upload speed"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how do you spell out {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how do you spell out {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how do you spell out {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how do you spell out {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how do you spell the word {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how do you spell the word {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how do you spell the word {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how do you spell the word {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how do you spell word {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how do you spell word {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how do you spell word {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how do you spell word {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how do you spell {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how do you spell {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how do you spell {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how do you spell {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how to spell out {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how to spell out {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how to spell out {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how to spell out {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how to spell the word {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how to spell the word {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how to spell the word {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how to spell the word {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how to spell word {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how to spell word {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how to spell word {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how to spell word {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how to spell {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how to spell {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how to spell {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how to spell {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how would i spell out {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how would i spell out {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how would i spell out {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how would i spell out {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how would i spell the word {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how would i spell the word {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how would i spell the word {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how would i spell the word {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how would i spell word {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how would i spell word {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how would i spell word {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how would i spell word {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how would i spell {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how would i spell {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how would i spell {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how would i spell {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you spell out {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you spell out {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you spell out {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you spell out {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you spell the word {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you spell the word {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you spell the word {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you spell the word {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you spell word {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you spell word {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you spell word {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you spell word {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you spell {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you spell {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you spell {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you spell {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "could you spell out {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "could you spell out {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "could you spell out {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "could you spell out {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "could you spell the word {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "could you spell the word {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "could you spell the word {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "could you spell the word {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "could you spell word {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "could you spell word {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "could you spell word {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "could you spell word {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "could you spell {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "could you spell {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "could you spell {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "could you spell {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "would you spell out {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "would you spell out {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "would you spell out {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "would you spell out {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "would you spell the word {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "would you spell the word {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "would you spell the word {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "would you spell the word {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "would you spell word {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "would you spell word {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "would you spell word {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "would you spell word {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "would you spell {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "would you spell {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "would you spell {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "would you spell {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "spell out {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "spell out {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "spell out {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "spell out {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "spell the word {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "spell the word {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "spell the word {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "spell the word {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "spell word {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "spell word {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "spell word {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "spell word {word} letter by letter for me"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "spell {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "spell {word} for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "spell {word} letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "spell {word} letter by letter for me"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how are {word} spelled"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how are {word} spelled letter by letter"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how is {word} spelled"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "how is {word} spelled letter by letter"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you what is the spelling of {word}"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you what the spelling of {word}"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "can you what's the spelling of {word}"}
@@ -57794,6 +57852,8 @@
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "spelling of {word}"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "the spelling of the word {word}"}
 {"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "the spelling of {word}"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "{word} how do you spell it"}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "file_type": "intent", "intent": "Spell.intent", "text": "{word} how do you spell that"}
 {"lang": "en-US", "skill": "ovos-skill-tuning-fork", "file_type": "intent", "intent": "give_note.intent", "text": "give me an {note}"}
 {"lang": "en-US", "skill": "ovos-skill-tuning-fork", "file_type": "intent", "intent": "give_note.intent", "text": "give me a {note}"}
 {"lang": "en-US", "skill": "ovos-skill-tuning-fork", "file_type": "intent", "intent": "give_note.intent", "text": "play an {note}"}
@@ -58120,117 +58180,112 @@
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "next_picture.intent", "text": "the next image"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "next_picture.intent", "text": "the next picture"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "next_picture.intent", "text": "the next wallpaper"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a another image of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a another image for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a another image showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a another image with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a another photo about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a another photo for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a another photo of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a another picture about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a another photo related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a another photo showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a another picture for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a another picture related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a another picture with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a different image for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a different image of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a different image about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a different image related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a different image showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a different image with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a different photo about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a different photo for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a different photo of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a different photo showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a different photo with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a different picture about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a different picture for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a different picture of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a different picture showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a different picture with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a image about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a different picture related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a image for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a image of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a image showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a image with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a new image about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a new image of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a new image showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a new image with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a new image related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a new photo about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a new photo for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a new photo of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a new photo showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a new photo with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a new picture about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a new picture for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a new picture of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a new picture showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a new picture with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a other image about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a other image for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a other image of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a other image showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a other image related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a other image with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a other photo about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a other photo for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a other photo of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a other photo showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a other photo with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a other picture about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a other picture for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a other picture of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a other picture related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a other picture with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a photo about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a photo for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a photo of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a photo showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a photo with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a picture about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a picture for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a picture of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a picture related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a picture showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a picture with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a random image about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a random image of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a random image with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a random photo showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a random photo with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a random picture about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a random picture for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a random image for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a random image related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a random photo about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a random photo for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a random photo of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a random photo related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a random picture of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a random picture with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a another image for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a another image of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a random picture related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a random picture showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a another image related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a another image showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a another image with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a another photo about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a another photo for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a another photo showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a another photo related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a another photo with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a another picture about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a another picture for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a another picture of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a another picture with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a another picture related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a another picture showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a different image about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a different image for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a different image showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a different image with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a different photo about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a different photo for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a different photo of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a different photo related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a different photo showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a different photo with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a different picture about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a different picture for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a different picture of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a different picture related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a different picture showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a different picture with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a image about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a image for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a image of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a image showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a new image about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a new image for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a new image of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a new image showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a new image related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a new photo about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a new photo for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a new photo of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a new photo showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a new photo with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a new picture about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a new picture for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a new picture showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a new picture of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a new picture with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a other image about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a other image for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a other image of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a other image showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a other image with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a other photo about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a other photo for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a other photo of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a other photo showing {query}"}
@@ -58239,287 +58294,310 @@
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a other picture for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a other picture of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a other picture showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a other picture with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a photo about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a photo for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a photo of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a photo related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a photo showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a photo with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a picture about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a picture for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a picture of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a picture with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a picture related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a picture showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a random image about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a random image for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a random image of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a random image related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a random image showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a random image with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a random photo about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a random photo for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a random photo related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a random photo showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a random picture about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a random picture for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a random picture of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a random picture showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a random picture with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a another image for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a another image of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a another image showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a another image with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a another photo about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a another photo for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a another photo of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a another photo with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a another photo related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a another picture about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a another picture showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a another picture with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a another picture of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a different image about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a different image for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a different image related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a different image with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a different photo about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a different photo for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a different photo of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a different picture about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a different picture for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a different photo showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a different photo with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a different picture related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a different picture showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a different picture with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a image about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a image for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a image related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a image showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a new image for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a new image of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a new image related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a new image showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a new image with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a new photo for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a new photo of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a new picture about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a new picture for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a new photo about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a new photo related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a new photo with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a new picture showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a other image about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a other image for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a other image of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a other image related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a other image showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a other image with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a other photo about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a other photo for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a other photo of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a other photo related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a other photo showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a other photo with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a other picture about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a other picture for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a other picture of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a other picture showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a other picture with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a photo for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a photo about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a photo of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a photo showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a picture about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a picture for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a picture related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a picture showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a picture with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a random image about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a random image for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a random image of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a random image related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a random image showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a random image with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a random photo about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a random photo for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a random photo of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a random photo related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a random photo showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a random photo with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a random picture about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a random picture for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a random picture of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a different image about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a different image showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a different photo about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a different photo showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a random picture related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a random picture showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a random picture with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a different image with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a different photo with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a different picture about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a different picture for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a different picture showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a different picture with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a different picture related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a image about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a image showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a image with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a new image about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a new photo for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a new picture for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a photo about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a photo of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a image for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a image related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a new image for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a new image of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a new image with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a new photo about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a new photo of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a new picture showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a picture about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a picture for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a picture of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a random image about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a random image of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a random image showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a random image with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a random photo about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a random photo of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a random picture about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a random picture showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a random picture with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another different image showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another different image with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another different photo for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display a random picture related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another different photo of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another different picture about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another different picture for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another different picture of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another different picture related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another different picture showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another different picture with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another image about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another image showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another new image of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another new photo about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another new photo with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another new picture of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another photo for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another image of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another new image about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another new image for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another new picture related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another photo of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another photo showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another picture about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another picture for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another picture of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another picture showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another random image for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another random photo with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another random picture showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display different image showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display different photo about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display different photo for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another random image related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another random image with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another random photo about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another random photo showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another random picture about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another random picture for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another random picture of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display another random picture with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display different image for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display different image related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display different image with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display different photo related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display different photo with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display different picture about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display image of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display different picture for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display different picture showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display different picture with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display image for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display image showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display new image for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display new image showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display new image with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display new photo about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display new photo of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display new photo with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display new picture about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display new picture for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display new picture of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display new picture related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display new picture showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display photo about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display photo for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display photo with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display picture for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display picture of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display picture showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display picture with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display random image for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display random image of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display picture related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display random image showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display random image with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display random photo showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display random picture for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display random photo with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display random picture of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display random picture showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a different image about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a different image showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a different image with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a different photo about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a different picture for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a different picture about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a different picture of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a different picture showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a image for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a image with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a new picture about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a new picture with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a different picture with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a image about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a image showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a new image of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a new image with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a new photo about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a new photo for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a new photo related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a new photo showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a new picture related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a photo for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a photo of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a photo with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a picture about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a picture for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a picture showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a picture with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a random image with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a random photo of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a random photo showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a random photo for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a random photo with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a random picture about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find a random picture of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another different image of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another different photo showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another different photo with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another different image about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another different image with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another different photo about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another different picture for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another different picture showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another different picture with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another image about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another image for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another new image for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another new image of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another new image showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another new photo about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another new photo of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another new photo with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another new picture about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another new picture for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another new picture showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another photo about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another photo for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another picture about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another photo of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another picture of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another random image showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another random photo about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another picture showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another random image for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another random image related to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another random photo for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another random photo with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another random photo of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another random picture about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another random picture for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find another random picture with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find different image about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find different image of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find different image showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find different image related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find different image with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find different photo for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find different photo showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find different photo with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find different picture with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find image of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find new image of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find new image showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find different picture for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find different picture of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find different picture showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find new image for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find new photo about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find new photo of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find new photo showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find photo about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find random image for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find random image of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find random image with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find random photo showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find new picture about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find photo for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find picture of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find picture related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find picture showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find picture with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find random image related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find random image showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find random photo about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find random photo of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find random picture about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find random picture for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a different image about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a different image of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a different image with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a different photo about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find random picture with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a different image showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a different photo of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a different photo showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a different photo with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a image for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a image of {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a image with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a new image about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a new image of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a new photo about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a new photo for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a new photo with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a new image with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a new photo of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a new photo showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a new picture for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a new picture related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a photo showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a photo with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a picture for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a picture showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a picture with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a random photo about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a random photo of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a picture about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a picture of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a random image about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a random photo with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a random picture for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a random picture with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show a random picture related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another different image related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another different image with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another different photo about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another different photo for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another different photo related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another different picture for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another different picture of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another different picture showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another different picture with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another image of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another new image of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another new image with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another new photo with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another new picture for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another new image about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another new image for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another new photo about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another new picture of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another new picture showing {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another photo for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another photo of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another photo showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another photo with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another picture about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another picture with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another random image about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another random image of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another random photo for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another random photo of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another random picture about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another picture of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another random image with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another random picture for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another random picture showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show another random picture with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show different image of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show different photo showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show different picture about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show different image about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show different image showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show different photo of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show different picture for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show different picture of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show different picture showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show different picture with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show image about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show image of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show new image about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show image with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show new image for {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show new image showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show new photo for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show new photo of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show new photo showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show new picture about {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show new picture of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show new picture with {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show photo for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show new image with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show new photo about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show photo of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show photo showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show photo related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show photo with {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show picture of {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show random image for {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show random image about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show random image of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show random image showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show random image with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show random photo about {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show random photo for {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show random photo showing {query}"}
-{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show random picture of {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show random picture about {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show random picture related to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show random picture showing {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show random picture with {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a {query} image"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a {query} photo"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me a {query} picture"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me an {query} image"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me an {query} photo"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "display me an {query} picture"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a {query} image"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a {query} photo"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me a {query} picture"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me an {query} image"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me an {query} photo"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "find me an {query} picture"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a {query} image"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a {query} photo"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me a {query} picture"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me an {query} image"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me an {query} photo"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_about.intent", "text": "show me an {query} picture"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_random.intent", "text": "display me a another image"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_random.intent", "text": "display me a another photo"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "picture_random.intent", "text": "display me a another picture"}
@@ -58864,6 +58942,36 @@
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "set the wallpaper to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "set wall paper to {query}"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "set wallpaper to {query}"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "give me a {query} wall paper"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "give me a {query} wall paper on my screen"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "give me a {query} wallpaper"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "give me a {query} wallpaper on my screen"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "give me an {query} wall paper"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "give me an {query} wall paper on my screen"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "give me an {query} wallpaper"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "give me an {query} wallpaper on my screen"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "give me {query} wall paper"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "give me {query} wall paper on my screen"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "give me {query} wallpaper"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "give me {query} wallpaper on my screen"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "put me a {query} wall paper"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "put me a {query} wall paper on my screen"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "put me a {query} wallpaper"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "put me a {query} wallpaper on my screen"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "put me an {query} wall paper"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "put me an {query} wall paper on my screen"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "put me an {query} wallpaper"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "put me an {query} wallpaper on my screen"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "put me {query} wall paper"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "put me {query} wall paper on my screen"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "put me {query} wallpaper"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "put me {query} wallpaper on my screen"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "i want a {query} wall paper"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "i want a {query} wallpaper"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "i want an {query} wall paper"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "i want an {query} wallpaper"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "i want {query} wall paper"}
+{"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_about.intent", "text": "i want {query} wallpaper"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_random.intent", "text": "change current wall paper"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_random.intent", "text": "change current wallpaper"}
 {"lang": "en-US", "skill": "ovos-skill-wallpapers", "file_type": "intent", "intent": "wallpaper_random.intent", "text": "change homescreen wall paper"}

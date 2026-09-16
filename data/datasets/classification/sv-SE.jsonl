@@ -3758,10 +3758,6 @@
 {"lang": "sv-SE", "skill": "ovos-skill-cmd", "file_type": "voc", "intent": "Run.voc", "text": "kör skript"}
 {"lang": "sv-SE", "skill": "ovos-skill-cmd", "file_type": "voc", "intent": "Run.voc", "text": "starta kommando"}
 {"lang": "sv-SE", "skill": "ovos-skill-cmd", "file_type": "voc", "intent": "Run.voc", "text": "starta skript"}
-{"lang": "sv-SE", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "RunScriptCommandIntent.intent", "text": "kör kommandot {script}"}
-{"lang": "sv-SE", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "RunScriptCommandIntent.intent", "text": "kör skriptet {script}"}
-{"lang": "sv-SE", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "RunScriptCommandIntent.intent", "text": "starta kommandot {script}"}
-{"lang": "sv-SE", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "RunScriptCommandIntent.intent", "text": "starta skriptet {script}"}
 {"lang": "sv-SE", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "list_scripts.intent", "text": "lista mina alias"}
 {"lang": "sv-SE", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "list_scripts.intent", "text": "lista mina kommandon"}
 {"lang": "sv-SE", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "list_scripts.intent", "text": "lista mina skript"}
@@ -3776,6 +3772,10 @@
 {"lang": "sv-SE", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "list_scripts.intent", "text": "vilka skript är konfigurerade"}
 {"lang": "sv-SE", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "list_scripts.intent", "text": "vilka kommandon kan du köra"}
 {"lang": "sv-SE", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "list_scripts.intent", "text": "vilka skript kan du köra"}
+{"lang": "sv-SE", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "kör kommandot {script}"}
+{"lang": "sv-SE", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "kör skriptet {script}"}
+{"lang": "sv-SE", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "starta kommandot {script}"}
+{"lang": "sv-SE", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "starta skriptet {script}"}
 {"lang": "sv-SE", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request-color.intent", "text": "vilken färg är {requested_color}"}
 {"lang": "sv-SE", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request-color-by-hex.intent", "text": "vilken färg har en hexkod på {hex_code}"}
 {"lang": "sv-SE", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request-color-by-hex.intent", "text": "vilken färg är den hex koden {hex_code}"}
@@ -12905,162 +12905,6 @@
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genres.intent", "text": "vilken är genren för film {movie}"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genres.intent", "text": "vilken är genren för filmen {movie}"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_genres.intent", "text": "vilken är genren för videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta info om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta info om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta info om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta info på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta info på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta info på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta information om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta information om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta information om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta information på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta information på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta information på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta mig info om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta mig info om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta mig info om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta mig info på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta mig info på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta mig info på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta mig information om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta mig information om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta mig information om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta mig information på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta mig information på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta mig information på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta oss info om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta oss info om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta oss info om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta oss info på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta oss info på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta oss info på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta oss information om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta oss information om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta oss information om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta oss information på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta oss information på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "berätta oss information på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge info om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge info om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge info om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge info på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge info på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge info på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge information om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge information om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge information om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge information på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge information på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge information på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge mig info om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge mig info om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge mig info om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge mig info på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge mig info på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge mig info på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge mig information om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge mig information om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge mig information om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge mig information på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge mig information på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge mig information på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge oss info om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge oss info om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge oss info om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge oss info på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge oss info på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge oss info på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge oss information om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge oss information om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge oss information om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge oss information på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge oss information på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "ge oss information på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta info om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta info om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta info om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta info på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta info på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta info på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta information om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta information om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta information om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta information på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta information på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta information på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta mig info om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta mig info om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta mig info om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta mig info på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta mig info på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta mig info på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta mig information om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta mig information om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta mig information om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta mig information på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta mig information på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta mig information på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta oss info om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta oss info om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta oss info om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta oss info på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta oss info på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta oss info på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta oss information om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta oss information om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta oss information om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta oss information på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta oss information på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hämta oss information på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "har du info om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "har du info om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "har du info om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "har du information om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "har du information om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "har du information om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "kan du hämta info om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "kan du hämta info om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "kan du hämta info om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "kan du hämta information om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "kan du hämta information om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "kan du hämta information om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hitta info om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hitta info om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hitta info om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hitta info på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hitta info på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hitta info på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hitta information om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hitta information om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hitta information om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hitta information på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hitta information på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "hitta information på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "leta efter info om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "leta efter info om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "leta efter info om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "leta efter info på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "leta efter info på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "leta efter info på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "leta efter information om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "leta efter information om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "leta efter information om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "leta efter information på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "leta efter information på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "leta efter information på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "är där info om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "är där info om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "är där info om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "är där info på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "är där info på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "är där info på videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "är där information om film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "är där information om filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "är där information om videon {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "är där information på film {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "är där information på filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_information.intent", "text": "är där information på videon {movie}"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "lista populära film"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "lista populära filmer"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "lista populära video"}
@@ -13094,10 +12938,6 @@
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "vad är populära videon spelar nu"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "vad är populära videon ut"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_popular.intent", "text": "vad är populära videon ut nu"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_production.intent", "text": "vem gjorde filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_production.intent", "text": "vem producerade filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_production.intent", "text": "vilket företag gjorde filmen {movie}"}
-{"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_production.intent", "text": "vilket företag producerade filmen {movie}"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_recommendations.intent", "text": "hämta bra film liknande {movie}"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_recommendations.intent", "text": "hämta bra film såsom {movie}"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "file_type": "intent", "intent": "movie_recommendations.intent", "text": "hämta bra filmen liknande {movie}"}
