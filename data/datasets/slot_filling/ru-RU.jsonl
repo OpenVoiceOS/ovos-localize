@@ -301,7 +301,7 @@
 {"lang": "ru-RU", "skill": "ovos-ocp-audio-plugin", "intent": "video.intent", "template": "играть {query} видео", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "ru-RU", "skill": "ovos-ocp-audio-plugin", "intent": "video.intent", "template": "начать {query} с видео", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "ru-RU", "skill": "ovos-ocp-audio-plugin", "intent": "video.intent", "template": "начать {query} видео", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "добавь (пункты|вещи|записи) в [мой] список [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "добавь (пункты|вещи|записи) в [мой] список [{list_name}]", "slots": ["list_name"], "entity_values": {"list_name": ["дел", "задач"]}}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "ChangeMediaProperties.intent", "template": "измени мой {schedkind}, чтобы он был слышимым", "slots": ["schedkind"], "entity_values": {"schedkind": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "ChangeMediaProperties.intent", "template": "настрой следующий {schedkind}, чтобы он воспроизводил {mediakind}", "slots": ["schedkind", "mediakind"], "entity_values": {"schedkind": [], "mediakind": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "ChangeMediaProperties.intent", "template": "настрой {schedkind} на воспроизведение {mediaform}", "slots": ["schedkind", "mediaform"], "entity_values": {"schedkind": [], "mediaform": []}}
@@ -331,8 +331,8 @@
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateAlarmAlt.intent", "template": "разбуди (меня|нас) [в {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "(создай|добавь|запланируй) (мероприятие|встречу) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "(новое мероприятие|новая встреча) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "(создай|сделай|добавь) [новый] список [под названием {name}]", "slots": ["name"], "entity_values": {"name": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "новый список [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "(создай|сделай|добавь) [новый] список [под названием {list_name}]", "slots": ["list_name"], "entity_values": {"list_name": ["дел", "задач"]}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "новый список [{list_name}]", "slots": ["list_name"], "entity_values": {"list_name": ["дел", "задач"]}}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "(создай|добавь|поставь) [новое] напоминание [о {reminder}] [в {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "новое напоминание [{reminder}]", "slots": ["reminder"], "entity_values": {"reminder": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "напомни (мне|нам) [{reminder}] [в {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
@@ -345,10 +345,13 @@
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "DAVSync.intent", "template": "загрузи мой {davkind}", "slots": ["davkind"], "entity_values": {"davkind": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "DAVSync.intent", "template": "синхронизируй все мои {davkind}", "slots": ["davkind"], "entity_values": {"davkind": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "DAVSync.intent", "template": "синхронизируй {davkind} и {davkind2}", "slots": ["davkind", "davkind2"], "entity_values": {"davkind": [], "davkind2": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(удали|сотри) [мой] список [{name}]", "slots": ["name"], "entity_values": {"name": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "DeleteListEntries.intent", "template": "(удали|сотри) (пункты|всё) из [моего] списка [{name}]", "slots": ["name"], "entity_values": {"name": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(какие пункты|что) (в списке|в моём списке) [{name}]", "slots": ["name"], "entity_values": {"name": []}}
-{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(прочитай|покажи) [мне] (пункты|записи) списка [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(удали|сотри) [мой] список [{list_name}]", "slots": ["list_name"], "entity_values": {"list_name": ["дел", "задач"]}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "delete_list_entries.intent", "template": "(удали|сотри) (пункты|всё) из [моего] списка [{list_name}]", "slots": ["list_name"], "entity_values": {"list_name": ["дел", "задач"]}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "delete_list_entries.intent", "template": "(удали|очисти) [мой] список {list_name}", "slots": ["list_name"], "entity_values": {"list_name": ["дел", "задач"]}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "delete_list_entries.intent", "template": "(удали|сотри) всё из [моего] списка {list_name}", "slots": ["list_name"], "entity_values": {"list_name": ["дел", "задач"]}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "query_list_entries.intent", "template": "(какие пункты|что) (в списке|в моём списке) [{list_name}]", "slots": ["list_name"], "entity_values": {"list_name": ["дел", "задач"]}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "query_list_entries.intent", "template": "(прочитай|покажи) [мне] (пункты|записи) списка [{list_name}]", "slots": ["list_name"], "entity_values": {"list_name": ["дел", "задач"]}}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "intent": "query_list_entries.intent", "template": "что (в моём|у меня в) списке {list_name}", "slots": ["list_name"], "entity_values": {"list_name": ["дел", "задач"]}}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "какая сегодня дата в {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "time_until.intent", "template": "сколько времени осталось до {date} [пожалуйста]", "slots": ["date"], "entity_values": {"date": []}}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "intent": "time_until.intent", "template": "когда будет {date}", "slots": ["date"], "entity_values": {"date": []}}

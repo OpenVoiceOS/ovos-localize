@@ -425,12 +425,12 @@
 {"lang": "it-IT", "skill": "ovos-skill-cmd", "dialog": "running.dialog", "text": "eseguo il comando {alias}"}
 {"lang": "it-IT", "skill": "ovos-skill-cmd", "dialog": "running.dialog", "text": "eseguo lo script {alias}"}
 {"lang": "it-IT", "skill": "ovos-skill-cmd", "dialog": "unknown_script.dialog", "text": "non conosco nessuno script chiamato {name}"}
-{"lang": "it-IT", "skill": "ovos-skill-color-picker", "dialog": "color-not-found.dialog", "text": "non so che colore sia"}
-{"lang": "it-IT", "skill": "ovos-skill-color-picker", "dialog": "report-color-by-hex-name-known.dialog", "text": "i valori r g b per {color_name} sono, rosso {red_value}, verde {green_value}, blu {blue_value}"}
-{"lang": "it-IT", "skill": "ovos-skill-color-picker", "dialog": "report-color-by-hex-name-not-known.dialog", "text": "i valori r g b per questo colore sono, rosso {red_value}, verde {green_value}, blu {blue_value}"}
-{"lang": "it-IT", "skill": "ovos-skill-color-picker", "dialog": "report-color-by-name.dialog", "text": "i valori r g b per {color_name} sono, rosso {red_value}, verde {green_value}, blu {blue_value}"}
-{"lang": "it-IT", "skill": "ovos-skill-color-picker", "dialog": "report-color-by-rgb-name-known.dialog", "text": "il colore {color_name} corrisponde a {hex_code}"}
-{"lang": "it-IT", "skill": "ovos-skill-color-picker", "dialog": "report-color-by-rgb-name-not-known.dialog", "text": "il colore corrisponde a {hex_code}"}
+{"lang": "it-IT", "skill": "ovos-skill-color-picker", "dialog": "color_not_found.dialog", "text": "non so che colore sia"}
+{"lang": "it-IT", "skill": "ovos-skill-color-picker", "dialog": "report_color_by_hex_name_known.dialog", "text": "i valori r g b per {color_name} sono, rosso {red_value}, verde {green_value}, blu {blue_value}"}
+{"lang": "it-IT", "skill": "ovos-skill-color-picker", "dialog": "report_color_by_hex_name_not_known.dialog", "text": "i valori r g b per questo colore sono, rosso {red_value}, verde {green_value}, blu {blue_value}"}
+{"lang": "it-IT", "skill": "ovos-skill-color-picker", "dialog": "report_color_by_name.dialog", "text": "i valori r g b per {color_name} sono, rosso {red_value}, verde {green_value}, blu {blue_value}"}
+{"lang": "it-IT", "skill": "ovos-skill-color-picker", "dialog": "report_color_by_rgb_name_known.dialog", "text": "il colore {color_name} corrisponde a {hex_code}"}
+{"lang": "it-IT", "skill": "ovos-skill-color-picker", "dialog": "report_color_by_rgb_name_not_known.dialog", "text": "il colore corrisponde a {hex_code}"}
 {"lang": "it-IT", "skill": "ovos-skill-confucius-quotes", "dialog": "lifespan.dialog", "text": "confucio nacque nel 551 a.c. e morì nel 479 a.c."}
 {"lang": "it-IT", "skill": "ovos-skill-convert", "dialog": "conversion_failed.dialog", "text": "qualcosa è andato storto, mi dispiace"}
 {"lang": "it-IT", "skill": "ovos-skill-convert", "dialog": "conversion_result.dialog", "text": "{value} {from_unit} sono {result} {to_unit}"}
@@ -619,8 +619,6 @@
 {"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "puoi ripetere in modo alternativo"}
 {"lang": "it-IT", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "puoi ripetere in modo diverso"}
 {"lang": "it-IT", "skill": "ovos-skill-fuster-quotes", "dialog": "lifespan.dialog", "text": "joan fuster nacque il 23 novembre 1922 e morì il 21 giugno 1992"}
-{"lang": "it-IT", "skill": "ovos-skill-fuster-quotes", "dialog": "when_did_joan_fuster_die.dialog", "text": "joan fuster morì il 21 giugno 1992."}
-{"lang": "it-IT", "skill": "ovos-skill-fuster-quotes", "dialog": "when_was_joan_fuster_born.dialog", "text": "joan fuster nacque il 23 novembre 1922"}
 {"lang": "it-IT", "skill": "ovos-skill-fuster-quotes", "dialog": "who_was_joan_fuster.dialog", "text": "joan fuster fu un saggista, poeta e filosofo valenzano, noto per le sue influenti opere sulla cultura e l'identità catalane."}
 {"lang": "it-IT", "skill": "ovos-skill-ggwave", "dialog": "ggwave_already_disabled.dialog", "text": "codici qr audio già disattivati"}
 {"lang": "it-IT", "skill": "ovos-skill-ggwave", "dialog": "ggwave_already_enabled.dialog", "text": "codici qr audio già attivati"}
@@ -1631,7 +1629,6 @@
 {"lang": "it-IT", "skill": "ovos-skill-laugh", "dialog": "maybe.dialog", "text": "forse"}
 {"lang": "it-IT", "skill": "ovos-skill-laugh", "dialog": "maybe.dialog", "text": "no"}
 {"lang": "it-IT", "skill": "ovos-skill-laugh", "dialog": "yes.dialog", "text": "sì"}
-{"lang": "it-IT", "skill": "ovos-skill-mark1-ctrl", "dialog": "brightness_error.dialog", "text": "non capisco il valore di luminosità, dammi un valore di luminosità fra 0 e 100 percento."}
 {"lang": "it-IT", "skill": "ovos-skill-mark1-ctrl", "dialog": "brightness_not_found.dialog", "text": "dimmi la percentuale di luminosità per la mia faccia"}
 {"lang": "it-IT", "skill": "ovos-skill-mark1-ctrl", "dialog": "brightness_not_found.dialog", "text": "quale livello di luminosità o percentuale vorresti?"}
 {"lang": "it-IT", "skill": "ovos-skill-mark1-ctrl", "dialog": "brightness_not_found_final.dialog", "text": "capisco solo cose come, 'pieno' o 50%"}
@@ -1643,9 +1640,6 @@
 {"lang": "it-IT", "skill": "ovos-skill-mark1-ctrl", "dialog": "color_need.dialog", "text": "dì un colore per provare."}
 {"lang": "it-IT", "skill": "ovos-skill-mark1-ctrl", "dialog": "color_not_exist.dialog", "text": "non conosco questo colore. se conosci i valori r, v e b puoi dire 'imposta un colore personalizzato per gli occhi'."}
 {"lang": "it-IT", "skill": "ovos-skill-mark1-ctrl", "dialog": "color_not_exist.dialog", "text": "non è un colore che conosco."}
-{"lang": "it-IT", "skill": "ovos-skill-mark1-ctrl", "dialog": "color_not_found.dialog", "text": "i miei occhi non possono diventare di quel colore. forse dovresti chiedermi di impostare un colore personalizzato."}
-{"lang": "it-IT", "skill": "ovos-skill-mark1-ctrl", "dialog": "color_not_found.dialog", "text": "mi spiace, questo colore non è un'opzione. prova a chiedermi di impostare un colore personalizzato per gli occhi."}
-{"lang": "it-IT", "skill": "ovos-skill-mark1-ctrl", "dialog": "color_not_found.dialog", "text": "non ho questo colore disponibile, ma posso dare un colore personalizzato ai miei occhi."}
 {"lang": "it-IT", "skill": "ovos-skill-mark1-ctrl", "dialog": "error_rgbvalue.dialog", "text": "ho bisogno di un numero compreso tra 0 e 255"}
 {"lang": "it-IT", "skill": "ovos-skill-mark1-ctrl", "dialog": "error_rgbvalue.dialog", "text": "il valore deve essere compreso tra 0 e 255"}
 {"lang": "it-IT", "skill": "ovos-skill-mark1-ctrl", "dialog": "error_set_color.dialog", "text": "sembra che abbia avuto un errore nel tentativo di impostare il colore."}
@@ -1690,12 +1684,12 @@
 {"lang": "it-IT", "skill": "ovos-skill-moviemaster", "dialog": "no_info.dialog", "text": "mi dispiace. non riesco a trovare nessuna informazione sul film {movie}"}
 {"lang": "it-IT", "skill": "ovos-skill-moviemaster", "dialog": "no_info_general.dialog", "text": "mi dispiace, non riesco a trovare l'elenco che stai cercando in questo momento; per favore riprova più tardi."}
 {"lang": "it-IT", "skill": "ovos-skill-moviemaster", "dialog": "no_valid_api.dialog", "text": "la chiave a p i che hai inserito non è valida. fai riferimento al file 'read me' per le istruzioni su come ottenerne una."}
-{"lang": "it-IT", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.dialog", "text": "ora vado a dormire. dì '{wake_word}, svegliati' per svegliarmi."}
-{"lang": "it-IT", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.dialog", "text": "sto andando a dormire. dì '{wake_word}, svegliati' per richiedere la mia attenzione."}
-{"lang": "it-IT", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.dialog", "text": "va bene, vado a dormire. puoi svegliarmi dicendo '{wake_word}, svegliati'."}
-{"lang": "it-IT", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.short.dialog", "text": "va bene."}
-{"lang": "it-IT", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.short.dialog", "text": "vado a dormire."}
-{"lang": "it-IT", "skill": "ovos-skill-naptime", "dialog": "i.am.awake.dialog", "text": "sono sveglio"}
+{"lang": "it-IT", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep.dialog", "text": "ora vado a dormire. dì '{wake_word}, svegliati' per svegliarmi."}
+{"lang": "it-IT", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep.dialog", "text": "sto andando a dormire. dì '{wake_word}, svegliati' per richiedere la mia attenzione."}
+{"lang": "it-IT", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep.dialog", "text": "va bene, vado a dormire. puoi svegliarmi dicendo '{wake_word}, svegliati'."}
+{"lang": "it-IT", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep_short.dialog", "text": "va bene."}
+{"lang": "it-IT", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep_short.dialog", "text": "vado a dormire."}
+{"lang": "it-IT", "skill": "ovos-skill-naptime", "dialog": "i_am_awake.dialog", "text": "sono sveglio"}
 {"lang": "it-IT", "skill": "ovos-skill-number-facts", "dialog": "no_number_found.dialog", "text": "non ho trovato quel numero, eccotene uno a caso"}
 {"lang": "it-IT", "skill": "ovos-skill-number-facts", "dialog": "no_number_found.dialog", "text": "non ho capito che numero intendevi, ecco una curiosità a caso"}
 {"lang": "it-IT", "skill": "ovos-skill-parrot", "dialog": "did_hear.dialog", "text": "certo."}
@@ -1746,15 +1740,15 @@
 {"lang": "it-IT", "skill": "ovos-skill-speedtest", "dialog": "running.dialog", "text": "avvio il test di velocità ora, tornerò con i risultati in un attimo."}
 {"lang": "it-IT", "skill": "ovos-skill-spelling", "dialog": "what.word.dialog", "text": "quale parola vuoi che io scandisca?"}
 {"lang": "it-IT", "skill": "ovos-skill-spelling", "dialog": "what.word.dialog", "text": "quale parola devo scandire?"}
-{"lang": "it-IT", "skill": "ovos-skill-volume", "dialog": "error.get.volume.dialog", "text": "sembra che ci sia un problema. non so quale sia il volume attuale."}
-{"lang": "it-IT", "skill": "ovos-skill-volume", "dialog": "volume.change.amount.dialog", "text": "a quanto? scegli un valore tra 0 e 100."}
-{"lang": "it-IT", "skill": "ovos-skill-volume", "dialog": "volume.current.dialog", "text": "adesso il volume è a {volume}"}
-{"lang": "it-IT", "skill": "ovos-skill-volume", "dialog": "volume.current.dialog", "text": "adesso il volume è impostato su {volume}"}
-{"lang": "it-IT", "skill": "ovos-skill-volume", "dialog": "volume.level.unknown.dialog", "text": "non conosco quel livello di volume."}
-{"lang": "it-IT", "skill": "ovos-skill-volume", "dialog": "volume.max.dialog", "text": "ho aumentato il volume al massimo."}
-{"lang": "it-IT", "skill": "ovos-skill-volume", "dialog": "volume.max.dialog", "text": "il volume è ora al massimo."}
-{"lang": "it-IT", "skill": "ovos-skill-volume", "dialog": "volume.max.already.dialog", "text": "il volume è già al massimo."}
-{"lang": "it-IT", "skill": "ovos-skill-volume", "dialog": "volume.set.percent.dialog", "text": "volume al {level} per cento"}
+{"lang": "it-IT", "skill": "ovos-skill-volume", "dialog": "error_get_volume.dialog", "text": "sembra che ci sia un problema. non so quale sia il volume attuale."}
+{"lang": "it-IT", "skill": "ovos-skill-volume", "dialog": "volume_change_amount.dialog", "text": "a quanto? scegli un valore tra 0 e 100."}
+{"lang": "it-IT", "skill": "ovos-skill-volume", "dialog": "volume_current.dialog", "text": "adesso il volume è a {volume}"}
+{"lang": "it-IT", "skill": "ovos-skill-volume", "dialog": "volume_current.dialog", "text": "adesso il volume è impostato su {volume}"}
+{"lang": "it-IT", "skill": "ovos-skill-volume", "dialog": "volume_level_unknown.dialog", "text": "non conosco quel livello di volume."}
+{"lang": "it-IT", "skill": "ovos-skill-volume", "dialog": "volume_max.dialog", "text": "ho aumentato il volume al massimo."}
+{"lang": "it-IT", "skill": "ovos-skill-volume", "dialog": "volume_max.dialog", "text": "il volume è ora al massimo."}
+{"lang": "it-IT", "skill": "ovos-skill-volume", "dialog": "volume_max_already.dialog", "text": "il volume è già al massimo."}
+{"lang": "it-IT", "skill": "ovos-skill-volume", "dialog": "volume_set_percent.dialog", "text": "volume al {level} per cento"}
 {"lang": "it-IT", "skill": "ovos-skill-wallpapers", "dialog": "no_more_pictures.dialog", "text": "non ho più immagini"}
 {"lang": "it-IT", "skill": "ovos-skill-wallpapers", "dialog": "no_more_pictures.dialog", "text": "ho finito le immagini da mostrarti"}
 {"lang": "it-IT", "skill": "ovos-skill-wallpapers", "dialog": "searching.dialog", "text": "cerco immagini con {query}"}
@@ -1765,212 +1759,202 @@
 {"lang": "it-IT", "skill": "ovos-skill-wallpapers", "dialog": "wallpaper_fail.dialog", "text": "non so come cambiare lo sfondo su questa piattaforma"}
 {"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "afternoon.dialog", "text": "pomeriggio"}
 {"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "and.dialog", "text": "e"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "ash.dialog", "text": "cenere"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "cant-get-forecast.dialog", "text": "mi dispiace. non posso accedere ai bollettini meteo in questo momento."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "cant-get-forecast.dialog", "text": "mi scuso. non posso ricevere le previsioni del tempo in questo momento."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "mi dispiace. non posso accedere ai bollettini meteo in questo momento."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "mi scuso. non posso ricevere le previsioni del tempo in questo momento."}
 {"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "celsius.dialog", "text": "centigradi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "clear-sky.dialog", "text": "cielo sereno"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-condition-expected-local.dialog", "text": "si, ci sarà {condition}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-condition-expected-location.dialog", "text": "sì, sarà {condition} a {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-condition-not-expected-local.dialog", "text": "no, le previsioni parlano di {condition} oggi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-condition-not-expected-local.dialog", "text": "no, {condition} è previsto per oggi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-condition-not-expected-location.dialog", "text": "no, in {location} {condition} è previsto per oggi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-condition-not-expected-location.dialog", "text": "no, le previsioni parlano di {condition} oggi in {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-humidity-local.dialog", "text": "attualmente l'umidità è {percent}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-humidity-location.dialog", "text": "attualmente, l'umidità in {location} è {percent}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunrise-future-local.dialog", "text": "il sole sorgerà a {time} oggi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunrise-future-local.dialog", "text": "l'alba sarà a {time} oggi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunrise-future-location.dialog", "text": "il sole è sorto a {time} oggi a {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunrise-future-location.dialog", "text": "l'alba era a {time} oggi a {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunrise-past-local.dialog", "text": "il sole è sorto a {time} oggi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunrise-past-local.dialog", "text": "l'alba era a {time} oggi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunrise-past-location.dialog", "text": "il sole è sorto a {time} oggi a {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunrise-past-location.dialog", "text": "l'alba era a {time} oggi a {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunset-future-local.dialog", "text": "il sole tramonterà a {time} oggi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunset-future-local.dialog", "text": "il tramonto sarà a {time} oggi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunset-future-local.dialog", "text": "oggi il tramonto sarà alle {time}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunset-future-location.dialog", "text": "il sole tramonterà a {time} oggi a {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunset-future-location.dialog", "text": "il tramonto sarà a {time} oggi a {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunset-future-location.dialog", "text": "in {location} il sole tramonterà alle {time} di oggi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunset-past-local.dialog", "text": "il sole è tramontato a {time} oggi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunset-past-local.dialog", "text": "il tramonto era a {time} oggi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunset-past-location.dialog", "text": "il sole è tramontato a {time} oggi a {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunset-past-location.dialog", "text": "il tramonto era a {time} oggi in {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-sunset-past-location.dialog", "text": "in {location} il sole è tramontato alle {time} di oggi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-temperature-local.dialog", "text": "attualmente è a {temperature} gradi {temperature_unit}."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-temperature-local.dialog", "text": "attualmente è a {temperature} gradi."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-temperature-local.dialog", "text": "in questo momento ci sono {temperature} gradi."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-temperature-location.dialog", "text": "attualmente è a {temperature} gradi in {location}."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-temperature-location.dialog", "text": "attualmente è {temperature} gradi {temperature_unit} in {location}."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-temperature-location.dialog", "text": "in questo momento, ci sono 0 gradi in {location}."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-weather-local.dialog", "text": "attualmente è a 0 e a 1 grado."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-weather-local.dialog", "text": "attualmente è {condition} e {temperature} gradi {temperature_unit}."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-weather-local.dialog", "text": "in questo momento, ci sono {condition} e {temperature} gradi."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-weather-location.dialog", "text": "attualmente è {condition} e {temperature} gradi {temperature_unit} in {location}."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-weather-location.dialog", "text": "in questo momento ci sono {condition} e {temperature} gradi in {location}."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-weather-location.dialog", "text": "{location} ha {condition} e attualmente è {temperature} gradi."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-wind-light-local.dialog", "text": "il vento è leggero a {speed} {speed_unit} dal {direction}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-wind-light-local.dialog", "text": "oggi c'è vento leggero da {direction} a {speed} {speed_unit}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-wind-light-location.dialog", "text": "il vento è leggero in {location} a {speed} {speed_unit} dal {direction}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-wind-light-location.dialog", "text": "in {location} oggi c'è vento leggero da {direction} a {speed} {speed_unit}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-wind-moderate-local.dialog", "text": "attualmente il vento è moderato {speed} {speed_unit} da {direction}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-wind-moderate-local.dialog", "text": "oggi c'è un po' di vento, attualmente {speed} {speed_unit}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-wind-moderate-location.dialog", "text": "attualmente il vento è moderato {speed} {speed_unit} da {direction} in {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-wind-moderate-location.dialog", "text": "oggi c'è un po' di vento in {location}, attualmente {speed} {speed_unit}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-wind-strong-local.dialog", "text": "attualmente, il vento proviene da {direction} a {speed} {speed_unit}, potrebbe essere bene rimanere all'interno oggi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-wind-strong-local.dialog", "text": "il vento è molto forte da {direction} oggi, {speed} {speed_unit}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-wind-strong-local.dialog", "text": "oggi c'è molto vento, {speed} {speed_unit}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-wind-strong-location.dialog", "text": "attualmente il vento proviene da {direction} a {speed} {speed_unit} a {location}, una buona giornata per stare in casa."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-wind-strong-location.dialog", "text": "il vento è molto forte da {direction} a {location} oggi, {speed} {speed_unit}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current-wind-strong-location.dialog", "text": "{location} avrà venti forti oggi, {speed} {speed_unit}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "currrent-clouds-alternative-local.dialog", "text": "no, le previsioni parlano di {condition} oggi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "currrent-clouds-alternative-local.dialog", "text": "non dovrebbe essere nuvoloso, sembra che oggi ci sarà {condition}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "currrent-clouds-alternative-local.dialog", "text": "non sembra così, è probabile che oggi sia {condition}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-condition-expected-local.dialog", "text": "sì, aspettatevi {condition} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-condition-expected-local.dialog", "text": "sì, le previsioni indicano {condition} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-condition-expected-location.dialog", "text": "sì, aspettatevi {condition} in {location} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-condition-expected-location.dialog", "text": "sì, le previsioni indicano {condition} in {location} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-condition-not-expected-local.dialog", "text": "no, {condition} è previsto {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-condition-not-expected-local.dialog", "text": "no, {day} le previsioni indicano {condition}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-condition-not-expected-location.dialog", "text": "no, in {location} {condition} è previsto {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-condition-not-expected-location.dialog", "text": "no, {day} le previsioni indicano {condition} in {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-humidity-local.dialog", "text": "l'umidità {day} sarà {percent}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-humidity-local.dialog", "text": "{day} le previsioni indicano un'umidità di {percent}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-humidity-location.dialog", "text": "l'umidità in {location} {day} sarà {percent}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-humidity-location.dialog", "text": "{day} la previsione in {location} prevede un'umidità di {percent}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-precipitation-next-local.dialog", "text": "c'è una possibilità {percent} di {precipitation} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-precipitation-next-local.dialog", "text": "le previsioni parlano di {percent} possibilità di {precipitation} di {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-precipitation-next-location.dialog", "text": "in {location} c'è una probabilità {percent} di {precipitation} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-precipitation-next-location.dialog", "text": "le previsioni parlano di {percent} possibilità di {precipitation} in {location} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-precipitation-next-none-local.dialog", "text": "non sono previste precipitazioni per i prossimi 7 giorni."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-precipitation-next-none-local.dialog", "text": "non è prevista alcuna precipitazione nei prossimi 7 giorni."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-precipitation-next-none-location.dialog", "text": "in {location} non è prevista alcuna previsione"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-precipitation-next-none-location.dialog", "text": "non sono previste precipitazioni per i prossimi sette giorni in {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-sunrise-local.dialog", "text": "il sole sorgerà a {time} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-sunrise-local.dialog", "text": "l'alba sarà a {time} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-sunrise-local.dialog", "text": "{day} il sole sorgerà a {time}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-sunrise-location.dialog", "text": "il sole sorgerà a {time} {day} in {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-sunrise-location.dialog", "text": "in {location} l'alba sarà a {time} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-sunrise-location.dialog", "text": "{day} il sole sorgerà a {time} in {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-sunset-local.dialog", "text": "il sole tramonterà a {time} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-sunset-local.dialog", "text": "il tramonto sarà a {time} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-sunset-local.dialog", "text": "{day} il sole tramonterà a {time}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-sunset-location.dialog", "text": "il sole tramonterà a {time} {day} in {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-sunset-location.dialog", "text": "in {location} il tramonto sarà a {time} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-sunset-location.dialog", "text": "{day} il sole tramonterà a {time} in {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-temperature-high-local.dialog", "text": "{day} la temperatura sarà di {temperature} gradi."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-temperature-high-local.dialog", "text": "{day} sarà alto come {temperature}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-temperature-high-location.dialog", "text": "sarà fino a {temperature} gradi in {location} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-temperature-high-location.dialog", "text": "{location} avrà una massima di {temperature} gradi {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-temperature-high-low-local.dialog", "text": "le previsioni per oggi indicano una massima di {high_temperature} e una minima di {low_temperature}."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-temperature-high-low-location.dialog", "text": "le previsioni per oggi a {location} prevedono una massima di {high_temperature} e una minima di {low_temperature}."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-temperature-local.dialog", "text": "{day} la temperatura sarà di {temperature} gradi."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-temperature-local.dialog", "text": "{day} sarà {temperature}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-temperature-location.dialog", "text": "{day} sarà {temperature} gradi in {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-temperature-location.dialog", "text": "{day}, {location} avranno una temperatura di {temperature} gradi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-temperature-low-local.dialog", "text": "{day} la temperatura sarà di {temperature} gradi."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-temperature-low-local.dialog", "text": "{day} sarà basso come {temperature}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-temperature-low-location.dialog", "text": "{day} sarà basso come {temperature} gradi in {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-temperature-low-location.dialog", "text": "{day}, {location} sarà basso come {temperature} gradi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-weather-local.dialog", "text": "aspettatevi {condition}, con un massimo di {high_temperature} e un minimo di {low_temperature} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-weather-local.dialog", "text": "la previsione {day} è {condition} con un massimo di {high_temperature} e un minimo di {low_temperature}."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-weather-local.dialog", "text": "{day} il massimo sarà {high_temperature} e il minimo {low_temperature}, con {condition}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-weather-local.dialog", "text": "{day} sarà {condition} con un massimo di {high_temperature} e un minimo di {low_temperature}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-weather-local.dialog", "text": "{day} si aspetta {condition}, con un massimo di {high_temperature} e un minimo di {low_temperature}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-weather-location.dialog", "text": "la previsione {day} è {high_temperature} per un massimo e {low_temperature} per un minimo in {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-weather-location.dialog", "text": "{day} sarà {condition}, con un massimo di {high_temperature} e un minimo di {low_temperature} in {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-weather-location.dialog", "text": "{day}, {location} avrà un massimo di {high_temperature} e un minimo di {low_temperature}, con {condition}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-wind-light-local.dialog", "text": "ci sarà un vento leggero proveniente da {direction} {day} a {speed} {speed_unit}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-wind-light-local.dialog", "text": "non ci sarà molto vento {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-wind-light-location.dialog", "text": "ci sarà un vento leggero proveniente da {direction} in {location} {day} in {speed} {speed_unit}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-wind-light-location.dialog", "text": "non ci sarà molto vento in {location} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-wind-moderate-local.dialog", "text": "il vento sarà moderato, circa {speed} {speed_unit} dalla {direction} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-wind-moderate-local.dialog", "text": "le previsioni parlano di un vento moderato da {direction} a {speed} {speed_unit} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-wind-moderate-local.dialog", "text": "si prevede un vento moderato di circa {speed} {speed_unit} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-wind-moderate-location.dialog", "text": "ci si può aspettare un vento di circa {speed} {speed_unit} in {location} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-wind-moderate-location.dialog", "text": "il vento sarà moderato in {location} {day}, circa {speed} {speed_unit} dalla {direction}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-wind-moderate-location.dialog", "text": "le previsioni {day} prevedono che {location} avrà vento moderato da {direction} di {speed} {speed_unit}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-wind-strong-local.dialog", "text": "ci sarà un forte vento dal {direction} di {speed} {speed_unit} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-wind-strong-local.dialog", "text": "il vento sarà forte come {speed} {speed_unit} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-wind-strong-location.dialog", "text": "ci sarà un forte vento dalla {direction} di {speed} {speed_unit} in {location} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily-wind-strong-location.dialog", "text": "il vento sarà forte come {speed} {speed_unit} in {location} {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "depositing-rime-fog.dialog", "text": "deposito di nebbia di rime"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "clear_sky.dialog", "text": "cielo sereno"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_local.dialog", "text": "si, ci sarà {condition}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_location.dialog", "text": "sì, sarà {condition} a {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_condition_not_expected_local.dialog", "text": "no, le previsioni parlano di {condition} oggi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_condition_not_expected_local.dialog", "text": "no, {condition} è previsto per oggi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_condition_not_expected_location.dialog", "text": "no, in {location} {condition} è previsto per oggi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_condition_not_expected_location.dialog", "text": "no, le previsioni parlano di {condition} oggi in {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_humidity_local.dialog", "text": "attualmente l'umidità è {percent}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_humidity_location.dialog", "text": "attualmente, l'umidità in {location} è {percent}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunrise_future_local.dialog", "text": "il sole sorgerà a {time} oggi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunrise_future_local.dialog", "text": "l'alba sarà a {time} oggi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunrise_future_location.dialog", "text": "il sole è sorto a {time} oggi a {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunrise_future_location.dialog", "text": "l'alba era a {time} oggi a {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunrise_past_local.dialog", "text": "il sole è sorto a {time} oggi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunrise_past_local.dialog", "text": "l'alba era a {time} oggi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunrise_past_location.dialog", "text": "il sole è sorto a {time} oggi a {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunrise_past_location.dialog", "text": "l'alba era a {time} oggi a {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunset_future_local.dialog", "text": "il sole tramonterà a {time} oggi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunset_future_local.dialog", "text": "il tramonto sarà a {time} oggi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunset_future_local.dialog", "text": "oggi il tramonto sarà alle {time}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunset_future_location.dialog", "text": "il sole tramonterà a {time} oggi a {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunset_future_location.dialog", "text": "il tramonto sarà a {time} oggi a {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunset_future_location.dialog", "text": "in {location} il sole tramonterà alle {time} di oggi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_local.dialog", "text": "il sole è tramontato a {time} oggi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_local.dialog", "text": "il tramonto era a {time} oggi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "il sole è tramontato a {time} oggi a {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "il tramonto era a {time} oggi in {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "in {location} il sole è tramontato alle {time} di oggi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "attualmente è a {temperature} gradi {temperature_unit}."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "attualmente è a {temperature} gradi."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "in questo momento ci sono {temperature} gradi."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "attualmente è a {temperature} gradi in {location}."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "attualmente è {temperature} gradi {temperature_unit} in {location}."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "in questo momento, ci sono 0 gradi in {location}."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "attualmente è a 0 e a 1 grado."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "attualmente è {condition} e {temperature} gradi {temperature_unit}."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "in questo momento, ci sono {condition} e {temperature} gradi."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "attualmente è {condition} e {temperature} gradi {temperature_unit} in {location}."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "in questo momento ci sono {condition} e {temperature} gradi in {location}."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "{location} ha {condition} e attualmente è {temperature} gradi."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_wind_light_local.dialog", "text": "il vento è leggero a {speed} {speed_unit} dal {direction}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_wind_light_local.dialog", "text": "oggi c'è vento leggero da {direction} a {speed} {speed_unit}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_wind_light_location.dialog", "text": "il vento è leggero in {location} a {speed} {speed_unit} dal {direction}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_wind_light_location.dialog", "text": "in {location} oggi c'è vento leggero da {direction} a {speed} {speed_unit}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_wind_moderate_local.dialog", "text": "attualmente il vento è moderato {speed} {speed_unit} da {direction}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_wind_moderate_local.dialog", "text": "oggi c'è un po' di vento, attualmente {speed} {speed_unit}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_wind_moderate_location.dialog", "text": "attualmente il vento è moderato {speed} {speed_unit} da {direction} in {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_wind_moderate_location.dialog", "text": "oggi c'è un po' di vento in {location}, attualmente {speed} {speed_unit}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_wind_strong_local.dialog", "text": "attualmente, il vento proviene da {direction} a {speed} {speed_unit}, potrebbe essere bene rimanere all'interno oggi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_wind_strong_local.dialog", "text": "il vento è molto forte da {direction} oggi, {speed} {speed_unit}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_wind_strong_local.dialog", "text": "oggi c'è molto vento, {speed} {speed_unit}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_wind_strong_location.dialog", "text": "attualmente il vento proviene da {direction} a {speed} {speed_unit} a {location}, una buona giornata per stare in casa."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_wind_strong_location.dialog", "text": "il vento è molto forte da {direction} a {location} oggi, {speed} {speed_unit}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "current_wind_strong_location.dialog", "text": "{location} avrà venti forti oggi, {speed} {speed_unit}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_condition_expected_local.dialog", "text": "sì, aspettatevi {condition} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_condition_expected_local.dialog", "text": "sì, le previsioni indicano {condition} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_condition_expected_location.dialog", "text": "sì, aspettatevi {condition} in {location} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_condition_expected_location.dialog", "text": "sì, le previsioni indicano {condition} in {location} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_condition_not_expected_local.dialog", "text": "no, {condition} è previsto {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_condition_not_expected_local.dialog", "text": "no, {day} le previsioni indicano {condition}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_condition_not_expected_location.dialog", "text": "no, in {location} {condition} è previsto {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_condition_not_expected_location.dialog", "text": "no, {day} le previsioni indicano {condition} in {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_humidity_local.dialog", "text": "l'umidità {day} sarà {percent}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_humidity_local.dialog", "text": "{day} le previsioni indicano un'umidità di {percent}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_humidity_location.dialog", "text": "l'umidità in {location} {day} sarà {percent}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_humidity_location.dialog", "text": "{day} la previsione in {location} prevede un'umidità di {percent}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_precipitation_next_local.dialog", "text": "c'è una possibilità {percent} di {precipitation} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_precipitation_next_local.dialog", "text": "le previsioni parlano di {percent} possibilità di {precipitation} di {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_precipitation_next_location.dialog", "text": "in {location} c'è una probabilità {percent} di {precipitation} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_precipitation_next_location.dialog", "text": "le previsioni parlano di {percent} possibilità di {precipitation} in {location} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_precipitation_next_none_local.dialog", "text": "non sono previste precipitazioni per i prossimi 7 giorni."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_precipitation_next_none_local.dialog", "text": "non è prevista alcuna precipitazione nei prossimi 7 giorni."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_precipitation_next_none_location.dialog", "text": "in {location} non è prevista alcuna previsione"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_precipitation_next_none_location.dialog", "text": "non sono previste precipitazioni per i prossimi sette giorni in {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_sunrise_local.dialog", "text": "il sole sorgerà a {time} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_sunrise_local.dialog", "text": "l'alba sarà a {time} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_sunrise_local.dialog", "text": "{day} il sole sorgerà a {time}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_sunrise_location.dialog", "text": "il sole sorgerà a {time} {day} in {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_sunrise_location.dialog", "text": "in {location} l'alba sarà a {time} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_sunrise_location.dialog", "text": "{day} il sole sorgerà a {time} in {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_sunset_local.dialog", "text": "il sole tramonterà a {time} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_sunset_local.dialog", "text": "il tramonto sarà a {time} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_sunset_local.dialog", "text": "{day} il sole tramonterà a {time}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_sunset_location.dialog", "text": "il sole tramonterà a {time} {day} in {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_sunset_location.dialog", "text": "in {location} il tramonto sarà a {time} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_sunset_location.dialog", "text": "{day} il sole tramonterà a {time} in {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_temperature_high_local.dialog", "text": "{day} la temperatura sarà di {temperature} gradi."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_temperature_high_local.dialog", "text": "{day} sarà alto come {temperature}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_temperature_high_location.dialog", "text": "sarà fino a {temperature} gradi in {location} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_temperature_high_location.dialog", "text": "{location} avrà una massima di {temperature} gradi {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_temperature_high_low_local.dialog", "text": "le previsioni per oggi indicano una massima di {high_temperature} e una minima di {low_temperature}."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_temperature_high_low_location.dialog", "text": "le previsioni per oggi a {location} prevedono una massima di {high_temperature} e una minima di {low_temperature}."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_temperature_local.dialog", "text": "{day} la temperatura sarà di {temperature} gradi."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_temperature_local.dialog", "text": "{day} sarà {temperature}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_temperature_location.dialog", "text": "{day} sarà {temperature} gradi in {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_temperature_location.dialog", "text": "{day}, {location} avranno una temperatura di {temperature} gradi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_temperature_low_local.dialog", "text": "{day} la temperatura sarà di {temperature} gradi."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_temperature_low_local.dialog", "text": "{day} sarà basso come {temperature}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_temperature_low_location.dialog", "text": "{day} sarà basso come {temperature} gradi in {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_temperature_low_location.dialog", "text": "{day}, {location} sarà basso come {temperature} gradi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "aspettatevi {condition}, con un massimo di {high_temperature} e un minimo di {low_temperature} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "la previsione {day} è {condition} con un massimo di {high_temperature} e un minimo di {low_temperature}."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "{day} il massimo sarà {high_temperature} e il minimo {low_temperature}, con {condition}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "{day} sarà {condition} con un massimo di {high_temperature} e un minimo di {low_temperature}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "{day} si aspetta {condition}, con un massimo di {high_temperature} e un minimo di {low_temperature}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "la previsione {day} è {high_temperature} per un massimo e {low_temperature} per un minimo in {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "{day} sarà {condition}, con un massimo di {high_temperature} e un minimo di {low_temperature} in {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "{day}, {location} avrà un massimo di {high_temperature} e un minimo di {low_temperature}, con {condition}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_local.dialog", "text": "ci sarà un vento leggero proveniente da {direction} {day} a {speed} {speed_unit}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_local.dialog", "text": "non ci sarà molto vento {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_location.dialog", "text": "ci sarà un vento leggero proveniente da {direction} in {location} {day} in {speed} {speed_unit}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_location.dialog", "text": "non ci sarà molto vento in {location} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "il vento sarà moderato, circa {speed} {speed_unit} dalla {direction} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "le previsioni parlano di un vento moderato da {direction} a {speed} {speed_unit} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "si prevede un vento moderato di circa {speed} {speed_unit} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_location.dialog", "text": "ci si può aspettare un vento di circa {speed} {speed_unit} in {location} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_location.dialog", "text": "il vento sarà moderato in {location} {day}, circa {speed} {speed_unit} dalla {direction}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_location.dialog", "text": "le previsioni {day} prevedono che {location} avrà vento moderato da {direction} di {speed} {speed_unit}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_wind_strong_local.dialog", "text": "ci sarà un forte vento dal {direction} di {speed} {speed_unit} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_wind_strong_local.dialog", "text": "il vento sarà forte come {speed} {speed_unit} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_wind_strong_location.dialog", "text": "ci sarà un forte vento dalla {direction} di {speed} {speed_unit} in {location} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "daily_wind_strong_location.dialog", "text": "il vento sarà forte come {speed} {speed_unit} in {location} {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "depositing_rime_fog.dialog", "text": "deposito di nebbia di rime"}
 {"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "drizzle.dialog", "text": "pioggerella"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "drizzle-dense-intensity.dialog", "text": "pioggerella, intensità densa"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "drizzle-light-intensity.dialog", "text": "pioggerella, intensità della luce"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "drizzle-moderate-intensity.dialog", "text": "pioviggine, intensità moderata"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "dust.dialog", "text": "polvere"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "early morning.dialog", "text": "mattina presto"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "drizzle_dense_intensity.dialog", "text": "pioggerella, intensità densa"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "drizzle_light_intensity.dialog", "text": "pioggerella, intensità della luce"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "drizzle_moderate_intensity.dialog", "text": "pioviggine, intensità moderata"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "early_morning.dialog", "text": "mattina presto"}
 {"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "east.dialog", "text": "est"}
 {"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "evening.dialog", "text": "sera"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "forty-eight-hours-available.dialog", "text": "spiacente, ho solo 48 ore di dati di previsione oraria."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "freezing-drizzle-dense-intensity.dialog", "text": "pioggia gelata, intensità densa"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "freezing-drizzle-light-intensity.dialog", "text": "pioggia gelata, intensità della luce"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "freezing-rain-dense-intensity.dialog", "text": "pioggia gelata, intensità densa"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "freezing-rain-light-intensity.dialog", "text": "pioggia gelata, intensità della luce"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "haze.dialog", "text": "nebbia"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "heavy-rain.dialog", "text": "pioggia battente"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "heavy-snow-fall.dialog", "text": "forte caduta di neve"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "heavy-snow-showers.dialog", "text": "forti rovesci di neve"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly-condition-expected-local.dialog", "text": "sì, la previsione {time} per la previsione {condition}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly-condition-expected-location.dialog", "text": "sì, sarà {condition} questo {time}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly-precipitation-next-local.dialog", "text": "c'è una possibilità {percent} di {precipitation} a {time}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly-precipitation-next-local.dialog", "text": "le previsioni parlano di {percent} possibilità di {precipitation} a {time}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly-precipitation-next-location.dialog", "text": "in {location} c'è una probabilità {percent} di {precipitation} a {time}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly-precipitation-next-location.dialog", "text": "le previsioni parlano di una probabilità {percent} di {precipitation} in {location} a {time}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly-temperature-local.dialog", "text": "nel {time}, sarà {temperature} gradi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly-temperature-local.dialog", "text": "sarà di circa {temperature} gradi nel {time}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly-temperature-location.dialog", "text": "in {location} sarà di circa {temperature} gradi nel {time}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly-temperature-location.dialog", "text": "nella {time}, sarà {temperature} gradi nella {location}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly-weather-local.dialog", "text": "intorno a {temperature} gradi con {condition}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly-weather-local.dialog", "text": "più tardi sarà {condition} e intorno a {temperature} gradi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly-weather-local.dialog", "text": "più tardi sarà {condition} e {temperature} gradi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly-weather-local.dialog", "text": "sarà {condition}, con temperature prossime a {temperature}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly-weather-location.dialog", "text": "il tempo di {location} nelle prossime ore sarà di {condition} e {temperature} gradi"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly-weather-location.dialog", "text": "più tardi sarà {condition} in {location}, con temperature intorno a {temperature}."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly-weather-location.dialog", "text": "{location} sarà di circa {temperature} gradi con {condition}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly-weather-location.dialog", "text": "{location} sarà intorno a {temperature} con {condition}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "forty_eight_hours_available.dialog", "text": "spiacente, ho solo 48 ore di dati di previsione oraria."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "freezing_drizzle_dense_intensity.dialog", "text": "pioggia gelata, intensità densa"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "freezing_drizzle_light_intensity.dialog", "text": "pioggia gelata, intensità della luce"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "freezing_rain_dense_intensity.dialog", "text": "pioggia gelata, intensità densa"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "freezing_rain_light_intensity.dialog", "text": "pioggia gelata, intensità della luce"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "heavy_rain.dialog", "text": "pioggia battente"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "heavy_snow_fall.dialog", "text": "forte caduta di neve"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "heavy_snow_showers.dialog", "text": "forti rovesci di neve"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly_condition_expected_local.dialog", "text": "sì, la previsione {time} per la previsione {condition}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly_condition_expected_location.dialog", "text": "sì, sarà {condition} questo {time}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly_precipitation_next_local.dialog", "text": "c'è una possibilità {percent} di {precipitation} a {time}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly_precipitation_next_local.dialog", "text": "le previsioni parlano di {percent} possibilità di {precipitation} a {time}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly_precipitation_next_location.dialog", "text": "in {location} c'è una probabilità {percent} di {precipitation} a {time}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly_precipitation_next_location.dialog", "text": "le previsioni parlano di una probabilità {percent} di {precipitation} in {location} a {time}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly_temperature_local.dialog", "text": "nel {time}, sarà {temperature} gradi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly_temperature_local.dialog", "text": "sarà di circa {temperature} gradi nel {time}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly_temperature_location.dialog", "text": "in {location} sarà di circa {temperature} gradi nel {time}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly_temperature_location.dialog", "text": "nella {time}, sarà {temperature} gradi nella {location}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly_weather_local.dialog", "text": "intorno a {temperature} gradi con {condition}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly_weather_local.dialog", "text": "più tardi sarà {condition} e intorno a {temperature} gradi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly_weather_local.dialog", "text": "più tardi sarà {condition} e {temperature} gradi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly_weather_local.dialog", "text": "sarà {condition}, con temperature prossime a {temperature}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "il tempo di {location} nelle prossime ore sarà di {condition} e {temperature} gradi"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "più tardi sarà {condition} in {location}, con temperature intorno a {temperature}."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "{location} sarà di circa {temperature} gradi con {condition}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "{location} sarà intorno a {temperature} con {condition}"}
 {"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "inch.dialog", "text": "pollice"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "kilometer per hour.dialog", "text": "chilometro all'ora"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "location-not-found.dialog", "text": "la città {location} non è presente nella mia memoria. si prega di riprovare"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "location-not-found.dialog", "text": "non riesco a trovare una città di nome {location}. si prega di riprovare"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "mainly-clear.dialog", "text": "principalmente chiaro"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "meter per second.dialog", "text": "metri al secondo"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "miles per hour.dialog", "text": "miglia all'ora"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "kilometer_per_hour.dialog", "text": "chilometro all'ora"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "location_not_found.dialog", "text": "la città {location} non è presente nella mia memoria. si prega di riprovare"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "location_not_found.dialog", "text": "non riesco a trovare una città di nome {location}. si prega di riprovare"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "mainly_clear.dialog", "text": "principalmente chiaro"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "meter_per_second.dialog", "text": "metri al secondo"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "miles_per_hour.dialog", "text": "miglia all'ora"}
 {"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "millimeter.dialog", "text": "millimetro"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "mist.dialog", "text": "nebbia"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "moderate-rain.dialog", "text": "pioggia moderata"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "moderate-rain-showers.dialog", "text": "pioggia moderata"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "moderate-snow-fall.dialog", "text": "moderata caduta di neve"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "moderate_rain.dialog", "text": "pioggia moderata"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "moderate_rain_showers.dialog", "text": "pioggia moderata"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "moderate_snow_fall.dialog", "text": "moderata caduta di neve"}
 {"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "morning.dialog", "text": "mattina"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "no-forecast.dialog", "text": "mi spiace, non conosco le previsioni {day}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "no-forecast.dialog", "text": "non ho una previsione {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "no_forecast.dialog", "text": "mi spiace, non conosco le previsioni {day}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "no_forecast.dialog", "text": "non ho una previsione {day}"}
 {"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "north.dialog", "text": "nord"}
 {"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "northeast.dialog", "text": "nordest"}
 {"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "northwest.dialog", "text": "nordovest"}
 {"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "overcast.dialog", "text": "nuvoloso"}
 {"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "overnight.dialog", "text": "notte"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "partly-cloudy.dialog", "text": "parzialmente nuvoloso"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "percentage-number.dialog", "text": "{number} percento"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "seven-days-available.dialog", "text": "ho a disposizione sette giorni di previsioni meteo."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "seven-days-available.dialog", "text": "posso dirvi le previsioni per i prossimi sette giorni."}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "slight-rain.dialog", "text": "pioggia leggera"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "slight-rain-showers.dialog", "text": "leggeri rovesci di pioggia"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "slight-snow-fall.dialog", "text": "leggera caduta di neve"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "slight-snow-showers.dialog", "text": "leggeri rovesci di neve"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "smoke.dialog", "text": "fumo"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "snow-grains.dialog", "text": "granelli di neve"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "partly_cloudy.dialog", "text": "parzialmente nuvoloso"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "percentage_number.dialog", "text": "{number} percento"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "seven_days_available.dialog", "text": "ho a disposizione sette giorni di previsioni meteo."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "seven_days_available.dialog", "text": "posso dirvi le previsioni per i prossimi sette giorni."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "slight_rain.dialog", "text": "pioggia leggera"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "slight_rain_showers.dialog", "text": "leggeri rovesci di pioggia"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "slight_snow_fall.dialog", "text": "leggera caduta di neve"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "slight_snow_showers.dialog", "text": "leggeri rovesci di neve"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "snow_grains.dialog", "text": "granelli di neve"}
 {"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "south.dialog", "text": "sud"}
 {"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "southeast.dialog", "text": "sudest"}
 {"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "southwest.dialog", "text": "sudovest"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "squall.dialog", "text": "burrasca"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "thunderstorm-with-heavy-hail.dialog", "text": "temporale con forte grandine"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "thunderstorm-with-slight-hail.dialog", "text": "temporale con leggera grandine"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "tornado.dialog", "text": "tornado"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "violent-rain-showers.dialog", "text": "pioggia violenta"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "weekly-condition.dialog", "text": "le previsioni indicano {condition} su {days}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "weekly-condition.dialog", "text": "su {days} aspettatevi {condition}"}
-{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "weekly-temperature.dialog", "text": "le minime saranno comprese tra {low_min} e {low_max}, le massime tra {high_min} e {high_max}."}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "thunderstorm_with_heavy_hail.dialog", "text": "temporale con forte grandine"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "thunderstorm_with_slight_hail.dialog", "text": "temporale con leggera grandine"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "violent_rain_showers.dialog", "text": "pioggia violenta"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "weekly_condition.dialog", "text": "le previsioni indicano {condition} su {days}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "weekly_condition.dialog", "text": "su {days} aspettatevi {condition}"}
+{"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "weekly_temperature.dialog", "text": "le minime saranno comprese tra {low_min} e {low_max}, le massime tra {high_min} e {high_max}."}
 {"lang": "it-IT", "skill": "ovos-skill-weather", "dialog": "west.dialog", "text": "ovest"}
 {"lang": "it-IT", "skill": "ovos-skill-wikihow", "dialog": "howto_failure.dialog", "text": "ho provato a cercare su wikihow ma non ho trovato nulla"}
 {"lang": "it-IT", "skill": "ovos-skill-wikihow", "dialog": "howto_failure.dialog", "text": "non lo so"}
@@ -1985,6 +1969,8 @@
 {"lang": "it-IT", "skill": "ovos-skill-wikipedia", "dialog": "no_query.dialog", "text": "cosa devo cercare in wikipedia?"}
 {"lang": "it-IT", "skill": "ovos-skill-wikipedia", "dialog": "nothing.more.dialog", "text": "questo è tutto quello che ho su {title}"}
 {"lang": "it-IT", "skill": "ovos-skill-wikipedia", "dialog": "nothing.more.dialog", "text": "che è tutto wikipedia mi dà circa {title}"}
+{"lang": "it-IT", "skill": "ovos-skill-wikipedia", "dialog": "nothing_more.dialog", "text": "questo è tutto quello che ho su {title}"}
+{"lang": "it-IT", "skill": "ovos-skill-wikipedia", "dialog": "nothing_more.dialog", "text": "che è tutto wikipedia mi dà circa {title}"}
 {"lang": "it-IT", "skill": "ovos-skill-wikipedia", "dialog": "searching.dialog", "text": "fammi cercare {query} su wikipedia"}
 {"lang": "it-IT", "skill": "ovos-skill-wikipedia", "dialog": "searching.dialog", "text": "sto cercando {query} su wikipedia"}
 {"lang": "it-IT", "skill": "ovos-skill-wikipedia", "dialog": "thats all.dialog", "text": "questo è tutto quello che ho trovato"}

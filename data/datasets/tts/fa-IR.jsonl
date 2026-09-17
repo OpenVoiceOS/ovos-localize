@@ -121,12 +121,12 @@
 {"lang": "fa-IR", "skill": "ovos-skill-laugh", "dialog": "yes.dialog", "text": "بله"}
 {"lang": "fa-IR", "skill": "ovos-skill-laugh", "dialog": "yes.dialog", "text": "آره"}
 {"lang": "fa-IR", "skill": "ovos-skill-laugh", "dialog": "yes.dialog", "text": "حتما"}
-{"lang": "fa-IR", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.dialog", "text": "خب من دارم میرم بخوابم. میتونی با گفتنِ '{wake_word}, بیدار شو' منو بیدار کنی"}
-{"lang": "fa-IR", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.dialog", "text": "من دارم میرم بخوابم. بگو '{wake_word}, بیدار شو' تا توجه من رُ جلب کنی"}
-{"lang": "fa-IR", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.dialog", "text": "من دارم میرم بخوابم. بگو '{wake_word}, بیدار شو' تا منو بیدار کنی"}
-{"lang": "fa-IR", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.short.dialog", "text": "ok."}
-{"lang": "fa-IR", "skill": "ovos-skill-naptime", "dialog": "going.to.sleep.short.dialog", "text": "دارم میرم بخوابم."}
-{"lang": "fa-IR", "skill": "ovos-skill-naptime", "dialog": "i.am.awake.dialog", "text": "من بیدارم"}
+{"lang": "fa-IR", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep.dialog", "text": "خب من دارم میرم بخوابم. میتونی با گفتنِ '{wake_word}, بیدار شو' منو بیدار کنی"}
+{"lang": "fa-IR", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep.dialog", "text": "من دارم میرم بخوابم. بگو '{wake_word}, بیدار شو' تا توجه من رُ جلب کنی"}
+{"lang": "fa-IR", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep.dialog", "text": "من دارم میرم بخوابم. بگو '{wake_word}, بیدار شو' تا منو بیدار کنی"}
+{"lang": "fa-IR", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep_short.dialog", "text": "ok."}
+{"lang": "fa-IR", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep_short.dialog", "text": "دارم میرم بخوابم."}
+{"lang": "fa-IR", "skill": "ovos-skill-naptime", "dialog": "i_am_awake.dialog", "text": "من بیدارم"}
 {"lang": "fa-IR", "skill": "ovos-skill-parrot", "dialog": "did_hear.dialog", "text": "آره."}
 {"lang": "fa-IR", "skill": "ovos-skill-parrot", "dialog": "did_hear.dialog", "text": "بله."}
 {"lang": "fa-IR", "skill": "ovos-skill-parrot", "dialog": "did_not_hear.dialog", "text": "نه فکر نکنم فهمیدمت"}
@@ -152,17 +152,18 @@
 {"lang": "fa-IR", "skill": "ovos-skill-parrot", "dialog": "repeat_stt_old.dialog", "text": "آخرین چیزی که گفتی {stt} بود."}
 {"lang": "fa-IR", "skill": "ovos-skill-parrot", "dialog": "repeat_stt_old.dialog", "text": "یه خرده قبل‌تر گفتی {stt}"}
 {"lang": "fa-IR", "skill": "ovos-skill-speedtest", "dialog": "error.dialog", "text": "یه خطا اتفاق افتاد. نتونستم سرعت رو آزمایش کنم. شرمنده."}
+{"lang": "fa-IR", "skill": "ovos-skill-speedtest", "dialog": "ping.dialog", "text": "پینگ {ping} میلی‌ثانیه است"}
 {"lang": "fa-IR", "skill": "ovos-skill-speedtest", "dialog": "result.dialog", "text": "سرعت بارگیری {down} و سرعت بارگزاری {up} مگابیت بر ثانیه هست."}
 {"lang": "fa-IR", "skill": "ovos-skill-speedtest", "dialog": "running.dialog", "text": "الآن آزمایش سرعت رو شروع کردم. یک لحظه دیگه با نتایج برمیگردم."}
-{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "error.get.volume.dialog", "text": "به نظر می رسد مشکلی وجود دارد.من نمی توانستم حجم فعلی را بپرسید."}
-{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume.change.amount.dialog", "text": "برای چه مقدار؟ 0 تا 100 امکان پذیر است."}
-{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume.current.dialog", "text": "حجم آن در {volume} است."}
-{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume.current.dialog", "text": "حجم تنظیم شده به {volume}"}
-{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume.level.unknown.dialog", "text": "من این سطح حجم را نمی دانم."}
-{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume.max.dialog", "text": "تغییر حجم به حداکثر سطح"}
-{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume.max.dialog", "text": "حداکثر حجم به حداکثر سطح"}
-{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume.max.dialog", "text": "حجم به حداکثر سطح به روز شده"}
-{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume.max.already.dialog", "text": "حجم در حال حاضر به حداکثر سطح تنظیم شده است"}
-{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume.set.percent.dialog", "text": "حجم تغییر به {level} درصد"}
-{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume.set.percent.dialog", "text": "حجم تعیین شده به {level} درصد"}
-{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume.set.percent.dialog", "text": "حجم به روز شده به {level} درصد"}
+{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "error_get_volume.dialog", "text": "به نظر می رسد مشکلی وجود دارد.من نمی توانستم حجم فعلی را بپرسید."}
+{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume_change_amount.dialog", "text": "برای چه مقدار؟ 0 تا 100 امکان پذیر است."}
+{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume_current.dialog", "text": "حجم آن در {volume} است."}
+{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume_current.dialog", "text": "حجم تنظیم شده به {volume}"}
+{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume_level_unknown.dialog", "text": "من این سطح حجم را نمی دانم."}
+{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume_max.dialog", "text": "تغییر حجم به حداکثر سطح"}
+{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume_max.dialog", "text": "حداکثر حجم به حداکثر سطح"}
+{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume_max.dialog", "text": "حجم به حداکثر سطح به روز شده"}
+{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume_max_already.dialog", "text": "حجم در حال حاضر به حداکثر سطح تنظیم شده است"}
+{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume_set_percent.dialog", "text": "حجم تغییر به {level} درصد"}
+{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume_set_percent.dialog", "text": "حجم تعیین شده به {level} درصد"}
+{"lang": "fa-IR", "skill": "ovos-skill-volume", "dialog": "volume_set_percent.dialog", "text": "حجم به روز شده به {level} درصد"}

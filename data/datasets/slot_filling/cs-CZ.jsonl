@@ -329,7 +329,7 @@
 {"lang": "cs-CZ", "skill": "ovos-ocp-audio-plugin", "intent": "video.intent", "template": "hrát {query} video", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "cs-CZ", "skill": "ovos-ocp-audio-plugin", "intent": "video.intent", "template": "hrát video {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "cs-CZ", "skill": "ovos-ocp-audio-plugin", "intent": "video.intent", "template": "hrát {query} s video", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "přidej (položky|věci) do [mého] seznamu [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "přidej (položky|věci) do [mého] seznamu [{list_name}]", "slots": ["list_name"], "entity_values": {"list_name": ["todo", "úkolový", "úkolovém", "úkolového"]}}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "ChangeMediaProperties.intent", "template": "změň můj {schedkind} tak, aby byl slyšitelný", "slots": ["schedkind"], "entity_values": {"schedkind": []}}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "ChangeMediaProperties.intent", "template": "uprav další {schedkind}, aby přehrával {mediakind}", "slots": ["schedkind", "mediakind"], "entity_values": {"schedkind": [], "mediakind": []}}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "ChangeMediaProperties.intent", "template": "nastav {schedkind}, aby přehrával {mediaform}", "slots": ["schedkind", "mediaform"], "entity_values": {"schedkind": [], "mediaform": []}}
@@ -359,8 +359,8 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "CreateAlarmAlt.intent", "template": "(vzbuď|probuď) (mě|nás) [v {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "(vytvoř|přidej|naplánuj) (událost|schůzku) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "nová (událost|schůzka) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
-{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "(vytvoř|udělej|přidej) [nový] seznam [s názvem {name}]", "slots": ["name"], "entity_values": {"name": []}}
-{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "nový seznam [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "(vytvoř|udělej|přidej) [nový] seznam [s názvem {list_name}]", "slots": ["list_name"], "entity_values": {"list_name": ["todo", "úkolový", "úkolovém", "úkolového"]}}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "nový seznam [{list_name}]", "slots": ["list_name"], "entity_values": {"list_name": ["todo", "úkolový", "úkolovém", "úkolového"]}}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "(nastav|vytvoř|přidej) [nové] připomenutí [{reminder}] [v {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "nové připomenutí [{reminder}]", "slots": ["reminder"], "entity_values": {"reminder": []}}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "připomeň (mi|nám) [{reminder}] [v {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
@@ -373,10 +373,13 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "DAVSync.intent", "template": "nahraj můj {davkind}", "slots": ["davkind"], "entity_values": {"davkind": []}}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "DAVSync.intent", "template": "synchronizuj všechny moje {davkind}", "slots": ["davkind"], "entity_values": {"davkind": []}}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "DAVSync.intent", "template": "synchronizuj {davkind} a {davkind2}", "slots": ["davkind", "davkind2"], "entity_values": {"davkind": [], "davkind2": []}}
-{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(smaž|odstraň) [můj] seznam [{name}]", "slots": ["name"], "entity_values": {"name": []}}
-{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "DeleteListEntries.intent", "template": "(smaž|odstraň) (položky|všechno) (z|ze) [mého] seznamu [{name}]", "slots": ["name"], "entity_values": {"name": []}}
-{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(jaké položky|co) (je|jsou) na [mém] seznamu [{name}]", "slots": ["name"], "entity_values": {"name": []}}
-{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "QueryListEntries.intent", "template": "(přečti|ukaž) [mi] položky na seznamu [{name}]", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "(smaž|odstraň) [můj] seznam [{list_name}]", "slots": ["list_name"], "entity_values": {"list_name": ["todo", "úkolový", "úkolovém", "úkolového"]}}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "delete_list_entries.intent", "template": "(smaž|odstraň) (položky|všechno) (z|ze) [mého] seznamu [{list_name}]", "slots": ["list_name"], "entity_values": {"list_name": ["todo", "úkolový", "úkolovém", "úkolového"]}}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "delete_list_entries.intent", "template": "(smaž|vymaž) [můj] {list_name} seznam", "slots": ["list_name"], "entity_values": {"list_name": ["todo", "úkolový", "úkolovém", "úkolového"]}}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "delete_list_entries.intent", "template": "(smaž|odstraň) všechno z [mého] {list_name} seznamu", "slots": ["list_name"], "entity_values": {"list_name": ["todo", "úkolový", "úkolovém", "úkolového"]}}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "query_list_entries.intent", "template": "(jaké položky|co) (je|jsou) na [mém] seznamu [{list_name}]", "slots": ["list_name"], "entity_values": {"list_name": ["todo", "úkolový", "úkolovém", "úkolového"]}}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "query_list_entries.intent", "template": "(přečti|ukaž) [mi] položky na seznamu [{list_name}]", "slots": ["list_name"], "entity_values": {"list_name": ["todo", "úkolový", "úkolovém", "úkolového"]}}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "intent": "query_list_entries.intent", "template": "co (je|mám) na [mém] {list_name} seznamu", "slots": ["list_name"], "entity_values": {"list_name": ["todo", "úkolový", "úkolovém", "úkolového"]}}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "jaké je dnes datum v {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "intent": "time_until.intent", "template": "kolik času zbývá do {date} [prosím]", "slots": ["date"], "entity_values": {"date": []}}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "intent": "time_until.intent", "template": "za jak dlouho bude {date}", "slots": ["date"], "entity_values": {"date": []}}
