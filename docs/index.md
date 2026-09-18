@@ -100,6 +100,43 @@ dataset repo on every run, once the repository has an `HF_TOKEN` Actions
 secret configured with write access to that dataset. Without the secret the
 step is skipped and the Hub copy is left as it was last published.
 
+### Machine-translated gap fill
+
+[`OpenVoiceOS/ovos-localize-intents-translated`](https://huggingface.co/datasets/OpenVoiceOS/ovos-localize-intents-translated)
+holds the `.intent` patterns a language has no human translation for,
+machine-translated from `en-US`. It has the same `lang,domain,intent,sentence`
+schema as the flat CSV of `ovos-localize-intents`.
+
+It never repeats an intent the human dataset already covers for that
+language.
+
+`scripts/fill_intents_translated.py` builds it:
+
+1. Read `data/skills/*.json`. An `.intent` file with `en-US` lines and no
+   lines for a target locale is a gap.
+2. Translate each `en-US` template line with `scripts/translate_linguonnx.py`
+   over [linguonnx](https://github.com/TigreGotico/linguonnx): every
+   `{slot}` is masked and restored by position, every `(a|b)` alternative and
+   `[optional]` word is translated on its own, and degenerate output is
+   dropped. A dropped line is never replaced by the English source.
+3. Expand the translated templates with the same bracket expansion the
+   classification corpus uses.
+4. Checkpoint per intent under `--state-dir`, so a killed run resumes.
+
+`--status` prints the gap counts per locale without loading a model.
+`--export --out DIR` writes the CSV and a `manifest.json` with the counts in
+and out per locale.
+
+```bash
+python scripts/fill_intents_translated.py --published ovos_localize_intents_translated.csv \
+    --state-dir ~/tmp/fill-state --lang de-DE
+python scripts/fill_intents_translated.py --published ovos_localize_intents_translated.csv \
+    --state-dir ~/tmp/fill-state --export --out ~/tmp/staged
+```
+
+The output is machine translation. It is not a substitute for a native
+speaker's review, and a correction goes through the normal submission flow.
+
 ## Data Refresh
 
 Data refreshes automatically in three ways:

@@ -59,6 +59,15 @@ python -m http.server 8000
 | `data/validation.json` | Aggregated validation results |
 | `data/skills/{id}.json` | Per-skill detail (entries, context cards, handler source, edit URLs) |
 | `data/dataset.tsv` | Unified intent/dialog/voc dataset for ML training |
+| `data/datasets/` | JSONL training corpora, one file per language and task (see [docs/index.md](docs/index.md#open-data-ml-datasets)) |
+
+The corpora are published daily to
+[`OpenVoiceOS/ovos-localize-intents`](https://huggingface.co/datasets/OpenVoiceOS/ovos-localize-intents)
+on the Hugging Face Hub. A second dataset,
+[`OpenVoiceOS/ovos-localize-intents-translated`](https://huggingface.co/datasets/OpenVoiceOS/ovos-localize-intents-translated),
+fills the intents a language has no human translation for with machine
+translation from `scripts/fill_intents_translated.py`. It is training data,
+not an official translation.
 
 ## CI integration
 
