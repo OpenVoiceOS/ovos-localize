@@ -5221,6 +5221,20 @@
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "new alarm with {mediakind}", "slots": ["mediakind"], "entity_values": {"mediakind": ["music", "radio", "news", "podcast", "podcasts", "audiobook", "audiobooks", "video", "audio"]}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "new alarm that plays {mediakind}", "slots": ["mediakind"], "entity_values": {"mediakind": ["music", "radio", "news", "podcast", "podcasts", "audiobook", "audiobooks", "video", "audio"]}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "new alarm playing {mediakind}", "slots": ["mediakind"], "entity_values": {"mediakind": ["music", "radio", "news", "podcast", "podcasts", "audiobook", "audiobooks", "video", "audio"]}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "please set an alarm for {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "can you set an alarm for {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "could you set an alarm for {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "would you create an alarm for {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "i need an alarm for {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "i need an alarm set for {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "i want an alarm for {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "let's set an alarm for {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "put an alarm on for {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "give me an alarm for {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "turn on an alarm for {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "set my alarm for {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "set the alarm for {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "i'd like an alarm set for {time}", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "wake (me|us) [up] [at {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "(could|would|can) you wake (me|us) [up] [at {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "wake (me|us) [up] in {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
@@ -5242,6 +5256,29 @@
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "(create|add|schedule) (an|a) (event|appointment) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "new (event|appointment) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "i have (an|a) [work] (event|appointment) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "create an event for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "schedule an appointment for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "please schedule an appointment for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "can you create an event for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "could you add an event for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "would you set up an appointment for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "i need to schedule an appointment for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "i need to create an event for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "i want to add an appointment for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "let's create an event for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "put an event on my calendar for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "put an appointment on the calendar for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "add an event to my calendar for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "add an appointment for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "make an appointment for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "make an event for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "give me an event for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "set up an event for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "set up an appointment for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "book an appointment for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "i'd like to schedule an appointment for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "new appointment for {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "i have a new appointment for {event}", "slots": ["event"], "entity_values": {"event": []}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_list.intent", "template": "(create|make|add|start) a [new] list [called {list_name}]", "slots": ["list_name"], "entity_values": {"list_name": ["todo", "to do", "shopping", "groceries"]}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_list.intent", "template": "new list [called {list_name}]", "slots": ["list_name"], "entity_values": {"list_name": ["todo", "to do", "shopping", "groceries"]}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_list.intent", "template": "(create|make|add|start) a [new] {list_name} list", "slots": ["list_name"], "entity_values": {"list_name": ["todo", "to do", "shopping", "groceries"]}}
@@ -5250,12 +5287,49 @@
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "remind (me|us) [to {reminder}] [at {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "tell me to {reminder} [at {time}]", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "remind me in {duration} [to {reminder}]", "slots": ["duration", "reminder"], "entity_values": {"duration": [], "reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "please set a reminder to {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "can you set a reminder to {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "can you remind me to {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "could you remind me to {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "would you remind me to {reminder} at {time}", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "i need a reminder to {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "i need to be reminded to {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "i want a reminder to {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "let's set a reminder to {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "put a reminder on to {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "make a reminder for {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "give me a reminder to {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "i'd like a reminder to {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "remind me about {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "remind me tomorrow to {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "remind me later to {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "set me a reminder to {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "set up a reminder to {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "start a reminder to {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "don't let me forget to {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "(set|create|start|add) a (timer|countdown) [for {duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "new timer [for {duration}]", "slots": ["duration"], "entity_values": {"duration": []}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "(set|start|make) a {duration} timer", "slots": ["duration"], "entity_values": {"duration": []}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "(set|put) timer [for] {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "timer [for] {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "in {duration} let me know", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "please start a timer for {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "i need a timer for {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "can you start a timer for {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "can you set a timer for {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "would you start a timer for {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "let's start a timer for {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "set me a timer for {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "set a timer for {duration} please", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "put a {duration} timer on", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "put on a timer for {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "start a {duration} countdown", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "start counting down from {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "i want a timer for {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "give me a timer for {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "make me a timer for {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "kick off a timer for {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "i'd like to set a timer for {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "dav_sync.intent", "template": "(could|would|can) you (sync|synchronize|synchronise) the {davkind}", "slots": ["davkind"], "entity_values": {"davkind": ["calendar", "calendars", "event", "events", "reminder", "reminders"]}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "dav_sync.intent", "template": "(could|would|can) you (sync|synchronize|synchronise) my {davkind}", "slots": ["davkind"], "entity_values": {"davkind": ["calendar", "calendars", "event", "events", "reminder", "reminders"]}}
 {"lang": "en-US", "skill": "ovos-skill-alerts", "intent": "dav_sync.intent", "template": "(sync|synchronize|synchronise|download|load|upload|refresh) {davkind} now", "slots": ["davkind"], "entity_values": {"davkind": ["calendar", "calendars", "event", "events", "reminder", "reminders"]}}
@@ -6050,14 +6124,14 @@
 {"lang": "en-US", "skill": "ovos-skill-sound-like", "intent": "sound_like.intent", "template": "what sound does a {subject} make", "slots": ["subject"], "entity_values": {"subject": []}}
 {"lang": "en-US", "skill": "ovos-skill-sound-like", "intent": "sound_like.intent", "template": "play a {subject} sound", "slots": ["subject"], "entity_values": {"subject": []}}
 {"lang": "en-US", "skill": "ovos-skill-sound-like", "intent": "sound_like.intent", "template": "play the sound of a {subject}", "slots": ["subject"], "entity_values": {"subject": []}}
-{"lang": "en-US", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "(how do you|how to|how would i) spell [(out|word|the word)] {word} [letter by letter] [for me]", "slots": ["word"], "entity_values": {"word": []}}
-{"lang": "en-US", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "(can|could|would) you spell [(out|word|the word)] {word} [letter by letter] [for me]", "slots": ["word"], "entity_values": {"word": []}}
-{"lang": "en-US", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "spell [(out|word|the word)] {word} [letter by letter] [for me]", "slots": ["word"], "entity_values": {"word": []}}
-{"lang": "en-US", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "how (is|are) {word} spelled [letter by letter]", "slots": ["word"], "entity_values": {"word": []}}
-{"lang": "en-US", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "[can you] (what is|what's|what) the spelling of {word}", "slots": ["word"], "entity_values": {"word": []}}
-{"lang": "en-US", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "[(can|could|would) you] (tell me|give me) the spelling of {word}", "slots": ["word"], "entity_values": {"word": []}}
-{"lang": "en-US", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "[the] spelling of [the word] {word}", "slots": ["word"], "entity_values": {"word": []}}
-{"lang": "en-US", "skill": "ovos-skill-spelling", "intent": "Spell.intent", "template": "{word} how do you spell (that|it)", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "intent": "spell.intent", "template": "(how do you|how to|how would i) spell [(out|word|the word)] {word} [letter by letter] [for me]", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "intent": "spell.intent", "template": "(can|could|would) you spell [(out|word|the word)] {word} [letter by letter] [for me]", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "intent": "spell.intent", "template": "spell [(out|word|the word)] {word} [letter by letter] [for me]", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "intent": "spell.intent", "template": "how (is|are) {word} spelled [letter by letter]", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "intent": "spell.intent", "template": "[can you] (what is|what's|what) the spelling of {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "intent": "spell.intent", "template": "[(can|could|would) you] (tell me|give me) the spelling of {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "intent": "spell.intent", "template": "[the] spelling of [the word] {word}", "slots": ["word"], "entity_values": {"word": []}}
+{"lang": "en-US", "skill": "ovos-skill-spelling", "intent": "spell.intent", "template": "{word} how do you spell (that|it)", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "en-US", "skill": "ovos-skill-tuning-fork", "intent": "give_note.intent", "template": "give me an {note}", "slots": ["note"], "entity_values": {"note": []}}
 {"lang": "en-US", "skill": "ovos-skill-tuning-fork", "intent": "give_note.intent", "template": "give me a {note}", "slots": ["note"], "entity_values": {"note": []}}
 {"lang": "en-US", "skill": "ovos-skill-tuning-fork", "intent": "give_note.intent", "template": "play an {note}", "slots": ["note"], "entity_values": {"note": []}}
