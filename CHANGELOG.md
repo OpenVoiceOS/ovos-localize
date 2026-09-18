@@ -64,15 +64,15 @@
 
 ## [0.1.0a11](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a11) (2026-08-26)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a9...0.1.0a11)
-
-## [0.1.0a9](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a9) (2026-08-26)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a10...0.1.0a9)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a10...0.1.0a11)
 
 ## [0.1.0a10](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a10) (2026-08-26)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a8...0.1.0a10)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a9...0.1.0a10)
+
+## [0.1.0a9](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a9) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a8...0.1.0a9)
 
 ## [0.1.0a8](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a8) (2026-08-26)
 
@@ -174,8 +174,6 @@
 - feat: add TigreGotico/ovos-transcription-validator-plugin to skills.txt [\#127](https://github.com/OpenVoiceOS/ovos-localize/pull/127) ([github-actions[bot]](https://github.com/apps/github-actions))
 - feat: OscillateLabsLLC skills [\#26](https://github.com/OpenVoiceOS/ovos-localize/pull/26) ([mikejgray](https://github.com/mikejgray))
 - feat\(i18n\): enable pt-AO \(Angolan Portuguese\) [\#25](https://github.com/OpenVoiceOS/ovos-localize/pull/25) ([github-actions[bot]](https://github.com/apps/github-actions))
-- feat\(i18n\): enable an \(Aragonese\) [\#20](https://github.com/OpenVoiceOS/ovos-localize/pull/20) ([github-actions[bot]](https://github.com/apps/github-actions))
-- feat\(i18n\): enable ast \(Asturian\) [\#19](https://github.com/OpenVoiceOS/ovos-localize/pull/19) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 
 
