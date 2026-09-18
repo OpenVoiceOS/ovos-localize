@@ -42,6 +42,12 @@ from ovos_localize.bracket_expansion import (  # noqa: E402
 )
 from translate_linguonnx import _translate_line  # noqa: E402
 
+try:
+    from linguonnx.limits import DecodeError
+except ImportError:  # tests run without linguonnx; the fake raises this one
+    class DecodeError(RuntimeError):
+        """The model produced no visible output for one input."""
+
 LOG = logging.getLogger("fill_intents_translated")
 
 TARGET_LOCALES = [
@@ -116,6 +122,7 @@ class State:
         """
         if not self.rows.exists():
             return
+        self._heal_truncated_tail()
         keys = set(self.data["done"])
         kept, dropped = [], 0
         with self.rows.open(encoding="utf-8") as f:
@@ -130,6 +137,34 @@ class State:
             tmp = self.rows.with_suffix(".tmp")
             tmp.write_text("".join(kept), encoding="utf-8")
             os.replace(tmp, self.rows)
+
+    def _heal_truncated_tail(self) -> None:
+        """Cut a half-written last line: what a kill mid-write leaves.
+
+        Only the tail can be cut; every earlier line was written whole. A
+        bad line before the tail is real corruption and still raises.
+        """
+        raw = self.rows.read_bytes()
+        if not raw:
+            return
+        body, _, tail = raw.rpartition(b"\n")
+        if not tail:
+            # Ends in a newline: the last line is complete, or is a blank
+            # line, which json.loads rejects; check the last real line.
+            body, _, tail = body.rpartition(b"\n")
+            tail_len = len(tail) + 1
+        else:
+            tail_len = len(tail)
+        try:
+            json.loads(tail)
+            return
+        except json.JSONDecodeError:
+            pass
+        LOG.warning("%s: truncated last line dropped (%d bytes); its pair is redone",
+                    self.lang, tail_len)
+        tmp = self.rows.with_suffix(".tmp")
+        tmp.write_bytes(raw[: len(raw) - tail_len])
+        os.replace(tmp, self.rows)
 
     def key(self, skill: str, intent: str) -> str:
         return f"{skill}\t{intent}"
@@ -223,9 +258,19 @@ def run_locale(tx, lang, sources, remaining, state: State, log_every=25):
     t0 = time.time()
     for i, (skill, intent) in enumerate(todo, 1):
         lines = sources[(skill, intent)]["lines"]
-        out_lines, reasons = [], Counter()
+        out_lines, reasons, needs_manual = [], Counter(), []
         for line in lines:
-            translated, reason = _translate_line(translate_fn, line, "en", tgt)
+            try:
+                translated, reason = _translate_line(translate_fn, line, "en", tgt)
+            except DecodeError as exc:
+                # One input the model cannot decode (special tokens only)
+                # stops one template, not the locale. The template is
+                # recorded for a human to translate.
+                LOG.warning("%s %s/%s: decode error on %r: %s; needs manual translation",
+                            lang, skill, intent, line, exc)
+                needs_manual.append({"template": line, "error": str(exc)})
+                reasons["decode_error"] += 1
+                continue
             if translated is not None:
                 out_lines.append(translated)
             else:
@@ -238,6 +283,7 @@ def run_locale(tx, lang, sources, remaining, state: State, log_every=25):
             "dropped": dict(reasons),
             "sentences_out": len(rows),
             "sentences_en": len(expand(lines)),
+            "needs_manual": needs_manual,
         }
         state.commit(skill, intent, rows, stats)
         if i % log_every == 0 or i == len(todo):
@@ -255,6 +301,8 @@ def locale_summary(state: State) -> dict:
         "sentences_en": sum(d["sentences_en"] for d in done.values()),
         "sentences_out": sum(d["sentences_out"] for d in done.values()),
         "intents_empty": sum(1 for d in done.values() if d["sentences_out"] == 0),
+        # Older checkpoints predate the key.
+        "templates_needs_manual": sum(len(d.get("needs_manual", ())) for d in done.values()),
     }
 
 
@@ -307,14 +355,16 @@ def main(argv=None):
     with csv_path.open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(CSV_COLUMNS)
+        # A row is kept only while its (locale, skill, intent) is still a
+        # gap in the current tree. A row whose intent now has a human
+        # locale, or whose intent left en-US, is dropped: the human rows
+        # ship in ovos-localize-intents, and a stale intent trains nothing.
+        # The same filter applies to published rows and to rows this
+        # driver committed: a human translation can land mid-run.
+        keep = {lang: set(table[lang]["_remaining"]) | {k for k in table[lang]["_gaps"]}
+                for lang in locales}
+        n_new_dropped = 0
         if args.published:
-            # A published row is kept only while its (locale, skill, intent)
-            # is still a gap in the current tree. A row whose intent now has
-            # a human locale, or whose intent left en-US, is dropped: the
-            # human rows ship in ovos-localize-intents, and a stale intent
-            # trains nothing.
-            keep = {lang: set(table[lang]["_remaining"]) | {k for k in table[lang]["_gaps"]}
-                    for lang in locales}
             with Path(args.published).open(newline="", encoding="utf-8") as pf:
                 for row in csv.DictReader(pf):
                     if (row["domain"], row["intent"]) in keep.get(row["lang"], ()):
@@ -323,17 +373,22 @@ def main(argv=None):
         for lang in locales:
             st = State(state_dir, lang)
             rows = st.committed_rows()
-            for r in rows:
+            kept = [r for r in rows if (r["domain"], r["intent"]) in keep[lang]]
+            for r in kept:
                 w.writerow([r[c] for c in CSV_COLUMNS])
-            n_new += len(rows)
+            n_new += len(kept)
+            n_new_dropped += len(rows) - len(kept)
             t = {k: v for k, v in table[lang].items() if not k.startswith("_")}
             t.update(locale_summary(st))
+            t["new_rows_superseded"] = len(rows) - len(kept)
             t["remaining_after_run"] = t["remaining_intents"] - t["intents_filled"]
             manifest["locales"][lang] = t
     manifest["source_dev_sha"] = os.popen(f"git -C {REPO_ROOT} rev-parse HEAD").read().strip()
-    manifest["totals"] = {"published_rows_kept": n_pub, "new_rows": n_new, "rows": n_pub + n_new}
+    manifest["totals"] = {"published_rows_kept": n_pub, "new_rows": n_new,
+                          "new_rows_superseded": n_new_dropped, "rows": n_pub + n_new}
     (out / "manifest.json").write_text(json.dumps(manifest, indent=1, ensure_ascii=False), encoding="utf-8")
-    print(f"wrote {csv_path} ({n_pub} published + {n_new} new rows) and manifest.json")
+    print(f"wrote {csv_path} ({n_pub} published + {n_new} new rows, "
+          f"{n_new_dropped} new rows superseded by a human locale) and manifest.json")
     return 0
 
 

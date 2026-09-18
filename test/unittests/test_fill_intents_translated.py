@@ -6,6 +6,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 
 from fill_intents_translated import (  # noqa: E402
+    DecodeError,
     State,
     expand,
     load_published,
@@ -47,6 +48,19 @@ class UpperTranslator:
 class NoRouteTranslator(UpperTranslator):
     def route(self, src, tgt):
         raise RuntimeError(f"no route {src}->{tgt}")
+
+
+class DecodeErrorOnTranslator(UpperTranslator):
+    """Raises DecodeError on one input, the way mt-hitz-en-eu-int8 did on eu-ES."""
+
+    def __init__(self, bad):
+        super().__init__()
+        self.bad = bad
+
+    def translate(self, text, src=None, tgt=None):
+        if text == self.bad:
+            raise DecodeError("model produced no visible output, only special tokens")
+        return super().translate(text, src=src, tgt=tgt)
 
 
 def _skill(path, skill_id, files):
@@ -181,6 +195,55 @@ def test_half_written_intent_is_redone(tmp_path):
     assert "stale" not in state.rows.read_text(encoding="utf-8")
 
 
+def test_truncated_last_line_is_cut_and_the_pair_redone(tmp_path, caplog):
+    src = load_sources(_skills_dir(tmp_path))
+    state = State(tmp_path / "state", "fr-FR")
+    run_locale(UpperTranslator(), "fr-FR", src, [("skill-b", "bye.intent")], state)
+    good = state.rows.read_text(encoding="utf-8")
+    # A kill mid-write of the next pair's row: a valid file followed by a cut line.
+    with state.rows.open("a", encoding="utf-8") as f:
+        f.write('{"lang": "fr-FR", "domain": "skill-a", "intent": "time.inte')
+    with caplog.at_level("WARNING"):
+        state2 = State(tmp_path / "state", "fr-FR")
+    assert "truncated last line dropped" in caplog.text
+    assert state2.rows.read_text(encoding="utf-8") == good
+    assert [r["sentence"] for r in state2.committed_rows()] == ["tr goodbye"]
+    # A third load is clean: the heal is on disk, not only in memory.
+    State(tmp_path / "state", "fr-FR")
+    run_locale(UpperTranslator(), "fr-FR", src, [("skill-a", "time.intent")], state2)
+    assert len(state2.committed_rows()) == 2
+
+
+def test_bad_line_before_the_tail_still_raises(tmp_path):
+    (tmp_path / "state").mkdir()
+    (tmp_path / "state" / "fr-FR.jsonl").write_text(
+        '{"lang": "fr-FR", "domain": "skill-b", "intent": "bye.intent", "sen\n'
+        + json.dumps({"lang": "fr-FR", "domain": "skill-b",
+                      "intent": "bye.intent", "sentence": "ok"}) + "\n", encoding="utf-8")
+    import pytest
+    with pytest.raises(json.JSONDecodeError):
+        State(tmp_path / "state", "fr-FR")
+
+
+def test_decode_error_marks_the_template_needs_manual_and_continues(tmp_path, caplog):
+    src = load_sources(_skills_dir(tmp_path))
+    state = State(tmp_path / "state", "eu-ES")
+    tx = DecodeErrorOnTranslator(bad="hey")
+    remaining = [("skill-a", "hello.intent"), ("skill-b", "bye.intent")]
+    with caplog.at_level("WARNING"):
+        assert run_locale(tx, "eu-ES", src, remaining, state) is True
+    assert "needs manual translation" in caplog.text
+    # The other template of the same intent and the next intent both went through.
+    assert [r["sentence"] for r in state.committed_rows()] == ["tr hello", "tr goodbye"]
+    stats = state.data["done"][state.key("skill-a", "hello.intent")]
+    assert stats["dropped"] == {"decode_error": 1}
+    assert stats["needs_manual"] == [
+        {"template": "(hi|hey) there",
+         "error": "model produced no visible output, only special tokens"},
+    ]
+    assert locale_summary(state)["templates_needs_manual"] == 1
+
+
 def test_duplicate_copies_of_a_pair_collapse_on_read(tmp_path):
     src = load_sources(_skills_dir(tmp_path))
     state = State(tmp_path / "state", "fr-FR")
@@ -227,13 +290,38 @@ def test_export_writes_csv_and_manifest_and_drops_stale_published_rows(tmp_path,
         ("bye.intent", "tr goodbye"),
     ]
     manifest = json.loads((out / "manifest.json").read_text(encoding="utf-8"))
-    assert manifest["totals"] == {"published_rows_kept": 1, "new_rows": 1, "rows": 2}
+    assert manifest["totals"] == {"published_rows_kept": 1, "new_rows": 1,
+                                  "new_rows_superseded": 0, "rows": 2}
     de = manifest["locales"]["de-DE"]
     assert de["published_rows_superseded"] == 1
     assert de["published_rows_stale"] == 1
     assert de["intents_filled"] == 1
     assert de["remaining_after_run"] == 0
     assert "_remaining" not in de
+
+
+def test_export_drops_committed_rows_a_human_translation_superseded(tmp_path):
+    skills = _skills_dir(tmp_path)
+    state_dir = tmp_path / "state"
+    src = load_sources(skills)
+    state = State(state_dir, "de-DE")
+    run_locale(UpperTranslator(), "de-DE", src, [("skill-a", "time.intent"), ("skill-b", "bye.intent")], state)
+    # A human de-DE translation of time.intent lands after the MT rows were committed.
+    _skill(skills / "a.json", "skill-a", {
+        "hello.intent": {"en-US": ["hello", "(hi|hey) there"], "de-DE": ["hallo"]},
+        "time.intent": {"en-US": ["what time is it in {location}"], "de-DE": ["wie spät ist es in {location}"]},
+    })
+    out = tmp_path / "out"
+    rc = main(["--skills-dir", str(skills), "--state-dir", str(state_dir),
+               "--lang", "de-DE", "--export", "--out", str(out)])
+    assert rc == 0
+    with (out / "ovos_localize_intents_translated.csv").open(newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+    assert [(r["intent"], r["sentence"]) for r in rows] == [("bye.intent", "tr goodbye")]
+    manifest = json.loads((out / "manifest.json").read_text(encoding="utf-8"))
+    assert manifest["totals"] == {"published_rows_kept": 0, "new_rows": 1,
+                                  "new_rows_superseded": 1, "rows": 1}
+    assert manifest["locales"]["de-DE"]["new_rows_superseded"] == 1
 
 
 def test_status_prints_the_plan_without_a_translator(tmp_path, capsys):
