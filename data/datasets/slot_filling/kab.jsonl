@@ -10,64 +10,64 @@
 {"lang": "kab", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "(anwa|anta) i yuran {book}", "slots": ["book"], "entity_values": {"book": []}}
 {"lang": "kab", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "(anwa|anta) id amaru n {book}", "slots": ["book"], "entity_values": {"book": []}}
 {"lang": "kab", "skill": "ovos-ddg-solver-plugin", "intent": "author.intent", "template": "{book} anwa i t-yuran", "slots": ["book"], "entity_values": {"book": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "rnu (iferdisen|inekcamen|tiɣawsiwin) ɣer tebdart[-iw|-inu] n {list_name}", "slots": ["list_name"], "entity_values": {"list_name": ["twuriwin"]}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "(snulfu-d|rnu) tabdart n (iferdisen|inekcamen) [{items}]", "slots": ["items"], "entity_values": {"items": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "AddListSubitems.intent", "template": "rnu {items} ar tebdart(-iw|-inu) {list_name}", "slots": ["items", "list_name"], "entity_values": {"items": [], "list_name": ["twuriwin"]}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CancelAlert.intent", "template": "sfeḍ {alertkind}-inu", "slots": ["alertkind"], "entity_values": {"alertkind": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CancelAlert.intent", "template": "kkes akk {alertkind}-inu", "slots": ["alertkind"], "entity_values": {"alertkind": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CancelAlert.intent", "template": "sfeḍ {alertkind} n {name}", "slots": ["alertkind", "name"], "entity_values": {"alertkind": [], "name": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CancelAlert.intent", "template": "kkes {alertkind}-inu akked {alertkind2}-inu", "slots": ["alertkind", "alertkind2"], "entity_values": {"alertkind": [], "alertkind2": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CancelAlert.intent", "template": "sfeḍ akk tabdart n {alertkind}-inu", "slots": ["alertkind"], "entity_values": {"alertkind": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "ChangeMediaProperties.intent", "template": "err {schedkind}-inu ad yili yettwasel", "slots": ["schedkind"], "entity_values": {"schedkind": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "ChangeMediaProperties.intent", "template": "beddel {schedkind} i d-iteddun ad yaseqdec {mediaform}", "slots": ["schedkind", "mediaform"], "entity_values": {"schedkind": [], "mediaform": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "ChangeMediaProperties.intent", "template": "beddel imesli n {schedkind}-inu ɣer {mediakind}", "slots": ["schedkind", "mediakind"], "entity_values": {"schedkind": [], "mediakind": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "ChangePriority.intent", "template": "beddel priorité n {schedkind}-inu ɣer {priority}", "slots": ["schedkind", "priority"], "entity_values": {"schedkind": [], "priority": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "ChangePriority.intent", "template": "ali priorité n {schedkind} ɣer {priority}", "slots": ["schedkind", "priority"], "entity_values": {"schedkind": [], "priority": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "ChangePriority.intent", "template": "sers priorité n {schedkind}-inu", "slots": ["schedkind"], "entity_values": {"schedkind": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "ChangeRepeat.intent", "template": "beddel ales n {schedkind}-inu ɣer yal {repeat}", "slots": ["schedkind", "repeat"], "entity_values": {"schedkind": [], "repeat": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "ChangeRepeat.intent", "template": "err {schedkind}-inu ad yales yal {repeat}", "slots": ["schedkind", "repeat"], "entity_values": {"schedkind": [], "repeat": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "ChangeRepeat.intent", "template": "beddel {schedkind} ad d-yuɣal yal {repeat}", "slots": ["schedkind", "repeat"], "entity_values": {"schedkind": [], "repeat": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "ChangeUntil.intent", "template": "beddel tallelt n {schedkind}-inu ɣer {duration}", "slots": ["schedkind", "duration"], "entity_values": {"schedkind": [], "duration": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "ChangeUntil.intent", "template": "ssiwed {schedkind}-inu alamma {duration}", "slots": ["schedkind", "duration"], "entity_values": {"schedkind": [], "duration": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "ChangeUntil.intent", "template": "err {schedkind} ad yeṭṭef {duration}", "slots": ["schedkind", "duration"], "entity_values": {"schedkind": [], "duration": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "sbedd-iyi-d alarme ɣef {time}", "slots": ["time"], "entity_values": {"time": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "rnu-yi-d alarme tamaynut ɣef {time}", "slots": ["time"], "entity_values": {"time": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CreateAlarm.intent", "template": "sbedd-iyi-d alarme s {mediakind} ɣef {time}", "slots": ["mediakind", "time"], "entity_values": {"mediakind": [], "time": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CreateAlarmAlt.intent", "template": "ssaki-yi-d ɣef {time}", "slots": ["time"], "entity_values": {"time": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CreateAlarmAlt.intent", "template": "ssaki-yi-d di {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CreateAlarmAlt.intent", "template": "ssaki-aɣ-d yal {days} ɣef {time}", "slots": ["days", "time"], "entity_values": {"days": [], "time": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "rnu-yi-d tadyant {event}", "slots": ["event"], "entity_values": {"event": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CreateEvent.intent", "template": "sɛiɣ tadyant {event}", "slots": ["event"], "entity_values": {"event": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "rnu tabdart tamaynut {list_name}", "slots": ["list_name"], "entity_values": {"list_name": ["twuriwin"]}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CreateList.intent", "template": "sbedd-iyi-d tabdart n {list_name}", "slots": ["list_name"], "entity_values": {"list_name": ["twuriwin"]}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "smektay-iyi ad {reminder} ɣef {time}", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "rnu-yi-d asmekti amaynut {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CreateReminder.intent", "template": "smektay-iyi di {duration} ad {reminder}", "slots": ["duration", "reminder"], "entity_values": {"duration": [], "reminder": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "sbedd-iyi-d timer i {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "rnu-yi-d timer amaynut i {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "CreateTimer.intent", "template": "sbedd timer {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "DAVSync.intent", "template": "tzemreḍ ad tsinkronizeḍ {davkind}", "slots": ["davkind"], "entity_values": {"davkind": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "DAVSync.intent", "template": "sinkronizi {davkind}-inu tura", "slots": ["davkind"], "entity_values": {"davkind": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "DAVSync.intent", "template": "sader {davkind}", "slots": ["davkind"], "entity_values": {"davkind": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "DAVSync.intent", "template": "sali {davkind}-inu", "slots": ["davkind"], "entity_values": {"davkind": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "DAVSync.intent", "template": "sinkronizi {davkind} akked {davkind2}", "slots": ["davkind", "davkind2"], "entity_values": {"davkind": [], "davkind2": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "kkes tabdart {list_name}", "slots": ["list_name"], "entity_values": {"list_name": ["twuriwin"]}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "DeleteList.intent", "template": "sfeḍ tabdart-inu n {list_name}", "slots": ["list_name"], "entity_values": {"list_name": ["twuriwin"]}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "ListAlerts.intent", "template": "sken-iyi-d {alertkind}-inu", "slots": ["alertkind"], "entity_values": {"alertkind": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "ListAlerts.intent", "template": "anta {alertkind} i sɛiɣ", "slots": ["alertkind"], "entity_values": {"alertkind": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "ListAlerts.intent", "template": "sken-iyi-d akk {alertkind}-inu i {timeframe}", "slots": ["alertkind", "timeframe"], "entity_values": {"alertkind": [], "timeframe": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "RescheduleAlert.intent", "template": "beddel {schedkind}-inu ɣer {time}", "slots": ["schedkind", "time"], "entity_values": {"schedkind": [], "time": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "RescheduleAlert.intent", "template": "err {schedkind} ad yili {time} deg umkan n {old}", "slots": ["schedkind", "time", "old"], "entity_values": {"schedkind": [], "time": [], "old": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "RescheduleAlert.intent", "template": "sbeɛɛed {schedkind}-inu ɣer sdat", "slots": ["schedkind"], "entity_values": {"schedkind": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "TimerStatus.intent", "template": "acḥal i d-yeqqimen deg {timerkind}-inu", "slots": ["timerkind"], "entity_values": {"timerkind": []}}
-{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "TimerStatus.intent", "template": "sken-iyi-d addad n {timerkind}-inu", "slots": ["timerkind"], "entity_values": {"timerkind": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "add_list_subitems.intent", "template": "rnu (iferdisen|inekcamen|tiɣawsiwin) ɣer tebdart[-iw|-inu] n {list_name}", "slots": ["list_name"], "entity_values": {"list_name": ["twuriwin"]}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "add_list_subitems.intent", "template": "(snulfu-d|rnu) tabdart n (iferdisen|inekcamen) [{items}]", "slots": ["items"], "entity_values": {"items": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "add_list_subitems.intent", "template": "rnu {items} ar tebdart(-iw|-inu) {list_name}", "slots": ["items", "list_name"], "entity_values": {"items": [], "list_name": ["twuriwin"]}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "cancel_alert.intent", "template": "sfeḍ {alertkind}-inu", "slots": ["alertkind"], "entity_values": {"alertkind": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "cancel_alert.intent", "template": "kkes akk {alertkind}-inu", "slots": ["alertkind"], "entity_values": {"alertkind": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "cancel_alert.intent", "template": "sfeḍ {alertkind} n {name}", "slots": ["alertkind", "name"], "entity_values": {"alertkind": [], "name": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "cancel_alert.intent", "template": "kkes {alertkind}-inu akked {alertkind2}-inu", "slots": ["alertkind", "alertkind2"], "entity_values": {"alertkind": [], "alertkind2": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "cancel_alert.intent", "template": "sfeḍ akk tabdart n {alertkind}-inu", "slots": ["alertkind"], "entity_values": {"alertkind": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "change_media_properties.intent", "template": "err {schedkind}-inu ad yili yettwasel", "slots": ["schedkind"], "entity_values": {"schedkind": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "change_media_properties.intent", "template": "beddel {schedkind} i d-iteddun ad yaseqdec {mediaform}", "slots": ["schedkind", "mediaform"], "entity_values": {"schedkind": [], "mediaform": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "change_media_properties.intent", "template": "beddel imesli n {schedkind}-inu ɣer {mediakind}", "slots": ["schedkind", "mediakind"], "entity_values": {"schedkind": [], "mediakind": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "change_priority.intent", "template": "beddel priorité n {schedkind}-inu ɣer {priority}", "slots": ["schedkind", "priority"], "entity_values": {"schedkind": [], "priority": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "change_priority.intent", "template": "ali priorité n {schedkind} ɣer {priority}", "slots": ["schedkind", "priority"], "entity_values": {"schedkind": [], "priority": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "change_priority.intent", "template": "sers priorité n {schedkind}-inu", "slots": ["schedkind"], "entity_values": {"schedkind": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "change_repeat.intent", "template": "beddel ales n {schedkind}-inu ɣer yal {repeat}", "slots": ["schedkind", "repeat"], "entity_values": {"schedkind": [], "repeat": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "change_repeat.intent", "template": "err {schedkind}-inu ad yales yal {repeat}", "slots": ["schedkind", "repeat"], "entity_values": {"schedkind": [], "repeat": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "change_repeat.intent", "template": "beddel {schedkind} ad d-yuɣal yal {repeat}", "slots": ["schedkind", "repeat"], "entity_values": {"schedkind": [], "repeat": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "change_until.intent", "template": "beddel tallelt n {schedkind}-inu ɣer {duration}", "slots": ["schedkind", "duration"], "entity_values": {"schedkind": [], "duration": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "change_until.intent", "template": "ssiwed {schedkind}-inu alamma {duration}", "slots": ["schedkind", "duration"], "entity_values": {"schedkind": [], "duration": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "change_until.intent", "template": "err {schedkind} ad yeṭṭef {duration}", "slots": ["schedkind", "duration"], "entity_values": {"schedkind": [], "duration": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "sbedd-iyi-d alarme ɣef {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "rnu-yi-d alarme tamaynut ɣef {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "sbedd-iyi-d alarme s {mediakind} ɣef {time}", "slots": ["mediakind", "time"], "entity_values": {"mediakind": [], "time": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "ssaki-yi-d ɣef {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "ssaki-yi-d di {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "ssaki-aɣ-d yal {days} ɣef {time}", "slots": ["days", "time"], "entity_values": {"days": [], "time": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "rnu-yi-d tadyant {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "sɛiɣ tadyant {event}", "slots": ["event"], "entity_values": {"event": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "create_list.intent", "template": "rnu tabdart tamaynut {list_name}", "slots": ["list_name"], "entity_values": {"list_name": ["twuriwin"]}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "create_list.intent", "template": "sbedd-iyi-d tabdart n {list_name}", "slots": ["list_name"], "entity_values": {"list_name": ["twuriwin"]}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "smektay-iyi ad {reminder} ɣef {time}", "slots": ["reminder", "time"], "entity_values": {"reminder": [], "time": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "rnu-yi-d asmekti amaynut {reminder}", "slots": ["reminder"], "entity_values": {"reminder": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "create_reminder.intent", "template": "smektay-iyi di {duration} ad {reminder}", "slots": ["duration", "reminder"], "entity_values": {"duration": [], "reminder": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "sbedd-iyi-d timer i {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "rnu-yi-d timer amaynut i {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "create_timer.intent", "template": "sbedd timer {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "dav_sync.intent", "template": "tzemreḍ ad tsinkronizeḍ {davkind}", "slots": ["davkind"], "entity_values": {"davkind": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "dav_sync.intent", "template": "sinkronizi {davkind}-inu tura", "slots": ["davkind"], "entity_values": {"davkind": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "dav_sync.intent", "template": "sader {davkind}", "slots": ["davkind"], "entity_values": {"davkind": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "dav_sync.intent", "template": "sali {davkind}-inu", "slots": ["davkind"], "entity_values": {"davkind": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "dav_sync.intent", "template": "sinkronizi {davkind} akked {davkind2}", "slots": ["davkind", "davkind2"], "entity_values": {"davkind": [], "davkind2": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "delete_list.intent", "template": "kkes tabdart {list_name}", "slots": ["list_name"], "entity_values": {"list_name": ["twuriwin"]}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "delete_list.intent", "template": "sfeḍ tabdart-inu n {list_name}", "slots": ["list_name"], "entity_values": {"list_name": ["twuriwin"]}}
 {"lang": "kab", "skill": "ovos-skill-alerts", "intent": "delete_list_entries.intent", "template": "kkes iferdisen seg tebdart n {list_name}", "slots": ["list_name"], "entity_values": {"list_name": ["twuriwin"]}}
 {"lang": "kab", "skill": "ovos-skill-alerts", "intent": "delete_list_entries.intent", "template": "sfeḍ ayen yellan deg tebdart-inu {list_name}", "slots": ["list_name"], "entity_values": {"list_name": ["twuriwin"]}}
 {"lang": "kab", "skill": "ovos-skill-alerts", "intent": "delete_list_entries.intent", "template": "kkes akk iferdisen seg tebdart {list_name}", "slots": ["list_name"], "entity_values": {"list_name": ["twuriwin"]}}
 {"lang": "kab", "skill": "ovos-skill-alerts", "intent": "delete_list_entries.intent", "template": "kkes tabdart n {list_name}-inu", "slots": ["list_name"], "entity_values": {"list_name": ["twuriwin"]}}
 {"lang": "kab", "skill": "ovos-skill-alerts", "intent": "delete_list_entries.intent", "template": "sfeḍ akk seg tebdart n {list_name}", "slots": ["list_name"], "entity_values": {"list_name": ["twuriwin"]}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "list_alerts.intent", "template": "sken-iyi-d {alertkind}-inu", "slots": ["alertkind"], "entity_values": {"alertkind": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "list_alerts.intent", "template": "anta {alertkind} i sɛiɣ", "slots": ["alertkind"], "entity_values": {"alertkind": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "list_alerts.intent", "template": "sken-iyi-d akk {alertkind}-inu i {timeframe}", "slots": ["alertkind", "timeframe"], "entity_values": {"alertkind": [], "timeframe": []}}
 {"lang": "kab", "skill": "ovos-skill-alerts", "intent": "query_list_entries.intent", "template": "anwi iferdisen yellan deg tebdart {list_name}", "slots": ["list_name"], "entity_values": {"list_name": ["twuriwin"]}}
 {"lang": "kab", "skill": "ovos-skill-alerts", "intent": "query_list_entries.intent", "template": "d acu yellan deg tebdart n {list_name}-inu", "slots": ["list_name"], "entity_values": {"list_name": ["twuriwin"]}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "reschedule_alert.intent", "template": "beddel {schedkind}-inu ɣer {time}", "slots": ["schedkind", "time"], "entity_values": {"schedkind": [], "time": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "reschedule_alert.intent", "template": "err {schedkind} ad yili {time} deg umkan n {old}", "slots": ["schedkind", "time", "old"], "entity_values": {"schedkind": [], "time": [], "old": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "reschedule_alert.intent", "template": "sbeɛɛed {schedkind}-inu ɣer sdat", "slots": ["schedkind"], "entity_values": {"schedkind": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "timer_status.intent", "template": "acḥal i d-yeqqimen deg {timerkind}-inu", "slots": ["timerkind"], "entity_values": {"timerkind": []}}
+{"lang": "kab", "skill": "ovos-skill-alerts", "intent": "timer_status.intent", "template": "sken-iyi-d addad n {timerkind}-inu", "slots": ["timerkind"], "entity_values": {"timerkind": []}}
 {"lang": "kab", "skill": "ovos-skill-application-launcher", "intent": "close.intent", "template": "mdel {application}", "slots": ["application"], "entity_values": {"application": []}}
 {"lang": "kab", "skill": "ovos-skill-application-launcher", "intent": "close.intent", "template": "ɣleq {application}", "slots": ["application"], "entity_values": {"application": []}}
 {"lang": "kab", "skill": "ovos-skill-application-launcher", "intent": "close.intent", "template": "derreɛ {application}", "slots": ["application"], "entity_values": {"application": []}}

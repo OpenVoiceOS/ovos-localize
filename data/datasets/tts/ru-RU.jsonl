@@ -108,7 +108,6 @@
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "stopwatch_delta.dialog", "text": "прошедшее время составляет {delta}"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "sunday.dialog", "text": "воскресенье"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "thursday.dialog", "text": "четверг"}
-{"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "timer_status.dialog", "text": "на таймере {name} осталось {remaining}."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "timer_status_none_active.dialog", "text": "активные таймеры отсутствуют."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "todo_item_delete_selection_intro.dialog", "text": "какой из них следует удалить?"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "tuesday.dialog", "text": "вторник"}
@@ -125,13 +124,42 @@
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "это {date}, в {num_days}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "{date}, {num_days} назад"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "это было {date}, {num_days} назад"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "сегодня {day}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "сегодняшний день — {day}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "{day}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "did_you_mean_timezone.dialog", "text": "вы имели в виду {zone_name} часовую зону?"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "extract_date_error.dialog", "text": "я не понял, о какой дате вы спрашиваете"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_no.dialog", "text": "нет, {year} не високосный год."}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_yes.dialog", "text": "да, {year} високосный год."}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_no.dialog", "text": "нет. следующим високосным годом будет {year}."}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_yes.dialog", "text": "да, {year} високосный год."}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_no.dialog", "text": "нет, {year} не будет високосным годом."}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_yes.dialog", "text": "да, {year} будет високосным годом."}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "сейчас {month}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "текущий месяц — {month}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "этот месяц — {month}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "{month}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "в настоящее время {time}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "это {time}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "{time}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "это будет {time}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_tz_not_found.dialog", "text": "я не смог найти часовой пояс для {location}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_future.dialog", "text": "{date} будет {weekday}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_past.dialog", "text": "{date} было {weekday}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "сегодня {weekday}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "сегодняшний день недели — {weekday}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_no.dialog", "text": "нет, {date} будет {actual_weekday}, а не {weekday}."}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_yes.dialog", "text": "да, {date} будет {weekday}."}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_no.dialog", "text": "нет, {date} было {actual_weekday}, а не {weekday}."}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_yes.dialog", "text": "да, {date} было {weekday}."}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_no.dialog", "text": "нет, {date} — {actual_weekday}, а не {weekday}."}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_yes.dialog", "text": "да, {date} — {weekday}."}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "сейчас {year}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "текущий год — {year}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "этот год — {year}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "сейчас {year} год"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "{year}"}
 {"lang": "ru-RU", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "я не нашёл ответа в duckduckgo."}
 {"lang": "ru-RU", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "извините, duckduckgo не вернул результатов."}
 {"lang": "ru-RU", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "duckduckgo ничего не нашёл по этому запросу."}
@@ -1950,13 +1978,15 @@
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "weekly_condition.dialog", "text": "прогноз предусматривает {condition} на {days}"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "weekly_temperature.dialog", "text": "минимумы будут между {low_min} и {low_max}, а максимумы между {high_min} и {high_max}"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "west.dialog", "text": "запад"}
-{"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "no entry found.dialog", "text": "боюсь, про это нет статьи"}
-{"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "no entry found.dialog", "text": "я не могу найти статью википедии по этой теме"}
 {"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "no_answer.dialog", "text": "я не нашёл ответа на это"}
 {"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "no_answer.dialog", "text": "я ничего не смог найти об этом"}
+{"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "no_entry_found.dialog", "text": "боюсь, про это нет статьи"}
+{"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "no_entry_found.dialog", "text": "я не могу найти статью википедии по этой теме"}
 {"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "no_query.dialog", "text": "кого или что мне найти в википедии?"}
 {"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "no_query.dialog", "text": "что мне поискать в википедии?"}
+{"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "nothing_more.dialog", "text": "это всё, что у меня есть о {title}"}
+{"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "nothing_more.dialog", "text": "это всё, что мне известно о {title} из википедии"}
 {"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "searching.dialog", "text": "пробую найти {query} в википедии"}
 {"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "searching.dialog", "text": "проверяю, что в википедии сказано про {query}"}
-{"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "thats all.dialog", "text": "это всё, что мне удалось найти"}
-{"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "thats all.dialog", "text": "это всё, что я знаю"}
+{"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "thats_all.dialog", "text": "это всё, что мне удалось найти"}
+{"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "thats_all.dialog", "text": "это всё, что я знаю"}

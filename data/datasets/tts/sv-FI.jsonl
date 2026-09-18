@@ -108,7 +108,6 @@
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "stopwatch_delta.dialog", "text": "kulunut aika on {delta}"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "sunday.dialog", "text": "sunnuntai"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "thursday.dialog", "text": "torstai"}
-{"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "timer_status.dialog", "text": "{name}-ajastinta on jäljellä {remaining}."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "timer_status_none_active.dialog", "text": "aktiivisia ajastimia ei ole."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "todo_item_delete_selection_intro.dialog", "text": "kumpi pitäisi poistaa?"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "tuesday.dialog", "text": "tiistai"}
@@ -125,13 +124,44 @@
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, {num_days} tästä lähtien"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "se oli {date}, {num_days} sitten"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "{date}, {num_days} sitten"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "det är {day}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "det är {day} idag"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "den nuvarande dagen är {day}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "idag är {day}"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "did_you_mean_timezone.dialog", "text": "tarkoititko {zone_name} aikavyöhykettä?"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "extract_date_error.dialog", "text": "jag förstod inte vilket datum du frågar om."}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_no.dialog", "text": "nej, {year} är inte ett skottår."}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_yes.dialog", "text": "ja, {year} är ett skottår."}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_no.dialog", "text": "nej, nästa skottår efter det kommer att bli {year}."}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_yes.dialog", "text": "ja, {year} är ett skottår."}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_no.dialog", "text": "nej, {year} kommer inte att bli ett skottår."}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_yes.dialog", "text": "ja, {year} kommer att bli ett skottår."}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "det är {month}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "det är {month} just nu"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "den nuvarande månaden är {month}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "denna månad är {month}"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "se on {time}"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "tällä hetkellä {time}"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time}"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "se on {time}"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "{time}"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "time_tz_not_found.dialog", "text": "en löytänyt aikavyöhykettä {location}:lle."}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_future.dialog", "text": "på {date} kommer det att vara {weekday}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_past.dialog", "text": "på {date} var det {weekday}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "det är {weekday}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "det är {weekday} idag"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "den nuvarande veckodagen är {weekday}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "idag är {weekday}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_no.dialog", "text": "nej, {date} kommer att vara {actual_weekday}, inte {weekday}."}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_yes.dialog", "text": "ja, {date} kommer att vara {weekday}."}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_no.dialog", "text": "nej, {date} var {actual_weekday}, inte {weekday}."}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_yes.dialog", "text": "ja, {date} var {weekday}."}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_no.dialog", "text": "nej, {date} är {actual_weekday}, inte {weekday}."}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_yes.dialog", "text": "ja, {date} är {weekday}."}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "det är {year}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "det aktuella året är {year}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "detta år är {year}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "vi är i {year} just nu"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "afternoon.dialog", "text": "iltapäivä"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "and.dialog", "text": "ja"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "en pääse sääennusteisiin juuri nyt."}

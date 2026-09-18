@@ -108,7 +108,6 @@
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "stopwatch_delta.dialog", "text": "az eltelt idő {delta}"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "sunday.dialog", "text": "vasárnap"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "thursday.dialog", "text": "csütörtök"}
-{"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "timer_status.dialog", "text": "a {name} időzítőből még {remaining} van hátra."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "timer_status_none_active.dialog", "text": "nincsenek aktív időzítők."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "todo_item_delete_selection_intro.dialog", "text": "melyiket kell törölnöm?"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "tuesday.dialog", "text": "kedd"}
@@ -125,13 +124,45 @@
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, {num_days} mostantól"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "ez volt {date}, {num_days} ezelőtt"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "{date}, {num_days} ezelőtt"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "{day} van"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "ma {day} van"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "a mai nap {day}"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "{day}"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "did_you_mean_timezone.dialog", "text": "a {zone_name} időzónára gondoltál?"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "extract_date_error.dialog", "text": "nem értettem, melyik dátumról kérdezel"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_no.dialog", "text": "nem, {year} nem szökőév."}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_yes.dialog", "text": "igen, {year} szökőév."}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_no.dialog", "text": "nem. a következő szökőév {year} lesz."}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_yes.dialog", "text": "igen, {year} szökőév."}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_no.dialog", "text": "nem, {year} nem lesz szökőév."}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_yes.dialog", "text": "igen, {year} szökőév lesz."}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "{month} van"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "most {month} van"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "a jelenlegi hónap {month}"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "ez a hónap {month}"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "{month}"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "jelenleg {time}"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time}"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time} van"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "ez lesz {time}"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "{time}"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "time_tz_not_found.dialog", "text": "nem találom az időzónát a következő tartózkodási helyhez: {location}"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_future.dialog", "text": "{date}-n {weekday} lesz"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_past.dialog", "text": "{date}-n {weekday} volt"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "{weekday} van"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "ma {weekday} van"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "a mai hét napja {weekday}"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_no.dialog", "text": "nem, {date}-n {actual_weekday} lesz, nem {weekday}."}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_yes.dialog", "text": "igen, {date}-n {weekday} lesz."}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_no.dialog", "text": "nem, {date}-n {actual_weekday} volt, nem {weekday}."}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_yes.dialog", "text": "igen, {date}-n {weekday} volt."}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_no.dialog", "text": "nem, {date}-n {actual_weekday} van, nem {weekday}."}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_yes.dialog", "text": "igen, {date}-n {weekday} van."}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "{year} van"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "a jelenlegi év {year}"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "ez az év {year}"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "most {year}-ban járunk"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "{year}"}
 {"lang": "hu-HU", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "nem találtam választ a duckduckgon."}
 {"lang": "hu-HU", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "sajnálom, a duckduckgo nem adott vissza eredményt."}
 {"lang": "hu-HU", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "a duckduckgo nem talált semmit erre vonatkozóan."}

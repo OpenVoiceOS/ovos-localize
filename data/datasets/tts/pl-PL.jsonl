@@ -108,7 +108,6 @@
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "stopwatch_delta.dialog", "text": "czas, który upłynął wynosi {delta}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "sunday.dialog", "text": "niedziela"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "thursday.dialog", "text": "czwartek"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "timer_status.dialog", "text": "zegar {name} ma pozostały czas {remaining}."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "timer_status_none_active.dialog", "text": "nie ma aktywnych timerów."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "todo_item_delete_selection_intro.dialog", "text": "który z nich powinienem usunąć?"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "tuesday.dialog", "text": "wtorek"}
@@ -128,13 +127,45 @@
 {"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, {num_days} dni od dzisiaj"}
 {"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "data {date} była {num_days} dni temu"}
 {"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "{date}, {num_days} dni temu"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "jest {day}"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "dziś jest {day}"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "obecny dzień to {day}"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "{day}"}
 {"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "did_you_mean_timezone.dialog", "text": "czy chodzi o strefę czasową {zone_name}?"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "extract_date_error.dialog", "text": "nie zrozumiałem, o jaką datę pytasz"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_no.dialog", "text": "nie, {year} nie jest rokiem przestępnym."}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_yes.dialog", "text": "tak, {year} jest rokiem przestępnym."}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_no.dialog", "text": "nie. następnym rokiem przestępnym będzie {year}."}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_yes.dialog", "text": "tak, {year} jest rokiem przestępnym."}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_no.dialog", "text": "nie, {year} nie będzie rokiem przestępnym."}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_yes.dialog", "text": "tak, {year} będzie rokiem przestępnym."}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "jest {month}"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "teraz jest {month}"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "obecny miesiąc to {month}"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "ten miesiąc to {month}"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "{month}"}
 {"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "jest {time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "obecnie {time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "to będzie {time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "{time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "time_tz_not_found.dialog", "text": "nie udało mi się znaleźć strefy czasowej dla {location}"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_future.dialog", "text": "{date} będzie {weekday}"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_past.dialog", "text": "{date} było {weekday}"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "jest {weekday}"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "dziś jest {weekday}"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "obecny dzień tygodnia to {weekday}"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_no.dialog", "text": "nie, {date} będzie {actual_weekday}, a nie {weekday}."}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_yes.dialog", "text": "tak, {date} będzie {weekday}."}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_no.dialog", "text": "nie, {date} było {actual_weekday}, a nie {weekday}."}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_yes.dialog", "text": "tak, {date} było {weekday}."}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_no.dialog", "text": "nie, {date} jest {actual_weekday}, a nie {weekday}."}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_yes.dialog", "text": "tak, {date} jest {weekday}."}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "jest {year}"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "obecny rok to {year}"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "ten rok to {year}"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "mamy teraz {year} rok"}
+{"lang": "pl-PL", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "{year}"}
 {"lang": "pl-PL", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "nie znalazłem odpowiedzi w duckduckgo."}
 {"lang": "pl-PL", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "przepraszam, duckduckgo nie zwrócił żadnego wyniku."}
 {"lang": "pl-PL", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "nie znalazłem niczego w duckduckgo na ten temat."}
@@ -1882,8 +1913,6 @@
 {"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "no_answer.dialog", "text": "nie udało mi się nic na ten temat znaleźć"}
 {"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "no_query.dialog", "text": "kogo lub co chciałbyś, żebym zobaczyła na wikipedii?"}
 {"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "no_query.dialog", "text": "czego mam szukać na wikipedii?"}
-{"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "nothing.more.dialog", "text": "to wszystko, co mam na {title}"}
-{"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "nothing.more.dialog", "text": "to jest wszystko, co wikipedia daje mi na temat {title}"}
 {"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "nothing_more.dialog", "text": "to wszystko, co mam na {title}"}
 {"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "nothing_more.dialog", "text": "to jest wszystko, co wikipedia daje mi na temat {title}"}
 {"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "searching.dialog", "text": "pozwól mi wyszukać {query} w wikipedii"}

@@ -108,7 +108,6 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "stopwatch_delta.dialog", "text": "uplynulý čas je {delta}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "sunday.dialog", "text": "neděle"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "thursday.dialog", "text": "čtvrtek"}
-{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "timer_status.dialog", "text": "do konce časovače {name} zbývá {remaining}."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "timer_status_none_active.dialog", "text": "nejsou zde žádné aktivní časovače."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "todo_item_delete_selection_intro.dialog", "text": "který z nich mám smazat?"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "tuesday.dialog", "text": "úterý"}
@@ -124,13 +123,45 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, {num_days} dní od teď"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "bylo to {date}, před {num_days} dny"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "{date}, před {num_days}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "je {day}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "dnes je {day}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "aktuální den je {day}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "{day}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "did_you_mean_timezone.dialog", "text": "myslel jste časovou zónu {zone_name}?"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "extract_date_error.dialog", "text": "nerozuměl jsem, na jaké datum se ptáte"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_no.dialog", "text": "ne, {year} není přestupný rok."}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_yes.dialog", "text": "ano, {year} je přestupný rok."}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_no.dialog", "text": "ne. dalším přestupným rokem bude {year}."}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "leap_year_either_yes.dialog", "text": "ano, {year} je přestupný rok."}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_no.dialog", "text": "ne, {year} nebude přestupný rok."}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "leap_year_next_yes.dialog", "text": "ano, {year} bude přestupný rok."}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "je {month}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "právě je {month}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "aktuální měsíc je {month}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "tento měsíc je {month}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "{month}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "je {time}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "nyní je {time}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "bude to ve {time}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "{time}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "time_tz_not_found.dialog", "text": "nenašel jsem časovou zónu pro {location}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_future.dialog", "text": "{date} bude {weekday}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_past.dialog", "text": "{date} bylo {weekday}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "je {weekday}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "dnes je {weekday}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "weekday_current.dialog", "text": "aktuální den v týdnu je {weekday}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_no.dialog", "text": "ne, {date} bude {actual_weekday}, ne {weekday}."}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_future_yes.dialog", "text": "ano, {date} bude {weekday}."}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_no.dialog", "text": "ne, {date} bylo {actual_weekday}, ne {weekday}."}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_past_yes.dialog", "text": "ano, {date} bylo {weekday}."}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_no.dialog", "text": "ne, {date} je {actual_weekday}, ne {weekday}."}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "weekday_matches_date_today_yes.dialog", "text": "ano, {date} je {weekday}."}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "je {year}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "aktuální rok je {year}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "letošní rok je {year}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "právě je rok {year}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "{year}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "na duckduckgo jsem nenašel žádnou odpověď."}
 {"lang": "cs-CZ", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "omlouvám se, duckduckgo nevrátil žádný výsledek."}
 {"lang": "cs-CZ", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "na duckduckgo jsem pro to nic nenašel."}
