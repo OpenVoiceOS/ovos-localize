@@ -285,7 +285,6 @@
 {"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "es ist {date}"}
 {"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "das datum ist {date}"}
 {"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "{date}"}
-{"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date_not_found.dialog", "text": "ich konnte das datum für dich nicht finden."}
 {"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "es ist der {date} in {num_days}"}
 {"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "es ist der {date} in {num_days} tagen von heute an"}
 {"lang": "de-DE", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, in {num_days}"}
@@ -1138,10 +1137,10 @@
 {"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "want_to_reply.dialog", "text": "möchtest du antworten?"}
 {"lang": "de-DE", "skill": "ovos-skill-intercom", "dialog": "what_to_say.dialog", "text": "was soll ich sagen?"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "dot.dialog", "text": "punkt"}
-{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "ethernet.connection.dialog", "text": "ich bin per kabel verbunden"}
-{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "ethernet.connection.dialog", "text": "ich bin per netzwerkkabel verbunden"}
-{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "ethernet.connection.dialog", "text": "ich bin mit einem kabel verbunden"}
-{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "ethernet.connection.dialog", "text": "ich bin mit einem netzwerkkabel verbunden"}
+{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "ethernet_connection.dialog", "text": "ich bin per kabel verbunden"}
+{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "ethernet_connection.dialog", "text": "ich bin per netzwerkkabel verbunden"}
+{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "ethernet_connection.dialog", "text": "ich bin mit einem kabel verbunden"}
+{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "ethernet_connection.dialog", "text": "ich bin mit einem netzwerkkabel verbunden"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "last_digits.dialog", "text": "meine ip adresse endet mit {{ digits }}"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "last_digits.dialog", "text": "meine ip endet mit {{ digits }}"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "last_digits.dialog", "text": "sie endet mit {{ digits }}"}
@@ -1160,19 +1159,19 @@
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "last_digits_device.dialog", "text": "auf {{ device }} endet meine ip mit der ziffer {{ digits }}"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "last_digits_device.dialog", "text": "auf {{ device }} endet sie mit der zahl {{ digits }}"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "last_digits_device.dialog", "text": "auf {{ device }} endet sie mit der ziffer {{ digits }}"}
-{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "my.public.ip.dialog", "text": "ihre öffentliche adresse ist {ip}"}
-{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "my.public.ip.dialog", "text": "die öffentliche ip ist {ip}"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "my_address_is.dialog", "text": "meine ip adresse ist {{ ip }}"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "my_address_is.dialog", "text": "meine ip ist {{ ip }}"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "my_address_is.dialog", "text": "sie ist {{ ip }}"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "my_address_on_x_is_y.dialog", "text": "auf {{ device }} ist meine ip adresse {{ ip }}"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "my_address_on_x_is_y.dialog", "text": "auf {{ device }} ist meine ip {{ ip }}"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "my_address_on_x_is_y.dialog", "text": "auf {{ device }} ist sie {{ ip }}"}
+{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "my_public_ip.dialog", "text": "ihre öffentliche adresse ist {ip}"}
+{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "my_public_ip.dialog", "text": "die öffentliche ip ist {ip}"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "no_network_connection.dialog", "text": "ich bin gerade nicht mit dem netzwerk verbunden"}
 {"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "no_network_connection.dialog", "text": "ich habe aktuell kein netzwerk"}
-{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "public.ip.error.dialog", "text": "ich konnte das internet nicht erreichen, um die öffentliche adresse zu überprüfen"}
-{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "wifi.signal.dialog", "text": "ihr wlan-signal liegt bei {quality}"}
-{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "wifi.signal.dialog", "text": "signalstärke {quality}"}
+{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "public_ip_error.dialog", "text": "ich konnte das internet nicht erreichen, um die öffentliche adresse zu überprüfen"}
+{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "wifi_signal_quality.dialog", "text": "ihr wlan-signal liegt bei {quality}"}
+{"lang": "de-DE", "skill": "ovos-skill-ip", "dialog": "wifi_signal_quality.dialog", "text": "signalstärke {quality}"}
 {"lang": "de-DE", "skill": "ovos-skill-iss-location", "dialog": "api_unavailable.dialog", "text": "tut mir leid, ich kann den raumstations-tracking-service nicht erreichen."}
 {"lang": "de-DE", "skill": "ovos-skill-iss-location", "dialog": "api_unavailable.dialog", "text": "ich habe probleme, die live-daten der raumstation zu bekommen, bitte versuchen sie es später noch einmal."}
 {"lang": "de-DE", "skill": "ovos-skill-iss-location", "dialog": "api_unavailable.dialog", "text": "der raumstations-tracking-service reagiert gerade nicht."}
