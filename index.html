@@ -741,6 +741,41 @@
     function escapeHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
     function filePathFromEditUrl(u) { const m = u.match(/\/edit\/[^/]+\/(.+)$/); return m ? m[1] : ''; }
 
+    /**
+     * Build the path of a resource file for a target language, from the path
+     * of the reference file the translator reads.
+     *
+     * The reference is not always English: ovos-date-parser ships de es fr it
+     * pt and no en tree, so a Kabyle translator reads the French file. The
+     * locale segment of the reference path is replaced whatever language it
+     * names; a reference path with no locale root cannot be placed and
+     * returns '' (ovos-date-parser#333-#336, ovos-localize#564).
+     *
+     * The segment keeps the shape of the tree it joins: a tree written
+     * "locale/fr/" takes the primary subtag, a tree written "locale/fr-FR/"
+     * takes the full tag.
+     *
+     * @param {string} refPath   Path of the reference file.
+     * @param {string} targetLang Language tag being translated into.
+     * @param {string} [fileKey] Resource name, when the reference is another file.
+     * @returns {string} The target path, or '' when it cannot be placed.
+     */
+    function localePathForLang(refPath, targetLang, fileKey) {
+      if (!refPath || !targetLang) return '';
+      const parts = String(refPath).split('/');
+      const idx = parts.findIndex((seg, i) =>
+        (seg === 'locale' || seg === 'res') && parts.length >= i + 3 && parts[i + 1]);
+      if (idx === -1) return '';
+      const refSeg = parts[idx + 1];
+      const tag = String(targetLang).trim().split('-');
+      let seg = refSeg.includes('-')
+        ? [tag[0].toLowerCase()].concat(tag.slice(1).map((x) => x.toUpperCase())).join('-')
+        : tag[0].toLowerCase();
+      if (refSeg === refSeg.toLowerCase()) seg = seg.toLowerCase();
+      if (fileKey) return parts.slice(0, idx + 1).concat([seg, fileKey]).join('/');
+      return parts.slice(0, idx + 1).concat([seg], parts.slice(idx + 2)).join('/');
+    }
+
     function progressBar(pct, size = 'sm') {
       const h = size === 'sm' ? 'h-1.5' : 'h-2.5';
       const color = pct >= 80 ? '#22c55e' : pct >= 50 ? '#f59e0b' : '#ef4444';
@@ -2417,22 +2452,21 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
       const srcLang = defaultSrc;
       const srcData = isCreateMode ? null : fileData?.langs?.[srcLang];
 
-      // Compute file path for new files — guess from locale convention
+      // Compute file path for new files — from the reference file's own
+      // locale segment, whatever language the reference is written in.
       let newFilePath = filePath;
       if (!filePath && srcData?.file_path) {
-        newFilePath = srcData.file_path.replace(new RegExp(`/${srcLang.toLowerCase()}/|/${srcLang}/`, 'i'), `/${lang}/`);
+        newFilePath = localePathForLang(srcData.file_path, lang);
       }
       if (!newFilePath && isCreateMode) {
-        // For brand-new files, guess path from other files in this skill
+        // For brand-new files, take the locale tree from another file in this skill
         const anyFile = Object.values(skill.files)[0];
         const anyPath = anyFile?.langs?.['en-US']?.file_path || anyFile?.langs?.[Object.keys(anyFile?.langs || {})[0]]?.file_path || '';
-        if (anyPath) {
-          // e.g. "locale/en-us/vocab/Test.voc" → "locale/{lang}/{fileKey}"
-          const localeMatch = anyPath.match(/^(.*\/locale\/)[^/]+\//);
-          if (localeMatch) newFilePath = localeMatch[1] + lang.toLowerCase() + '/' + fileKey;
-        }
-        if (!newFilePath) newFilePath = `locale/${lang.toLowerCase()}/${fileKey}`;
+        if (anyPath) newFilePath = localePathForLang(anyPath, lang, fileKey);
       }
+      // No reference path means the locale tree of this repo is unknown. The
+      // submit button stays off and the translator is sent to GitHub, because
+      // a guessed path writes over another language's file.
 
       el.innerHTML = `
         <div class="mb-4">
@@ -2494,7 +2528,8 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
               GitHub
             </a>` : ''}
             <button id="submit-pr-btn" onclick="handleSubmitPR()" class="text-xs px-4 py-1.5 rounded-lg bg-ovos-accent text-ovos-bg font-bold hover:opacity-80 disabled:opacity-40 flex items-center gap-1.5"
-              title="Submit translation via GitHub Issue — a bot creates the PR">
+              ${(newFilePath || filePath) ? '' : 'disabled'}
+              title="${(newFilePath || filePath) ? 'Submit translation via GitHub Issue — a bot creates the PR' : 'This repository has no locale tree that the page can place a new file in — use &quot;GitHub&quot; to add the file'}">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M6 9v12"/></svg>
               Submit
             </button>

@@ -173,6 +173,21 @@ jobs:
       - name: Install ovos-localize
         run: pip install ./.ovos-localize
 
+      # A submission carries both a language and a path. The page composes
+      # the path, so a page defect can write one language's text over another
+      # language's file (ovos-date-parser#333-#336 from ovos-localize#564).
+      # The bot refuses that submission instead of opening the PR.
+      - name: Check file_path against lang
+        id: pathlang
+        env:
+          FILE_PATH: ${{ steps.parse.outputs.file_path }}
+          LANG_TAG: ${{ steps.parse.outputs.lang }}
+        run: |
+          if ! ovos-localize-check-path-lang "$FILE_PATH" --lang "$LANG_TAG"; then
+            echo "path_lang_mismatch=true" >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
+
       - name: Validate submitted content
         id: validate
         env:
@@ -303,11 +318,24 @@ jobs:
         if: failure()
         env:
           VALIDATION_OUTPUT: ${{ steps.validate.outputs.validation_failed }}
+          PATH_LANG_MISMATCH: ${{ steps.pathlang.outputs.path_lang_mismatch }}
         uses: actions/github-script@v9
         with:
           script: |
             const run = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
             const issueNumber = ${{ matrix.issue }};
+            // A path that names another language is a page defect, not a
+            // translator mistake. The issue gets a label and no comment, so
+            // that a maintainer fixes the page and re-runs the issue.
+            if (process.env.PATH_LANG_MISMATCH === 'true') {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber,
+                labels: ['invalid-file-path']
+              });
+              return;
+            }
             const validationOutput = process.env.VALIDATION_OUTPUT || '';
             const validationSection = validationOutput
               ? `**Your translation did not pass validation:**\n\n\`\`\`\n${validationOutput}\n\`\`\`\n\nPlease fix the flagged line(s) and open a new submission.\n\n`
