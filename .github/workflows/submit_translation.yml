@@ -183,11 +183,23 @@ jobs:
           FILE_PATH: ${{ steps.parse.outputs.file_path }}
           LANG_TAG: ${{ steps.parse.outputs.lang }}
         run: |
-          if ! ovos-localize-check-path-lang "$FILE_PATH" --lang "$LANG_TAG" \
-               --languages-file .ovos-localize/data/coverage.json; then
-            echo "path_lang_mismatch=true" >> "$GITHUB_OUTPUT"
+          set +e
+          ovos-localize-check-path-lang "$FILE_PATH" --lang "$LANG_TAG" \
+            --rules-file .ovos-localize/data/locale_rules.json
+          STATUS=$?
+          set -e
+          if [ "$STATUS" -eq 0 ]; then
+            exit 0
+          fi
+          # Exit 3 is the rules table itself: missing, moved or malformed.
+          # That is ours to fix, so the run fails with its own message and
+          # the issue is not labelled for a fault the translator cannot see.
+          if [ "$STATUS" -eq 3 ]; then
+            echo "::error::the locale rules table could not be read; the submission was not judged"
             exit 1
           fi
+          echo "path_lang_mismatch=true" >> "$GITHUB_OUTPUT"
+          exit 1
 
       - name: Validate submitted content
         id: validate

@@ -461,12 +461,14 @@
       return d;
     }
 
-    /** Every tag the project supports, from the coverage file. */
-    async function fetchSupportedLangs() {
+    /** The locale-path rules, written by scripts/gen_locale_rules.py. */
+    async function fetchLocaleRules() {
       try {
-        return (await fetchJSON('data/coverage.json')).languages || [];
+        return await fetchJSON('data/locale_rules.json');
       } catch {
-        return [];
+        // No table means no rule. The page then places nothing, which is
+        // what the guard does without it.
+        return { tags: {} };
       }
     }
 
@@ -751,102 +753,59 @@
     function filePathFromEditUrl(u) { const m = u.match(/\/edit\/[^/]+\/(.+)$/); return m ? m[1] : ''; }
 
     /**
-     * Write a language tag the way this project spells one.
+     * Place a resource file for a target language, from the path of the
+     * reference file the translator reads.
      *
-     * Casing only, no alias expansion: the primary subtag lower case, a
-     * four-letter script subtag in title case and a region in upper case.
-     * MUST agree with canonical_lang_spelling in ovos_localize/lang_utils.py,
-     * which reads the same rule out of langcodes: zh-HANT is not a directory
-     * this project names, zh-Hant is.
+     * The rule is not written here. ovos_localize/locale_rules.py builds it
+     * and scripts/gen_locale_rules.py writes the answer to
+     * data/locale_rules.json, which this reads, because the submission
+     * guard runs that same Python. Two implementations of one rule drift:
+     * this page once upper-cased every subtag after the first, which is
+     * right for a region and wrong for a script (zh-Hant) or a variant
+     * (ca-ES-valencia), and the guard then refused the path the page had
+     * composed.
      *
-     * @param {string} tag A language tag.
-     * @returns {string} The canonical spelling.
-     */
-    function canonicalLangSpelling(tag) {
-      const parts = String(tag || '').trim().split('-');
-      if (!parts[0]) return '';
-      return [parts[0].toLowerCase()].concat(parts.slice(1).map((sub) => {
-        if (/^[A-Za-z]{4}$/.test(sub)) return sub[0].toUpperCase() + sub.slice(1).toLowerCase();
-        return sub.toUpperCase();
-      })).join('-');
-    }
-
-    /**
-     * Return the other supported tags of the same language.
+     * A rules entry carries the canonical spelling of the tag, its primary
+     * subtag, whether it may be written into a region-less directory, and
+     * the tags it would collide with there.
      *
-     * pt-BR has pt-PT and pt-AO, es-ES has es-419, and sw-KE has the
-     * region-less sw. Each of them would be written to the same directory
-     * if the region were dropped, so any of them makes dropping it unsafe.
-     *
-     * @param {string} lang A language tag.
-     * @param {string[]} supported Every tag the project supports.
-     * @returns {string[]} The other supported tags with this primary subtag.
-     */
-    function sameLanguageTags(lang, supported) {
-      const primary = canonicalLangSpelling(lang).split('-')[0];
-      const self = canonicalLangSpelling(lang);
-      return (supported || []).filter((tag) =>
-        canonicalLangSpelling(tag).split('-')[0] === primary
-        && canonicalLangSpelling(tag) !== self).sort();
-    }
-
-    /**
-     * Build the path of a resource file for a target language, from the path
-     * of the reference file the translator reads.
-     *
-     * The reference is not always English: ovos-date-parser ships de es fr it
-     * pt and no en tree, so a Kabyle translator reads the French file. The
-     * locale segment of the reference path is replaced whatever language it
-     * names; a reference path with no locale root cannot be placed
-     * (ovos-date-parser#333-#336, ovos-localize#564).
-     *
-     * One reference path must never give one file path for two different
-     * supported tags. A region-less tree such as locale/pt/ names no single
-     * region, so pt-BR and pt-PT would both be written there and the second
-     * would overwrite the first. The file is then refused rather than
-     * placed, and the caller reports which tags collide. The segment
-     * otherwise keeps the shape of the tree it joins: a tree written
-     * locale/fr/ takes the primary subtag, one written locale/en-US/ takes
-     * the full tag.
-     *
-     * @param {string} refPath   Path of the reference file.
+     * @param {string} refPath    Path of the reference file.
      * @param {string} targetLang Language tag being translated into.
-     * @param {string} [fileKey] Resource name, when the reference is another file.
-     * @param {string[]} [supported] Every tag the project supports.
-     * @returns {{path: string, collidesWith: string[]}} The target path, or an
-     *   empty path with the tags it would collide with.
+     * @param {string} [fileKey]  Resource name, when the reference is another file.
+     * @param {object} [rules]    The table from data/locale_rules.json.
+     * @returns {{path: string, reason: string, collidesWith: string[]}}
+     *   The target path, or an empty path and the reason it is refused:
+     *   no-locale-root, unknown-tag or region-collision.
      */
-    function localePathForLangDetailed(refPath, targetLang, fileKey, supported) {
-      const none = { path: '', collidesWith: [] };
-      if (!refPath || !targetLang) return none;
+    function localePathForLangDetailed(refPath, targetLang, fileKey, rules) {
+      const noRoot = { path: '', reason: 'no-locale-root', collidesWith: [] };
+      if (!refPath || !targetLang) return noRoot;
       const parts = String(refPath).split('/');
       const idx = parts.findIndex((seg, i) =>
         (seg === 'locale' || seg === 'res') && parts.length >= i + 3 && parts[i + 1]);
-      if (idx === -1) return none;
+      if (idx === -1) return noRoot;
+      const rule = ((rules || {}).tags || {})[String(targetLang).trim().toLowerCase()];
+      if (!rule) return { path: '', reason: 'unknown-tag', collidesWith: [] };
       const refSeg = parts[idx + 1];
-      const canonical = canonicalLangSpelling(targetLang);
       let seg;
       if (refSeg.includes('-')) {
-        seg = canonical;
+        seg = rule.canonical;
       } else {
-        // A region-less tree. Dropping the region is only safe while no
-        // other supported region of this language would land on it.
-        const others = sameLanguageTags(targetLang, supported);
-        if (canonical.includes('-') && others.length) {
-          return { path: '', collidesWith: others };
+        if (!rule.bare_ok) {
+          return { path: '', reason: 'region-collision', collidesWith: rule.rivals || [] };
         }
-        seg = canonical.split('-')[0];
+        seg = rule.primary;
       }
       if (refSeg === refSeg.toLowerCase()) seg = seg.toLowerCase();
       const path = fileKey
         ? parts.slice(0, idx + 1).concat([seg, fileKey]).join('/')
         : parts.slice(0, idx + 1).concat([seg], parts.slice(idx + 2)).join('/');
-      return { path, collidesWith: [] };
+      return { path, reason: 'ok', collidesWith: rule.rivals || [] };
     }
 
     /** The path alone. '' when the file cannot be placed. */
-    function localePathForLang(refPath, targetLang, fileKey, supported) {
-      return localePathForLangDetailed(refPath, targetLang, fileKey, supported).path;
+    function localePathForLang(refPath, targetLang, fileKey, rules) {
+      return localePathForLangDetailed(refPath, targetLang, fileKey, rules).path;
     }
 
     function progressBar(pct, size = 'sm') {
@@ -2527,22 +2486,25 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
 
       // Compute file path for new files — from the reference file's own
       // locale segment, whatever language the reference is written in.
-      const supportedLangs = await fetchSupportedLangs();
+      const localeRules = await fetchLocaleRules();
       let newFilePath = filePath;
       let pathCollidesWith = [];
+      let pathRefusal = '';
       if (!filePath && srcData?.file_path) {
-        const placed = localePathForLangDetailed(srcData.file_path, lang, null, supportedLangs);
+        const placed = localePathForLangDetailed(srcData.file_path, lang, null, localeRules);
         newFilePath = placed.path;
         pathCollidesWith = placed.collidesWith;
+        pathRefusal = placed.reason;
       }
       if (!newFilePath && isCreateMode) {
         // For brand-new files, take the locale tree from another file in this skill
         const anyFile = Object.values(skill.files)[0];
         const anyPath = anyFile?.langs?.['en-US']?.file_path || anyFile?.langs?.[Object.keys(anyFile?.langs || {})[0]]?.file_path || '';
         if (anyPath) {
-          const placed = localePathForLangDetailed(anyPath, lang, fileKey, supportedLangs);
+          const placed = localePathForLangDetailed(anyPath, lang, fileKey, localeRules);
           newFilePath = placed.path;
           if (placed.collidesWith.length) pathCollidesWith = placed.collidesWith;
+          pathRefusal = placed.reason;
         }
       }
       // No reference path means the locale tree of this repo is unknown. The
@@ -2612,9 +2574,11 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
               ${(newFilePath || filePath) ? '' : 'disabled'}
               title="${(newFilePath || filePath)
                 ? 'Submit translation via GitHub Issue — a bot creates the PR'
-                : (pathCollidesWith.length
+                : (pathRefusal === 'region-collision'
                   ? `This repository writes ${escapeHtml(lang.split('-')[0])} without a region, so ${escapeHtml(lang)} and ${escapeHtml(pathCollidesWith.join(', '))} would share one file. Use &quot;GitHub&quot; to add a ${escapeHtml(lang)} directory.`
-                  : 'This repository has no locale tree that the page can place a new file in — use &quot;GitHub&quot; to add the file')}">
+                  : pathRefusal === 'unknown-tag'
+                    ? `${escapeHtml(lang)} is not a language this platform writes yet. Open a &quot;Request a language&quot; issue first.`
+                    : 'This repository has no locale tree that the page can place a new file in — use &quot;GitHub&quot; to add the file')}">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M6 9v12"/></svg>
               Submit
             </button>

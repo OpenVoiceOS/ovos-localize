@@ -1,20 +1,32 @@
 """CLI entry point used by the translation-submission workflow.
 
 Checks that the ``file_path`` of a ``TRANSLATION_META`` block is written to
-the locale directory of the submitted ``lang``. A submission whose path names
-another language writes the translation over that language's file, which is
-how four Kabyle files landed in ovos-date-parser's ``locale/fr/`` tree.
+the locale directory of the submitted ``lang``. A submission whose path
+names another language writes the translation over that language's file,
+which is how four Kabyle files landed in ovos-date-parser's ``locale/fr/``
+tree.
 
-A region-less directory is refused for a regional tag when the project
-supports another region of that language, because ``locale/pt/`` names
-neither ``pt-BR`` nor ``pt-PT`` and the first submission to reach it would
-be written over by the next.
+The answer comes from ``data/locale_rules.json``, the table the page reads,
+so the page cannot compose a path this refuses.
+
+Exit codes:
+
+0
+    The path names the submitted language.
+1
+    It does not. The message says why, and the workflow labels the issue.
+3
+    The rules table is missing or unreadable. That is a platform error and
+    not the translator's path: the workflow fails the run and labels
+    nothing.
 """
 
 import argparse
 import sys
 
-from ovos_localize.lang_utils import check_path_lang, load_supported_langs
+from ovos_localize.locale_rules import OK, check_path_lang, load_locale_rules
+
+SETUP_ERROR = 3
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -24,23 +36,28 @@ def main(argv: list[str] | None = None) -> int:
         argv: Command line arguments, or ``None`` to read ``sys.argv``.
 
     Returns:
-        Exit code (0 = path and language agree, 1 = they do not).
+        Exit code, as listed in the module docstring.
     """
     parser = argparse.ArgumentParser(description="Check a submitted file path against its language tag.")
     parser.add_argument("file_path", help="file_path value from the TRANSLATION_META block")
     parser.add_argument("--lang", required=True, help="lang value from the TRANSLATION_META block")
     parser.add_argument(
-        "--languages-file",
-        help="path to data/coverage.json, which lists every supported tag. Without it a "
-             "regional tag against a region-less locale directory is refused, because "
-             "whether another region shares that directory cannot be answered.",
+        "--rules-file", required=True,
+        help="path to data/locale_rules.json, the table scripts/gen_locale_rules.py writes "
+             "and the page reads",
     )
     args = parser.parse_args(argv)
 
-    supported = load_supported_langs(args.languages_file) if args.languages_file else None
-    problem = check_path_lang(args.file_path, args.lang, supported)
-    if problem:
-        print(f"[ERROR] {problem}")
+    try:
+        rules = load_locale_rules(args.rules_file)
+    except (OSError, ValueError) as error:
+        print(f"[SETUP] cannot read the locale rules at {args.rules_file}: {error}")
+        print("[SETUP] this is a platform error, not a problem with the submission")
+        return SETUP_ERROR
+
+    reason, message = check_path_lang(args.file_path, args.lang, rules)
+    if reason != OK:
+        print(f"[ERROR] {reason}: {message}")
         return 1
     return 0
 

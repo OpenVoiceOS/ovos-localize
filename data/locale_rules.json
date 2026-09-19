@@ -1,0 +1,977 @@
+{
+  "tags": {
+    "an": {
+      "bare_ok": true,
+      "canonical": "an",
+      "primary": "an",
+      "rivals": [
+        "an-ES"
+      ]
+    },
+    "an-es": {
+      "bare_ok": true,
+      "canonical": "an-ES",
+      "primary": "an",
+      "rivals": []
+    },
+    "ar": {
+      "bare_ok": true,
+      "canonical": "ar",
+      "primary": "ar",
+      "rivals": [
+        "ar-SA",
+        "ar-XA",
+        "ar-XX"
+      ]
+    },
+    "ar-sa": {
+      "bare_ok": false,
+      "canonical": "ar-SA",
+      "primary": "ar",
+      "rivals": [
+        "ar",
+        "ar-XA",
+        "ar-XX"
+      ]
+    },
+    "ar-xa": {
+      "bare_ok": false,
+      "canonical": "ar-XA",
+      "primary": "ar",
+      "rivals": [
+        "ar",
+        "ar-SA",
+        "ar-XX"
+      ]
+    },
+    "ar-xx": {
+      "bare_ok": false,
+      "canonical": "ar-XX",
+      "primary": "ar",
+      "rivals": [
+        "ar",
+        "ar-SA",
+        "ar-XA"
+      ]
+    },
+    "ast": {
+      "bare_ok": true,
+      "canonical": "ast",
+      "primary": "ast",
+      "rivals": [
+        "ast-ES"
+      ]
+    },
+    "ast-es": {
+      "bare_ok": true,
+      "canonical": "ast-ES",
+      "primary": "ast",
+      "rivals": []
+    },
+    "az": {
+      "bare_ok": true,
+      "canonical": "az",
+      "primary": "az",
+      "rivals": [
+        "az-AZ"
+      ]
+    },
+    "az-az": {
+      "bare_ok": true,
+      "canonical": "az-AZ",
+      "primary": "az",
+      "rivals": []
+    },
+    "be": {
+      "bare_ok": true,
+      "canonical": "be",
+      "primary": "be",
+      "rivals": []
+    },
+    "bg": {
+      "bare_ok": true,
+      "canonical": "bg",
+      "primary": "bg",
+      "rivals": [
+        "bg-BG"
+      ]
+    },
+    "bg-bg": {
+      "bare_ok": true,
+      "canonical": "bg-BG",
+      "primary": "bg",
+      "rivals": []
+    },
+    "ca": {
+      "bare_ok": true,
+      "canonical": "ca",
+      "primary": "ca",
+      "rivals": [
+        "ca-ES",
+        "ca-ES-valencia"
+      ]
+    },
+    "ca-es": {
+      "bare_ok": false,
+      "canonical": "ca-ES",
+      "primary": "ca",
+      "rivals": [
+        "ca-ES-valencia"
+      ]
+    },
+    "ca-es-valencia": {
+      "bare_ok": false,
+      "canonical": "ca-ES-valencia",
+      "primary": "ca",
+      "rivals": [
+        "ca-ES"
+      ]
+    },
+    "cmn-cn": {
+      "bare_ok": true,
+      "canonical": "cmn-CN",
+      "primary": "cmn",
+      "rivals": []
+    },
+    "cs": {
+      "bare_ok": true,
+      "canonical": "cs",
+      "primary": "cs",
+      "rivals": [
+        "cs-CZ"
+      ]
+    },
+    "cs-cz": {
+      "bare_ok": true,
+      "canonical": "cs-CZ",
+      "primary": "cs",
+      "rivals": []
+    },
+    "cy": {
+      "bare_ok": true,
+      "canonical": "cy",
+      "primary": "cy",
+      "rivals": []
+    },
+    "da": {
+      "bare_ok": true,
+      "canonical": "da",
+      "primary": "da",
+      "rivals": [
+        "da-DK"
+      ]
+    },
+    "da-dk": {
+      "bare_ok": true,
+      "canonical": "da-DK",
+      "primary": "da",
+      "rivals": []
+    },
+    "de": {
+      "bare_ok": true,
+      "canonical": "de",
+      "primary": "de",
+      "rivals": [
+        "de-DE"
+      ]
+    },
+    "de-de": {
+      "bare_ok": true,
+      "canonical": "de-DE",
+      "primary": "de",
+      "rivals": []
+    },
+    "el": {
+      "bare_ok": true,
+      "canonical": "el",
+      "primary": "el",
+      "rivals": [
+        "el-GR"
+      ]
+    },
+    "el-gr": {
+      "bare_ok": true,
+      "canonical": "el-GR",
+      "primary": "el",
+      "rivals": []
+    },
+    "en": {
+      "bare_ok": true,
+      "canonical": "en",
+      "primary": "en",
+      "rivals": [
+        "en-US"
+      ]
+    },
+    "en-us": {
+      "bare_ok": true,
+      "canonical": "en-US",
+      "primary": "en",
+      "rivals": []
+    },
+    "eo": {
+      "bare_ok": true,
+      "canonical": "eo",
+      "primary": "eo",
+      "rivals": []
+    },
+    "es": {
+      "bare_ok": true,
+      "canonical": "es",
+      "primary": "es",
+      "rivals": [
+        "es-419",
+        "es-ES",
+        "es-LM"
+      ]
+    },
+    "es-419": {
+      "bare_ok": false,
+      "canonical": "es-419",
+      "primary": "es",
+      "rivals": [
+        "es",
+        "es-ES",
+        "es-LM"
+      ]
+    },
+    "es-es": {
+      "bare_ok": false,
+      "canonical": "es-ES",
+      "primary": "es",
+      "rivals": [
+        "es-419",
+        "es-LM"
+      ]
+    },
+    "es-lm": {
+      "bare_ok": false,
+      "canonical": "es-LM",
+      "primary": "es",
+      "rivals": [
+        "es",
+        "es-419",
+        "es-ES"
+      ]
+    },
+    "et": {
+      "bare_ok": true,
+      "canonical": "et",
+      "primary": "et",
+      "rivals": [
+        "et-EE"
+      ]
+    },
+    "et-ee": {
+      "bare_ok": true,
+      "canonical": "et-EE",
+      "primary": "et",
+      "rivals": []
+    },
+    "eu": {
+      "bare_ok": true,
+      "canonical": "eu",
+      "primary": "eu",
+      "rivals": [
+        "eu-ES"
+      ]
+    },
+    "eu-es": {
+      "bare_ok": true,
+      "canonical": "eu-ES",
+      "primary": "eu",
+      "rivals": []
+    },
+    "fa": {
+      "bare_ok": true,
+      "canonical": "fa",
+      "primary": "fa",
+      "rivals": [
+        "fa-IR"
+      ]
+    },
+    "fa-ir": {
+      "bare_ok": true,
+      "canonical": "fa-IR",
+      "primary": "fa",
+      "rivals": []
+    },
+    "fi": {
+      "bare_ok": true,
+      "canonical": "fi",
+      "primary": "fi",
+      "rivals": [
+        "fi-FI"
+      ]
+    },
+    "fi-fi": {
+      "bare_ok": true,
+      "canonical": "fi-FI",
+      "primary": "fi",
+      "rivals": []
+    },
+    "fil": {
+      "bare_ok": true,
+      "canonical": "fil",
+      "primary": "fil",
+      "rivals": [
+        "fil-PH"
+      ]
+    },
+    "fil-ph": {
+      "bare_ok": true,
+      "canonical": "fil-PH",
+      "primary": "fil",
+      "rivals": []
+    },
+    "fr": {
+      "bare_ok": true,
+      "canonical": "fr",
+      "primary": "fr",
+      "rivals": [
+        "fr-FR"
+      ]
+    },
+    "fr-fr": {
+      "bare_ok": true,
+      "canonical": "fr-FR",
+      "primary": "fr",
+      "rivals": []
+    },
+    "fy": {
+      "bare_ok": true,
+      "canonical": "fy",
+      "primary": "fy",
+      "rivals": [
+        "fy-NL"
+      ]
+    },
+    "fy-nl": {
+      "bare_ok": true,
+      "canonical": "fy-NL",
+      "primary": "fy",
+      "rivals": []
+    },
+    "ga": {
+      "bare_ok": true,
+      "canonical": "ga",
+      "primary": "ga",
+      "rivals": []
+    },
+    "gl": {
+      "bare_ok": true,
+      "canonical": "gl",
+      "primary": "gl",
+      "rivals": [
+        "gl-ES"
+      ]
+    },
+    "gl-es": {
+      "bare_ok": true,
+      "canonical": "gl-ES",
+      "primary": "gl",
+      "rivals": []
+    },
+    "ha": {
+      "bare_ok": true,
+      "canonical": "ha",
+      "primary": "ha",
+      "rivals": []
+    },
+    "he": {
+      "bare_ok": true,
+      "canonical": "he",
+      "primary": "he",
+      "rivals": [
+        "he-IL"
+      ]
+    },
+    "he-il": {
+      "bare_ok": true,
+      "canonical": "he-IL",
+      "primary": "he",
+      "rivals": []
+    },
+    "hi": {
+      "bare_ok": true,
+      "canonical": "hi",
+      "primary": "hi",
+      "rivals": [
+        "hi-IN"
+      ]
+    },
+    "hi-in": {
+      "bare_ok": true,
+      "canonical": "hi-IN",
+      "primary": "hi",
+      "rivals": []
+    },
+    "hr": {
+      "bare_ok": true,
+      "canonical": "hr",
+      "primary": "hr",
+      "rivals": [
+        "hr-HR"
+      ]
+    },
+    "hr-hr": {
+      "bare_ok": true,
+      "canonical": "hr-HR",
+      "primary": "hr",
+      "rivals": []
+    },
+    "hu": {
+      "bare_ok": true,
+      "canonical": "hu",
+      "primary": "hu",
+      "rivals": [
+        "hu-HU"
+      ]
+    },
+    "hu-hu": {
+      "bare_ok": true,
+      "canonical": "hu-HU",
+      "primary": "hu",
+      "rivals": []
+    },
+    "hy": {
+      "bare_ok": true,
+      "canonical": "hy",
+      "primary": "hy",
+      "rivals": []
+    },
+    "id": {
+      "bare_ok": true,
+      "canonical": "id",
+      "primary": "id",
+      "rivals": [
+        "id-ID"
+      ]
+    },
+    "id-id": {
+      "bare_ok": true,
+      "canonical": "id-ID",
+      "primary": "id",
+      "rivals": []
+    },
+    "is": {
+      "bare_ok": true,
+      "canonical": "is",
+      "primary": "is",
+      "rivals": [
+        "is-IS"
+      ]
+    },
+    "is-is": {
+      "bare_ok": true,
+      "canonical": "is-IS",
+      "primary": "is",
+      "rivals": []
+    },
+    "it": {
+      "bare_ok": true,
+      "canonical": "it",
+      "primary": "it",
+      "rivals": [
+        "it-IT"
+      ]
+    },
+    "it-it": {
+      "bare_ok": true,
+      "canonical": "it-IT",
+      "primary": "it",
+      "rivals": []
+    },
+    "ja-jp": {
+      "bare_ok": true,
+      "canonical": "ja-JP",
+      "primary": "ja",
+      "rivals": []
+    },
+    "ka": {
+      "bare_ok": true,
+      "canonical": "ka",
+      "primary": "ka",
+      "rivals": []
+    },
+    "kab": {
+      "bare_ok": true,
+      "canonical": "kab",
+      "primary": "kab",
+      "rivals": [
+        "kab-DZ"
+      ]
+    },
+    "kab-dz": {
+      "bare_ok": true,
+      "canonical": "kab-DZ",
+      "primary": "kab",
+      "rivals": []
+    },
+    "ko": {
+      "bare_ok": true,
+      "canonical": "ko",
+      "primary": "ko",
+      "rivals": [
+        "ko-KR"
+      ]
+    },
+    "ko-kr": {
+      "bare_ok": true,
+      "canonical": "ko-KR",
+      "primary": "ko",
+      "rivals": []
+    },
+    "locale": {
+      "bare_ok": true,
+      "canonical": "locale",
+      "primary": "locale",
+      "rivals": []
+    },
+    "lt": {
+      "bare_ok": true,
+      "canonical": "lt",
+      "primary": "lt",
+      "rivals": [
+        "lt-LT"
+      ]
+    },
+    "lt-lt": {
+      "bare_ok": true,
+      "canonical": "lt-LT",
+      "primary": "lt",
+      "rivals": []
+    },
+    "lv": {
+      "bare_ok": true,
+      "canonical": "lv",
+      "primary": "lv",
+      "rivals": [
+        "lv-LV"
+      ]
+    },
+    "lv-lv": {
+      "bare_ok": true,
+      "canonical": "lv-LV",
+      "primary": "lv",
+      "rivals": []
+    },
+    "mk": {
+      "bare_ok": true,
+      "canonical": "mk",
+      "primary": "mk",
+      "rivals": []
+    },
+    "ms": {
+      "bare_ok": true,
+      "canonical": "ms",
+      "primary": "ms",
+      "rivals": [
+        "ms-MY"
+      ]
+    },
+    "ms-my": {
+      "bare_ok": true,
+      "canonical": "ms-MY",
+      "primary": "ms",
+      "rivals": []
+    },
+    "mt": {
+      "bare_ok": true,
+      "canonical": "mt",
+      "primary": "mt",
+      "rivals": []
+    },
+    "mwl": {
+      "bare_ok": true,
+      "canonical": "mwl",
+      "primary": "mwl",
+      "rivals": [
+        "mwl-PT"
+      ]
+    },
+    "mwl-pt": {
+      "bare_ok": false,
+      "canonical": "mwl-PT",
+      "primary": "mwl",
+      "rivals": [
+        "mwl"
+      ]
+    },
+    "nb": {
+      "bare_ok": true,
+      "canonical": "nb",
+      "primary": "nb",
+      "rivals": [
+        "nb-NO"
+      ]
+    },
+    "nb-no": {
+      "bare_ok": true,
+      "canonical": "nb-NO",
+      "primary": "nb",
+      "rivals": []
+    },
+    "nl": {
+      "bare_ok": true,
+      "canonical": "nl",
+      "primary": "nl",
+      "rivals": [
+        "nl-BE",
+        "nl-NL"
+      ]
+    },
+    "nl-be": {
+      "bare_ok": false,
+      "canonical": "nl-BE",
+      "primary": "nl",
+      "rivals": [
+        "nl",
+        "nl-NL"
+      ]
+    },
+    "nl-nl": {
+      "bare_ok": false,
+      "canonical": "nl-NL",
+      "primary": "nl",
+      "rivals": [
+        "nl-BE"
+      ]
+    },
+    "nn": {
+      "bare_ok": true,
+      "canonical": "nn",
+      "primary": "nn",
+      "rivals": [
+        "nn-NO"
+      ]
+    },
+    "nn-no": {
+      "bare_ok": true,
+      "canonical": "nn-NO",
+      "primary": "nn",
+      "rivals": []
+    },
+    "oc": {
+      "bare_ok": true,
+      "canonical": "oc",
+      "primary": "oc",
+      "rivals": [
+        "oc-FR"
+      ]
+    },
+    "oc-fr": {
+      "bare_ok": true,
+      "canonical": "oc-FR",
+      "primary": "oc",
+      "rivals": []
+    },
+    "pl": {
+      "bare_ok": true,
+      "canonical": "pl",
+      "primary": "pl",
+      "rivals": [
+        "pl-PL"
+      ]
+    },
+    "pl-pl": {
+      "bare_ok": true,
+      "canonical": "pl-PL",
+      "primary": "pl",
+      "rivals": []
+    },
+    "pt": {
+      "bare_ok": true,
+      "canonical": "pt",
+      "primary": "pt",
+      "rivals": [
+        "pt-AO",
+        "pt-BR",
+        "pt-PT"
+      ]
+    },
+    "pt-ao": {
+      "bare_ok": false,
+      "canonical": "pt-AO",
+      "primary": "pt",
+      "rivals": [
+        "pt",
+        "pt-BR",
+        "pt-PT"
+      ]
+    },
+    "pt-br": {
+      "bare_ok": false,
+      "canonical": "pt-BR",
+      "primary": "pt",
+      "rivals": [
+        "pt-AO",
+        "pt-PT"
+      ]
+    },
+    "pt-pt": {
+      "bare_ok": false,
+      "canonical": "pt-PT",
+      "primary": "pt",
+      "rivals": [
+        "pt",
+        "pt-AO",
+        "pt-BR"
+      ]
+    },
+    "ro": {
+      "bare_ok": true,
+      "canonical": "ro",
+      "primary": "ro",
+      "rivals": [
+        "ro-RO"
+      ]
+    },
+    "ro-ro": {
+      "bare_ok": true,
+      "canonical": "ro-RO",
+      "primary": "ro",
+      "rivals": []
+    },
+    "ru": {
+      "bare_ok": true,
+      "canonical": "ru",
+      "primary": "ru",
+      "rivals": [
+        "ru-RU"
+      ]
+    },
+    "ru-ru": {
+      "bare_ok": true,
+      "canonical": "ru-RU",
+      "primary": "ru",
+      "rivals": []
+    },
+    "sk": {
+      "bare_ok": true,
+      "canonical": "sk",
+      "primary": "sk",
+      "rivals": [
+        "sk-SK"
+      ]
+    },
+    "sk-sk": {
+      "bare_ok": true,
+      "canonical": "sk-SK",
+      "primary": "sk",
+      "rivals": []
+    },
+    "sl": {
+      "bare_ok": true,
+      "canonical": "sl",
+      "primary": "sl",
+      "rivals": [
+        "sl-SI"
+      ]
+    },
+    "sl-si": {
+      "bare_ok": true,
+      "canonical": "sl-SI",
+      "primary": "sl",
+      "rivals": []
+    },
+    "sq": {
+      "bare_ok": true,
+      "canonical": "sq",
+      "primary": "sq",
+      "rivals": []
+    },
+    "sr": {
+      "bare_ok": true,
+      "canonical": "sr",
+      "primary": "sr",
+      "rivals": [
+        "sr-Latn",
+        "sr-Latn-RS"
+      ]
+    },
+    "sr-latn": {
+      "bare_ok": false,
+      "canonical": "sr-Latn",
+      "primary": "sr",
+      "rivals": [
+        "sr",
+        "sr-Latn-RS"
+      ]
+    },
+    "sr-latn-rs": {
+      "bare_ok": false,
+      "canonical": "sr-Latn-RS",
+      "primary": "sr",
+      "rivals": [
+        "sr",
+        "sr-Latn"
+      ]
+    },
+    "sv": {
+      "bare_ok": true,
+      "canonical": "sv",
+      "primary": "sv",
+      "rivals": [
+        "sv-FI",
+        "sv-SE"
+      ]
+    },
+    "sv-fi": {
+      "bare_ok": false,
+      "canonical": "sv-FI",
+      "primary": "sv",
+      "rivals": [
+        "sv",
+        "sv-SE"
+      ]
+    },
+    "sv-se": {
+      "bare_ok": false,
+      "canonical": "sv-SE",
+      "primary": "sv",
+      "rivals": [
+        "sv-FI"
+      ]
+    },
+    "sw": {
+      "bare_ok": true,
+      "canonical": "sw",
+      "primary": "sw",
+      "rivals": [
+        "sw-KE"
+      ]
+    },
+    "sw-ke": {
+      "bare_ok": false,
+      "canonical": "sw-KE",
+      "primary": "sw",
+      "rivals": [
+        "sw"
+      ]
+    },
+    "ta": {
+      "bare_ok": true,
+      "canonical": "ta",
+      "primary": "ta",
+      "rivals": []
+    },
+    "th": {
+      "bare_ok": true,
+      "canonical": "th",
+      "primary": "th",
+      "rivals": [
+        "th-TH"
+      ]
+    },
+    "th-th": {
+      "bare_ok": true,
+      "canonical": "th-TH",
+      "primary": "th",
+      "rivals": []
+    },
+    "tr": {
+      "bare_ok": true,
+      "canonical": "tr",
+      "primary": "tr",
+      "rivals": [
+        "tr-TR"
+      ]
+    },
+    "tr-tr": {
+      "bare_ok": true,
+      "canonical": "tr-TR",
+      "primary": "tr",
+      "rivals": []
+    },
+    "uk": {
+      "bare_ok": true,
+      "canonical": "uk",
+      "primary": "uk",
+      "rivals": [
+        "uk-UA"
+      ]
+    },
+    "uk-ua": {
+      "bare_ok": true,
+      "canonical": "uk-UA",
+      "primary": "uk",
+      "rivals": []
+    },
+    "vi": {
+      "bare_ok": true,
+      "canonical": "vi",
+      "primary": "vi",
+      "rivals": [
+        "vi-VN"
+      ]
+    },
+    "vi-vn": {
+      "bare_ok": true,
+      "canonical": "vi-VN",
+      "primary": "vi",
+      "rivals": []
+    },
+    "zh-cn": {
+      "bare_ok": false,
+      "canonical": "zh-CN",
+      "primary": "zh",
+      "rivals": [
+        "zh-Hans",
+        "zh-Hans-CN",
+        "zh-Hant",
+        "zh-Hant-TW"
+      ]
+    },
+    "zh-hans": {
+      "bare_ok": false,
+      "canonical": "zh-Hans",
+      "primary": "zh",
+      "rivals": [
+        "zh-CN",
+        "zh-Hans-CN",
+        "zh-Hant",
+        "zh-Hant-TW"
+      ]
+    },
+    "zh-hans-cn": {
+      "bare_ok": false,
+      "canonical": "zh-Hans-CN",
+      "primary": "zh",
+      "rivals": [
+        "zh-CN",
+        "zh-Hans",
+        "zh-Hant",
+        "zh-Hant-TW"
+      ]
+    },
+    "zh-hant": {
+      "bare_ok": false,
+      "canonical": "zh-Hant",
+      "primary": "zh",
+      "rivals": [
+        "zh-CN",
+        "zh-Hans",
+        "zh-Hans-CN",
+        "zh-Hant-TW"
+      ]
+    },
+    "zh-hant-tw": {
+      "bare_ok": false,
+      "canonical": "zh-Hant-TW",
+      "primary": "zh",
+      "rivals": [
+        "zh-CN",
+        "zh-Hans",
+        "zh-Hans-CN",
+        "zh-Hant"
+      ]
+    },
+    "zsm-my": {
+      "bare_ok": true,
+      "canonical": "zsm-MY",
+      "primary": "zsm",
+      "rivals": []
+    }
+  }
+}

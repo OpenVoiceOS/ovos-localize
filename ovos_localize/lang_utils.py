@@ -4,7 +4,6 @@ Normalizes inconsistent casing and merges equivalent tags using BCP-47
 tag distance. Provides display names for the SPA frontend.
 """
 
-import json
 from collections.abc import Iterable
 
 import langcodes
@@ -214,37 +213,14 @@ def lang_display_name_native(code: str) -> str:
         return code
 
 
-# Directory names that hold the locale trees. A locale root can sit inside a
-# package directory, e.g. ``ovos_date_parser/locale/fr/months.voc``.
-_LOCALE_ROOTS = frozenset({"locale", "res"})
-
-
-def locale_dir_from_path(file_path: str) -> str | None:
-    """Return the language directory segment of a locale resource path.
-
-    Args:
-        file_path: Repository-relative path, e.g. ``locale/en-US/foo.voc``.
-
-    Returns:
-        The segment after the locale root (``"en-US"``), or ``None`` when the
-        path holds no locale root or no segment after it.
-    """
-    parts = file_path.strip().split("/")
-    for idx, seg in enumerate(parts):
-        # The language directory needs a file after it; a path that stops at
-        # the locale root names no language.
-        if seg in _LOCALE_ROOTS and len(parts) >= idx + 3 and parts[idx + 1]:
-            return parts[idx + 1]
-    return None
-
-
 def canonical_lang_spelling(tag: str) -> str:
     """Return a language tag in its canonical BCP-47 spelling.
 
     Casing only: no alias is expanded, so ``pt`` stays ``pt`` rather than
     becoming ``pt-BR``. A script subtag is written in title case
-    (``zh-HANT`` becomes ``zh-Hant``) and a region in upper case
-    (``kab-dz`` becomes ``kab-DZ``).
+    (``zh-HANT`` becomes ``zh-Hant``), a region in upper case (``kab-dz``
+    becomes ``kab-DZ``), and a variant stays lower case
+    (``ca-ES-VALENCIA`` becomes ``ca-ES-valencia``).
 
     Args:
         tag: A language tag or locale directory name.
@@ -256,142 +232,3 @@ def canonical_lang_spelling(tag: str) -> str:
         return langcodes.Language.get(tag.strip()).to_tag()
     except (langcodes.tag_parser.LanguageTagError, LookupError, ValueError):
         return tag.strip()
-
-
-def load_supported_langs(path: str) -> list[str]:
-    """Read the project's supported language tags from a coverage file.
-
-    Args:
-        path: Path to ``data/coverage.json``.
-
-    Returns:
-        The tags under the ``languages`` key.
-    """
-    with open(path, encoding="utf-8") as handle:
-        return list(json.load(handle).get("languages") or [])
-
-
-def _primary(tag: str) -> str:
-    return canonical_lang_spelling(tag).split("-")[0].lower()
-
-
-def regional_siblings(lang: str, supported: Iterable[str]) -> list[str]:
-    """Return the supported tags that are another region of ``lang``.
-
-    ``pt-BR`` has ``pt-PT`` and ``pt-AO``. ``kab-DZ`` has none, because the
-    only supported Kabyle tag is the region-less ``kab``, which is the same
-    language written less precisely rather than another region.
-
-    Args:
-        lang: The language tag being written.
-        supported: Every tag the project supports.
-
-    Returns:
-        The other regional tags of the same language, sorted.
-    """
-    primary = _primary(lang)
-    return sorted(
-        tag for tag in supported
-        if "-" in tag and _primary(tag) == primary
-        and canonical_lang_spelling(tag) != canonical_lang_spelling(lang)
-    )
-
-
-def locale_dir_matches_lang(dir_name: str, lang: str, supported: Iterable[str] | None = None) -> bool:
-    """Tell if a locale directory name and a language tag are the same language.
-
-    A repository writes the same language in more than one shape: Kabyle is
-    ``kab`` in one tree and ``kab-DZ`` in another, and many trees drop the
-    region (``locale/fr/``) for a tag that carries one (``fr-FR``). Those are
-    the same language and match. ``en-US`` against ``en-GB``, or ``fr``
-    against ``kab``, are different languages and do not.
-
-    A region-less directory is the same language ONLY while the project
-    supports one region of it. ``ovos-date-parser`` ships ``locale/pt/``, and
-    ``pt-BR``, ``pt-PT`` and ``pt-AO`` are all supported, so that directory
-    names no single one of them and a regional tag written into it would
-    overwrite another region's file. ``supported`` is what decides this, and
-    without it every regional tag against a region-less directory is refused,
-    because the question cannot be answered.
-
-    Args:
-        dir_name: The language directory segment, e.g. ``"fr"``.
-        lang: The submitted language tag, e.g. ``"kab"``.
-        supported: Every tag the project supports, or ``None``.
-
-    Returns:
-        ``True`` when both name the same language and the directory names it
-        without ambiguity.
-    """
-    a, b = (dir_name or "").strip(), (lang or "").strip()
-    if not a or not b:
-        return False
-    # The directory must be spelled the way this project spells a tag. A
-    # lower-case directory is the legacy spelling that many repositories
-    # already ship (en-us, pt-br, kab-dz); anything else, zh-HANT included,
-    # is a directory the rest of the code would not name.
-    canonical_dir = canonical_lang_spelling(a)
-    if a not in (canonical_dir, canonical_dir.lower()):
-        return False
-    if _primary(a) != _primary(b):
-        return False
-    same_shape = canonical_dir.lower() == canonical_lang_spelling(b).lower()
-    if same_shape:
-        return True
-    # From here the two differ by a region. Two named regions are two
-    # languages for translation.
-    if "-" in a and "-" in b:
-        return False
-    if "-" in a:
-        # A named directory, a region-less tag: the directory decides.
-        return True
-    # A region-less directory and a regional tag. Two things must hold: no
-    # other region of this language is supported, and this region is the one
-    # the bare tag already means. kab-DZ is what kab means, so locale/kab
-    # takes it; sw-KE is not what sw means, so locale/sw does not.
-    if supported is None:
-        return False
-    if regional_siblings(b, supported):
-        return False
-    try:
-        return langcodes.tag_distance(a, b) == 0
-    except (langcodes.tag_parser.LanguageTagError, LookupError):
-        return False
-
-
-def check_path_lang(file_path: str, lang: str, supported: Iterable[str] | None = None) -> str | None:
-    """Check that a submitted file path is written in the submitted language.
-
-    Args:
-        file_path: The ``file_path`` value of a ``TRANSLATION_META`` block.
-        lang: The ``lang`` value of the same block.
-        supported: Every tag the project supports, or ``None``.
-
-    Returns:
-        ``None`` when the path and the language agree, else a message that
-        says why they do not.
-    """
-    dir_name = locale_dir_from_path(file_path)
-    if dir_name is None:
-        return f"file_path has no language directory under locale/ or res/: {file_path}"
-    canonical_dir = canonical_lang_spelling(dir_name)
-    if dir_name not in (canonical_dir, canonical_dir.lower()):
-        return (
-            f"the locale directory '{dir_name}' is not spelled the way this project "
-            f"spells a language tag; write '{canonical_dir}': {file_path}"
-        )
-    if "-" not in dir_name and "-" in lang and not locale_dir_matches_lang(dir_name, lang, supported):
-        siblings = regional_siblings(lang, supported or ())
-        if supported is None or siblings or _primary(dir_name) == _primary(lang):
-            named = ", ".join(siblings) or f"another region of {_primary(lang)}"
-            return (
-                f"'{dir_name}' is a region-less locale directory and '{lang}' names a "
-                f"region. {named} would be written to the same file: {file_path}. "
-                f"Write the full tag as the directory."
-            )
-    if not locale_dir_matches_lang(dir_name, lang, supported):
-        return (
-            f"file_path is written to the '{dir_name}' locale directory but lang is "
-            f"'{lang}': {file_path}. The path must name the target language."
-        )
-    return None
