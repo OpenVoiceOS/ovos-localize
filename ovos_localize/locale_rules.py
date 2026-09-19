@@ -258,8 +258,25 @@ def check_path_lang(file_path: str, lang: str, rules: dict) -> tuple:
             f"region. {named} would be written to the same file: {file_path}. "
             f"Write the full tag as the directory.")
     if "-" not in rule["canonical"]:
-        # A named directory and a region-less tag: the directory decides.
-        return OK, ""
+        # A named directory and a region-less tag. This is the mirror of the
+        # collision above and it overwrites just as much: a submission that
+        # says lang: pt into locale/pt-PT writes generic Portuguese over the
+        # European Portuguese file. The page never composes such a path, but
+        # a TRANSLATION_META block is written by whoever opens the issue, so
+        # the guard is the only barrier.
+        #
+        # It is allowed only where the two already mean the same thing: the
+        # directory's own tag may take the region-less directory of its
+        # language (bare_ok), which is true of kab-DZ and fr-FR and false of
+        # pt-PT, es-ES, sv-SE, sw-KE, sr-Latn and ca-ES-valencia.
+        dir_rule = (rules.get("tags") or {}).get(canonical_dir.lower())
+        if dir_rule and dir_rule["bare_ok"]:
+            return OK, ""
+        named = ", ".join((dir_rule or {}).get("rivals") or ()) or "another region"
+        return REGION_COLLISION, (
+            f"'{lang}' names no region and '{dir_name}' does, and {named} is written "
+            f"separately: {file_path}. Write the full tag as the language."
+        )
     return DIFFERENT_LANGUAGE, (
         f"file_path is written to the '{dir_name}' locale directory but lang is "
         f"'{lang}': {file_path}. The path must name the target language.")

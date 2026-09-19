@@ -466,9 +466,10 @@
       try {
         return await fetchJSON('data/locale_rules.json');
       } catch {
-        // No table means no rule. The page then places nothing, which is
-        // what the guard does without it.
-        return { tags: {} };
+        // A table that did not load is not a table saying "no such tag".
+        // It returns null so the page can say which of the two happened;
+        // either way it places no file.
+        return null;
       }
     }
 
@@ -779,12 +780,19 @@
      */
     function localePathForLangDetailed(refPath, targetLang, fileKey, rules) {
       const noRoot = { path: '', reason: 'no-locale-root', collidesWith: [] };
+      const table = (rules || {}).tags;
+      // No table is not the same answer as "this tag is not in the table".
+      // Reporting a fetch failure as unknown-tag tells the translator their
+      // language is unsupported when the platform simply did not load.
+      if (!table || !Object.keys(table).length) {
+        return { path: '', reason: 'table-not-loaded', collidesWith: [] };
+      }
       if (!refPath || !targetLang) return noRoot;
       const parts = String(refPath).split('/');
       const idx = parts.findIndex((seg, i) =>
         (seg === 'locale' || seg === 'res') && parts.length >= i + 3 && parts[i + 1]);
       if (idx === -1) return noRoot;
-      const rule = ((rules || {}).tags || {})[String(targetLang).trim().toLowerCase()];
+      const rule = table[String(targetLang).trim().toLowerCase()];
       if (!rule) return { path: '', reason: 'unknown-tag', collidesWith: [] };
       const refSeg = parts[idx + 1];
       let seg;
@@ -801,6 +809,36 @@
         ? parts.slice(0, idx + 1).concat([seg, fileKey]).join('/')
         : parts.slice(0, idx + 1).concat([seg], parts.slice(idx + 2)).join('/');
       return { path, reason: 'ok', collidesWith: rule.rivals || [] };
+    }
+
+    /**
+     * What to tell the translator when no file can be placed.
+     *
+     * Each reason is a different thing to do next, so each says something
+     * different. A table that did not load is a platform fault and must
+     * never read as "your language is not supported".
+     *
+     * @param {string} reason One of the reasons localePathForLangDetailed returns.
+     * @param {string} lang The target language tag.
+     * @param {string[]} collidesWith The tags that would share the file.
+     * @returns {string} A sentence for the disabled Submit button.
+     */
+    function pathRefusalMessage(reason, lang, collidesWith) {
+      const tags = (collidesWith || []).join(', ');
+      if (reason === 'region-collision') {
+        return `This repository writes ${String(lang).split('-')[0]} without a region, so `
+          + `${lang} and ${tags} would share one file. Use "GitHub" to add a ${lang} directory.`;
+      }
+      if (reason === 'unknown-tag') {
+        return `${lang} is not a language this platform writes yet. `
+          + 'Open a "Request a language" issue first.';
+      }
+      if (reason === 'table-not-loaded') {
+        return 'The language table did not load, so this page cannot tell where the file goes. '
+          + 'Reload the page; if it keeps happening, this is a fault on our side.';
+      }
+      return 'This repository has no locale tree that the page can place a new file in — '
+        + 'use "GitHub" to add the file';
     }
 
     /** The path alone. '' when the file cannot be placed. */
@@ -2574,11 +2612,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
               ${(newFilePath || filePath) ? '' : 'disabled'}
               title="${(newFilePath || filePath)
                 ? 'Submit translation via GitHub Issue — a bot creates the PR'
-                : (pathRefusal === 'region-collision'
-                  ? `This repository writes ${escapeHtml(lang.split('-')[0])} without a region, so ${escapeHtml(lang)} and ${escapeHtml(pathCollidesWith.join(', '))} would share one file. Use &quot;GitHub&quot; to add a ${escapeHtml(lang)} directory.`
-                  : pathRefusal === 'unknown-tag'
-                    ? `${escapeHtml(lang)} is not a language this platform writes yet. Open a &quot;Request a language&quot; issue first.`
-                    : 'This repository has no locale tree that the page can place a new file in — use &quot;GitHub&quot; to add the file')}">
+                : escapeHtml(pathRefusalMessage(pathRefusal, lang, pathCollidesWith))}">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M6 9v12"/></svg>
               Submit
             </button>

@@ -191,11 +191,14 @@ jobs:
           if [ "$STATUS" -eq 0 ]; then
             exit 0
           fi
-          # Exit 3 is the rules table itself: missing, moved or malformed.
-          # That is ours to fix, so the run fails with its own message and
-          # the issue is not labelled for a fault the translator cannot see.
-          if [ "$STATUS" -eq 3 ]; then
-            echo "::error::the locale rules table could not be read; the submission was not judged"
+          # Only exit 1 is a judgement on the submitted path. Every other
+          # status is the command failing to run at all: 3 is the rules
+          # table missing or malformed, 127 is the command not installed, 2
+          # is a bad argument, and anything else is an unhandled exception.
+          # None of them is the translator's fault, so none of them labels
+          # the issue.
+          if [ "$STATUS" -ne 1 ]; then
+            echo "::error::the path check did not run (exit $STATUS); the submission was not judged"
             exit 1
           fi
           echo "path_lang_mismatch=true" >> "$GITHUB_OUTPUT"
@@ -315,6 +318,10 @@ jobs:
             const issueNumber = ${{ matrix.issue }};
             // A re-run of a submission that was refused for its path now
             // passes, so the label that reported the refusal comes off.
+            // Tidying the label must never stop the pull request link from
+            // being posted or the issue from being closed: a 403 or a 5xx
+            // here would leave the issue open, and the next dispatch would
+            // open a second pull request for the same translation.
             try {
               await github.rest.issues.removeLabel({
                 owner: context.repo.owner,
@@ -323,7 +330,9 @@ jobs:
                 name: 'invalid-file-path'
               });
             } catch (error) {
-              if (error.status !== 404) throw error;
+              if (error.status !== 404) {
+                core.warning(`could not remove the invalid-file-path label: ${error.status} ${error.message}`);
+              }
             }
             await github.rest.issues.createComment({
               owner: context.repo.owner,

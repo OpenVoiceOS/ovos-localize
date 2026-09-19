@@ -61,6 +61,17 @@ def _page_source() -> str:
     return source[start:end]
 
 
+def _page_source_named(*names) -> str:
+    """Named functions of the page, read out of index.html."""
+    source = INDEX_HTML.read_text(encoding="utf-8")
+    blocks = []
+    for name in names:
+        start = source.index(f"    function {name}(")
+        end = source.index("\n    }\n", start) + len("\n    }\n")
+        blocks.append(source[start:end])
+    return "\n".join(blocks)
+
+
 def _page_place(cases: list) -> list:
     """Run the page's function over many cases in one node process.
 
@@ -246,3 +257,97 @@ class TestBuildIsDeterministic(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestRegionLessTagIntoANamedDirectory(unittest.TestCase):
+    """The mirror of the collision this change exists to stop.
+
+    A submission that says ``lang: pt`` with a path into ``locale/pt-PT``
+    writes generic Portuguese over the European Portuguese file. The page
+    never composes such a path, but a TRANSLATION_META block is written by
+    whoever opens the issue, so the guard is the only barrier.
+    """
+
+    REFUSED = (
+        ("locale/pt-BR/x.voc", "pt"),
+        ("locale/pt-PT/x.voc", "pt"),
+        ("locale/es-ES/x.voc", "es"),
+        ("locale/es-419/x.voc", "es"),
+        ("locale/nl-BE/x.voc", "nl"),
+        ("locale/sv-SE/x.voc", "sv"),
+        ("locale/ar-SA/x.voc", "ar"),
+        ("locale/sr-Latn/x.voc", "sr"),
+        ("locale/ca-ES-valencia/x.voc", "ca"),
+    )
+
+    def test_every_pair_the_review_named_is_refused(self):
+        for file_path, lang in self.REFUSED:
+            reason, message = check_path_lang(file_path, lang, RULES)
+            self.assertEqual(REGION_COLLISION, reason, f"{lang} into {file_path}")
+            self.assertIn("names no region", message)
+
+    def test_the_only_region_of_a_language_still_passes(self):
+        """fr-FR is what fr means and no other French region is written, so
+        the two are one language written at two precisions, not two."""
+        self.assertEqual(OK, check_path_lang("locale/fr-FR/x.voc", "fr", RULES)[0])
+        self.assertEqual(OK, check_path_lang("locale/kab-DZ/x.voc", "kab", RULES)[0])
+
+    def test_both_directions_agree(self):
+        """Whatever passes one way passes the other, because the rule is
+        the same table field read from either side."""
+        for directory, tag in (("fr-FR", "fr"), ("kab-DZ", "kab")):
+            self.assertEqual(OK, check_path_lang(f"locale/{directory}/x.voc", tag, RULES)[0])
+            self.assertEqual(OK, check_path_lang(f"locale/{tag}/x.voc", directory, RULES)[0])
+        for directory, tag in (("pt-PT", "pt"), ("sw-KE", "sw")):
+            self.assertNotEqual(OK, check_path_lang(f"locale/{directory}/x.voc", tag, RULES)[0])
+            self.assertNotEqual(OK, check_path_lang(f"locale/{tag}/x.voc", directory, RULES)[0])
+
+
+@unittest.skipUnless(shutil.which("node"), "node is needed to run the page's own function")
+class TestTableThatDidNotLoad(unittest.TestCase):
+    """A fetch failure is a platform fault, never a missing language."""
+
+    @staticmethod
+    def _run(js: str, *args) -> str:
+        script = (_page_source_named("localePathForLangDetailed", "pathRefusalMessage")
+                  + "\n" + js)
+        out = subprocess.run(["node", "-e", script, *args],
+                             capture_output=True, text=True, check=True)
+        return out.stdout
+
+    def test_no_table_is_not_an_unknown_tag(self):
+        js = ("const a = JSON.parse(process.argv[1]);\n"
+              "process.stdout.write(JSON.stringify(a.map("
+              "(rules) => localePathForLangDetailed('locale/en-US/x.voc', 'pt-PT', undefined, rules))));")
+        # null (the fetch failed), an empty object, and an empty table.
+        got = json.loads(self._run(js, json.dumps([None, {}, {"tags": {}}])))
+        for placed in got:
+            self.assertEqual("", placed["path"])
+            self.assertEqual("table-not-loaded", placed["reason"])
+
+    def test_the_call_site_says_which_fault_it_was(self):
+        js = ("const reasons = JSON.parse(process.argv[1]);\n"
+              "process.stdout.write(JSON.stringify(reasons.map("
+              "(r) => pathRefusalMessage(r, 'pt-PT', ['pt-AO']))));")
+        messages = json.loads(self._run(
+            js, json.dumps(["table-not-loaded", "unknown-tag", "region-collision", "no-locale-root"])))
+        table, unknown, collision, no_root = messages
+        self.assertIn("did not load", table)
+        self.assertIn("our side", table)
+        # The translator must not read a platform fault as their language
+        # being unsupported, or as a repository without a locale tree.
+        self.assertNotIn("not a language", table)
+        self.assertNotEqual(table, unknown)
+        self.assertNotEqual(table, collision)
+        self.assertNotEqual(table, no_root)
+        self.assertIn("pt-AO", collision)
+
+    def test_a_loaded_table_still_places_the_file(self):
+        """The control: the same call with the real table places a path, so
+        the case above cannot pass because the function always refuses."""
+        js = ("const rules = JSON.parse(process.argv[1]);\n"
+              "process.stdout.write(JSON.stringify("
+              "localePathForLangDetailed('locale/en-US/x.voc', 'pt-PT', undefined, rules)));")
+        placed = json.loads(self._run(js, json.dumps(RULES)))
+        self.assertEqual("locale/pt-PT/x.voc", placed["path"])
+        self.assertEqual(OK, placed["reason"])
