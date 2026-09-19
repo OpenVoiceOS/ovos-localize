@@ -211,3 +211,24 @@ def lang_display_name_native(code: str) -> str:
         return lang.display_name(language=lang)
     except (langcodes.tag_parser.LanguageTagError, Exception):
         return code
+
+
+def canonical_lang_spelling(tag: str) -> str:
+    """Return a language tag in its canonical BCP-47 spelling.
+
+    Casing only: no alias is expanded, so ``pt`` stays ``pt`` rather than
+    becoming ``pt-BR``. A script subtag is written in title case
+    (``zh-HANT`` becomes ``zh-Hant``), a region in upper case (``kab-dz``
+    becomes ``kab-DZ``), and a variant stays lower case
+    (``ca-ES-VALENCIA`` becomes ``ca-ES-valencia``).
+
+    Args:
+        tag: A language tag or locale directory name.
+
+    Returns:
+        The canonical spelling, or the input when it cannot be parsed.
+    """
+    try:
+        return langcodes.Language.get(tag.strip()).to_tag()
+    except (langcodes.tag_parser.LanguageTagError, LookupError, ValueError):
+        return tag.strip()
