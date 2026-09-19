@@ -145,6 +145,30 @@ def load_locale_rules(path: str) -> dict:
     return rules
 
 
+def locale_root_index(parts: list) -> int:
+    """Return the index of the locale root whose next segment is the language.
+
+    A tree nests the two roots: ovos-plugin-common-play ships
+    ``ovos_plugin_common_play/ocp/res/locale/en-us/Music.voc``, 699 paths of
+    that shape in the manifests. Taking the first root reads ``locale`` as
+    the language, which refuses a correct submission and makes the page
+    compose a path into a directory called ``locale``. So the root that
+    counts is the innermost one: the last whose own next segment is not
+    another root.
+
+    Args:
+        parts: The path, already split on ``/``.
+
+    Returns:
+        The index of the locale root, or ``-1`` when the path holds none.
+    """
+    for idx in range(len(parts) - 1, -1, -1):
+        if (parts[idx] in LOCALE_ROOTS and len(parts) >= idx + 3
+                and parts[idx + 1] and parts[idx + 1] not in LOCALE_ROOTS):
+            return idx
+    return -1
+
+
 def locale_dir_from_path(file_path: str) -> str | None:
     """Return the language directory segment of a locale resource path.
 
@@ -155,17 +179,12 @@ def locale_dir_from_path(file_path: str) -> str | None:
         The segment after the locale root, or ``None`` when there is none.
     """
     parts = file_path.strip().split("/")
-    for idx, seg in enumerate(parts):
-        if seg in LOCALE_ROOTS and len(parts) >= idx + 3 and parts[idx + 1]:
-            return parts[idx + 1]
-    return None
+    idx = locale_root_index(parts)
+    return parts[idx + 1] if idx != -1 else None
 
 
 def _locale_root_index(parts: list) -> int:
-    for idx, seg in enumerate(parts):
-        if seg in LOCALE_ROOTS and len(parts) >= idx + 3 and parts[idx + 1]:
-            return idx
-    return -1
+    return locale_root_index(parts)
 
 
 def compose_locale_path(ref_path: str, target_lang: str, rules: dict,

@@ -26,7 +26,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from ovos_localize.locale_rules import LOCALE_ROOTS, build_locale_rules  # noqa: E402
+from ovos_localize.locale_rules import build_locale_rules, locale_root_index  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -55,10 +55,11 @@ def collect_tags(root: Path) -> set:
             for lang, entry in (file_data.get("langs") or {}).items():
                 tags.add(lang)
                 parts = str(entry.get("file_path") or "").split("/")
-                for idx, seg in enumerate(parts):
-                    if seg in LOCALE_ROOTS and len(parts) >= idx + 3 and parts[idx + 1]:
-                        tags.add(parts[idx + 1])
-                        break
+                # The same root selection the guard and the page use, so a
+                # nested res/locale tree does not record "locale" as a tag.
+                idx = locale_root_index(parts)
+                if idx != -1:
+                    tags.add(parts[idx + 1])
 
     extra = root / "config" / "extra_language_tags.txt"
     if extra.is_file():

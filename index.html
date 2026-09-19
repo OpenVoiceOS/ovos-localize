@@ -789,8 +789,18 @@
       }
       if (!refPath || !targetLang) return noRoot;
       const parts = String(refPath).split('/');
-      const idx = parts.findIndex((seg, i) =>
-        (seg === 'locale' || seg === 'res') && parts.length >= i + 3 && parts[i + 1]);
+      // The innermost locale root, matching locale_root_index in
+      // ovos_localize/locale_rules.py. A tree nests the two roots
+      // (ocp/res/locale/en-us/Music.voc), and taking the first would read
+      // 'locale' as the language.
+      const isRoot = (seg) => seg === 'locale' || seg === 'res';
+      let idx = -1;
+      for (let i = parts.length - 1; i >= 0; i--) {
+        if (isRoot(parts[i]) && parts.length >= i + 3 && parts[i + 1] && !isRoot(parts[i + 1])) {
+          idx = i;
+          break;
+        }
+      }
       if (idx === -1) return noRoot;
       const rule = table[String(targetLang).trim().toLowerCase()];
       if (!rule) return { path: '', reason: 'unknown-tag', collidesWith: [] };

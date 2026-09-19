@@ -28,6 +28,7 @@ from ovos_localize.locale_rules import (
     check_path_lang,
     compose_locale_path,
     load_locale_rules,
+    locale_dir_from_path,
 )
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -46,6 +47,8 @@ REFERENCES = (
     "locale/kab/x.voc",
     "locale/pt/x.voc",
     "locale/sw/x.voc",
+    # A nested root: ovos-plugin-common-play ships 699 paths of this shape.
+    "ovos_plugin_common_play/ocp/res/locale/en-us/Music.voc",
 )
 
 # Tags that carry a script or a variant subtag. None is in the enabled list
@@ -184,8 +187,7 @@ class TestPageAgreesWithGuard(unittest.TestCase):
             twin = compose_locale_path(ref, tag, RULES)
             self.assertEqual(twin["path"], placed["path"], f"{ref} + {tag}")
             self.assertEqual(twin["reason"], placed["reason"], f"{ref} + {tag}")
-            self.assertEqual(twin["rivals"] if placed["reason"] == REGION_COLLISION else
-                             placed["collidesWith"], placed["collidesWith"], f"{ref} + {tag}")
+            self.assertEqual(twin["rivals"], placed["collidesWith"], f"{ref} + {tag}")
 
     def test_the_guard_accepts_every_path_the_page_places(self):
         for (ref, tag), placed in zip(self.cases, self.page):
@@ -254,9 +256,6 @@ class TestBuildIsDeterministic(unittest.TestCase):
             {k: v["canonical"] for k, v in other["tags"].items()},
         )
 
-
-if __name__ == "__main__":
-    unittest.main()
 
 
 class TestRegionLessTagIntoANamedDirectory(unittest.TestCase):
@@ -351,3 +350,40 @@ class TestTableThatDidNotLoad(unittest.TestCase):
         placed = json.loads(self._run(js, json.dumps(RULES)))
         self.assertEqual("locale/pt-PT/x.voc", placed["path"])
         self.assertEqual(OK, placed["reason"])
+
+
+
+class TestNestedLocaleRoot(unittest.TestCase):
+    """res/locale/<language>/ is a real tree, not a hypothetical one.
+
+    ovos-plugin-common-play ships 699 manifest paths of that shape. Reading
+    the first root instead of the innermost makes 'locale' the language
+    directory: the guard refuses a correct submission, the page composes a
+    path into a directory called 'locale', and the generator records
+    'locale' as a language tag.
+    """
+
+    REAL_PATH = "ovos_plugin_common_play/ocp/res/locale/en-us/Music.voc"
+
+    def test_the_language_directory_is_the_innermost_one(self):
+        self.assertEqual("en-us", locale_dir_from_path(self.REAL_PATH))
+        self.assertEqual("en-US", locale_dir_from_path("res/en-US/x.voc"))
+        self.assertEqual("en-US", locale_dir_from_path("locale/en-US/x.voc"))
+
+    def test_the_guard_accepts_the_shipped_path(self):
+        self.assertEqual(OK, check_path_lang(self.REAL_PATH, "en-US", RULES)[0])
+
+    def test_the_page_places_a_sibling_of_it(self):
+        placed = compose_locale_path(self.REAL_PATH, "pt-PT", RULES)
+        self.assertEqual(
+            "ovos_plugin_common_play/ocp/res/locale/pt-pt/Music.voc", placed["path"])
+        self.assertEqual(OK, check_path_lang(placed["path"], "pt-PT", RULES)[0])
+
+    def test_locale_is_not_a_language(self):
+        """The generator harvested the directory name as a tag, so the
+        shipped table carried an entry called 'locale'."""
+        self.assertNotIn("locale", RULES["tags"])
+        self.assertNotIn("res", RULES["tags"])
+
+if __name__ == "__main__":
+    unittest.main()
