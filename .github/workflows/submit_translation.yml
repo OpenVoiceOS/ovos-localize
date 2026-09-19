@@ -183,7 +183,8 @@ jobs:
           FILE_PATH: ${{ steps.parse.outputs.file_path }}
           LANG_TAG: ${{ steps.parse.outputs.lang }}
         run: |
-          if ! ovos-localize-check-path-lang "$FILE_PATH" --lang "$LANG_TAG"; then
+          if ! ovos-localize-check-path-lang "$FILE_PATH" --lang "$LANG_TAG" \
+               --languages-file .ovos-localize/data/coverage.json; then
             echo "path_lang_mismatch=true" >> "$GITHUB_OUTPUT"
             exit 1
           fi
@@ -300,6 +301,18 @@ jobs:
           script: |
             const prUrl = '${{ steps.pr.outputs.pr_url }}';
             const issueNumber = ${{ matrix.issue }};
+            // A re-run of a submission that was refused for its path now
+            // passes, so the label that reported the refusal comes off.
+            try {
+              await github.rest.issues.removeLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber,
+                name: 'invalid-file-path'
+              });
+            } catch (error) {
+              if (error.status !== 404) throw error;
+            }
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
