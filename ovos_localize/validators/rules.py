@@ -33,6 +33,32 @@ _SLOT_ONLY_RE = re.compile(r"^(?:\s|[^\w{}]|\{\w+\})+$")
 _SLOT_TOKEN_RE = re.compile(r"\{[^{}]*\}")
 
 
+def strip_groups(text: str) -> str:
+    """Return ``text`` with every balanced ``()`` and ``[]`` group removed.
+
+    A nested group goes with its parent, so what is left is the text no
+    group encloses.
+
+    Args:
+        text: One template line.
+
+    Returns:
+        The text outside every group.
+    """
+    out, depth = [], 0
+    for char in text:
+        if char in "([":
+            depth += 1
+        elif char in ")]":
+            if depth:
+                depth -= 1
+            else:
+                out.append(char)
+        elif depth == 0:
+            out.append(char)
+    return "".join(out)
+
+
 def check_slot_only_lines(translated: ParsedFile) -> list[ValidationIssue]:
     """Reject .entity examples made up entirely of {slot} tokens.
 
@@ -119,7 +145,8 @@ def validate_intent(
     Rules:
     - MIN_LINES: At least 10 expanded sentences (after bracket expansion).
     - SLOT_PRESERVATION: All source {slots} must appear in translation.
-    - ALTERNATIVE_SYNTAX: All (a|b) groups must be valid.
+    - ALTERNATIVE_SYNTAX: All (a|b) groups must be valid, and a pipe
+      outside every group is literal text (OVOS-INTENT-1 §3.1, §3.2).
     - LEXICAL_DIVERSITY: Diversity score >= 0.25.
 
     Args:
@@ -170,6 +197,21 @@ def validate_intent(
                 rule_name="intent.unbalanced_parens",
                 severity="error",
                 message="Unbalanced parentheses in alternative syntax.",
+                line_number=ln.line_number,
+            ))
+        # OVOS-INTENT-1 §3.2: "Parentheses enclose branches separated by
+        # the pipe |", and §3.3 makes "[x] exactly equivalent to the
+        # alternative group (x|)". A pipe anywhere else falls under §3.1,
+        # "Any run of characters that is not a grammar token is literal
+        # text", so the expander answers the line back with the pipe in it
+        # and the sample is one no speaker says
+        # (ovos-skill-mark1-ctrl#76, ovos-skill-weather#271).
+        if "|" in strip_groups(ln.text):
+            issues.append(ValidationIssue(
+                rule_name="intent.pipe_outside_group",
+                severity="error",
+                message="Pipe outside every group is literal text, not an alternative: "
+                        f"{ln.text!r}",
                 line_number=ln.line_number,
             ))
         # Check for alternatives without pipe
@@ -245,6 +287,7 @@ def validate_dialog(
     - VARIABLE_PRESERVATION: All source {variables} must appear.
     - NO_EXTRA_VARIABLES: No variables that aren't in source.
     - MIN_VARIANTS: At least 2 variant lines recommended.
+    - ALTERNATIVE_SYNTAX: a pipe outside every group is literal text.
 
     Args:
         translated: Parsed translated dialog file.
@@ -279,6 +322,19 @@ def validate_dialog(
                 rule_name="dialog.extra_variables",
                 severity="error",
                 message=f"Extra variables not in source: {{{', '.join(sorted(extra))}}}",
+            ))
+
+    # A dialog is a template too: the renderer expands its groups, so the
+    # same §3.1/§3.2 reading applies and a pipe outside every group is
+    # spoken aloud as a pipe.
+    for ln in content:
+        if "|" in strip_groups(ln.text):
+            issues.append(ValidationIssue(
+                rule_name="dialog.pipe_outside_group",
+                severity="error",
+                message="Pipe outside every group is literal text, not an alternative: "
+                        f"{ln.text!r}",
+                line_number=ln.line_number,
             ))
 
     return issues

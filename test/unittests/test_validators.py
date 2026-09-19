@@ -294,3 +294,63 @@ class TestValidateFileDispatch:
         parsed = ParsedFile(path="test", file_type="unknown_type")
         issues = validate_file(parsed)
         assert issues == []
+
+
+class TestPipeOutsideGroup:
+    """OVOS-INTENT-1 §3.1 and §3.2: a pipe is a grammar token only inside a
+    group.
+
+    §3.2 reads "Parentheses enclose branches separated by the pipe |", and
+    §3.3 makes "[x] exactly equivalent to the alternative group (x|)".
+    Anywhere else §3.1 applies: "Any run of characters that is not a grammar
+    token is literal text". The expander agrees, and answers
+    ``expand("turn on|switch on the lights")`` with that one line, pipe and
+    all, so the sample trains the engine on words no speaker says.
+
+    The real lines are from ovos-skill-mark1-ctrl#76 (ca-ES) and
+    ovos-skill-weather#271 (de-DE, es-ES).
+    """
+
+    def test_the_mark1_ctrl_line_is_an_error(self) -> None:
+        parsed = IntentParser().parse_content(
+            "enfosqueix|atenua una mica\nabaixa la brillantor\n")
+        issues = validate_intent(parsed)
+        hit = [i for i in issues if i.rule_name == "intent.pipe_outside_group"]
+        assert len(hit) == 1
+        assert hit[0].severity == "error"
+        assert hit[0].line_number == 1
+
+    def test_a_line_that_ends_in_a_pipe_is_an_error(self) -> None:
+        # weather#271: a legal group earlier in the same line does not make
+        # the trailing pipe legal.
+        parsed = IntentParser().parse_content(
+            "Se (espera|prevé) nieve en el pronóstico|\nva a nevar\n")
+        issues = validate_intent(parsed)
+        assert any(i.rule_name == "intent.pipe_outside_group" for i in issues)
+
+    def test_a_pipe_inside_parentheses_is_grammar(self) -> None:
+        parsed = IntentParser().parse_content(
+            "(enfosqueix|atenua) una mica\nabaixa la brillantor\n")
+        assert not [i for i in validate_intent(parsed)
+                    if i.rule_name == "intent.pipe_outside_group"]
+
+    def test_a_pipe_inside_brackets_is_grammar(self) -> None:
+        # §3.3: [x] is exactly equivalent to (x|).
+        parsed = IntentParser().parse_content(
+            "how humid is it [right now|today]\nhow humid is it\n")
+        assert not [i for i in validate_intent(parsed)
+                    if i.rule_name == "intent.pipe_outside_group"]
+
+    def test_a_dialog_line_is_an_error_too(self) -> None:
+        # A dialog is expanded by the renderer, so the same reading applies.
+        parsed = DialogParser().parse_content("bom dia|\nboa tarde\n")
+        issues = validate_dialog(parsed)
+        hit = [i for i in issues if i.rule_name == "dialog.pipe_outside_group"]
+        assert len(hit) == 1
+        assert hit[0].severity == "error"
+
+    def test_a_nested_group_keeps_its_pipes(self) -> None:
+        parsed = IntentParser().parse_content(
+            "(turn (on|off)|switch (on|off)) the lights\nlights\n")
+        assert not [i for i in validate_intent(parsed)
+                    if i.rule_name == "intent.pipe_outside_group"]
