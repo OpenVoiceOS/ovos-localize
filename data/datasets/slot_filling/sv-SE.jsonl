@@ -794,15 +794,14 @@
 {"lang": "sv-SE", "skill": "ovos-skill-wikipedia", "intent": "wiki.intent", "template": "vad står det på (wiki|wikipedia) om {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-wikipedia", "intent": "wiki.intent", "template": "vem (är|var) {query} (på|enligt) (wiki|wikipedia)", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-wikipedia", "intent": "wiki.intent", "template": "(wiki|wikipedia) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "sv-SE", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "fråga vargen {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "sv-SE", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "fråga wolfram om {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "sv-SE", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "fråga wolfram alpha om {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "sv-SE", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "sök vargen efter {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "sv-SE", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "sök wolfram alpha efter {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "sv-SE", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "sök wolfram efter {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "sv-SE", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "vad säger vargen om {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "sv-SE", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "vad säger wolfram alpha om {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "sv-SE", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "vad säger wolfram om {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "fråga (wolfram|wolfram alpha|vargen|wolfie) [om] {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "berätta för (wolfram|wolfram alpha|vargen|wolfie) [om] {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "fråga (wolfram|wolfram alpha|vargen|wolfie) [om|efter] {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "sök (wolfram|wolfram alpha|vargen|wolfie) efter {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "sök [efter] {query} (på|med|via|i) (wolfram|wolfram alpha|vargen|wolfie)", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "slå upp {query} (på|med|via|i) (wolfram|wolfram alpha|vargen|wolfie)", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "vad säger (wolfram|wolfram alpha|vargen|wolfie) om {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "enligt (wolfram|wolfram alpha|vargen|wolfie) {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-word-of-the-day", "intent": "past_word.intent", "template": "vad var ordet för dagen den {date}", "slots": ["date"], "entity_values": {"date": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "sök i WordNet efter {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "fråga WordNet om {word}", "slots": ["word"], "entity_values": {"word": []}}

@@ -6377,15 +6377,14 @@
 {"lang": "en-US", "skill": "ovos-skill-wikipedia", "intent": "wiki.intent", "template": "what's on (wiki|wikipedia) about {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "en-US", "skill": "ovos-skill-wikipedia", "intent": "wiki.intent", "template": "who (is|was) {query} (on|according to) (wiki|wikipedia)", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "en-US", "skill": "ovos-skill-wikipedia", "intent": "wiki.intent", "template": "(wiki|wikipedia) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "en-US", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "ask the wolf {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "en-US", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "ask the wolfram about {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "en-US", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "ask the wolfram alpha about {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "en-US", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "search the wolf for {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "en-US", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "search wolfram alpha for {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "en-US", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "search wolfram for {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "en-US", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "what does the wolf say about {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "en-US", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "what does wolfram alpha say about {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "en-US", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "what does wolfram say about {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "en-US", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "ask (wolfram|the wolfram|wolfram alpha|the wolfram alpha|the wolf|wolfie) [about] {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "en-US", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "tell (wolfram|the wolfram|wolfram alpha|the wolfram alpha|the wolf|wolfie) [about] {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "en-US", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "query (wolfram|the wolfram|wolfram alpha|the wolfram alpha|the wolf|wolfie) [about|for] {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "en-US", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "search (wolfram|the wolfram|wolfram alpha|the wolfram alpha|the wolf|wolfie) for {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "en-US", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "search [for] {query} (on|with|using|in) (wolfram|the wolfram|wolfram alpha|the wolfram alpha|the wolf|wolfie)", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "en-US", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "look up {query} (on|with|using|in) (wolfram|the wolfram|wolfram alpha|the wolfram alpha|the wolf|wolfie)", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "en-US", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "what does (wolfram|the wolfram|wolfram alpha|the wolfram alpha|the wolf|wolfie) say about {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "en-US", "skill": "ovos-skill-wolfie", "intent": "search_wolfie.intent", "template": "according to (wolfram|the wolfram|wolfram alpha|the wolfram alpha|the wolf|wolfie) {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "en-US", "skill": "ovos-skill-word-of-the-day", "intent": "past_word.intent", "template": "what was the word of the day on {date}", "slots": ["date"], "entity_values": {"date": []}}
 {"lang": "en-US", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "ask (word net|wordnet) about {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "en-US", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "search (word net|wordnet) for {word}", "slots": ["word"], "entity_values": {"word": []}}
