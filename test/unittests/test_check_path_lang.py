@@ -66,6 +66,41 @@ class TestCli(unittest.TestCase):
             self.assertEqual(SETUP_ERROR, check_main(
                 [SKILL_OK[0], "--lang", SKILL_OK[1], "--rules-file", str(path)]))
 
+    def test_an_empty_tags_table_is_a_setup_error_not_a_bad_path(self):
+        """A table with no tags answers unknown-tag for every submission.
+
+        Read as exit 1 that labels each one invalid-file-path and refuses a
+        correct translation for a fault of ours, so it must exit 3 instead.
+        """
+        with TemporaryDirectory() as tmp:
+            path = Path(tmp) / "rules.json"
+            path.write_text(json.dumps({"tags": {}}), encoding="utf-8")
+            self.assertEqual(SETUP_ERROR, check_main(
+                [SKILL_OK[0], "--lang", SKILL_OK[1], "--rules-file", str(path)]))
+
+    def test_a_tag_entry_missing_a_field_is_a_setup_error(self):
+        """A half-written entry fails where it is read, one answer too late."""
+        with TemporaryDirectory() as tmp:
+            path = Path(tmp) / "rules.json"
+            path.write_text(
+                json.dumps({"tags": {"kab-dz": {"canonical": "kab-DZ"}}}),
+                encoding="utf-8")
+            self.assertEqual(SETUP_ERROR, check_main(
+                [SKILL_OK[0], "--lang", SKILL_OK[1], "--rules-file", str(path)]))
+
+    def test_a_tag_entry_that_is_not_an_object_is_a_setup_error(self):
+        with TemporaryDirectory() as tmp:
+            path = Path(tmp) / "rules.json"
+            path.write_text(json.dumps({"tags": {"kab-dz": "kab-DZ"}}),
+                            encoding="utf-8")
+            self.assertEqual(SETUP_ERROR, check_main(
+                [SKILL_OK[0], "--lang", SKILL_OK[1], "--rules-file", str(path)]))
+
+    def test_the_committed_table_still_loads(self):
+        """The new validation must not refuse the real table."""
+        self.assertEqual(0, check_main(
+            [SKILL_OK[0], "--lang", SKILL_OK[1], "--rules-file", RULES_FILE]))
+
     def test_the_setup_error_code_is_neither_pass_nor_refusal(self):
         self.assertNotIn(SETUP_ERROR, (0, 1))
 

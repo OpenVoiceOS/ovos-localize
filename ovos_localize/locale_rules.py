@@ -50,6 +50,10 @@ REGION_COLLISION = "region-collision"
 BAD_SPELLING = "bad-spelling"
 DIFFERENT_LANGUAGE = "different-language"
 
+# Every field of a tag entry that a reader of the table uses. A table missing
+# one of them is not usable, whatever else it holds.
+TAG_FIELDS = ("canonical", "primary", "bare_ok", "rivals")
+
 
 def _primary(tag: str) -> str:
     return canonical_lang_spelling(tag).split("-")[0].lower()
@@ -136,12 +140,28 @@ def load_locale_rules(path: str) -> dict:
 
     Raises:
         OSError: The file is missing or unreadable.
-        ValueError: The file is not the table.
+        ValueError: The file is not the table, holds no tags, or holds an
+            entry that is missing a field.
     """
     with open(path, encoding="utf-8") as handle:
         rules = json.load(handle)
     if not isinstance(rules, dict) or not isinstance(rules.get("tags"), dict):
         raise ValueError(f"{path} is not a locale-rules table")
+    # An empty or half-written table answers UNKNOWN_TAG for every tag there
+    # is. The caller cannot tell that from a translator who wrote a real
+    # unknown tag, so the workflow would label a correct submission
+    # invalid-file-path and refuse it for a fault of our own. A broken table
+    # is a setup error, and it is read as one here, once, before any answer
+    # is given.
+    if not rules["tags"]:
+        raise ValueError(f"{path} holds no tags")
+    for spelling, entry in rules["tags"].items():
+        if not isinstance(entry, dict):
+            raise ValueError(f"{path}: entry for {spelling!r} is not an object")
+        missing = [field for field in TAG_FIELDS if field not in entry]
+        if missing:
+            raise ValueError(
+                f"{path}: entry for {spelling!r} is missing {', '.join(missing)}")
     return rules
 
 
