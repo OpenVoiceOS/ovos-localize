@@ -14,6 +14,9 @@ from ovos_localize.parsers.vocab import VocabParser
 PARSERS = {
     ".intent": IntentParser,
     ".voc": VocabParser,
+    # OVOS-INTENT-2 §4.3: `.entity`, `.voc` and `.blacklist` share the
+    # slot-free template format and a loader parses all three the same way.
+    ".blacklist": VocabParser,
     ".dialog": DialogParser,
     ".entity": EntityParser,
     ".rx": RegexParser,

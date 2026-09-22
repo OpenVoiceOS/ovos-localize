@@ -1,6 +1,7 @@
 """Unit tests for validation rules."""
 
 
+from ovos_localize.parsers import get_parser
 from ovos_localize.parsers.dialog import DialogParser
 from ovos_localize.parsers.entity import EntityParser
 from ovos_localize.parsers.intent import IntentParser
@@ -354,3 +355,59 @@ class TestPipeOutsideGroup:
             "(turn (on|off)|switch (on|off)) the lights\nlights\n")
         assert not [i for i in validate_intent(parsed)
                     if i.rule_name == "intent.pipe_outside_group"]
+
+
+class TestPipeOutsideGroupInSlotFreeRoles:
+    """OVOS-INTENT-2 §3 makes every surviving line of a line-oriented role
+    one template, and §4.3 gives `.entity`, `.voc` and `.blacklist` the same
+    slot-free template format. So the §3.1/§3.2 reading of a bare pipe holds
+    in those three roles as well: `plata|argent` is one value with a pipe in
+    it, not two values.
+
+    The real lines are from ovos-skill-mark1-ctrl `locale/ca-ES/
+    brightness.entity` line 8 and ovos-skill-weather `locale/es-ES/
+    vocabulary/location.voc`, both read on dev.
+    """
+
+    def test_the_mark1_ctrl_entity_line_is_an_error(self) -> None:
+        parsed = EntityParser().parse_content(
+            "20\n50\n75\n100\n20 per cent\n50 per cent\n100 per cent\n"
+            "complet|ple|plena\nmeitat\n")
+        issues = validate_entity(parsed)
+        hit = [i for i in issues if i.rule_name == "entity.pipe_outside_group"]
+        assert len(hit) == 1
+        assert hit[0].severity == "error"
+        assert hit[0].line_number == 8
+
+    def test_the_weather_location_voc_line_is_an_error(self) -> None:
+        # Two shapes on the same file: aliases after a comma, and spaces
+        # around the pipe.
+        parsed = VocabParser().parse_content(
+            "madrid\nLos Ángeles, California|los ángeles|la\n"
+            "Portland, Oregón | Portland\n")
+        hit = [i for i in validate_vocab(parsed)
+               if i.rule_name == "vocab.pipe_outside_group"]
+        assert len(hit) == 2
+        assert [i.line_number for i in hit] == [2, 3]
+
+    def test_a_grouped_entity_line_is_grammar(self) -> None:
+        # The positive control: the same values, written as a group.
+        parsed = EntityParser().parse_content(
+            "20\n50\n75\n100\n20 per cent\n(complet|ple|plena)\nmeitat\n")
+        assert not [i for i in validate_entity(parsed)
+                    if i.rule_name == "entity.pipe_outside_group"]
+
+    def test_values_on_their_own_lines_are_grammar(self) -> None:
+        parsed = VocabParser().parse_content("madrid\nlos ángeles\nla\n")
+        assert not [i for i in validate_vocab(parsed)
+                    if i.rule_name == "vocab.pipe_outside_group"]
+
+    def test_a_blacklist_file_is_parsed_and_validated(self) -> None:
+        # OVOS-INTENT-2 §4.3: a .blacklist loads as a .voc does, so it needs
+        # the same parser before any rule can read it.
+        assert get_parser("stop.blacklist") is VocabParser
+        parsed = VocabParser().parse_content("para|atura\nsilenci\n")
+        hit = [i for i in validate_vocab(parsed)
+               if i.rule_name == "vocab.pipe_outside_group"]
+        assert len(hit) == 1
+        assert hit[0].line_number == 1

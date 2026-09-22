@@ -59,6 +59,38 @@ def strip_groups(text: str) -> str:
     return "".join(out)
 
 
+def check_pipe_outside_group_lines(
+    translated: ParsedFile, rule_prefix: str
+) -> list[ValidationIssue]:
+    """Report a pipe that no group encloses, one error per line.
+
+    OVOS-INTENT-2 §3 makes each surviving line of a line-oriented role one
+    template, and §4.3 gives `.entity`, `.voc` and `.blacklist` the same
+    slot-free template format. OVOS-INTENT-1 §3.2 reads "Parentheses enclose
+    branches separated by the pipe |", so a pipe elsewhere is literal text
+    (§3.1), and §2 forbids that character as literal input. A line such as
+    `plata|argent` is therefore one value with a pipe in it, not two values.
+
+    Args:
+        translated: Parsed file in an input-direction role.
+        rule_prefix: The role name the rule is reported under.
+
+    Returns:
+        List of validation issues, one per offending line.
+    """
+    issues: list[ValidationIssue] = []
+    for ln in translated.content_lines:
+        if "|" in strip_groups(ln.text):
+            issues.append(ValidationIssue(
+                rule_name=f"{rule_prefix}.pipe_outside_group",
+                severity="error",
+                message="Pipe outside every group is literal text, not an alternative: "
+                        f"{ln.text!r}",
+                line_number=ln.line_number,
+            ))
+    return issues
+
+
 def check_slot_only_lines(translated: ParsedFile) -> list[ValidationIssue]:
     """Reject .entity examples made up entirely of {slot} tokens.
 
@@ -242,9 +274,13 @@ def validate_vocab(
 ) -> list[ValidationIssue]:
     """Validate a translated .voc file.
 
+    A `.blacklist` file has the same role and parser (OVOS-INTENT-2 §4.3).
+
     Rules:
     - MIN_LINES: At least 1 content line.
     - LONG_KEYWORD: Warn if any line has >5 words (probably a sentence).
+    - ALTERNATIVE_SYNTAX: a pipe outside every group is literal text
+      (OVOS-INTENT-1 §3.1, §3.2; OVOS-INTENT-2 §3, §4.3).
 
     Args:
         translated: Parsed translated vocab file.
@@ -273,6 +309,7 @@ def validate_vocab(
                 line_number=ln.line_number,
             ))
 
+    issues.extend(check_pipe_outside_group_lines(translated, "vocab"))
     issues.extend(check_context_bleed_lines(translated))
 
     return issues
@@ -347,6 +384,8 @@ def validate_entity(
 
     Rules:
     - MIN_EXAMPLES: At least 5 examples recommended.
+    - ALTERNATIVE_SYNTAX: a pipe outside every group is literal text
+      (OVOS-INTENT-1 §3.1, §3.2; OVOS-INTENT-2 §3, §4.3).
 
     Args:
         translated: Parsed translated entity file.
@@ -366,6 +405,7 @@ def validate_entity(
         ))
 
     issues.extend(check_slot_only_lines(translated))
+    issues.extend(check_pipe_outside_group_lines(translated, "entity"))
     issues.extend(check_context_bleed_lines(translated))
 
     return issues
