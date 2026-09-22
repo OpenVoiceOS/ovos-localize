@@ -6400,8 +6400,9 @@
 {"lang": "en-US", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "(synonym|synonyms|antonym|antonyms|opposite|opposites) of {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "en-US", "skill": "ovos-skill-worldtales", "intent": "Tales.intent", "template": "(Tell|Read) (me| ) a (good| ) (story|tale|fairy tale) {tale}", "slots": ["tale"], "entity_values": {"tale": []}}
 {"lang": "en-US", "skill": "ovos-skill-worldtales", "intent": "Tales.intent", "template": "(Tell|Read) (me| ) the story {tale}", "slots": ["tale"], "entity_values": {"tale": []}}
-{"lang": "en-US", "skill": "ovos-spec-tools", "intent": "play.intent", "template": "(play|put on) {query}", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "en-US", "skill": "ovos-spec-tools", "intent": "play.intent", "template": "i want to (hear|listen to) {query}", "slots": ["query"], "entity_values": {"query": []}}
+{"lang": "en-US", "skill": "ovos-spec-tools", "intent": "adjacent.intent", "template": "set {hours}{minutes}", "slots": ["hours", "minutes"], "entity_values": {"hours": [], "minutes": []}}
+{"lang": "en-US", "skill": "ovos-spec-tools", "intent": "refs.intent", "template": "<undefined_voc> {name}", "slots": ["name"], "entity_values": {"name": []}}
+{"lang": "en-US", "skill": "ovos-spec-tools", "intent": "repeat.intent", "template": "{x} and {x}", "slots": ["x", "x"], "entity_values": {"x": []}}
 {"lang": "en-US", "skill": "ovos-wordnet-plugin", "intent": "antonym.intent", "template": "what are the antonyms of {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "en-US", "skill": "ovos-wordnet-plugin", "intent": "antonym.intent", "template": "what is a antonym of {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "en-US", "skill": "ovos-wordnet-plugin", "intent": "antonym.intent", "template": "what is the antonym of {word}", "slots": ["word"], "entity_values": {"word": []}}
