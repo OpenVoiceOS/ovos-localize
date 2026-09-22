@@ -741,6 +741,33 @@
     function escapeHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
     function filePathFromEditUrl(u) { const m = u.match(/\/edit\/[^/]+\/(.+)$/); return m ? m[1] : ''; }
 
+    // Locale directory names are not spelled the same way across the fleet:
+    // most tracked repositories use the mixed-case tag (locale/de-DE/), a few
+    // use lowercase (locale/de-de/), and a handful use both. A new locale must
+    // follow the repository it is written into, not one global rule, so read
+    // the case from the skill's own sibling locale directories.
+    function siblingLocaleDirs(skill) {
+      const dirs = new Set();
+      for (const fd of Object.values(skill?.files || {})) {
+        for (const ld of Object.values(fd?.langs || {})) {
+          const m = String(ld?.file_path || '').match(/(?:^|\/)(?:locale|res)\/([^/]+)\//);
+          // Only a tag that carries a region subtag says anything about case:
+          // "pt" is lowercase whichever convention the repository follows.
+          if (m && /^[a-z]{2,3}-[a-z]{2,4}$/i.test(m[1])) dirs.add(m[1]);
+        }
+      }
+      return [...dirs];
+    }
+
+    // The locale directory name to write ``lang`` as in this skill: lowercase
+    // only where every sibling locale is lowercase, otherwise the normalized
+    // mixed-case tag. With no sibling to read, lowercase is the fallback.
+    function localeDirFor(skill, lang) {
+      const dirs = siblingLocaleDirs(skill);
+      if (!dirs.length) return lang.toLowerCase();
+      return dirs.every(d => d === d.toLowerCase()) ? lang.toLowerCase() : lang;
+    }
+
     function progressBar(pct, size = 'sm') {
       const h = size === 'sm' ? 'h-1.5' : 'h-2.5';
       const color = pct >= 80 ? '#22c55e' : pct >= 50 ? '#f59e0b' : '#ef4444';
@@ -2420,7 +2447,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
       // Compute file path for new files — guess from locale convention
       let newFilePath = filePath;
       if (!filePath && srcData?.file_path) {
-        newFilePath = srcData.file_path.replace(new RegExp(`/${srcLang.toLowerCase()}/|/${srcLang}/`, 'i'), `/${lang}/`);
+        newFilePath = srcData.file_path.replace(new RegExp(`/${srcLang.toLowerCase()}/|/${srcLang}/`, 'i'), `/${localeDirFor(skill, lang)}/`);
       }
       if (!newFilePath && isCreateMode) {
         // For brand-new files, guess path from other files in this skill
@@ -2429,9 +2456,9 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         if (anyPath) {
           // e.g. "locale/en-us/vocab/Test.voc" → "locale/{lang}/{fileKey}"
           const localeMatch = anyPath.match(/^(.*\/locale\/)[^/]+\//);
-          if (localeMatch) newFilePath = localeMatch[1] + lang.toLowerCase() + '/' + fileKey;
+          if (localeMatch) newFilePath = localeMatch[1] + localeDirFor(skill, lang) + '/' + fileKey;
         }
-        if (!newFilePath) newFilePath = `locale/${lang.toLowerCase()}/${fileKey}`;
+        if (!newFilePath) newFilePath = `locale/${localeDirFor(skill, lang)}/${fileKey}`;
       }
 
       el.innerHTML = `
