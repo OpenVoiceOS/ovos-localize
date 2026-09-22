@@ -64,6 +64,20 @@ jobs:
     needs: discover
     if: ${{ needs.discover.outputs.matrix != '[]' }}
     runs-on: ubuntu-latest
+    # Every github-script step in this job runs on the default GITHUB_TOKEN,
+    # and each one writes to the issue: removeLabel and update on the success
+    # path, addLabels on the path-mismatch path, createComment on both. With
+    # no block here the token takes the repository default, which can be read
+    # only. Then the mismatch path cannot apply invalid-file-path, and the
+    # success path opens the target pull request and afterwards fails to
+    # comment or close the source issue, leaving it open for the next
+    # dispatch to submit a second time. contents: read is for the checkout of
+    # this repository. The target repository is checked out, and its pull
+    # request opened, with the App token, so this job needs no
+    # pull-requests permission.
+    permissions:
+      contents: read
+      issues: write
     strategy:
       fail-fast: false
       max-parallel: 3
