@@ -86,6 +86,7 @@ class TestIsSafePath:
     @pytest.mark.parametrize("p", [
         "locale/de-DE/a.dialog", "res/en-us/x.voc", "locale/kab/a.intent",
         "skill/locale/pt-PT/settingsmeta.json",
+        "locale/en-US/blacklist/stop.blacklist",
     ])
     def test_safe(self, p):
         assert is_safe_path(p) is True

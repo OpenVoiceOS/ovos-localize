@@ -1,12 +1,15 @@
 """Unit tests for validation rules."""
 
+from pathlib import Path
 
+from ovos_localize.parsers import get_parser
 from ovos_localize.parsers.dialog import DialogParser
 from ovos_localize.parsers.entity import EntityParser
 from ovos_localize.parsers.intent import IntentParser
 from ovos_localize.parsers.regex import RegexParser
 from ovos_localize.parsers.value import ValueParser
 from ovos_localize.parsers.vocab import VocabParser
+from ovos_localize.sync.github import scan_locale_directory
 from ovos_localize.validators.rules import (
     validate_dialog,
     validate_entity,
@@ -294,3 +297,145 @@ class TestValidateFileDispatch:
         parsed = ParsedFile(path="test", file_type="unknown_type")
         issues = validate_file(parsed)
         assert issues == []
+
+
+class TestPipeOutsideGroup:
+    """OVOS-INTENT-1 §3.1 and §3.2: a pipe is a grammar token only inside a
+    group.
+
+    §3.2 reads "Parentheses enclose branches separated by the pipe |", and
+    §3.3 makes "[x] exactly equivalent to the alternative group (x|)".
+    Anywhere else §3.1 applies: "Any run of characters that is not a grammar
+    token is literal text". The expander agrees, and answers
+    ``expand("turn on|switch on the lights")`` with that one line, pipe and
+    all, so the sample trains the engine on words no speaker says.
+
+    The real lines are from ovos-skill-mark1-ctrl#76 (ca-ES) and
+    ovos-skill-weather#271 (de-DE, es-ES).
+    """
+
+    def test_the_mark1_ctrl_line_is_an_error(self) -> None:
+        parsed = IntentParser().parse_content(
+            "enfosqueix|atenua una mica\nabaixa la brillantor\n")
+        issues = validate_intent(parsed)
+        hit = [i for i in issues if i.rule_name == "intent.pipe_outside_group"]
+        assert len(hit) == 1
+        assert hit[0].severity == "error"
+        assert hit[0].line_number == 1
+
+    def test_a_line_that_ends_in_a_pipe_is_an_error(self) -> None:
+        # weather#271: a legal group earlier in the same line does not make
+        # the trailing pipe legal.
+        parsed = IntentParser().parse_content(
+            "Se (espera|prevé) nieve en el pronóstico|\nva a nevar\n")
+        issues = validate_intent(parsed)
+        assert any(i.rule_name == "intent.pipe_outside_group" for i in issues)
+
+    def test_a_pipe_inside_parentheses_is_grammar(self) -> None:
+        parsed = IntentParser().parse_content(
+            "(enfosqueix|atenua) una mica\nabaixa la brillantor\n")
+        assert not [i for i in validate_intent(parsed)
+                    if i.rule_name == "intent.pipe_outside_group"]
+
+    def test_a_pipe_inside_brackets_is_grammar(self) -> None:
+        # §3.3: [x] is exactly equivalent to (x|).
+        parsed = IntentParser().parse_content(
+            "how humid is it [right now|today]\nhow humid is it\n")
+        assert not [i for i in validate_intent(parsed)
+                    if i.rule_name == "intent.pipe_outside_group"]
+
+    def test_a_dialog_line_is_an_error_too(self) -> None:
+        # A dialog is expanded by the renderer, so the same reading applies.
+        parsed = DialogParser().parse_content("bom dia|\nboa tarde\n")
+        issues = validate_dialog(parsed)
+        hit = [i for i in issues if i.rule_name == "dialog.pipe_outside_group"]
+        assert len(hit) == 1
+        assert hit[0].severity == "error"
+
+    def test_a_nested_group_keeps_its_pipes(self) -> None:
+        parsed = IntentParser().parse_content(
+            "(turn (on|off)|switch (on|off)) the lights\nlights\n")
+        assert not [i for i in validate_intent(parsed)
+                    if i.rule_name == "intent.pipe_outside_group"]
+
+
+class TestPipeOutsideGroupInSlotFreeRoles:
+    """OVOS-INTENT-2 §3 makes every surviving line of a line-oriented role
+    one template, and §4.3 gives `.entity`, `.voc` and `.blacklist` the same
+    slot-free template format. So the §3.1/§3.2 reading of a bare pipe holds
+    in those three roles as well: `plata|argent` is one value with a pipe in
+    it, not two values.
+
+    The real lines are from ovos-skill-mark1-ctrl `locale/ca-ES/
+    brightness.entity` line 8 and ovos-skill-weather `locale/es-ES/
+    vocabulary/location.voc`, both read on dev.
+    """
+
+    def test_the_mark1_ctrl_entity_line_is_an_error(self) -> None:
+        parsed = EntityParser().parse_content(
+            "20\n50\n75\n100\n20 per cent\n50 per cent\n100 per cent\n"
+            "complet|ple|plena\nmeitat\n")
+        issues = validate_entity(parsed)
+        hit = [i for i in issues if i.rule_name == "entity.pipe_outside_group"]
+        assert len(hit) == 1
+        assert hit[0].severity == "error"
+        assert hit[0].line_number == 8
+
+    def test_the_weather_location_voc_line_is_an_error(self) -> None:
+        # Two shapes on the same file: aliases after a comma, and spaces
+        # around the pipe.
+        parsed = VocabParser().parse_content(
+            "madrid\nLos Ángeles, California|los ángeles|la\n"
+            "Portland, Oregón | Portland\n")
+        hit = [i for i in validate_vocab(parsed)
+               if i.rule_name == "vocab.pipe_outside_group"]
+        assert len(hit) == 2
+        assert [i.line_number for i in hit] == [2, 3]
+
+    def test_a_grouped_entity_line_is_grammar(self) -> None:
+        # The positive control: the same values, written as a group.
+        parsed = EntityParser().parse_content(
+            "20\n50\n75\n100\n20 per cent\n(complet|ple|plena)\nmeitat\n")
+        assert not [i for i in validate_entity(parsed)
+                    if i.rule_name == "entity.pipe_outside_group"]
+
+    def test_values_on_their_own_lines_are_grammar(self) -> None:
+        parsed = VocabParser().parse_content("madrid\nlos ángeles\nla\n")
+        assert not [i for i in validate_vocab(parsed)
+                    if i.rule_name == "vocab.pipe_outside_group"]
+
+    def test_a_blacklist_file_is_parsed_and_validated(self) -> None:
+        # OVOS-INTENT-2 §4.3: a .blacklist loads as a .voc does, so it needs
+        # the same parser before any rule can read it.
+        assert get_parser("stop.blacklist") is VocabParser
+        parsed = VocabParser().parse_content("para|atura\nsilenci\n")
+        hit = [i for i in validate_vocab(parsed)
+               if i.rule_name == "vocab.pipe_outside_group"]
+        assert len(hit) == 1
+        assert hit[0].line_number == 1
+
+    def test_a_blacklist_file_is_reached_by_the_scanner(
+        self, tmp_path: Path
+    ) -> None:
+        """A .blacklist file must be scanned, not only parsed on demand.
+
+        scan_locale_directory drives both the CLI and the sync path, and
+        it drops any file whose extension it does not recognize before it
+        ever reaches get_parser.
+        """
+        blacklist_dir = tmp_path / "locale" / "ca-ES" / "blacklist"
+        blacklist_dir.mkdir(parents=True)
+        (blacklist_dir / "stop.blacklist").write_text("para|atura\nsilenci\n")
+
+        scanned_files, _ = scan_locale_directory(str(tmp_path / "locale"))
+
+        blacklist_scans = [f for f in scanned_files
+                            if f.relative_path.endswith(".blacklist")]
+        assert len(blacklist_scans) == 1
+        scanned = blacklist_scans[0]
+        assert scanned.parsed is not None
+
+        issues = validate_file(scanned.parsed)
+        hit = [i for i in issues if i.rule_name == "vocab.pipe_outside_group"]
+        assert len(hit) == 1
+        assert hit[0].line_number == 1

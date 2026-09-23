@@ -33,6 +33,64 @@ _SLOT_ONLY_RE = re.compile(r"^(?:\s|[^\w{}]|\{\w+\})+$")
 _SLOT_TOKEN_RE = re.compile(r"\{[^{}]*\}")
 
 
+def strip_groups(text: str) -> str:
+    """Return ``text`` with every balanced ``()`` and ``[]`` group removed.
+
+    A nested group goes with its parent, so what is left is the text no
+    group encloses.
+
+    Args:
+        text: One template line.
+
+    Returns:
+        The text outside every group.
+    """
+    out, depth = [], 0
+    for char in text:
+        if char in "([":
+            depth += 1
+        elif char in ")]":
+            if depth:
+                depth -= 1
+            else:
+                out.append(char)
+        elif depth == 0:
+            out.append(char)
+    return "".join(out)
+
+
+def check_pipe_outside_group_lines(
+    translated: ParsedFile, rule_prefix: str
+) -> list[ValidationIssue]:
+    """Report a pipe that no group encloses, one error per line.
+
+    OVOS-INTENT-2 §3 makes each surviving line of a line-oriented role one
+    template, and §4.3 gives `.entity`, `.voc` and `.blacklist` the same
+    slot-free template format. OVOS-INTENT-1 §3.2 reads "Parentheses enclose
+    branches separated by the pipe |", so a pipe elsewhere is literal text
+    (§3.1), and §2 forbids that character as literal input. A line such as
+    `plata|argent` is therefore one value with a pipe in it, not two values.
+
+    Args:
+        translated: Parsed file in an input-direction role.
+        rule_prefix: The role name the rule is reported under.
+
+    Returns:
+        List of validation issues, one per offending line.
+    """
+    issues: list[ValidationIssue] = []
+    for ln in translated.content_lines:
+        if "|" in strip_groups(ln.text):
+            issues.append(ValidationIssue(
+                rule_name=f"{rule_prefix}.pipe_outside_group",
+                severity="error",
+                message="Pipe outside every group is literal text, not an alternative: "
+                        f"{ln.text!r}",
+                line_number=ln.line_number,
+            ))
+    return issues
+
+
 def check_slot_only_lines(translated: ParsedFile) -> list[ValidationIssue]:
     """Reject .entity examples made up entirely of {slot} tokens.
 
@@ -119,7 +177,8 @@ def validate_intent(
     Rules:
     - MIN_LINES: At least 10 expanded sentences (after bracket expansion).
     - SLOT_PRESERVATION: All source {slots} must appear in translation.
-    - ALTERNATIVE_SYNTAX: All (a|b) groups must be valid.
+    - ALTERNATIVE_SYNTAX: All (a|b) groups must be valid, and a pipe
+      outside every group is literal text (OVOS-INTENT-1 §3.1, §3.2).
     - LEXICAL_DIVERSITY: Diversity score >= 0.25.
 
     Args:
@@ -172,6 +231,21 @@ def validate_intent(
                 message="Unbalanced parentheses in alternative syntax.",
                 line_number=ln.line_number,
             ))
+        # OVOS-INTENT-1 §3.2: "Parentheses enclose branches separated by
+        # the pipe |", and §3.3 makes "[x] exactly equivalent to the
+        # alternative group (x|)". A pipe anywhere else falls under §3.1,
+        # "Any run of characters that is not a grammar token is literal
+        # text", so the expander answers the line back with the pipe in it
+        # and the sample is one no speaker says
+        # (ovos-skill-mark1-ctrl#76, ovos-skill-weather#271).
+        if "|" in strip_groups(ln.text):
+            issues.append(ValidationIssue(
+                rule_name="intent.pipe_outside_group",
+                severity="error",
+                message="Pipe outside every group is literal text, not an alternative: "
+                        f"{ln.text!r}",
+                line_number=ln.line_number,
+            ))
         # Check for alternatives without pipe
         for match in re.finditer(r"\(([^)]+)\)", ln.text):
             group = match.group(1)
@@ -200,9 +274,13 @@ def validate_vocab(
 ) -> list[ValidationIssue]:
     """Validate a translated .voc file.
 
+    A `.blacklist` file has the same role and parser (OVOS-INTENT-2 §4.3).
+
     Rules:
     - MIN_LINES: At least 1 content line.
     - LONG_KEYWORD: Warn if any line has >5 words (probably a sentence).
+    - ALTERNATIVE_SYNTAX: a pipe outside every group is literal text
+      (OVOS-INTENT-1 §3.1, §3.2; OVOS-INTENT-2 §3, §4.3).
 
     Args:
         translated: Parsed translated vocab file.
@@ -231,6 +309,7 @@ def validate_vocab(
                 line_number=ln.line_number,
             ))
 
+    issues.extend(check_pipe_outside_group_lines(translated, "vocab"))
     issues.extend(check_context_bleed_lines(translated))
 
     return issues
@@ -245,6 +324,7 @@ def validate_dialog(
     - VARIABLE_PRESERVATION: All source {variables} must appear.
     - NO_EXTRA_VARIABLES: No variables that aren't in source.
     - MIN_VARIANTS: At least 2 variant lines recommended.
+    - ALTERNATIVE_SYNTAX: a pipe outside every group is literal text.
 
     Args:
         translated: Parsed translated dialog file.
@@ -281,6 +361,19 @@ def validate_dialog(
                 message=f"Extra variables not in source: {{{', '.join(sorted(extra))}}}",
             ))
 
+    # A dialog is a template too: the renderer expands its groups, so the
+    # same §3.1/§3.2 reading applies and a pipe outside every group is
+    # spoken aloud as a pipe.
+    for ln in content:
+        if "|" in strip_groups(ln.text):
+            issues.append(ValidationIssue(
+                rule_name="dialog.pipe_outside_group",
+                severity="error",
+                message="Pipe outside every group is literal text, not an alternative: "
+                        f"{ln.text!r}",
+                line_number=ln.line_number,
+            ))
+
     return issues
 
 
@@ -291,6 +384,8 @@ def validate_entity(
 
     Rules:
     - MIN_EXAMPLES: At least 5 examples recommended.
+    - ALTERNATIVE_SYNTAX: a pipe outside every group is literal text
+      (OVOS-INTENT-1 §3.1, §3.2; OVOS-INTENT-2 §3, §4.3).
 
     Args:
         translated: Parsed translated entity file.
@@ -310,6 +405,7 @@ def validate_entity(
         ))
 
     issues.extend(check_slot_only_lines(translated))
+    issues.extend(check_pipe_outside_group_lines(translated, "entity"))
     issues.extend(check_context_bleed_lines(translated))
 
     return issues
