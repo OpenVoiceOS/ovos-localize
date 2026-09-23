@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.1.0a20](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a20) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a19...0.1.0a20)
+
+**Merged pull requests:**
+
+- fix: a submission is written to its own language's locale directory [\#565](https://github.com/OpenVoiceOS/ovos-localize/pull/565) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
+## [0.1.0a19](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a19) (2026-09-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a18...0.1.0a19)
+
+**Merged pull requests:**
+
+- feat\(scripts\): resumable MT gap-fill driver for the intents-translated dataset [\#553](https://github.com/OpenVoiceOS/ovos-localize/pull/553) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+- feat\(scripts\): split \(a|b|c\) alternatives and \[optional\] words before translation [\#519](https://github.com/OpenVoiceOS/ovos-localize/pull/519) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.1.0a18](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a18) (2026-09-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a17...0.1.0a18)
