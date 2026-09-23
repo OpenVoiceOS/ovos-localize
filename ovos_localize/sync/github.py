@@ -96,6 +96,9 @@ _EXT_TO_FILE_TYPE: dict[str, FileType] = {
     ".entity": FileType.ENTITY,
     ".rx": FileType.REGEX,
     ".value": FileType.VALUE,
+    # OVOS-INTENT-2 §4.3: `.blacklist` is syntactically and semantically
+    # identical to `.voc`/`.entity` and loads the same way.
+    ".blacklist": FileType.BLACKLIST,
 }
 
 _EXACT_NAME_TO_FILE_TYPE: dict[str, FileType] = {

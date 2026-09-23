@@ -16,6 +16,7 @@ class FileType(str, enum.Enum):
     ENTITY = "entity"
     REGEX = "rx"
     VALUE = "value"
+    BLACKLIST = "blacklist"
     SKILL_JSON = "skill.json"
     SETTINGS_META = "settingsmeta"
     NOISE_WORDS = "noise_words"

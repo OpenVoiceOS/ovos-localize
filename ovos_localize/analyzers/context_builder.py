@@ -189,6 +189,7 @@ def _file_type_label(ft: FileType) -> str:
         FileType.ENTITY: "Entity (slot examples)",
         FileType.REGEX: "Regex (entity extraction pattern)",
         FileType.VALUE: "Named Value (display → system mapping)",
+        FileType.BLACKLIST: "Blacklist (excluded vocabulary)",
         FileType.SKILL_JSON: "Skill Metadata (JSON)",
         FileType.SETTINGS_META: "Settings Metadata",
         FileType.NOISE_WORDS: "Noise Words (stopwords)",

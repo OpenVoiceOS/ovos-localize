@@ -1,5 +1,6 @@
 """Unit tests for validation rules."""
 
+from pathlib import Path
 
 from ovos_localize.parsers import get_parser
 from ovos_localize.parsers.dialog import DialogParser
@@ -8,6 +9,7 @@ from ovos_localize.parsers.intent import IntentParser
 from ovos_localize.parsers.regex import RegexParser
 from ovos_localize.parsers.value import ValueParser
 from ovos_localize.parsers.vocab import VocabParser
+from ovos_localize.sync.github import scan_locale_directory
 from ovos_localize.validators.rules import (
     validate_dialog,
     validate_entity,
@@ -409,5 +411,31 @@ class TestPipeOutsideGroupInSlotFreeRoles:
         parsed = VocabParser().parse_content("para|atura\nsilenci\n")
         hit = [i for i in validate_vocab(parsed)
                if i.rule_name == "vocab.pipe_outside_group"]
+        assert len(hit) == 1
+        assert hit[0].line_number == 1
+
+    def test_a_blacklist_file_is_reached_by_the_scanner(
+        self, tmp_path: Path
+    ) -> None:
+        """A .blacklist file must be scanned, not only parsed on demand.
+
+        scan_locale_directory drives both the CLI and the sync path, and
+        it drops any file whose extension it does not recognize before it
+        ever reaches get_parser.
+        """
+        blacklist_dir = tmp_path / "locale" / "ca-ES" / "blacklist"
+        blacklist_dir.mkdir(parents=True)
+        (blacklist_dir / "stop.blacklist").write_text("para|atura\nsilenci\n")
+
+        scanned_files, _ = scan_locale_directory(str(tmp_path / "locale"))
+
+        blacklist_scans = [f for f in scanned_files
+                            if f.relative_path.endswith(".blacklist")]
+        assert len(blacklist_scans) == 1
+        scanned = blacklist_scans[0]
+        assert scanned.parsed is not None
+
+        issues = validate_file(scanned.parsed)
+        hit = [i for i in issues if i.rule_name == "vocab.pipe_outside_group"]
         assert len(hit) == 1
         assert hit[0].line_number == 1
