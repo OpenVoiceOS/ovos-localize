@@ -1,0 +1,13 @@
+# Language tags the page may be asked to write that the enabled list does not
+# carry. A tag reaches the page from a link (#/skill/<id>/<lang>) before any
+# repository ships a directory for it, and the page must answer with the same
+# rule as the submission guard rather than refuse for want of a table entry.
+# One tag per line. Run scripts/gen_locale_rules.py after an edit.
+kab-DZ            # ovos-core and ovos-YesNo-plugin ship this directory
+ca-ES-valencia    # a variant subtag: lower case, not ca-ES-VALENCIA
+sr-Latn-RS        # a script subtag with a region after it
+sr-Latn
+zh-Hant           # a script subtag with no region
+zh-Hans
+zh-Hant-TW
+zh-Hans-CN
