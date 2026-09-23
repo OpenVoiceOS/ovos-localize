@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.0a21](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a21) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a20...0.1.0a21)
+
+**Merged pull requests:**
+
+- fix: a pipe outside every group is literal text, and an error [\#566](https://github.com/OpenVoiceOS/ovos-localize/pull/566) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.1.0a20](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a20) (2026-09-23)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a19...0.1.0a20)
@@ -190,7 +198,6 @@
 - feat: add JarbasHiveMind/ovos-hivemind-pipeline-plugin to skills.txt [\#131](https://github.com/OpenVoiceOS/ovos-localize/pull/131) ([github-actions[bot]](https://github.com/apps/github-actions))
 - feat: add TigreGotico/ovos-transcription-validator-plugin to skills.txt [\#127](https://github.com/OpenVoiceOS/ovos-localize/pull/127) ([github-actions[bot]](https://github.com/apps/github-actions))
 - feat: OscillateLabsLLC skills [\#26](https://github.com/OpenVoiceOS/ovos-localize/pull/26) ([mikejgray](https://github.com/mikejgray))
-- feat\(i18n\): enable pt-AO \(Angolan Portuguese\) [\#25](https://github.com/OpenVoiceOS/ovos-localize/pull/25) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 
 
