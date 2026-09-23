@@ -182,6 +182,7 @@
 {"lang": "sv-SE", "skill": "ovos-skill-confucius-quotes", "dialog": "lifespan.dialog", "text": "konfucius föddes år 551 f.kr. och dog år 479 f.kr."}
 {"lang": "sv-SE", "skill": "ovos-skill-count", "dialog": "failed_extract_number.dialog", "text": "jag förstod inte vilket tal du ville att jag skulle räkna till"}
 {"lang": "sv-SE", "skill": "ovos-skill-count", "dialog": "failed_extract_number.dialog", "text": "jag förstod inte till vilket tal du ville att jag skulle räkna"}
+{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "ask_offset.dialog", "text": "om hur många minuter eller timmar?"}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "det är {date}"}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "idag är det {date}"}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "{date}"}
@@ -1830,9 +1831,9 @@
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "dialog": "no_info.dialog", "text": "jag är ledsen. jag kan inte hitta någon information om videon {movie}"}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "dialog": "no_info_general.dialog", "text": "jag är ledsen, jag kan inte hitta listan du letar efter just nu; vänligen fråga igen senare."}
 {"lang": "sv-SE", "skill": "ovos-skill-moviemaster", "dialog": "no_valid_api.dialog", "text": "a p i-nyckeln som du angav är inte giltig. se till läs readme-filen för instruktioner om hur du får en."}
-{"lang": "sv-SE", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep.dialog", "text": "jag lägger mig i sovläge. säg 'hej mycroft, wake up' för att väcka mig"}
-{"lang": "sv-SE", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep.dialog", "text": "okej, sover. du kan skaka liv i mig genom att säga 'hey mycroft, wake up'."}
-{"lang": "sv-SE", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep.dialog", "text": "sover nu. säg 'hey mycroft, wake up' för att väcka mig"}
+{"lang": "sv-SE", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep.dialog", "text": "jag lägger mig i sovläge. säg '{wake_word}, vakna' för att väcka mig"}
+{"lang": "sv-SE", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep.dialog", "text": "okej, sover. du kan skaka liv i mig genom att säga '{wake_word}, vakna'."}
+{"lang": "sv-SE", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep.dialog", "text": "sover nu. säg '{wake_word}, vakna' för att väcka mig"}
 {"lang": "sv-SE", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep_short.dialog", "text": "okej."}
 {"lang": "sv-SE", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep_short.dialog", "text": "visst, sover."}
 {"lang": "sv-SE", "skill": "ovos-skill-naptime", "dialog": "i_am_awake.dialog", "text": "jag är vaken"}
