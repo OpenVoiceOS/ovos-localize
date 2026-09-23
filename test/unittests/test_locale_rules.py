@@ -11,6 +11,7 @@ with the Python twin.
 """
 
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -340,6 +341,51 @@ class TestTableThatDidNotLoad(unittest.TestCase):
         self.assertNotEqual(table, collision)
         self.assertNotEqual(table, no_root)
         self.assertIn("pt-AO", collision)
+
+    def test_a_half_written_entry_is_a_platform_fault(self):
+        """An entry missing a field must not read as a judgement on the tag.
+
+        Without the guard this falls through to the region-collision
+        branch: a rule with no ``bare_ok`` is falsy, so the page told the
+        translator their tag would share a file with tags it never named.
+        """
+        broken = [
+            {"tags": {"pt-pt": {"canonical": "pt-PT"}}},                    # missing three
+            {"tags": {"pt-pt": {"canonical": "pt-PT", "primary": "pt",
+                                "rivals": []}}},                            # missing bare_ok
+            {"tags": {"pt-pt": "pt-PT"}},                                   # not an object
+            {"tags": {"pt-pt": None}},                                      # null entry
+        ]
+        js = ("const a = JSON.parse(process.argv[1]);\n"
+              "process.stdout.write(JSON.stringify(a.map("
+              "(rules) => localePathForLangDetailed('locale/en-US/x.voc', 'pt-PT', undefined, rules))));")
+        for table, placed in zip(broken, json.loads(self._run(js, json.dumps(broken)))):
+            self.assertEqual("", placed["path"], table)
+            self.assertEqual("table-malformed", placed["reason"], table)
+
+    def test_the_malformed_message_blames_the_platform(self):
+        js = ("process.stdout.write(pathRefusalMessage("
+              "'table-malformed', 'pt-PT', ['pt-pt']));")
+        message = self._run(js)
+        self.assertIn("locale_rules.json", message)
+        self.assertIn("our side", message)
+        # The two faults are different things to do next, so they cannot
+        # read the same, and neither may read as the language's fault.
+        self.assertNotIn("not a language", message)
+        self.assertNotIn("would share one file", message)
+
+    def test_the_page_and_the_bot_read_the_same_four_fields(self):
+        """``TAG_FIELDS`` in the page is the list load_locale_rules checks.
+
+        Two copies of one rule drift. This fails when either side adds a
+        field the other does not read.
+        """
+        from ovos_localize.locale_rules import TAG_FIELDS as PYTHON_FIELDS
+        html = (Path(__file__).resolve().parents[2] / "index.html").read_text(encoding="utf-8")
+        match = re.search(r"const TAG_FIELDS = \[([^\]]*)\]", html)
+        self.assertIsNotNone(match, "index.html no longer declares TAG_FIELDS")
+        page_fields = tuple(re.findall(r"'([a-z_]+)'", match.group(1)))
+        self.assertEqual(tuple(PYTHON_FIELDS), page_fields)
 
     def test_a_loaded_table_still_places_the_file(self):
         """The control: the same call with the real table places a path, so

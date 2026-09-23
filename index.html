@@ -776,7 +776,8 @@
      * @param {object} [rules]    The table from data/locale_rules.json.
      * @returns {{path: string, reason: string, collidesWith: string[]}}
      *   The target path, or an empty path and the reason it is refused:
-     *   no-locale-root, unknown-tag or region-collision.
+     *   no-locale-root, unknown-tag, region-collision, table-not-loaded
+     *   or table-malformed.
      */
     function localePathForLangDetailed(refPath, targetLang, fileKey, rules) {
       const noRoot = { path: '', reason: 'no-locale-root', collidesWith: [] };
@@ -786,6 +787,26 @@
       // language is unsupported when the platform simply did not load.
       if (!table || !Object.keys(table).length) {
         return { path: '', reason: 'table-not-loaded', collidesWith: [] };
+      }
+      // A half-written entry is a platform fault too, and without this it
+      // reads as a judgement on the translator's language: a rule missing
+      // bare_ok falls through to the region-collision branch and tells them
+      // their tag would share a file with tags it never named. The four
+      // fields are the ones this function reads, and they are the same four
+      // load_locale_rules checks in ovos_localize/locale_rules.py.
+      // Every field this function reads, and the same four
+      // load_locale_rules checks in ovos_localize/locale_rules.py: the page
+      // and the bot refuse the same broken table. Declared here so the
+      // function can be lifted out and run on its own, which is how the
+      // tests exercise it.
+      const TAG_FIELDS = ['canonical', 'primary', 'bare_ok', 'rivals'];
+      const badTag = Object.keys(table).find((k) => {
+        const e = table[k];
+        return !e || typeof e !== 'object' || Array.isArray(e)
+          || TAG_FIELDS.some((f) => !(f in e));
+      });
+      if (badTag) {
+        return { path: '', reason: 'table-malformed', collidesWith: [badTag] };
       }
       if (!refPath || !targetLang) return noRoot;
       const parts = String(refPath).split('/');
@@ -842,6 +863,11 @@
       if (reason === 'unknown-tag') {
         return `${lang} is not a language this platform writes yet. `
           + 'Open a "Request a language" issue first.';
+      }
+      if (reason === 'table-malformed') {
+        return 'The language table data/locale_rules.json is incomplete, so this page '
+          + `cannot tell where the file goes (the entry for ${tags} is missing a field). `
+          + 'This is a fault on our side, not a problem with your language.';
       }
       if (reason === 'table-not-loaded') {
         return 'The language table did not load, so this page cannot tell where the file goes. '
