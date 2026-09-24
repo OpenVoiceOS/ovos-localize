@@ -1551,6 +1551,7 @@
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "(stelle|erzeuge|plane) einen Wecker [für {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "neuer Wecker [für {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "stelle einen Wecker (auf|für) {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "stelle einen Alarm [für {time}], damit er {mediakind} abspielt", "slots": ["time", "mediakind"], "entity_values": {"time": [], "mediakind": ["Musik", "Radio", "Nachrichten", "Podcast", "Podcasts", "Hörbuch", "Hörbücher", "Video", "Audio"]}}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "(weck|wecke) (mich|uns) [auf] [um {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "(könntest|kannst) du (mich|uns) [um {time}] wecken", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "de-DE", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "(erstelle|plane|ergänze) (ein Event|einen Termin|ein Treffen) [{event}]", "slots": ["event"], "entity_values": {"event": []}}

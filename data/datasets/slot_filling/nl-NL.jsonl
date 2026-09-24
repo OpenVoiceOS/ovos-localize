@@ -729,6 +729,7 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "(zet|maak|voeg) een wekker [toe] [voor {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "nieuwe wekker [voor {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "zet een wekker voor {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "zet een wekker [toe] [voor {time}], zodat hij {mediakind} afspeelt", "slots": ["time", "mediakind"], "entity_values": {"time": [], "mediakind": ["muziek", "radio", "nieuws", "podcast", "Podcasts", "audioboek", "audioboeken", "video", "audio"]}}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "(maak|wek) (me|mij|ons) wakker [om {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "(maak|voeg|plan) (een afspraak|een evenement) [toe] [{event}]", "slots": ["event"], "entity_values": {"event": []}}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "nieuwe afspraak [{event}]", "slots": ["event"], "entity_values": {"event": []}}

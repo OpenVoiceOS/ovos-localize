@@ -334,6 +334,7 @@
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "(aseta|luo|lisää) hälytys [kello {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "uusi hälytys [{time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "aseta hälytys kello {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "aseta hälytys [kello {time}] soittamaan {mediakind}", "slots": ["time", "mediakind"], "entity_values": {"time": [], "mediakind": ["musiikki", "radio", "uutiset", "podcast", "podcastit", "äänikirja", "äänikirjat", "video", "ääni"]}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "herätä minut [kello {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "(luo|lisää) (tapahtuma|tapaaminen) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "uusi (tapahtuma|tapaaminen) [{event}]", "slots": ["event"], "entity_values": {"event": []}}

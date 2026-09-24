@@ -334,6 +334,7 @@
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "(sätt|skapa|lägg till) ett larm [till {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "nytt larm [till {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "sätt ett larm till {time}", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "sätt ett larm [till {time}], så att den spelar {mediakind}", "slots": ["time", "mediakind"], "entity_values": {"time": [], "mediakind": ["musik", "Radio", "nyheterna", "Podcast", "Podcasts", "Hörbok", "Hörböcker", "Video", "ljud"]}}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "väck (mig|oss) [klockan {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "(skapa|lägg till|planera) (ett evenemang|ett möte) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
 {"lang": "sv-SE", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "nytt (evenemang|möte) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
