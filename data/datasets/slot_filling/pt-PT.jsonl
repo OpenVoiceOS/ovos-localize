@@ -1994,6 +1994,8 @@
 {"lang": "pt-PT", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "alarme novo [para {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "acorda(-me|-nos) [às {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "(podes|podias) acordar-me [às {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "acorda-me com {mediakind} às {time}", "slots": ["mediakind", "time"], "entity_values": {"mediakind": ["música", "rádio", "Notícias", "podcast", "Podcasts", "Livro de áudio", "Livros de áudio", "vídeo", "áudio"], "time": []}}
+{"lang": "pt-PT", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "acorda-me a cada {days} às {time}", "slots": ["days", "time"], "entity_values": {"days": [], "time": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "(cria|adiciona|agenda) (um evento|um compromisso) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "evento novo [{event}]", "slots": ["event"], "entity_values": {"event": []}}
 {"lang": "pt-PT", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "tenho (um evento|um compromisso) [{event}]", "slots": ["event"], "entity_values": {"event": []}}

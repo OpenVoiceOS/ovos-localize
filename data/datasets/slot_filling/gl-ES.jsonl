@@ -1064,6 +1064,9 @@
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "(pon|crea|engade) unha alarma [para {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "alarma nova [para {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "(espértame|acórdame) [ás {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "espértame con {mediakind} ás {time}", "slots": ["mediakind", "time"], "entity_values": {"mediakind": ["música", "radio", "noticias", "podcast", "Podcasts", "Libro de audio", "Libros de audio", "vídeo", "audio"], "time": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "espértame dentro de {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "espértame cada {days} ás {time}", "slots": ["days", "time"], "entity_values": {"days": [], "time": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "(crea|engade|agenda) (un evento|unha cita) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "evento novo [{event}]", "slots": ["event"], "entity_values": {"event": []}}
 {"lang": "gl-ES", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "teño (un evento|unha cita) [{event}]", "slots": ["event"], "entity_values": {"event": []}}

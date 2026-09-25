@@ -1852,6 +1852,9 @@
 {"lang": "es-ES", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "alarma nueva [para {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "es-ES", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "despiérta(me|nos) [a las {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "es-ES", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "(puedes|podrías) despertarme [a las {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "es-ES", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "despiértame con {mediakind} a las {time}", "slots": ["mediakind", "time"], "entity_values": {"mediakind": ["música", "radio", "noticias", "podcast", "Podcasts", "Libro de audio", "audiolibros", "video", "audio"], "time": []}}
+{"lang": "es-ES", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "despiértame en {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "es-ES", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "despiértame cada {days} a las {time}", "slots": ["days", "time"], "entity_values": {"days": [], "time": []}}
 {"lang": "es-ES", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "(crea|añade|programa) (un evento|una cita) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
 {"lang": "es-ES", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "evento nuevo [{event}]", "slots": ["event"], "entity_values": {"event": []}}
 {"lang": "es-ES", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "tengo (un evento|una cita) [{event}]", "slots": ["event"], "entity_values": {"event": []}}

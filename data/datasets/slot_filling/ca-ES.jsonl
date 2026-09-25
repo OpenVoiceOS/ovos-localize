@@ -3585,6 +3585,9 @@
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "alarma nova [per {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "(desperta'm|lleva'm) [a les {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "em (despertes|lleves) [a les {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "desperta'm amb {mediakind} a les {time}", "slots": ["mediakind", "time"], "entity_values": {"mediakind": ["música", "ràdio", "notícies", "podcast", "Podcasts", "Audiobúc", "Llibres d'audiovisuals", "vídeo", "audio"], "time": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "desperta'm d'aquí a {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "ca-ES", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "desperta'm cada {days} a les {time}", "slots": ["days", "time"], "entity_values": {"days": [], "time": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "(crea|afegeix|programa) (un esdeveniment|una cita) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "esdeveniment nou [{event}]", "slots": ["event"], "entity_values": {"event": []}}
 {"lang": "ca-ES", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "tinc (un esdeveniment|una cita) [{event}]", "slots": ["event"], "entity_values": {"event": []}}

@@ -27876,6 +27876,9 @@
 {"lang": "it-IT", "skill": "ovos-skill-alerts", "intent": "create_alarm.intent", "template": "nuovo allarme [per {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "it-IT", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "sveglia(mi|ci) [alle {time}]", "slots": ["time"], "entity_values": {"time": []}}
 {"lang": "it-IT", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "(puoi|potresti) svegliarmi [alle {time}]", "slots": ["time"], "entity_values": {"time": []}}
+{"lang": "it-IT", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "svegliami con {mediakind} alle {time}", "slots": ["mediakind", "time"], "entity_values": {"mediakind": ["musica", "radio", "notizie", "podcast", "Libro audio", "audiolibri", "video", "audio"], "time": []}}
+{"lang": "it-IT", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "svegliami tra {duration}", "slots": ["duration"], "entity_values": {"duration": []}}
+{"lang": "it-IT", "skill": "ovos-skill-alerts", "intent": "create_alarm_alt.intent", "template": "svegliami ogni {days} alle {time}", "slots": ["days", "time"], "entity_values": {"days": [], "time": []}}
 {"lang": "it-IT", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "(crea|aggiungi|programma) (un evento|un appuntamento) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
 {"lang": "it-IT", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "nuovo evento [{event}]", "slots": ["event"], "entity_values": {"event": []}}
 {"lang": "it-IT", "skill": "ovos-skill-alerts", "intent": "create_event.intent", "template": "ho (un evento|un appuntamento) [{event}]", "slots": ["event"], "entity_values": {"event": []}}
