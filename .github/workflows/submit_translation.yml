@@ -281,7 +281,32 @@ jobs:
           BRANCH_NAME="translate/${LANG}/${FILE_KEY//[^a-zA-Z0-9_.-]/_}-$(date +%s)"
           git checkout -b "$BRANCH_NAME"
           mkdir -p "$(dirname "$FILE_PATH")"
-          echo "$CONTENT_B64" | base64 -d > "$FILE_PATH"
+          echo "$CONTENT_B64" | base64 -d > /tmp/submission_content
+          # A .voc or a .dialog file holds one value per line and the editor
+          # sends exactly that, so it is written through. A .json resource is a
+          # flat object, and the same payload written straight to it is not
+          # JSON at all: ovos-workshop#659 committed two bare lines over
+          # word_connectors.json and the pull request could not merge (T-4252).
+          # The renderer maps the lines onto the keys of the file already here,
+          # in that file's own order, or refuses. It runs before the commit, so
+          # a refusal pushes nothing.
+          case "$FILE_PATH" in
+            *.json|*.JSON)
+              if ! ovos-localize-render-json --content-file /tmp/submission_content \
+                   --existing-file "$FILE_PATH" --out "$FILE_PATH" > /tmp/render_output 2>&1; then
+                cat /tmp/render_output
+                {
+                  echo "render_failed<<EOF"
+                  cat /tmp/render_output
+                  echo "EOF"
+                } >> "$GITHUB_OUTPUT"
+                exit 1
+              fi
+              ;;
+            *)
+              cp /tmp/submission_content "$FILE_PATH"
+              ;;
+          esac
           git config user.name "ovos-localize[bot]"
           git config user.email "ovos-localize[bot]@users.noreply.github.com"
           git add "$FILE_PATH"
@@ -366,6 +391,7 @@ jobs:
         if: failure()
         env:
           VALIDATION_OUTPUT: ${{ steps.validate.outputs.validation_failed }}
+          RENDER_OUTPUT: ${{ steps.commit.outputs.render_failed }}
           PATH_LANG_MISMATCH: ${{ steps.pathlang.outputs.path_lang_mismatch }}
         uses: actions/github-script@v9
         with:
@@ -384,7 +410,7 @@ jobs:
               });
               return;
             }
-            const validationOutput = process.env.VALIDATION_OUTPUT || '';
+            const validationOutput = process.env.VALIDATION_OUTPUT || process.env.RENDER_OUTPUT || '';
             const validationSection = validationOutput
               ? `**Your translation did not pass validation:**\n\n\`\`\`\n${validationOutput}\n\`\`\`\n\nPlease fix the flagged line(s) and open a new submission.\n\n`
               : '';

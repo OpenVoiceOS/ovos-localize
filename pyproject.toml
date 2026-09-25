@@ -55,6 +55,7 @@ e2e = [
 ovos-localize-cli = "ovos_localize.cli.validate:main"
 ovos-localize-validate-submission = "ovos_localize.cli.validate_submission:main"
 ovos-localize-check-path-lang = "ovos_localize.cli.check_path_lang:main"
+ovos-localize-render-json = "ovos_localize.cli.render_json_submission:main"
 
 [tool.setuptools.dynamic]
 version = {attr = "ovos_localize.version.__version__"}
