@@ -185,6 +185,32 @@ def clean_text(text: str) -> str:
     return text
 
 
+# A line of one word repeated more than this many times is not a phrase a
+# person says. It reaches a dataset when a locale file carries a mechanical
+# repeat: tr-tr Prev.voc held one word 250 times (T-4649).
+MAX_WORD_REPEATS = 3
+
+
+def is_repeated_word(text: str) -> bool:
+    """True when the text is one word repeated more than MAX_WORD_REPEATS times.
+
+    A repeat like ``oyun oyun oyun oyun`` matches only itself, so it teaches a
+    model nothing and it is noise in a training row. Two or three words are
+    left alone: a real phrase can repeat a word, as in ``no no no``.
+
+    Args:
+        text: A cleaned utterance.
+
+    Returns:
+        True when every word is the same word and there are more than
+        MAX_WORD_REPEATS of them.
+    """
+    words = text.split()
+    if len(words) <= MAX_WORD_REPEATS:
+        return False
+    return len({w.lower() for w in words}) == 1
+
+
 def count_expanded_lines(lines: list[str]) -> int:
     """Count the total number of expanded sentences from a list of template lines.
 
