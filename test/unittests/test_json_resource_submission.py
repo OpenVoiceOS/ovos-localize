@@ -82,7 +82,7 @@ def test_an_existing_file_that_is_not_json_is_refused() -> None:
 def test_a_json_array_is_refused() -> None:
     with pytest.raises(JsonResourceError) as exc:
         render_json_submission("[1, 2]", WORD_CONNECTORS_EN)
-    assert "not a list" in str(exc.value)
+    assert "a list of values" in str(exc.value)
 
 
 def test_an_empty_submission_is_refused() -> None:
@@ -165,3 +165,52 @@ def test_the_named_file_of_the_sibling_is_the_one_read(tmp_path: Path) -> None:
     found = find_key_source(root / "locale/kab/colors.json")
     assert found == root / "locale/en-US/colors.json"
     assert json.loads(found.read_text()) == {"red": "red"}
+
+# --- review fixes on #618 ----------------------------------------------------
+
+
+def test_a_bare_null_is_refused_and_never_written_as_text() -> None:
+    """json.loads("null") is None, which was also the "did not parse" marker.
+
+    So a submission of `null` fell through to the line-per-value branch and was
+    written as the string "null", where `2` and `true` were refused. The
+    sentinel is now an object of its own.
+    """
+    with pytest.raises(JsonResourceError) as exc:
+        render_json_submission("null", '{"zero": "0"}')
+    assert "empty" in str(exc.value)
+
+
+@pytest.mark.parametrize("scalar", ["2", "true", "false", "3.5", '"a string"'])
+def test_every_json_scalar_is_refused_the_same_way(scalar) -> None:
+    """`null` now answers like the others, rather than being the odd one."""
+    with pytest.raises(JsonResourceError):
+        render_json_submission(scalar, '{"zero": "0"}')
+
+
+def test_the_refusal_names_no_python_type() -> None:
+    """The text reaches a translator through the issue comment."""
+    for submission in ("2", "true", "[1, 2]", "null"):
+        try:
+            render_json_submission(submission, WORD_CONNECTORS_EN)
+        except JsonResourceError as exc:
+            message = str(exc)
+        else:
+            raise AssertionError(f"{submission!r} was not refused")
+        # The old text read "not a int", "not a bool", "not a list". The
+        # word "list" may still appear in a plain phrase such as "a list of
+        # values"; what must not appear is the Python spelling.
+        for python_name in ("int", "bool", "list", "NoneType", "float", "str",
+                            "dict", "OrderedDict"):
+            assert f"not a {python_name}" not in message, (submission, message)
+        assert "NoneType" not in message, (submission, message)
+
+
+def test_an_object_still_passes_through_after_the_sentinel_change() -> None:
+    out = render_json_submission('{"and": "d", "or": "na\u0263"}', WORD_CONNECTORS_EN)
+    assert json.loads(out) == {"and": "d", "or": "na\u0263"}
+
+
+def test_a_line_submission_still_renders_after_the_sentinel_change() -> None:
+    assert json.loads(render_json_submission(KAB_LINES, WORD_CONNECTORS_EN)) == {
+        "and": "d", "or": "na\u0263"}

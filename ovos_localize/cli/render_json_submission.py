@@ -86,7 +86,8 @@ def main() -> None:
         sys.exit(1)
 
     if source is not None and source != Path(args.existing_file):
-        print(f"keys taken from {source}")
+        keys = ", ".join(json.loads(existing)) if existing else ""
+        print(f"keys taken from {source}: {keys}")
     Path(args.out).write_text(rendered, encoding="utf-8")
 
 

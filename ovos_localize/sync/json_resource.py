@@ -23,6 +23,28 @@ class JsonResourceError(ValueError):
     """Raised when a submission cannot become valid JSON for its path."""
 
 
+# A marker of its own for "this text is not JSON at all". See the comment in
+# render_json_submission: None cannot serve, because it is also a valid JSON
+# document.
+_NOT_JSON = object()
+
+# What the submission turned out to be, in words a translator can act on. The
+# refusal reaches a member of the public through the issue comment, so it does
+# not name a Python type.
+_SHAPES = {
+    type(None): "empty",
+    bool: "a true or false value",
+    int: "a number",
+    float: "a number",
+    str: "a piece of text on its own",
+    list: "a list of values",
+}
+
+
+def _describe(value):
+    return _SHAPES.get(type(value), "not a set of keys and values")
+
+
 def is_json_resource(file_path: str) -> bool:
     """True when this path must hold JSON."""
     return file_path.lower().endswith(".json")
@@ -57,15 +79,21 @@ def render_json_submission(content: str, existing: str | None = None) -> str:
         raise JsonResourceError("the submission is empty; refusing to blank a JSON resource")
 
     # Shape one: the submission is already JSON.
+    #
+    # The sentinel is an object of its own, not None: json.loads("null")
+    # returns None, so None as the "did not parse" marker made a submitted
+    # `null` fall through to the line-per-value branch and be written as the
+    # string "null", where `2` and `true` were refused.
+    data = _NOT_JSON
     try:
         data = json.loads(text, object_pairs_hook=OrderedDict)
     except json.JSONDecodeError:
-        data = None
-    if data is not None:
+        pass
+    if data is not _NOT_JSON:
         if not isinstance(data, dict):
             raise JsonResourceError(
-                f"a locale JSON resource is an object of keys and values, not a "
-                f"{type(data).__name__}"
+                f"a locale JSON resource is an object of keys and values, and "
+                f"this submission is {_describe(data)}"
             )
         return json.dumps(data, ensure_ascii=False, indent=2) + "\n"
 

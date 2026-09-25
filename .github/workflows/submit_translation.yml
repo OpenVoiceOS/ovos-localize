@@ -290,8 +290,13 @@ jobs:
           # The renderer maps the lines onto the keys of the file already here,
           # in that file's own order, or refuses. It runs before the commit, so
           # a refusal pushes nothing.
-          case "$FILE_PATH" in
-            *.json|*.JSON)
+          # ${FILE_PATH,,} lowercases the whole path, so this gate answers the
+          # same question as is_json_resource(), which lowercases too. The
+          # earlier *.json|*.JSON pair missed every other spelling, and
+          # word_connectors.Json went to the raw write, which is the #659
+          # defect again.
+          case "${FILE_PATH,,}" in
+            *.json)
               if ! ovos-localize-render-json --content-file /tmp/submission_content \
                    --existing-file "$FILE_PATH" --out "$FILE_PATH" > /tmp/render_output 2>&1; then
                 cat /tmp/render_output
