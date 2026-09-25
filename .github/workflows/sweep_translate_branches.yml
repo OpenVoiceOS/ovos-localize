@@ -9,7 +9,8 @@ name: Sweep merged translate branches
 #
 #   * its pull request is MERGED or CLOSED, never OPEN, and
 #   * every file the branch changed is already on the default branch, blob for
-#     blob.
+#     blob, OR every path it names is gone from the default branch, so nothing
+#     on the branch can land.
 #
 # A branch with no pull request is kept, because the submission may still be in
 # flight. A branch whose file was changed again after the merge is kept, and
@@ -104,14 +105,30 @@ jobs:
                 [ "$on_branch" = "$on_base" ] || same=0
               done < <(gh api "repos/$slug/compare/$base...$branch" --jq '.files[].filename' 2>/dev/null)
 
-              if [ "$same" != "1" ]; then
+              # A path the branch names and the default branch no longer has
+              # is the second deletable case, granted 2026-09-25: the pull
+              # request is closed or merged and the file has since been
+              # removed or renamed, so nothing on the branch can land.
+              gone=1
+              while read -r file; do
+                [ -z "$file" ] && continue
+                gh api "repos/$slug/contents/$file?ref=$base" --jq .sha >/dev/null 2>&1 && gone=0
+              done < <(gh api "repos/$slug/compare/$base...$branch" --jq '.files[].filename' 2>/dev/null)
+
+              if [ "$same" != "1" ] && [ "$gone" != "1" ]; then
                 kept=$((kept+1)); echo "  KEEP   $state, content is not on $base   $slug $branch"; continue
               fi
 
+              if [ "$same" = "1" ]; then
+                reason="every file on $base"
+              else
+                reason="the path is gone from $base"
+              fi
+
               if [ "$DRY_RUN" = "true" ]; then
-                deleted=$((deleted+1)); echo "  WOULD DELETE $state, every file on $base   $slug $branch"
+                deleted=$((deleted+1)); echo "  WOULD DELETE $state, $reason   $slug $branch"
               elif gh api -X DELETE "repos/$slug/git/refs/heads/$branch" >/dev/null 2>&1; then
-                deleted=$((deleted+1)); echo "  DELETED      $state, every file on $base   $slug $branch"
+                deleted=$((deleted+1)); echo "  DELETED      $state, $reason   $slug $branch"
               else
                 kept=$((kept+1)); failed=$((failed+1))
                 echo "::warning::$slug: cannot delete $branch"
