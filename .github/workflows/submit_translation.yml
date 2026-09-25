@@ -324,6 +324,24 @@ jobs:
           Triggered by #$ISSUE.")
           echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
 
+      - name: Ask the target repository to delete a merged head branch
+        # The skill maintainer merges, not this workflow, so the only way to
+        # drop the branch at merge time is the repository's own setting. The
+        # app may not hold admin rights there, so a refusal is a warning and
+        # not a failure: `sweep_translate_branches.yml` removes what is left.
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          ORG: ${{ steps.parse.outputs.org }}
+          REPO: ${{ steps.parse.outputs.repo }}
+        run: |
+          set -uo pipefail
+          if gh api -X PATCH "repos/$ORG/$REPO" -F delete_branch_on_merge=true >/dev/null 2>&1; then
+            echo "$ORG/$REPO now deletes a head branch on merge"
+          else
+            echo "::warning::$ORG/$REPO: cannot set delete_branch_on_merge; the sweep cleans up instead"
+          fi
+
       - name: Close issue with PR link
         uses: actions/github-script@v9
         with:

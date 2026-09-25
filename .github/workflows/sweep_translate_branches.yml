@@ -1,0 +1,137 @@
+name: Sweep merged translate branches
+
+# The submit pipeline opens one `translate/<locale>/<file>-<timestamp>` branch
+# per submission and never deletes it. The skill maintainer merges the pull
+# request, the file lands on the default branch, and the branch stays. Issue
+# #617 counted 22 such branches on `ovos-skill-alerts` alone.
+#
+# This sweep removes a branch only when both hold:
+#
+#   * its pull request is MERGED or CLOSED, never OPEN, and
+#   * every file the branch changed is already on the default branch, blob for
+#     blob.
+#
+# A branch with no pull request is kept, because the submission may still be in
+# flight. A branch whose file was changed again after the merge is kept, and
+# named, because its content is not what the default branch holds.
+#
+# The second test reads the file's blob sha on both refs. It does NOT use the
+# file count of `compare/<base>...<branch>`: that comparison is three-dot and
+# counts what the branch changed since the merge base, so it reports one
+# changed file for every branch here, including the ones whose content is
+# already on the default branch. A sweep written on that count deletes nothing
+# and still exits green.
+
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'List what would be deleted and delete nothing.'
+        required: false
+        default: true
+        type: boolean
+      repos:
+        description: 'Comma-separated owner/repo list to sweep instead of skills.txt.'
+        required: false
+        type: string
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: dev
+          persist-credentials: false
+
+      - name: Resolve the repository list
+        id: list
+        env:
+          OVERRIDE: ${{ inputs.repos }}
+        run: |
+          set -euo pipefail
+          if [ -n "$OVERRIDE" ]; then
+            printf '%s' "$OVERRIDE" | tr ',' '\n' | sed 's/[[:space:]]//g' | grep -v '^$' > repos.txt
+          else
+            grep -v '^[[:space:]]*#' skills.txt | sed 's/[[:space:]]//g' | grep -v '^$' > repos.txt
+          fi
+          echo "count=$(wc -l < repos.txt)" >> "$GITHUB_OUTPUT"
+          echo "Sweeping $(wc -l < repos.txt) repositories"
+
+      - name: Get an installation token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          app-id: ${{ vars.LOCALIZE_APP_ID }}
+          private-key: ${{ secrets.LOCALIZE_APP_PRIVATE_KEY }}
+          owner: OpenVoiceOS
+
+      - name: Sweep
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          DRY_RUN: ${{ inputs.dry_run == false && 'false' || 'true' }}
+        run: |
+          set -uo pipefail
+          total_found=0; total_deleted=0; total_kept=0; failed=0
+
+          while read -r slug; do
+            [ -z "$slug" ] && continue
+            base=$(gh api "repos/$slug" --jq .default_branch 2>/dev/null) || {
+              echo "::warning::$slug: cannot read the repository, skipped"
+              failed=$((failed+1)); continue; }
+
+            found=0; deleted=0; kept=0
+            while read -r branch; do
+              [ -z "$branch" ] && continue
+              found=$((found+1))
+
+              state=$(gh pr list --repo "$slug" --head "$branch" --state all \
+                        --json state --jq '.[0].state // empty' 2>/dev/null)
+              if [ -z "$state" ]; then
+                kept=$((kept+1)); echo "  KEEP   no pull request        $slug $branch"; continue
+              fi
+              if [ "$state" = "OPEN" ]; then
+                kept=$((kept+1)); echo "  KEEP   pull request is open   $slug $branch"; continue
+              fi
+
+              same=1
+              while read -r file; do
+                [ -z "$file" ] && continue
+                on_branch=$(gh api "repos/$slug/contents/$file?ref=$branch" --jq .sha 2>/dev/null || echo "missing-on-branch")
+                on_base=$(gh api "repos/$slug/contents/$file?ref=$base" --jq .sha 2>/dev/null || echo "missing-on-base")
+                [ "$on_branch" = "$on_base" ] || same=0
+              done < <(gh api "repos/$slug/compare/$base...$branch" --jq '.files[].filename' 2>/dev/null)
+
+              if [ "$same" != "1" ]; then
+                kept=$((kept+1)); echo "  KEEP   $state, content is not on $base   $slug $branch"; continue
+              fi
+
+              if [ "$DRY_RUN" = "true" ]; then
+                deleted=$((deleted+1)); echo "  WOULD DELETE $state, every file on $base   $slug $branch"
+              elif gh api -X DELETE "repos/$slug/git/refs/heads/$branch" >/dev/null 2>&1; then
+                deleted=$((deleted+1)); echo "  DELETED      $state, every file on $base   $slug $branch"
+              else
+                kept=$((kept+1)); failed=$((failed+1))
+                echo "::warning::$slug: cannot delete $branch"
+              fi
+            done < <(gh api "repos/$slug/branches?per_page=100" --paginate --jq '.[].name' 2>/dev/null | grep '^translate/')
+
+            if [ "$found" -gt 0 ]; then
+              echo "$slug: $found found, $deleted deleted, $kept kept"
+            fi
+            total_found=$((total_found+found))
+            total_deleted=$((total_deleted+deleted))
+            total_kept=$((total_kept+kept))
+          done < repos.txt
+
+          echo "dry run: $DRY_RUN"
+          echo "$total_found found, $total_deleted deleted, $total_kept kept, $failed failure(s)"
+          {
+            echo "### Translate branch sweep"
+            echo ""
+            echo "- dry run: \`$DRY_RUN\`"
+            echo "- **$total_found found, $total_deleted deleted, $total_kept kept**"
+            echo "- failures: $failed"
+          } >> "$GITHUB_STEP_SUMMARY"
