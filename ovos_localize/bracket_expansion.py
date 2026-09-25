@@ -186,7 +186,14 @@ def clean_text(text: str) -> str:
 
 
 MAX_WORD_REPEAT = 3
-"""How many copies of one word a dataset row may hold before it is junk."""
+"""How many copies of one word a dataset row may hold before it is junk.
+
+Three is a deliberate floor and not a free choice. At four bare copies the
+rule starts to drop lines a language can mean: laughter, emphatic refusal,
+onomatopoeia, and a repeated digit read aloud. No row in the corpus is
+affected today. Raise this number rather than widen the rule to any
+repetition.
+"""
 
 
 def is_repeated_word(text: str, limit: int = MAX_WORD_REPEAT) -> bool:

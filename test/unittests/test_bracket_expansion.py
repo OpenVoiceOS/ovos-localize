@@ -241,8 +241,13 @@ class TestEveryGeneratorDropsTheRow:
                             "langs": {"tr-TR": self._entries([self.GOOD, self.JUNK])}}}}
         rows = list(generate_response_pairs("test-skill", skill))
         assert rows, "the pair must survive: only the junk goes"
-        for row in rows:
-            assert not is_repeated_word(row["utterance"])
-            for response in row["responses"]:
-                assert not is_repeated_word(response)
+        utterances = {row["utterance"] for row in rows}
+        responses = {r for row in rows for r in row["responses"]}
+        # assert against the literal, never against the predicate under test:
+        # neutering is_repeated_word would take the oracle false with the
+        # generator and the assertion would hold whatever was emitted
+        assert self.JUNK not in utterances
+        assert self.JUNK not in responses
+        assert self.GOOD in utterances
+        assert self.GOOD in responses
 
