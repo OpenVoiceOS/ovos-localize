@@ -119,7 +119,6 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "whole_day.dialog", "text": "celý den"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "ask_offset.dialog", "text": "za kolik minut nebo hodin?"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "je {date}"}
-{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "{date}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "je to {date}, za {num_days} dní"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, za {num_days}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, {num_days} dní od teď"}
@@ -142,9 +141,7 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "tento měsíc je {month}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "je {time}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "nyní je {time}"}
-{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "bude to ve {time}"}
-{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "{time}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "time_tz_not_found.dialog", "text": "nenašel jsem časovou zónu pro {location}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_future.dialog", "text": "{date} bude {weekday}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_past.dialog", "text": "{date} bylo {weekday}"}
@@ -1596,18 +1593,10 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "slunce dnes zapadlo v {time} v {location}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "v {location} slunce dnes zapadlo v {time}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "západ slunce byl dnes v {time} v {location}"}
-{"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "právě teď je 0 stupňů."}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "v současné době je {temperature} stupňů {temperature_unit}."}
-{"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "v současné době je {temperature} stupňů."}
-{"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "právě teď je v {location} {temperature} stupňů."}
-{"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "v současné době je v {location} {temperature} stupňů."}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "v současné době je {temperature} stupňů {temperature_unit} v {location}."}
-{"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "právě teď je {condition} a {temperature} stupeň."}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "v současné době je {condition} a {temperature} stupňů {temperature_unit}."}
-{"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "v současné době je {condition} a {temperature} stupňů."}
-{"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "právě teď je {condition} a {temperature} stupňů v {location}."}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "v současné době je {condition} a {temperature} stupňů {temperature_unit} v {location}."}
-{"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "{location} má {condition} a v současné době má {temperature} stupně."}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_wind_light_local.dialog", "text": "dnes vane slabý vítr od {direction} na {speed} {speed_unit}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_wind_light_local.dialog", "text": "vítr je slabý na {speed} {speed_unit} od {direction}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_wind_light_location.dialog", "text": "v {location} dnes fouká slabý vítr od {direction} na {speed} {speed_unit}"}
@@ -1673,12 +1662,10 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "{day} bude {condition} s maximem {high_temperature} a minimem {low_temperature}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "{day} nejvyšší hodnota bude {high_temperature} a nejnižší {low_temperature}, přičemž {condition}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "{day} očekáváme {condition}, s maximem {high_temperature} a minimem {low_temperature}"}
-{"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "předpověď {day} je {high_temperature} pro maximum a {low_temperature} pro minimum v {location}."}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "{day} to bude {condition}, s maximem {high_temperature} a minimem {low_temperature} v {location}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "{day}, {location} bude mít nejvyšší hodnotu {high_temperature} a nejnižší hodnotu {low_temperature}, přičemž {condition}."}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_local.dialog", "text": "nebude příliš větrno {day}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_local.dialog", "text": "z {direction} {day} na {speed} {speed_unit} bude foukat slabý vítr."}
-{"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_location.dialog", "text": "v {location} {day} nebude příliš větrno."}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_location.dialog", "text": "v {location} {day} v {speed} {speed_unit} bude foukat slabý vítr z {direction}."}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "lze očekávat mírný vítr o síle přibližně {speed} {speed_unit} {day}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "předpověď hlásí mírný vítr od {direction} na {speed} {speed_unit} {day}"}

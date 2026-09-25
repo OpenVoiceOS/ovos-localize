@@ -143,7 +143,6 @@
 {"lang": "pt-BR", "skill": "ovos-skill-confucius-quotes", "dialog": "lifespan.dialog", "text": "confúcio nasceu em 551 a.c. e morreu em 479 a.c."}
 {"lang": "pt-BR", "skill": "ovos-skill-count", "dialog": "failed_extract_number.dialog", "text": "não entendi até que número você queria que eu contasse"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "ask_offset.dialog", "text": "daqui a quantos minutos ou horas?"}
-{"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "{date}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "é {date}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "será {date}, em {num_days}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "será {date}, {num_days} a partir de agora"}
@@ -153,7 +152,6 @@
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "{date}, {num_days} atrás"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "hoje é {day}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "o dia é {day}"}
-{"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "{day}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "é {day}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "did_you_mean_timezone.dialog", "text": "você quis dizer o fuso horário de {zone_name}?"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "extract_date_error.dialog", "text": "não consegui entender a qual data você se refere"}
@@ -166,13 +164,10 @@
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "agora estamos no mês de {month}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "esse mês é {month}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "o mês é {month}"}
-{"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "{month}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "é {month}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "atualmente {time}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "são {time}"}
-{"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "vão dar {time}"}
-{"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "{time}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "time_tz_not_found.dialog", "text": "eu não consegui encontrar o fuso horário para {location}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_future.dialog", "text": "em {date} será {weekday}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_past.dialog", "text": "em {date} foi {weekday}"}
@@ -188,7 +183,6 @@
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "agora estamos no ano de {year}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "o ano atual é {year}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "o ano é {year}"}
-{"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "{year}"}
 {"lang": "pt-BR", "skill": "ovos-skill-date-time", "dialog": "year_current.dialog", "text": "é {year}"}
 {"lang": "pt-BR", "skill": "ovos-skill-diagnostics", "dialog": "available_memory.dialog", "text": "{memory} disponível de {total}"}
 {"lang": "pt-BR", "skill": "ovos-skill-diagnostics", "dialog": "core_version.dialog", "text": "estou rodando o ovos core {version}"}
@@ -2054,7 +2048,6 @@
 {"lang": "pt-BR", "skill": "ovos-skill-wallpapers", "dialog": "searching_random.dialog", "text": "ok, procurando fotos"}
 {"lang": "pt-BR", "skill": "ovos-skill-wallpapers", "dialog": "searching_random.dialog", "text": "ok, procurando imagens"}
 {"lang": "pt-BR", "skill": "ovos-skill-wallpapers", "dialog": "wallpaper_changed.dialog", "text": "aproveite seu novo papel de parede"}
-{"lang": "pt-BR", "skill": "ovos-skill-wallpapers", "dialog": "wallpaper_fail.dialog", "text": "não sei como mudar o papel de parede nesta plataforma"}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "afternoon.dialog", "text": "tarde"}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "and.dialog", "text": ", e"}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "as previsões meteorológicas estão atualmente indisponíveis."}
@@ -2148,23 +2141,15 @@
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_temperature_high_location.dialog", "text": "uma máxima de {high_temperature} graus pode ser esperada em {location}."}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_temperature_high_location.dialog", "text": "uma máxima de {high_temperature} graus {scale} é esperada em {location}."}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_temperature_high_low.dialog", "text": "a previsão para hoje é máxima de {high_temperature} e mínima de {low_temperature}."}
-{"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "agora faz {temperature} graus."}
-{"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "no momento faz {temperature} graus."}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "no momento faz {temperature} graus {temperature_unit}."}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "agora, faz {temperature} graus {temperature_unit} em {location}."}
-{"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "no momento faz {temperature} graus em {location}."}
-{"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "no momento, faz {temperature} graus em {location}."}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_temperature_low_local.dialog", "text": "hoje a mínima será de {low_temperature} graus."}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_temperature_low_local.dialog", "text": "uma mínima de {low_temperature} graus pode ser esperada."}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_temperature_low_local.dialog", "text": "uma mínima de {low_temperature} graus {scale} é esperada."}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_temperature_low_location.dialog", "text": "as temperaturas podem chegar à uma mínima de {low_temperature} graus em {location}."}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_temperature_low_location.dialog", "text": "hoje a temperatura mínima será {low_temperature} graus {scale} em {location}."}
-{"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "atualmente, está {condition} e faz {temperature} graus."}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "no momento está {condition} e faz {temperature} graus {temperature_unit}."}
-{"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "no momento, está {condition} e faz {temperature} graus."}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "atualmente está {condition} e faz {temperature} graus {temperature_unit} em {location}."}
-{"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "neste momento, está {condition} com temperatura de {temperature} graus em {location}."}
-{"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "{location} tem {condition} e no momento uma temperatura de {temperature} graus."}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_wind_light_local.dialog", "text": "hoje há vento fraco do {direction} a {speed} {speed_unit}"}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_wind_light_local.dialog", "text": "o vento é fraco a {speed} {speed_unit} vindo do {direction}"}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "current_wind_light_location.dialog", "text": "em {location} hoje há vento fraco do {direction} à velocidade de {speed} {speed_unit}"}
@@ -2227,12 +2212,10 @@
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "daily_temperature_low_local.dialog", "text": "{day} terá mínima de {temperature}"}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "daily_temperature_low_location.dialog", "text": "{day} a mínima será de {temperature} graus em {location}"}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "daily_temperature_low_location.dialog", "text": "{day}, {location} terá uma mínima de {temperature} graus"}
-{"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "a previsão para {day} é máxima de {high_temperature} e mínima de {low_temperature}."}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "no {day}, a máxima será de {high_temperature} e a mínima {low_temperature}, com {condition}"}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "no {day}, espera-se {condition}, com uma máxima de {high_temperature} e uma mínima de {low_temperature}"}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "{day} espera {condition}, com uma máxima de {high_temperature} e uma mínima de {low_temperature}"}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "{day} estará {condition}, com uma máxima de {high_temperature} e uma mínima de {low_temperature}"}
-{"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "a previsão para {day} é {high_temperature} para uma temperatura máxima e {low_temperature} para uma temperatura mínima em {location}"}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "no {day}, teremos {condition}, com máxima de {high_temperature} e mínima de {low_temperature} em {location}"}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "no {day}, {location} terá uma máxima de {high_temperature} e uma mínima de {low_temperature}, com {condition}"}
 {"lang": "pt-BR", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_local.dialog", "text": "haverá um vento fraco vindo do {direction} no {day}, à uma velocidade de {speed} {speed_unit}"}

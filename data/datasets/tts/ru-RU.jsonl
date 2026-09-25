@@ -118,7 +118,6 @@
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "weekend.dialog", "text": "суббота и воскресенье"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "whole_day.dialog", "text": "целый день"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "ask_offset.dialog", "text": "через сколько минут или часов?"}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "{date}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "это {date}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, {num_days} с этого момента"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, в {num_days}"}
@@ -139,10 +138,8 @@
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "сейчас {month}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "текущий месяц — {month}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "этот месяц — {month}"}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "в настоящее время {time}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "это {time}"}
-{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "{time}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "это будет {time}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_tz_not_found.dialog", "text": "я не смог найти часовой пояс для {location}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_future.dialog", "text": "{date} будет {weekday}"}
@@ -1786,7 +1783,6 @@
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_humidity_local.dialog", "text": "в настоящее время влажность составляет {percent}"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_humidity_location.dialog", "text": "в настоящее время влажность в {location} равна {percent}"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunrise_future_local.dialog", "text": "восход будет в {time} сегодня"}
-{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunrise_future_local.dialog", "text": "солнце сегодня взойдет в 0 часов."}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunrise_future_location.dialog", "text": "восход был в {time} сегодня в {location}"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunrise_future_location.dialog", "text": "солнце взошло в {time} сегодня в {location}"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunrise_past_local.dialog", "text": "солнце взошло сегодня в {time} часов."}
@@ -1794,29 +1790,17 @@
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunrise_past_location.dialog", "text": "восход был в {time} сегодня в {location}"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunrise_past_location.dialog", "text": "солнце взошло в {time} сегодня в {location}"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunset_future_local.dialog", "text": "сегодня закат будет на уровне {time}"}
-{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunset_future_local.dialog", "text": "солнце зайдет сегодня в 0."}
-{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunset_future_local.dialog", "text": "солнце сегодня зайдет в 0"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunset_future_location.dialog", "text": "в {location} солнце зайдет в {time} сегодня"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunset_future_location.dialog", "text": "закат будет в {time} сегодня в {location}"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunset_future_location.dialog", "text": "солнце зайдет в {time} сегодня в {location}"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_local.dialog", "text": "сегодня закат был на {time}"}
-{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_local.dialog", "text": "сегодня солнце зашло в 0 часов."}
-{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_local.dialog", "text": "сегодня солнце зашло в 0"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "закат был на {time} сегодня в {location}"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "в {location} солнце зашло в {time} сегодня"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "солнце зашло в {time} сегодня в {location}"}
-{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "сейчас там {temperature} градусов."}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "сейчас температура {temperature} градусов и {temperature_unit}."}
-{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "сейчас температура {temperature} градусов."}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "в настоящее время {temperature} градусов {temperature_unit} в {location}."}
-{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "в настоящее время температура в {temperature} градусов в {location}."}
-{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "прямо сейчас в {temperature} градусов в {location}."}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "в настоящее время {condition} и {temperature} градус {temperature_unit}."}
-{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "в настоящее время {condition} и {temperature} градус."}
-{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "сейчас там {condition} и {temperature} градус."}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "в настоящее время {condition} и {temperature} градусов {temperature_unit} в {location}."}
-{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "сейчас там {condition} и {temperature} градус в {location}."}
-{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "у {location} есть {condition} и в настоящее время {temperature} градуса."}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_wind_light_local.dialog", "text": "ветер легкий {speed} {speed_unit} от {direction}"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_wind_light_local.dialog", "text": "сегодня наблюдается легкий ветер от {direction} при {speed} {speed_unit}"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_wind_light_location.dialog", "text": "в {location} сегодня легкий ветер от {direction} в {speed} {speed_unit}"}
@@ -1884,11 +1868,9 @@
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "прогноз {day} - {condition} с максимумом {high_temperature} и минимумом {low_temperature}."}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "{day} будет {condition}, с максимумом {high_temperature} и минимумом {low_temperature} в {location}."}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "{day}, {location} будет иметь максимум на {high_temperature} и минимум на {low_temperature}, а {condition}"}
-{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "прогноз {day} - {high_temperature} для максимума и {low_temperature} для минимума в {location}."}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_local.dialog", "text": "будет легкий ветер, идущий от {direction} {day} в {speed} {speed_unit}."}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_local.dialog", "text": "будет не очень ветрено {day}"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_location.dialog", "text": "будет легкий ветер, идущий от {direction} в {location} {day} в {speed} {speed_unit}"}
-{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_location.dialog", "text": "в {location} {day} будет не очень ветрено."}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "ветер будет умеренным, около {speed} {speed_unit} от {direction} {day}"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "вы можете ожидать умеренный ветер около {speed} {speed_unit} {day}"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "прогноз предусматривает умеренный ветер от {direction} при {speed} {speed_unit} {day}"}

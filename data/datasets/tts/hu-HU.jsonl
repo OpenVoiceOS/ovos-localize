@@ -119,7 +119,6 @@
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "whole_day.dialog", "text": "egész nap"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "ask_offset.dialog", "text": "hány perc vagy óra múlva?"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "ez {date}"}
-{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "{date}"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "ez a {date}, a {num_days}-ben"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "ez {date}, {num_days} mostantól kezdve"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, in {num_days}"}
@@ -142,10 +141,8 @@
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "a jelenlegi hónap {month}"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "ez a hónap {month}"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "jelenleg {time}"}
-{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time}"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time} van"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "ez lesz {time}"}
-{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "{time}"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "time_tz_not_found.dialog", "text": "nem találom az időzónát a következő tartózkodási helyhez: {location}"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_future.dialog", "text": "{date}-n {weekday} lesz"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_past.dialog", "text": "{date}-n {weekday} volt"}
@@ -1566,14 +1563,9 @@
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "a nap ma {time}-kor nyugodott le {location}-ben"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "naplemente volt a {time} ma {location}-ben"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "{location}-ban a nap ma {time}-kor ment le a nap"}
-{"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "jelenleg 0 fok van."}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "jelenleg {temperature} fok van {temperature_unit}."}
-{"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "jelenleg {temperature} fok van {location}-ben."}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "jelenleg {temperature} fok van {temperature_unit}-ben {location}-ben."}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "jelenleg {condition} és {temperature} fok van {temperature_unit}."}
-{"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "jelenleg {condition} és {temperature} fok van."}
-{"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "a {location}-nak van {condition} és jelenleg {temperature} fokos."}
-{"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "jelenleg {condition} és {temperature} fok van a {location}-ben."}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "jelenleg {condition} és {temperature} fok van {temperature_unit} és {location} között."}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "current_wind_light_local.dialog", "text": "a szél gyenge {speed} {speed_unit} {direction} felől {speed_unit}"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "current_wind_light_local.dialog", "text": "ma enyhe szél fúj a {direction} felől a {speed} {speed_unit}-nél."}
@@ -1641,13 +1633,11 @@
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "{day} a magas lesz {high_temperature} és az alacsony {low_temperature}, a {condition}"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "{day} ez lesz {condition} a magas {high_temperature} és a mélypont {low_temperature}"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "{day} várja {condition}, a legmagasabb {high_temperature} és a legalacsonyabb {low_temperature}"}
-{"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "az előrejelzés {day} {high_temperature} a magas és {low_temperature} a mélypont {location}-ban"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "{day} ez lesz {condition}, egy magas {high_temperature} és egy alacsony {low_temperature} a {location}"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "{day}, {location} lesz egy magas {high_temperature} és egy alacsony {low_temperature}, a {condition}"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_local.dialog", "text": "a {direction} {day} {speed} {speed_unit}-nál enyhe szél fúj majd a {direction} {day} felől."}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_local.dialog", "text": "nem lesz nagyon szeles {day}"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_location.dialog", "text": "a {direction} felől enyhe szél fog fújni a {location} {day} {speed} {speed_unit}-ben."}
-{"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_location.dialog", "text": "nem lesz nagyon szeles a {location} {day}-ben."}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "a szél mérsékelt lesz, kb. {speed} {speed_unit} {direction} {day} irányból"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "az előrejelzés szerint mérsékelt szél fúj a {direction} felől {speed} {speed_unit} {day}"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "mérsékelt szélre számíthat, körülbelül {speed} {speed_unit} {day} {speed_unit} {day}"}

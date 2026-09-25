@@ -291,7 +291,6 @@
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "ask_offset.dialog", "text": "over hoeveel minuten of uren?"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "de huidige datum is {date}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "het is {date}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "{date}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "het is {date}, over {num_days}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "het is {date}, {num_days} vanaf nu"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, is {num_days} vanaf heden"}
@@ -318,9 +317,7 @@
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "het is {time}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "momenteel is het {time}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "momenteel {time}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "het zal {time} zijn"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "{time}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "time_tz_not_found.dialog", "text": "ik kon de tijdzone niet vinden voor {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_future.dialog", "text": "op {date} wordt het {weekday}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_past.dialog", "text": "op {date} was het {weekday}"}
@@ -2677,7 +2674,6 @@
 {"lang": "nl-NL", "skill": "ovos-skill-wallpapers", "dialog": "searching_random.dialog", "text": "oké, ik zoek naar afbeeldingen"}
 {"lang": "nl-NL", "skill": "ovos-skill-wallpapers", "dialog": "searching_random.dialog", "text": "oké, ik zoek naar foto's"}
 {"lang": "nl-NL", "skill": "ovos-skill-wallpapers", "dialog": "wallpaper_changed.dialog", "text": "geniet van je nieuwe achtergrond"}
-{"lang": "nl-NL", "skill": "ovos-skill-wallpapers", "dialog": "wallpaper_fail.dialog", "text": "ik weet niet hoe ik de achtergrond op dit platform moet veranderen"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "afternoon.dialog", "text": "namiddag"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "and.dialog", "text": "en"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "excuses. ik heb nu geen toegang tot de weerberichten."}
@@ -2714,18 +2710,10 @@
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "de zon ging vandaag om {time} onder in {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "in {location} ging de zon onder om {time} vandaag"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "zonsondergang was op {time} vandaag in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "het is momenteel 0 graden."}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "het is momenteel {temperature} graden {temperature_unit}."}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "op dit moment is het 0 graden."}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "het is momenteel {temperature} graden in {location}."}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "het is momenteel {temperature} graden {temperature_unit} in {location}."}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "op dit moment is het {temperature} graden in {location}."}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "het is momenteel {condition} en {temperature} graden {temperature_unit}."}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "het is momenteel {condition} en {temperature} graden."}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "op dit moment is het {condition} en {temperature} graden."}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "het is momenteel {condition} en {temperature} graden {temperature_unit} in {location}."}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "op dit moment is het {condition} en {temperature} graden in {location}."}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "{location} heeft {condition} en is momenteel {temperature} graden."}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "current_wind_light_local.dialog", "text": "de wind is licht op {speed} {speed_unit} van de {direction}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "current_wind_light_local.dialog", "text": "vandaag is er lichte wind uit de {direction} op {speed} {speed_unit}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "current_wind_light_location.dialog", "text": "de wind is licht in {location} op {speed} {speed_unit} van de {direction}"}
@@ -2792,13 +2780,11 @@
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "{day} de hoge zal {high_temperature} zijn en de lage {low_temperature}, met {condition}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "{day} het zal {condition} zijn met een high van {high_temperature} en een low van {low_temperature}."}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "{day} verwacht {condition}, met een maximum van {high_temperature} en een minimum van {low_temperature}."}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "de voorspelling {day} is {high_temperature} voor een hoog en {low_temperature} voor een laag in {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "{day} het zal {condition} zijn, met een maximum van {high_temperature} en een minimum van {low_temperature} in {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "{day}, {location} zal een maximum hebben van {high_temperature} en een minimum van {low_temperature}, met {condition}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_local.dialog", "text": "er komt een lichte wind van de {direction} {day} bij {speed} {speed_unit}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_local.dialog", "text": "het zal niet erg winderig zijn {day}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_location.dialog", "text": "er komt een lichte wind van de {direction} in {location} {day} bij {speed} {speed_unit}"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_location.dialog", "text": "het zal niet erg winderig zijn in {location} {day}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "de voorspelling is een matige wind van de {direction} op {speed} {speed_unit} {day}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "de wind zal matig zijn, ongeveer {speed} {speed_unit} uit de {direction} {day}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "u kunt een matige wind verwachten van ongeveer {speed} {speed_unit} {day}"}

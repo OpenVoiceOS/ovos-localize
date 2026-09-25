@@ -316,7 +316,8 @@
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "intent": "query_list_entries.intent", "template": "(milyen tételek|mi) (van|vannak) a [{list_name}] listán", "slots": ["list_name"], "entity_values": {"list_name": ["teendő", "todo"]}}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "intent": "query_list_entries.intent", "template": "(olvasd fel|mutasd) a [{list_name}] lista tételeit", "slots": ["list_name"], "entity_values": {"list_name": ["teendő", "todo"]}}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "intent": "query_list_entries.intent", "template": "mi van a {list_name} listámon", "slots": ["list_name"], "entity_values": {"list_name": ["teendő", "todo"]}}
-{"lang": "hu-HU", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "mi a mai dátum {location}(ban/ben)", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "mi a mai dátum {location}ban", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "intent": "current_date.intent", "template": "mi a mai dátum {location}ben", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "intent": "time_until.intent", "template": "mennyi idő van hátra {date}-ig [kérlek]", "slots": ["date"], "entity_values": {"date": []}}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "intent": "time_until.intent", "template": "mikor lesz {date}", "slots": ["date"], "entity_values": {"date": []}}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "intent": "time_until.intent", "template": "hány nap van hátra {date}-ig", "slots": ["date"], "entity_values": {"date": []}}

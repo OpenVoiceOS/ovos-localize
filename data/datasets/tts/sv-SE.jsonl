@@ -185,7 +185,6 @@
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "ask_offset.dialog", "text": "om hur många minuter eller timmar?"}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "det är {date}"}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "idag är det {date}"}
-{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "{date}"}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "det kommer vara {date}, om {num_days}"}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "det är {date}, om {num_days}"}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, om {num_days}"}
@@ -211,9 +210,7 @@
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "den är {time}"}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "för närvarande {time}"}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "klockan är {time}"}
-{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time}"}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "det kommer att vara {time}"}
-{"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "{time}"}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "time_tz_not_found.dialog", "text": "jag kunde inte hitta tidszonen för {location}"}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_future.dialog", "text": "på {date} kommer det att vara {weekday}"}
 {"lang": "sv-SE", "skill": "ovos-skill-date-time", "dialog": "weekday_at_date_past.dialog", "text": "på {date} var det {weekday}"}
@@ -1920,7 +1917,6 @@
 {"lang": "sv-SE", "skill": "ovos-skill-wallpapers", "dialog": "searching_random.dialog", "text": "ok, söker efter bilder"}
 {"lang": "sv-SE", "skill": "ovos-skill-wallpapers", "dialog": "searching_random.dialog", "text": "ok, söker efter foton"}
 {"lang": "sv-SE", "skill": "ovos-skill-wallpapers", "dialog": "wallpaper_changed.dialog", "text": "njut av din nya bakgrundsbild"}
-{"lang": "sv-SE", "skill": "ovos-skill-wallpapers", "dialog": "wallpaper_fail.dialog", "text": "jag vet inte hur man byter bakgrundsbild på den här plattformen"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "afternoon.dialog", "text": "eftermiddag"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "and.dialog", "text": ", och"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "jag ber om ursäkt. jag har inte komma åt väder prognoser för närvarande."}
@@ -1985,7 +1981,6 @@
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_condition_not_expected_location.dialog", "text": "nej, prognosen visar på {condition} idag i {location}"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_humidity_local.dialog", "text": "för närvarande är luftfuktigheten {percent}"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_humidity_location.dialog", "text": "för närvarande är fuktigheten i {location} {percent}"}
-{"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_sunrise_future_local.dialog", "text": "solen går upp klockan 0 idag"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_sunrise_future_local.dialog", "text": "soluppgången kommer att vara {time} idag"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_sunrise_future_location.dialog", "text": "solen gick upp vid {time} idag i {location}"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_sunrise_future_location.dialog", "text": "soluppgången var vid {time} idag i {location}"}
@@ -2003,18 +1998,10 @@
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "i {location} solen gick ner vid {time} idag"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "solen gick ner vid {time} idag i {location}"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "solnedgången var vid {time} idag i {location}"}
-{"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "det är för närvarande 0 grader."}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "det är för närvarande {temperature} grader {temperature_unit}."}
-{"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "just nu är det {temperature} grader."}
-{"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "det är för närvarande 0 grader i {location}."}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "för närvarande är det {temperature} grader {temperature_unit} i {location}."}
-{"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "just nu är det {temperature} grader i {location}."}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "det är för närvarande {condition} och {temperature} grader {temperature_unit}."}
-{"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "för närvarande är det {condition} och {temperature} grader."}
-{"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "just nu är det {condition} och {temperature} grader."}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "för närvarande är det {condition} och {temperature} grader {temperature_unit} i {location}."}
-{"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "just nu är det {condition} och {temperature} grader i {location}."}
-{"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "{location} har {condition} och är för närvarande {temperature} grader."}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_wind_light_local.dialog", "text": "idag blåser det lätt från {direction} på {speed} {speed_unit}"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_wind_light_local.dialog", "text": "vinden är svag vid {speed} {speed_unit} från {direction}"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "current_wind_light_location.dialog", "text": "i {location} idag är det lätt vind från {direction} vid {speed} {speed_unit}"}
@@ -2080,13 +2067,11 @@
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "{day} den högsta nivån kommer att vara {high_temperature} och den lägsta {low_temperature}, med {condition}"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "{day} det kommer att vara {condition} med en hög av {high_temperature} och en låg av {low_temperature}"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "{day} förväntar sig {condition}, med en toppnotering på {high_temperature} och en bottennotering på {low_temperature}"}
-{"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "prognosen {day} är {high_temperature} för en hög och {low_temperature} för en låg i {location}."}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "{day} det kommer att vara {condition}, med en hög av {high_temperature} och en låg av {low_temperature} i {location}"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "{day}, {location} kommer att ha en högsta nivå på {high_temperature} och en lägsta nivå på {low_temperature}, med {condition}"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_local.dialog", "text": "det kommer att blåsa en svag vind från {direction} {day} vid {speed} {speed_unit}."}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_local.dialog", "text": "det kommer inte att blåsa särskilt mycket {day}"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_location.dialog", "text": "det kommer att blåsa en svag vind från {direction} i {location} {day} i {speed} {speed_unit}."}
-{"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_location.dialog", "text": "det kommer inte att blåsa särskilt mycket i {location} {day}"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "du kan förvänta dig en måttlig vind på cirka {speed} {speed_unit} {day}"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "enligt prognosen kommer det att blåsa en måttlig vind från {direction} vid {speed} {speed_unit} {day}"}
 {"lang": "sv-SE", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "vinden kommer att vara måttlig, ungefär {speed} {speed_unit} från {direction} {day}"}
