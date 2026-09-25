@@ -18,7 +18,7 @@
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "alert_expiration_past.dialog", "text": "ehkä laskin väärin, mutta annettu aika on menneisyydessä."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_ask.dialog", "text": "tällä hetkellä sinulla on {event} kello {begin}. tallenna kuitenkin?"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_duration_ask.dialog", "text": "tällä hetkellä sinulla on {event} kello {begin} ja {end} välissä. tallenna kuitenkin?"}
-{"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "alert_prenotification.dialog", "text": "haluan muistuttaa teitä {remimder}:sta {time_until}:ssä."}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "alert_prenotification.dialog", "text": "haluan muistuttaa teitä {reminder}:sta {time_until}:ssä."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "alert_prenotification_ask.dialog", "text": "haluatko lyhyen ilmoituksen ennen tätä tapahtumaa?"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "alert_rescheduled.dialog", "text": "{name}, tyyppi {type}, säädetty"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "alert_rescheduled_all_day.dialog", "text": "{kind} on nyt koko päivän."}
@@ -53,8 +53,10 @@
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "error_no_list_name.dialog", "text": "sinun on määritettävä luettelon nimi."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "error_no_repeat.dialog", "text": "sinun on annettava minulle aikaväli. se voi olla yksittäisiä päiviä tai lyhyempiä ajanjaksoja."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "error_no_scheduled_kind.dialog", "text": "sinulla ei ole aikataulua {kind}."}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "error_no_script.dialog", "text": "en kuullut, mitä äänitiedostoa käyttää {kind}:lle."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "error_no_time.dialog", "text": "en kuullut aikaa, johon {kind}:n voisi asettaa. yritä uudelleen."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "error_nothing_to_cancel.dialog", "text": "en löytänyt vastaavaa hälytystä peruutettavaksi."}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "error_same_priority.dialog", "text": "prioriteetti on jo asetettu tähän arvoon."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "expired_alert.dialog", "text": "{name}-hälytys on päällä."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "expired_audio_alert_intro.dialog", "text": "sinulla on äänimuistutus."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "expired_reminder.dialog", "text": "tämä on muistutuksesi: {name}."}
@@ -86,6 +88,8 @@
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "list_todo_reminder.dialog", "text": "minun pitäisi muistuttaa sinua {reminders}"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems.dialog", "text": "{name}-luettelossa on {items}."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems_added.dialog", "text": "olen lisännyt {num} merkintää."}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "media_type_changed.dialog", "text": "ääni vaihdettiin arvosta {old} arvoon {new}."}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "media_type_set.dialog", "text": "ääni asetettiin arvoon {new}."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "monday.dialog", "text": "maanantai"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "music.dialog", "text": "musiikki"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "next_alert.dialog", "text": "seuraava on {name} kello {begin}."}
@@ -98,6 +102,7 @@
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "pick_multiple_entries.dialog", "text": "samanlaisia merkintöjä on useita. mikä niistä valitaan?"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "please_repeat.dialog", "text": "anteeksi, en saanut siitä kiinni. toistakaa."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "podcast.dialog", "text": "podcast"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "property_changed_priority.dialog", "text": "prioriteetti muutettiin arvoon {num}."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "reminder_ask_time.dialog", "text": "pitäisikö minun muistuttaa sinua tiettynä ajankohtana?"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "remove_list_items_ask.dialog", "text": "luettele yksi kerrallaan ne kohteet, jotka olisi poistettava."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "repeating_every.dialog", "text": "jokainen {repeat}"}

@@ -18,7 +18,7 @@
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "alert_expiration_past.dialog", "text": "может быть, я ошибся в расчетах, но данное время осталось в прошлом."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_ask.dialog", "text": "в это время вы получили {event} в {begin}. как-нибудь сохранить?"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_duration_ask.dialog", "text": "в это время между {begin} и {end} находится {event}. как-нибудь сохранить?"}
-{"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "alert_prenotification.dialog", "text": "хочу напомнить о {remimder} в {time_until}"}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "alert_prenotification.dialog", "text": "хочу напомнить о {reminder} в {time_until}"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "alert_prenotification_ask.dialog", "text": "желаете ли вы получить краткое уведомление перед этим событием?"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "alert_rescheduled.dialog", "text": "{name} типа {type} скорректировано"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "alert_rescheduled_all_day.dialog", "text": "{kind} теперь работает весь день."}
@@ -53,8 +53,10 @@
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "error_no_list_name.dialog", "text": "необходимо указать имя списка."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "error_no_repeat.dialog", "text": "необходимо указать временной интервал. это могут быть как отдельные дни, так и более короткие периоды времени."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "error_no_scheduled_kind.dialog", "text": "у вас нет расписания {kind}."}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "error_no_script.dialog", "text": "я не услышал, какой аудиофайл использовать для {kind}."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "error_no_time.dialog", "text": "я не услышал время, на которое нужно установить {kind}. пожалуйста, попробуйте еще раз."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "error_nothing_to_cancel.dialog", "text": "я не смог найти подходящее оповещение для отмены."}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "error_same_priority.dialog", "text": "приоритет уже установлен на это значение."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "expired_alert.dialog", "text": "ваше предупреждение {name} выполнено."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "expired_audio_alert_intro.dialog", "text": "у вас есть звуковое напоминание."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "expired_reminder.dialog", "text": "это ваше напоминание: {name}."}
@@ -86,6 +88,8 @@
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "list_todo_reminder.dialog", "text": "я должен напомнить тебе {reminders}"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems.dialog", "text": "в списке {name} находится {items}."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems_added.dialog", "text": "я добавил {num} записей."}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "media_type_changed.dialog", "text": "звук изменён с {old} на {new}."}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "media_type_set.dialog", "text": "звук установлен на {new}."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "monday.dialog", "text": "понедельник"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "music.dialog", "text": "музыка"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "next_alert.dialog", "text": "следующим будет {name} на {begin}."}
@@ -98,6 +102,7 @@
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "pick_multiple_entries.dialog", "text": "имеется несколько похожих записей. какую из них выбрать?"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "please_repeat.dialog", "text": "извините, я не расслышал. повторите, пожалуйста."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "podcast.dialog", "text": "подкаст"}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "property_changed_priority.dialog", "text": "приоритет изменён на {num}."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "reminder_ask_time.dialog", "text": "нужно ли напоминать в определенное время?"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "remove_list_items_ask.dialog", "text": "перечислите по очереди элементы, которые необходимо удалить."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "repeating_every.dialog", "text": "каждый {repeat}"}

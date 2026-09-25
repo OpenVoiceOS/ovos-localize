@@ -18,7 +18,7 @@
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "alert_expiration_past.dialog", "text": "może źle obliczyłem, ale podany czas leży w przeszłości."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_ask.dialog", "text": "w tym momencie masz {event} na {begin}. zapisać w jakikolwiek sposób?"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_duration_ask.dialog", "text": "w tej chwili masz {event} między {begin} i {end}. zapisać w jakikolwiek sposób?"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "alert_prenotification.dialog", "text": "chcę przypomnieć o {remimder} w {time_until}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "alert_prenotification.dialog", "text": "chcę przypomnieć o {reminder} w {time_until}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "alert_prenotification_ask.dialog", "text": "czy chcesz otrzymać krótkie powiadomienie przed tym wydarzeniem?"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "alert_rescheduled.dialog", "text": "{name} typu {type} dostosowany"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "alert_rescheduled_all_day.dialog", "text": "{kind} to teraz cały dzień."}
@@ -53,8 +53,10 @@
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "error_no_list_name.dialog", "text": "musisz określić nazwę listy."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "error_no_repeat.dialog", "text": "musisz podać przedział czasowy. mogą to być pojedyncze dni lub krótsze okresy."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "error_no_scheduled_kind.dialog", "text": "nie masz zaplanowanego {kind}."}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "error_no_script.dialog", "text": "nie usłyszałem, którego pliku dźwiękowego użyć dla {kind}."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "error_no_time.dialog", "text": "nie usłyszałem godziny, na którą należy ustawić {kind}. spróbuj ponownie."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "error_nothing_to_cancel.dialog", "text": "nie mogłem znaleźć pasującego powiadomienia do anulowania."}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "error_same_priority.dialog", "text": "priorytet jest już ustawiony na tę wartość."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "expired_alert.dialog", "text": "twój alert {name} został uruchomiony."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "expired_audio_alert_intro.dialog", "text": "masz przypomnienie dźwiękowe."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "expired_reminder.dialog", "text": "to jest przypomnienie: {name}."}
@@ -86,6 +88,8 @@
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "list_todo_reminder.dialog", "text": "powinienem przypomnieć ci o {reminders}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems.dialog", "text": "na liście {name} znajduje się {items}."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems_added.dialog", "text": "dodałem {num} wpisów."}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "media_type_changed.dialog", "text": "dźwięk został zmieniony z {old} na {new}."}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "media_type_set.dialog", "text": "dźwięk został ustawiony na {new}."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "monday.dialog", "text": "poniedziałek"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "music.dialog", "text": "muzyka"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "next_alert.dialog", "text": "następny jest {name} na {begin}."}
@@ -98,6 +102,7 @@
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "pick_multiple_entries.dialog", "text": "istnieje wiele podobnych wpisów. który z nich wybrać?"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "please_repeat.dialog", "text": "przepraszam, nie zrozumiałem. proszę powtórzyć."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "podcast.dialog", "text": "podcast"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "property_changed_priority.dialog", "text": "priorytet został zmieniony na {num}."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "reminder_ask_time.dialog", "text": "czy powinienem przypominać o określonym czasie?"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "remove_list_items_ask.dialog", "text": "wymień po kolei elementy, które powinny zostać usunięte."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "dialog": "repeating_every.dialog", "text": "co {repeat}"}
@@ -1886,12 +1891,16 @@
 {"lang": "pl-PL", "skill": "ovos-skill-weather", "dialog": "west.dialog", "text": "zachód"}
 {"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "no_answer.dialog", "text": "nie znalazłem na to odpowiedzi"}
 {"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "no_answer.dialog", "text": "nie udało mi się nic na ten temat znaleźć"}
+{"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "no_entry_found.dialog", "text": "nie mogę znaleźć powiązanego artykułu w wikipedii"}
+{"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "no_entry_found.dialog", "text": "obawiam się, że nie ma żadnego artykułu na ten temat"}
 {"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "no_query.dialog", "text": "kogo lub co chciałbyś, żebym zobaczyła na wikipedii?"}
 {"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "no_query.dialog", "text": "czego mam szukać na wikipedii?"}
 {"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "nothing_more.dialog", "text": "to wszystko, co mam na {title}"}
 {"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "nothing_more.dialog", "text": "to jest wszystko, co wikipedia daje mi na temat {title}"}
 {"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "searching.dialog", "text": "pozwól mi wyszukać {query} w wikipedii"}
 {"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "searching.dialog", "text": "sprawdzam wikipedię pod hasłem {query}"}
+{"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "thats_all.dialog", "text": "to wszystko, co udało mi się znaleźć"}
+{"lang": "pl-PL", "skill": "ovos-skill-wikipedia", "dialog": "thats_all.dialog", "text": "to wszystko, co wiem"}
 {"lang": "pl-PL", "skill": "ovos-skill-wordnet", "dialog": "no_answer.dialog", "text": "wordnet nie zna odpowiedzi"}
 {"lang": "pl-PL", "skill": "ovos-skill-wordnet", "dialog": "unresolved.dialog", "text": "nie zrozumiałem, o które słowo ci chodzi"}
 {"lang": "pl-PL", "skill": "skill-homeassistant", "dialog": "acknowledge.dialog", "text": "okej."}

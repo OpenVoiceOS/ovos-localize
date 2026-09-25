@@ -18,7 +18,7 @@
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "alert_expiration_past.dialog", "text": "lehet, hogy elszámoltam magam, de az adott időpont a múltban van."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_ask.dialog", "text": "ebben az időben van {event} ekkor {begin}. mentés egyébként?"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_duration_ask.dialog", "text": "jelenleg {event} van {begin} és {end} között. mentés egyébként?"}
-{"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "alert_prenotification.dialog", "text": "szeretnélek emlékeztetni a {remimder}-ra az {time_until}-ben."}
+{"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "alert_prenotification.dialog", "text": "szeretnélek emlékeztetni a {reminder}-ra az {time_until}-ben."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "alert_prenotification_ask.dialog", "text": "szeretne rövid értesítést kapni az esemény előtt?"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "alert_rescheduled.dialog", "text": "{name}, típusa {type}, beállítva"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "alert_rescheduled_all_day.dialog", "text": "{kind} most egész nap."}
@@ -53,8 +53,10 @@
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "error_no_list_name.dialog", "text": "meg kell adnia egy lista nevét."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "error_no_repeat.dialog", "text": "meg kell adnia egy időintervallumot. ez lehet egyetlen nap vagy rövidebb időszak."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "error_no_scheduled_kind.dialog", "text": "neked nincs programod {kind}."}
+{"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "error_no_script.dialog", "text": "nem hallottam, melyik hangfájlt használjam az {kind} esetében."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "error_no_time.dialog", "text": "nem hallottam, hogy mikorra kell beállítani az {kind}-t. kérem, próbálja meg újra."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "error_nothing_to_cancel.dialog", "text": "nem találtam megfelelő riasztást a törléshez."}
+{"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "error_same_priority.dialog", "text": "a prioritás már erre az értékre van állítva."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "expired_alert.dialog", "text": "a {name} riasztásod megtörtént."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "expired_audio_alert_intro.dialog", "text": "van egy hangos emlékeztető."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "expired_reminder.dialog", "text": "ez az ön emlékeztetője: {name}."}
@@ -86,6 +88,8 @@
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "list_todo_reminder.dialog", "text": "emlékeztetnem kell téged, hogy {reminders}"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems.dialog", "text": "a {name} listán a {items}."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems_added.dialog", "text": "hozzáadtam {num} bejegyzést."}
+{"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "media_type_changed.dialog", "text": "a hang megváltozott erről: {old} erre: {new}."}
+{"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "media_type_set.dialog", "text": "a hang erre lett állítva: {new}."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "monday.dialog", "text": "hétfő"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "music.dialog", "text": "zene"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "next_alert.dialog", "text": "a következő a {name} a {begin}-nél."}
@@ -98,6 +102,7 @@
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "pick_multiple_entries.dialog", "text": "több hasonló bejegyzés is van. melyiket válasszuk?"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "please_repeat.dialog", "text": "elnézést, nem értettem. kérem, ismételje meg."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "podcast.dialog", "text": "podcast"}
+{"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "property_changed_priority.dialog", "text": "a prioritás erre módosult: {num}."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "reminder_ask_time.dialog", "text": "emlékeztesselek egy bizonyos időpontban?"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "remove_list_items_ask.dialog", "text": "sorolja fel egyenként azokat a tételeket, amelyeket el kell távolítani."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "repeating_every.dialog", "text": "minden {repeat}"}

@@ -18,7 +18,7 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "alert_expiration_past.dialog", "text": "možná jsem se přepočítal, ale daný čas leží v minulosti."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_ask.dialog", "text": "v tuto chvíli máte {event} na {begin}. uložit nějak?"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_duration_ask.dialog", "text": "v tuto chvíli máte {event} mezi {begin} a {end}. uložit nějak?"}
-{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "alert_prenotification.dialog", "text": "chci vám připomenout {remimder} v {time_until}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "alert_prenotification.dialog", "text": "chci vám připomenout {reminder} v {time_until}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "alert_prenotification_ask.dialog", "text": "přejete si krátké upozornění před touto událostí?"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "alert_rescheduled.dialog", "text": "{name} typu {type} upraveno"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "alert_rescheduled_all_day.dialog", "text": "{kind} je nyní celodenní."}
@@ -53,8 +53,10 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "error_no_list_name.dialog", "text": "musíte zadat název seznamu."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "error_no_repeat.dialog", "text": "musíte mi dát časový interval. může se jednat o jednotlivé dny nebo kratší časové úseky."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "error_no_scheduled_kind.dialog", "text": "nemáte žádný plán {kind}."}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "error_no_script.dialog", "text": "neslyšel jsem, který zvukový soubor použít pro {kind}."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "error_no_time.dialog", "text": "neslyšel jsem, na kdy nastavit {kind}. zkuste to prosím znovu."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "error_nothing_to_cancel.dialog", "text": "nepodařilo se mi najít odpovídající upozornění, které bych mohl zrušit."}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "error_same_priority.dialog", "text": "priorita je již nastavena na tuto hodnotu."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "expired_alert.dialog", "text": "vaše upozornění {name} je aktuální."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "expired_audio_alert_intro.dialog", "text": "máte zvukovou připomínku."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "expired_reminder.dialog", "text": "toto je vaše připomínka: {name}."}
@@ -86,6 +88,8 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "list_todo_reminder.dialog", "text": "měl bych vám připomenout {reminders}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems.dialog", "text": "v seznamu {name} je {items}."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "list_todo_subitems_added.dialog", "text": "přidal jsem {num} položek."}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "media_type_changed.dialog", "text": "zvuk byl změněn z {old} na {new}."}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "media_type_set.dialog", "text": "zvuk byl nastaven na {new}."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "monday.dialog", "text": "pondělí"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "music.dialog", "text": "hudba"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "next_alert.dialog", "text": "další je {name} na {begin}."}
@@ -98,6 +102,7 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "pick_multiple_entries.dialog", "text": "podobných záznamů je více. který z nich vybrat?"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "please_repeat.dialog", "text": "promiňte, nerozuměl jsem tomu. zopakujte to prosím."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "podcast.dialog", "text": "podcast"}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "property_changed_priority.dialog", "text": "priorita byla změněna na {num}."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "reminder_ask_time.dialog", "text": "mám vám to připomenout v určitý čas?"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "remove_list_items_ask.dialog", "text": "vypište postupně položky, které by měly být odstraněny."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "repeating_every.dialog", "text": "každý {repeat}"}
@@ -1513,8 +1518,13 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-ip", "dialog": "my_address_is.dialog", "text": "jsem na i.p. adrese {ip}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-ip", "dialog": "my_address_is.dialog", "text": "má síťová i.p. adresa je {ip}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-ip", "dialog": "my_address_on_x_is_y.dialog", "text": "na {interface} má i.p. adresa je {ip}."}
+{"lang": "cs-CZ", "skill": "ovos-skill-ip", "dialog": "my_public_ip.dialog", "text": "vaše veřejná adresa je {ip}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-ip", "dialog": "my_public_ip.dialog", "text": "veřejná i.p. je {ip}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-ip", "dialog": "no_network_connection.dialog", "text": "ještě nemám žádné připojení k síti"}
 {"lang": "cs-CZ", "skill": "ovos-skill-ip", "dialog": "no_network_connection.dialog", "text": "nejsem připojený k síti"}
+{"lang": "cs-CZ", "skill": "ovos-skill-ip", "dialog": "public_ip_error.dialog", "text": "nepodařilo se mi připojit k internetu a zjistit veřejnou adresu"}
+{"lang": "cs-CZ", "skill": "ovos-skill-ip", "dialog": "wifi_signal_quality.dialog", "text": "síla vašeho wifi signálu je {quality}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-ip", "dialog": "wifi_signal_quality.dialog", "text": "síla signálu {quality}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep.dialog", "text": "dobře, jdu teda spát. můžeš mě probudit vyslovením '{wake_word}, probuď se'."}
 {"lang": "cs-CZ", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep.dialog", "text": "jdu spát. řekni '{wake_word}, probuď se' aby jsi znovu získal mou pozornost."}
 {"lang": "cs-CZ", "skill": "ovos-skill-naptime", "dialog": "going_to_sleep.dialog", "text": "teď jdu spát. řekni '{wake_word}, probuď se' abych se probral."}
