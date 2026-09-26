@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.0a23](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a23) (2026-09-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a22...0.1.0a23)
+
+**Merged pull requests:**
+
+- fix\(datasets\): refuse a row that is one word repeated more than three times [\#629](https://github.com/OpenVoiceOS/ovos-localize/pull/629) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.1.0a22](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a22) (2026-09-25)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a21...0.1.0a22)
@@ -204,7 +212,6 @@
 - feat: add TigreGotico/ovos-skill-cave-adventure-game to skills.txt [\#133](https://github.com/OpenVoiceOS/ovos-localize/pull/133) ([github-actions[bot]](https://github.com/apps/github-actions))
 - feat: add TigreGotico/ovos-skill-moon-game to skills.txt [\#132](https://github.com/OpenVoiceOS/ovos-localize/pull/132) ([github-actions[bot]](https://github.com/apps/github-actions))
 - feat: add JarbasHiveMind/ovos-hivemind-pipeline-plugin to skills.txt [\#131](https://github.com/OpenVoiceOS/ovos-localize/pull/131) ([github-actions[bot]](https://github.com/apps/github-actions))
-- feat: add TigreGotico/ovos-transcription-validator-plugin to skills.txt [\#127](https://github.com/OpenVoiceOS/ovos-localize/pull/127) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 
 
