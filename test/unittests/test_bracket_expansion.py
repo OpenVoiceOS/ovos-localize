@@ -1,9 +1,11 @@
 """Unit tests for bracket expansion."""
 
 from ovos_localize.bracket_expansion import (
+    MAX_WORD_REPEAT,
     count_expanded_lines,
     expand_template,
     expand_template_cached,
+    is_repeated_word,
 )
 
 # Produces 5 * 5 * 4 * 3 = 300 combinations — enough to exceed a small cap
@@ -145,3 +147,107 @@ class TestCountExpandedLines:
     def test_empty(self) -> None:
         """Empty input returns 0."""
         assert count_expanded_lines([]) == 0
+
+
+class TestIsRepeatedWord:
+    """One word written out many times is junk; repetition among words is not.
+
+    The shape reached a published training set once: an OCP tr-tr vocabulary
+    shipped 250 copies of one word on a single line, and the classification
+    dataset carried the expansion.
+    """
+
+    def test_the_shipped_junk_is_flagged(self):
+        assert is_repeated_word("oyun " * 51)
+        assert is_repeated_word("önceki " * 250)
+        assert is_repeated_word("næste " * 10)
+
+    def test_the_limit_is_exclusive(self):
+        assert not is_repeated_word("at at at")
+        assert is_repeated_word("at at at at")
+        assert MAX_WORD_REPEAT == 3
+
+    def test_case_does_not_hide_a_repeat(self):
+        assert is_repeated_word("Oyun oyun OYUN oyun")
+
+    def test_a_real_phrase_is_left_alone(self):
+        assert not is_repeated_word("hvad er klokken nu i københavn")
+        assert not is_repeated_word("çal")
+        assert not is_repeated_word("")
+
+    def test_a_word_repeated_among_others_is_left_alone(self):
+        # repetition is meaningful in many languages, so only an all-one-word
+        # row is junk
+        assert not is_repeated_word("ha ha ha ha ha ha ha my friend")
+        assert not is_repeated_word("very very very very good")
+
+
+class TestEveryGeneratorDropsTheRow:
+    """All four generators that emit locale text must refuse the junk.
+
+    #629 first guarded only classification and translation, the two that had
+    carried the junk into a published dataset. localize drove the other two and
+    showed the junk reaches them as well: the gap is latent only until a dialog
+    file carries a repeat, and the TTS corpus is the largest dataset there is.
+    slot_filling and skill_metadata need no guard, because slot_filling skips a
+    line with no slot and a repeated word has none, and skill_metadata emits no
+    locale text.
+    """
+
+    JUNK = " ".join(["önceki"] * 12)
+    GOOD = "önceki parça"
+
+    def _entries(self, texts):
+        return {"entries": [{"text": t, "line": i + 1} for i, t in enumerate(texts)]}
+
+    def _voc_skill(self):
+        return {"id": "test-skill", "files": {"Prev.voc": {
+            "type": "voc",
+            "langs": {"en-US": self._entries(["previous"]),
+                      "tr-TR": self._entries([self.GOOD, self.JUNK])}}}}
+
+    def _dialog_skill(self):
+        return {"id": "test-skill", "files": {"prev.dialog": {
+            "type": "dialog",
+            "langs": {"tr-TR": self._entries([self.GOOD, self.JUNK])}}}}
+
+    def test_classification_drops_the_row(self):
+        from ovos_localize.datasets.classification import generate_intent_classification
+        texts = {r["text"] for r in generate_intent_classification("test-skill", self._voc_skill())}
+        assert self.GOOD in texts
+        assert self.JUNK not in texts
+
+    def test_translation_drops_the_text_and_keeps_the_pair(self):
+        from ovos_localize.datasets.translation import generate_parallel_corpora
+        rows = list(generate_parallel_corpora("test-skill", self._voc_skill()))
+        row = next(r for r in rows if r["target_lang"] == "tr-TR")
+        assert self.GOOD in row["target_texts"]
+        assert self.JUNK not in row["target_texts"]
+        assert row["base_texts"] == ["previous"]
+
+    def test_tts_corpus_drops_the_row(self):
+        from ovos_localize.datasets.tts_corpus import generate_tts_corpus
+        texts = {r["text"] for r in generate_tts_corpus("test-skill", self._dialog_skill())}
+        assert self.GOOD in texts
+        assert self.JUNK not in texts
+
+    def test_response_pairs_drops_it_on_both_sides(self):
+        from ovos_localize.datasets.response_pairs import generate_response_pairs
+        skill = {"id": "test-skill", "files": {
+            "prev.dialog": {"type": "dialog",
+                            "langs": {"tr-TR": self._entries([self.GOOD, self.JUNK])}},
+            "prev.intent": {"type": "intent",
+                            "context": {"triggers_dialog": ["prev"], "handler_method": "h"},
+                            "langs": {"tr-TR": self._entries([self.GOOD, self.JUNK])}}}}
+        rows = list(generate_response_pairs("test-skill", skill))
+        assert rows, "the pair must survive: only the junk goes"
+        utterances = {row["utterance"] for row in rows}
+        responses = {r for row in rows for r in row["responses"]}
+        # assert against the literal, never against the predicate under test:
+        # neutering is_repeated_word would take the oracle false with the
+        # generator and the assertion would hold whatever was emitted
+        assert self.JUNK not in utterances
+        assert self.JUNK not in responses
+        assert self.GOOD in utterances
+        assert self.GOOD in responses
+

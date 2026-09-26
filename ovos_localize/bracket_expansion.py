@@ -185,6 +185,43 @@ def clean_text(text: str) -> str:
     return text
 
 
+MAX_WORD_REPEAT = 3
+"""How many copies of one word a dataset row may hold before it is junk.
+
+Three is a deliberate floor and not a free choice. At four bare copies the
+rule starts to drop lines a language can mean: laughter, emphatic refusal,
+onomatopoeia, and a repeated digit read aloud. No row in the corpus is
+affected today. Raise this number rather than widen the rule to any
+repetition.
+"""
+
+
+def is_repeated_word(text: str, limit: int = MAX_WORD_REPEAT) -> bool:
+    """True when ``text`` is one word repeated more than ``limit`` times.
+
+    A locale file sometimes ships a line that is a single word written out
+    many times, for example 250 copies of "onceki" in an OCP tr-tr
+    vocabulary. Such a line matches only that exact phrase, so it teaches a
+    classifier nothing and it reached a published training set once already.
+
+    The rule is deliberately narrow. Every word in the row must be the same
+    word, compared case-insensitively, and there must be more than ``limit``
+    of them. A row that repeats a word among other words is left alone,
+    because repetition is meaningful in many languages.
+
+    Args:
+        text: One dataset row's text.
+        limit: The largest number of copies that is not junk.
+
+    Returns:
+        True when the row is one word repeated past ``limit``.
+    """
+    words = text.split()
+    if len(words) <= limit:
+        return False
+    return len({word.casefold() for word in words}) == 1
+
+
 def count_expanded_lines(lines: list[str]) -> int:
     """Count the total number of expanded sentences from a list of template lines.
 
