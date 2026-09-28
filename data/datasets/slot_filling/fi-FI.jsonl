@@ -3,24 +3,24 @@
 {"lang": "fi-FI", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "DuckDuckGo {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "fi-FI", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "kysy DuckDuckGolta {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "fi-FI", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "etsi {query} DuckDuckGosta", "slots": ["query"], "entity_values": {"query": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Blir det kallt (idag|imorgon|på {day}) [i {location}]", "slots": ["day", "location"], "entity_values": {"day": [], "location": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Är det kallt ute nu [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Blir det svalt (idag|imorgon) [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Behöver jag jacka idag [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Blir det varmt (idag|imorgon|på {day}) [i {location}]", "slots": ["day", "location"], "entity_values": {"day": [], "location": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Är det varmt ute nu [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Blir det riktigt varmt idag [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "Behöver jag solkräm idag [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Blåser det mycket just nu [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Hur hård är vinden [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "Kommer det att blåsa idag [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "När kommer det att regna igen [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "När börjar det regna [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "Hur länge till innan det regnar [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "(är|blir) det [idag] (soligt|molnigt|disigt) [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "Regnar det [just nu] [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "Kommer det att snöa (idag|imorgon) [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "Är det åska [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "Hur ser himlen ut idag [i {location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "tuleeko (tänään|huomenna|{day}) kylmä [{location}]", "slots": ["day", "location"], "entity_values": {"day": [], "location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "onko ulkona kylmä nyt [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "tuleeko (tänään|huomenna) viileä [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "tarvitsenko takin tänään [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "tuleeko (tänään|huomenna|{day}) lämmin [{location}]", "slots": ["day", "location"], "entity_values": {"day": [], "location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "onko ulkona lämmin nyt [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "tuleeko tänään todella kuuma [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_hot_or_cold.intent", "template": "tarvitsenko aurinkovoidetta tänään [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "tuuleeko kovaa juuri nyt [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "kuinka kova tuuli on [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "is_wind.intent", "template": "tuuleeko tänään [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "milloin alkaa taas sataa [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "milloin sade alkaa [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "kuinka kauan menee ennen kuin alkaa sataa [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "(onko|tuleeko) [tänään] (aurinkoista|pilvistä|utuista) [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "sataako [juuri nyt] [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "tuleeko (tänään|huomenna) lunta [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "onko ukkosta [{location}]", "slots": ["location"], "entity_values": {"location": []}}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "miltä taivas näyttää tänään [{location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "fi-FI", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "hae WordNetistä {word}", "slots": ["word"], "entity_values": {"word": []}}
 {"lang": "fi-FI", "skill": "ovos-skill-wordnet", "intent": "search_wordnet.intent", "template": "kysy WordNetiltä {word}", "slots": ["word"], "entity_values": {"word": []}}
