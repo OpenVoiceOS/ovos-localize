@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.0a24](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a24) (2026-09-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a23...0.1.0a24)
+
+**Merged pull requests:**
+
+- fix: the committed locale table matches what the module builds [\#680](https://github.com/OpenVoiceOS/ovos-localize/pull/680) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.1.0a23](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a23) (2026-09-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a22...0.1.0a23)
@@ -211,7 +219,6 @@
 - chore: Configure Renovate [\#197](https://github.com/OpenVoiceOS/ovos-localize/pull/197) ([renovate[bot]](https://github.com/apps/renovate))
 - feat: add TigreGotico/ovos-skill-cave-adventure-game to skills.txt [\#133](https://github.com/OpenVoiceOS/ovos-localize/pull/133) ([github-actions[bot]](https://github.com/apps/github-actions))
 - feat: add TigreGotico/ovos-skill-moon-game to skills.txt [\#132](https://github.com/OpenVoiceOS/ovos-localize/pull/132) ([github-actions[bot]](https://github.com/apps/github-actions))
-- feat: add JarbasHiveMind/ovos-hivemind-pipeline-plugin to skills.txt [\#131](https://github.com/OpenVoiceOS/ovos-localize/pull/131) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 
 
