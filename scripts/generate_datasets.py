@@ -6,7 +6,8 @@ Reads from ``data/skills/`` and outputs JSONL datasets to ``data/datasets/``.
 Datasets generated
 ------------------
 classification/
-    One JSONL per language: intent/voc utterances with skill+intent label.
+    One JSONL per language: .intent utterances from skill repositories only,
+    with skill+intent label. .voc files and non-skill repositories are excluded.
 translation/
     One JSONL per language pair: parallel corpora for machine translation.
 slot_filling/
@@ -41,6 +42,7 @@ from ovos_localize.datasets import (
     generate_skill_metadata,
     generate_slot_filling,
     generate_tts_corpus,
+    is_skill_repository,
 )
 
 
@@ -52,6 +54,7 @@ class SplitFileWriter:
         self.chunk_index = 0
         self.current_f: TextIO | None = None
         self.current_size = 0
+        self.written: list[Path] = []
 
     def _get_path(self) -> Path:
         if self.chunk_index == 0:
@@ -60,18 +63,22 @@ class SplitFileWriter:
             f"{self.base_path.stem}_{self.chunk_index}{self.base_path.suffix}"
         )
 
+    def _open(self) -> None:
+        path = self._get_path()
+        self.current_f = path.open("w", encoding="utf-8")
+        self.current_size = 0
+        self.written.append(path)
+
     def write(self, data: str) -> None:
         """Write *data* to the current chunk, rolling over when the size limit is reached."""
         data_bytes = data.encode("utf-8")
         if self.current_f is None:
-            self.current_f = self._get_path().open("w", encoding="utf-8")
-            self.current_size = 0
+            self._open()
 
         if self.current_size + len(data_bytes) > MAX_FILE_SIZE:
             self.current_f.close()
             self.chunk_index += 1
-            self.current_f = self._get_path().open("w", encoding="utf-8")
-            self.current_size = 0
+            self._open()
 
         self.current_f.write(data)
         self.current_size += len(data_bytes)
@@ -109,8 +116,10 @@ def main() -> None:
     tts_dir = DATASETS_DIR / "tts"
     meta_dir = DATASETS_DIR / "skill_metadata"
 
+    old_files: list[Path] = []
     for d in (cls_dir, tra_dir, sf_dir, rp_dir, tts_dir, meta_dir):
         d.mkdir(parents=True, exist_ok=True)
+        old_files.extend(d.glob("*.jsonl"))
 
     cls_writers: WriterPool = {}
     tra_writers: WriterPool = {}
@@ -120,8 +129,15 @@ def main() -> None:
     meta_writers: WriterPool = {}
 
     reset_truncation_count()
+    failed_loads: list[str] = []
     skill_files = sorted(SKILLS_DIR.glob("*.json"))
     total_skills = len(skill_files)
+    # The intent classification corpus takes skill repositories only; the
+    # other corpora read every repository ovos-localize translates.
+    not_skills = sorted(f.stem for f in skill_files if not is_skill_repository(f.stem))
+    print(f"classification: {total_skills} repositories in, "
+          f"{total_skills - len(not_skills)} skills kept, "
+          f"{len(not_skills)} not skills dropped: {', '.join(not_skills) or 'none'}")
 
     try:
         for i, skill_file in enumerate(skill_files, 1):
@@ -132,6 +148,7 @@ def main() -> None:
                     skill_data = json.load(f)
             except Exception as e:
                 print(f"Failed to load {skill_file}: {e}", file=sys.stderr)
+                failed_loads.append(skill_id)
                 continue
 
             # 1. Intent classification
@@ -179,6 +196,33 @@ def main() -> None:
     finally:
         for pool in (cls_writers, tra_writers, sf_writers, rp_writers, tts_writers, meta_writers):
             _close_all(pool)
+
+    # A writer opens only for a key that yields a row, so an existing file
+    # whose key yields nothing would keep its old rows. They are removed only
+    # after every corpus is written: a run that stops early deletes nothing.
+    #
+    # A repository whose JSON does not parse is an early stop of its own. The
+    # loop above prints the error and goes on, so the run reaches this point
+    # with that repository's rows missing, and a language only it fed would
+    # read as stale and be unlinked. The hub mirrors the tree with
+    # delete_patterns=["**"], so that language would leave the published
+    # dataset because one file was half-written. A run that failed to read any
+    # repository therefore deletes nothing and says so.
+    written = {p for pool in (cls_writers, tra_writers, sf_writers, rp_writers, tts_writers, meta_writers)
+               for w in pool.values() for p in w.written}
+    stale = sorted(p for p in old_files if p not in written)
+    if failed_loads:
+        print(f"0 stale dataset files removed: {len(failed_loads)} of "
+              f"{total_skills} repositories did not load "
+              f"({', '.join(failed_loads)}), so the rows they feed are "
+              f"missing and {len(stale)} file(s) that read as stale are kept: "
+              f"{', '.join(str(p.relative_to(DATASETS_DIR)) for p in stale) or 'none'}")
+        stale = []
+    else:
+        for p in stale:
+            p.unlink()
+        print(f"{len(stale)} stale dataset files removed, no rows left for them: "
+              f"{', '.join(str(p.relative_to(DATASETS_DIR)) for p in stale) or 'none'}")
 
     # Write index.json: which files actually exist per dataset type
     index: dict = {}

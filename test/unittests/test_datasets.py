@@ -1,7 +1,14 @@
 """Unit tests for the four new ML dataset generators."""
 
+import importlib.util
+import json
+from pathlib import Path
+from types import ModuleType
 from typing import Any
 
+import pytest
+
+from ovos_localize.datasets.classification import generate_intent_classification, is_skill_repository
 from ovos_localize.datasets.response_pairs import generate_response_pairs
 from ovos_localize.datasets.skill_metadata import generate_skill_metadata
 from ovos_localize.datasets.slot_filling import generate_slot_filling
@@ -312,3 +319,132 @@ class TestSkillMetadata:
             }
         })
         assert list(generate_skill_metadata(SKILL_ID, skill)) == []
+
+
+# ---------------------------------------------------------------------------
+# generate_intent_classification
+# ---------------------------------------------------------------------------
+
+class TestIntentClassification:
+    def _files(self) -> dict:
+        return {
+            "hello.intent": {"type": "intent", "langs": {"en-US": _lang_data(["hello world", "hi there"])}},
+            "greeting.voc": {"type": "voc", "langs": {"en-US": _lang_data(["hello", "hi"])}},
+            "bye.dialog": {"type": "dialog", "langs": {"en-US": _lang_data(["goodbye"])}},
+        }
+
+    def test_only_intent_files_are_read(self) -> None:
+        rows = list(generate_intent_classification("ovos-skill-hello-world", {"files": self._files()}))
+        assert rows, "the .intent file yields rows"
+        assert {r["intent"] for r in rows} == {"hello.intent"}
+        assert {r["file_type"] for r in rows} == {"intent"}
+        assert sorted(r["text"] for r in rows) == ["hello world", "hi there"]
+
+    def test_a_repository_that_is_not_a_skill_yields_nothing(self) -> None:
+        for repo in ("chronologia", "ovos-core", "ovos-ddg-solver-plugin", "mediavocab"):
+            assert not is_skill_repository(repo)
+            assert list(generate_intent_classification(repo, {"files": self._files()})) == []
+
+    def test_skill_repositories_are_recognised_by_name(self) -> None:
+        for repo in ("ovos-skill-hello-world", "skill-ovos-radio-tuga", "OVOS-Skill-Weather"):
+            assert is_skill_repository(repo)
+
+
+# ---------------------------------------------------------------------------
+# scripts/generate_datasets.py
+# ---------------------------------------------------------------------------
+
+def _load_generate_datasets_script() -> ModuleType:
+    path = Path(__file__).resolve().parents[2] / "scripts" / "generate_datasets.py"
+    spec = importlib.util.spec_from_file_location("generate_datasets", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+class TestGenerateDatasetsScript:
+    def test_a_language_with_no_rows_left_loses_its_file(self, tmp_path: Path, monkeypatch) -> None:
+        skills_dir = tmp_path / "skills"
+        skills_dir.mkdir()
+        files = TestIntentClassification()._files()
+        (skills_dir / "ovos-skill-hello-world.json").write_text(json.dumps({"files": files}))
+        datasets_dir = tmp_path / "datasets"
+        for corpus in ("classification", "tts"):
+            (datasets_dir / corpus).mkdir(parents=True)
+            (datasets_dir / corpus / "fr-FR.jsonl").write_text('{"text": "stale"}\n')
+            (datasets_dir / corpus / "en-US_1.jsonl").write_text('{"text": "stale"}\n')
+
+        script = _load_generate_datasets_script()
+        monkeypatch.setattr(script, "SKILLS_DIR", skills_dir)
+        monkeypatch.setattr(script, "DATASETS_DIR", datasets_dir)
+        script.main()
+
+        assert sorted(p.name for p in (datasets_dir / "classification").iterdir()) == ["en-US.jsonl"]
+        assert sorted(p.name for p in (datasets_dir / "tts").iterdir()) == ["en-US.jsonl"]
+        rows = [json.loads(line) for line in (datasets_dir / "classification" / "en-US.jsonl").read_text().splitlines()]
+        assert sorted(r["text"] for r in rows) == ["hello world", "hi there"]
+        index = json.loads((datasets_dir / "index.json").read_text())
+        assert index["classification"] == ["en-US.jsonl"]
+
+    def test_an_unreadable_skill_json_removes_nothing(self, tmp_path: Path, monkeypatch, capsys) -> None:
+        """A half-written repository JSON must not take a language with it.
+
+        The per-repository handler prints the parse error and goes on, so the
+        run reaches the removal with that repository's rows missing. A file
+        only it fed then reads as stale. The hub mirrors the tree, so the
+        language would leave the published dataset. Nothing is deleted while
+        any repository failed to load.
+        """
+        skills_dir = tmp_path / "skills"
+        skills_dir.mkdir()
+        files = TestIntentClassification()._files()
+        (skills_dir / "ovos-skill-hello-world.json").write_text(json.dumps({"files": files}))
+        (skills_dir / "ovos-skill-broken.json").write_text('{"files": {"hello.inte')
+
+        datasets_dir = tmp_path / "datasets"
+        (datasets_dir / "classification").mkdir(parents=True)
+        fed_by_broken = datasets_dir / "classification" / "pt-PT.jsonl"
+        fed_by_broken.write_text('{"text": "ola mundo"}\n')
+
+        script = _load_generate_datasets_script()
+        monkeypatch.setattr(script, "SKILLS_DIR", skills_dir)
+        monkeypatch.setattr(script, "DATASETS_DIR", datasets_dir)
+        script.main()
+
+        assert fed_by_broken.read_text() == '{"text": "ola mundo"}\n', \
+            "the language the unreadable repository fed keeps its rows"
+        assert sorted(p.name for p in (datasets_dir / "classification").iterdir()) == \
+            ["en-US.jsonl", "pt-PT.jsonl"]
+
+        out = capsys.readouterr().out
+        assert "0 stale dataset files removed" in out
+        assert "ovos-skill-broken" in out, "the run names the repository that did not load"
+        assert "pt-PT.jsonl" in out, "the run names the file it kept"
+
+        # The control: the same tree with every JSON readable does delete it.
+        (skills_dir / "ovos-skill-broken.json").write_text(json.dumps({"files": files}))
+        fed_by_broken.write_text('{"text": "ola mundo"}\n')
+        script.main()
+        assert not fed_by_broken.exists(), \
+            "with every repository readable the stale file is removed"
+
+    def test_a_run_that_stops_early_removes_nothing(self, tmp_path: Path, monkeypatch) -> None:
+        skills_dir = tmp_path / "skills"
+        skills_dir.mkdir()
+        files = TestIntentClassification()._files()
+        (skills_dir / "ovos-skill-hello-world.json").write_text(json.dumps({"files": files}))
+        stale = tmp_path / "datasets" / "classification" / "fr-FR.jsonl"
+        stale.parent.mkdir(parents=True)
+        stale.write_text('{"text": "stale"}\n')
+
+        def fail(*args: Any) -> None:
+            raise RuntimeError("stopped")
+
+        script = _load_generate_datasets_script()
+        monkeypatch.setattr(script, "SKILLS_DIR", skills_dir)
+        monkeypatch.setattr(script, "DATASETS_DIR", tmp_path / "datasets")
+        monkeypatch.setattr(script, "generate_skill_metadata", fail)
+        with pytest.raises(RuntimeError):
+            script.main()
+
+        assert stale.read_text() == '{"text": "stale"}\n'

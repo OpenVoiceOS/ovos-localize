@@ -85,7 +85,7 @@ See [local-development.md](local-development.md) for the full local workflow.
 `ovos-localize` automatically generates machine-learning-ready JSONL datasets from the scanned skill data. These are hosted statically and updated daily.
 
 Available datasets (`data/datasets/`):
-- **Intent Classification** (`classification/{lang}.jsonl`): Maps `.intent` and `.voc` phrases to their respective skill domains and intent names. Ideal for training NLU or SLMs.
+- **Intent Classification** (`classification/{lang}.jsonl`): Maps `.intent` phrases to their respective skill domains and intent names. Only repositories whose name contains `skill` are included; `.voc` files are excluded. Ideal for training NLU or SLMs.
 - **Parallel Corpora** (`translation/{lang_pair}.jsonl`): Pairs English (`en-US`) keys with corresponding translations (e.g., `pt-BR`) from `.dialog` and `.intent` files. Ideal for machine translation tasks.
 
 You can load these directly via HuggingFace:

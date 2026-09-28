@@ -30,7 +30,7 @@ Yes! `ovos-localize` generates six JSONL dataset families under `data/datasets/`
 
 | Directory | Description | Key fields |
 |---|---|---|
-| `classification/` | Intent/voc utterances with skill+intent label | `lang`, `skill`, `intent`, `text` |
+| `classification/` | `.intent` utterances from skill repositories only, with skill+intent label; no `.voc`, no non-skill repository | `lang`, `skill`, `intent`, `text` |
 | `translation/` | Parallel corpora for machine translation | `pair`, `base_texts`, `target_texts` |
 | `slot_filling/` | Intent templates with slot names + entity values | `template`, `slots`, `entity_values` |
 | `response_pairs/` | (utterance, responses) pairs via AST handler analysis | `utterance`, `responses`, `handler` |

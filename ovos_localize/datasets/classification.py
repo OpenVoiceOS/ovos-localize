@@ -11,10 +11,23 @@ from ovos_localize.bracket_expansion import (
 )
 
 
+def is_skill_repository(skill_id: str) -> bool:
+    """A repository is a skill when its name carries "skill".
+
+    ovos-localize also translates libraries and plugins (ovos-core,
+    chronologia, the pipeline plugins), and their `.voc` and `.intent`
+    files are not intents a skill answers. The intent dataset takes
+    `.intent` files from skill repositories and nothing else.
+    """
+    return "skill" in skill_id.lower()
+
+
 def generate_intent_classification(skill_id: str, skill_data: dict) -> Iterator[dict[str, Any]]:
     """Yield intent classification samples from a skill's parsed data.
 
-    Expands templates, lowercases, and deduplicates phrases.
+    Only `.intent` files of a repository whose name carries "skill" are
+    read; a `.voc` file is a vocabulary, not an intent, and a library is
+    not a skill. Expands templates, lowercases, and deduplicates phrases.
 
     Args:
         skill_id: The ID of the skill (e.g., 'ovos-skill-hello-world').
@@ -23,10 +36,12 @@ def generate_intent_classification(skill_id: str, skill_data: dict) -> Iterator[
     Yields:
         Dictionaries containing text, intent, lang, and skill metadata.
     """
+    if not is_skill_repository(skill_id):
+        return
     files = skill_data.get("files", {})
     for filename, file_info in files.items():
         file_type = file_info.get("type")
-        if file_type not in ("intent", "voc"):
+        if file_type != "intent":
             continue
 
         langs = file_info.get("langs", {})
