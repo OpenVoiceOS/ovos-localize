@@ -171,6 +171,7 @@
 {"lang": "ru-RU", "skill": "ovos-skill-color-picker", "dialog": "report_color_by_name.dialog", "text": "{color_name} имеет гекс-коэффициент {hex_code} . в р.г.б. это красный {red_value} , зеленый {green_value} , синий {blue_value}"}
 {"lang": "ru-RU", "skill": "ovos-skill-color-picker", "dialog": "report_color_by_rgb_name_known.dialog", "text": "{color_name} имеет гекс-коэффициент {hex_code}"}
 {"lang": "ru-RU", "skill": "ovos-skill-color-picker", "dialog": "report_color_by_rgb_name_not_known.dialog", "text": "этот цвет имеет гекс-значение: {hex_code}"}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "lifespan.dialog", "text": "конфуций родился в 551 году до н. э. и умер 479 году до н. э."}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "ask_offset.dialog", "text": "через сколько минут или часов?"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "это {date}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, {num_days} с этого момента"}
@@ -181,6 +182,7 @@
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_relative_past.dialog", "text": "это было {date}, {num_days} назад"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "сегодня {day}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "day_current.dialog", "text": "сегодняшний день — {day}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "days_between_same.dialog", "text": "это один и тот же день, {date}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "did_you_mean_timezone.dialog", "text": "вы имели в виду {zone_name} часовую зону?"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "extract_date_error.dialog", "text": "я не понял, о какой дате вы спрашиваете"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "leap_year_current_no.dialog", "text": "нет, {year} не високосный год."}
@@ -1905,6 +1907,10 @@
 {"lang": "ru-RU", "skill": "ovos-skill-speedtest", "dialog": "ping.dialog", "text": "пинг составляет {ping} миллисекунд"}
 {"lang": "ru-RU", "skill": "ovos-skill-speedtest", "dialog": "result.dialog", "text": "ваша скорость загрузки {down} мегабит в секунду и ваша скорость закачки {up} мегабит в секунду"}
 {"lang": "ru-RU", "skill": "ovos-skill-speedtest", "dialog": "running.dialog", "text": "начинается проверка скорости, скоро я вернусь с результатами."}
+{"lang": "ru-RU", "skill": "ovos-skill-spelling", "dialog": "no_word.dialog", "text": "простите, я не поймал, какое слово заклинать."}
+{"lang": "ru-RU", "skill": "ovos-skill-spelling", "dialog": "no_word.dialog", "text": "я до сих пор не знаю, что ты имеешь в виду."}
+{"lang": "ru-RU", "skill": "ovos-skill-spelling", "dialog": "what_word.dialog", "text": "какое слово ты хочешь, чтобы я написала?"}
+{"lang": "ru-RU", "skill": "ovos-skill-spelling", "dialog": "what_word.dialog", "text": "какое слово я должен произнести?"}
 {"lang": "ru-RU", "skill": "ovos-skill-volume", "dialog": "error_get_volume.dialog", "text": "похоже, есть проблема. я не могу задать вопрос о текущем томе."}
 {"lang": "ru-RU", "skill": "ovos-skill-volume", "dialog": "volume_change_amount.dialog", "text": "до какого объема? от 0 до 100 возможно."}
 {"lang": "ru-RU", "skill": "ovos-skill-volume", "dialog": "volume_current.dialog", "text": "объем: {volume}"}
@@ -1915,6 +1921,13 @@
 {"lang": "ru-RU", "skill": "ovos-skill-volume", "dialog": "volume_max.dialog", "text": "объем, скорректированный до максимального уровня"}
 {"lang": "ru-RU", "skill": "ovos-skill-volume", "dialog": "volume_max_already.dialog", "text": "объем, уже установленный на максимальный уровень"}
 {"lang": "ru-RU", "skill": "ovos-skill-volume", "dialog": "volume_set_percent.dialog", "text": "регулировка объема {level} процент"}
+{"lang": "ru-RU", "skill": "ovos-skill-wallpapers", "dialog": "no_more_pictures.dialog", "text": "у меня больше нет фотографий."}
+{"lang": "ru-RU", "skill": "ovos-skill-wallpapers", "dialog": "no_more_pictures.dialog", "text": "у меня нет фотографий, чтобы показать тебе"}
+{"lang": "ru-RU", "skill": "ovos-skill-wallpapers", "dialog": "searching.dialog", "text": "поиск изображений с помощью {query}"}
+{"lang": "ru-RU", "skill": "ovos-skill-wallpapers", "dialog": "searching.dialog", "text": "поиск фотографий {query}"}
+{"lang": "ru-RU", "skill": "ovos-skill-wallpapers", "dialog": "searching_random.dialog", "text": "ладно, ищу фотографии."}
+{"lang": "ru-RU", "skill": "ovos-skill-wallpapers", "dialog": "searching_random.dialog", "text": "ладно, ищу картинки."}
+{"lang": "ru-RU", "skill": "ovos-skill-wallpapers", "dialog": "wallpaper_changed.dialog", "text": "наслаждайся своими новыми обоями"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "afternoon.dialog", "text": "после обеда"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "and.dialog", "text": "и"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "в настоящее время я не могу получить доступ к прогнозам погоды."}
