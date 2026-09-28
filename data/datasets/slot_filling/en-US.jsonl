@@ -5887,6 +5887,7 @@
 {"lang": "en-US", "skill": "ovos-skill-days-in-history_4", "intent": "today_in_history.intent", "template": "(what|which) happened [on] {date} in history", "slots": ["date"], "entity_values": {"date": []}}
 {"lang": "en-US", "skill": "ovos-skill-days-in-history_4", "intent": "today_in_history.intent", "template": "(what|which) [notable|important|major] historical events happened [on] {date}", "slots": ["date"], "entity_values": {"date": []}}
 {"lang": "en-US", "skill": "ovos-skill-days-in-history_4", "intent": "today_in_history.intent", "template": "tell me about [notable|important|major] historical events [on] {date}", "slots": ["date"], "entity_values": {"date": []}}
+{"lang": "en-US", "skill": "ovos-skill-days-in-history_4", "intent": "today_in_history.intent", "template": "tell me about what happened [on] {date} [in history]", "slots": ["date"], "entity_values": {"date": []}}
 {"lang": "en-US", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "search duck duck go for {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "en-US", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "duck duck go {query}", "slots": ["query"], "entity_values": {"query": []}}
 {"lang": "en-US", "skill": "ovos-skill-ddg", "intent": "search_duck.intent", "template": "ask duck duck go {query}", "slots": ["query"], "entity_values": {"query": []}}
@@ -6169,7 +6170,6 @@
 {"lang": "en-US", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "how long until it starts raining [in {location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "en-US", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "when should I expect [the] rain [in {location}]", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "en-US", "skill": "ovos-skill-weather", "intent": "next_rain.intent", "template": "what is the next chance of rain [in {location}]", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "en-US", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "is (foggy|raining|rainy|snowing|snowy|storming) [(today|outside)] in {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "en-US", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "(is|will) it cloudy in {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "en-US", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "is (it|there) clouds in {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "en-US", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "is (fog|rain|snow) expected in {location}", "slots": ["location"], "entity_values": {"location": []}}
@@ -6217,7 +6217,6 @@
 {"lang": "en-US", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "is (fog|rain|snow) expected (today|tonight|tomorrow) in {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "en-US", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "is it (clear|sunny|overcast|gloomy|gray|foggy|raining|rainy|snowing|snowy|storming) (today|outside) in {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "en-US", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "will it (rain|snow) (today|tonight|tomorrow) in {location}", "slots": ["location"], "entity_values": {"location": []}}
-{"lang": "en-US", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "is (foggy|raining|rainy|snowing|snowy|storming) right now in {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "en-US", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "is there (sunshine|cloudy|fog) today in {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "en-US", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "is rain likely (today|tonight|tomorrow) in {location}", "slots": ["location"], "entity_values": {"location": []}}
 {"lang": "en-US", "skill": "ovos-skill-weather", "intent": "weather_condition.intent", "template": "is there cloudy tomorrow in {location}", "slots": ["location"], "entity_values": {"location": []}}
