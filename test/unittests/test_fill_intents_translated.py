@@ -3,6 +3,8 @@ import json
 import sys
 from pathlib import Path
 
+import pytest
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 
 from fill_intents_translated import (  # noqa: E402
@@ -322,6 +324,47 @@ def test_export_drops_committed_rows_a_human_translation_superseded(tmp_path):
     assert manifest["totals"] == {"published_rows_kept": 0, "new_rows": 1,
                                   "new_rows_superseded": 1, "rows": 1}
     assert manifest["locales"]["de-DE"]["new_rows_superseded"] == 1
+    assert manifest["locales"]["de-DE"]["remaining_after_run"] == 0
+
+
+def test_remaining_after_run_does_not_go_negative_when_every_filled_intent_is_superseded(tmp_path):
+    """intents_filled counts the checkpoint, which never shrinks; remaining_intents
+
+    is recomputed from the current tree and shrinks the moment a human
+    translation lands. Subtracting the two went negative; the field means
+    "gaps still open that the checkpoint has not filled", which cannot.
+    """
+    skills = _skills_dir(tmp_path)
+    state_dir = tmp_path / "state"
+    src = load_sources(skills)
+    state = State(state_dir, "de-DE")
+    run_locale(UpperTranslator(), "de-DE", src,
+               [("skill-a", "time.intent"), ("skill-b", "bye.intent")], state)
+    # Human de-DE translations land for both intents the driver just filled.
+    _skill(skills / "a.json", "skill-a", {
+        "hello.intent": {"en-US": ["hello", "(hi|hey) there"], "de-DE": ["hallo"]},
+        "time.intent": {"en-US": ["what time is it in {location}"],
+                        "de-DE": ["wie spät ist es in {location}"]},
+    })
+    _skill(skills / "b.json", "skill-b", {
+        "bye.intent": {"en-US": ["# comment", "goodbye"], "de-DE": ["tschüss"]},
+    })
+    out = tmp_path / "out"
+    rc = main(["--skills-dir", str(skills), "--state-dir", str(state_dir),
+               "--lang", "de-DE", "--export", "--out", str(out)])
+    assert rc == 0
+    de = json.loads((out / "manifest.json").read_text(encoding="utf-8"))["locales"]["de-DE"]
+    assert de["remaining_intents"] == 0
+    assert de["intents_filled"] == 2
+    assert de["remaining_after_run"] == 0
+
+
+def test_export_without_out_is_refused_by_the_parser(tmp_path, capsys):
+    with pytest.raises(SystemExit) as exc:
+        main(["--skills-dir", str(_skills_dir(tmp_path)), "--state-dir", str(tmp_path / "s"),
+              "--export"])
+    assert exc.value.code == 2
+    assert "--export requires --out" in capsys.readouterr().err
 
 
 def test_status_prints_the_plan_without_a_translator(tmp_path, capsys):
