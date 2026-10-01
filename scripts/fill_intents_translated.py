@@ -26,6 +26,7 @@ import csv
 import json
 import logging
 import os
+import subprocess
 import sys
 import time
 from collections import Counter, defaultdict
@@ -318,6 +319,8 @@ def main(argv=None):
     p.add_argument("--export", action="store_true", help="write the staged csv and manifest")
     p.add_argument("--prefer", default="dedicated")
     args = p.parse_args(argv)
+    if args.export and not args.out:
+        p.error("--export requires --out")
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s")
 
     sources = load_sources(Path(args.skills_dir))
@@ -361,8 +364,7 @@ def main(argv=None):
         # ship in ovos-localize-intents, and a stale intent trains nothing.
         # The same filter applies to published rows and to rows this
         # driver committed: a human translation can land mid-run.
-        keep = {lang: set(table[lang]["_remaining"]) | {k for k in table[lang]["_gaps"]}
-                for lang in locales}
+        keep = {lang: set(table[lang]["_gaps"]) for lang in locales}
         n_new_dropped = 0
         if args.published:
             with Path(args.published).open(newline="", encoding="utf-8") as pf:
@@ -381,9 +383,19 @@ def main(argv=None):
             t = {k: v for k, v in table[lang].items() if not k.startswith("_")}
             t.update(locale_summary(st))
             t["new_rows_superseded"] = len(rows) - len(kept)
-            t["remaining_after_run"] = t["remaining_intents"] - t["intents_filled"]
+            # intents_filled counts every pair the checkpoint ever committed,
+            # including one a human translation later covered, so it cannot
+            # be subtracted from remaining_intents directly. The count that
+            # matches the name is: of the gaps still open now, how many the
+            # checkpoint has not yet filled.
+            t["remaining_after_run"] = sum(
+                1 for k in table[lang]["_remaining"] if not st.is_done(*k)
+            )
             manifest["locales"][lang] = t
-    manifest["source_dev_sha"] = os.popen(f"git -C {REPO_ROOT} rev-parse HEAD").read().strip()
+    manifest["source_dev_sha"] = subprocess.run(
+        ["git", "-C", str(REPO_ROOT), "rev-parse", "HEAD"],
+        capture_output=True, text=True, check=True,
+    ).stdout.strip()
     manifest["totals"] = {"published_rows_kept": n_pub, "new_rows": n_new,
                           "new_rows_superseded": n_new_dropped, "rows": n_pub + n_new}
     (out / "manifest.json").write_text(json.dumps(manifest, indent=1, ensure_ascii=False), encoding="utf-8")
