@@ -13,6 +13,7 @@ from ovos_localize.bracket_expansion import (
     MAX_TEMPLATE_EXPANSIONS,
     clean_text,
     expand_template_cached,
+    is_repeated_phrase,
     is_repeated_word,
 )
 
@@ -48,8 +49,8 @@ def generate_tts_corpus(skill_id: str, skill_data: dict) -> Iterator[dict[str, A
                     text = clean_text(expanded)
                     if not text:
                         continue
-                    if is_repeated_word(text):
-                        # one word written out many times is not speech
+                    if is_repeated_word(text) or is_repeated_phrase(text):
+                        # a row that is one word or one phrase repeated is not speech
                         continue
                     key = f"{lang}:{text}"
                     if key in seen:

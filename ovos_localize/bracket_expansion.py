@@ -222,6 +222,54 @@ def is_repeated_word(text: str, limit: int = MAX_WORD_REPEAT) -> bool:
     return len({word.casefold() for word in words}) == 1
 
 
+MIN_PHRASE_TOKENS = 4
+MAX_PHRASE_NGRAM = 3
+PHRASE_REPEAT_RATIO = 2.5
+"""The thresholds that make a repeated phrase junk.
+
+A machine translation that loops repeats a short phrase, not one word:
+"bir sonraki bir sonraki ..." and "devam etmeye devam etmeye ...". The three
+numbers are the scan `ovos-ocp-audio-plugin#218` used to find the lines it
+deleted: four tokens at least, phrases of up to three words, and a count of
+phrases that is 2.5 times their distinct number or more.
+
+The phrases are counted in consecutive blocks rather than at every offset.
+A block count leaves "ha ha ha ha ha ha ha my friend" alone, which the
+single-word rule also allows, and an offset count would not.
+"""
+
+
+def is_repeated_phrase(
+    text: str,
+    max_n: int = MAX_PHRASE_NGRAM,
+    ratio: float = PHRASE_REPEAT_RATIO,
+) -> bool:
+    """True when ``text`` is one short phrase written out again and again.
+
+    ``is_repeated_word`` covers a row of one word. This covers the rest of
+    the same defect: a repeated phrase, and a word repeated beside another
+    word. Such a row matches only itself, so it teaches a classifier
+    nothing.
+
+    Args:
+        text: One dataset row's text.
+        max_n: The longest phrase to count, in words.
+        ratio: The smallest count-to-distinct ratio that is junk.
+
+    Returns:
+        True when the row repeats a phrase of ``max_n`` words or fewer past
+        ``ratio``.
+    """
+    words = [word.casefold() for word in text.split()]
+    if len(words) < MIN_PHRASE_TOKENS:
+        return False
+    for n in range(2, max_n + 1):
+        phrases = [tuple(words[i:i + n]) for i in range(0, len(words) - n + 1, n)]
+        if len(phrases) >= 2 and len(phrases) / len(set(phrases)) >= ratio:
+            return True
+    return False
+
+
 def count_expanded_lines(lines: list[str]) -> int:
     """Count the total number of expanded sentences from a list of template lines.
 
