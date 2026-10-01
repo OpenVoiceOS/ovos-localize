@@ -272,6 +272,10 @@ jobs:
       - name: Create branch and commit
         id: commit
         env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          ORG: ${{ steps.parse.outputs.org }}
+          REPO: ${{ steps.parse.outputs.repo }}
+          BASE: ${{ steps.base.outputs.branch }}
           FILE_PATH: ${{ steps.parse.outputs.file_path }}
           LANG: ${{ steps.parse.outputs.lang }}
           FILE_KEY: ${{ steps.parse.outputs.file_key }}
@@ -315,12 +319,28 @@ jobs:
           git config user.name "ovos-localize[bot]"
           git config user.email "ovos-localize[bot]@users.noreply.github.com"
           git add "$FILE_PATH"
+          # A submission can carry text that the target branch already holds.
+          # git add then stages nothing, and git commit on an empty index exits
+          # non-zero. That state is the translation already shipped, so it is
+          # not a failure and no re-run can change it: name the commit that
+          # carries the text and open no pull request.
+          if git diff --cached --quiet -- "$FILE_PATH"; then
+            echo "already_shipped=true" >> "$GITHUB_OUTPUT"
+            LANDED_SHA=$(gh api -X GET "repos/$ORG/$REPO/commits" \
+              -f sha="$BASE" -f path="$FILE_PATH" -F per_page=1 \
+              --jq '.[0].sha // ""' 2>/dev/null || true)
+            echo "landed_sha=$LANDED_SHA" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           git commit -m "translate(${LANG}): update ${FILE_KEY}" -m "Submitted by @${AUTHOR} via OVOS Localize"
           git push origin "$BRANCH_NAME"
           echo "branch_name=$BRANCH_NAME" >> "$GITHUB_OUTPUT"
 
       - name: Create Pull Request
         id: pr
+        # An if expression replaces the implicit success() check, so success()
+        # is named here to keep the step off the failure path.
+        if: ${{ success() && steps.commit.outputs.already_shipped != 'true' }}
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
           # Passed as environment variables rather than expanded into the
@@ -354,11 +374,21 @@ jobs:
           Triggered by #$ISSUE.")
           echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
 
-      - name: Close issue with PR link
+      - name: Close the submission
         uses: actions/github-script@v9
+        env:
+          # ORG, REPO, BASE and FILE_PATH come from an issue body anyone can
+          # write, so every value reaches the script as an environment value
+          # and never as spliced template text.
+          ALREADY_SHIPPED: ${{ steps.commit.outputs.already_shipped }}
+          LANDED_SHA: ${{ steps.commit.outputs.landed_sha }}
+          ORG: ${{ steps.parse.outputs.org }}
+          REPO: ${{ steps.parse.outputs.repo }}
+          BASE: ${{ steps.base.outputs.branch }}
+          FILE_PATH: ${{ steps.parse.outputs.file_path }}
+          PR_URL: ${{ steps.pr.outputs.pr_url }}
         with:
           script: |
-            const prUrl = '${{ steps.pr.outputs.pr_url }}';
             const issueNumber = ${{ matrix.issue }};
             // A re-run of a submission that was refused for its path now
             // passes, so the label that reported the refusal comes off.
@@ -378,11 +408,28 @@ jobs:
                 core.warning(`could not remove the invalid-file-path label: ${error.status} ${error.message}`);
               }
             }
+            const target = `${process.env.ORG}/${process.env.REPO}`;
+            const landed = process.env.LANDED_SHA
+              ? ` Commit \`${process.env.LANDED_SHA.slice(0, 7)}\` landed it.`
+              : '';
+            // The note says the file did not change, not that it equals the
+            // submitted lines. A .json resource reaches the branch through the
+            // renderer, which maps the lines onto the keys already in the file,
+            // so the branch holds the rendered object and never the lines.
+            const body = process.env.ALREADY_SHIPPED === 'true'
+              ? `✅ **This translation is already in the skill.**\n\n` +
+                `The app applied your translation to \`${process.env.FILE_PATH}\` on the ` +
+                `\`${process.env.BASE}\` branch of \`${target}\`, and nothing changed. ` +
+                `The file already holds it.${landed} ` +
+                `A pull request would change nothing, so none was opened.\n\n` +
+                `Thank you for contributing!`
+              : `✅ **Translation PR created!**\n\n${process.env.PR_URL}\n\n` +
+                `The skill maintainer will review and merge it. Thank you for contributing!`;
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: issueNumber,
-              body: `✅ **Translation PR created!**\n\n${prUrl}\n\nThe skill maintainer will review and merge it. Thank you for contributing!`
+              body
             });
             await github.rest.issues.update({
               owner: context.repo.owner,
@@ -398,6 +445,10 @@ jobs:
           VALIDATION_OUTPUT: ${{ steps.validate.outputs.validation_failed }}
           RENDER_OUTPUT: ${{ steps.commit.outputs.render_failed }}
           PATH_LANG_MISMATCH: ${{ steps.pathlang.outputs.path_lang_mismatch }}
+          PARSE_OUTCOME: ${{ steps.parse.outcome }}
+          TOKEN_OUTCOME: ${{ steps.app-token.outcome }}
+          ORG: ${{ steps.parse.outputs.org }}
+          REPO: ${{ steps.parse.outputs.repo }}
         uses: actions/github-script@v9
         with:
           script: |
@@ -416,6 +467,84 @@ jobs:
               return;
             }
             const validationOutput = process.env.VALIDATION_OUTPUT || process.env.RENDER_OUTPUT || '';
+            const target = `${process.env.ORG}/${process.env.REPO}`;
+
+            // Asked without a credential on purpose. The workflow token is
+            // scoped to this repository, and the App token is the thing that
+            // failed, so neither answers for the target. A renamed target
+            // answers 301, and the old name is what the App asked for, so the
+            // installation lookup returns the same 404 that a missing
+            // installation returns.
+            //
+            // null means the read settled nothing, and the caller must say so
+            // rather than pick a state. Anything other than 200, 301 or 404
+            // is that case, and so is a thrown request: with no credential the
+            // ceiling is 60 reads an hour for each source address, and a
+            // matrix dispatch shares addresses across its jobs.
+            const readTarget = async () => {
+              if (!process.env.ORG || !process.env.REPO) return null;
+              try {
+                const headers = { accept: 'application/vnd.github+json' };
+                const res = await fetch(`${context.apiUrl}/repos/${target}`, { headers, redirect: 'manual' });
+                if (res.status === 404) return { state: 'absent' };
+                if (res.status === 301) {
+                  const moved = await fetch(res.headers.get('location'), { headers });
+                  const name = moved.ok ? (await moved.json()).full_name : '';
+                  return { state: 'renamed', name };
+                }
+                if (!res.ok) return null;
+                return { state: (await res.json()).archived ? 'archived' : 'present' };
+              } catch (error) {
+                core.warning(`could not read ${target} anonymously: ${error.message}`);
+                return null;
+              }
+            };
+
+            // This sentence is all that a reader of the thread gets, so it
+            // names the state. A re-run clears only some of the states, so
+            // each one carries the action that does clear it, and a state the
+            // read did not settle carries every action that could.
+            //
+            // The anonymous read carries its own ambiguity into both
+            // sentences. It has no credential, so a 403 from the 60-per-hour
+            // ceiling is a working-state answer and not an outage, and a
+            // private repository is indistinguishable from a deleted one.
+            // Neither case may inherit a single confident action.
+            let met, next;
+            if (process.env.PARSE_OUTCOME === 'failure') {
+              met = 'This issue does not carry the data that the app reads.';
+              next = 'Please open a new submission from the OVOS Localize page.';
+            } else if (validationOutput) {
+              met = 'Your translation did not pass validation.';
+              next = '';
+            } else {
+              const repo = await readTarget();
+              const state = repo ? repo.state : 'unsettled';
+              if (state === 'renamed') {
+                met = `\`${target}\` is renamed${repo.name ? ` to \`${repo.name}\`` : ''}, and the app asked GitHub for the old name.`;
+                next = 'A maintainer must point this submission at the current name. A re-run on the old name fails the same way.';
+              } else if (state === 'absent') {
+                met = `GitHub serves no \`${target}\` without a credential, so the repository is private or it is gone.`;
+                next = `If \`${target}\` is private, an owner must install the App on it, and a re-run then works. `
+                     + 'If it is gone, a maintainer must find where it went, and no re-run helps.';
+              } else if (state === 'archived') {
+                met = `\`${target}\` is archived, so GitHub refuses every push to it.`;
+                next = `An owner of \`${target}\` must unarchive it. A re-run then works.`;
+              } else if (state === 'present' && process.env.TOKEN_OUTCOME === 'failure') {
+                met = `The ovos-localize GitHub App could not get a token for \`${target}\`. `
+                    + 'The repository is present and is not archived, so the App is not installed on it.';
+                next = `An owner of \`${target}\` must install the App. A re-run then works.`;
+              } else if (process.env.TOKEN_OUTCOME === 'failure') {
+                met = `The ovos-localize GitHub App could not get a token for \`${target}\`, `
+                    + 'and GitHub did not answer for that repository, so the cause is not narrowed.';
+                next = `A maintainer must check whether \`${target}\` is the current name, and whether the App is `
+                     + 'installed on it. A re-run works only once the name is right and the App can reach it.';
+              } else {
+                met = 'The app failed at a step that it does not name yet.';
+                next = 'A maintainer must read the run log.';
+              }
+            }
+
             const validationSection = validationOutput
               ? `**Your translation did not pass validation:**\n\n\`\`\`\n${validationOutput}\n\`\`\`\n\nPlease fix the flagged line(s) and open a new submission.\n\n`
               : '';
@@ -424,8 +553,9 @@ jobs:
               repo: context.repo.repo,
               issue_number: issueNumber,
               body: `⚠️ **This translation could not be turned into a pull request.**\n\n` +
+                    `**What the app met:** ${met}\n\n` +
                     validationSection +
-                    `Your translation is safe -- it is stored in this issue and nothing is lost. ` +
-                    `A maintainer has been alerted and will re-run it.\n\n` +
+                    `Your translation is safe. It is stored in this issue and nothing is lost.\n\n` +
+                    (next ? `${next}\n\n` : '') +
                     `Details: ${run}`
             });
