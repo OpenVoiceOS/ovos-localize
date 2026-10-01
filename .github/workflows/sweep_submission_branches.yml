@@ -1,0 +1,127 @@
+name: Sweep submission branches
+
+# submit_translation.yml pushes one translate/<lang>/<file_key>-<timestamp>
+# branch per submitted file and opens a pull request from it. Its run ends
+# there. The merge happens later, in the target repository, under a
+# maintainer's hand, so no run of that workflow is alive to delete the head
+# ref afterwards and nothing else did: the skill repositories accumulated
+# submission branches whose pull requests had long since merged.
+#
+# This workflow is the other half. It reads the pull request each branch
+# opened and deletes the ref once that pull request is merged or closed.
+# A branch keeps its ref while its pull request is open, and a branch that
+# never got a pull request keeps it too: the pipeline pushes the branch
+# before it opens the pull request, so such a branch holds the only copy of
+# that translation inside the repository.
+#
+# Deleting a ref here loses nothing. A merged submission is on the base
+# branch, and a closed one keeps its commits on its own pull request page,
+# which also offers to restore the branch.
+
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: 'Delete the refs. Leave off to only report what would be deleted.'
+        required: false
+        default: false
+        type: boolean
+      owner:
+        description: 'Organization to sweep.'
+        required: false
+        default: 'OpenVoiceOS'
+        type: string
+      repositories:
+        description: 'Space-separated repository names to sweep, without the owner. Every repository the app is installed on when empty.'
+        required: false
+        type: string
+
+concurrency:
+  group: sweep-submission-branches-${{ inputs.owner || 'OpenVoiceOS' }}
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    # The checkout and the pip install need nothing else: every read and
+    # every delete below runs on the App installation token, which is the
+    # identity that pushed these branches in the first place.
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout ovos-localize
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install ovos-localize
+        run: pip install .
+
+      # No `repositories:` input, so the token covers every repository the
+      # installation has. The sweep needs that: the branches are spread over
+      # 27 repositories and the list is not known in advance.
+      - name: Generate GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          app-id: ${{ vars.LOCALIZE_APP_ID }}
+          private-key: ${{ secrets.LOCALIZE_APP_PRIVATE_KEY }}
+          owner: ${{ inputs.owner || 'OpenVoiceOS' }}
+
+      - name: Resolve the repositories to sweep
+        id: repos
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          OWNER: ${{ inputs.owner || 'OpenVoiceOS' }}
+          WANTED: ${{ inputs.repositories }}
+        run: |
+          set -euo pipefail
+          if [ -n "$WANTED" ]; then
+            echo "names=$WANTED" >> "$GITHUB_OUTPUT"
+            echo "swept on request: $WANTED"
+            exit 0
+          fi
+          # An archived repository refuses the delete, and a private one is
+          # out of scope for this automation, so neither is asked.
+          NAMES=$(gh api /installation/repositories --paginate \
+            --jq '.repositories[] | select(.archived == false) | select(.private == false) | .name' \
+            | tr '\n' ' ')
+          if [ -z "${NAMES// }" ]; then
+            echo "::error::the app installation on $OWNER exposes no public, unarchived repository"
+            exit 1
+          fi
+          echo "names=$NAMES" >> "$GITHUB_OUTPUT"
+          echo "repositories to sweep: $(echo "$NAMES" | wc -w)"
+
+      # A scheduled run deletes. A dispatched run reports unless it is asked
+      # to delete, so that a person can read the list before it goes.
+      - name: Sweep
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          OWNER: ${{ inputs.owner || 'OpenVoiceOS' }}
+          NAMES: ${{ steps.repos.outputs.names }}
+          APPLY: ${{ github.event_name == 'schedule' && 'yes' || inputs.apply }}
+        run: |
+          set -uo pipefail
+          FLAGS=""
+          if [ "$APPLY" = "true" ] || [ "$APPLY" = "yes" ]; then
+            FLAGS="--apply"
+          fi
+          # The exit status is read rather than left to `set -e`: a refused
+          # delete exits 1, and the report naming which branch was refused
+          # must still reach the summary.
+          # shellcheck disable=SC2086
+          ovos-localize-sweep-branches --owner "$OWNER" $FLAGS $NAMES > sweep.txt
+          STATUS=$?
+          cat sweep.txt
+          {
+            echo '```'
+            cat sweep.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          exit "$STATUS"
