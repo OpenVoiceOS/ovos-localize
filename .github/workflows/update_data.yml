@@ -46,7 +46,11 @@ jobs:
       # Publish what the site serves before anything else runs. Marking the
       # corpus step continue-on-error is not enough: it ends as cancelled
       # rather than failed, which skips everything after it regardless.
+      # if: always() is what keeps this step first: the two steps above it can
+      # exit non-zero, and without it a failed table or data build takes the
+      # browse publish with it. The run still ends red, so the failure shows.
       - name: Publish browse data
+        if: always()
         run: |
           ./.github/scripts/commit_data.sh "chore: update translation data" "data/**"
 

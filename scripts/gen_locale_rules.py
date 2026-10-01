@@ -42,15 +42,26 @@ def collect_tags(root: Path) -> set:
     """
     tags = set()
 
+    # coverage.json carries the enabled languages, which is most of the table.
+    # An unreadable one must stop the run: the generator would otherwise write
+    # a smaller table, exit 0, and the daily sync would commit it. 129 tags
+    # instead of 130 reads the same as a correct run.
     coverage = root / "data" / "coverage.json"
-    if coverage.is_file():
-        tags |= set(json.loads(coverage.read_text(encoding="utf-8")).get("languages") or [])
+    try:
+        languages = json.loads(coverage.read_text(encoding="utf-8")).get("languages")
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SystemExit(f"{coverage} cannot be read: {exc}")
+    if not languages:
+        raise SystemExit(f"{coverage} names no enabled language")
+    tags |= set(languages)
 
+    # A manifest that cannot be read is the same defect: it drops the tags of
+    # one skill from the table without a word.
     for manifest in sorted((root / "data" / "skills").glob("*.json")):
         try:
             data = json.loads(manifest.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError):
-            continue
+        except (OSError, json.JSONDecodeError) as exc:
+            raise SystemExit(f"{manifest} cannot be read: {exc}")
         for file_data in (data.get("files") or {}).values():
             for lang, entry in (file_data.get("langs") or {}).items():
                 tags.add(lang)
