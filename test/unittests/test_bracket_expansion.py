@@ -5,6 +5,8 @@ from ovos_localize.bracket_expansion import (
     count_expanded_lines,
     expand_template,
     expand_template_cached,
+    MIN_PHRASE_TOKENS,
+    is_repeated_phrase,
     is_repeated_word,
 )
 
@@ -182,6 +184,61 @@ class TestIsRepeatedWord:
         assert not is_repeated_word("very very very very good")
 
 
+class TestIsRepeatedPhrase:
+    """A looping machine translation repeats a phrase, not only one word.
+
+    `ovos-ocp-audio-plugin#218` deleted 20 tr-tr and da-dk lines of this
+    shape. The single-word rule covers 13 of the 15 distinct texts among
+    them. These are the rest: a repeated phrase, and a word repeated beside
+    another word.
+    """
+
+    SARKI = "şarkı şarkısı " + "şarkı " * 51
+    BIR_SONRAKI = " ".join(["bir sonraki"] * 51)
+    VIDEO = "video devam etmeye devam etmeye devam video devam etmeye devam etmeye devam etmeye devam"
+    MEDYA = "medya " + "devam etmeye " * 6 + "devam"
+    YENIDEN = "yeniden " * 59 + "başladı"
+
+    def test_the_shipped_repeated_phrases_are_flagged(self):
+        assert is_repeated_phrase(self.BIR_SONRAKI)
+        assert is_repeated_phrase(self.VIDEO)
+        assert is_repeated_phrase(self.MEDYA)
+
+    def test_a_word_repeated_beside_another_word_is_flagged(self):
+        assert is_repeated_phrase(self.SARKI)
+        assert is_repeated_phrase(self.YENIDEN)
+
+    def test_the_single_word_rule_does_not_reach_these(self):
+        # the two rules are complementary, and this is the arithmetic that
+        # says so: every text above escapes is_repeated_word
+        for text in (self.SARKI, self.BIR_SONRAKI, self.VIDEO, self.MEDYA, self.YENIDEN):
+            assert not is_repeated_word(text)
+
+    def test_laughter_and_emphasis_survive(self):
+        assert not is_repeated_phrase("ha ha ha ha my friend")
+        assert not is_repeated_phrase("ha ha ha ha ha ha ha my friend")
+        assert not is_repeated_phrase("very very very very good")
+
+    def test_a_row_under_four_tokens_is_left_alone(self):
+        assert not is_repeated_phrase("no no no")
+        assert not is_repeated_phrase("çal")
+        assert not is_repeated_phrase("")
+        assert MIN_PHRASE_TOKENS == 4
+
+    def test_a_real_phrase_is_left_alone(self):
+        assert not is_repeated_phrase("hvad er klokken nu i københavn")
+        assert not is_repeated_phrase("bir sonraki parçayı çal lütfen")
+
+    def test_case_does_not_hide_a_repeat(self):
+        assert is_repeated_phrase("Bir Sonraki bir sonraki BIR SONRAKI bir sonraki")
+
+    def test_one_rude_token_is_not_a_repetition_defect(self):
+        # `bok` is the one line #218 deleted that no repetition rule reaches,
+        # and widening this rule to reach it would drop every one-word row
+        assert not is_repeated_phrase("bok")
+        assert not is_repeated_word("bok")
+
+
 class TestEveryGeneratorDropsTheRow:
     """All four generators that emit locale text must refuse the junk.
 
@@ -195,6 +252,7 @@ class TestEveryGeneratorDropsTheRow:
     """
 
     JUNK = " ".join(["önceki"] * 12)
+    PHRASE_JUNK = " ".join(["bir sonraki"] * 51)
     GOOD = "önceki parça"
 
     def _entries(self, texts):
@@ -204,18 +262,19 @@ class TestEveryGeneratorDropsTheRow:
         return {"id": "test-skill", "files": {"Prev.voc": {
             "type": "voc",
             "langs": {"en-US": self._entries(["previous"]),
-                      "tr-TR": self._entries([self.GOOD, self.JUNK])}}}}
+                      "tr-TR": self._entries([self.GOOD, self.JUNK, self.PHRASE_JUNK])}}}}
 
     def _dialog_skill(self):
         return {"id": "test-skill", "files": {"prev.dialog": {
             "type": "dialog",
-            "langs": {"tr-TR": self._entries([self.GOOD, self.JUNK])}}}}
+            "langs": {"tr-TR": self._entries([self.GOOD, self.JUNK, self.PHRASE_JUNK])}}}}
 
     def test_classification_drops_the_row(self):
         from ovos_localize.datasets.classification import generate_intent_classification
         texts = {r["text"] for r in generate_intent_classification("test-skill", self._voc_skill())}
         assert self.GOOD in texts
         assert self.JUNK not in texts
+        assert self.PHRASE_JUNK not in texts
 
     def test_translation_drops_the_text_and_keeps_the_pair(self):
         from ovos_localize.datasets.translation import generate_parallel_corpora
@@ -223,6 +282,7 @@ class TestEveryGeneratorDropsTheRow:
         row = next(r for r in rows if r["target_lang"] == "tr-TR")
         assert self.GOOD in row["target_texts"]
         assert self.JUNK not in row["target_texts"]
+        assert self.PHRASE_JUNK not in row["target_texts"]
         assert row["base_texts"] == ["previous"]
 
     def test_tts_corpus_drops_the_row(self):
@@ -230,15 +290,16 @@ class TestEveryGeneratorDropsTheRow:
         texts = {r["text"] for r in generate_tts_corpus("test-skill", self._dialog_skill())}
         assert self.GOOD in texts
         assert self.JUNK not in texts
+        assert self.PHRASE_JUNK not in texts
 
     def test_response_pairs_drops_it_on_both_sides(self):
         from ovos_localize.datasets.response_pairs import generate_response_pairs
         skill = {"id": "test-skill", "files": {
             "prev.dialog": {"type": "dialog",
-                            "langs": {"tr-TR": self._entries([self.GOOD, self.JUNK])}},
+                            "langs": {"tr-TR": self._entries([self.GOOD, self.JUNK, self.PHRASE_JUNK])}},
             "prev.intent": {"type": "intent",
                             "context": {"triggers_dialog": ["prev"], "handler_method": "h"},
-                            "langs": {"tr-TR": self._entries([self.GOOD, self.JUNK])}}}}
+                            "langs": {"tr-TR": self._entries([self.GOOD, self.JUNK, self.PHRASE_JUNK])}}}}
         rows = list(generate_response_pairs("test-skill", skill))
         assert rows, "the pair must survive: only the junk goes"
         utterances = {row["utterance"] for row in rows}
@@ -248,6 +309,8 @@ class TestEveryGeneratorDropsTheRow:
         # generator and the assertion would hold whatever was emitted
         assert self.JUNK not in utterances
         assert self.JUNK not in responses
+        assert self.PHRASE_JUNK not in utterances
+        assert self.PHRASE_JUNK not in responses
         assert self.GOOD in utterances
         assert self.GOOD in responses
 
