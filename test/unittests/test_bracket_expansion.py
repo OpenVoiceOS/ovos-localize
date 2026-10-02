@@ -206,6 +206,12 @@ class TestEveryGeneratorDropsTheRow:
             "langs": {"en-US": self._entries(["previous"]),
                       "tr-TR": self._entries([self.GOOD, self.JUNK])}}}}
 
+    def _intent_skill(self):
+        return {"id": "test-skill", "files": {"prev.intent": {
+            "type": "intent",
+            "langs": {"en-US": self._entries(["previous"]),
+                      "tr-TR": self._entries([self.GOOD, self.JUNK])}}}}
+
     def _dialog_skill(self):
         return {"id": "test-skill", "files": {"prev.dialog": {
             "type": "dialog",
@@ -213,7 +219,7 @@ class TestEveryGeneratorDropsTheRow:
 
     def test_classification_drops_the_row(self):
         from ovos_localize.datasets.classification import generate_intent_classification
-        texts = {r["text"] for r in generate_intent_classification("test-skill", self._voc_skill())}
+        texts = {r["text"] for r in generate_intent_classification("test-skill", self._intent_skill())}
         assert self.GOOD in texts
         assert self.JUNK not in texts
 
