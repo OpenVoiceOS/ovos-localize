@@ -7,6 +7,7 @@ from ovos_localize.bracket_expansion import (
     MAX_TEMPLATE_EXPANSIONS,
     clean_text,
     expand_template_cached,
+    is_repeated_phrase,
     is_repeated_word,
 )
 
@@ -43,8 +44,8 @@ def generate_intent_classification(skill_id: str, skill_data: dict) -> Iterator[
                     cleaned = clean_text(expanded)
                     if not cleaned or cleaned in seen:
                         continue
-                    if is_repeated_word(cleaned):
-                        # one word written out many times teaches nothing
+                    if is_repeated_word(cleaned) or is_repeated_phrase(cleaned):
+                        # a row that is one word or one phrase repeated teaches nothing
                         continue
                     seen.add(cleaned)
 

@@ -18,6 +18,7 @@ from ovos_localize.bracket_expansion import (
     MAX_TEMPLATE_EXPANSIONS,
     clean_text,
     expand_template_cached,
+    is_repeated_phrase,
     is_repeated_word,
 )
 
@@ -61,8 +62,8 @@ def generate_response_pairs(skill_id: str, skill_data: dict) -> Iterator[dict[st
                     continue
                 for expanded in expand_template_cached(template, MAX_TEMPLATE_EXPANSIONS):
                     text = clean_text(expanded)
-                    # one word written out many times is not a response
-                    if text and text not in seen_d and not is_repeated_word(text):
+                    # a row that is one word or one phrase repeated is not a response
+                    if text and text not in seen_d and not (is_repeated_word(text) or is_repeated_phrase(text)):
                         seen_d.add(text)
                         texts.append(text)
             if texts:
@@ -97,8 +98,8 @@ def generate_response_pairs(skill_id: str, skill_data: dict) -> Iterator[dict[st
                     utterance = clean_text(expanded)
                     if not utterance or utterance in seen_u:
                         continue
-                    if is_repeated_word(utterance):
-                        # one word written out many times is not an utterance
+                    if is_repeated_word(utterance) or is_repeated_phrase(utterance):
+                        # a row that is one word or one phrase repeated is not an utterance
                         continue
                     seen_u.add(utterance)
 
