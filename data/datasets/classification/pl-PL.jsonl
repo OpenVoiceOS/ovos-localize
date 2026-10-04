@@ -1626,6 +1626,8 @@
 {"lang": "pl-PL", "skill": "ovos-option-matcher-fuzzy-plugin", "file_type": "voc", "intent": "two.voc", "text": "dwa"}
 {"lang": "pl-PL", "skill": "ovos-option-matcher-fuzzy-plugin", "file_type": "voc", "intent": "two.voc", "text": "dwie"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "dodać elementy do listy {list_name}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "dodać wpisy do listy {list_name}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "dodaj rzeczy do listy {list_name}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "dodaj wpisy do listy {list_name}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "dodać rzeczy do listy {list_name}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "dodać elementy do listy"}
@@ -1634,6 +1636,7 @@
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "utwórz wpisy listy {items}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "dodaj wpisy do listy {items}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "utwórz elementy listy"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "dodaj elementy do mojej listy {list_name}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "dodać elementy do mojej listy {list_name}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "dodaj wpisy do mojej listy {list_name}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "dodaj rzeczy do mojej listy {list_name}"}
@@ -1664,6 +1667,43 @@
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "cancel.voc", "text": "czysty"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "cancel.voc", "text": "odrzut"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "cancel.voc", "text": "usunąć"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "anuluj mój następny {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "usuń mój następny {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "wyczyść mój następny {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "mój następny {alertkind} anuluj to"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "następny {alertkind} anuluj to"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "/moje nadchodzące {alertkind} anuluj to"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "przyszłe {alertkind} anuluj to"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "mój... {alertkind} anuluj to"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "{alertkind} anuluj"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "wszystkie {alertkind} odwołać"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "każde {alertkind} anuluj to"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "anuluj alarm"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "usuń alarm"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "czysty alarm"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "anuluj mój {alertkind} i mój {alertkind2}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "usuń mój {alertkind} i mój {alertkind2}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "wyczyść mój {alertkind} i mój {alertkind2}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "anuluj mój {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "usuń mój {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "wyczyść mój {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "proszę anuluj mój {alertkind} i mój {alertkind2}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "proszę usunąć mój {alertkind} i mój {alertkind2}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "proszę, wyczyść mój. {alertkind} i mój {alertkind2}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "anuluj mój alarm {name}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "usuń mój alarm {name}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "usuń mój {name} alarm"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "wyczyść mój {name} alarm"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "proszę anuluj mój {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "proszę usunąć mój {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "proszę, wyczyść mój. {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "anuluj {alertkind} dla {name}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "usuń {alertkind} dla {name}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "wyczyść {alertkind} dla {name}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "anuluj moje całe {alertkind} lista"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "usunąć całość {alertkind} lista"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "wyczyść całe moje. {alertkind} lista"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "usuń całość {alertkind} lista"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "anuluj {alertkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "odwołaj {alertkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "skasuj {alertkind}"}
@@ -1691,16 +1731,13 @@
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "wyczyść wszystkie te {alertkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "anuluj moja {alertkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "anuluj moje {alertkind}"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "anuluj mój {alertkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "skasuj moja {alertkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "skasuj moje {alertkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "skasuj mój {alertkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "usuń moja {alertkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "usuń moje {alertkind}"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "usuń mój {alertkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "wyczyść moja {alertkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "wyczyść moje {alertkind}"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "wyczyść mój {alertkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "anuluj ta następna {alertkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "anuluj ta następne {alertkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "anuluj ta następny {alertkind}"}
@@ -2036,6 +2073,109 @@
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "list.voc", "text": "karty"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "list.voc", "text": "lista"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "list.voc", "text": "listy"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "wyślij mój alarm na {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "pokaż mi mój alarm na {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "odczytaj mój alarm dla {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "powiedz mi mój alarm na {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "wyślij mi wszystkie alarmy"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "pokaż mi wszystkie alarmy"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czytaj mi wszystkie alarm"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "opowiedz mi cały alarm."}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "wyślij mi wszystkie alarmy {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "pokaż mi wszystkie alarmy {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "przeczytaj mi wszystkie alarmy dla {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "powiedz mi wszystkie alarmy na {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "wyślij mi mój bieg {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "pokaż mi mój oczekujący {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czytaj mi mój wkład {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "powiesz mi mój rozgląd {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "wylicz mi wszystkie moje {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "pokaż mi wszystkie moje {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "przeczytaj mi wszystkie moje {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "opowiedz mi wszystkie moje. {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "jaki jest mój oczekujący {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "co jest moim oczekiwaniem {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "jakie są oczekiwania {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "w czym jest dochodzenie {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "/mam jakiegoś {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "mam trochę. {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "/mam jakiegoś {alertkind} dla {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "mam trochę. {alertkind} dla {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "/mam jakiegoś {alertkind} na {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "mam trochę. {alertkind} na {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy mam coś zaplanowanego {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy ja mam coś zaplanowanego {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "mamy coś zaplanowanego {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy mieliśmy coś zaplanowanego {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "lista alarmów na {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "pokaż moje alarmy {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czytaj moje alarmy {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "co? {alertkind} są przechowywane dla {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "który {alertkind} są przechowywane dla {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "co? {alertkind} jest przechowywany w {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "który {alertkind} jest przechowywany w {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "wyślij mój alarm"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "pokaż mój alarm"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czytaj mój alarm"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "wyświetla alarm"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy ja mam jakieś {alertkind} dla {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy ja miałam jakieś {alertkind} dla {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy mamy jakieś {alertkind} dla {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy mieliśmy jakieś {alertkind} dla {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "co ja ustawiłem {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "co my ustawiliśmy {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "co? {alertkind} czy mam coś dla {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "który {alertkind} czy mam coś dla {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "co? {alertkind} czy ja miałem dla {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "który {alertkind} czy ja miałem dla {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy mam jakiekolwiek zapisywane {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy miałem jakiekolwiek zapisywane {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy mamy jakiekolwiek zapisywane {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy mieliśmy jakieś zapisywane {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy mam coś zaplanowanego"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy ja mam coś zaplanowanego"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy mamy coś zaplanowanego"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy mieliśmy coś zaplanowanego"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "co? {alertkind} są przechowywane"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "który {alertkind} są przechowywane"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "co {alertkind} jest przechowywane"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "który {alertkind} jest przechowywany"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "są tam jakieś {alertkind} dla {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "istnieją jakieś {alertkind} dla {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "są tam jakieś. {alertkind} dla {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy są jakieś? {alertkind} dla {timeframe}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "mam jakieś... {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "mam jakiegoś {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "mamy jakieś... {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "mamy jakiegoś {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy ja ustawię jakiekolwiek {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy ja ustawiłem cokolwiek {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy ustawimy jakiekolwiek {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy my ustawiliśmy jakiekolwiek... {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "są jakiekolwiek przechowywane {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "jest jakichkolwiek zapisywanych {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "są niektóre zapisywane {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "jest kilka przechowywanych {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy ja mam jakieś {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy ja miałam jakieś {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy mamy jakieś {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy mieliśmy jakieś {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "co? {alertkind} czy ja mam"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "który {alertkind} czy ja mam"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "co? {alertkind} czy ja miałem"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "który {alertkind} czy ja miałem"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "co {alertkind} i {alertkind2} mam"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "który {alertkind} oraz {alertkind2} czy ja mam"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "co {alertkind} i {alertkind2} miałem"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "który {alertkind} oraz {alertkind2} czy ja miałem"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "kiedy jest mój następny {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "jakie są moje kolejne {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "kiedy jest mój nadchodzący {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "jaki jest mój przyszły {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "są tam jakieś {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "istnieją jakieś {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "są tam jakieś. {alertkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "czy są jakieś? {alertkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "jakie {alertkind} mam"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "które {alertkind} mam"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "jakie mam {alertkind}"}
@@ -2084,7 +2224,6 @@
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "kiedy jest moje następny {alertkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "kiedy jest mój następna {alertkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "kiedy jest mój następne {alertkind}"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "kiedy jest mój następny {alertkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "co mam ustawione"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "co mam zapisane"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "co mam zaplanowane"}
@@ -2370,37 +2509,49 @@
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "repeat.voc", "text": "powtórzenie do"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "repeat.voc", "text": "powtórzenie każdego"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "repeat.voc", "text": "powtórzyć do"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mój... {date:old} alarm przesuń to do {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mój {date:old} alarm przesuń to do {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mój {date:old} tymer przesuń go do {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuń mój {date:old} alarm {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zmień mój {date:old} alarm {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "możesz przesunąć moją następną? {schedkind} do {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuniesz moją kolejną. {schedkind} do {date:time}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "możesz przesunąć moje kolejne {schedkind} do {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mógłbyś zmienić moje kolejne? {schedkind} do {date:time}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mój... {date:old} alarm przesuń się do {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mój {date:old} alarm przesuń się do {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mój {date:old} przesuń się do tagera {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuń moje kolejne {schedkind} wczesniej"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "naciśnij mój następny {schedkind} wczesniej"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuń następną {schedkind} wczesniej"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mógłbyś zrobić mój {schedkind} wczesniej"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zrobiłbyś mój? {schedkind} wczesniej"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "czy ty zrobisz moje {schedkind} wczesniej"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "możesz zrobić mój {schedkind} wczesniej"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "możesz ustawić mój {schedkind} wczesniej"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mógłbyś ustawić mój? {schedkind} wczesniej"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mój następny {schedkind} wczesniej"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "następny {schedkind} wczesniej"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "moje nadchodzące {schedkind} wczesniej"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "/moje nadchodzące {schedkind} wczesniej"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przyszłe {schedkind} wczesniej"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "/zrób to następne. {schedkind} wczesniej"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "ustawić mój następny {schedkind} wczesniej"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zrobiłbyś mój? {schedkind} wczesniej"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "możesz ustawić mój {schedkind} wczesniej"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "moje nadchodzące {schedkind} wczesniej"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zrób następne. {schedkind} wczesniej"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "ustaw mój następny {schedkind} wczesniej"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "wystartować następujący {schedkind} wczesniej"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "ustaw kolejne {schedkind} wczesniej"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuń mój {schedkind} wczesniej"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "popchaj mój {schedkind} wcześniej"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuń {schedkind} wczesniej"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuń się {schedkind} wczesniej"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "skróć mój następny {schedkind}"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "wydłuż moje kolejne {schedkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "powiększ moje kolejne {schedkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przedłużyć mój następny {schedkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "rozszerzyj mój następny {schedkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mój... {schedkind} wczesniej"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mój... {schedkind} wcześniej."}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuń {schedkind} wczesniej"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "wydłuż moje kolejne {schedkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mój {schedkind} wczesniej"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mój {schedkind} wczesniej."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zrób mój {schedkind} wczesniej"}
@@ -2410,32 +2561,45 @@
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zwróć mój {schedkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "wyciągnij mój {schedkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "rozszerzyć mój {schedkind}"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "rozszerzyj moje {schedkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "rozszerzyj mój {schedkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "{schedkind} wcześniej"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "{schedkind} wczesniej."}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "{schedkind} wcześniej."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "{schedkind} później"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "{schedkind} dłużej"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "wczesniej {schedkind}"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "wczesniej. {schedkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "wcześniej. {schedkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "dłużej {schedkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "możesz przesunąć mój {schedkind} do {date:time}"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuniesz mi mój {schedkind} do {date:time}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuńcie mi mój. {schedkind} do {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mógłbyś zmienić mój {schedkind} do {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuń moje kolejne {schedkind} do {date:time}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zmień moje następne {schedkind} do {date:time}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zmień moje następne {schedkind} wczesniej"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuń moje kolejne {schedkind} przez {duration:duration} wczesniej"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zmień moje następne {schedkind} przez {duration:duration} wczesniej"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "rozszerzyj moje {schedkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "{schedkind} wczesniej."}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "wczesniej. {schedkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuniesz mi mój {schedkind} do {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zmień mój następujący {schedkind} do {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zmień mój następujący {schedkind} wczesniej"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuń moje kolejne {schedkind} przez {duration:duration} wczesniej"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zmień mój następujący {schedkind} przez {duration:duration} wczesniej"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuń mój {schedkind} do {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zmień mój {schedkind} do {date:time}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "/zrób to następne. {schedkind} cały dzień"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "ustawić mój następny {schedkind} cały dzień"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zmień moje następne {schedkind} cały dzień"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "wystartować następujący {schedkind} cały dzień"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuń się {schedkind} dla {name} dla {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zrób następne. {schedkind} cały dzień"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "ustaw mój następny {schedkind} cały dzień"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zmień mój następujący {schedkind} cały dzień"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "wystartować następujący {schedkind} cały dzień"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuń {schedkind} dla {name} dla {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zmień {schedkind} dla {name} dla {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuń przesunięcie {schedkind} dla {name} dla {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zmień mój {schedkind} wczesniej"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mój... {schedkind} przesuń się do {date:time}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mój... {schedkind} zmian na {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mój {schedkind} przesuń się do {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mój {schedkind} przemiana na {date:time}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "przesuń mój {schedkind} do {date:time} zamiast tego"}
@@ -2490,42 +2654,61 @@
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "time.voc", "text": "czas"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "timer.voc", "text": "timer"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "timer.voc", "text": "timery"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile mi zostało"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "/ile mi zostało /"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile czasu mi zostało"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile czasu nam zostało"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo na tym tamerku"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo ten czas."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo ten czas"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo na nim czas."}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo odlicza się ten odliczek?"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "/jak długo pozostał mój {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "/jak długo pozostał na moim {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo pozostaje na mnie {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo pozostają na mnie {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "powiesz mi czas, który został. {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "pokaż mi czas, który został. {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "daj mi czas, który został. {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "powiesz nam czas, który pozostał. {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile będzie do mojego czasu {timerkind} kończy się"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo będzie moja {timerkind} kończy się"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo do czasu {timerkind} kończy się"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo do {timerkind} kończy się"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "na mojej {timerkind} jak długo zostało"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "dla mojego {timerkind} jak długo zostało"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "w sprawie {timerkind} jak długo zostało"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "w odniesieniu do: {timerkind} jak długo zostało"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile czasu mi pozostało {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo pozostało na mnie {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo pozostaje mój czas {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "to, co zostało na moim {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "to, co pozostało na moim {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "to, co zostało dla mnie {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "/jest mój {timerkind} gotowane"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "to jest {timerkind} gotowane"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ma {timerkind} gotowane"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "kiedy to robi się moje {timerkind} koniec"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile mi zostało"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo na tym tamerku"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo odlicza się to odliczanie?"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile czasu pozostaje na {name} czasownik"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo pozostał na {name} czasownik"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile czasu pozostaje {name} czasownik"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo pozostał mój {timerkind}"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo pozostaje na mnie {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "powiedz mi, kiedy pozołł czas. {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "pokaż mi czas, który został {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "daj mi czas, który został {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "powiesz nam, kiedy pozostał czas. {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo do mojego {timerkind} kończy się"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo będzie moja {timerkind} kończy się"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo do czasu {timerkind} kończy się"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo do {timerkind} kończy się"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "na moim {timerkind} ile czasu zostało"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "dla mojego {timerkind} ile czasu zostało"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "w sprawie {timerkind} ile czasu zostało"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "w odniesieniu do: {timerkind} ile czasu zostało"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile czasu mi pozostało {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo pozostał na mnie {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile czasu mi pozostało? {timerkind}"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo pozostało na mnie {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo pozostał mój {name} czasownik"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo pozostaje na mnie {name} czasownik"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "to, co zostało na moim {timerkind}"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "to, co zostało dla mnie {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "to, co pozostało dla mnie {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jest mój {timerkind} gotowane"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "to jest {timerkind} gotowane"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ma {timerkind} gotowane"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "kiedy to będzie moje {timerkind} koniec"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "kiedy będzie mój {timerkind} koniec"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "kiedy to robi się {timerkind} koniec"}
@@ -2534,42 +2717,57 @@
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "mój czas pozostaje na mnie {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "mój czas został dla mnie {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "mój czas pozostał dla mnie {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "mój... {timerkind} jak długo zostało"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "mój... {timerkind} ile czasu zostało"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "/jak długo na mnie / {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "/jak długo będzie moja / {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile czasu będzie {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo zostało"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile czasu zostało"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo pozostało"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "powiedz mi, kiedy pozostał czas."}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "pokaż mi czas, który został"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "daj mi czas, który został."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "mój {timerkind} ile czasu zostało"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo na mój czas {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo będzie moja {timerkind}"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile czasu będzie {timerkind}"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile czasu zostało"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo pozostało"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "powiedz mi, kiedy pozostał czas"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "pokaż mi czas, który został"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "daj mi czas, który pozostał."}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "powiesz nam, kiedy pozostał czas"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "powiedz mi mój {timerkind} stan"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "pokaż mi mój {timerkind} stan"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "oddaj mi mój {timerkind} stan"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "powiedz nam, mój {timerkind} stan"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "czas pozostał na mnie {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "czas pozostaje na moim {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "czas pozostały na mój czas {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "czas pozostał dla mnie {timerkind}"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "pozostały czas dla mojego {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "pozostały czas dla mnie {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile zostało w lewej długości"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile zostało"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile pozostało"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "powiedz mi, jaki jest stan {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "powiedz mi, jaki jest status {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "daj mi status {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "powiedz nam, jaki jest status {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "daj nam status {timerkind}"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile czasu będzie {name} czasownik"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile czasu będzie {name} odliczanie"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jaki jest mój status? {name} odliczanie"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jaki jest status {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "co to jest? {timerkind} stan"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "co jest moje {timerkind} stan"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "/jak długo jest mój / {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile czasu jest {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "/jak długo jest / {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "czas pozostał na mnie {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "pozostały czas dla mojego {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "powiedz mi, jaki jest stan {timerkind}"}
+{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile czasu będzie {name} czasownik"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile czasu na {name} czasownik"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo jeszcze będzie {name} czasownik"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jaki jest mój status {name} czasownik"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jaki jest mój status {name} odliczanie"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jaki jest mój stan? {name} czasownik"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jaki jest status {timerkind}"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "co to jest? {timerkind} stan"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "co jest moim {timerkind} stan"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo jest mój {timerkind}"}
-{"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "ile czasu jest {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "jak długo to będzie {timerkind}"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "{timerkind} stan"}
 {"lang": "pl-PL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "todo.voc", "text": "do zrobienia"}
