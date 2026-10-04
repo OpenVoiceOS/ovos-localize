@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.0a26](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a26) (2026-10-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a25...0.1.0a26)
+
+**Merged pull requests:**
+
+- fix\(submit\): delete a submission branch once its pull request is settled [\#699](https://github.com/OpenVoiceOS/ovos-localize/pull/699) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.1.0a25](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a25) (2026-10-04)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a24...0.1.0a25)
@@ -225,7 +233,6 @@
 - docs: standardize NGI0 Commons Fund attribution [\#206](https://github.com/OpenVoiceOS/ovos-localize/pull/206) ([JarbasAl](https://github.com/JarbasAl))
 - docs: NLnet/NGI0 funding attribution [\#205](https://github.com/OpenVoiceOS/ovos-localize/pull/205) ([JarbasAl](https://github.com/JarbasAl))
 - chore: Configure Renovate [\#197](https://github.com/OpenVoiceOS/ovos-localize/pull/197) ([renovate[bot]](https://github.com/apps/renovate))
-- feat: add TigreGotico/ovos-skill-cave-adventure-game to skills.txt [\#133](https://github.com/OpenVoiceOS/ovos-localize/pull/133) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 
 
