@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.0a25](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a25) (2026-10-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a24...0.1.0a25)
+
+**Merged pull requests:**
+
+- fix\(scripts\): fill\_intents\_translated remaining\_after\_run and --export validation [\#700](https://github.com/OpenVoiceOS/ovos-localize/pull/700) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.1.0a24](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a24) (2026-09-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a23...0.1.0a24)
@@ -218,7 +226,6 @@
 - docs: NLnet/NGI0 funding attribution [\#205](https://github.com/OpenVoiceOS/ovos-localize/pull/205) ([JarbasAl](https://github.com/JarbasAl))
 - chore: Configure Renovate [\#197](https://github.com/OpenVoiceOS/ovos-localize/pull/197) ([renovate[bot]](https://github.com/apps/renovate))
 - feat: add TigreGotico/ovos-skill-cave-adventure-game to skills.txt [\#133](https://github.com/OpenVoiceOS/ovos-localize/pull/133) ([github-actions[bot]](https://github.com/apps/github-actions))
-- feat: add TigreGotico/ovos-skill-moon-game to skills.txt [\#132](https://github.com/OpenVoiceOS/ovos-localize/pull/132) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 
 
