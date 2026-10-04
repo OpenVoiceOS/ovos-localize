@@ -82,7 +82,44 @@ User (browser)                    GitHub
 - Commits updated JSON to `data/`
 - GitHub Pages auto-deploys
 
-### 5. Summary of secrets/variables
+### 5. Submission branch cleanup
+
+`sweep_submission_branches.yml` runs daily at 04:17 UTC and deletes the
+`translate/` branches that have nothing left to deliver.
+
+`submit_translation.yml` cannot do this itself. It pushes the branch, opens the
+pull request and ends. The merge happens later, in the target repository, when a
+maintainer gets to it. By then no run of the submit workflow is alive to delete
+the head ref.
+
+The sweep reads the pull request each branch opened, by head ref, and deletes
+the branch once that pull request is merged or closed. Two kinds of branch keep
+their ref. One is a branch whose pull request is still open. The other is a
+branch that never got a pull request, which happens when a run fails between the
+push and the `gh pr create`: that commit is the only copy of the translation
+inside the repository, so the ref stays until someone looks at it.
+
+Deleting a ref loses no translation. A merged submission is on the base branch,
+and a closed one keeps its commits on its own pull request page, which also
+offers to restore the branch.
+
+A dispatched run reports and deletes nothing unless `apply` is set, so the list
+can be read first:
+
+```
+gh workflow run sweep_submission_branches.yml
+```
+
+The same sweep runs from a clone against any repository the caller can read:
+
+```
+ovos-localize-sweep-branches --owner OpenVoiceOS ovos-skill-alerts
+```
+
+It ends with the counts: how many submission branches it found, how many are
+finished, and how many it deleted.
+
+### 6. Summary of secrets/variables
 
 | Name | Type | Where | Purpose |
 |------|------|-------|---------|
