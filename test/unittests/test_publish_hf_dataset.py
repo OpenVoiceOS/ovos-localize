@@ -8,11 +8,10 @@ exercise the pure CSV builder in isolation.
 
 import csv
 import importlib.util
+import json
 import os
 import sys
 from pathlib import Path
-
-import pytest
 
 # These tests exercise HfApi against monkeypatched/offline code paths only;
 # force huggingface_hub itself to refuse any real network access regardless
@@ -52,9 +51,9 @@ def test_build_flat_csv_keeps_only_intent_rows(tmp_path):
     classification_dir.mkdir(parents=True)
     (classification_dir / "sample.jsonl").write_text(
         '{"file_type": "intent", "lang": "en-us", "skill": "weather", '
-        '"intent": "check_weather", "text": "what is the weather"}\n'
+        '"intent": "check_weather.intent", "text": "what is the weather"}\n'
         '{"file_type": "voc", "lang": "en-us", "skill": "weather", '
-        '"intent": "yes", "text": "yes"}\n',
+        '"intent": "yes.voc", "text": "yes"}\n',
         encoding="utf-8",
     )
     module.CLASSIFICATION_DIR = classification_dir
@@ -67,73 +66,51 @@ def test_build_flat_csv_keeps_only_intent_rows(tmp_path):
         rows = list(csv.reader(f))
 
     assert rows[0] == ["lang", "domain", "intent", "sentence"]
-    assert rows[1:] == [["en-us", "weather", "check_weather", "what is the weather"]]
+    assert rows[1:] == [["en-us", "weather", "check_weather.intent", "what is the weather"]]
 
 
-def test_delete_patterns_prune_stale_corpus_files_only(monkeypatch, tmp_path):
-    """delete_patterns must be relative to path_in_repo.
-
-    HfApi._prepare_folder_deletions strips path_in_repo from each remote
-    filename before matching delete_patterns against it (see
-    huggingface_hub.hf_api), so a pattern of "data/datasets/**" never
-    matches anything once path_in_repo is already "data/datasets". This
-    captures the actual delete_patterns argument the script passes to
-    upload_folder (without letting upload_folder touch the network) and
-    replays it through the real (offline) deletion-planning helper, to
-    prove a removed corpus file is pruned while root-level files (which
-    never enter the candidate set: the helper only considers files whose
-    repo-root path starts with path_in_repo) are left untouched.
-    """
-    module = _load_module()
-
-    classification_dir = tmp_path / "data" / "datasets" / "classification"
-    classification_dir.mkdir(parents=True)
-    (classification_dir / "new.jsonl").write_text("", encoding="utf-8")
-    module.LOCAL_DIR = str(tmp_path / "data" / "datasets")
-    module.CLASSIFICATION_DIR = classification_dir
-
+def _run_main_with_remote(monkeypatch, module, tmp_path, remote_files):
     from huggingface_hub import HfApi
 
     captured = {}
-
-    def fake_upload_folder(self, **kwargs):
-        captured.update(kwargs)
-
-    monkeypatch.setattr(HfApi, "upload_folder", fake_upload_folder)
-    monkeypatch.setattr(HfApi, "upload_file", lambda self, **kwargs: None)
+    monkeypatch.setattr(HfApi, "list_repo_files", lambda self, **kwargs: remote_files)
+    monkeypatch.setattr(HfApi, "create_commit", lambda self, **kwargs: captured.update(kwargs))
     monkeypatch.setenv("HF_TOKEN", "fake")
     monkeypatch.setenv("RUNNER_TEMP", str(tmp_path))
-
+    module.CLASSIFICATION_DIR = tmp_path / "classification"
     module.main()
+    return captured["operations"]
 
-    assert "delete_patterns" in captured
-    delete_patterns = captured["delete_patterns"]
 
-    monkeypatch.setattr(HfApi, "list_repo_files", lambda self, **kwargs: [
-        "data/datasets/classification/old.jsonl",
-        "data/datasets/classification/new.jsonl",
+def test_publish_deletes_stale_corpus_tree(monkeypatch, tmp_path):
+    """A data/datasets/ tree left in the dataset repo goes in the same commit as the CSV."""
+    module = _load_module()
+    operations = _run_main_with_remote(monkeypatch, module, tmp_path, [
+        "data/datasets/classification/en-US.jsonl",
+        "data/datasets/tts/en-US.jsonl",
         "README.md",
         "ovos_localize_intents.csv",
         ".gitattributes",
     ])
 
-    api = HfApi(token="fake")
-    ops = api._prepare_folder_deletions(
-        repo_id=module.REPO_ID,
-        repo_type="dataset",
-        revision=None,
-        path_in_repo=module.PATH_IN_REPO,
-        delete_patterns=delete_patterns,
-    )
-    deleted = {op.path_in_repo for op in ops}
+    from huggingface_hub import CommitOperationAdd, CommitOperationDelete
 
-    assert "data/datasets/classification/old.jsonl" in deleted, (
-        "stale corpus file must be a delete candidate; the old "
-        f"delete_patterns={delete_patterns!r} matches nothing because it "
-        "is repo-root-relative instead of relative to path_in_repo"
-    )
-    assert "README.md" not in deleted
-    assert "ovos_localize_intents.csv" not in deleted
+    added = [op.path_in_repo for op in operations if isinstance(op, CommitOperationAdd)]
+    deleted = [(op.path_in_repo, op.is_folder) for op in operations
+               if isinstance(op, CommitOperationDelete)]
+    assert added == ["ovos_localize_intents.csv"]
+    assert deleted == [("data/datasets/", True)]
+
+
+def test_publish_without_stale_tree_only_uploads_csv(monkeypatch, tmp_path):
+    module = _load_module()
+    operations = _run_main_with_remote(monkeypatch, module, tmp_path, [
+        "README.md",
+        "ovos_localize_intents.csv",
+        ".gitattributes",
+    ])
+
+    assert [op.path_in_repo for op in operations] == ["ovos_localize_intents.csv"]
 
 
 def test_main_refuses_without_hf_token(monkeypatch, capsys):
@@ -149,3 +126,79 @@ def test_main_refuses_without_hf_token(monkeypatch, capsys):
     module.main()
 
     assert "HF_TOKEN" in capsys.readouterr().out
+
+
+def _capture_publish(monkeypatch, module, tmp_path):
+    """Run main() offline and return every row it would publish, by source file."""
+    from huggingface_hub import HfApi
+
+    published_files = []
+
+    def fake_upload_folder(self, folder_path, path_in_repo, **kwargs):
+        for path in Path(folder_path).rglob("*"):
+            if path.is_file():
+                published_files.append(path)
+
+    def fake_upload_file(self, path_or_fileobj, path_in_repo, **kwargs):
+        published_files.append(Path(path_or_fileobj))
+
+    def fake_create_commit(self, operations, **kwargs):
+        for op in operations:
+            if hasattr(op, "path_or_fileobj"):
+                published_files.append(Path(op.path_or_fileobj))
+
+    monkeypatch.setattr(HfApi, "upload_folder", fake_upload_folder)
+    monkeypatch.setattr(HfApi, "upload_file", fake_upload_file)
+    monkeypatch.setattr(HfApi, "create_commit", fake_create_commit)
+    monkeypatch.setattr(HfApi, "list_repo_files", lambda self, **kwargs: [])
+    monkeypatch.setenv("HF_TOKEN", "fake")
+    monkeypatch.setenv("RUNNER_TEMP", str(tmp_path))
+
+    module.main()
+
+    sources = set()
+    for path in published_files:
+        if path.suffix == ".csv":
+            with path.open(encoding="utf-8", newline="") as f:
+                sources.update(row["intent"] for row in csv.DictReader(f))
+        elif path.suffix == ".jsonl":
+            with path.open(encoding="utf-8") as f:
+                for line in f:
+                    row = json.loads(line)
+                    sources.add(row.get("intent") or row.get("dialog") or row.get("file_name"))
+    return published_files, sources
+
+
+def test_published_dataset_holds_intent_rows_only(monkeypatch, tmp_path):
+    """A skill with every resource kind publishes rows from its .intent file only."""
+    sys.path.insert(0, str(SCRIPT_PATH.parents[2] / "scripts"))
+    import generate_data
+    import generate_datasets
+
+    skill_dir = tmp_path / "ovos-skill-fixture"
+    locale = skill_dir / "locale" / "en-us"
+    locale.mkdir(parents=True)
+    (locale / "foo.intent").write_text("turn on the (light|lamp)\n", encoding="utf-8")
+    (locale / "bar.voc").write_text("lightbulb\n", encoding="utf-8")
+    (locale / "baz.dialog").write_text("the light is on\n", encoding="utf-8")
+    (locale / "qux.entity").write_text("kitchen\n", encoding="utf-8")
+
+    scan = generate_data.RepoScanner(str(tmp_path / "repos")).scan(str(skill_dir))
+    skill = generate_data.build_skill_json(scan, "OpenVoiceOS", "ovos-skill-fixture")
+    skills_dir = tmp_path / "data" / "skills"
+    skills_dir.mkdir(parents=True)
+    (skills_dir / f"{skill['id']}.json").write_text(json.dumps(skill), encoding="utf-8")
+
+    datasets_dir = tmp_path / "data" / "datasets"
+    monkeypatch.setattr(generate_datasets, "SKILLS_DIR", skills_dir)
+    monkeypatch.setattr(generate_datasets, "DATASETS_DIR", datasets_dir)
+    generate_datasets.main()
+
+    module = _load_module()
+    module.LOCAL_DIR = str(datasets_dir)
+    module.CLASSIFICATION_DIR = datasets_dir / "classification"
+
+    published_files, sources = _capture_publish(monkeypatch, module, tmp_path)
+
+    assert published_files
+    assert sources == {"foo.intent"}, f"published rows from {sorted(sources)}"
