@@ -54,17 +54,26 @@ jobs:
         run: |
           ./.github/scripts/commit_data.sh "chore: update training corpora" "data/datasets/**"
 
-      # Mirrors data/datasets/ into the data/datasets/ path of the published
-      # HF dataset repo, and regenerates ovos_localize_intents.csv at that
-      # repo's root from the current classification corpus so the flat
-      # export and datasets-server stats stay in sync with the daily
-      # refresh instead of freezing at whenever the CSV was last hand-
-      # uploaded. Requires an HF_TOKEN Actions secret with write access to
-      # OpenVoiceOS/ovos-localize-intents; skips quietly if unset so a
-      # missing secret never reddens the daily refresh, and an HF outage
-      # can't either since the step is non-fatal.
-      - name: Publish training corpora to Hugging Face
+      # The intent CSV and the intents corpus come from one read of
+      # data/skills. The export fails when the corpus and the CSV are not
+      # equivalent, or when train and test overlap, and then nothing is
+      # published.
+      - name: Export intent datasets
+        id: export_intents
         if: always()
+        continue-on-error: true
+        timeout-minutes: 20
+        run: ovos-localize-export-intents --skills data/skills --out "${RUNNER_TEMP}/intents-export"
+
+      # Publishes ovos_localize_intents.csv to OpenVoiceOS/ovos-localize-intents
+      # (deleting any data/datasets/ tree there in the same commit) and the
+      # corpus tree to OpenVoiceOS/ovos-intents (deleting every file the
+      # export did not write). Requires an HF_TOKEN Actions secret with write
+      # access to both datasets; skips quietly if unset so a missing secret
+      # never reddens the daily refresh, and an HF outage can't either since
+      # the step is non-fatal.
+      - name: Publish intent datasets to Hugging Face
+        if: always() && steps.export_intents.outcome == 'success'
         continue-on-error: true
         timeout-minutes: 15
         env:
@@ -77,5 +86,4 @@ jobs:
             echo "HF_TOKEN secret is not set; skipping Hugging Face publish."
             exit 0
           fi
-          pip install -U huggingface_hub
           python .github/scripts/publish_hf_dataset.py

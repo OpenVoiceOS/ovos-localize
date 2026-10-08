@@ -40,11 +40,25 @@ server = [
     "authlib>=1.2",
     "itsdangerous>=2.1",
 ]
+corpus = [
+    "ovos-spec-tools>=1.11.2a1",
+    "ovos-number-parser>=0.20.0a1",
+    "ovos-date-parser>=0.31.0a1",
+    "ovos-color-parser>=0.12.1a1",
+    "ovos-lang-parser>=0.8.0a1",
+    "ovos-typed-slots-transformer>=0.0.1a4",
+]
 dev = [
     "pytest>=7.0",
     "pytest-cov>=4.0",
     "hypothesis>=6.0",
     "huggingface_hub>=0.30",
+    "ovos-spec-tools>=1.11.2a1",
+    "ovos-number-parser>=0.20.0a1",
+    "ovos-date-parser>=0.31.0a1",
+    "ovos-color-parser>=0.12.1a1",
+    "ovos-lang-parser>=0.8.0a1",
+    "ovos-typed-slots-transformer>=0.0.1a4",
 ]
 e2e = [
     "pytest>=7.0",
@@ -56,6 +70,7 @@ ovos-localize-cli = "ovos_localize.cli.validate:main"
 ovos-localize-validate-submission = "ovos_localize.cli.validate_submission:main"
 ovos-localize-check-path-lang = "ovos_localize.cli.check_path_lang:main"
 ovos-localize-render-json = "ovos_localize.cli.render_json_submission:main"
+ovos-localize-export-intents = "ovos_localize.corpus.export:main"
 ovos-localize-sweep-branches = "ovos_localize.cli.sweep_submission_branches:main"
 
 [tool.setuptools.dynamic]

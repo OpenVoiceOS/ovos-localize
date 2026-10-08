@@ -3,11 +3,12 @@
 The script must never touch the network at import time: importing it used to
 call HfApi().upload_folder()/upload_file() at module scope, so a plain
 ``import`` triggered a real publish. These tests pin that guarantee down and
-exercise the pure CSV builder in isolation.
+check the commit each dataset repo receives, with the Hub calls captured.
 """
 
 import csv
 import importlib.util
+import json
 import os
 import sys
 from pathlib import Path
@@ -45,95 +46,110 @@ def test_import_performs_no_upload(monkeypatch):
     _load_module()
 
 
-def test_build_flat_csv_keeps_only_intent_rows(tmp_path):
-    module = _load_module()
-
-    classification_dir = tmp_path / "data" / "datasets" / "classification"
-    classification_dir.mkdir(parents=True)
-    (classification_dir / "sample.jsonl").write_text(
-        '{"file_type": "intent", "lang": "en-us", "skill": "weather", '
-        '"intent": "check_weather", "text": "what is the weather"}\n'
-        '{"file_type": "voc", "lang": "en-us", "skill": "weather", '
-        '"intent": "yes", "text": "yes"}\n',
-        encoding="utf-8",
-    )
-    module.CLASSIFICATION_DIR = classification_dir
-
-    out_path = tmp_path / "ovos_localize_intents.csv"
-    row_count = module.build_flat_csv(out_path)
-
-    assert row_count == 1
-    with out_path.open(encoding="utf-8", newline="") as f:
-        rows = list(csv.reader(f))
-
-    assert rows[0] == ["lang", "domain", "intent", "sentence"]
-    assert rows[1:] == [["en-us", "weather", "check_weather", "what is the weather"]]
+def _export_dir(tmp_path, corpus_files=("README.md", "manifest.json", "en-US/train.jsonl", "en-US/test.jsonl")):
+    export_dir = tmp_path / "intents-export"
+    export_dir.mkdir()
+    (export_dir / "ovos_localize_intents.csv").write_text(
+        "lang,domain,intent,sentence\nen-US,ovos-skill-lamp,dim.intent,dim it\n", encoding="utf-8")
+    for name in corpus_files:
+        path = export_dir / "ovos-intents" / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("{}\n", encoding="utf-8")
+    return export_dir
 
 
-def test_delete_patterns_prune_stale_corpus_files_only(monkeypatch, tmp_path):
-    """delete_patterns must be relative to path_in_repo.
-
-    HfApi._prepare_folder_deletions strips path_in_repo from each remote
-    filename before matching delete_patterns against it (see
-    huggingface_hub.hf_api), so a pattern of "data/datasets/**" never
-    matches anything once path_in_repo is already "data/datasets". This
-    captures the actual delete_patterns argument the script passes to
-    upload_folder (without letting upload_folder touch the network) and
-    replays it through the real (offline) deletion-planning helper, to
-    prove a removed corpus file is pruned while root-level files (which
-    never enter the candidate set: the helper only considers files whose
-    repo-root path starts with path_in_repo) are left untouched.
-    """
-    module = _load_module()
-
-    classification_dir = tmp_path / "data" / "datasets" / "classification"
-    classification_dir.mkdir(parents=True)
-    (classification_dir / "new.jsonl").write_text("", encoding="utf-8")
-    module.LOCAL_DIR = str(tmp_path / "data" / "datasets")
-    module.CLASSIFICATION_DIR = classification_dir
-
+def _run_main_with_remote(monkeypatch, module, tmp_path, remotes):
+    """Run main() offline; return the operations of each commit, by repo id."""
     from huggingface_hub import HfApi
 
     captured = {}
-
-    def fake_upload_folder(self, **kwargs):
-        captured.update(kwargs)
-
-    monkeypatch.setattr(HfApi, "upload_folder", fake_upload_folder)
-    monkeypatch.setattr(HfApi, "upload_file", lambda self, **kwargs: None)
+    monkeypatch.setattr(HfApi, "list_repo_files", lambda self, repo_id, **kwargs: remotes[repo_id])
+    monkeypatch.setattr(HfApi, "create_commit",
+                        lambda self, repo_id, operations, **kwargs: captured.update({repo_id: operations}))
     monkeypatch.setenv("HF_TOKEN", "fake")
-    monkeypatch.setenv("RUNNER_TEMP", str(tmp_path))
-
+    monkeypatch.setenv("INTENTS_EXPORT_DIR", str(_export_dir(tmp_path)))
     module.main()
+    return captured
 
-    assert "delete_patterns" in captured
-    delete_patterns = captured["delete_patterns"]
 
-    monkeypatch.setattr(HfApi, "list_repo_files", lambda self, **kwargs: [
-        "data/datasets/classification/old.jsonl",
-        "data/datasets/classification/new.jsonl",
-        "README.md",
-        "ovos_localize_intents.csv",
-        ".gitattributes",
-    ])
+def _paths(operations):
+    from huggingface_hub import CommitOperationAdd, CommitOperationDelete
 
-    api = HfApi(token="fake")
-    ops = api._prepare_folder_deletions(
-        repo_id=module.REPO_ID,
-        repo_type="dataset",
-        revision=None,
-        path_in_repo=module.PATH_IN_REPO,
-        delete_patterns=delete_patterns,
-    )
-    deleted = {op.path_in_repo for op in ops}
+    added = [op.path_in_repo for op in operations if isinstance(op, CommitOperationAdd)]
+    deleted = [(op.path_in_repo, op.is_folder) for op in operations if isinstance(op, CommitOperationDelete)]
+    return added, deleted
 
-    assert "data/datasets/classification/old.jsonl" in deleted, (
-        "stale corpus file must be a delete candidate; the old "
-        f"delete_patterns={delete_patterns!r} matches nothing because it "
-        "is repo-root-relative instead of relative to path_in_repo"
-    )
-    assert "README.md" not in deleted
-    assert "ovos_localize_intents.csv" not in deleted
+
+def test_publish_deletes_stale_corpus_tree(monkeypatch, tmp_path):
+    """A data/datasets/ tree left in the CSV dataset repo goes in the same commit as the CSV."""
+    module = _load_module()
+    captured = _run_main_with_remote(monkeypatch, module, tmp_path, {
+        module.CSV_REPO_ID: ["data/datasets/classification/en-US.jsonl", "data/datasets/tts/en-US.jsonl",
+                             "README.md", "ovos_localize_intents.csv", ".gitattributes"],
+        module.CORPUS_REPO_ID: [],
+    })
+
+    assert _paths(captured[module.CSV_REPO_ID]) == (["ovos_localize_intents.csv"], [("data/datasets/", True)])
+
+
+def test_publish_without_stale_tree_only_uploads_csv(monkeypatch, tmp_path):
+    module = _load_module()
+    captured = _run_main_with_remote(monkeypatch, module, tmp_path, {
+        module.CSV_REPO_ID: ["README.md", "ovos_localize_intents.csv", ".gitattributes"],
+        module.CORPUS_REPO_ID: [],
+    })
+
+    assert _paths(captured[module.CSV_REPO_ID]) == (["ovos_localize_intents.csv"], [])
+
+
+def test_corpus_publish_replaces_the_split_files_in_full(monkeypatch, tmp_path):
+    """Every remote file the export did not write is deleted, except .gitattributes."""
+    module = _load_module()
+    captured = _run_main_with_remote(monkeypatch, module, tmp_path, {
+        module.CSV_REPO_ID: [],
+        module.CORPUS_REPO_ID: [".gitattributes", "README.md", "manifest.json", "en-US/train_templates.jsonl",
+                                "en-US/test.jsonl", "arb/train_templates.jsonl"],
+    })
+
+    added, deleted = _paths(captured[module.CORPUS_REPO_ID])
+    assert added == ["README.md", "en-US/test.jsonl", "en-US/train.jsonl", "manifest.json"]
+    assert deleted == [("arb/train_templates.jsonl", False), ("en-US/train_templates.jsonl", False)]
+
+
+def _run_main_on_export(monkeypatch, module, export_dir):
+    """Run main() on *export_dir* with a Hub that fails the test on any call."""
+    class ExplodingHfApi:
+        def __init__(self, *args, **kwargs):
+            raise AssertionError("HfApi must not be instantiated for an export without rows")
+
+    monkeypatch.setattr(module, "HfApi", ExplodingHfApi)
+    monkeypatch.setenv("HF_TOKEN", "fake")
+    monkeypatch.setenv("INTENTS_EXPORT_DIR", str(export_dir))
+    with pytest.raises(SystemExit) as exit_info:
+        module.main()
+    return exit_info.value
+
+
+@pytest.mark.parametrize("shape", ["missing", "empty_dir", "empty_corpus_files", "csv_header_only"])
+def test_main_refuses_an_export_without_rows(monkeypatch, tmp_path, shape):
+    """An export tree that holds no rows never reaches the Hub, so no remote file is deleted."""
+    module = _load_module()
+    export_dir = tmp_path / "intents-export"
+    if shape == "empty_dir":
+        export_dir.mkdir()
+    elif shape == "empty_corpus_files":
+        export_dir = _export_dir(tmp_path)
+        for path in (export_dir / "ovos-intents").rglob("*.jsonl"):
+            path.write_text("", encoding="utf-8")
+    elif shape == "csv_header_only":
+        export_dir = _export_dir(tmp_path)
+        (export_dir / module.CSV_PATH_IN_REPO).write_text("lang,domain,intent,sentence\n", encoding="utf-8")
+
+    error = _run_main_on_export(monkeypatch, module, export_dir)
+
+    assert error.code not in (0, None)
+    assert "refusing to publish" in str(error.code)
+    assert str(export_dir) in str(error.code)
 
 
 def test_main_refuses_without_hf_token(monkeypatch, capsys):
@@ -149,3 +165,35 @@ def test_main_refuses_without_hf_token(monkeypatch, capsys):
     module.main()
 
     assert "HF_TOKEN" in capsys.readouterr().out
+
+
+def test_published_csv_holds_intent_rows_only(tmp_path):
+    """A skill with every resource kind exports CSV rows from its .intent file only."""
+    sys.path.insert(0, str(SCRIPT_PATH.parents[2] / "scripts"))
+    import generate_data
+
+    from ovos_localize.corpus.export import export
+
+    skill_dir = tmp_path / "ovos-skill-fixture"
+    locale = skill_dir / "locale" / "en-us"
+    locale.mkdir(parents=True)
+    (locale / "foo.intent").write_text("turn on the (light|lamp)\n", encoding="utf-8")
+    (locale / "bar.voc").write_text("lightbulb\n", encoding="utf-8")
+    (locale / "baz.dialog").write_text("the light is on\n", encoding="utf-8")
+    (locale / "qux.entity").write_text("kitchen\n", encoding="utf-8")
+
+    scan = generate_data.RepoScanner(str(tmp_path / "repos")).scan(str(skill_dir))
+    skill = generate_data.build_skill_json(scan, "OpenVoiceOS", "ovos-skill-fixture")
+    skills_dir = tmp_path / "data" / "skills"
+    skills_dir.mkdir(parents=True)
+    (skills_dir / f"{skill['id']}.json").write_text(json.dumps(skill), encoding="utf-8")
+
+    export(skills_dir, tmp_path / "out")
+
+    with (tmp_path / "out" / "ovos_localize_intents.csv").open(encoding="utf-8", newline="") as f:
+        rows = list(csv.reader(f))
+    assert rows == [
+        ["lang", "domain", "intent", "sentence"],
+        ["en-US", "ovos-skill-fixture", "foo.intent", "turn on the lamp"],
+        ["en-US", "ovos-skill-fixture", "foo.intent", "turn on the light"],
+    ]

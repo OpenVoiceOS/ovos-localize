@@ -42,6 +42,7 @@ from ovos_localize.datasets import (
     generate_slot_filling,
     generate_tts_corpus,
 )
+from ovos_localize.datasets.skill_files import load_skills  # noqa: E402
 
 
 class SplitFileWriter:
@@ -120,19 +121,9 @@ def main() -> None:
     meta_writers: WriterPool = {}
 
     reset_truncation_count()
-    skill_files = sorted(SKILLS_DIR.glob("*.json"))
-    total_skills = len(skill_files)
-
     try:
-        for i, skill_file in enumerate(skill_files, 1):
-            skill_id = skill_file.stem
-            print(f"  [{i}/{total_skills}] {skill_id}...", flush=True)
-            try:
-                with open(skill_file, encoding="utf-8") as f:
-                    skill_data = json.load(f)
-            except Exception as e:
-                print(f"Failed to load {skill_file}: {e}", file=sys.stderr)
-                continue
+        for i, (skill_id, skill_data) in enumerate(load_skills(SKILLS_DIR), 1):
+            print(f"  [{i}] {skill_id}...", flush=True)
 
             # 1. Intent classification
             for sample in generate_intent_classification(skill_id, skill_data):

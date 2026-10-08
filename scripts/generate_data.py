@@ -19,6 +19,7 @@ from typing import Any
 
 from ovos_localize.analyzers.context_builder import ContextCard, build_context_card
 from ovos_localize.bracket_expansion import clean_text, expand_template
+from ovos_localize.corpus.source import line_provenance, read_skill_source
 from ovos_localize.enums import FileType
 from ovos_localize.lang_utils import (
     lang_display_name,
@@ -212,10 +213,12 @@ def build_skill_json(
     skill_id = _make_skill_id(repo)
     branch = branch or scan.branch or "dev"
 
-    # Group files by base_name across languages
-    files_by_base: dict[str, dict[str, ScannedFile]] = {}
+    # Group files by base name and type across languages. A skill may ship
+    # laugh.intent and laugh.voc side by side, and keying on the base name
+    # alone files one under the other's key.
+    files_by_base: dict[tuple[str, str], dict[str, ScannedFile]] = {}
     for f in scan.locale_files:
-        files_by_base.setdefault(f.base_name, {})[f.lang] = f
+        files_by_base.setdefault((f.base_name, f.file_type.value), {})[f.lang] = f
 
     # Group by lang for coverage
     files_by_lang: dict[str, list[ScannedFile]] = {}
@@ -226,14 +229,17 @@ def build_skill_json(
     source_lang = max(files_by_lang, key=lambda k: (len(files_by_lang[k]), k == "en-US")) if files_by_lang else "en-US"
 
     # Build source file lookup for validation
-    sources: dict[str, ParsedFile] = {}
+    sources: dict[tuple[str, str], ParsedFile] = {}
     for f in scan.locale_files:
         if f.lang == source_lang and f.parsed:
-            sources[f.base_name] = f.parsed
+            sources[(f.base_name, f.file_type.value)] = f.parsed
+
+    repo_path = Path(scan.repo_path)
+    commit_messages: dict[str, str] = {}
 
     # Build file entries
     files_json: dict[str, Any] = {}
-    for base_name, lang_map in sorted(files_by_base.items()):
+    for (base_name, type_name), lang_map in sorted(files_by_base.items()):
         # Use any file to determine type/system
         sample = next(iter(lang_map.values()))
         file_key = f"{base_name}.{sample.file_type.value}" if sample.file_type not in (
@@ -254,12 +260,22 @@ def build_skill_json(
             # Validate
             issues: list[ValidationIssue] = []
             if scanned.parsed:
-                source = sources.get(base_name)
+                source = sources.get((base_name, type_name))
                 issues = validate_file(scanned.parsed, source if lang != source_lang else None)
+
+            # The commit that last wrote each .intent line is the provenance
+            # record the intents corpus carries per row.
+            provenance = {}
+            if scanned.file_type == FileType.INTENT:
+                provenance = line_provenance(repo_path, scanned.relative_path, commit_messages)
 
             entries = []
             for ln in (scanned.parsed.content_lines if scanned.parsed else []):
                 entry: dict[str, Any] = {"line": ln.line_number, "text": ln.text}
+                if scanned.file_type == FileType.INTENT:
+                    entry["provenance"], mt_engine = provenance.get(ln.line_number, ("unknown", None))
+                    if mt_engine:
+                        entry["mt_engine"] = mt_engine
                 # For skill.json / settingsmeta, include key metadata
                 if ln.metadata.get("key"):
                     entry["key"] = ln.metadata["key"]
@@ -294,6 +310,7 @@ def build_skill_json(
         "bad_lang_codes": scan.bad_lang_codes,
         "locale_dir": scan.locale_dir,
         "branch": branch,
+        **read_skill_source(repo_path, repo),
         "files": files_json,
     }
 
@@ -772,6 +789,36 @@ def build_entities_json(all_skills: list[dict[str, Any]]) -> list[dict[str, Any]
     return entities
 
 
+def prune_stale_skill_files(skills_dir: Path, written: set[str], failed: list[str]) -> list[str]:
+    """Delete the per-skill files this run did not write, and return their names.
+
+    A repository dropped from ``skills.txt``, a repository that no longer has
+    locale files, and a chunk left over from a skill that now splits into
+    fewer chunks would otherwise stay in ``data/skills/`` and feed every
+    corpus exported from it. A repository that failed this run keeps the
+    files of its last good scan, because a clone failure is usually
+    transient.
+
+    Args:
+        skills_dir: The ``data/skills`` directory.
+        written: File names written by this run, chunks included.
+        failed: Ids of the skills whose scan raised this run.
+
+    Returns:
+        The deleted file names, sorted.
+    """
+    keep = set(written)
+    for skill_id in failed:
+        main_file = skills_dir / f"{skill_id}.json"
+        if main_file.exists():
+            keep.add(main_file.name)
+            keep.update(json.loads(main_file.read_text(encoding="utf-8")).get("chunks", []))
+    removed = sorted(p.name for p in skills_dir.glob("*.json") if p.name not in keep)
+    for name in removed:
+        (skills_dir / name).unlink()
+    return removed
+
+
 def main() -> None:
     """Run data generation pipeline."""
     skills_list = load_skills_list()
@@ -786,6 +833,8 @@ def main() -> None:
 
     scanner = RepoScanner(str(REPO_ROOT / "repos"))
     all_skills: list[dict[str, Any]] = []
+    written: set[str] = set()
+    failed: list[str] = []
 
     for i, (org, repo) in enumerate(skills_list, 1):
         print(f"  [{i}/{len(skills_list)}] {org}/{repo}...", end=" ", flush=True)
@@ -829,6 +878,7 @@ def main() -> None:
                             json.dumps(current_chunk_json, ensure_ascii=False)
                         )
                         main_json["chunks"].append(chunk_name)
+                        written.add(chunk_name)
                         chunk_index += 1
                         current_chunk_json = {"files": {}}
                         current_chunk_size = 15
@@ -843,17 +893,23 @@ def main() -> None:
                         json.dumps(current_chunk_json, ensure_ascii=False)
                     )
                     main_json["chunks"].append(chunk_name)
+                    written.add(chunk_name)
                 
                 skill_path.write_text(json.dumps(main_json, ensure_ascii=False))
                 print(f"{len(scan.languages)} langs, {len(scan.locale_files)} files (SPLIT into {len(main_json['chunks'])} chunks)")
             else:
                 skill_path.write_text(content)
                 print(f"{len(scan.languages)} langs, {len(scan.locale_files)} files")
+            written.add(skill_path.name)
             if scan.bad_lang_codes:
                 print(f"    WARNING: bare lang codes (missing region) in {org}/{repo}: {', '.join(sorted(scan.bad_lang_codes))}", file=sys.stderr)
         except Exception as e:
             print(f"FAILED: {e}", file=sys.stderr)
+            failed.append(_make_skill_id(repo))
             continue
+
+    for name in prune_stale_skill_files(SKILLS_DATA_DIR, written, failed):
+        print(f"  removed stale {name}")
 
     # Write aggregate files
     repos_path = DATA_DIR / "repos.json"
