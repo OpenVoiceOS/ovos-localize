@@ -1,53 +1,72 @@
 #!/usr/bin/env python3
-"""Push data/datasets/ and the flat CSV export to the ovos-localize-intents HF dataset.
+"""Publish the intent CSV and the intents corpus to Hugging Face.
 
-Two things are published in one commit:
+Both come from one export of ovos-localize's skill data
+(``ovos-localize-export-intents``), which reads every skill file once and
+fails when the corpus and the CSV are not equivalent. This script uploads
+what that export wrote and nothing else:
 
-* ``data/datasets/`` is mirrored into the ``data/datasets/`` path of the
-  dataset repo, pruning only that same prefix.
-* ``ovos_localize_intents.csv`` at the repo root is regenerated from
-  ``data/datasets/classification/*.jsonl`` (the ``intent`` samples only,
-  matching what the CSV has always contained: no ``.voc`` rows) so the
-  flat export and the datasets-server statistics stay in sync with the
-  corpus instead of freezing at whatever the CSV last held.
+* ``ovos_localize_intents.csv`` to ``OpenVoiceOS/ovos-localize-intents``: one
+  row per expanded template of a skill's ``.intent`` file (OVOS-INTENT-2
+  §4.1). Any ``data/datasets/`` tree left in that repo is deleted in the same
+  commit, so the dataset holds intent training data only.
+* the ``ovos-intents`` tree to ``OpenVoiceOS/ovos-intents``: ``{lang}/train.jsonl``,
+  ``{lang}/test.jsonl``, ``manifest.json`` and the card generated from it.
+  Every other file in that repo except ``.gitattributes`` is deleted in the
+  same commit, so each run replaces the split files in full.
 
-The dataset repo's README is left untouched: this repo carries no HF
-dataset-card template to regenerate it from.
+The ovos-localize-intents README is left untouched: this repo carries no card
+template for it.
+
+An export that holds no CSV row or no corpus row is refused before the Hub is
+contacted: replacing a dataset in full from an empty tree would delete it.
 """
-import csv
-import json
 import os
+import sys
 from pathlib import Path
 
-from huggingface_hub import HfApi
+from huggingface_hub import CommitOperationAdd, CommitOperationDelete, HfApi
 
-REPO_ID = "OpenVoiceOS/ovos-localize-intents"
-LOCAL_DIR = "data/datasets"
-PATH_IN_REPO = "data/datasets"
-CLASSIFICATION_DIR = Path(LOCAL_DIR) / "classification"
+CSV_REPO_ID = "OpenVoiceOS/ovos-localize-intents"
 CSV_PATH_IN_REPO = "ovos_localize_intents.csv"
-CSV_COLUMNS = ("lang", "domain", "intent", "sentence")
+STALE_PREFIX_IN_REPO = "data/datasets/"
+CORPUS_REPO_ID = "OpenVoiceOS/ovos-intents"
+CORPUS_DIR = "ovos-intents"
+KEEP_IN_CORPUS_REPO = {".gitattributes"}
 
 
-def build_flat_csv(out_path: Path) -> int:
-    """Write the flat lang/domain/intent/sentence CSV and return the row count."""
-    rows = []
-    for jsonl_file in sorted(CLASSIFICATION_DIR.glob("*.jsonl")):
-        with jsonl_file.open(encoding="utf-8") as f:
-            for line in f:
-                sample = json.loads(line)
-                if sample.get("file_type") != "intent":
-                    continue
-                rows.append(
-                    (sample["lang"], sample["skill"], sample["intent"], sample["text"])
-                )
-    rows.sort()
+def csv_operations(export_dir: Path, remote_files: list) -> list:
+    """Upload the CSV and delete any ``data/datasets/`` tree in the same commit."""
+    operations = [CommitOperationAdd(path_in_repo=CSV_PATH_IN_REPO,
+                                     path_or_fileobj=str(export_dir / CSV_PATH_IN_REPO))]
+    if any(name.startswith(STALE_PREFIX_IN_REPO) for name in remote_files):
+        operations.append(CommitOperationDelete(path_in_repo=STALE_PREFIX_IN_REPO, is_folder=True))
+    return operations
 
-    with out_path.open("w", encoding="utf-8", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow(CSV_COLUMNS)
-        writer.writerows(rows)
-    return len(rows)
+
+def export_rows(export_dir: Path) -> tuple:
+    """``(csv_rows, corpus_rows)``: data rows of the CSV and of the corpus split files."""
+    csv_path = export_dir / CSV_PATH_IN_REPO
+    csv_rows = 0
+    if csv_path.is_file():
+        with csv_path.open(encoding="utf-8") as fh:
+            csv_rows = max(sum(1 for line in fh if line.strip()) - 1, 0)
+    corpus_rows = 0
+    for path in (export_dir / CORPUS_DIR).glob("*/*.jsonl"):
+        with path.open(encoding="utf-8") as fh:
+            corpus_rows += sum(1 for line in fh if line.strip())
+    return csv_rows, corpus_rows
+
+
+def corpus_operations(export_dir: Path, remote_files: list) -> list:
+    """Upload the corpus tree and delete every remote file it does not hold."""
+    corpus_dir = export_dir / CORPUS_DIR
+    local = sorted(p.relative_to(corpus_dir).as_posix() for p in corpus_dir.rglob("*") if p.is_file())
+    operations = [CommitOperationAdd(path_in_repo=name, path_or_fileobj=str(corpus_dir / name))
+                  for name in local]
+    operations += [CommitOperationDelete(path_in_repo=name)
+                   for name in sorted(set(remote_files) - set(local) - KEEP_IN_CORPUS_REPO)]
+    return operations
 
 
 def main() -> None:
@@ -60,39 +79,26 @@ def main() -> None:
     server_url = os.environ.get("GITHUB_SERVER_URL", "https://github.com")
     repository = os.environ.get("GITHUB_REPOSITORY", "OpenVoiceOS/ovos-localize")
     run_url = f"{server_url}/{repository}/actions/runs/{run_id}"
-    commit_message = f"chore: refresh training corpora from {repository} run {run_id}"
+    export_dir = Path(os.environ.get("INTENTS_EXPORT_DIR")
+                      or Path(os.environ.get("RUNNER_TEMP", "/tmp")) / "intents-export")
 
-    csv_out = Path(os.environ.get("RUNNER_TEMP", "/tmp")) / CSV_PATH_IN_REPO
-    row_count = build_flat_csv(csv_out)
-    print(f"generated {csv_out} with {row_count} rows")
+    csv_rows, corpus_rows = export_rows(export_dir)
+    if not csv_rows or not corpus_rows:
+        sys.exit(f"{export_dir} holds {csv_rows} CSV rows and {corpus_rows} corpus rows; "
+                 "refusing to publish an empty export, which would delete the published datasets.")
 
     api = HfApi(token=token)
-    api.upload_folder(
-        repo_id=REPO_ID,
-        repo_type="dataset",
-        folder_path=LOCAL_DIR,
-        path_in_repo=PATH_IN_REPO,
-        # huggingface_hub strips path_in_repo from each remote filename before
-        # matching delete_patterns (HfApi._prepare_folder_deletions), so the
-        # pattern must be relative to path_in_repo, not repo-root-relative.
-        # Root files (README.md, the CSV, .gitattributes) are never candidates
-        # regardless of this pattern: the same helper only considers files
-        # whose repo-root path starts with path_in_repo.
-        delete_patterns=["**"],
-        commit_message=commit_message,
-        commit_description=run_url,
-    )
-    print(f"published {LOCAL_DIR} to {REPO_ID}:{PATH_IN_REPO}")
-
-    api.upload_file(
-        repo_id=REPO_ID,
-        repo_type="dataset",
-        path_or_fileobj=str(csv_out),
-        path_in_repo=CSV_PATH_IN_REPO,
-        commit_message=commit_message,
-        commit_description=run_url,
-    )
-    print(f"published {csv_out} to {REPO_ID}:{CSV_PATH_IN_REPO}")
+    for repo_id, build in ((CSV_REPO_ID, csv_operations), (CORPUS_REPO_ID, corpus_operations)):
+        operations = build(export_dir, api.list_repo_files(repo_id=repo_id, repo_type="dataset"))
+        api.create_commit(
+            repo_id=repo_id,
+            repo_type="dataset",
+            operations=operations,
+            commit_message=f"chore: refresh from {repository} run {run_id}",
+            commit_description=run_url,
+        )
+        added = sum(isinstance(op, CommitOperationAdd) for op in operations)
+        print(f"published {repo_id}: {added} files added, {len(operations) - added} deleted")
 
 
 if __name__ == "__main__":

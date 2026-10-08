@@ -94,11 +94,38 @@ from datasets import load_dataset
 dataset = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localize/data/datasets/classification/en-US.jsonl")
 ```
 
-`update_data.yml` also publishes `data/datasets/` to the
+`update_data.yml` also publishes the intent rows to the
 [`OpenVoiceOS/ovos-localize-intents`](https://huggingface.co/datasets/OpenVoiceOS/ovos-localize-intents)
-dataset repo on every run, once the repository has an `HF_TOKEN` Actions
-secret configured with write access to that dataset. Without the secret the
-step is skipped and the Hub copy is left as it was last published.
+dataset repo on every run. That dataset holds intent training data only: one
+flat CSV, `ovos_localize_intents.csv`, with the `lang,domain,intent,sentence`
+columns and one row for each expanded template of a `.intent` file. The `.voc`
+rows of the classification corpus and the other corpora stay on this site.
+Each run replaces the dataset in full. The step needs an `HF_TOKEN` Actions
+secret with write access to that dataset. Without the secret the step is
+skipped and the Hub copy is left as it was last published.
+
+### The intents corpus
+
+The same step publishes
+[`OpenVoiceOS/ovos-intents`](https://huggingface.co/datasets/OpenVoiceOS/ovos-intents),
+the corpus for training and evaluating intent models. `ovos-localize-export-intents`
+reads `data/skills/` once and writes both the CSV above and the corpus:
+
+- `{lang}/train.jsonl`: every `.intent` line of every skill, expanded. `<name>`
+  expands from `name.voc` and `{name}` fills from `name.entity` of the same
+  language, a typed slot fills from that language's parser, and a slot with no
+  values stays literal.
+- `{lang}/test.jsonl`: the skills' `test/end2end/golden_utterances*.jsonl` rows
+  at the same commits. A train row whose utterance matches a test utterance is
+  removed.
+- `manifest.json` and the card: counts, the commit of every skill, the
+  repositories left out and why, and the provenance of the rows.
+
+Labels are `<skill_id>:<intent_name>`, with the skill id the entry point
+registers. Only repositories that register an `ovos.plugin.skill` entry point
+are in the corpus. The export fails, and nothing is published, when the
+`(skill_id, intent_name)` pairs of the corpus differ from the pairs of the CSV
+rows, or when train and test overlap.
 
 ### Machine-translated gap fill
 
