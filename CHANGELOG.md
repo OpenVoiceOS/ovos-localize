@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.0a27](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a27) (2026-10-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a26...0.1.0a27)
+
+**Merged pull requests:**
+
+- feat: export the ovos-intents corpus from the same skill data as the CSV [\#702](https://github.com/OpenVoiceOS/ovos-localize/pull/702) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.1.0a26](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a26) (2026-10-04)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a25...0.1.0a26)
@@ -232,7 +240,6 @@
 - feat\(i18n\): enable kab \(Kabyle\) [\#209](https://github.com/OpenVoiceOS/ovos-localize/pull/209) ([github-actions[bot]](https://github.com/apps/github-actions))
 - docs: standardize NGI0 Commons Fund attribution [\#206](https://github.com/OpenVoiceOS/ovos-localize/pull/206) ([JarbasAl](https://github.com/JarbasAl))
 - docs: NLnet/NGI0 funding attribution [\#205](https://github.com/OpenVoiceOS/ovos-localize/pull/205) ([JarbasAl](https://github.com/JarbasAl))
-- chore: Configure Renovate [\#197](https://github.com/OpenVoiceOS/ovos-localize/pull/197) ([renovate[bot]](https://github.com/apps/renovate))
 
 
 
