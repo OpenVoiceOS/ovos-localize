@@ -197,3 +197,66 @@ def test_published_csv_holds_intent_rows_only(tmp_path):
         ["en-US", "ovos-skill-fixture", "foo.intent", "turn on the lamp"],
         ["en-US", "ovos-skill-fixture", "foo.intent", "turn on the light"],
     ]
+
+
+def _repository_not_found():
+    from types import SimpleNamespace
+
+    from huggingface_hub.errors import RepositoryNotFoundError
+
+    response = SimpleNamespace(status_code=404, headers={}, text="", content=b"", json=dict, request=None)
+    return RepositoryNotFoundError("404 Client Error: repository not found", response=response)
+
+
+def test_missing_csv_repo_does_not_stop_the_corpus_publish(monkeypatch, tmp_path, capsys):
+    """A Hub 404 on the CSV repo is reported and fails the run, after the corpus repo is published."""
+    from huggingface_hub import HfApi
+
+    module = _load_module()
+    committed = {}
+
+    def list_repo_files(self, repo_id, **kwargs):
+        if repo_id == module.CSV_REPO_ID:
+            raise _repository_not_found()
+        return []
+
+    monkeypatch.setattr(HfApi, "list_repo_files", list_repo_files)
+    monkeypatch.setattr(HfApi, "create_commit",
+                        lambda self, repo_id, operations, **kwargs: committed.update({repo_id: operations}))
+    monkeypatch.setenv("HF_TOKEN", "fake")
+    monkeypatch.setenv("INTENTS_EXPORT_DIR", str(_export_dir(tmp_path)))
+
+    with pytest.raises(SystemExit) as exit_info:
+        module.main()
+
+    assert exit_info.value.code not in (0, None)
+    assert list(committed) == [module.CORPUS_REPO_ID]
+    out = capsys.readouterr().out.splitlines()
+    assert out[0].startswith(f"published {module.CORPUS_REPO_ID}: 4 files added, 0 deleted")
+    assert out[1].startswith(f"FAILED {module.CSV_REPO_ID}: RepositoryNotFoundError: 404 Client Error")
+
+
+def test_failed_corpus_repo_does_not_stop_the_csv_publish(monkeypatch, tmp_path, capsys):
+    from huggingface_hub import HfApi
+
+    module = _load_module()
+    committed = {}
+
+    def create_commit(self, repo_id, operations, **kwargs):
+        if repo_id == module.CORPUS_REPO_ID:
+            raise RuntimeError("boom")
+        committed[repo_id] = operations
+
+    monkeypatch.setattr(HfApi, "list_repo_files", lambda self, repo_id, **kwargs: [])
+    monkeypatch.setattr(HfApi, "create_commit", create_commit)
+    monkeypatch.setenv("HF_TOKEN", "fake")
+    monkeypatch.setenv("INTENTS_EXPORT_DIR", str(_export_dir(tmp_path)))
+
+    with pytest.raises(SystemExit) as exit_info:
+        module.main()
+
+    assert exit_info.value.code not in (0, None)
+    assert list(committed) == [module.CSV_REPO_ID]
+    out = capsys.readouterr().out.splitlines()
+    assert out[0] == f"FAILED {module.CORPUS_REPO_ID}: RuntimeError: boom"
+    assert out[1].startswith(f"published {module.CSV_REPO_ID}:")

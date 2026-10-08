@@ -18,6 +18,11 @@ what that export wrote and nothing else:
 The ovos-localize-intents README is left untouched: this repo carries no card
 template for it.
 
+Each repo is published on its own: a failure on one is printed and does not
+stop the other, and the script exits non-zero when any repo failed. The corpus
+goes first because it is the one a model trains on. A repo missing on the Hub
+is reported, never created.
+
 An export that holds no CSV row or no corpus row is refused before the Hub is
 contacted: replacing a dataset in full from an empty tree would delete it.
 """
@@ -88,17 +93,25 @@ def main() -> None:
                  "refusing to publish an empty export, which would delete the published datasets.")
 
     api = HfApi(token=token)
-    for repo_id, build in ((CSV_REPO_ID, csv_operations), (CORPUS_REPO_ID, corpus_operations)):
-        operations = build(export_dir, api.list_repo_files(repo_id=repo_id, repo_type="dataset"))
-        api.create_commit(
-            repo_id=repo_id,
-            repo_type="dataset",
-            operations=operations,
-            commit_message=f"chore: refresh from {repository} run {run_id}",
-            commit_description=run_url,
-        )
+    failed = []
+    for repo_id, build in ((CORPUS_REPO_ID, corpus_operations), (CSV_REPO_ID, csv_operations)):
+        try:
+            operations = build(export_dir, api.list_repo_files(repo_id=repo_id, repo_type="dataset"))
+            api.create_commit(
+                repo_id=repo_id,
+                repo_type="dataset",
+                operations=operations,
+                commit_message=f"chore: refresh from {repository} run {run_id}",
+                commit_description=run_url,
+            )
+        except Exception as exc:
+            print(f"FAILED {repo_id}: {type(exc).__name__}: {exc}")
+            failed.append(repo_id)
+            continue
         added = sum(isinstance(op, CommitOperationAdd) for op in operations)
         print(f"published {repo_id}: {added} files added, {len(operations) - added} deleted")
+    if failed:
+        sys.exit(f"failed to publish: {', '.join(failed)}")
 
 
 if __name__ == "__main__":
