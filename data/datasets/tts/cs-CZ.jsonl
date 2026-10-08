@@ -1,11 +1,3 @@
-{"lang": "cs-CZ", "skill": "ovos-ocp-audio-plugin", "dialog": "cant.play.dialog", "text": "jsem si jistý, jak hrát {phrase}"}
-{"lang": "cs-CZ", "skill": "ovos-ocp-audio-plugin", "dialog": "cant.play.dialog", "text": "omlouvám se, nevím, jak hrát {phrase}"}
-{"lang": "cs-CZ", "skill": "ovos-ocp-audio-plugin", "dialog": "just.one.moment.dialog", "text": "dejte mi chvíli, než se podívejte na to"}
-{"lang": "cs-CZ", "skill": "ovos-ocp-audio-plugin", "dialog": "just.one.moment.dialog", "text": "jen jeden okamžik, když se dívám na to"}
-{"lang": "cs-CZ", "skill": "ovos-ocp-audio-plugin", "dialog": "just.one.moment.dialog", "text": "jen druhý"}
-{"lang": "cs-CZ", "skill": "ovos-ocp-audio-plugin", "dialog": "play.what.dialog", "text": "co mám hrát dál?"}
-{"lang": "cs-CZ", "skill": "ovos-ocp-audio-plugin", "dialog": "setup.hints.dialog", "text": "nejsou nakonfigurovány pro přehrávání hudby. můžete nastavit hudební služby, jako je pandora a spotify doma dot mycroft dot ai"}
-{"lang": "cs-CZ", "skill": "ovos-ocp-audio-plugin", "dialog": "setup.hints.dialog", "text": "to zní, jako jste se snaží poslouchat nějakou hudbu, ale ještě nemáte nastavit žádné hudební dovednosti. přejděte na trh.mycroft.ai k instalaci a konfiguraci dovednosti pro hudební službu"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "abbreviation_friday.dialog", "text": "pá"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "abbreviation_monday.dialog", "text": "po"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "abbreviation_saturday.dialog", "text": "so"}
@@ -13,8 +5,10 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "abbreviation_thursday.dialog", "text": "čt"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "abbreviation_tuesday.dialog", "text": "út"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "abbreviation_wednesday.dialog", "text": "st"}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "alarm.dialog", "text": "alarm"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "alarm_ask_time.dialog", "text": "omlouvám se, ale nezachytil jsem čas. prosím, zopakujte to."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "alarm_ocp_request.dialog", "text": "jakou hudbu mám pustit, abych vás probudil?"}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "alert.dialog", "text": "upozornění"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "alert_expiration_past.dialog", "text": "možná jsem se přepočítal, ale daný čas leží v minulosti."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_ask.dialog", "text": "v tuto chvíli máte {event} na {begin}. uložit nějak?"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_duration_ask.dialog", "text": "v tuto chvíli máte {event} mezi {begin} a {end}. uložit nějak?"}
@@ -57,6 +51,7 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "error_no_time.dialog", "text": "neslyšel jsem, na kdy nastavit {kind}. zkuste to prosím znovu."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "error_nothing_to_cancel.dialog", "text": "nepodařilo se mi najít odpovídající upozornění, které bych mohl zrušit."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "error_same_priority.dialog", "text": "priorita je již nastavena na tuto hodnotu."}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "event.dialog", "text": "událost"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "expired_alert.dialog", "text": "vaše upozornění {name} je aktuální."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "expired_audio_alert_intro.dialog", "text": "máte zvukovou připomínku."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "expired_reminder.dialog", "text": "toto je vaše připomínka: {name}."}
@@ -103,6 +98,7 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "please_repeat.dialog", "text": "promiňte, nerozuměl jsem tomu. zopakujte to prosím."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "podcast.dialog", "text": "podcast"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "property_changed_priority.dialog", "text": "priorita byla změněna na {num}."}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "reminder.dialog", "text": "připomínka"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "reminder_ask_time.dialog", "text": "mám vám to připomenout v určitý čas?"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "remove_list_items_ask.dialog", "text": "vypište postupně položky, které by měly být odstraněny."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "repeating_every.dialog", "text": "každý {repeat}"}
@@ -114,9 +110,13 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "stopwatch_delta.dialog", "text": "uplynulý čas je {delta}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "sunday.dialog", "text": "neděle"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "thursday.dialog", "text": "čtvrtek"}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "timer.dialog", "text": "časovač"}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "timer_status.dialog", "text": "do konce časovače {name} zbývá {remaining}."}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "timer_status_none_active.dialog", "text": "nejsou zde žádné aktivní časovače."}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "todo.dialog", "text": "todo"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "todo_item_delete_selection_intro.dialog", "text": "který z nich mám smazat?"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "tuesday.dialog", "text": "úterý"}
+{"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "until.dialog", "text": "do"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "video.dialog", "text": "video"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "wednesday.dialog", "text": "středa"}
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "weekday.dialog", "text": "od pondělí do pátku"}
@@ -124,6 +124,8 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-alerts", "dialog": "whole_day.dialog", "text": "celý den"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "ask_offset.dialog", "text": "za kolik minut nebo hodin?"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "je {date}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "date_future_weekend.dialog", "text": "týden bude od {saturday_date}, do {sunday_date}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "date_last_weekend.dialog", "text": "týden byl od {saturday_date}, do {sunday_date}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "je to {date}, za {num_days} dní"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, za {num_days}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, {num_days} dní od teď"}
@@ -146,6 +148,7 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "právě je {month}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "aktuální měsíc je {month}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "tento měsíc je {month}"}
+{"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "next_leap_year.dialog", "text": "další přestupný rok bude {year}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "je {time}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "nyní je {time}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "bude to ve {time}"}
@@ -168,12 +171,21 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "na duckduckgo jsem nenašel žádnou odpověď."}
 {"lang": "cs-CZ", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "omlouvám se, duckduckgo nevrátil žádný výsledek."}
 {"lang": "cs-CZ", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "na duckduckgo jsem pro to nic nenašel."}
+{"lang": "cs-CZ", "skill": "ovos-skill-fallback-unknown", "dialog": "question.dialog", "text": "nejsem si jist jak odpovědět."}
+{"lang": "cs-CZ", "skill": "ovos-skill-fallback-unknown", "dialog": "question.dialog", "text": "nerozumím, ale každý den se učím nové věci."}
+{"lang": "cs-CZ", "skill": "ovos-skill-fallback-unknown", "dialog": "question.dialog", "text": "nevím jak bych vám s tím pomohl."}
+{"lang": "cs-CZ", "skill": "ovos-skill-fallback-unknown", "dialog": "question.dialog", "text": "omlouvám se, s tím vám nemohu pomoci."}
 {"lang": "cs-CZ", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "můžeš to říci jiným způsobem?"}
 {"lang": "cs-CZ", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "nerozumím, ale každý den se učím nové věci."}
 {"lang": "cs-CZ", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "nerozumím."}
 {"lang": "cs-CZ", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "nevím co to znamená."}
 {"lang": "cs-CZ", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "omlouvám se, nerozumím."}
 {"lang": "cs-CZ", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "prosím, zopakuj to."}
+{"lang": "cs-CZ", "skill": "ovos-skill-fallback-unknown", "dialog": "who_is.dialog", "text": "nejsem si jistý kdo to je."}
+{"lang": "cs-CZ", "skill": "ovos-skill-fallback-unknown", "dialog": "who_is.dialog", "text": "nevím kdo to je."}
+{"lang": "cs-CZ", "skill": "ovos-skill-fallback-unknown", "dialog": "why_is.dialog", "text": "nejsem si jistý jak bych vám s tím mohl pomoci."}
+{"lang": "cs-CZ", "skill": "ovos-skill-fallback-unknown", "dialog": "why_is.dialog", "text": "nejsem si jistý."}
+{"lang": "cs-CZ", "skill": "ovos-skill-fallback-unknown", "dialog": "why_is.dialog", "text": "nevím."}
 {"lang": "cs-CZ", "skill": "ovos-skill-hello-world", "dialog": "hello.dialog", "text": "ahoj!"}
 {"lang": "cs-CZ", "skill": "ovos-skill-hello-world", "dialog": "hello.dialog", "text": "nazdar!"}
 {"lang": "cs-CZ", "skill": "ovos-skill-hello-world", "dialog": "hello.dialog", "text": "nazdárek, příteli!"}
@@ -186,6 +198,10 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-hello-world", "dialog": "hello_world.dialog", "text": "ahoj"}
 {"lang": "cs-CZ", "skill": "ovos-skill-hello-world", "dialog": "hello_world.dialog", "text": "ahoj i vám"}
 {"lang": "cs-CZ", "skill": "ovos-skill-hello-world", "dialog": "hello_world.dialog", "text": "ahoj světe"}
+{"lang": "cs-CZ", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "dost dobře"}
+{"lang": "cs-CZ", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "mám se dobře"}
+{"lang": "cs-CZ", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "mám se velmi dobře"}
+{"lang": "cs-CZ", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "mám se výtečně"}
 {"lang": "cs-CZ", "skill": "ovos-skill-hello-world", "dialog": "welcome.dialog", "text": "kdykoliv."}
 {"lang": "cs-CZ", "skill": "ovos-skill-hello-world", "dialog": "welcome.dialog", "text": "nemáte zač."}
 {"lang": "cs-CZ", "skill": "ovos-skill-hello-world", "dialog": "welcome.dialog", "text": "není problém."}
@@ -1576,7 +1592,9 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "zprávy o počasí teď nemám k dispozici."}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "zprávy o počasí teď nemůžu dostat."}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "celsius.dialog", "text": "celsius"}
+{"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "clear.dialog", "text": "jasná obloha"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "clear_sky.dialog", "text": "jasná obloha"}
+{"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "clouds.dialog", "text": "mraky"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_local.dialog", "text": "ano, dnes bude {condition}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_local.dialog", "text": "vypadá to, že dnes bude {condition}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_location.dialog", "text": "ano, bude to {condition} v {location}"}
@@ -1697,6 +1715,8 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "early_morning.dialog", "text": "brzy ráno"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "east.dialog", "text": "východní"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "evening.dialog", "text": "večer"}
+{"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "fahrenheit.dialog", "text": "fahrenheit"}
+{"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "fog.dialog", "text": "mlha"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "forty_eight_hours_available.dialog", "text": "omlouvám se, ale mám k dispozici pouze 48 hodin hodinových předpovědí."}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "freezing_drizzle_dense_intensity.dialog", "text": "mrznoucí mrholení, hustá intenzita"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "freezing_drizzle_light_intensity.dialog", "text": "mrznoucí mrholení, intenzita světla"}
@@ -1723,6 +1743,7 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "{location} bude přibližně {temperature} stupňů s {condition}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "{location} bude v okolí {temperature} s {condition}"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "{location} počasí v příštích hodinách bude {condition} a {temperature} stupně"}
+{"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "humidity.dialog", "text": "vlhkost"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "inch.dialog", "text": "palec"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "kilometer_per_hour.dialog", "text": "kilometr za hodinu"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "location_not_found.dialog", "text": "město {location} nemám v paměti. zkuste to prosím znovu"}
@@ -1744,16 +1765,19 @@
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "overnight.dialog", "text": "přes noc"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "partly_cloudy.dialog", "text": "částečně zataženo"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "percentage_number.dialog", "text": "{number} procent"}
+{"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "rain.dialog", "text": "déšť"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "seven_days_available.dialog", "text": "mohu vám sdělit předpověď na příštích sedm dní."}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "seven_days_available.dialog", "text": "mám k dispozici předpověď počasí na sedm dní."}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "slight_rain.dialog", "text": "mírný déšť"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "slight_rain_showers.dialog", "text": "mírné dešťové přeháňky"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "slight_snow_fall.dialog", "text": "mírné sněžení"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "slight_snow_showers.dialog", "text": "mírné sněhové přeháňky"}
+{"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "snow.dialog", "text": "sníh"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "snow_grains.dialog", "text": "sněhová zrna"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "south.dialog", "text": "jih"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "southeast.dialog", "text": "jihovýchod"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "southwest.dialog", "text": "jihozápad"}
+{"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "thunderstorm.dialog", "text": "bouřka"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "thunderstorm_with_heavy_hail.dialog", "text": "bouřka se silným krupobitím"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "thunderstorm_with_slight_hail.dialog", "text": "bouřka s mírným krupobitím"}
 {"lang": "cs-CZ", "skill": "ovos-skill-weather", "dialog": "violent_rain_showers.dialog", "text": "prudké dešťové přeháňky"}

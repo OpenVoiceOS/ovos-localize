@@ -1,11 +1,3 @@
-{"lang": "sv-FI", "skill": "ovos-ocp-audio-plugin", "dialog": "cant.play.dialog", "text": "jag är inte säker på hur man spelar {phrase}"}
-{"lang": "sv-FI", "skill": "ovos-ocp-audio-plugin", "dialog": "cant.play.dialog", "text": "förlåt, jag vet inte hur man spelar {phrase}"}
-{"lang": "sv-FI", "skill": "ovos-ocp-audio-plugin", "dialog": "just.one.moment.dialog", "text": "bara ett ögonblick medan jag letar efter det"}
-{"lang": "sv-FI", "skill": "ovos-ocp-audio-plugin", "dialog": "just.one.moment.dialog", "text": "bara en sekund"}
-{"lang": "sv-FI", "skill": "ovos-ocp-audio-plugin", "dialog": "just.one.moment.dialog", "text": "ge mig ett ögonblick för att kontrollera det"}
-{"lang": "sv-FI", "skill": "ovos-ocp-audio-plugin", "dialog": "play.what.dialog", "text": "vad ska jag spela nästa?"}
-{"lang": "sv-FI", "skill": "ovos-ocp-audio-plugin", "dialog": "setup.hints.dialog", "text": "jag är inte konfigurerad för att spela musik ännu. du kan ställa in musiktjänster som pandora och spotify hemma dot mycroft dot ai"}
-{"lang": "sv-FI", "skill": "ovos-ocp-audio-plugin", "dialog": "setup.hints.dialog", "text": "det låter som om du försöker lyssna på lite musik, men du har ännu inte skapat några musikkunskaper. vänligen gå till market.mycroft.ai för att installera och konfigurera en musiktjänst skicklighet"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "abbreviation_friday.dialog", "text": "fre"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "abbreviation_monday.dialog", "text": "mån"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "abbreviation_saturday.dialog", "text": "lör"}
@@ -13,8 +5,10 @@
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "abbreviation_thursday.dialog", "text": "tors"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "abbreviation_tuesday.dialog", "text": "tis"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "abbreviation_wednesday.dialog", "text": "ons"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "alarm.dialog", "text": "hälytys"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "alarm_ask_time.dialog", "text": "anteeksi, en saanut aikaa kiinni. toistakaa."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "alarm_ocp_request.dialog", "text": "mitä musiikkia minun pitäisi soittaa herättääkseni sinut?"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "alert.dialog", "text": "hälytys"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "alert_expiration_past.dialog", "text": "ehkä laskin väärin, mutta annettu aika on menneisyydessä."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_ask.dialog", "text": "tällä hetkellä sinulla on {event} kello {begin}. tallenna kuitenkin?"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_duration_ask.dialog", "text": "tällä hetkellä sinulla on {event} kello {begin} ja {end} välissä. tallenna kuitenkin?"}
@@ -57,6 +51,7 @@
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "error_no_time.dialog", "text": "en kuullut aikaa, johon {kind}:n voisi asettaa. yritä uudelleen."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "error_nothing_to_cancel.dialog", "text": "en löytänyt vastaavaa hälytystä peruutettavaksi."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "error_same_priority.dialog", "text": "prioriteetti on jo asetettu tähän arvoon."}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "event.dialog", "text": "tapahtuma"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "expired_alert.dialog", "text": "{name}-hälytys on päällä."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "expired_audio_alert_intro.dialog", "text": "sinulla on äänimuistutus."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "expired_reminder.dialog", "text": "tämä on muistutuksesi: {name}."}
@@ -103,6 +98,7 @@
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "please_repeat.dialog", "text": "anteeksi, en saanut siitä kiinni. toistakaa."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "podcast.dialog", "text": "podcast"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "property_changed_priority.dialog", "text": "prioriteetti muutettiin arvoon {num}."}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "reminder.dialog", "text": "muistutus"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "reminder_ask_time.dialog", "text": "pitäisikö minun muistuttaa sinua tiettynä ajankohtana?"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "remove_list_items_ask.dialog", "text": "luettele yksi kerrallaan ne kohteet, jotka olisi poistettava."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "repeating_every.dialog", "text": "jokainen {repeat}"}
@@ -114,9 +110,13 @@
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "stopwatch_delta.dialog", "text": "kulunut aika on {delta}"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "sunday.dialog", "text": "sunnuntai"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "thursday.dialog", "text": "torstai"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "timer.dialog", "text": "ajastin"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "timer_status.dialog", "text": "{name}-ajastinta on jäljellä {remaining}."}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "timer_status_none_active.dialog", "text": "aktiivisia ajastimia ei ole."}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "todo.dialog", "text": "todo"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "todo_item_delete_selection_intro.dialog", "text": "kumpi pitäisi poistaa?"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "tuesday.dialog", "text": "tiistai"}
+{"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "until.dialog", "text": "kunnes"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "video.dialog", "text": "video"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "wednesday.dialog", "text": "keskiviikko"}
 {"lang": "sv-FI", "skill": "ovos-skill-alerts", "dialog": "weekday.dialog", "text": "maanantaista perjantaihin"}
@@ -125,6 +125,8 @@
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "ask_offset.dialog", "text": "om hur många minuter eller timmar?"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "det är {date}"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "idag är det {date}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "date_future_weekend.dialog", "text": "nästa helg kommer vara {saturday_date}, till {sunday_date}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "date_last_weekend.dialog", "text": "föregående helg var {saturday_date}, till {sunday_date}"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "det kommer vara {date}, om {num_days}"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "det är {date}, om {num_days}"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, om {num_days}"}
@@ -149,6 +151,7 @@
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "det är {month} just nu"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "den nuvarande månaden är {month}"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "denna månad är {month}"}
+{"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "next_leap_year.dialog", "text": "nästa skottår är {year}"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "den är {time}"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "för närvarande {time}"}
 {"lang": "sv-FI", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "klockan är {time}"}
@@ -225,7 +228,9 @@
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "väder rapporter är för närvarande inte tillgängliga."}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "väder rapporter är för närvarande otillgängliga."}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "celsius.dialog", "text": "celsius"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "clear.dialog", "text": "en klar himmel"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "clear_sky.dialog", "text": "klar himmel"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "clouds.dialog", "text": "moln"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_local.dialog", "text": "ja, det kommer att vara {condition} idag"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_location.dialog", "text": "ja det kommer att vara {condition} i {location}"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "current_condition_not_expected_local.dialog", "text": "nej, prognosen visar på {condition} i dag."}
@@ -343,6 +348,8 @@
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "early_morning.dialog", "text": "tidig morgon"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "east.dialog", "text": "öst"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "evening.dialog", "text": "kväll"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "fahrenheit.dialog", "text": "fahrenheit"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "fog.dialog", "text": "dimma"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "forty_eight_hours_available.dialog", "text": "tyvärr har jag bara 48 timmars prognosdata per timme."}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "freezing_drizzle_dense_intensity.dialog", "text": "freezing drizzle, tät intensitet"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "freezing_drizzle_light_intensity.dialog", "text": "freezing drizzle, ljusintensitet"}
@@ -371,6 +378,7 @@
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "{location} kommer att vara runt {temperature} med {condition}"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "{location} kommer att vara ungefär {temperature} grader med {condition}"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "{location} vädret i de närmaste timmarna kommer att vara {condition} och {temperature} grader."}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "humidity.dialog", "text": "luftfuktighet"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "inch.dialog", "text": "tum"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "kilometer_per_hour.dialog", "text": "kilometer per timme"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "location_not_found.dialog", "text": "jag kan inte hitta en stad som heter {location}. försök igen"}
@@ -392,16 +400,19 @@
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "overnight.dialog", "text": "över natten"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "partly_cloudy.dialog", "text": "delvis molnigt"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "percentage_number.dialog", "text": "{number} procent"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "rain.dialog", "text": "regn"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "seven_days_available.dialog", "text": "jag har sju dagars väderprognoser tillgängliga."}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "seven_days_available.dialog", "text": "jag kan ge dig en prognos för de kommande sju dagarna."}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "slight_rain.dialog", "text": "lite regn"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "slight_rain_showers.dialog", "text": "små regnbyar"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "slight_snow_fall.dialog", "text": "lätt snöfall"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "slight_snow_showers.dialog", "text": "små snöbyar"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "snow.dialog", "text": "snö"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "snow_grains.dialog", "text": "snökorn"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "south.dialog", "text": "söder"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "southeast.dialog", "text": "sydost"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "southwest.dialog", "text": "sydväst"}
+{"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "thunderstorm.dialog", "text": "åskväder"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "thunderstorm_with_heavy_hail.dialog", "text": "åskväder med kraftigt hagel"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "thunderstorm_with_slight_hail.dialog", "text": "åskväder med lätt hagel"}
 {"lang": "sv-FI", "skill": "ovos-skill-weather", "dialog": "violent_rain_showers.dialog", "text": "våldsamma regnskurar"}

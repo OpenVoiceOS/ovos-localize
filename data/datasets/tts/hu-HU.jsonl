@@ -1,11 +1,3 @@
-{"lang": "hu-HU", "skill": "ovos-ocp-audio-plugin", "dialog": "cant.play.dialog", "text": "nem vagyok biztos benne, hogyan kell játszani {phrase}"}
-{"lang": "hu-HU", "skill": "ovos-ocp-audio-plugin", "dialog": "cant.play.dialog", "text": "sajnálom, nem tudom, hogyan kell játszani {phrase}"}
-{"lang": "hu-HU", "skill": "ovos-ocp-audio-plugin", "dialog": "just.one.moment.dialog", "text": "csak egy pillanat, amikor keresem ezt"}
-{"lang": "hu-HU", "skill": "ovos-ocp-audio-plugin", "dialog": "just.one.moment.dialog", "text": "csak egy második"}
-{"lang": "hu-HU", "skill": "ovos-ocp-audio-plugin", "dialog": "just.one.moment.dialog", "text": "adj nekem egy pillanatot, hogy ellenőrizzem ezt"}
-{"lang": "hu-HU", "skill": "ovos-ocp-audio-plugin", "dialog": "play.what.dialog", "text": "mit kell játszani legközelebb?"}
-{"lang": "hu-HU", "skill": "ovos-ocp-audio-plugin", "dialog": "setup.hints.dialog", "text": "még nem vagyok konfigurálva zenét játszani. beállíthatja a zenei szolgáltatásokat, például a pandora és a spotify otthoni dot mycroft dot ai"}
-{"lang": "hu-HU", "skill": "ovos-ocp-audio-plugin", "dialog": "setup.hints.dialog", "text": "úgy hangzik, mintha megpróbálnál zenét hallgatni, de még nem hoztál létre zenei készségeket. kérjük, menjen piacra.mycroft.ai telepíteni és konfigurálni egy zenei szolgáltatási készséget"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "abbreviation_friday.dialog", "text": "p"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "abbreviation_monday.dialog", "text": "h"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "abbreviation_saturday.dialog", "text": "szo"}
@@ -13,8 +5,10 @@
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "abbreviation_thursday.dialog", "text": "cs"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "abbreviation_tuesday.dialog", "text": "k"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "abbreviation_wednesday.dialog", "text": "sze"}
+{"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "alarm.dialog", "text": "riasztás"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "alarm_ask_time.dialog", "text": "bocsánat, nem tudtam az időt. kérem, ismételje meg."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "alarm_ocp_request.dialog", "text": "milyen zenét játsszak, hogy felébredj?"}
+{"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "alert.dialog", "text": "riasztás"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "alert_expiration_past.dialog", "text": "lehet, hogy elszámoltam magam, de az adott időpont a múltban van."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_ask.dialog", "text": "ebben az időben van {event} ekkor {begin}. mentés egyébként?"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_duration_ask.dialog", "text": "jelenleg {event} van {begin} és {end} között. mentés egyébként?"}
@@ -57,6 +51,7 @@
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "error_no_time.dialog", "text": "nem hallottam, hogy mikorra kell beállítani az {kind}-t. kérem, próbálja meg újra."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "error_nothing_to_cancel.dialog", "text": "nem találtam megfelelő riasztást a törléshez."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "error_same_priority.dialog", "text": "a prioritás már erre az értékre van állítva."}
+{"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "event.dialog", "text": "esemény"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "expired_alert.dialog", "text": "a {name} riasztásod megtörtént."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "expired_audio_alert_intro.dialog", "text": "van egy hangos emlékeztető."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "expired_reminder.dialog", "text": "ez az ön emlékeztetője: {name}."}
@@ -103,6 +98,7 @@
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "please_repeat.dialog", "text": "elnézést, nem értettem. kérem, ismételje meg."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "podcast.dialog", "text": "podcast"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "property_changed_priority.dialog", "text": "a prioritás erre módosult: {num}."}
+{"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "reminder.dialog", "text": "emlékeztető"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "reminder_ask_time.dialog", "text": "emlékeztesselek egy bizonyos időpontban?"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "remove_list_items_ask.dialog", "text": "sorolja fel egyenként azokat a tételeket, amelyeket el kell távolítani."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "repeating_every.dialog", "text": "minden {repeat}"}
@@ -114,9 +110,13 @@
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "stopwatch_delta.dialog", "text": "az eltelt idő {delta}"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "sunday.dialog", "text": "vasárnap"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "thursday.dialog", "text": "csütörtök"}
+{"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "timer.dialog", "text": "időzítő"}
+{"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "timer_status.dialog", "text": "a {name} időzítőből még {remaining} van hátra."}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "timer_status_none_active.dialog", "text": "nincsenek aktív időzítők."}
+{"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "todo.dialog", "text": "todo"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "todo_item_delete_selection_intro.dialog", "text": "melyiket kell törölnöm?"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "tuesday.dialog", "text": "kedd"}
+{"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "until.dialog", "text": "amíg"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "video.dialog", "text": "videó"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "wednesday.dialog", "text": "szerda"}
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "weekday.dialog", "text": "hétfőtől péntekig"}
@@ -124,6 +124,8 @@
 {"lang": "hu-HU", "skill": "ovos-skill-alerts", "dialog": "whole_day.dialog", "text": "egész nap"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "ask_offset.dialog", "text": "hány perc vagy óra múlva?"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "ez {date}"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "date_future_weekend.dialog", "text": "a következő hétvégén {saturday_date} lesz, hogy {sunday_date}"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "date_last_weekend.dialog", "text": "a múlt hétvégén {saturday_date} volt, hogy {sunday_date}"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "ez a {date}, a {num_days}-ben"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "ez {date}, {num_days} mostantól kezdve"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, in {num_days}"}
@@ -147,6 +149,7 @@
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "most {month} van"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "a jelenlegi hónap {month}"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "ez a hónap {month}"}
+{"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "next_leap_year.dialog", "text": "a következő szökőév {year}"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "jelenleg {time}"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "{time} van"}
 {"lang": "hu-HU", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "ez lesz {time}"}
@@ -169,6 +172,10 @@
 {"lang": "hu-HU", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "nem találtam választ a duckduckgon."}
 {"lang": "hu-HU", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "sajnálom, a duckduckgo nem adott vissza eredményt."}
 {"lang": "hu-HU", "skill": "ovos-skill-ddg", "dialog": "no_answer.dialog", "text": "a duckduckgo nem talált semmit erre vonatkozóan."}
+{"lang": "hu-HU", "skill": "ovos-skill-fallback-unknown", "dialog": "question.dialog", "text": "ezt nem értem, de minden nap tanulok valami újat."}
+{"lang": "hu-HU", "skill": "ovos-skill-fallback-unknown", "dialog": "question.dialog", "text": "nem tudom hogyan segíthetnék ebben."}
+{"lang": "hu-HU", "skill": "ovos-skill-fallback-unknown", "dialog": "question.dialog", "text": "nem tudom mit lehet válaszolni erre."}
+{"lang": "hu-HU", "skill": "ovos-skill-fallback-unknown", "dialog": "question.dialog", "text": "sajnálom, ebben nem segíthetek."}
 {"lang": "hu-HU", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "ezt nem értem, de minden nap tanulok valami újat."}
 {"lang": "hu-HU", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "kérlek ezt fogalmazd át!"}
 {"lang": "hu-HU", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "mondd ezt másképpen!"}
@@ -178,6 +185,13 @@
 {"lang": "hu-HU", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "sajnos ez nem világos nekem."}
 {"lang": "hu-HU", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "sajnos ezt nem értem."}
 {"lang": "hu-HU", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "sajnálom, nem értem."}
+{"lang": "hu-HU", "skill": "ovos-skill-fallback-unknown", "dialog": "who_is.dialog", "text": "nem igazán tudom hogy ki az."}
+{"lang": "hu-HU", "skill": "ovos-skill-fallback-unknown", "dialog": "who_is.dialog", "text": "nem tudom hogy ki az."}
+{"lang": "hu-HU", "skill": "ovos-skill-fallback-unknown", "dialog": "why_is.dialog", "text": "nem igazán tudom."}
+{"lang": "hu-HU", "skill": "ovos-skill-fallback-unknown", "dialog": "why_is.dialog", "text": "nem tudom hogyan segíthetnék ebben."}
+{"lang": "hu-HU", "skill": "ovos-skill-fallback-unknown", "dialog": "why_is.dialog", "text": "nem tudom."}
+{"lang": "hu-HU", "skill": "ovos-skill-fallback-unknown", "dialog": "why_is.dialog", "text": "nem vagyok biztos benne, de igyekszem tanulni."}
+{"lang": "hu-HU", "skill": "ovos-skill-fallback-unknown", "dialog": "why_is.dialog", "text": "nem vagyok biztos benne."}
 {"lang": "hu-HU", "skill": "ovos-skill-hello-world", "dialog": "hello.dialog", "text": "helló újra!"}
 {"lang": "hu-HU", "skill": "ovos-skill-hello-world", "dialog": "hello.dialog", "text": "helló!"}
 {"lang": "hu-HU", "skill": "ovos-skill-hello-world", "dialog": "hello.dialog", "text": "helló, barátom!"}
@@ -191,6 +205,12 @@
 {"lang": "hu-HU", "skill": "ovos-skill-hello-world", "dialog": "hello_world.dialog", "text": "helló"}
 {"lang": "hu-HU", "skill": "ovos-skill-hello-world", "dialog": "hello_world.dialog", "text": "helló világ"}
 {"lang": "hu-HU", "skill": "ovos-skill-hello-world", "dialog": "hello_world.dialog", "text": "üdv neked is"}
+{"lang": "hu-HU", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "egész jól"}
+{"lang": "hu-HU", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "jól vagyok"}
+{"lang": "hu-HU", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "kiválóan"}
+{"lang": "hu-HU", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "lehetnék jobban is"}
+{"lang": "hu-HU", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "megvagyok"}
+{"lang": "hu-HU", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "nagyon jól vagyok"}
 {"lang": "hu-HU", "skill": "ovos-skill-hello-world", "dialog": "welcome.dialog", "text": "kérem."}
 {"lang": "hu-HU", "skill": "ovos-skill-hello-world", "dialog": "welcome.dialog", "text": "máskor is."}
 {"lang": "hu-HU", "skill": "ovos-skill-hello-world", "dialog": "welcome.dialog", "text": "szívesen."}
@@ -1541,7 +1561,9 @@
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "sajnálom. mostantól nem tudok időjárásjelentést kapni."}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "sajnálom. mostanában nem tudok időjárásjelentést kapni."}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "celsius.dialog", "text": "celsius"}
+{"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "clear.dialog", "text": "tiszta égbolt"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "clear_sky.dialog", "text": "tiszta égbolt"}
+{"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "clouds.dialog", "text": "felhők"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_local.dialog", "text": "igen, ez lesz ma {condition}"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_local.dialog", "text": "úgy néz ki, hogy ma lesz {condition}"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_location.dialog", "text": "a {location}-ban úgy néz ki, hogy ma lesz {condition}"}
@@ -1663,6 +1685,8 @@
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "early_morning.dialog", "text": "kora reggel"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "east.dialog", "text": "kelet"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "evening.dialog", "text": "este"}
+{"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "fahrenheit.dialog", "text": "fahrenheit"}
+{"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "fog.dialog", "text": "köd"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "forty_eight_hours_available.dialog", "text": "sajnálom, csak 48 órás előrejelzési adatokkal rendelkezem."}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "freezing_drizzle_dense_intensity.dialog", "text": "fagyos csepergés, sűrű intenzitás"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "freezing_drizzle_light_intensity.dialog", "text": "fagyasztó zápor, fényintenzitás"}
@@ -1689,6 +1713,7 @@
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "{location} az {temperature} körül lesz {condition}-vel együtt"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "{location} időjárás a következő néhány órában {condition} és {temperature} fok lesz"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "{location} körülbelül {temperature} fok lesz {condition}-vel {condition}"}
+{"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "humidity.dialog", "text": "páratartalom"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "inch.dialog", "text": "hüvelyk"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "kilometer_per_hour.dialog", "text": "kilométer óránként"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "location_not_found.dialog", "text": "a város {location} nem szerepel a memóriámban. kérem próbálja meg újra"}
@@ -1710,16 +1735,19 @@
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "overnight.dialog", "text": "éjszakai"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "partly_cloudy.dialog", "text": "részben felhős"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "percentage_number.dialog", "text": "{number} százalék"}
+{"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "rain.dialog", "text": "eső"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "seven_days_available.dialog", "text": "hét napra szóló időjárás-előrejelzés áll rendelkezésemre."}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "seven_days_available.dialog", "text": "meg tudom mondani a következő hét napra vonatkozó előrejelzést."}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "slight_rain.dialog", "text": "enyhe eső"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "slight_rain_showers.dialog", "text": "enyhe záporok"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "slight_snow_fall.dialog", "text": "enyhe hóesés"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "slight_snow_showers.dialog", "text": "enyhe hózáporok"}
+{"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "snow.dialog", "text": "hó"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "snow_grains.dialog", "text": "hószemcsék"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "south.dialog", "text": "dél"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "southeast.dialog", "text": "délkelet"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "southwest.dialog", "text": "délnyugat"}
+{"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "thunderstorm.dialog", "text": "zivatar"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "thunderstorm_with_heavy_hail.dialog", "text": "zivatar heves jégesővel"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "thunderstorm_with_slight_hail.dialog", "text": "zivatar enyhe jégesővel"}
 {"lang": "hu-HU", "skill": "ovos-skill-weather", "dialog": "violent_rain_showers.dialog", "text": "erőszakos záporok"}

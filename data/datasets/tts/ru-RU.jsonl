@@ -1,11 +1,3 @@
-{"lang": "ru-RU", "skill": "ovos-ocp-audio-plugin", "dialog": "cant.play.dialog", "text": "я не знаю, как играть {phrase}"}
-{"lang": "ru-RU", "skill": "ovos-ocp-audio-plugin", "dialog": "cant.play.dialog", "text": "простите, я не знаю, как играть {phrase}"}
-{"lang": "ru-RU", "skill": "ovos-ocp-audio-plugin", "dialog": "just.one.moment.dialog", "text": "только секунду"}
-{"lang": "ru-RU", "skill": "ovos-ocp-audio-plugin", "dialog": "just.one.moment.dialog", "text": "всего один момент, пока я ищу"}
-{"lang": "ru-RU", "skill": "ovos-ocp-audio-plugin", "dialog": "just.one.moment.dialog", "text": "дай мне минутку, чтобы проверить"}
-{"lang": "ru-RU", "skill": "ovos-ocp-audio-plugin", "dialog": "play.what.dialog", "text": "что мне делать дальше?"}
-{"lang": "ru-RU", "skill": "ovos-ocp-audio-plugin", "dialog": "setup.hints.dialog", "text": "звучит так, будто вы пытаетесь послушать музыку, но вы еще не установили никаких музыкальных навыков. пожалуйста, перейдите на market.mycroft.ai, чтобы установить и настроить навык обслуживания музыки"}
-{"lang": "ru-RU", "skill": "ovos-ocp-audio-plugin", "dialog": "setup.hints.dialog", "text": "я еще не настроен играть музыку. вы можете настроить музыкальные услуги, такие как pandora и spotify дома точка mycroft dot ai"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "abbreviation_friday.dialog", "text": "пт"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "abbreviation_monday.dialog", "text": "пн"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "abbreviation_saturday.dialog", "text": "сб"}
@@ -13,8 +5,10 @@
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "abbreviation_thursday.dialog", "text": "чт"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "abbreviation_tuesday.dialog", "text": "вт"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "abbreviation_wednesday.dialog", "text": "ср"}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "alarm.dialog", "text": "сигнализация"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "alarm_ask_time.dialog", "text": "извините, не смог уловить время. пожалуйста, повторите."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "alarm_ocp_request.dialog", "text": "какую музыку включить, чтобы разбудить тебя?"}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "alert.dialog", "text": "оповещение"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "alert_expiration_past.dialog", "text": "может быть, я ошибся в расчетах, но данное время осталось в прошлом."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_ask.dialog", "text": "в это время вы получили {event} в {begin}. как-нибудь сохранить?"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "alert_overlapping_duration_ask.dialog", "text": "в это время между {begin} и {end} находится {event}. как-нибудь сохранить?"}
@@ -57,6 +51,7 @@
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "error_no_time.dialog", "text": "я не услышал время, на которое нужно установить {kind}. пожалуйста, попробуйте еще раз."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "error_nothing_to_cancel.dialog", "text": "я не смог найти подходящее оповещение для отмены."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "error_same_priority.dialog", "text": "приоритет уже установлен на это значение."}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "event.dialog", "text": "мероприятие"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "expired_alert.dialog", "text": "ваше предупреждение {name} выполнено."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "expired_audio_alert_intro.dialog", "text": "у вас есть звуковое напоминание."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "expired_reminder.dialog", "text": "это ваше напоминание: {name}."}
@@ -103,6 +98,7 @@
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "please_repeat.dialog", "text": "извините, я не расслышал. повторите, пожалуйста."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "podcast.dialog", "text": "подкаст"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "property_changed_priority.dialog", "text": "приоритет изменён на {num}."}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "reminder.dialog", "text": "напоминание"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "reminder_ask_time.dialog", "text": "нужно ли напоминать в определенное время?"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "remove_list_items_ask.dialog", "text": "перечислите по очереди элементы, которые необходимо удалить."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "repeating_every.dialog", "text": "каждый {repeat}"}
@@ -114,9 +110,13 @@
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "stopwatch_delta.dialog", "text": "прошедшее время составляет {delta}"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "sunday.dialog", "text": "воскресенье"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "thursday.dialog", "text": "четверг"}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "timer.dialog", "text": "таймер"}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "timer_status.dialog", "text": "на таймере {name} осталось {remaining}."}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "timer_status_none_active.dialog", "text": "активные таймеры отсутствуют."}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "todo.dialog", "text": "todo"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "todo_item_delete_selection_intro.dialog", "text": "какой из них следует удалить?"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "tuesday.dialog", "text": "вторник"}
+{"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "until.dialog", "text": "до"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "video.dialog", "text": "видео"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "wednesday.dialog", "text": "среда"}
 {"lang": "ru-RU", "skill": "ovos-skill-alerts", "dialog": "weekday.dialog", "text": "понедельник - пятница"}
@@ -160,6 +160,7 @@
 {"lang": "ru-RU", "skill": "ovos-skill-camera", "dialog": "get_ready.dialog", "text": "скажи \"сыр\"."}
 {"lang": "ru-RU", "skill": "ovos-skill-camera", "dialog": "picture.dialog", "text": "я люблю фотографировать."}
 {"lang": "ru-RU", "skill": "ovos-skill-camera", "dialog": "picture.dialog", "text": "снимок сделан"}
+{"lang": "ru-RU", "skill": "ovos-skill-camera", "dialog": "picture_location.dialog", "text": "картинки сохранены для {path}"}
 {"lang": "ru-RU", "skill": "ovos-skill-cmd", "dialog": "no_scripts.dialog", "text": "у меня нет никаких скриптов"}
 {"lang": "ru-RU", "skill": "ovos-skill-cmd", "dialog": "no_scripts.dialog", "text": "команды пока не установлены."}
 {"lang": "ru-RU", "skill": "ovos-skill-cmd", "dialog": "running.dialog", "text": "прогонка {alias} команда"}
@@ -171,10 +172,113 @@
 {"lang": "ru-RU", "skill": "ovos-skill-color-picker", "dialog": "report_color_by_name.dialog", "text": "{color_name} имеет гекс-коэффициент {hex_code} . в р.г.б. это красный {red_value} , зеленый {green_value} , синий {blue_value}"}
 {"lang": "ru-RU", "skill": "ovos-skill-color-picker", "dialog": "report_color_by_rgb_name_known.dialog", "text": "{color_name} имеет гекс-коэффициент {hex_code}"}
 {"lang": "ru-RU", "skill": "ovos-skill-color-picker", "dialog": "report_color_by_rgb_name_not_known.dialog", "text": "этот цвет имеет гекс-значение: {hex_code}"}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "confucius.dialog", "text": "конфуций был китайским философом и политиком весеннего и осеннего периодов."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "confucius.dialog", "text": "философия конфуция, известная также как конфуцианство, подчеркивает личную и государственную мораль, правильность социальных отношений, справедливость, доброту и искренность."}
 {"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "lifespan.dialog", "text": "конфуций родился в 551 году до н. э. и умер 479 году до н. э."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "путешествие в тысячу миль начинается с одного шага."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "человек, который не планирует долгий путь, найдет проблемы прямо у своей двери."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "не стыдись ошибок и поэтому делай их преступлениями."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "прежде чем отомстить, выкопай две могилы."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "лучше бриллиант с изъяном, чем без гальки."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "по своей природе мужчины почти одинаковы; на практике они становятся разными друг от друга."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "по трем методам мы можем научиться мудрости: во-первых, через размышление, которое является самым благородным; во-вторых, подражая, что проще всего; и, в-третьих, благодаря опыту, что является самым горьким."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "не желайте, чтобы дела шли быстро, не смотрите на небольшие преимущества, не стремитесь к тому, чтобы дела шли быстро, а стремитесь к тому, чтобы делать их тщательно; смотря на небольшие преимущества, не делайте больших дел."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "не используйте пушки, чтобы убить комара."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "всё имеет красоту, но не все это видят."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "прекрасные слова и изобличающая внешность редко ассоциируются с истинной добродетелью."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "забудь о травмах, никогда не забывай о доброте."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "нет у тебя друзей, которые не были бы такими же, как ты."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "он не проповедует то, что делает, пока не творит то, что проповедует."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "тот, кто осуществляет правительство посредством своей добродетели, может сравниться с северной полярной звездой, которая сохраняет свое место и все звезды поворачиваются к ней."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "тот, кто учится, но не думает, - в убытке; кто думает, но не учит, тот в большой опасности."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "тот, кто просто знает правильные принципы, не равен тому, кто их любит."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "кто говорит без скромности, тому будет трудно сделать свои слова добрыми."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "тот, кто не будет экономить, должен будет страдать."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "тот, кто желает заслужить благо других, уже обезопасил себя."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "тот, с кем ни клевета, которая постепенно впитывается в ум, ни слова, которые пугаются, как рана в плоти, не могут называться успешными, может называться умным."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "небо означает быть единым с богом."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "держи верность и искренность в качестве первых принципов."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "я не тот, кто родился в знании; я люблю древность и искренне ищу ее там."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "мне не нужен друг, который улыбается, когда я улыбаюсь, который плачет, когда плачу о своей тени в бассейне, может сделать лучше."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "я не видел человека, который любил бы добродетель, и человека, который возненавидел бы то, что не было добродеянием."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "я слышу и забываю, я вижу и верю, я понимаю и понимаю."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "если я иду с двумя другими мужчинами, то каждый из них будет моим учителем, я выберу хорошие точки одного и подражаю им, и плохие точки другого, и исправлю их в себе."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "если человек не подумает о том, что далеко, то он найдёт близкое горе."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "если человек отвлекает свой разум от любви к красоте и искренне относится к любви добродетельных, если, служа родителям, он может делать все, что в его силах; если, служа своему принцу, он может посвятить свою жизнь; если в общении со своими друзьями его слова искренни, хотя люди говорят, что он не научился, то я непременно скажу, что он это сделал."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "если мы не знаем жизни, как мы можем знать смерть"}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "если вы думаете год, посадите семя; если десять лет, посадите деревья; если 100 лет, научите людей."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "невежество - это ночь разума, но ночь без луны и звезды."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "я хочу быть благочестивым, и, воистину, благодеяние близко."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "неважно, насколько медленно ты идёшь, пока ты не остановишься."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "это человек делает истину великой, а не правда делает человека великим."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "нельзя учить других, которые не могут учить свою собственную семью."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "только самый мудрый и глупый не может измениться."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "учись так, будто никогда не сможешь управлять им; держи его так, будто боишься потерять его."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "обучение без мысли - это потеря работы; мысль без обучения опасна."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "рассмотрение небольших преимуществ не позволяет добиться больших успехов."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "человек, стоящий на холме с открытым ртом, будет долго ждать, пока зайдет жареная утка."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "природа мужчин одинакова, их привычки далеко расходятся."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "только самые мудрые и глупые люди никогда не меняются."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "наша величайшая слава не в том, чтобы никогда не падать, а в том, чтобы вставать каждый раз."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "воздаяние справедливо воздастся злом и добродеянием."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "уважай себя, и другие будут уважать тебя."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "молчание - это настоящий друг, который никогда не предает."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "изучите прошлое, если определите будущее."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "осторожные редко ошибаются."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "решительный ученый и благочестивый человек не будут стремиться жить за счет причинения вреда их добродетели, они даже пожертвуют своей жизнью, чтобы сохранить свою добродетель до конца."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "суть знания состоит в том, чтобы, имея его, применять его, а не иметь, признаться в своем невежестве."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "ожидания жизни зависят от усердия механика, который совершенствовал бы свою работу, должен сначала совершенствовать свои инструменты."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "проступки превосходящего человека похожи на солнце и луну; они имеют свои недостатки, и каждый видит их; они изменяются, и все смотрят на них."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "фирма, стойкая, простая и скромная близки к добродетели."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "человек добродетели с трудом преодолевает свое первое дело, а успех — только последующее рассмотрение."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "человек, который ради наживы думает о праведности, который, видя опасность, готов отказаться от своей жизни, и который не забывает старого соглашения, каким бы далеким оно ни было, такой человек может считаться полным человеком."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "человек, который двигает гору, начинает с того, что уносит маленькие камни."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "целью высшего человека является правда."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "люди могут быть вынуждены следовать по пути действий, но они не могут понять его."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "совершенствование своего собственного потенциала является фундаментальной основой любого прогресса и любого нравственного развития."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "ученый, который дорожит любовью к комфорту, не годится для того, чтобы считаться ученым."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "высочайший человек действует до того, как он говорит, и после этого говорит согласно его поступкам."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "превосходитель не может быть известен в мелочах, но на него могут быть возложены большие заботы; маленький человек не может быть доверен великим заботам, но он может быть известен в мелочах."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "превосходитель в речи своей скромен, но превосходен в делах своих."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "высочайший человек удовлетворен и состоит из людей; злой человек всегда полон страданий."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "превосходитель делает все, чтобы преодолеть свой первый интерес, только позже."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "повелитель, отдыхая в безопасности, не забывает, что опасность может возникнуть, когда в состоянии безопасности он не забывает о возможности разрушения, когда все устроено, он не забывает, что может произойти расстройство, и поэтому его личность не подвергается опасности, и его штаты и все их кланы сохранены."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "высший человек... не ставит свой разум ни на что, ни на что, что правильно, он последует за ним."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "колесо удачи постоянно вращается, и кто может сказать себе, что сегодня я буду самым верхом."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "есть три вещи, которые нужно остерегаться в жизни: когда человек молод, пусть остерегается его страстей; когда он среднего возраста от страстей своих; и когда стар, особенно жадности."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "есть три вещи, против которых наблюдает в молодости... веселее, когда он сильный... неуязвимый... когда он старый... жадный."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "они должны измениться, кто был бы постоянным в счастье и мудрости."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "они часто должны измениться, кто был бы постоянным в счастье или мудрости."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "вещи, которые делаются, нет нужды говорить о... о том, что было в прошлом, нет нужды винить."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "при любых обстоятельствах иметь пять дел — это совершенная добродетель; эти пять вещей — гравитация, щедрость души, искренность, искренность и доброта."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "любить учеба близко к мудрости, поступать с силой близко к благоволению, и остерегаться позора близок к стойкости. кто знает три вещи, тот знает три вещи."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "обижаться - это ничто, если вы не помните этого."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "пройти дальше - это так же неправильно, как и забыть об этом."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "если вы подаете пример правды, то кто посмеет остаться неверным?"}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "знать, что кто-то знает то, что он знает, и знать, что кто-то не знает того, что он не знает, есть истинная мудрость."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "увидеть то, что правильно, а не делать, - это отсутствие мужества, или принципа."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "добродетельность для человека больше, чем вода или огонь, я видел, как люди умирают от того, что ходят по воде и огне, но я никогда не видел, чтобы человек умирал от того, чтобы поступать праведно."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "добродетели не остаются в одиночестве, у того, кто их практикует, будут соседи."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "мы чувствуем больше боли, чтобы убедить других в том, что мы счастливы, чем в том, что пытаемся думать об этом сами."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "богатство и степень - то, чего желают люди, но они не одержимы, если только их не постигнет добро."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "что это за звук одного хлопания рукой?"}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "человечество стремится только к самому себе; то, что ищет маленький человек, — в других."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "то, что ты не хочешь делать с собой, не делай с другими."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "когда знание человека достаточно, и добродетели его недостаточно для того, чтобы иметь, что бы он ни приобрел, он опять проиграет."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "когда гнев поднимается, подумайте о последствиях."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "когда мы видим достойных людей, мы должны думать о том, чтобы уравнять их; когда мы видим людей противоположного характера, мы должны поворачиваться внутрь и исследовать себя."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "а когда вы будете ослушаться аллаха, то не оставляйте их в покое."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "если вы знаете что-либо, то держитесь за то, что знаете. а если вы ничего не знаете, то это - знание."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "куда бы вы ни пошли, идите со всем сердцем."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "пока ты не можешь служить людям, как ты можешь служить духам мертвых... хотя ты не знаешь жизни, как ты можешь знать о смерти"}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "с черным рисом для еды, с водой для питья, и с рукой для подушки, у меня все еще есть радость среди всего этого; богатство и честь, приобретенные неправедными, для меня, как плавающее облако."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "без знакомства с правилами приличия невозможно установить характер."}
+{"lang": "ru-RU", "skill": "ovos-skill-confucius-quotes", "dialog": "quote.dialog", "text": "не зная силы слов, невозможно узнать людей."}
 {"lang": "ru-RU", "skill": "ovos-skill-count", "dialog": "failed_extract_number.dialog", "text": "я не понял, до какого числа нужно считать"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "ask_offset.dialog", "text": "через сколько минут или часов?"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "это {date}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_future_weekend.dialog", "text": "следующие выходные будут {saturday_date}, до {sunday_date}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_last_weekend.dialog", "text": "в прошлые выходные был {saturday_date}, to {sunday_date}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, {num_days} с этого момента"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, в {num_days}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "теперь это {date}, {num_days}."}
@@ -195,6 +299,7 @@
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "сейчас {month}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "текущий месяц — {month}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "этот месяц — {month}"}
+{"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "next_leap_year.dialog", "text": "следующий високосный год {year}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "в настоящее время {time}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "это {time}"}
 {"lang": "ru-RU", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "это будет {time}"}
@@ -240,6 +345,10 @@
 {"lang": "ru-RU", "skill": "ovos-skill-dictation", "dialog": "start.dialog", "text": "начался диктование"}
 {"lang": "ru-RU", "skill": "ovos-skill-dictation", "dialog": "start.dialog", "text": "ладно, я готов к диктации."}
 {"lang": "ru-RU", "skill": "ovos-skill-dictation", "dialog": "stop.dialog", "text": "диктация прекратилась"}
+{"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "question.dialog", "text": "извините, я не могу вам с этим помочь."}
+{"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "question.dialog", "text": "я не знаю, как вам помочь с этим."}
+{"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "question.dialog", "text": "я не знаю, как на это ответить."}
+{"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "question.dialog", "text": "я не понимаю, но я изучаю новые вещи каждый день."}
 {"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "извините, я не понимаю."}
 {"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "извините, я не улавливаю."}
 {"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "не могу утверждать, что понимаю вас."}
@@ -248,6 +357,108 @@
 {"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "я не знаю, что это значит."}
 {"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "я не понимаю, но я изучаю новые вещи каждый день."}
 {"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "unknown.dialog", "text": "я не понимаю."}
+{"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "who_is.dialog", "text": "я не знаю, кто это."}
+{"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "who_is.dialog", "text": "я не уверен, кто это."}
+{"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "why_is.dialog", "text": "я не знаю, как вам помочь с этим."}
+{"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "why_is.dialog", "text": "я не знаю."}
+{"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "why_is.dialog", "text": "я не совсем уверен."}
+{"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "why_is.dialog", "text": "я не уверен, но я постараюсь научиться."}
+{"lang": "ru-RU", "skill": "ovos-skill-fallback-unknown", "dialog": "why_is.dialog", "text": "я не уверен."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "хорошая книга всегда провокация."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "счастливый человек не чувствует нужды выражать себя."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "политик либо оппортунист, либо вообще не политик."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "возможное определение философии: искусство схватить быка за рога."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "против добра и зла - против притязаний обоих - наша единственная защита - это ирония."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "все законы, в конечном счете, преследуют одну и ту же цель: защищать покупку и продажу, и это все объясняет."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "всегда настаивай на своем праве передумать: это первое, что откажут тебе твои враги."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "у них всегда добрые намерения, они могут служить алиби."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "любая политика, которую мы сами не формируем, будет направлена против нас."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "любая власть - это злоупотребление властью."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "внешность не обманывает - это внешность."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "быть преследуемым уже победа."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "остерегайтесь тех, кто проповедует идею жертвоприношения: им нужен кто-то, кто пожертвует собой ради них."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "книги не заменяют жизни, но и жизнь тоже не заменяют."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "сравни, и ты начнешь понимать."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "следует поощрять отказ от определенных форм мира по соображениям совести, причем не только против войны, но и, в особенности, против некоторых форм мира."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "не принимай поражение, пока не поймёшь, как оно тебе поможет."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "не проси понимания, даже у своего лучшего друга: в лучшем случае, они будут жалеть тебя, как и всех остальных."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "не обманывайте себя: власть меняет руки, но она редко колеблется."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "не используй свое невежество в качестве аргумента."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "проблема европы состоит в том, что по-прежнему существуют миллионы якобинов, которых нужно цивилизовать."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "все подчинены кому-то."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "ничего не ожидайте и ничего не бойтесь, и вы будете идеальны."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "провал не импровизирован."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "немногие показания уводят тебя от жизни, многие приближают тебя к ней."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "чтобы что-то нас сдвинуло, в нем должно быть определенное количество вульгарности."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "свобода — это привычка, и ее нелегко приобрести."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "дайте по ошибке аксиоматическую формулу, и в конце концов она будет казаться правдой."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "хорошие манеры включают в себя знание того, когда уместно быть грубым."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "взрослеть - значит смириться со старостью."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "не больше тех, кто считает себя виновным, чем те, которые абсолютно необходимы."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "надежда - это всего лишь способ обмануть тело."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "поздняя любовь больше не любовь, это одержимость."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "я ненавижу непримиримость, потому что это заразно."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "возможно, я ошибаюсь, даже если так, я должен рискнуть."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "во всяком случае, используй высокомерие, чтобы скрыть свою глупость."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "если мы когда-нибудь правы, то только на полпути."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "если тебе заплатят, то ты существуешь."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "если вы посмотрите внимательно, вы увидите, что никто не заслуживает вашей зависти."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "в каком-то смысле ложь заставляет нас признать истину."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "во многих вещах, но особенно в любви, опыт часто является недостатком. вот почему первая любовь запоминается как лучшая - это лучшее."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "мне очень грустно слушать, как говорит умный человек, и обнаруживать, что меня не интересует то, что они говорят."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "неважно, что меня обманули, но что действительно жалко, так это знать, что меня обманывают."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "молодые люди обязаны систематически пугать стариков, хотя бы чтобы они не засыпали полностью."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "редко формулировать истину - по крайней мере, определенные виды правды, - без того, чтобы это не звучало нагло."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "это обескураживает: у всех нас одни и те же недостатки."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "когда я один, я могу думать о других."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "давайте не будем обманывать себя: честность - очень дорогая роскошь."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "любовь — это не любовь, а умение."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "но было бы идеально любить их, не переставая считать их своим врагом."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "заниматься любовью ничего не решает, но это помогает пройти время."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "многие раны от любви - это всего лишь раны от любви к себе."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "математики - это своего рода обманные поэты, которые, на самом деле, пытаются поэзировать единственную возможную поэзию."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "мои противоречия - это мои надежды."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "никого не следует обманывать: \"доброе утро\" уже является литературой."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "часто мы добиваемся успеха - любого рода успеха, даже самого абсурдного, - потому что не можем быть счастливыми."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "только смерть совершенна - и даже тогда, не всегда."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "только со смертью ты сможешь освободиться от себя."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "возможно, мы никогда не были так искренни, как когда притворялись искренними."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "игра всегда означает проигрыш - по крайней мере время."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "пруст скучный, прости меня."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "некоторые глупы из-за ленивости."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "некоторые комплименты - это настоящие нападения."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "то, что мы более смертны, чем кресло меня лично раздражает."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "побежденные быстро выходят из моды."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "я не думаю, что фанатизм - это очень приятная точка зрения."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "осуществление свободы — это либертинизм."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "боги помогают дерзким только ради юмора."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "самое большое человеческое творение - равносторонний треугольник."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "моралист - человек с разочарованным опытом других мужчин."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "чем больше я думаю об этом, тем больше я верю, что быть самим собой - это форма невроза - кстати, довольно неудобная."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "единственное преимущество того, что ты правишь, это то, что ты не правишь."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "единственное удовольствие, которое никогда не разочаровывает, это неожиданное."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "единственный серьезный способ прочитать - это перечитать."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "пророк, более чем предсказание, провоцирует."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "истинной целью войны является не последующий за ней мир, а еще одна война."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "есть правители, для которых правление — это не что иное, как акт мести."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "есть очень плохие способы делать добро."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "существует опасность: в конце концов слишком много напоминаете себя."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "нет истинной любви без прикосновения мерзости в самых тонких эпизодах."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "нет ничего более здорового в моральном отношении, чем признать ту часть истины, которую мы никогда не сможем отстранить от своих врагов."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "они ненавидят меня, что не имеет значения, но они заставляют меня ненавидеть их, и это имеет значение."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "они кричат, чтобы узнать, смогут ли они заставить нас замолчать."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "те, кто у власти, хотят, чтобы их подданные были покорными, и мы должны начать с этой очевидной истины."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "исправлять и расширяться: это культура."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "жить - значит предать."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "правда должна быть преувеличена, чтобы быть правдоподобной."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "мы не те, кем не хотим быть."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "мы дышим, как в палеолите."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "мы должны быть аккуратными, особенно когда выбираем вражду."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "мы никогда не должны утомляться повторять: все свободы взаимосвязаны."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "мы пишем с нашими врагами: либо для того, чтобы сделать из них новообращенных, либо для того, чтобы развращать их."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "теология освобождения должна освободиться от теологии."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "время, и, в самом деле, это то, что происходит."}
+{"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "fuster_quotes.dialog", "text": "когда страх больше не невиновн, это больше не страх - это трусость."}
 {"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "lifespan.dialog", "text": "джоан фустер родилась 23 ноября 1922 года и умерла 21 июня 1992 года."}
 {"lang": "ru-RU", "skill": "ovos-skill-fuster-quotes", "dialog": "who_was_joan_fuster.dialog", "text": "джоан фустер был валенсианским эссеистом, поэтом и философом, известным своими влиятельными трудами в области культуры и самобытности каталоники."}
 {"lang": "ru-RU", "skill": "ovos-skill-ggwave", "dialog": "ggwave_already_disabled.dialog", "text": "звуковые qr-коды уже отключены"}
@@ -266,6 +477,12 @@
 {"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "hello_world.dialog", "text": "здравствуй"}
 {"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "hello_world.dialog", "text": "и тебе привет"}
 {"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "hello_world.dialog", "text": "привет, мир"}
+{"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "довольно неплохо"}
+{"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "могло быть и получше"}
+{"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "неплохо"}
+{"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "у меня все замечательно"}
+{"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "у меня все очень хорошо"}
+{"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "у меня все хорошо"}
 {"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "welcome.dialog", "text": "без проблем"}
 {"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "welcome.dialog", "text": "всегда пожалуйста"}
 {"lang": "ru-RU", "skill": "ovos-skill-hello-world", "dialog": "welcome.dialog", "text": "мое удовольствие"}
@@ -1823,6 +2040,10 @@
 {"lang": "ru-RU", "skill": "ovos-skill-iss-location", "dialog": "number.dialog", "text": "число людей на борту космической станции: {number}"}
 {"lang": "ru-RU", "skill": "ovos-skill-iss-location", "dialog": "visible_for.dialog", "text": "её будет видно в течение {duration}"}
 {"lang": "ru-RU", "skill": "ovos-skill-iss-location", "dialog": "visible_for.dialog", "text": "вы сможете видеть её в течение {duration}"}
+{"lang": "ru-RU", "skill": "ovos-skill-iss-location", "dialog": "who.dialog", "text": "на борту международной космической станции находятся: {people}"}
+{"lang": "ru-RU", "skill": "ovos-skill-iss-location", "dialog": "who.dialog", "text": "сейчас на орбите, на борту космической станции: {people}"}
+{"lang": "ru-RU", "skill": "ovos-skill-iss-location", "dialog": "who.dialog", "text": "на борту мкс: {people}"}
+{"lang": "ru-RU", "skill": "ovos-skill-iss-location", "dialog": "who.dialog", "text": "на борту космической станции: {people}"}
 {"lang": "ru-RU", "skill": "ovos-skill-mark1-ctrl", "dialog": "brightness_not_found.dialog", "text": "какой уровень яркости или процент вы хотите?"}
 {"lang": "ru-RU", "skill": "ovos-skill-mark1-ctrl", "dialog": "brightness_not_found.dialog", "text": "скажите мне процент или уровень яркости для моего лица"}
 {"lang": "ru-RU", "skill": "ovos-skill-mark1-ctrl", "dialog": "brightness_not_found_final.dialog", "text": "извините, я не понимаю эту яркость."}
@@ -1850,12 +2071,38 @@
 {"lang": "ru-RU", "skill": "ovos-skill-mark1-ctrl", "dialog": "set_default_eye_color.dialog", "text": "хочешь сделать этот цвет глаз цветом по умолчанию?"}
 {"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "fallback_api.dialog", "text": "падение назад к по умолчанию a p i"}
 {"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "genre_movie_search.dialog", "text": "фильмы в жанре {genre}:"}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "genre_tv_search.dialog", "text": "телешоу в жанре {genre}:"}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "genre_tv_search.dialog", "text": "тв-шоу в жанре {genre}:"}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_cast.dialog", "text": "вот гипс. {movie} ; {actorlist} и {lastactor}"}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_cast.dialog", "text": "следующие люди звезды в фильме, {movie}, {actorlist} и {lastactor}"}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_cast.dialog", "text": "в фильме играют следующие люди: {movie}, {actorlist} и {lastactor}"}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_cast.dialog", "text": "в фильме участвуют следующие люди: {movie}, {actorlist} и {lastactor}"}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_description.dialog", "text": "фильм {movie} это об этом."}
 {"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_description_error.dialog", "text": "я не могу найти информацию о фильме {movie}."}
 {"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_description_error.dialog", "text": "похоже, я не могу найти информацию о фильме {movie}."}
 {"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_genre_multiple.dialog", "text": "люди считают, что фильм - {genrelist} или {genrelistlast}"}
 {"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_genre_multiple.dialog", "text": "фильм можно найти в одном из жанров; {genrelist} и {genrelistlast}"}
 {"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_genre_multiple.dialog", "text": "флик можно найти в одном из жанров; {genrelist} и {genrelistlast}"}
 {"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_genre_single.dialog", "text": "фильм {movie} можно было бы считать a {genre}"}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_popular.dialog", "text": "{popularlist} и {lastmovie} прямо сейчас."}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_recommendations.dialog", "text": "я рекомендую фильмы. {movielist} и {lastmovie} , если тебе нравится фильм {movie}"}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_recommendations.dialog", "text": "я рекомендую фильмы. {movielist} и {lastmovie} , если тебе нравится флик {movie}"}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_recommendations.dialog", "text": "фильмы {movielist} и {lastmovie} хороший выбор, если тебе нравится фильм. {movie}"}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_recommendations.dialog", "text": "фильмы {movielist} и {lastmovie} хороший выбор, если тебе нравится флик. {movie}"}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_runtime.dialog", "text": "фильм {movie} , бегает для {runtime} минут."}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_runtime.dialog", "text": "флик {movie} , бегает для {runtime} минут."}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_runtime.dialog", "text": "смотреть {movie} ; вы можете ожидать {runtime} за несколько минут до того, как у тебя будет перерыв в ванной."}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_top.dialog", "text": "это лучшие фильмы. {toplist} , и {lastmovie}"}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_top.dialog", "text": "это лучшие фильмы, которые сейчас играют; {toplist} , и {lastmovie}"}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_top.dialog", "text": "это самые популярные фильмы. {toplist} , и {lastmovie}"}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_top.dialog", "text": "это самые популярные фильмы, которые сейчас играют; {toplist} , и {lastmovie}"}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_top.dialog", "text": "{toplist} , и {lastmovie} сейчас самые лучшие фильмы."}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_top.dialog", "text": "{toplist} , и {lastmovie} сейчас играют лучшие фильмы."}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_top.dialog", "text": "{toplist} , и {lastmovie} это самые популярные фильмы."}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_top.dialog", "text": "{toplist} , и {lastmovie} это самые популярные фильмы, которые сейчас играют."}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_year.dialog", "text": "фильм {movie} был сделан {year}"}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_year.dialog", "text": "флик {movie} был сделан {year}"}
+{"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_year.dialog", "text": "фильм {movie} был выпущен {year}"}
 {"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_year_error.dialog", "text": "я не могу найти дату выхода фильма. {movie}"}
 {"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "movie_year_error.dialog", "text": "я не могу найти дату выхода для фильма. {movie}"}
 {"lang": "ru-RU", "skill": "ovos-skill-moviemaster", "dialog": "no_api.dialog", "text": "вы должны войти в свой ключ tm d b a p i дома точки microft точки a для использования мастера кино"}
@@ -1891,8 +2138,12 @@
 {"lang": "ru-RU", "skill": "ovos-skill-parrot", "dialog": "parrot_stop.dialog", "text": "отключить режим попугая"}
 {"lang": "ru-RU", "skill": "ovos-skill-parrot", "dialog": "please_repeat.dialog", "text": "можешь повторить?"}
 {"lang": "ru-RU", "skill": "ovos-skill-parrot", "dialog": "please_repeat.dialog", "text": "что ты сказал?"}
+{"lang": "ru-RU", "skill": "ovos-skill-parrot", "dialog": "repeat_stt.dialog", "text": "ты только что сказал: {stt}"}
+{"lang": "ru-RU", "skill": "ovos-skill-parrot", "dialog": "repeat_stt.dialog", "text": "ты сказал, {stt}"}
 {"lang": "ru-RU", "skill": "ovos-skill-parrot", "dialog": "repeat_stt_old.dialog", "text": "не так давно ты сказал: {stt}"}
 {"lang": "ru-RU", "skill": "ovos-skill-parrot", "dialog": "repeat_stt_old.dialog", "text": "последнее, что ты сказал - {stt}"}
+{"lang": "ru-RU", "skill": "ovos-skill-parrot", "dialog": "repeat_tts.dialog", "text": "я только что сказал: {tts}"}
+{"lang": "ru-RU", "skill": "ovos-skill-parrot", "dialog": "repeat_tts.dialog", "text": "я сказал: {tts}"}
 {"lang": "ru-RU", "skill": "ovos-skill-personal", "dialog": "what_am_i.dialog", "text": "я интеллектуальная часть программного обеспечения для общения с машинами"}
 {"lang": "ru-RU", "skill": "ovos-skill-personal", "dialog": "what_am_i.dialog", "text": "я искусственный интеллект с открытым исходным кодом."}
 {"lang": "ru-RU", "skill": "ovos-skill-personal", "dialog": "when_was_i_born.dialog", "text": "{year} год моего рождения"}
@@ -1902,13 +2153,17 @@
 {"lang": "ru-RU", "skill": "ovos-skill-personal", "dialog": "who_am_i.dialog", "text": "я {name}, искусственный интеллект с открытым исходным кодом"}
 {"lang": "ru-RU", "skill": "ovos-skill-personal", "dialog": "who_made_me.dialog", "text": "все в сообществе и команде майкрофт"}
 {"lang": "ru-RU", "skill": "ovos-skill-personal", "dialog": "who_made_me.dialog", "text": "замечательные сообщества и команды майкрофт"}
+{"lang": "ru-RU", "skill": "ovos-skill-pokepedia", "dialog": "battle.dialog", "text": "{pokemon_a} ..это.. {type_a} тип, в то время как {pokemon_b} ..это.. {type_b} победителем будет тип. {winner} !"}
 {"lang": "ru-RU", "skill": "ovos-skill-pokepedia", "dialog": "error_no_pokemon.dialog", "text": "ты не сказал мне, о каком покемоне хочешь знать!"}
 {"lang": "ru-RU", "skill": "ovos-skill-pokepedia", "dialog": "error_not_found.dialog", "text": "я не мог найти этот покемон прямо сейчас."}
+{"lang": "ru-RU", "skill": "ovos-skill-pokepedia", "dialog": "moves.dialog", "text": "{pokemon_name} знает эти движения: {moves} !"}
+{"lang": "ru-RU", "skill": "ovos-skill-pokepedia", "dialog": "pokemon.dialog", "text": "{pokemon_name} номер {pokedex_number} в покедексе, это {types} тип \"покемон\"! {attack_desc} очень. {speed_desc} !"}
 {"lang": "ru-RU", "skill": "ovos-skill-pokepedia", "dialog": "pokemon_type.dialog", "text": "{pokemon_name} ..это.. {types} тип. {explanation} !"}
 {"lang": "ru-RU", "skill": "ovos-skill-screenshot", "dialog": "screenshot_delayed.dialog", "text": "принимать скриншот {delay} секунды"}
 {"lang": "ru-RU", "skill": "ovos-skill-screenshot", "dialog": "screenshot_delayed.dialog", "text": "{delay} секунды и скажем \"сыр\""}
 {"lang": "ru-RU", "skill": "ovos-skill-screenshot", "dialog": "screenshot_failed.dialog", "text": "я не смог взять скриншот."}
 {"lang": "ru-RU", "skill": "ovos-skill-screenshot", "dialog": "screenshot_failed.dialog", "text": "ошибка скриншота"}
+{"lang": "ru-RU", "skill": "ovos-skill-screenshot", "dialog": "screenshot_location.dialog", "text": "скриншоты сохранены {path}"}
 {"lang": "ru-RU", "skill": "ovos-skill-screenshot", "dialog": "screenshot_taken.dialog", "text": "скриншот принят"}
 {"lang": "ru-RU", "skill": "ovos-skill-speedtest", "dialog": "error.dialog", "text": "произошла ошибка, не удалось проверить скорость."}
 {"lang": "ru-RU", "skill": "ovos-skill-speedtest", "dialog": "ping.dialog", "text": "пинг составляет {ping} миллисекунд"}
@@ -1960,7 +2215,9 @@
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "сейчас я не могу получить прогноз погоды."}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "сообщения о погоде в настоящее время недоступны."}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "celsius.dialog", "text": "цельсию"}
+{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "clear.dialog", "text": "чистое небо"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "clear_sky.dialog", "text": "ясное небо"}
+{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "clouds.dialog", "text": "облака"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_local.dialog", "text": "да, сегодня будет {condition}."}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_local.dialog", "text": "похоже, что сегодня будет {condition}"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_location.dialog", "text": "в {location}, похоже, сегодня будет {condition}."}
@@ -2078,6 +2335,8 @@
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "early_morning.dialog", "text": "раннее утро"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "east.dialog", "text": "восток"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "evening.dialog", "text": "вечер"}
+{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "fahrenheit.dialog", "text": "фаренгейт"}
+{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "fog.dialog", "text": "туман"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "forty_eight_hours_available.dialog", "text": "извините, у меня есть только 48 часов данных почасового прогноза."}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "freezing_drizzle_dense_intensity.dialog", "text": "моросящий дождь, плотная интенсивность"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "freezing_drizzle_light_intensity.dialog", "text": "моросящий дождь, интенсивность освещения"}
@@ -2104,6 +2363,7 @@
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "{location} будет примерно {temperature} градусов с {condition}"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "{location} погода в ближайшие несколько часов будет {condition} и {temperature} градуса"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "позже будет {condition} в {location}, с температурой около {temperature}."}
+{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "humidity.dialog", "text": "влажность"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "inch.dialog", "text": "дюйм"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "kilometer_per_hour.dialog", "text": "километр в час"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "location_not_found.dialog", "text": "города {location} нет в моих банках памяти. пожалуйста, попробуйте еще раз"}
@@ -2125,16 +2385,19 @@
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "overnight.dialog", "text": "на ночь"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "partly_cloudy.dialog", "text": "частично облачно"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "percentage_number.dialog", "text": "{number} процентов"}
+{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "rain.dialog", "text": "дождь"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "seven_days_available.dialog", "text": "у меня есть семь дней прогнозируемой погоды."}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "seven_days_available.dialog", "text": "я могу сказать вам прогноз на ближайшие семь дней."}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "slight_rain.dialog", "text": "небольшой дождь"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "slight_rain_showers.dialog", "text": "небольшие ливневые дожди"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "slight_snow_fall.dialog", "text": "небольшой снегопад"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "slight_snow_showers.dialog", "text": "небольшие снежные дожди"}
+{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "snow.dialog", "text": "снег"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "snow_grains.dialog", "text": "снежные зерна"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "south.dialog", "text": "юг"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "southeast.dialog", "text": "юго-восток"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "southwest.dialog", "text": "юго-запад"}
+{"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "thunderstorm.dialog", "text": "гроза"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "thunderstorm_with_heavy_hail.dialog", "text": "гроза с крупным градом"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "thunderstorm_with_slight_hail.dialog", "text": "гроза с небольшим градом"}
 {"lang": "ru-RU", "skill": "ovos-skill-weather", "dialog": "violent_rain_showers.dialog", "text": "ливневые дожди"}
@@ -2158,6 +2421,8 @@
 {"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "searching.dialog", "text": "проверяю, что в википедии сказано про {query}"}
 {"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "thats_all.dialog", "text": "это всё, что мне удалось найти"}
 {"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "thats_all.dialog", "text": "это всё, что я знаю"}
+{"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "wikiroulette.dialog", "text": "запускаю вики-рулетку"}
+{"lang": "ru-RU", "skill": "ovos-skill-wikipedia", "dialog": "wikiroulette.dialog", "text": "рулетка знаний активирована"}
 {"lang": "ru-RU", "skill": "ovos-skill-wolfie", "dialog": "no_answer.dialog", "text": "волк не знает ответа"}
 {"lang": "ru-RU", "skill": "ovos-skill-word-of-the-day", "dialog": "no_word_history.dialog", "text": "у меня нет записанного слова за этот день"}
 {"lang": "ru-RU", "skill": "ovos-skill-word-of-the-day", "dialog": "no_word_history.dialog", "text": "я знаю только слова тех дней, когда меня спрашивали"}

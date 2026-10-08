@@ -1,5 +1,7 @@
 {"lang": "fi-FI", "skill": "ovos-skill-date-time", "dialog": "ask_offset.dialog", "text": "kuinka monta minuuttia tai tuntia?"}
 {"lang": "fi-FI", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "se on {date}"}
+{"lang": "fi-FI", "skill": "ovos-skill-date-time", "dialog": "date_future_weekend.dialog", "text": "ensi viikonloppuna on {saturday_date}, {sunday_date}"}
+{"lang": "fi-FI", "skill": "ovos-skill-date-time", "dialog": "date_last_weekend.dialog", "text": "viime viikonloppuna oli {saturday_date}, {sunday_date}"}
 {"lang": "fi-FI", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "se on {date}, {num_days} tästä eteenpäin."}
 {"lang": "fi-FI", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "se on {date}, {num_days}:ssä"}
 {"lang": "fi-FI", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, in {num_days}"}
@@ -24,6 +26,7 @@
 {"lang": "fi-FI", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "nyt on {month}"}
 {"lang": "fi-FI", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "nykyinen kuukausi on {month}"}
 {"lang": "fi-FI", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "tämä kuukausi on {month}"}
+{"lang": "fi-FI", "skill": "ovos-skill-date-time", "dialog": "next_leap_year.dialog", "text": "seuraava karkausvuosi on {year}"}
 {"lang": "fi-FI", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "se on {time}"}
 {"lang": "fi-FI", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "tällä hetkellä {time}"}
 {"lang": "fi-FI", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "se on {time}"}
@@ -76,7 +79,9 @@
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "sääennusteita ei ole tällä hetkellä saatavilla ."}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "säätiedotuksia ei ole tällä hetkellä saatavilla ."}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "celsius.dialog", "text": "celsius"}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "clear.dialog", "text": "kirkas taivas"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "clear_sky.dialog", "text": "kirkas taivas"}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "clouds.dialog", "text": "pilvet"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_local.dialog", "text": "kyllä, se on tänään {condition}."}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_local.dialog", "text": "näyttää siltä, että tänään on {condition}"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_location.dialog", "text": "kyllä, se on {condition} {location}:ssä."}
@@ -199,6 +204,8 @@
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "early_morning.dialog", "text": "aikaisin aamulla"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "east.dialog", "text": "itä"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "evening.dialog", "text": "ilta"}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "fahrenheit.dialog", "text": "fahrenheit"}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "fog.dialog", "text": "sumu"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "forty_eight_hours_available.dialog", "text": "anteeksi, minulla on vain 48 tunnin tuntikohtaiset ennustetiedot."}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "freezing_drizzle_dense_intensity.dialog", "text": "jäätävä tihkusade, tiheä intensiteetti"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "freezing_drizzle_light_intensity.dialog", "text": "freezing drizzle, valon voimakkuus"}
@@ -225,6 +232,7 @@
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "{location} on noin {temperature} astetta {condition}:n kanssa."}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "{location} on {temperature}:n ja {condition}:n ympärillä."}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "{location} sää lähitunteina on {condition} ja {temperature} astetta."}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "humidity.dialog", "text": "kosteus"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "inch.dialog", "text": "tuumaa"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "kilometer_per_hour.dialog", "text": "kilometriä tunnissa"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "location_not_found.dialog", "text": "en löydä kaupunkia nimeltä {location}. yritä uudelleen"}
@@ -246,16 +254,19 @@
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "overnight.dialog", "text": "yön yli"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "partly_cloudy.dialog", "text": "osittain pilvistä"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "percentage_number.dialog", "text": "{number} prosenttia"}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "rain.dialog", "text": "sade"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "seven_days_available.dialog", "text": "minulla on käytettävissä seitsemän päivän sääennuste."}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "seven_days_available.dialog", "text": "voin kertoa teille ennusteen seuraavaksi seitsemäksi päiväksi."}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "slight_rain.dialog", "text": "hieman sadetta"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "slight_rain_showers.dialog", "text": "lieviä sadekuuroja"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "slight_snow_fall.dialog", "text": "lievä lumisade"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "slight_snow_showers.dialog", "text": "lieviä lumisateita"}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "snow.dialog", "text": "lumi"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "snow_grains.dialog", "text": "lumijyvät"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "south.dialog", "text": "etelä"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "southeast.dialog", "text": "kaakko"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "southwest.dialog", "text": "lounaaseen"}
+{"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "thunderstorm.dialog", "text": "ukkonen"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "thunderstorm_with_heavy_hail.dialog", "text": "ukkosmyrsky, jossa raekuuroja"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "thunderstorm_with_slight_hail.dialog", "text": "ukkosmyrsky ja lievää rakeita"}
 {"lang": "fi-FI", "skill": "ovos-skill-weather", "dialog": "violent_rain_showers.dialog", "text": "voimakkaat sadekuurot"}

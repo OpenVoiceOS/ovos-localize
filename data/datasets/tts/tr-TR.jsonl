@@ -1,13 +1,7 @@
-{"lang": "tr-TR", "skill": "ovos-ocp-audio-plugin", "dialog": "cant.play.dialog", "text": "üzgünüm, nasıl oynayacağımı bilmiyorum {phrase}"}
-{"lang": "tr-TR", "skill": "ovos-ocp-audio-plugin", "dialog": "cant.play.dialog", "text": "nasıl oynanır emin değilim {phrase}"}
-{"lang": "tr-TR", "skill": "ovos-ocp-audio-plugin", "dialog": "just.one.moment.dialog", "text": "sadece bir an, bunun için baktığımda"}
-{"lang": "tr-TR", "skill": "ovos-ocp-audio-plugin", "dialog": "just.one.moment.dialog", "text": "sadece ikinci"}
-{"lang": "tr-TR", "skill": "ovos-ocp-audio-plugin", "dialog": "just.one.moment.dialog", "text": "bana bunu kontrol etmek için bir an verin"}
-{"lang": "tr-TR", "skill": "ovos-ocp-audio-plugin", "dialog": "play.what.dialog", "text": "bir dahaki ne oynamalıyım?"}
-{"lang": "tr-TR", "skill": "ovos-ocp-audio-plugin", "dialog": "setup.hints.dialog", "text": "bazı müzik dinlemek için çalışıyor gibi geliyor, ancak henüz herhangi bir müzik becerisini ayarlamadınız. lütfen piyasa.mycroft.ai'ye müzik hizmeti becerisi yüklemek ve yapılandırmak için gidin"}
-{"lang": "tr-TR", "skill": "ovos-ocp-audio-plugin", "dialog": "setup.hints.dialog", "text": "henüz müzik oynamak için yapılandırılmış değilim. evde pandora ve spotify gibi müzik servislerini yapılandırabilirsiniz, benimkroft bir ai"}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "dialog": "ask_offset.dialog", "text": "kaç dakika ya da saat sonra?"}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "dialog": "date.dialog", "text": "bu {date}"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "dialog": "date_future_weekend.dialog", "text": "sonraki hafta sonu {saturday_date} olacak, {sunday_date}"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "dialog": "date_last_weekend.dialog", "text": "geçen hafta sonu {saturday_date} idi, {sunday_date}"}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "bu {date}, {num_days}'de"}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "{date}, {num_days} içinde"}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "dialog": "date_relative_future.dialog", "text": "şu andan itibaren {date}, {num_days}"}
@@ -28,6 +22,7 @@
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "şu an {month}"}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "mevcut ay {month}"}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "dialog": "month_current.dialog", "text": "bu ay {month}"}
+{"lang": "tr-TR", "skill": "ovos-skill-date-time", "dialog": "next_leap_year.dialog", "text": "bir sonraki artık yıl {year}"}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "bu {time}"}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "dialog": "time_current.dialog", "text": "şu anda {time}"}
 {"lang": "tr-TR", "skill": "ovos-skill-date-time", "dialog": "time_future.dialog", "text": "bu, {time} olacaktır"}
@@ -61,6 +56,12 @@
 {"lang": "tr-TR", "skill": "ovos-skill-hello-world", "dialog": "hello_world.dialog", "text": "merhaba"}
 {"lang": "tr-TR", "skill": "ovos-skill-hello-world", "dialog": "hello_world.dialog", "text": "merhaba dünya"}
 {"lang": "tr-TR", "skill": "ovos-skill-hello-world", "dialog": "hello_world.dialog", "text": "sana da selam"}
+{"lang": "tr-TR", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "ben mükemmelim"}
+{"lang": "tr-TR", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "ben çok iyiyim"}
+{"lang": "tr-TR", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "daha iyi olabilir"}
+{"lang": "tr-TR", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "fena değil"}
+{"lang": "tr-TR", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "iyiyim"}
+{"lang": "tr-TR", "skill": "ovos-skill-hello-world", "dialog": "how_are_you.dialog", "text": "çok iyi"}
 {"lang": "tr-TR", "skill": "ovos-skill-hello-world", "dialog": "welcome.dialog", "text": "hizmet verdiğim için mutluyum."}
 {"lang": "tr-TR", "skill": "ovos-skill-hello-world", "dialog": "welcome.dialog", "text": "rica ederim."}
 {"lang": "tr-TR", "skill": "ovos-skill-hello-world", "dialog": "welcome.dialog", "text": "sorun değil."}
@@ -107,7 +108,9 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "şu anda hava durumu tahminlerini alamıyorum."}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "cant_get_forecast.dialog", "text": "şu anda hava raporlarını alamıyorum."}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "celsius.dialog", "text": "santigrat"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "clear.dialog", "text": "açık bir gökyüzü"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "clear_sky.dialog", "text": "açık gökyüzü"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "clouds.dialog", "text": "bulutlar"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_local.dialog", "text": "bugün {condition} olacak gibi görünüyor"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_local.dialog", "text": "evet, bugün {condition} olacak"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_condition_expected_location.dialog", "text": "evet, {location}'de {condition} olacak"}
@@ -223,6 +226,8 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "early_morning.dialog", "text": "sabahın erken saatleri"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "east.dialog", "text": "doğu"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "evening.dialog", "text": "akşam"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "fahrenheit.dialog", "text": "fahrenheit"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "fog.dialog", "text": "sis"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "forty_eight_hours_available.dialog", "text": "üzgünüm, sadece 48 saatlik saatlik tahmin verilerim var"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "freezing_drizzle_dense_intensity.dialog", "text": "dondurucu çiseleme, yoğun yoğunluk"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "freezing_drizzle_light_intensity.dialog", "text": "dondurucu çiseleme, ışık yoğunluğu"}
@@ -249,6 +254,7 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "0, {condition} ile {temperature} civarında olacaktır"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "daha sonra {location}'de {condition} olacak ve sıcaklıklar {temperature} civarında olacak"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "önümüzdeki birkaç saat içinde hava {location}, {condition} ve {temperature} derece olacak"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "humidity.dialog", "text": "nem"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "inch.dialog", "text": "inç"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "kilometer_per_hour.dialog", "text": "saatte kilometre"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "location_not_found.dialog", "text": "{location} adında bir şehir bulamıyorum. lütfen tekrar deneyin"}
@@ -269,16 +275,19 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "overnight.dialog", "text": "gece boyunca"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "partly_cloudy.dialog", "text": "parçalı bulutlu"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "percentage_number.dialog", "text": "yüzde 0"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "rain.dialog", "text": "yağmur"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "seven_days_available.dialog", "text": "size önümüzdeki yedi günün hava tahminini söyleyebilirim."}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "seven_days_available.dialog", "text": "yedi günlük hava durumu tahminim var."}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "slight_rain.dialog", "text": "hafif yağmur"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "slight_rain_showers.dialog", "text": "hafif yağmur sağanakları"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "slight_snow_fall.dialog", "text": "hafif kar yağışı"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "slight_snow_showers.dialog", "text": "hafif kar yağışı"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "snow.dialog", "text": "kar"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "snow_grains.dialog", "text": "kar taneleri"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "south.dialog", "text": "güney"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "southeast.dialog", "text": "güney doğu"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "southwest.dialog", "text": "güney bati"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "thunderstorm.dialog", "text": "gök gürültülü fırtına"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "thunderstorm_with_heavy_hail.dialog", "text": "şiddetli dolu yağışı ile birlikte gök gürültülü fırtına"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "thunderstorm_with_slight_hail.dialog", "text": "hafif dolu yağışlı gök gürültülü fırtına"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "violent_rain_showers.dialog", "text": "şiddetli yağmur sağanakları"}
