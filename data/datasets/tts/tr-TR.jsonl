@@ -135,9 +135,9 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "gün batımı bugün {location}'de {time}'daydı"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_sunset_past_location.dialog", "text": "{location}'da güneş bugün {time}'de battı"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_temperature_local.dialog", "text": "şu anda hava 0 derece."}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "şu anda 1. katta hava 0 derece."}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "şu anda hava 0 derece, 1'den 2'ye kadar."}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "şu anda, {location}'de 0 derece."}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "şu anda {location}'de hava {temperature} derece {temperature_unit}."}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "{location}'de hava şu anda {temperature} derece {temperature_unit}."}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_temperature_location.dialog", "text": "şu anda, {location}'de {temperature} derece {temperature_unit}."}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "şu anda 0 ve 1 derece."}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_weather_local.dialog", "text": "şu anda hava 0 ve 1 derece."}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_weather_location.dialog", "text": "şu anda {location}'te {condition} ve {temperature} derece {temperature_unit}'de."}
@@ -145,14 +145,14 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_wind_light_local.dialog", "text": "rüzgar {speed} {speed_unit} yönünden {direction} yönüne doğru hafif esiyor."}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_wind_light_location.dialog", "text": "bugün {location}'da {direction}'den {speed}'de {speed_unit}'te hafif rüzgar var"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_wind_light_location.dialog", "text": "rüzgar {location}'da {speed}'de {speed_unit}'de {direction}'ten hafif esiyor"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_wind_moderate_local.dialog", "text": "bugün hava biraz rüzgarlı, şu anda {speed} {speed_unit}"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_wind_moderate_local.dialog", "text": "bugün hava biraz rüzgarlı, şu anda {speed} {speed_unit}, {direction} yönünden"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_wind_moderate_local.dialog", "text": "şu anda rüzgar {direction} yönünden orta şiddette {speed} {speed_unit}"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_wind_moderate_location.dialog", "text": "bugün {location}'da hava biraz rüzgarlı, şu anda {speed} {speed_unit}"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_wind_moderate_location.dialog", "text": "bugün {location}'da hava biraz rüzgarlı, şu anda {speed} {speed_unit}, {direction} yönünden"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_wind_moderate_location.dialog", "text": "şu anda rüzgar {direction}'den {location}'e doğru ılımlı bir {speed} {speed_unit} şeklinde esiyor"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_wind_strong_local.dialog", "text": "bugün hava çok rüzgarlı, {speed} {speed_unit}"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_wind_strong_local.dialog", "text": "bugün hava çok rüzgarlı, {speed} {speed_unit}, {direction} yönünden"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_wind_strong_local.dialog", "text": "rüzgar bugün {direction} yönünden çok kuvvetli, {speed} {speed_unit}"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_wind_strong_local.dialog", "text": "şu anda rüzgar {direction} yönünden {speed} {speed_unit} yönüne doğru esiyor, bugün içeride kalmak iyi olabilir"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_wind_strong_location.dialog", "text": "0 bugün kuvvetli rüzgar alacak, {speed} {speed_unit}"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_wind_strong_location.dialog", "text": "{location} bugün {direction} yönünden kuvvetli rüzgar alacak, {speed} {speed_unit}"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_wind_strong_location.dialog", "text": "rüzgar bugün {location}'de {direction}'dan çok güçlü, {speed} {speed_unit}"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "current_wind_strong_location.dialog", "text": "şu anda rüzgar {location}'te {speed}'de {speed_unit}'de {direction}'dan esiyor, içeride kalmak için iyi bir gün"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_condition_expected_local.dialog", "text": "evet, tahminlere göre {condition} {day}"}
@@ -165,12 +165,12 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_condition_not_expected_location.dialog", "text": "hayır, {location} {condition}'de {day} bekleniyor"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_humidity_local.dialog", "text": "0 nem oranı {percent} olacaktır"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_humidity_local.dialog", "text": "0 tahminine göre nem oranı {percent}"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_humidity_location.dialog", "text": "0 {day}'deki nem oranı {percent} olacaktır"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_humidity_location.dialog", "text": "0 {location}'deki tahmin {percent}'lik bir nem oranı gerektiriyor"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_precipitation_next_local.dialog", "text": "0 şans var {precipitation} {day}"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_humidity_location.dialog", "text": "{location} {day}'deki nem oranı {percent} olacaktır"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_humidity_location.dialog", "text": "{day} {location}'deki tahmin {percent}'lik bir nem oranı gerektiriyor"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_precipitation_next_local.dialog", "text": "{percent} şans var {precipitation} {day}"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_precipitation_next_local.dialog", "text": "tahminlere göre {percent} ihtimalle {precipitation} {day}"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_precipitation_next_location.dialog", "text": "0'da {precipitation} {day} için {percent} şans vardır"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_precipitation_next_location.dialog", "text": "tahminlere göre {location} {day}'te {precipitation} ihtimal var."}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_precipitation_next_location.dialog", "text": "{location}'da {precipitation} {day} için {percent} şans vardır"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_precipitation_next_location.dialog", "text": "tahminlere göre {location} {day}'te {precipitation} için {percent} ihtimal var."}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_precipitation_next_none_local.dialog", "text": "önümüzdeki 7 gün için yağış beklenmiyor"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_precipitation_next_none_local.dialog", "text": "önümüzdeki 7 gün içinde herhangi bir yağış beklenmemektedir."}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_precipitation_next_none_location.dialog", "text": "0'da hiçbiri tahmin edilmemiştir"}
@@ -182,8 +182,8 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_sunset_local.dialog", "text": "güneş {time} {day}'de batacak"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_sunset_local.dialog", "text": "gün batımı {time} {day}'de olacak"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_sunset_local.dialog", "text": "{day} güneş {time}'de batacak"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_sunset_location.dialog", "text": "0 güneş {location}'de {time}'de batacak"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_sunset_location.dialog", "text": "0'da gün batımı {time} {day}'de olacak"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_sunset_location.dialog", "text": "{day} güneş {location}'de {time}'de batacak"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_sunset_location.dialog", "text": "{location}'da gün batımı {time} {day}'de olacak"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_sunset_location.dialog", "text": "güneş {location}'de {time} {day}'de batacak"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_temperature_high_local.dialog", "text": "0 ise {temperature} kadar yüksek olacaktır"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_temperature_high_local.dialog", "text": "0 sıcaklık {temperature} derece kadar yüksek olacaktır."}
@@ -201,17 +201,17 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_temperature_low_location.dialog", "text": "0, {location}, {temperature} derece kadar düşük olacaktır"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "en yüksek {high_temperature} ve en düşük {low_temperature} {day} olmak üzere {condition} bekleyin"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_weather_local.dialog", "text": "tahmin {day}, en yüksek {high_temperature} ve en düşük {low_temperature} ile {condition}'dir"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "0'da en yüksek {high_temperature} ve en düşük {low_temperature} olmak üzere {condition} olacaktır."}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "0, {location} en yüksek {high_temperature} ve en düşük {low_temperature} değerlerine sahip olacak ve {condition}"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "tahmin {day} yüksek için {high_temperature} ve {location} düşük için {low_temperature}'dir"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_local.dialog", "text": "0'dan gelen hafif bir rüzgar olacak {day} {speed} {speed_unit}'te"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_local.dialog", "text": "çok rüzgarlı olmayacak {day}"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_location.dialog", "text": "0'da çok rüzgarlı olmayacak {day}"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_location.dialog", "text": "1'de {direction}'dan {day}'de {speed}'te {speed_unit}'ten gelen hafif bir rüzgar olacak"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "{day} {location}'da en yüksek {high_temperature} ve en düşük {low_temperature} olmak üzere {condition} olacaktır."}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "{day}, {location} en yüksek {high_temperature} ve en düşük {low_temperature} değerlerine sahip olacak ve {condition}"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_weather_location.dialog", "text": "tahmin {day} {location} için {condition}, yüksek için {high_temperature} ve düşük için {low_temperature}'dir"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_local.dialog", "text": "{direction}'dan gelen hafif bir rüzgar olacak {day} {speed} {speed_unit}'te"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_local.dialog", "text": "çok rüzgarlı olmayacak {day}, {direction} yönünden sadece {speed} {speed_unit}"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_location.dialog", "text": "{location}'da çok rüzgarlı olmayacak {day}, {direction} yönünden sadece {speed} {speed_unit}"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_wind_light_location.dialog", "text": "{location}'de {direction}'dan {day}'de {speed}'te {speed_unit}'ten gelen hafif bir rüzgar olacak"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "rüzgar orta kuvvette, {direction} {day} yönünden yaklaşık {speed} {speed_unit} kuvvetinde esecek."}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "tahminlere göre {direction} yönünden {speed} {speed_unit} {day} yönüne doğru orta şiddette rüzgar esecek."}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "yaklaşık {speed} {speed_unit} {day} şiddetinde ılımlı bir rüzgar bekleyebilirsiniz"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_location.dialog", "text": "2'de {day}'te {speed} {speed_unit} civarında bir rüzgar bekleyebilirsiniz"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_local.dialog", "text": "{direction} yönünden yaklaşık {speed} {speed_unit} {day} şiddetinde ılımlı bir rüzgar bekleyebilirsiniz"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_location.dialog", "text": "{location}'de {day}'te {direction} yönünden {speed} {speed_unit} civarında bir rüzgar bekleyebilirsiniz"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_location.dialog", "text": "rüzgar {location} {day} yönünden orta kuvvette, {direction} yönünden yaklaşık {speed} {speed_unit} kuvvetinde esecektir."}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_wind_moderate_location.dialog", "text": "tahmin {day}, {location}'in {direction}'den {speed}'ün {speed_unit}'ünden orta şiddette rüzgar alacağını öngörüyor"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "daily_wind_strong_local.dialog", "text": "0'dan {speed}'e {speed_unit}'den {day}'e kuvvetli rüzgar olacak"}
@@ -238,20 +238,20 @@
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "heavy_snow_showers.dialog", "text": "yoğun kar yağışı"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_condition_expected_local.dialog", "text": "evet, {time} tahmini için {condition} tahmini"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_condition_expected_location.dialog", "text": "evet, {condition} olacak bu {time}"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_precipitation_next_local.dialog", "text": "2'de {precipitation}'in {percent} şansı var"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_precipitation_next_local.dialog", "text": "{time}'de {precipitation}'in {percent} şansı var"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_precipitation_next_local.dialog", "text": "tahminlere göre {time}'de {precipitation} şansı {percent}"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_precipitation_next_location.dialog", "text": "0'da {time}'te {precipitation} için {percent} şans vardır"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_precipitation_next_location.dialog", "text": "tahminlere göre {time}'te {location}'de {precipitation} ihtimal var."}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_temperature_local.dialog", "text": "0'da {temperature} derece olacaktır"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_temperature_local.dialog", "text": "1'de yaklaşık 0 derece olacak"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_temperature_location.dialog", "text": "0'da {time}'de yaklaşık {temperature} derece olacaktır"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_temperature_location.dialog", "text": "0'da, {location}'de {temperature} derece olacaktır"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_weather_local.dialog", "text": "1 ile {temperature} derece civarında"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_precipitation_next_location.dialog", "text": "{location}'da {time}'te {precipitation} için {percent} şans vardır"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_precipitation_next_location.dialog", "text": "tahminlere göre {time}'te {location}'de {precipitation} için {percent} ihtimal var."}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_temperature_local.dialog", "text": "{time}'da {temperature} derece olacaktır"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_temperature_local.dialog", "text": "{time}'de yaklaşık {temperature} derece olacak"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_temperature_location.dialog", "text": "{location}'da {time}'de yaklaşık {temperature} derece olacaktır"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_temperature_location.dialog", "text": "{time}'da, {location}'de {temperature} derece olacaktır"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_weather_local.dialog", "text": "{condition} ile {temperature} derece civarında"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_weather_local.dialog", "text": "daha sonra {condition} ve {temperature} derece civarında olacak"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_weather_local.dialog", "text": "daha sonra {condition} ve {temperature} derece olacak"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_weather_local.dialog", "text": "sıcaklık {temperature}'e yakınken hava {condition} olacak."}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "0, {condition} ile yaklaşık {temperature} derece olacaktır"}
-{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "0, {condition} ile {temperature} civarında olacaktır"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "{location}, {condition} ile yaklaşık {temperature} derece olacaktır"}
+{"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "{location}, {condition} ile {temperature} civarında olacaktır"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "daha sonra {location}'de {condition} olacak ve sıcaklıklar {temperature} civarında olacak"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "hourly_weather_location.dialog", "text": "önümüzdeki birkaç saat içinde hava {location}, {condition} ve {temperature} derece olacak"}
 {"lang": "tr-TR", "skill": "ovos-skill-weather", "dialog": "humidity.dialog", "text": "nem"}
