@@ -1753,6 +1753,8 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "gehitu elementuak {list_name} zerrendara"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "gehitu sarrerak zerrendara"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "gehitu sarrerak {list_name} zerrendara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "gehitu {items} zerrendara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "sartu {items} zerrendara"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "alarm.voc", "text": "alarma"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "alarm.voc", "text": "alarmak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "alarm.voc", "text": "esna nazazu"}
@@ -1815,6 +1817,10 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_media_properties.intent", "text": "aldatu nire {schedkind}-ren soinua {mediakind}-ra"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_media_properties.intent", "text": "aldatu {schedkind}-ren alerta {mediaform}-ra"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_media_properties.intent", "text": "nahi dut nire hurrengo {schedkind}-k nire {mediakind} erreproduzitzea"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_media_properties.intent", "text": "nahi dut {schedkind}ak {mediakind} erreproduzitzea"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_media_properties.intent", "text": "nahi dut {schedkind}ak {mediakind} jotzea"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_media_properties.intent", "text": "nahi dut {schedkind}k {mediakind} erreproduzitzea"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_media_properties.intent", "text": "nahi dut {schedkind}k {mediakind} jotzea"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_priority.intent", "text": "aldatu nire {schedkind}-ren lehentasuna {number:priority}-ra"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_priority.intent", "text": "igo {schedkind}-ren lehentasuna {number:priority} mailara"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_priority.intent", "text": "doitu nire hurrengo {schedkind}-ren lehentasuna"}
@@ -1833,6 +1839,14 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "egin {schedkind}-k {duration:duration} iraun dezan"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "aldatu nire {schedkind} hau {duration:duration} arte iraun dezan"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "laburtu nire {schedkind}-ren iraupena {duration:duration}-ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "laburtu alarmaren iraupena gehiago"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "laburtu alarmaren iraupena pixka bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "laburtu ekitaldiaren iraupena gehiago"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "laburtu ekitaldiaren iraupena pixka bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "luzatu alarmaren iraupena gehiago"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "luzatu alarmaren iraupena pixka bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "luzatu ekitaldiaren iraupena gehiago"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "luzatu ekitaldiaren iraupena pixka bat"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "choice.voc", "text": "aukera"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "choice.voc", "text": "aukeratu"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "choice.voc", "text": "eskuragarri"}
@@ -1887,6 +1901,8 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_alarm.intent", "text": "esnatu nazazu {days} bakoitzean {date:time}tan"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_alarm.intent", "text": "esnatu gaitzazu {duration:duration} barru"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_alarm.intent", "text": "esnatu nazazu {duration:duration} barru"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_alarm.intent", "text": "alarma bat behar dut {date:time}etarako"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_alarm.intent", "text": "alarma bat behar dut {date:time}rako"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_event.intent", "text": "gehitu ekitaldi bat"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_event.intent", "text": "gehitu ekitaldi bat {event}"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_event.intent", "text": "gehitu hitzordu bat"}
@@ -1901,6 +1917,10 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_event.intent", "text": "sortu hitzordu bat {event}"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_event.intent", "text": "ekitaldi berria"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_event.intent", "text": "ekitaldi berria {event}"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_event.intent", "text": "gehitu bilera berri bat egutegira"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_event.intent", "text": "gehitu hitzordu berri bat egutegira"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_event.intent", "text": "sartu bilera berri bat egutegira"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_event.intent", "text": "sartu hitzordu berri bat egutegira"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_list.intent", "text": "egin zerrenda bat"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_list.intent", "text": "egin zerrenda bat {list_name} izenekoa"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_list.intent", "text": "egin zerrenda berri bat"}
@@ -1911,6 +1931,10 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_list.intent", "text": "sortu zerrenda berri bat {list_name} izenekoa"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_list.intent", "text": "zerrenda berria"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_list.intent", "text": "zerrenda berria {list_name}"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_list.intent", "text": "zerrenda berri bat ireki behar dut"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_list.intent", "text": "zerrenda berri bat ireki nahi dut"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_list.intent", "text": "zerrenda berri bat prestatu behar dut"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_list.intent", "text": "zerrenda berri bat prestatu nahi dut"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "ezarri gogorarazpen bat"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "ezarri gogorarazpen bat {reminder}"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "ezarri gogorarazpen berri bat"}
@@ -1949,12 +1973,28 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "gogorarazi {date:time}etan"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "gogorarazi {date:time}tan"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "esan iezadazu {reminder}"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder_recurring.intent", "text": "gogorarazi lanera joateko astegunetan goizeko 8etan"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder_recurring.intent", "text": "gogorarazi astegun guztietako goizetan medikazioa hartzeko 8etan"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder_recurring.intent", "text": "gogorarazi txakurra paseatzeko astegunetan goizeko 7etan"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder_recurring.intent", "text": "gogorarazi posta begiratzeko astegunetan goizeko 9etan"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder_recurring.intent", "text": "gogorarazi astegun guztietako arratsaldean amari deitzeko 6etan"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder_recurring.intent", "text": "gogorarazi asteburuko goizetan landareak ureztatzeko 8etan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "gogorarazi lanera joateko astegunetan goizeko 8etan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "gogorarazi astegun guztietako goizetan medikazioa hartzeko 8etan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "gogorarazi txakurra paseatzeko astegunetan goizeko 7etan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "gogorarazi posta begiratzeko astegunetan goizeko 9etan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "gogorarazi astegun guztietako arratsaldean amari deitzeko 6etan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "gogorarazi asteburuko goizetan landareak ureztatzeko 8etan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "abisatu astelehenetik ostiralera arratsaldean bederatzietan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "abisatu astelehenetik ostiralera arratsaldean seietan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "abisatu astelehenetik ostiralera arratsaldean zazpietan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "abisatu astelehenetik ostiralera arratsaldean zortzietan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "abisatu astelehenetik ostiralera goizean bederatzietan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "abisatu astelehenetik ostiralera goizean seietan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "abisatu astelehenetik ostiralera goizean zazpietan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "abisatu astelehenetik ostiralera goizean zortzietan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "gogorarazi astelehenetik ostiralera arratsaldean bederatzietan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "gogorarazi astelehenetik ostiralera arratsaldean seietan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "gogorarazi astelehenetik ostiralera arratsaldean zazpietan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "gogorarazi astelehenetik ostiralera arratsaldean zortzietan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "gogorarazi astelehenetik ostiralera goizean bederatzietan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "gogorarazi astelehenetik ostiralera goizean seietan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "gogorarazi astelehenetik ostiralera goizean zazpietan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "gogorarazi astelehenetik ostiralera goizean zortzietan"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "abiarazi tenporizadore bat"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "abiarazi tenporizadore bat {duration:duration}eko"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "abiarazi tenporizadore bat {duration:duration}ko"}
@@ -1969,12 +2009,27 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "berri tenporizadore"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "programatu tenporizadoreak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "nik dut tenporizadore"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "abiarazi atzerakontaketa bat {duration:duration}etik"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "abiarazi atzerakontaketa bat {duration:duration}tik"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "hasi atzerakontaketa bat {duration:duration}etik"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "hasi atzerakontaketa bat {duration:duration}tik"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "tenporizadore bat behar dut"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "tenporizadore bat behar dut {duration:duration}erako"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "tenporizadore bat behar dut {duration:duration}rako"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "sinkroniza dezakezu {davkind}"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "sinkronizatu nire {davkind} orain"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "jaitsi {davkind}"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "igo nire {davkind}"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "sinkronizatu nire {davkind} guztiak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "sinkronizatu {davkind} eta {davkind2}"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "berdindu agenda zerbitzariarekin"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "berdindu egutegia zerbitzariarekin"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "eguneratu agenda zerbitzariarekin"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "eguneratu egutegia zerbitzariarekin"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "ekarri ekitaldiak zerbitzaritik"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "ekarri gertaerak zerbitzaritik"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "jaitsi ekitaldiak zerbitzaritik"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "jaitsi gertaerak zerbitzaritik"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "days.voc", "text": "astearte"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "days.voc", "text": "astearteak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "days.voc", "text": "asteazken"}
@@ -2005,6 +2060,11 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "kendu nire zerrenda"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "kendu nire zerrenda guztiak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "kendu zerrenda guztiak"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "borratu nire {list_name}-zerrenda"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "borratu {list_name}-zerrenda"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "kendu nire {list_name}-zerrenda"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "kendu {list_name}-zerrenda"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "ezabatu nire {list_name} zerrenda"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "ezabatu zerrendako dena"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "ezabatu zerrendako elementuak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "ezabatu zerrendako sarrerak"}
@@ -2017,7 +2077,6 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "kendu {list_name} zerrendako dena"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "kendu {list_name} zerrendako elementuak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "kendu {list_name} zerrendako sarrerak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "ezabatu nire {list_name} zerrenda"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "garbitu nire {list_name} zerrenda"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "dismiss.voc", "text": "amaiera"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "dismiss.voc", "text": "baztertu"}
@@ -2182,6 +2241,18 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "zer gogorarazpen galdu nuen?"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "zer tenporizadore galdu dut?"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "zer tenporizadore galdu nuen?"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "abisuren bat galdu al dut gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "abisuren bat galdu al dut goizean"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "alarmaren bat galdu al dut gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "alarmaren bat galdu al dut goizean"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "entzun al du abisuren batek ni kanpoan nengoela"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "entzun al du abisuren batek ni lo nengoela"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "entzun al du alarmaren batek ni kanpoan nengoela"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "entzun al du alarmaren batek ni lo nengoela"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "jo al du abisuren batek ni kanpoan nengoela"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "jo al du abisuren batek ni lo nengoela"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "jo al du alarmaren batek ni kanpoan nengoela"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "jo al du alarmaren batek ni lo nengoela"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "next.voc", "text": "hurrengo"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "no.voc", "text": "ez"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "no.voc", "text": "ezetz"}
@@ -2325,12 +2396,21 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_entries.intent", "text": "irakurri {list_name} zerrendako sarrerak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_entries.intent", "text": "zer dago nire {list_name} zerrendan"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_entries.intent", "text": "zer egin behar dut"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_entries.intent", "text": "irakurri zerrendan apuntatuta daukadana"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_entries.intent", "text": "irakurri zerrendan idatzita daukadana"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_entries.intent", "text": "egin gabeko zereginak badaude zaizkit"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_entries.intent", "text": "egin gabeko zereginak geratzen zaizkit"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_entries.intent", "text": "egiteko zereginak badaude zaizkit"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_entries.intent", "text": "egiteko zereginak geratzen zaizkit"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_names.intent", "text": "zein zerrenda ditut"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_names.intent", "text": "zer zerrenda daude"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_names.intent", "text": "erakutsi nire zerrenda gordetak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_names.intent", "text": "erakutsi nire zerrenda k"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_names.intent", "text": "irakurri nire zerrenda gordetak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_names.intent", "text": "irakurri nire zerrenda k"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_names.intent", "text": "gordetako zerrendak zenbat diren esan"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_names.intent", "text": "esan gordetako zerrenden izenak"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_names.intent", "text": "irakurri gordetako zerrenden izenak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "question.voc", "text": "al dezakezu"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "question.voc", "text": "al dezakezue"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "question.voc", "text": "al zaitezke"}
@@ -2395,8 +2475,6 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu alarmak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu ekitaldi"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu esnatu"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu gogorarazpen"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu gogorarazpenak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu hitzordu"}
@@ -2407,8 +2485,6 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu alarmak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu ekitaldi"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu esnatu"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu gogorarazpen"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu gogorarazpenak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu hitzordu"}
@@ -2419,8 +2495,6 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu alarmak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu ekitaldi"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu esnatu"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu gogorarazpen"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu gogorarazpenak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu hitzordu"}
@@ -2431,8 +2505,6 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu alarmak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu ekitaldi"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu esnatu"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu gogorarazpen"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu gogorarazpenak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu hitzordu"}
@@ -2443,8 +2515,6 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten alarmak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten ekitaldi"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten esnatu"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten gogorarazpen"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten gogorarazpenak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten hitzordu"}
@@ -2455,8 +2525,6 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi alarmak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi ekitaldi"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi esnatu"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi gogorarazpen"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi gogorarazpenak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi hitzordu"}
@@ -2467,8 +2535,6 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu alarmak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu ekitaldi"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu esnatu"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu gogorarazpen"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu gogorarazpenak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu hitzordu"}
@@ -2479,8 +2545,6 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu alarmak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu ekitaldi"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu esnatu"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu gogorarazpen"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu gogorarazpenak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu hitzordu"}
@@ -2491,214 +2555,139 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu alarmak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu ekitaldi"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu esnatu"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu gogorarazpen"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu gogorarazpenak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu hitzordu"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu hitzorduak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu tenporizadore"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu tenporizadoreak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu al tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu ari alarmak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu ari hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu ari tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu ba alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu bat ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu dira esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu dut gogorarazpenak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu dut hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu ere gogorarazpen"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu gara esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu nuen alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu nuen tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu une alarmak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu zure alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu zure gogorarazpen"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu ba ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu da tenporizadoreak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu dugu hitzordu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu dugu tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu dut alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu duzu hitzordu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu ere hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu esna esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu esna tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu ez hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu ezin tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu gara ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu gara gogorarazpenak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu izan gogorarazpenak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu nuen alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu nuen gogorarazpenak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu une tenporizadoreak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu zara gogorarazpenak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu zure alarmak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "birprogramatu zure gogorarazpen"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu al tenporizadoreak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu ba alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu ba alarmak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu bat ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu bat gogorarazpenak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu bat hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu dugu hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu dut alarmak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu dut ekitaldi"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu dut esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu duzu alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu ere ekitaldi"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu ere hitzordu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu ere tenporizadoreak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu esna alarmak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu ez gogorarazpen"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu ezin esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu ezin hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu gara ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu nuen alarmak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu nuen tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu zure ekitaldi"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "bultzatu zure hitzordu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu ari alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu ari gogorarazpen"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu ari hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu dago gogorarazpen"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu dira ekitaldi"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu dugu ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu dut esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu duzu tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu esna tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu ezin ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu gara ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu nuen esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu une tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu zara gogorarazpen"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "doitu zara hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten ba ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten ba hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten bat esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten da alarmak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten da ekitaldi"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten da esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten da esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten da gogorarazpenak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten da tenporizadoreak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten dago ekitaldi"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten dago gogorarazpen"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten dira alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten dira ekitaldi"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten dira gogorarazpen"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten dira gogorarazpenak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten dugu esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten dugu hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten dugu tenporizadoreak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten duzu tenporizadoreak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten esna gogorarazpenak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten ez gogorarazpenak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten ez hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten gara hitzordu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten izan alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten izan ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten nuen alarmak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten zure alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten zure alarmak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eten zure gogorarazpen"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi al hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi al tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi ari alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi ari gogorarazpen"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi bat tenporizadoreak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi dira gogorarazpen"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi dut gogorarazpenak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi duzu hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi ere esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi esna alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi ez alarmak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi ezin alarmak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi ezin esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi ezin gogorarazpenak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi gara gogorarazpenak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi izan ekitaldi"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi izan tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi nuen alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi nuen esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi une ekitaldi"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi une hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi zara gogorarazpen"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi zure ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geldiarazi zure esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu al gogorarazpenak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu al hitzordu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu ba gogorarazpenak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu bat esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu dago gogorarazpen"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu dira ekitaldi"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu dira hitzordu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu dut hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu duzu esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu duzu esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu duzu hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu ere alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu esna esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu esna gogorarazpenak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu esna hitzordu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu ez esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu ez tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu gara hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu izan alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu izan hitzordu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu nuen esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu une ekitaldi"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu une tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu zara ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu zara esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu zure ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu zure esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu zure hitzordu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "geroratu zure tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu al alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu ari esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu ari tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu bat gogorarazpen"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu da alarmak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu dugu gogorarazpen"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu duzu tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu ere tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu esna gogorarazpen"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu ezin alarmak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu ezin esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu une alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu une alarmak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu une ekitaldi"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu une hitzordu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu une hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "luzatu zure ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu ari ekitaldiak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu ari esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu ari tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu ba alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu ba esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu ba gogorarazpen"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu ba hitzordu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu dago alarmak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu dago esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu dago esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu dago hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu dira ekitaldi"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu dugu esna nazazu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu dugu gogorarazpenak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu dut alarmak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu dut ekitaldi"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu duzu hitzorduak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu ere tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu ez alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu ezin alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu gara alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu izan alarma"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu izan tenporizadore"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nuen esnatu"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu une ekitaldi"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu zara tenporizadoreak"}
-{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu zure alarma"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu {date:old}eko {schedkind} eta jarri {date:time}etarako"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu {date:old}eko {schedkind} eta jarri {date:time}rako"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu {date:old}eko {schedkind} eta jarri {date:time}tarako"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu {date:old}ko {schedkind} eta jarri {date:time}etarako"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu {date:old}ko {schedkind} eta jarri {date:time}rako"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu {date:old}ko {schedkind} eta jarri {date:time}tarako"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu {date:old}eko {schedkind} eta jarri {date:time}etarako"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu {date:old}eko {schedkind} eta jarri {date:time}rako"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu {date:old}eko {schedkind} eta jarri {date:time}tarako"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu {date:old}ko {schedkind} eta jarri {date:time}etarako"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu {date:old}ko {schedkind} eta jarri {date:time}rako"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu {date:old}ko {schedkind} eta jarri {date:time}tarako"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman datorren {schedkind} arratsaldeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman datorren {schedkind} arratsaldeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman datorren {schedkind} arratsaldeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman datorren {schedkind} gaueko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman datorren {schedkind} gaueko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman datorren {schedkind} gaueko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman datorren {schedkind} goizeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman datorren {schedkind} goizeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman datorren {schedkind} goizeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman hurrengo {schedkind} arratsaldeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman hurrengo {schedkind} arratsaldeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman hurrengo {schedkind} arratsaldeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman hurrengo {schedkind} gaueko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman hurrengo {schedkind} gaueko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman hurrengo {schedkind} gaueko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman hurrengo {schedkind} goizeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman hurrengo {schedkind} goizeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman hurrengo {schedkind} goizeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman nire datorren {schedkind} arratsaldeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman nire datorren {schedkind} arratsaldeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman nire datorren {schedkind} arratsaldeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman nire datorren {schedkind} gaueko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman nire datorren {schedkind} gaueko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman nire datorren {schedkind} gaueko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman nire datorren {schedkind} goizeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman nire datorren {schedkind} goizeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman nire datorren {schedkind} goizeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman nire hurrengo {schedkind} arratsaldeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman nire hurrengo {schedkind} arratsaldeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman nire hurrengo {schedkind} arratsaldeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman nire hurrengo {schedkind} gaueko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman nire hurrengo {schedkind} gaueko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman nire hurrengo {schedkind} gaueko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman nire hurrengo {schedkind} goizeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman nire hurrengo {schedkind} goizeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman nire hurrengo {schedkind} goizeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu datorren {schedkind} arratsaldeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu datorren {schedkind} arratsaldeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu datorren {schedkind} arratsaldeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu datorren {schedkind} gaueko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu datorren {schedkind} gaueko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu datorren {schedkind} gaueko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu datorren {schedkind} goizeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu datorren {schedkind} goizeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu datorren {schedkind} goizeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu hurrengo {schedkind} arratsaldeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu hurrengo {schedkind} arratsaldeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu hurrengo {schedkind} arratsaldeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu hurrengo {schedkind} gaueko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu hurrengo {schedkind} gaueko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu hurrengo {schedkind} gaueko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu hurrengo {schedkind} goizeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu hurrengo {schedkind} goizeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu hurrengo {schedkind} goizeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nire datorren {schedkind} arratsaldeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nire datorren {schedkind} arratsaldeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nire datorren {schedkind} arratsaldeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nire datorren {schedkind} gaueko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nire datorren {schedkind} gaueko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nire datorren {schedkind} gaueko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nire datorren {schedkind} goizeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nire datorren {schedkind} goizeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nire datorren {schedkind} goizeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nire hurrengo {schedkind} arratsaldeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nire hurrengo {schedkind} arratsaldeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nire hurrengo {schedkind} arratsaldeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nire hurrengo {schedkind} gaueko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nire hurrengo {schedkind} gaueko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nire hurrengo {schedkind} gaueko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nire hurrengo {schedkind} goizeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nire hurrengo {schedkind} goizeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu nire hurrengo {schedkind} goizeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu datorren {schedkind} arratsaldeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu datorren {schedkind} arratsaldeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu datorren {schedkind} arratsaldeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu datorren {schedkind} gaueko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu datorren {schedkind} gaueko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu datorren {schedkind} gaueko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu datorren {schedkind} goizeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu datorren {schedkind} goizeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu datorren {schedkind} goizeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu hurrengo {schedkind} arratsaldeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu hurrengo {schedkind} arratsaldeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu hurrengo {schedkind} arratsaldeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu hurrengo {schedkind} gaueko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu hurrengo {schedkind} gaueko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu hurrengo {schedkind} gaueko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu hurrengo {schedkind} goizeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu hurrengo {schedkind} goizeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu hurrengo {schedkind} goizeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu nire datorren {schedkind} arratsaldeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu nire datorren {schedkind} arratsaldeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu nire datorren {schedkind} arratsaldeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu nire datorren {schedkind} gaueko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu nire datorren {schedkind} gaueko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu nire datorren {schedkind} gaueko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu nire datorren {schedkind} goizeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu nire datorren {schedkind} goizeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu nire datorren {schedkind} goizeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu nire hurrengo {schedkind} arratsaldeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu nire hurrengo {schedkind} arratsaldeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu nire hurrengo {schedkind} arratsaldeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu nire hurrengo {schedkind} gaueko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu nire hurrengo {schedkind} gaueko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu nire hurrengo {schedkind} gaueko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu nire hurrengo {schedkind} goizeko {date:time}etara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu nire hurrengo {schedkind} goizeko {date:time}ra"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "pasatu nire hurrengo {schedkind} goizeko {date:time}tara"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aldatu biharko {schedkind} beste ordu batera"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "eraman biharko {schedkind} beste ordu batera"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mugitu biharko {schedkind} beste ordu batera"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "atzeratu ordu bat biharko alarma"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "atzeratu ordu erdi biharko alarma"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aurreratu ordu bat biharko alarma"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "aurreratu ordu erdi biharko alarma"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "script.voc", "text": "errutina"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "script.voc", "text": "fitxategi"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "script.voc", "text": "script"}
@@ -3229,6 +3218,8 @@
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "zertatik ordu"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "zertatik tenporizadore"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "zertatik tenporizadoreak"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "atzerakontaketak zenbat denbora falta du"}
+{"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "tenporizadoreak zenbat denbora falta du"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "todo.voc", "text": "egiteko"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "todo.voc", "text": "egitekoak"}
 {"lang": "eu-ES", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "todo.voc", "text": "memoria"}
@@ -3464,6 +3455,7 @@
 {"lang": "eu-ES", "skill": "ovos-skill-camera", "file_type": "intent", "intent": "have_camera.intent", "text": "kamera prest dago"}
 {"lang": "eu-ES", "skill": "ovos-skill-camera", "file_type": "intent", "intent": "have_camera.intent", "text": "kamera konektatuta dago"}
 {"lang": "eu-ES", "skill": "ovos-skill-camera", "file_type": "intent", "intent": "have_camera.intent", "text": "kamera piztuta dago"}
+{"lang": "eu-ES", "skill": "ovos-skill-camera", "file_type": "intent", "intent": "have_camera.intent", "text": "kamerarik ba al dago"}
 {"lang": "eu-ES", "skill": "ovos-skill-camera", "file_type": "intent", "intent": "picture_location.intent", "text": "non dago nire argazkia gordeak"}
 {"lang": "eu-ES", "skill": "ovos-skill-camera", "file_type": "intent", "intent": "picture_location.intent", "text": "non dago nire argazkia gordeta"}
 {"lang": "eu-ES", "skill": "ovos-skill-camera", "file_type": "intent", "intent": "picture_location.intent", "text": "non dago nire argazkiak gordeak"}
@@ -3482,6 +3474,8 @@
 {"lang": "eu-ES", "skill": "ovos-skill-camera", "file_type": "intent", "intent": "picture_location.intent", "text": "non daude nire azken argazkiak gordeta"}
 {"lang": "eu-ES", "skill": "ovos-skill-camera", "file_type": "intent", "intent": "picture_location.intent", "text": "nora joaten dira argazkiak"}
 {"lang": "eu-ES", "skill": "ovos-skill-camera", "file_type": "intent", "intent": "picture_location.intent", "text": "nora joaten dira nire argazkiak"}
+{"lang": "eu-ES", "skill": "ovos-skill-camera", "file_type": "intent", "intent": "picture_location.intent", "text": "non gordetzen dira argazkiak"}
+{"lang": "eu-ES", "skill": "ovos-skill-camera", "file_type": "intent", "intent": "picture_location.intent", "text": "non gordetzen dira nire argazkiak"}
 {"lang": "eu-ES", "skill": "ovos-skill-camera", "file_type": "intent", "intent": "take_picture.intent", "text": "atera"}
 {"lang": "eu-ES", "skill": "ovos-skill-camera", "file_type": "intent", "intent": "take_picture.intent", "text": "atera argazki bat"}
 {"lang": "eu-ES", "skill": "ovos-skill-camera", "file_type": "intent", "intent": "take_picture.intent", "text": "atera argazki bat guri"}
@@ -3533,7 +3527,6 @@
 {"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "exekutatu script-a {script}"}
 {"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "jarri martxan komandoa {script}"}
 {"lang": "eu-ES", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "jarri martxan script-a {script}"}
-{"lang": "eu-ES", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color.intent", "text": "zein koloretakoa da {requested_color}"}
 {"lang": "eu-ES", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_hex.intent", "text": "zein koloretakoa da {hex_code} kode hexadezimala duena"}
 {"lang": "eu-ES", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_hex.intent", "text": "zein kolore da hex kode {hex_code}"}
 {"lang": "eu-ES", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_hex.intent", "text": "zein kolore da kode {hex_code}"}
@@ -3542,6 +3535,12 @@
 {"lang": "eu-ES", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_name.intent", "text": "jarri kolorea {color}-ra"}
 {"lang": "eu-ES", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_name.intent", "text": "nolakoa da {color} kolorea"}
 {"lang": "eu-ES", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_name.intent", "text": "esan {color} koloreari buruz"}
+{"lang": "eu-ES", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_name.intent", "text": "{color} kolorea pantailan ikustea gustatuko litzaidake"}
+{"lang": "eu-ES", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_name.intent", "text": "jarri pantailan {color} kolorea"}
+{"lang": "eu-ES", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_name.intent", "text": "zein koloretakoa da {color}"}
+{"lang": "eu-ES", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_name.intent", "text": "{color} zer kolore da"}
+{"lang": "eu-ES", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_name.intent", "text": "jakin nahi dut zein kolore den {color}"}
+{"lang": "eu-ES", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_name.intent", "text": "zer koloretakoa da {color}"}
 {"lang": "eu-ES", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_rgb.intent", "text": "zein koloretakoa da {rgb} rgb balioa duena"}
 {"lang": "eu-ES", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_rgb.intent", "text": "zein kolore da rgb balioa {rgb}"}
 {"lang": "eu-ES", "skill": "ovos-skill-confucius-quotes", "file_type": "voc", "intent": "confucius.voc", "text": "konfuzio"}
@@ -8824,13 +8823,6 @@
 {"lang": "eu-ES", "skill": "ovos-skill-count", "file_type": "voc", "intent": "ordinal.voc", "text": "zenbaki ordinalak"}
 {"lang": "eu-ES", "skill": "ovos-skill-count", "file_type": "voc", "intent": "short_scale.voc", "text": "eskala laburra"}
 {"lang": "eu-ES", "skill": "ovos-skill-count", "file_type": "voc", "intent": "short_scale.voc", "text": "eskala labur"}
-{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "zein da gaurko data"}
-{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "zein da gaurko data mesedez"}
-{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "esadazu gaurko data"}
-{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "zein da gaurko data {location}n"}
-{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "zein da gaurko data {location}en"}
-{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "eman gaurko data mesedez"}
-{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "zein data da"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_future_weekend.intent", "text": "adieraziko al didazu datorren asteburua zer data den?"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_future_weekend.intent", "text": "adieraziko al didazu hurrengo asteburua zer data den?"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_future_weekend.intent", "text": "adieraziko al didazu oraingo honen hurrengo asteburua zer data den?"}
@@ -8898,6 +8890,7 @@
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_future_weekend.intent", "text": "zer egun hurrengo asteburuan?"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_future_weekend.intent", "text": "zer egun hurrengo astebururako?"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_future_weekend.intent", "text": "zer egun zehaztu dira oraingo honen ondoko astebururako?"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_future_weekend.intent", "text": "zein data ditu hurrengo asteburuak"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_last_weekend.intent", "text": "adierazi aurreko asteburuaren egunak."}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_last_weekend.intent", "text": "adierazi azkenekoaren aurreko asteburuaren data zehatzak."}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_last_weekend.intent", "text": "adierazi, mesedez, aurreko asteburuaren egunak."}
@@ -8960,17 +8953,24 @@
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "zein urtetan izango da hurrengo urte bisurtea"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "esadazu noiz den hurrengo urte bisurtea"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "noiz iritsiko da hurrengo urte bisurtea"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "zenbat urte barru izango da bisurtea"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "zenbat denbora falta da {date} arte"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "zenbat denbora falta da {date} arte mesedez"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "noiz da {date}"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "zenbat egun falta dira {date} arte"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "zenbat falta da {date} izateko"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "zenbat egun daude {start} eta {end} artean"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "zenbat egun igarotzen dira {start} eta {end} bitartean"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "kontatu {start} eta {end} arteko egunak"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "zenbat egunek bereizten dituzte {start} eta {end}"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "kalkulatu zenbat egun dauden {start} eta {end} artean"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "zein asteguna da {date}"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "zein asteguna da {date} mesedez"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "zein eguna da {date}"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "esadazu zein asteguna den {date}"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "zein asteguni dagokio {date}"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "zein egunetan da 2020ko oroitzapen eguna"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "esadazu asteko zein egun izango den {date}"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "{date} data {weekday}a al da"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "{date} data {weekday}a al da mesedez"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "{date} data {weekday}ea al da"}
@@ -8985,6 +8985,14 @@
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "zein egunean gaude"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "eguna zein da gaur {location}en"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "eguna zein da gaur {location}n"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "gaur hilabeteko zenbagarren eguna da"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "esadazu gaur hilabeteko zein egun den"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "zein da gaurko data mesedez"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "esadazu gaurko data"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "zein da gaurko data {location}n"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "zein da gaurko data {location}en"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "eman gaurko data mesedez"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "zein data da"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "egungo hilabetea"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "zein hilabete da gaur"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "zein hilabete da orain"}
@@ -9092,12 +9100,22 @@
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "zer ordu izango da {number:offset} ordura leku honetan: {location}"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "zer ordu izango da {number:offset} segundora"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "zer ordu izango da {number:offset} segundora leku honetan: {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "{number:offset} minutu barru zer ordu izango da"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "{number:offset} ordu barru zer ordu izango da"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "zer ordu izango da {number:offset} minutu igarotzen direnean"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "zer ordu izango da {number:offset} ordu igarotzen direnean"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "esadazu zer ordu izango den {number:offset} ordu igaro ondoren"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "zer ordu markatuko du erlojuak {number:offset} minutu barru"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "kalkulatu zer ordu izango den {number:offset} ordu geroago"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "asteko eguna zein da gaur"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "zein asteegun da gaur"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "zein asteegun gaude gaur"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "zein eguna da astean"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "zein egunean gaude"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "esadazu asteko eguna"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "zein egun da gaur astean"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "asteko zein egunetan gaude gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "esadazu asteko zein egun den gaur"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "urtea egungo"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "zein urte da gaur"}
 {"lang": "eu-ES", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "zein urte da orain"}
@@ -11590,6 +11608,32 @@
 {"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "data {date} jakin-min bat"}
 {"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "egun {date} gertakari bat"}
 {"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "egun {date} jakin-min bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "atzoko egunari buruzko datu bitxi bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "atzoko egunari buruzko gertakari bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "atzoko egunari buruzko jakin-min bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "biharko egunari buruzko datu bitxi bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "biharko egunari buruzko gertakari bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "biharko egunari buruzko jakin-min bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "gaurko egunari buruzko datu bitxi bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "gaurko egunari buruzko gertakari bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "gaurko egunari buruzko jakin-min bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "zer gertatu zen egun honetan"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "zer gertatu zen egun honetan historian"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "zer gertatu zen gaurko egunean"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "zer gertatu zen gaurko egunean historian"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "zer dauka berezia bihar"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "zer dauka berezia gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "eman iezadazu atzoko egunari lotutako jakingarri bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "eman iezadazu biharko egunari lotutako jakingarri bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "eman iezadazu gaurko egunari lotutako jakingarri bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "gaurko egunean zer gauza aipagarri gertatu zen historian"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "gaurko egunean zer gauza interesgarri gertatu zen historian"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "gaurko egunean zer gertaera aipagarri gertatu zen historian"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "gaurko egunean zer gertaera interesgarri gertatu zen historian"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "gaur bezalako egun batean gertatutako zerbait esan iezadazu"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "gaur bezalako egun batean gertatutako zerbait kontatu iezadazu"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "gaur bezalako egun batean izandako zerbait esan iezadazu"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "gaur bezalako egun batean izandako zerbait kontatu iezadazu"}
 {"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "voc", "intent": "math.voc", "text": "matematika"}
 {"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "voc", "intent": "math.voc", "text": "matematiko"}
 {"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "math_trivia.intent", "text": "esan matematika gertakari bat"}
@@ -11613,6 +11657,21 @@
 {"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "zenbakiei buruzko egia bat"}
 {"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "zenbakiei buruzko gertakari bat"}
 {"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "zenbakiei buruzko jakin-min bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "esan {number} zenbakiari buruzko gauza interesgarri bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "esan {number} zenbakiari buruzko gertakari bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "esan {number} zenbakiari buruzko jakin-min bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "kontatu {number} zenbakiari buruzko gauza interesgarri bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "kontatu {number} zenbakiari buruzko gertakari bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "kontatu {number} zenbakiari buruzko jakin-min bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "zer dakizu {number} zenbakiari buruz"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "{number} zenbakiak ezaugarri berezirik al du"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "{number} zenbakiak ezaugarri bitxirik al du"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "{number} zenbakiak propietate berezirik al du"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "{number} zenbakiak propietate bitxirik al du"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "{number} zenbakiaren berezitasun bitxiak"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "{number} zenbakiaren berezitasun interesgarriak"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "{number} zenbakiaren ezaugarri bitxiak"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "{number} zenbakiaren ezaugarri interesgarriak"}
 {"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "voc", "intent": "random.voc", "text": "ausazko"}
 {"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "voc", "intent": "random.voc", "text": "hautazko"}
 {"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "voc", "intent": "year.voc", "text": "urte"}
@@ -11621,6 +11680,40 @@
 {"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "esan {year} urteko jakin-min bat"}
 {"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urteko gertakari bat"}
 {"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urteko jakin-min bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "zer gertatu zen {year} urtean"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "esan {year} urteari buruzko gauza interesgarri bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "esan {year} urteari buruzko gertakari bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "esan {year} urteari buruzko jakin-min bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "kontatu {year} urteari buruzko gauza interesgarri bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "kontatu {year} urteari buruzko gertakari bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "kontatu {year} urteari buruzko jakin-min bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urteari buruz zer dakizu"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "ekarri iezadazu {year} urtearekin lotutako jakingarri bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "eman iezadazu {year} urtearekin lotutako jakingarri bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "zein gertaera aipagarri izan ziren {year} urtean"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "zein gertaera garrantzitsu izan ziren {year} urtean"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urtean munduan gertatutakoak azaldu iezadazu"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urtean munduan gertatutakoak azaldu nahi dizkidazu"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urtean zer gauza aipagarri gertatu ziren"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urtean zer gauza nabarmen gertatu ziren"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urtean zer gertaera aipagarri gertatu ziren"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urtean zer gertaera nabarmen gertatu ziren"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urteko historiaz zerbait esan iezadazu"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urteko historiaz zerbait kontatu iezadazu"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "esango didazu {year} urteari buruzko gertaeraren bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "esango didazu {year} urteari buruzko zerbait"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "kontatuko didazu {year} urteari buruzko gertaeraren bat"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "kontatuko didazu {year} urteari buruzko zerbait"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urteko gertaerak ezagutu nahi ditut"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urteko gertaerak ezagutu nahi nituzke"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urteko gertaerak jakin nahi ditut"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urteko gertaerak jakin nahi nituzke"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urteko jakingarriak ezagutu nahi ditut"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urteko jakingarriak ezagutu nahi nituzke"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urteko jakingarriak jakin nahi ditut"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urteko jakingarriak jakin nahi nituzke"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urteaz ezer badakizu"}
+{"lang": "eu-ES", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "{year} urteaz ezer ezagutzen duzu"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "entzun al didazu?"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "entzun al duzu?"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "entzun al zenidan?"}
@@ -11629,6 +11722,9 @@
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "entzuten al duzu?"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "entzuten al zenidan?"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "entzuten al zenuen?"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "entzun didazu?"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "entzuten didazu?"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "entzun al duzu hori?"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "voc", "intent": "parrot_keyword.voc", "text": "dena errepikatzen"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "voc", "intent": "parrot_keyword.voc", "text": "errepikatzen"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "voc", "intent": "parrot_keyword.voc", "text": "loro"}
@@ -11656,6 +11752,10 @@
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_tts.intent", "text": "zer esan didazu?"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_tts.intent", "text": "zer esan duzu?"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_tts.intent", "text": "zer zen hori?"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_tts.intent", "text": "berriro esan"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_tts.intent", "text": "errepika dezakezu?"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_tts.intent", "text": "errepikatu hori berriz"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_tts.intent", "text": "esan hori beste behin, mesedez"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "errepikatu {sentence}"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "errepikatu {sentence} nire ondoren"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "esan nire ondoren {sentence}"}
@@ -11664,6 +11764,19 @@
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "hitz egin {sentence}"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "hitz egin {sentence} nire ondoren"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "errepikatu nire ondoren {sentence}"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "esan arratsalde on guztioi"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "errepikatu nire ondoren katua mahai gainean dago"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "esan urte berri on"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "esan logura daukat"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "errepikatu autobusa berandu dator"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "esan nire ondoren bat bi hiru lau"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "esan zer moduz zaude gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "esan hotz handia egiten du"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "errepikatu txokolatea gustatzen zait"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "esan gaur astelehena da"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "esan gau on"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "errepikatu ondo izan"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "esan mila esker"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "aktibatu loro-modua"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "errepikatu dena"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "errepikatu entzuten duzun guztia"}
@@ -11672,6 +11785,11 @@
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "hasi loroa"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "loro-modua piztuta"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "loro-moduaren hasiera"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "jarri loro modua martxan"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "aktibatu loroa"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "jarri loroa"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "jarri martxan loro-modua"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "errepikatu nik esaten dudana"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "voc", "intent": "stop_keyword.voc", "text": "-etik"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "voc", "intent": "stop_keyword.voc", "text": "-tik"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "voc", "intent": "stop_keyword.voc", "text": "bertan behera utzi"}
@@ -11701,6 +11819,8 @@
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "stop_parrot.intent", "text": "utzi bertan behera loro-modua"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "stop_parrot.intent", "text": "utzi errepikatzea"}
 {"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "stop_parrot.intent", "text": "utzi loro-modua"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "stop_parrot.intent", "text": "amaitu loro-modua"}
+{"lang": "eu-ES", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "stop_parrot.intent", "text": "ez errepikatu"}
 {"lang": "eu-ES", "skill": "ovos-skill-personal", "file_type": "intent", "intent": "what_are_you.intent", "text": "zer zara zu?"}
 {"lang": "eu-ES", "skill": "ovos-skill-personal", "file_type": "intent", "intent": "when_were_you_born.intent", "text": "noiz asmatu zintuzten?"}
 {"lang": "eu-ES", "skill": "ovos-skill-personal", "file_type": "intent", "intent": "when_were_you_born.intent", "text": "noiz egin zintuzten?"}
@@ -12942,6 +13062,8 @@
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "current_volume.intent", "text": "zenbatean dago bolumena"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "current_volume.intent", "text": "egiaztatu bolumena"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "current_volume.intent", "text": "zein da soinu maila"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "current_volume.intent", "text": "zer mailatan dago soinua"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "current_volume.intent", "text": "zein mailatan dago bolumena"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "increase_volume.intent", "text": "handitu bolumena"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "increase_volume.intent", "text": "igo bolumena"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "increase_volume.intent", "text": "bolumena gora"}
@@ -13017,6 +13139,7 @@
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_level.intent", "text": "itzuli bolumena <level>"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_level.intent", "text": "ezarri bolumena <level> mailan"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_level.intent", "text": "soinua <level>"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_level.intent", "text": "bolumen-maila <level> nahi dut"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_max_boost.intent", "text": "igo bolumena gorenera"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_max_boost.intent", "text": "jarri bolumena erabat gora"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_max_boost.intent", "text": "igo bolumena erabat"}
@@ -13025,6 +13148,10 @@
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_max_boost.intent", "text": "ahalik eta ozenen"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_max_boost.intent", "text": "igo dena"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_max_boost.intent", "text": "jarri soinua gorenera"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_max_boost.intent", "text": "igo bolumena goraino guztiz"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_max_boost.intent", "text": "igo soinua goraino"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_max_boost.intent", "text": "jarri bolumena goraino"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_max_boost.intent", "text": "igo bolumena ahalik eta gehien"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "mututu"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "mututu audioa"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "mututu bolumena"}
@@ -13033,6 +13160,11 @@
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "soinurik ez mesedez"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "kendu audioa"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "isiltasuna mesedez"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "mututu bozgorailua"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "isildu"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "isildu soinua"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "kendu soinua"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "mututu soinua"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "kommutatu audioa"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "kommutatu mututzea"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "aldatu mututze egoera"}
@@ -13041,6 +13173,8 @@
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "kendu edo jarri mututzea"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "aldatu soinua"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "aldatu hori"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "aktibatu edo kendu mututzea"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "mututzea aktibatu edo desaktibatu"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_reset.intent", "text": "berrezarri bolumena"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_reset.intent", "text": "leheneratu bolumena"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_reset.intent", "text": "utzi bolumena lehen bezala"}
@@ -13049,6 +13183,9 @@
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_reset.intent", "text": "bolumen normala mesedez"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_reset.intent", "text": "berrezarri ohiko soinu maila"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_reset.intent", "text": "leheneratu bolumen maila"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_reset.intent", "text": "itzuli bolumena lehengo mailara"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_reset.intent", "text": "jarri bolumena lehen bezala"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_reset.intent", "text": "itzuli soinua lehengora"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_unmute.intent", "text": "desmututu"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_unmute.intent", "text": "desmututu audioa"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_unmute.intent", "text": "desmututu bolumena"}
@@ -13057,6 +13194,10 @@
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_unmute.intent", "text": "utzi isilik egoteari"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_unmute.intent", "text": "berriro entzun nahi zaitut"}
 {"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_unmute.intent", "text": "piztu audioa berriro"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_unmute.intent", "text": "desmututu bozgorailua"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_unmute.intent", "text": "desmututu soinua"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_unmute.intent", "text": "piztu soinua"}
+{"lang": "eu-ES", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_unmute.intent", "text": "piztu berriz audioa"}
 {"lang": "eu-ES", "skill": "ovos-skill-wallpapers", "file_type": "voc", "intent": "abandoned_porn.voc", "text": "abandoned porn"}
 {"lang": "eu-ES", "skill": "ovos-skill-wallpapers", "file_type": "voc", "intent": "abandoned_porn.voc", "text": "abandonedporn"}
 {"lang": "eu-ES", "skill": "ovos-skill-wallpapers", "file_type": "voc", "intent": "ad_porn.voc", "text": "ad porn"}
@@ -13631,70 +13772,16 @@
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "humidity.intent", "text": "esan hezetasun maila gaur {location}"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "humidity.intent", "text": "esan hezetasun maila bihar"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "humidity.intent", "text": "esan hezetasun maila bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "humidity.intent", "text": "zein da hezetasun maila gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "humidity.intent", "text": "zein da hezetasun maila orain"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "humidity.intent", "text": "hezetasun maila"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "humidity.intent", "text": "hezetasun maila {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "humidity.intent", "text": "hezetasun handia dago"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "humidity.intent", "text": "hezetasun handia dago {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "humidity.intent", "text": "airea lehorra dago"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "humidity.intent", "text": "airea lehorra dago {location}"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "humidity.voc", "text": "heze"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "humidity.voc", "text": "hezetasun"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotza egingo du bihar"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotza egingo du bihar {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotza egingo du gaur"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotza egingo du gaur {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotza egingo du {day} egunean"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotza egingo du {day} egunean {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotza dago kanpoan orain"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotza dago kanpoan orain {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "freskoa egingo du bihar"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "freskoa egingo du bihar {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "freskoa egingo du gaur"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "freskoa egingo du gaur {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "berokia behar dut gaur"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "berokia behar dut gaur {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "beroa egingo du bihar"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "beroa egingo du bihar {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "beroa egingo du gaur"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "beroa egingo du gaur {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "beroa egingo du {day} egunean"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "beroa egingo du {day} egunean {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "beroa dago kanpoan orain"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "beroa dago kanpoan orain {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero handia egingo du gaur"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero handia egingo du gaur {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "eguzkitako krema behar dut gaur"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "eguzkitako krema behar dut gaur {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero egingo du"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero egingo du {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero egingo du gaur"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero egingo du gaur {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero egingo du bihar"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero egingo du bihar {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero dago"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero dago {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero dago gaur"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero dago gaur {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero dago bihar"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero dago bihar {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero espero da"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero espero da {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero espero da gaur"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero espero da gaur {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero espero da bihar"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "bero espero da bihar {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotz egingo du"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotz egingo du {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotz egingo du gaur"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotz egingo du gaur {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotz egingo du bihar"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotz egingo du bihar {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotz dago"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotz dago {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotz dago gaur"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotz dago gaur {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotz dago bihar"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotz dago bihar {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotz espero da"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotz espero da {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotz espero da gaur"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotz espero da gaur {location}"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotz espero da bihar"}
-{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hotz espero da bihar {location}"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haizea dago orain"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haizea dago orain {location}"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "zenbaterainokoa da haizearen indarra"}
@@ -13713,6 +13800,28 @@
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "zenbat haize espero da gaur {location}"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "zenbat haize espero da bihar"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "zenbat haize espero da bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haize boladak egongo dira bihar"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haize boladak egongo dira gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haize boladak izango dira bihar"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haize boladak izango dira gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haizea dabil"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haizea dabil {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "zenbat haize dago"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "zenbat haize dago {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haize handia egingo du bihar"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haize handia egingo du bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haize handia egingo du gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haize handia egingo du gaur {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haizerik dabil"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haizerik dabil {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haize handia dabil"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haize handia dabil {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haizea dabil kanpoan"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haizea dabil kanpoan {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haizerik ba al dabil"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haizerik ba al dabil {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haize asko dago"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "haize asko dago {location}"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "later.voc", "text": "geroago"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "later.voc", "text": "hurrengo ordu gutxitan"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "later.voc", "text": "hurrengo ordu parea"}
@@ -13765,6 +13874,13 @@
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "esan noiz egingo duen euria gaur {location}"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "esan noiz egingo duen euria bihar"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "esan noiz egingo duen euria bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "noiz botako du euria hurrengoan"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "noiz egingo du euria hurrengoan"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "euria egingo al du laster"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "hurrengo euria noiz da"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "hurrengo euria noiz da {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "zenbat falta da euria egiteko"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "zenbat falta da euria egiteko {location}"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "number_days.voc", "text": "2 egun"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "number_days.voc", "text": "3 egun"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "number_days.voc", "text": "4 egun"}
@@ -13916,6 +14032,12 @@
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunrise.intent", "text": "esan eguzki-irteeraren ordua gaur {location}"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunrise.intent", "text": "esan eguzki-irteeraren ordua bihar"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunrise.intent", "text": "esan eguzki-irteeraren ordua bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunrise.intent", "text": "noiz aterako da eguzkia"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunrise.intent", "text": "noiz aterako da eguzkia {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunrise.intent", "text": "zer ordutan da egunsentia"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunrise.intent", "text": "zer ordutan da egunsentia {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunrise.intent", "text": "noiz argituko du"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunrise.intent", "text": "noiz argituko du {location}"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunrise.voc", "text": "argitu"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunrise.voc", "text": "egunsenti"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunrise.voc", "text": "goizalde"}
@@ -13935,6 +14057,14 @@
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunset.intent", "text": "esan ilunabarraren ordua gaur {location}"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunset.intent", "text": "esan ilunabarraren ordua bihar"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunset.intent", "text": "esan ilunabarraren ordua bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunset.intent", "text": "noiz sartuko da eguzkia bihar"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunset.intent", "text": "noiz sartuko da eguzkia gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunset.intent", "text": "noiz sartuko da eguzkia"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunset.intent", "text": "noiz sartuko da eguzkia {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunset.intent", "text": "zer ordutan da ilunabarra"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunset.intent", "text": "zer ordutan da ilunabarra {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunset.intent", "text": "noiz ilunduko du"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunset.intent", "text": "noiz ilunduko du {location}"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunset.voc", "text": "arrats"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunset.voc", "text": "ilunabar"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "zenbat gradu daude orain"}
@@ -13995,6 +14125,95 @@
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "zer tenperatura izango dugu gaur {location}"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "zer tenperatura izango dugu bihar"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "zer tenperatura izango dugu bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "tenperatura"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "tenperatura {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "zein izango da tenperatura altuena"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "zein izango da tenperatura altuena {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "zein izango da tenperatura baxuena"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "zein izango da tenperatura baxuena {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "zenbat gradu egingo ditu bihar"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "zenbat gradu egingo ditu bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "zenbat gradu egiten du une honetan"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "zenbat gradu egiten du une honetan {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotza egingo du bihar"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotza egingo du bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotza egingo du gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotza egingo du gaur {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotza egingo du {day} egunean"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotza egingo du {day} egunean {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotza dago kanpoan orain"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotza dago kanpoan orain {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "freskoa egingo du bihar"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "freskoa egingo du bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "freskoa egingo du gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "freskoa egingo du gaur {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "berokia behar dut gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "berokia behar dut gaur {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "beroa egingo du bihar"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "beroa egingo du bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "beroa egingo du gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "beroa egingo du gaur {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "beroa egingo du {day} egunean"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "beroa egingo du {day} egunean {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "beroa dago kanpoan orain"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "beroa dago kanpoan orain {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero handia egingo du gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero handia egingo du gaur {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "eguzkitako krema behar dut gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "eguzkitako krema behar dut gaur {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero egingo du"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero egingo du {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero egingo du gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero egingo du gaur {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero egingo du bihar"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero egingo du bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero dago"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero dago {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero dago gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero dago gaur {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero dago bihar"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero dago bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero espero da"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero espero da {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero espero da gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero espero da gaur {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero espero da bihar"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero espero da bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz egingo du"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz egingo du {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz egingo du gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz egingo du gaur {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz egingo du bihar"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz egingo du bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz dago"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz dago {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz dago gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz dago gaur {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz dago bihar"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz dago bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz espero da"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz espero da {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz espero da gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz espero da gaur {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz espero da bihar"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz espero da bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotzegi dago gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotzegi dago kalera ateratzeko"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotzegi egiten du gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotzegi egiten du kalera ateratzeko"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero egiten du kanpoan"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "bero egiten du kanpoan {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "berokia behar dut"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz egiten du orain"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz egiten du orain {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotza dago kalean"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotza dago kalean {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz handia dago"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz handia dago {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz dago kanpoan"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz dago kanpoan {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz egiten du"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hotz egiten du {location}"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "temperature.voc", "text": "tenp"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "temperature.voc", "text": "tenperatura"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "thunderstorm.voc", "text": "ekaitza"}
@@ -14124,6 +14343,15 @@
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "jakin nahi dut iragarpena gaur {location}"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "jakin nahi dut iragarpena bihar"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "jakin nahi dut iragarpena bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "zer eguraldi egingo du aste honetan"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "zer eguraldi egingo du aste honetan {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "zer eguraldi egingo du asteburuan"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "zer eguraldi egingo du asteburuan {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "zer eguraldi egingo du bihar"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "zer eguraldi egingo du bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "eman iezadazu eguraldiaren iragarpena"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "eman iezadazu eguraldiaren iragarpena {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "nolako eguraldia dago"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "weather.voc", "text": "eguraldi"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "dago eguzkitsu"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "dago eguzkitsu gaur"}
@@ -14477,6 +14705,12 @@
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "katiuskak hartu beharko nituzke"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "kontuz ibili behar al dut euri-jasekin"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "zira hartu behar al dut"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "lainotuta egongo da bihar"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "lainotuta egongo da bihar {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "lainotuta egongo da gaur"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "lainotuta egongo da gaur {location}"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "eguzkia ikusten da"}
+{"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "eguzkia ikusten da {location}"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "week.voc", "text": "aste"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "week.voc", "text": "astero"}
 {"lang": "eu-ES", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "weekend.voc", "text": "asteburu"}

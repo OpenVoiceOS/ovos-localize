@@ -3091,6 +3091,8 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "voeg {items} toe aan mijn {list_name} lijst"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "zet {items} op mijn {list_name}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "zet {items} op {list_name}"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "schrijf brood en boter op het boodschappenbriefje"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "add_list_subitems.intent", "text": "noteer nog een punt op mijn takenlijst"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "alarm.voc", "text": "maak me wakker"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "alarm.voc", "text": "maak mij wakker"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "alarm.voc", "text": "wekker"}
@@ -3122,6 +3124,8 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "calendar_list.intent", "text": "toon me de beschikbare kalenderopties"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "calendar_list.intent", "text": "toon me de kalenderkeuzes"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "calendar_list.intent", "text": "toon me de kalenderopties"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "calendar_list.intent", "text": "welke agenda's staan er in mijn online account om uit te kiezen"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "calendar_list.intent", "text": "laat me de verschillende kalenders zien die ik kan gebruiken"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "cancel.voc", "text": "annuleren"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "cancel.voc", "text": "gooi weg"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "cancel.voc", "text": "negeer"}
@@ -3197,6 +3201,8 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "stop mijn {alertkind} voor {name}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "verwijder mijn {alertkind} voor {name}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "wis mijn {alertkind} voor {name}"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "stop de timer die ik net heb gestart en haal hem weg"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "cancel_alert.intent", "text": "de wekker voor morgenochtend hoef ik niet meer, schrap hem"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "change.voc", "text": "pas aan"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "change.voc", "text": "plan opnieuw"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "change.voc", "text": "stel uit"}
@@ -3210,24 +3216,32 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_media_properties.intent", "text": "wijzig het geluid van mijn {schedkind} naar {mediakind}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_media_properties.intent", "text": "wijzig het alarm van de {schedkind} naar {mediaform}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_media_properties.intent", "text": "ik wil dat mijn volgende {schedkind} mijn {mediakind} afspeelt"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_media_properties.intent", "text": "in plaats van piepen moet mijn wekker muziek laten horen"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_media_properties.intent", "text": "laat mijn alarm een opname afspelen als het afgaat"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_priority.intent", "text": "wijzig de prioriteit van mijn {schedkind} naar {number:priority}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_priority.intent", "text": "verhoog de prioriteit van de {schedkind} naar niveau {number:priority}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_priority.intent", "text": "pas de prioriteit van mijn volgende {schedkind} aan"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_priority.intent", "text": "zet de {schedkind} op prioriteit {number:priority}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_priority.intent", "text": "verlaag de prioriteit van mijn {schedkind}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_priority.intent", "text": "wijzig het prioriteitsniveau van de {schedkind} naar {number:priority}"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_priority.intent", "text": "geef mijn volgende herinnering een hogere belangrijkheid"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_priority.intent", "text": "de herinnering van morgen is minder dringend dan de andere"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_repeat.intent", "text": "wijzig de herhaling van mijn {schedkind} naar elke {repeat}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_repeat.intent", "text": "laat mijn {schedkind} elke {repeat} herhalen"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_repeat.intent", "text": "pas de frequentie van de {schedkind} aan naar {repeat}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_repeat.intent", "text": "wijzig mijn volgende {schedkind} zodat hij {repeat} herhaalt"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_repeat.intent", "text": "ik wil dat de {schedkind} elke {repeat} terugkeert"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_repeat.intent", "text": "wijzig de herhaling van mijn {schedkind} naar {repeat}"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_repeat.intent", "text": "laat mijn wekker op iedere werkdag terugkomen"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_repeat.intent", "text": "deze herinnering moet zich elke maandag herhalen"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "wijzig de duur van mijn {schedkind} naar {duration:duration}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "verleng mijn {schedkind} tot {duration:duration}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "pas de lengte van de volgende {schedkind} aan naar {duration:duration}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "laat de {schedkind} duren gedurende {duration:duration}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "wijzig mijn {schedkind} zodat hij tot {duration:duration} loopt"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "verkort de duur van mijn {schedkind} naar {duration:duration}"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "de beltoon van mijn wekker moet langer doorgaan"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "laat het alarm drie in plaats van één minuut rinkelen"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "choice.voc", "text": "beschikbare"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "choice.voc", "text": "keuze"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "choice.voc", "text": "kies"}
@@ -3274,6 +3288,8 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_alarm.intent", "text": "wek me met {mediakind} om {date:time}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_alarm.intent", "text": "wek me over {duration:duration}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_alarm.intent", "text": "wek me elke {days} om {date:time}"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_alarm.intent", "text": "ik wil morgen vroeg door een wekker gewekt worden"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_alarm.intent", "text": "programmeer een wekker voor zeven uur morgen"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_event.intent", "text": "maak een afspraak"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_event.intent", "text": "maak een afspraak toe"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_event.intent", "text": "maak een afspraak toe {event}"}
@@ -3300,6 +3316,8 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_event.intent", "text": "voeg een evenement {event}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_event.intent", "text": "nieuwe afspraak"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_event.intent", "text": "nieuwe afspraak {event}"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_event.intent", "text": "noteer een doktersafspraak in mijn kalender"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_event.intent", "text": "voeg donderdag een werkoverleg toe aan de kalender"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_list.intent", "text": "maak een lijst"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_list.intent", "text": "maak een lijst genaamd {list_name}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_list.intent", "text": "maak een nieuwe lijst"}
@@ -3314,6 +3332,8 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_list.intent", "text": "maak een {list_name} lijst"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_list.intent", "text": "start een nieuwe {list_name} lijst"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_list.intent", "text": "start een {list_name} lijst"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_list.intent", "text": "begin een nieuwe lijst voor de weekboodschappen"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_list.intent", "text": "maak een lege lijst aan die ik later invul"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "maak een herinnering"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "maak een herinnering om {date:time}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "maak een herinnering om {reminder}"}
@@ -3380,12 +3400,16 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "herinner me over {duration:duration} aan {reminder}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "herinner mij over {duration:duration}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "herinner mij over {duration:duration} aan {reminder}"}
-{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder_recurring.intent", "text": "herinner me eraan elke doordeweekse ochtend om 8 uur naar mijn werk te gaan"}
-{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder_recurring.intent", "text": "herinner me elke doordeweekse ochtend om 8 uur aan mijn medicijnen"}
-{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder_recurring.intent", "text": "herinner me eraan elke doordeweekse ochtend om 7 uur de hond uit te laten"}
-{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder_recurring.intent", "text": "herinner me eraan elke doordeweekse ochtend om 9 uur mijn mail te checken"}
-{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder_recurring.intent", "text": "herinner me eraan elke doordeweekse avond om 6 uur mijn moeder te bellen"}
-{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder_recurring.intent", "text": "herinner me eraan elke weekendochtend om 8 uur de planten water te geven"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "laat me vanmiddag weten dat ik de loodgieter moet bellen"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "denk eraan me aan mijn sleutels te herinneren voordat ik vertrek"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "herinner me eraan elke doordeweekse ochtend om 8 uur naar mijn werk te gaan"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "herinner me elke doordeweekse ochtend om 8 uur aan mijn medicijnen"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "herinner me eraan elke doordeweekse ochtend om 7 uur de hond uit te laten"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "herinner me eraan elke doordeweekse ochtend om 9 uur mijn mail te checken"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "herinner me eraan elke doordeweekse avond om 6 uur mijn moeder te bellen"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "herinner me eraan elke weekendochtend om 8 uur de planten water te geven"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "zeg me iedere werkdagochtend dat ik mijn vitamines moet nemen"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_reminder.intent", "text": "herinner me elke zondagavond eraan het oud papier buiten te zetten"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "maak een timer"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "maak een timer voor {duration:duration}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "start een timer"}
@@ -3400,12 +3424,16 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "start timers"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "ik heb timer"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "maak timer"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "tel vanaf nu vijf minuten af voor de pasta"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "create_timer.intent", "text": "start een eierwekker van een kwartier voor de taart"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "kun je de {davkind} synchroniseren"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "synchroniseer mijn {davkind} nu"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "download de {davkind}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "upload mijn {davkind}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "synchroniseer al mijn {davkind}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "synchroniseer de {davkind} en de {davkind2}"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "stem mijn agenda af met de online server"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "dav_sync.intent", "text": "haal de nieuwigheden van mijn kalender van internet"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "days.voc", "text": "dinsdag"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "days.voc", "text": "dinsdagen"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "days.voc", "text": "donderdag"}
@@ -3445,6 +3473,16 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "verwijder mijn {list_name} lijst"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "wis de {list_name} lijst"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "wis mijn {list_name} lijst"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "verwijder het boodschappenlijstje definitief van het apparaat"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "de cadeaulijst gebruik ik niet meer, wis hem helemaal"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "verwijder mijn to do"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "verwijder mijn to do-lijst"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "verwijder mijn todo"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "verwijder mijn todo-lijst"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "wis mijn to do"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "wis mijn to do-lijst"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "wis mijn todo"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list.intent", "text": "wis mijn todo-lijst"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "verwijder alles uit de lijst"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "verwijder alles uit de lijst {list_name}"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "verwijder alles uit mijn lijst"}
@@ -3493,16 +3531,10 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "wis de items uit mijn {list_name} lijst"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "wis de items van de {list_name} lijst"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "wis de items van mijn {list_name} lijst"}
-{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "verwijder mijn {list_name} lijst"}
-{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "wis mijn {list_name} lijst"}
-{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "verwijder mijn to do"}
-{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "verwijder mijn to do-lijst"}
-{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "verwijder mijn todo"}
-{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "verwijder mijn todo-lijst"}
-{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "wis mijn to do"}
-{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "wis mijn to do-lijst"}
-{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "wis mijn todo"}
-{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "wis mijn todo-lijst"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "leeg mijn to do"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "leeg mijn to do-lijst"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "leeg mijn todo"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "leeg mijn todo-lijst"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "verwijder alles uit mijn to do"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "verwijder alles uit mijn to do-lijst"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "verwijder alles uit mijn todo"}
@@ -3519,6 +3551,8 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "wis alles van mijn to do-lijst"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "wis alles van mijn todo"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "wis alles van mijn todo-lijst"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "haal alle punten van het boodschappenlijstje zonder het te verwijderen"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "delete_list_entries.intent", "text": "ruim de inhoud van mijn takenlijst op maar houd de lijst"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "dismiss.voc", "text": "oké"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "dismiss.voc", "text": "annuleer"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "dismiss.voc", "text": "annuleer alarm"}
@@ -3622,6 +3656,8 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "wat heb ik gepland"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "wat heb ik ingesteld"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "wat heb ik opgeslagen"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "heb je voor morgenochtend wekkers gepland staan"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "list_alerts.intent", "text": "som alle herinneringen op die deze week gepland zijn"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "media.voc", "text": "audio"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "media.voc", "text": "audioboek"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "media.voc", "text": "muziek"}
@@ -3685,6 +3721,8 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "zijn er waarschuwing die ik gemist heb?"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "zijn er wekker die ik gemist heb?"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "zijn er wekkers die ik gemist heb?"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "is er iets afgegaan terwijl ik boodschappen aan het doen was"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "missed_alerts.intent", "text": "heb ik in de loop van de dag een melding gemist"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "next.voc", "text": "volgende"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "no.voc", "text": "geen"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "no.voc", "text": "nah"}
@@ -3823,6 +3861,8 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_entries.intent", "text": "wat staat er op mijn todo-lijst"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_entries.intent", "text": "wat moet ik doen"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_entries.intent", "text": "wat moet ik nog doen"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_entries.intent", "text": "wat is er op het boodschappenbriefje genoteerd"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_entries.intent", "text": "lees de inhoud van mijn takenlijst hardop voor"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_names.intent", "text": "welke lijsten heb ik"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_names.intent", "text": "welke lijsten zijn er"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_names.intent", "text": "lees al mijn lijsten"}
@@ -3841,6 +3881,8 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_names.intent", "text": "toon me mijn opgeslagen lijsten"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_names.intent", "text": "toon mijn lijsten"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_names.intent", "text": "toon mijn opgeslagen lijsten"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_names.intent", "text": "hoe heet elk van mijn opgeslagen lijsten"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "query_list_names.intent", "text": "geef de titels van alle lijsten die je voor mij bewaart"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "question.voc", "text": "zou je"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "question.voc", "text": "zou je moeten"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "remaining.voc", "text": "beëindig"}
@@ -3930,6 +3972,8 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zet de {schedkind} later"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zet mijn {schedkind} eerder"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "zet mijn {schedkind} later"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "verschuif de afspraak van morgen naar drie uur 's middags"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "reschedule_alert.intent", "text": "mijn wekker moet een half uur later afgaan"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "script.voc", "text": "bestand"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "script.voc", "text": "routine"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "script.voc", "text": "script"}
@@ -4013,6 +4057,8 @@
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "wanneer loopt de {timerkind} klaar"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "wanneer loopt mijn {timerkind} af"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "wanneer loopt mijn {timerkind} klaar"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "hoeveel minuten blijven er over tot de eierwekker klaar is"}
+{"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "timer_status.intent", "text": "hoe ver is het aftellen dat ik heb gestart"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "todo.voc", "text": "opmerkingen"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "todo.voc", "text": "memo"}
 {"lang": "nl-NL", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "todo.voc", "text": "memo's"}
@@ -4837,7 +4883,6 @@
 {"lang": "nl-NL", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "start script {script}"}
 {"lang": "nl-NL", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "voer uit commando {script}"}
 {"lang": "nl-NL", "skill": "ovos-skill-cmd", "file_type": "intent", "intent": "run_script_command.intent", "text": "voer uit script {script}"}
-{"lang": "nl-NL", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color.intent", "text": "welke kleur is {requested_color}"}
 {"lang": "nl-NL", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_hex.intent", "text": "welke kleur heeft een hexadecimale code van {hex_code}"}
 {"lang": "nl-NL", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_hex.intent", "text": "welke kleur is de hex code {hex_code}"}
 {"lang": "nl-NL", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_hex.intent", "text": "welke kleur is de hex {hex_code}"}
@@ -4853,6 +4898,7 @@
 {"lang": "nl-NL", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_name.intent", "text": "hoe ziet kleur {color} eruit"}
 {"lang": "nl-NL", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_name.intent", "text": "vertel me over de kleur {color}"}
 {"lang": "nl-NL", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_name.intent", "text": "vertel me over kleur {color}"}
+{"lang": "nl-NL", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_name.intent", "text": "welke kleur is {color}"}
 {"lang": "nl-NL", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_rgb.intent", "text": "welke kleur heeft de rgb waarde van {rgb}"}
 {"lang": "nl-NL", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_rgb.intent", "text": "welke kleur heeft een rgb waarde van {rgb}"}
 {"lang": "nl-NL", "skill": "ovos-skill-color-picker", "file_type": "intent", "intent": "request_color_by_rgb.intent", "text": "welke kleur is rgb waarde {rgb}"}
@@ -10170,112 +10216,6 @@
 {"lang": "nl-NL", "skill": "ovos-skill-count", "file_type": "voc", "intent": "ordinal.voc", "text": "rangtelwoorden"}
 {"lang": "nl-NL", "skill": "ovos-skill-count", "file_type": "voc", "intent": "short_scale.voc", "text": "korte schaal"}
 {"lang": "nl-NL", "skill": "ovos-skill-count", "file_type": "voc", "intent": "short_scale.voc", "text": "de korte schaal"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "hoeveelste is het in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "hoeveelste is het vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "welke datum is het eigenlijk"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "welke datum is het in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "welke datum is het momenteel"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "welke datum is het op dit moment"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "welke datum is het vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "welke datum hebben we"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "welke datum hebben we vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "welke dag is het in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "welke dag is het vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "welke dag van de week is het nu in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "welke dag van de week is het vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat voor dag is het"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat voor dag is het nu"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat voor dag is het nu in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat voor dag is het vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat voor dag is het vandaag in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat is de datum van vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat is de datum van vandaag in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat is de volledige datum in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat is de volledige datum van vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "welke dag, maand en jaar is het in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "welke dag, maand en jaar is het vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "welke dag en maand is het vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "welke dag en maand is het vandaag in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "in welk jaar en welke maand zitten we"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "in welk jaar en welke maand zitten we vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat is de exacte datum in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat is de exacte datum van vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "datum vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "datum vandaag alsjeblieft"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "datum in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "datum in {location} alsjeblieft"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "huidige datum"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "huidige datum in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "exacte datum"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "exacte datum vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "toon de exacte datum in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "toon de huidige datum in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "laat de datum van vandaag zien"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "laat de datum van vandaag zien in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "laat de datum zien"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "laat de datum zien in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "geef de datum in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "geef de datum van vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat staat er op de kalender"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat staat er op de kalender in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat staat er vandaag op de kalender"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat staat er vandaag op de kalender in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "neem me niet kwalijk wat is de datum"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "neem me niet kwalijk wat is de datum vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "pardon wat is de datum"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "pardon wat is de datum vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "sorry wat is de datum"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "sorry wat is de datum vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat is de datum ook alweer"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat is de datum vandaag ook alweer"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "de hoeveelste is het vandaag ook alweer"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "welke datum hebben we vandaag ook alweer"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "welke dag is het vandaag ook alweer"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "ik ben de datum kwijt, welke is het"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "ik ben de datum kwijt, welke is het vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "op welke datum zitten we in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "op welke datum zitten we vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "op welke dag van de maand zitten we"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "op welke dag van de maand zitten we vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "op welke dag zitten we"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "op welke dag zitten we vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "op de hoeveelste zitten we vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "welke datum schrijven we vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat schrijven we vandaag voor datum"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "mag ik wat de datum van vandaag is"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "mag ik wat de datum van vandaag is in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "mag ik weten wat de datum van vandaag is"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "mag ik weten wat de datum van vandaag is in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "heb je de datum voor mij in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "heb je de datum voor mij van vandaag"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "ik wil de datum van vandaag weten"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "ik wil de datum van vandaag weten in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "ik wil de datum weten"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "ik wil de datum weten in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "ik wil graag de datum van vandaag weten"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "ik wil graag de datum van vandaag weten in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "ik wil graag de datum weten"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "ik wil graag de datum weten in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "ik moet de datum van vandaag weten"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "ik moet de datum van vandaag weten in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "ik moet de datum weten"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "ik moet de datum weten in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "ik zoek de exacte datum"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "ik zoek de huidige datum"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "kun je me zeggen welke datum het is"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "kun je me zeggen welke datum het is in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "kun je me zeggen op welke datum we vandaag zitten"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "kun je de datum van vandaag vertellen"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "kun je de datum van vandaag vertellen voor {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "zou je me de datum kunnen vertellen"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "zou je me de datum kunnen vertellen in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "weet je of welke datum het vandaag is"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "weet je of welke datum het vandaag is in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "weet je welke datum het vandaag is"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "weet je welke datum het vandaag is in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "weet jij welke dag het vandaag is"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "weet jij welke dag het vandaag is in {location}"}
-{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "current_date.intent", "text": "wat is de datum"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_future_weekend.intent", "text": "kun je de data doorgeven voor het aankomende weekend?"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_future_weekend.intent", "text": "kun je de data van het komende weekend doorgeven?"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "date_future_weekend.intent", "text": "kun je mij de data van het komende weekend vertellen?"}
@@ -10420,6 +10360,11 @@
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "hoeveel dagen zijn er nog tot {date}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "hoe lang duurt het nog tot {date}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "hoeveel dagen tot {date}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "hoeveel dagen zitten er tussen {start} en {end}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "tel de dagen tussen {start} en {end}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "hoe groot is het verschil in dagen tussen {start} en {end}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "reken uit hoeveel dagen er tussen {start} en {end} liggen"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "bereken het aantal dagen van {start} tot {end}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "op welke dag van de week valt {date}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "op welke dag van de week valt {date} alsjeblieft"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "welke dag is {date}"}
@@ -10430,12 +10375,122 @@
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "is {date} een {weekday}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "was {date} een {weekday}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "wordt {date} een {weekday}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "klopt het dat {date} op een {weekday} valt"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "de hoeveelste is het vandaag"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "de hoeveelste is het vandaag alsjeblieft"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke dag van de maand is het vandaag"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "vertel me de hoeveelste het is"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat is de datum van vandaag in de maand"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke dag van de maand is het vandaag in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "zeg me de hoeveelste van de maand het vandaag is"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "op welke dag van de maand zitten we vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "herinner me eraan welke dag van de maand het is"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "hoeveelste is het in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "hoeveelste is het vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke datum is het eigenlijk"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke datum is het in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke datum is het momenteel"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke datum is het op dit moment"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke datum is het vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke datum hebben we"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke datum hebben we vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke dag is het in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke dag is het vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke dag van de week is het nu in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke dag van de week is het vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat voor dag is het"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat voor dag is het nu"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat voor dag is het nu in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat voor dag is het vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat voor dag is het vandaag in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat is de datum van vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat is de datum van vandaag in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat is de volledige datum in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat is de volledige datum van vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke dag, maand en jaar is het in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke dag, maand en jaar is het vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke dag en maand is het vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke dag en maand is het vandaag in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "in welk jaar en welke maand zitten we"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "in welk jaar en welke maand zitten we vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat is de exacte datum in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat is de exacte datum van vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "datum vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "datum vandaag alsjeblieft"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "datum in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "datum in {location} alsjeblieft"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "huidige datum"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "huidige datum in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "exacte datum"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "exacte datum vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "toon de exacte datum in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "toon de huidige datum in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "laat de datum van vandaag zien"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "laat de datum van vandaag zien in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "laat de datum zien"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "laat de datum zien in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "geef de datum in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "geef de datum van vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat staat er op de kalender"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat staat er op de kalender in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat staat er vandaag op de kalender"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat staat er vandaag op de kalender in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "neem me niet kwalijk wat is de datum"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "neem me niet kwalijk wat is de datum vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "pardon wat is de datum"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "pardon wat is de datum vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "sorry wat is de datum"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "sorry wat is de datum vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat is de datum ook alweer"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat is de datum vandaag ook alweer"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "de hoeveelste is het vandaag ook alweer"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke datum hebben we vandaag ook alweer"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke dag is het vandaag ook alweer"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "ik ben de datum kwijt, welke is het"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "ik ben de datum kwijt, welke is het vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "op welke datum zitten we in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "op welke datum zitten we vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "op welke dag van de maand zitten we"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "op welke dag zitten we"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "op welke dag zitten we vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "op de hoeveelste zitten we vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "welke datum schrijven we vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat schrijven we vandaag voor datum"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "mag ik wat de datum van vandaag is"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "mag ik wat de datum van vandaag is in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "mag ik weten wat de datum van vandaag is"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "mag ik weten wat de datum van vandaag is in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "heb je de datum voor mij in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "heb je de datum voor mij van vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "ik wil de datum van vandaag weten"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "ik wil de datum van vandaag weten in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "ik wil de datum weten"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "ik wil de datum weten in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "ik wil graag de datum van vandaag weten"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "ik wil graag de datum van vandaag weten in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "ik wil graag de datum weten"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "ik wil graag de datum weten in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "ik moet de datum van vandaag weten"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "ik moet de datum van vandaag weten in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "ik moet de datum weten"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "ik moet de datum weten in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "ik zoek de exacte datum"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "ik zoek de huidige datum"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "kun je me zeggen welke datum het is"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "kun je me zeggen welke datum het is in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "kun je me zeggen op welke datum we vandaag zitten"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "kun je de datum van vandaag vertellen"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "kun je de datum van vandaag vertellen voor {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "zou je me de datum kunnen vertellen"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "zou je me de datum kunnen vertellen in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "weet je of welke datum het vandaag is"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "weet je of welke datum het vandaag is in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "weet je welke datum het vandaag is"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "weet je welke datum het vandaag is in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "weet jij welke dag het vandaag is"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "weet jij welke dag het vandaag is in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "wat is de datum"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "geef me de datum van vandaag"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "welke maand is het"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "welke maand is het alsjeblieft"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_month_is_it.intent", "text": "in welke maand zitten we"}
@@ -10512,6 +10567,7 @@
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "wat zegt de klok?"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "weet je hoe laat het is"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "weet je hoe laat het is in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_is_it.intent", "text": "zeg me hoe laat het nu is"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "hoe laat is het over {number:offset} minuten?"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "hoe laat is het over {number:offset} uur vanaf nu?"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "hoe laat is het over {number:offset} minuten"}
@@ -10542,11 +10598,16 @@
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "wanneer zal het {number:offset} uur zijn"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "wanneer zijn het {number:offset} minuten in {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "wanneer zijn het {number:offset} seconden"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "hoe laat zal het zijn na {number:offset} uur"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "welke tijd geeft de klok aan over {number:offset} minuten"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "reken uit hoe laat het over {number:offset} uur is"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "welke dag van de week is het vandaag"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "welke dag van de week is het vandaag alsjeblieft"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "welke dag is het vandaag"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "in welke weekdag zitten we"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "vertel me welke dag van de week het is"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "zeg me welke weekdag het vandaag is"}
+{"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "herinner me welke dag van de week het vandaag is"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "welk jaar is het"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "welk jaar is het alsjeblieft"}
 {"lang": "nl-NL", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "in welk jaar zitten we"}
@@ -15809,6 +15870,83 @@
 {"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "weetje over november {date}"}
 {"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "weetje over oktober {date}"}
 {"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "weetje over september {date}"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een feitje over {date} april"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een feitje over {date} augustus"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een feitje over {date} december"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een feitje over {date} februari"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een feitje over {date} januari"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een feitje over {date} juli"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een feitje over {date} juni"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een feitje over {date} maart"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een feitje over {date} mei"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een feitje over {date} november"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een feitje over {date} oktober"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een feitje over {date} september"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een weetje over {date} april"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een weetje over {date} augustus"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een weetje over {date} december"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een weetje over {date} februari"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een weetje over {date} januari"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een weetje over {date} juli"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een weetje over {date} juni"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een weetje over {date} maart"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een weetje over {date} mei"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een weetje over {date} november"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een weetje over {date} oktober"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "geef me een weetje over {date} september"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een feitje over {date} april"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een feitje over {date} augustus"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een feitje over {date} december"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een feitje over {date} februari"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een feitje over {date} januari"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een feitje over {date} juli"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een feitje over {date} juni"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een feitje over {date} maart"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een feitje over {date} mei"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een feitje over {date} november"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een feitje over {date} oktober"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een feitje over {date} september"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een weetje over {date} april"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een weetje over {date} augustus"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een weetje over {date} december"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een weetje over {date} februari"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een weetje over {date} januari"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een weetje over {date} juli"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een weetje over {date} juni"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een weetje over {date} maart"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een weetje over {date} mei"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een weetje over {date} november"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een weetje over {date} oktober"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "vertel me een weetje over {date} september"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat gebeurde er op {date} april"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat gebeurde er op {date} augustus"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat gebeurde er op {date} december"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat gebeurde er op {date} februari"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat gebeurde er op {date} januari"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat gebeurde er op {date} juli"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat gebeurde er op {date} juni"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat gebeurde er op {date} maart"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat gebeurde er op {date} mei"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat gebeurde er op {date} november"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat gebeurde er op {date} oktober"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat gebeurde er op {date} september"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat is er gebeurd op {date} april"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat is er gebeurd op {date} augustus"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat is er gebeurd op {date} december"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat is er gebeurd op {date} februari"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat is er gebeurd op {date} januari"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat is er gebeurd op {date} juli"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat is er gebeurd op {date} juni"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat is er gebeurd op {date} maart"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat is er gebeurd op {date} mei"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat is er gebeurd op {date} november"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat is er gebeurd op {date} oktober"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat is er gebeurd op {date} september"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat is er op deze dag in de geschiedenis gebeurd"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat is er vandaag in de geschiedenis gebeurd"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat is er speciaal aan deze dag"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat is er speciaal aan morgen"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "date_trivia.intent", "text": "wat is er speciaal aan vandaag"}
 {"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "voc", "intent": "math.voc", "text": "wiskunde"}
 {"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "voc", "intent": "math.voc", "text": "wiskundig"}
 {"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "math_trivia.intent", "text": "een wiskunde feit"}
@@ -15838,6 +15976,16 @@
 {"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "feit willekeurig over het getal {number}"}
 {"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "weetje willekeurig over het getal {number}"}
 {"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "weetje over getallen"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "vertel me iets grappigs over het getal {number}"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "vertel me iets interessants over het getal {number}"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "vertel me iets leuks over het getal {number}"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "zeg iets grappigs over het getal {number}"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "zeg iets interessants over het getal {number}"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "zeg iets leuks over het getal {number}"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "ken jij een feitje over het getal {number}"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "ken jij een weetje over het getal {number}"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "weet jij een feitje over het getal {number}"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "number_trivia.intent", "text": "weet jij een weetje over het getal {number}"}
 {"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "voc", "intent": "random.voc", "text": "willekeurig"}
 {"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "voc", "intent": "random.voc", "text": "arbitrair"}
 {"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "voc", "intent": "random.voc", "text": "nog een"}
@@ -15849,9 +15997,10 @@
 {"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "geef me een feit over het jaar {year}"}
 {"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "geef me een weetje over het jaar {year}"}
 {"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "weetje over het jaar {year}"}
-{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "hoor je dat horen?"}
-{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "hoor je dit horen?"}
-{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "hoor je mij horen?"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "wat gebeurde er in het jaar {year}"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "wat is er gebeurd in het jaar {year}"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "vertel me iets over het jaar {year}"}
+{"lang": "nl-NL", "skill": "ovos-skill-number-facts", "file_type": "intent", "intent": "year_trivia.intent", "text": "zeg iets over het jaar {year}"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "kun je dat horen?"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "kun je dit horen?"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "kun je mij horen?"}
@@ -15864,6 +16013,9 @@
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "heb je gehoord wat ik zei"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "kun je me nu horen"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "kwam dat door"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "hoor je dat?"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "hoor je dit?"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "did_you_hear_me.intent", "text": "hoor je mij?"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "voc", "intent": "parrot_keyword.voc", "text": "papegaai"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "voc", "intent": "parrot_keyword.voc", "text": "papegaaien"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "voc", "intent": "parrot_keyword.voc", "text": "alles herhalen"}
@@ -15881,6 +16033,7 @@
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_stt.intent", "text": "wat hoorde je"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_stt.intent", "text": "wat waren mijn woorden"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_stt.intent", "text": "vertel me mijn laatste zin"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_stt.intent", "text": "wat hoorde je mij zeggen"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_tts.intent", "text": "kun je dat herhalen?"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_tts.intent", "text": "kun je dat nog eens zeggen?"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_tts.intent", "text": "kun je dat zeggen?"}
@@ -15900,6 +16053,8 @@
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_tts.intent", "text": "wat vertelde je me"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_tts.intent", "text": "wat vertelde je me net"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_tts.intent", "text": "zeg het nog eens"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_tts.intent", "text": "wat zei je daar"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "repeat_tts.intent", "text": "pardon, wat zei je"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "herhaal na mij {sentence}"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "herhaal {sentence}"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "herhaal {sentence} na mij"}
@@ -15908,6 +16063,22 @@
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "zeg {sentence} na mij"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "spreek {sentence}"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "spreek {sentence} na mij"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "zeg goedenavond allemaal"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "herhaal na mij de kat ligt op tafel"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "zeg gelukkig nieuwjaar"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "zeg ik ben moe"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "herhaal de bus is weer te laat"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "zeg na mij een twee drie vier"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "zeg hoe gaat het vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "zeg het is erg koud"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "herhaal ik hou van chocolade"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "zeg vandaag is het maandag"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "zeg fijne dag"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "zeg slaap lekker"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "herhaal na mij: fijn weekend"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "zeg na mij: ik ben blij"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "zeg eet smakelijk"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "speak.intent", "text": "herhaal na mij: prettige feestdagen"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "activeer papegaai"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "activeer papegaaimodus"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "begin papegaai"}
@@ -15925,6 +16096,10 @@
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "kopieer alles wat ik zeg"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "papegaai alles wat ik zeg"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "herhaal vanaf nu alles na mij"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "zet de papegaaimodus aan"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "doe de papegaai aan"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "doe papegaaimodus aan"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "start_parrot.intent", "text": "zet papegaai aan"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "voc", "intent": "stop_keyword.voc", "text": "afbreken"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "voc", "intent": "stop_keyword.voc", "text": "annuleren"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "voc", "intent": "stop_keyword.voc", "text": "uitschakelen"}
@@ -15954,6 +16129,8 @@
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "stop_parrot.intent", "text": "schakel papegaaimodus uit"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "stop_parrot.intent", "text": "papegaai uit"}
 {"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "stop_parrot.intent", "text": "zet de papegaai uit"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "stop_parrot.intent", "text": "zet de papegaaimodus uit"}
+{"lang": "nl-NL", "skill": "ovos-skill-parrot", "file_type": "intent", "intent": "stop_parrot.intent", "text": "doe de papegaai uit"}
 {"lang": "nl-NL", "skill": "ovos-skill-personal", "file_type": "intent", "intent": "what_are_you.intent", "text": "hoe zou je jezelf definiëren"}
 {"lang": "nl-NL", "skill": "ovos-skill-personal", "file_type": "intent", "intent": "what_are_you.intent", "text": "kun je beschrijven wat je bent"}
 {"lang": "nl-NL", "skill": "ovos-skill-personal", "file_type": "intent", "intent": "what_are_you.intent", "text": "wat ben je precies"}
@@ -17255,6 +17432,7 @@
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "change_volume.intent", "text": "kun je het volume op {amount} zetten"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "change_volume.intent", "text": "ik wil het volume op {amount}"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "change_volume.intent", "text": "draai het volume naar {amount}"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "change_volume.intent", "text": "volume naar {amount}"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "current.voc", "text": "gewoon"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "current.voc", "text": "huidig"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "current.voc", "text": "huidige"}
@@ -17304,6 +17482,9 @@
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "less_volume.intent", "text": "verlaag het geluid"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "less_volume.intent", "text": "doe er wat volume af"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "less_volume.intent", "text": "niet zo hard"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "less_volume.intent", "text": "wat zachter"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "less_volume.intent", "text": "kan het zachter"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "less_volume.intent", "text": "zachter alsjeblieft"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "level.voc", "text": "gemiddeld"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "level.voc", "text": "herstellen"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "voc", "intent": "level.voc", "text": "hoog"}
@@ -17370,6 +17551,10 @@
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_max_boost.intent", "text": "zo hard als het kan"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_max_boost.intent", "text": "draai alles open"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_max_boost.intent", "text": "knal het volume omhoog"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_max_boost.intent", "text": "zet het keihard"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_max_boost.intent", "text": "geluid keihard"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_max_boost.intent", "text": "zet het volume keihard"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_max_boost.intent", "text": "zo hard mogelijk"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "dempen"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "geluid dempen"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "volume dempen"}
@@ -17378,14 +17563,23 @@
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "geen geluid graag"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "demp de audio"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "stilte graag"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "demp het geluid"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "demp de speaker"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "demp het volume"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "zet op stil"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute.intent", "text": "geluid uit alsjeblieft"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "audio aan"}
-{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "volume uitzetten"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "dempen aan- of uitzetten"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "keer de demping om"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "zet het geluid aan of uit"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "wissel de demping"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "haal de demping weg of zet hem aan"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "wissel het geluid"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "wissel om"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "schakel dempen om"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "dempen aan of uit"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "wissel het dempen"}
+{"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_mute_toggle.intent", "text": "schakel tussen dempen en geluid"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_reset.intent", "text": "herstel het volume"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_reset.intent", "text": "reset het volume"}
 {"lang": "nl-NL", "skill": "ovos-skill-volume", "file_type": "intent", "intent": "volume_reset.intent", "text": "zet het volume terug op normaal"}
@@ -18184,29 +18378,13 @@
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "humidity.intent", "text": "is het vochtig vandaag in {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "humidity.intent", "text": "wat is het vochtigheidsniveau"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "humidity.intent", "text": "wat is het vochtigheidsniveau in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "humidity.intent", "text": "hoe hoog is de luchtvochtigheid"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "humidity.intent", "text": "hoe hoog is de luchtvochtigheid in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "humidity.intent", "text": "luchtvochtigheid"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "humidity.intent", "text": "luchtvochtigheid in {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "humidity.voc", "text": "broeierig"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "humidity.voc", "text": "vochtig"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "humidity.voc", "text": "vochtigheid"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "wordt het koud in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "is het koud in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "wordt het vandaag koud in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "wordt het morgen koud in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hoe koud wordt het in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "komt er vorst in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "moet ik een jas aan in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "is het fris buiten in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "wordt het vanavond koud in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "wordt het warm in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "is het warm in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "wordt het vandaag warm in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "wordt het morgen warm in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "hoe warm wordt het in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "komt er een hittegolf in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "moet ik zonnebrand gebruiken in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "is het heet buiten in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "wordt het vanavond warm in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "wordt het {day} heet in {location}?"}
-{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_hot_or_cold.intent", "text": "wordt het {day} koud in {location}?"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "hoe hard waait het"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "hoe hard waait het in {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "hoe snel waait de wind"}
@@ -18255,6 +18433,14 @@
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "zijn er veel wind nu in {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "zijn er veel wind op dit moment"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "zijn er veel wind op dit moment in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "waait het"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "waait het in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "hoe hard waait de wind"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "hoe hard waait de wind in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "wordt het winderig morgen"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "wordt het winderig morgen in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "wordt het winderig vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "is_wind.intent", "text": "wordt het winderig vandaag in {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "later.voc", "text": "komend uur"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "later.voc", "text": "komende paar uur"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "later.voc", "text": "komende uren"}
@@ -18296,6 +18482,16 @@
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "wanneer gaat het weer regenen"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "wanneer is de volgende regenbui"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "wanneer is de volgende regenbui in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "wanneer gaat het regenen"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "wanneer gaat het regenen in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "wanneer komt de volgende regenbui"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "wanneer komt de volgende regenbui in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "hoe lang duurt het tot het regent"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "hoe lang duurt het tot het regent in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "wanneer begint het te regenen"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "wanneer begint het te regenen in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "hoe laat gaat het regenen"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "next_rain.intent", "text": "hoe laat gaat het regenen in {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "number_days.voc", "text": "2 dagen"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "number_days.voc", "text": "3 dagen"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "number_days.voc", "text": "4 dagen"}
@@ -18405,6 +18601,8 @@
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunrise.intent", "text": "wat is de zonsopgangstijd"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunrise.intent", "text": "wat is de zonsopgangstijd in {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunrise.intent", "text": "zonsopgangschema voor vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunrise.intent", "text": "hoe laat is de zonsopgang"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunrise.intent", "text": "hoe laat is de zonsopgang in {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunrise.voc", "text": "aanbreken van de dag"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunrise.voc", "text": "dageraad"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunrise.voc", "text": "zonsopkomst"}
@@ -18425,6 +18623,10 @@
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunset.intent", "text": "wanneer wordt het donker vandaag"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunset.intent", "text": "wanneer wordt het donker vandaag in {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunset.intent", "text": "zonsondergang voor vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunset.intent", "text": "hoe laat is de zonsondergang"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunset.intent", "text": "hoe laat is de zonsondergang in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunset.intent", "text": "hoe laat is het donker"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "sunset.intent", "text": "hoe laat is het donker in {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunset.voc", "text": "schemer"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "sunset.voc", "text": "zonsondergang"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wat is de temperatuur dinsdag avond"}
@@ -19157,6 +19359,66 @@
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wat is de temperatuur om 9 uur 's ochtends woensdag in {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wat is de temperatuur om 9 uur 's ochtends zaterdag in {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wat is de temperatuur om 9 uur 's ochtends zondag in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "temperatuur buiten"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "temperatuur buiten in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wat wordt de hoogste temperatuur"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wat wordt de hoogste temperatuur in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wat wordt de laagste temperatuur"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wat wordt de laagste temperatuur in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hoe warm wordt het"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hoe warm wordt het in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hoeveel graden wordt het dinsdag"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hoeveel graden wordt het dinsdag in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hoeveel graden wordt het morgen"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hoeveel graden wordt het morgen in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hoeveel graden wordt het vanavond"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hoeveel graden wordt het vanavond in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het koud in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "is het koud in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het vandaag koud in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het morgen koud in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hoe koud wordt het in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "komt er vorst in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "moet ik een jas aan in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "is het fris buiten in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het vanavond koud in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het warm in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "is het warm in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het vandaag warm in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het morgen warm in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "hoe warm wordt het in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "komt er een hittegolf in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "moet ik zonnebrand gebruiken in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "is het heet buiten in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het vanavond warm in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het {day} heet in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het {day} koud in {location}?"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "heb ik een jas nodig morgen"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "heb ik een jas nodig vanavond"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "heb ik een trui nodig morgen"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "heb ik een trui nodig vanavond"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "heb ik warme kleren nodig morgen"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "heb ik warme kleren nodig vanavond"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "is het te koud om naar buiten te gaan"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "is het te koud voor een t-shirt"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "is het te warm om naar buiten te gaan"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "is het te warm voor een t-shirt"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het koud morgen"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het koud morgen in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het koud vandaag in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het warm morgen"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het warm morgen in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het warm vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het warm vandaag in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "heb ik een jas nodig"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het koud"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "wordt het koud in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "is het koud"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "is het koud in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "gaat het kouder worden"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "gaat het kouder worden in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "is het buiten koud"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "temperature.intent", "text": "is het buiten koud in {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "temperature.voc", "text": "temp"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "temperature.voc", "text": "temperatuur"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "thunderstorm.voc", "text": "het bestormen van"}
@@ -19687,6 +19949,28 @@
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "weerbericht voor {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "hoe is het weer in {unit}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "hoe is het weer in {unit} in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "wat voor weer wordt het deze week"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "wat voor weer wordt het deze week in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "wat voor weer wordt het dit weekend"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "wat voor weer wordt het dit weekend in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "wat voor weer wordt het morgen"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "wat voor weer wordt het morgen in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "geef me de weersverwachting"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "geef me de weersverwachting voor {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "gaat het onweren"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "gaat het onweren in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "wordt het onweer dinsdag"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "wordt het onweer dinsdag in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "wordt het onweer morgen"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "wordt het onweer morgen in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "wordt het onweer vandaag"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "wordt het onweer vandaag in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "wat is de verwachting voor het weekend"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "wat is de verwachting voor het weekend in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "komt er onweer"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "komt er onweer in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "wat wordt het weer zaterdag en zondag"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather.intent", "text": "wat wordt het weer zaterdag en zondag in {location}"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "weather.voc", "text": "temperatuur"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "weather.voc", "text": "weer"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "hoe bewolkt of helder is het"}
@@ -19941,6 +20225,13 @@
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "zal het morgen regenen"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "zal het tijdens het weekend regenen"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "zal het vandaag regenen"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "wordt het mistig"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "wordt het mistig in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "wordt het zonnig"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "wordt het zonnig in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "gaat het sneeuwen"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "gaat het sneeuwen in {location}"}
+{"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "intent", "intent": "weather_condition.intent", "text": "heb ik een paraplu nodig"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "week.voc", "text": "week"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "week.voc", "text": "wekelijks"}
 {"lang": "nl-NL", "skill": "ovos-skill-weather", "file_type": "voc", "intent": "weekend.voc", "text": "weekend"}
