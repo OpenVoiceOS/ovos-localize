@@ -36,10 +36,21 @@ jobs:
         env:
           GIT_TERMINAL_PROMPT: 0
 
+      # data/locale_rules.json is built from data/coverage.json and
+      # data/skills/*.json, which the step above rewrites. Without this the
+      # table keeps the tags of the previous sync, and the page answers from
+      # a stale table until somebody regenerates it by hand, as #680 did.
+      - name: Generate the locale rules table
+        run: python scripts/gen_locale_rules.py
+
       # Publish what the site serves before anything else runs. Marking the
       # corpus step continue-on-error is not enough: it ends as cancelled
       # rather than failed, which skips everything after it regardless.
+      # if: always() is what keeps this step first: the two steps above it can
+      # exit non-zero, and without it a failed table or data build takes the
+      # browse publish with it. The run still ends red, so the failure shows.
       - name: Publish browse data
+        if: always()
         run: |
           ./.github/scripts/commit_data.sh "chore: update translation data" "data/**"
 
