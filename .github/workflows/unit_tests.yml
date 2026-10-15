@@ -9,6 +9,10 @@ on:
       - 'test/**'
       - 'pyproject.toml'
       - '.github/workflows/unit_tests.yml'
+      - '.github/workflows/submit_translation.yml'
+      - '.github/workflows/sweep_submission_branches.yml'
+      - '.github/workflows/update_data.yml'
+      - '.github/scripts/**'
   pull_request:
     branches: [dev]
     paths:
@@ -17,6 +21,10 @@ on:
       - 'test/**'
       - 'pyproject.toml'
       - '.github/workflows/unit_tests.yml'
+      - '.github/workflows/submit_translation.yml'
+      - '.github/workflows/sweep_submission_branches.yml'
+      - '.github/workflows/update_data.yml'
+      - '.github/scripts/**'
   workflow_dispatch: {}
 
 jobs:
