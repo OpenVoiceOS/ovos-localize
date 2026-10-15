@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.0a28](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a28) (2026-10-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a27...0.1.0a28)
+
+**Merged pull requests:**
+
+- fix: regenerate data/locale\_rules.json from the module [\#705](https://github.com/OpenVoiceOS/ovos-localize/pull/705) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.1.0a27](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a27) (2026-10-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a26...0.1.0a27)
