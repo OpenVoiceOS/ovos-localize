@@ -32,14 +32,29 @@ jobs:
         run: pip install -e ".[dev]" --pre -c https://raw.githubusercontent.com/OpenVoiceOS/OpenVoiceOS/refs/heads/main/constraints-alpha.txt
 
       - name: Generate data
+        id: generate_data
         run: python scripts/generate_data.py
         env:
           GIT_TERMINAL_PROMPT: 0
 
+      # data/locale_rules.json is built from data/coverage.json and
+      # data/skills/*.json, which the step above rewrites. Without this the
+      # table keeps the tags of the previous sync, and the page answers from
+      # a stale table until somebody regenerates it by hand, as #680 did.
+      - name: Generate the locale rules table
+        run: python scripts/gen_locale_rules.py
+
       # Publish what the site serves before anything else runs. Marking the
       # corpus step continue-on-error is not enough: it ends as cancelled
       # rather than failed, which skips everything after it regardless.
+      # A failed table step must not take the browse publish with it, so
+      # this runs whatever the table step did. A failed or cancelled data
+      # build stops it: generate_data.py writes the per-skill files as it
+      # goes and the aggregates after, so a build that died part way leaves
+      # a tree that is neither the old data nor the new, and nothing of it
+      # is committed. The run still ends red, so the failure shows.
       - name: Publish browse data
+        if: always() && steps.generate_data.outcome == 'success'
         run: |
           ./.github/scripts/commit_data.sh "chore: update translation data" "data/**"
 

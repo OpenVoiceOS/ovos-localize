@@ -14,6 +14,7 @@ import json
 import shutil
 import subprocess
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -384,6 +385,54 @@ class TestNestedLocaleRoot(unittest.TestCase):
         shipped table carried an entry called 'locale'."""
         self.assertNotIn("locale", RULES["tags"])
         self.assertNotIn("res", RULES["tags"])
+
+class TestAnUnreadableInputStopsTheGenerator(unittest.TestCase):
+    """A smaller table that exits 0 is what the daily sync would commit."""
+
+    def _run(self, root: Path):
+        return subprocess.run(
+            [sys.executable, str(ROOT / "scripts" / "gen_locale_rules.py"),
+             "--root", str(root)],
+            capture_output=True, text=True,
+        )
+
+    def _root(self) -> Path:
+        """A copy of the inputs the generator reads, in a temporary tree."""
+        root = Path(tempfile.mkdtemp())
+        (root / "data" / "skills").mkdir(parents=True)
+        (root / "config").mkdir()
+        shutil.copy(ROOT / "data" / "coverage.json", root / "data" / "coverage.json")
+        self.addCleanup(shutil.rmtree, root, ignore_errors=True)
+        return root
+
+    def test_the_inputs_as_they_are_write_the_table(self):
+        root = self._root()
+        result = self._run(root)
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        self.assertTrue((root / "data" / "locale_rules.json").is_file())
+
+    def test_a_missing_coverage_file_fails(self):
+        root = self._root()
+        (root / "data" / "coverage.json").unlink()
+        result = self._run(root)
+        self.assertEqual(1, result.returncode, result.stdout + result.stderr)
+        self.assertIn("cannot be read", result.stderr)
+        self.assertFalse((root / "data" / "locale_rules.json").is_file())
+
+    def test_a_malformed_coverage_file_fails(self):
+        root = self._root()
+        (root / "data" / "coverage.json").write_text("{", encoding="utf-8")
+        result = self._run(root)
+        self.assertEqual(1, result.returncode, result.stdout + result.stderr)
+        self.assertIn("cannot be read", result.stderr)
+
+    def test_a_malformed_skill_manifest_fails(self):
+        root = self._root()
+        (root / "data" / "skills" / "ovos-skill-x.json").write_text("{", encoding="utf-8")
+        result = self._run(root)
+        self.assertEqual(1, result.returncode, result.stdout + result.stderr)
+        self.assertIn("cannot be read", result.stderr)
+
 
 if __name__ == "__main__":
     unittest.main()
