@@ -3,7 +3,7 @@
 The script must never touch the network at import time: importing it used to
 call HfApi().upload_folder()/upload_file() at module scope, so a plain
 ``import`` triggered a real publish. These tests pin that guarantee down and
-check the commit each dataset repo receives, with the Hub calls captured.
+check the one commit the publish makes, with the Hub calls captured.
 """
 
 import csv
@@ -12,6 +12,7 @@ import json
 import os
 import sys
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 
@@ -58,62 +59,100 @@ def _export_dir(tmp_path, corpus_files=("README.md", "manifest.json", "en-US/tra
     return export_dir
 
 
-def _run_main_with_remote(monkeypatch, module, tmp_path, remotes):
-    """Run main() offline; return the operations of each commit, by repo id."""
-    from huggingface_hub import HfApi
+REMOTE_MAIN = [".gitattributes", "README.md", "manifest.json", "en-US/train_templates.jsonl",
+               "en-US/test.jsonl", "arb/train_templates.jsonl", "data/datasets/tts/en-US.jsonl"]
+FIRST_COMMIT = "0" * 40
 
-    captured = {}
-    monkeypatch.setattr(HfApi, "list_repo_files", lambda self, repo_id, **kwargs: remotes[repo_id])
-    monkeypatch.setattr(HfApi, "create_commit",
-                        lambda self, repo_id, operations, **kwargs: captured.update({repo_id: operations}))
+
+class FakeHub:
+    """The Hub as far as the publish may use it.
+
+    Only the calls a branch publish needs exist. A delete, a tag, a folder
+    upload or any other write is an AttributeError, so the test fails on it.
+    """
+
+    def __init__(self, fail_commit=None):
+        self.calls = []
+        self.fail_commit = fail_commit
+
+    def list_repo_files(self, repo_id, **kwargs):
+        self.calls.append(("list_repo_files", repo_id, kwargs))
+        return list(REMOTE_MAIN)
+
+    def list_repo_commits(self, repo_id, **kwargs):
+        self.calls.append(("list_repo_commits", repo_id, kwargs))
+        # Newest first, as the Hub lists them.
+        return [SimpleNamespace(commit_id=sha)
+                for sha in ("2" * 40, "1" * 40, FIRST_COMMIT)]
+
+    def create_branch(self, repo_id, **kwargs):
+        self.calls.append(("create_branch", repo_id, kwargs))
+
+    def create_commit(self, repo_id, operations, **kwargs):
+        self.calls.append(("create_commit", repo_id, dict(kwargs, operations=operations)))
+        if self.fail_commit:
+            raise self.fail_commit
+
+    def commits(self):
+        return [kwargs for name, _, kwargs in self.calls if name == "create_commit"]
+
+
+def _run_main(monkeypatch, module, tmp_path, hub):
+    monkeypatch.setattr(module, "HfApi", lambda token=None: hub)
     monkeypatch.setenv("HF_TOKEN", "fake")
     monkeypatch.setenv("INTENTS_EXPORT_DIR", str(_export_dir(tmp_path)))
     module.main()
-    return captured
+    return hub
 
 
-def _paths(operations):
+def test_publish_never_deletes_a_file(monkeypatch, tmp_path):
+    """The dataset is add-only: remote files the export did not write stay."""
     from huggingface_hub import CommitOperationAdd, CommitOperationDelete
 
-    added = [op.path_in_repo for op in operations if isinstance(op, CommitOperationAdd)]
-    deleted = [(op.path_in_repo, op.is_folder) for op in operations if isinstance(op, CommitOperationDelete)]
-    return added, deleted
-
-
-def test_publish_deletes_stale_corpus_tree(monkeypatch, tmp_path):
-    """A data/datasets/ tree left in the CSV dataset repo goes in the same commit as the CSV."""
     module = _load_module()
-    captured = _run_main_with_remote(monkeypatch, module, tmp_path, {
-        module.CSV_REPO_ID: ["data/datasets/classification/en-US.jsonl", "data/datasets/tts/en-US.jsonl",
-                             "README.md", "ovos_localize_intents.csv", ".gitattributes"],
-        module.CORPUS_REPO_ID: [],
-    })
+    hub = _run_main(monkeypatch, module, tmp_path, FakeHub())
 
-    assert _paths(captured[module.CSV_REPO_ID]) == (["ovos_localize_intents.csv"], [("data/datasets/", True)])
+    operations = [op for commit in hub.commits() for op in commit["operations"]]
+    deleted = [op.path_in_repo for op in operations if isinstance(op, CommitOperationDelete)]
+    assert deleted == []
+    assert all(isinstance(op, CommitOperationAdd) for op in operations)
+    assert sorted(op.path_in_repo for op in operations) == [
+        "README.md", "en-US/test.jsonl", "en-US/train.jsonl", "manifest.json"]
 
 
-def test_publish_without_stale_tree_only_uploads_csv(monkeypatch, tmp_path):
+def test_publish_writes_the_branch_and_never_main(monkeypatch, tmp_path):
     module = _load_module()
-    captured = _run_main_with_remote(monkeypatch, module, tmp_path, {
-        module.CSV_REPO_ID: ["README.md", "ovos_localize_intents.csv", ".gitattributes"],
-        module.CORPUS_REPO_ID: [],
-    })
+    hub = _run_main(monkeypatch, module, tmp_path, FakeHub())
 
-    assert _paths(captured[module.CSV_REPO_ID]) == (["ovos_localize_intents.csv"], [])
+    assert {repo for _, repo, _ in hub.calls} == {"OpenVoiceOS/ovos-intents"}
+    (commit,) = hub.commits()
+    assert commit["revision"] == "localize-daily"
+    branches = [kwargs for name, _, kwargs in hub.calls if name == "create_branch"]
+    assert branches == [{"repo_type": "dataset", "branch": "localize-daily",
+                         "revision": FIRST_COMMIT, "exist_ok": True}]
+    names = [name for name, _, _ in hub.calls]
+    assert names.index("create_branch") < names.index("create_commit")
 
 
-def test_corpus_publish_replaces_the_split_files_in_full(monkeypatch, tmp_path):
-    """Every remote file the export did not write is deleted, except .gitattributes."""
+def test_a_publish_failure_turns_the_run_red(monkeypatch, tmp_path):
+    """The script exits non-zero on a Hub error, and the step does not swallow it."""
     module = _load_module()
-    captured = _run_main_with_remote(monkeypatch, module, tmp_path, {
-        module.CSV_REPO_ID: [],
-        module.CORPUS_REPO_ID: [".gitattributes", "README.md", "manifest.json", "en-US/train_templates.jsonl",
-                                "en-US/test.jsonl", "arb/train_templates.jsonl"],
-    })
+    with pytest.raises(SystemExit) as exit_info:
+        _run_main(monkeypatch, module, tmp_path, FakeHub(fail_commit=ConnectionError("Connection reset by peer")))
+    assert exit_info.value.code not in (0, None)
 
-    added, deleted = _paths(captured[module.CORPUS_REPO_ID])
-    assert added == ["README.md", "en-US/test.jsonl", "en-US/train.jsonl", "manifest.json"]
-    assert deleted == [("arb/train_templates.jsonl", False), ("en-US/train_templates.jsonl", False)]
+    step = _publish_step()
+    assert "continue-on-error" not in step
+    assert step["run"].strip() == "python .github/scripts/publish_hf_dataset.py"
+
+
+def _publish_step():
+    import yaml
+
+    workflow = yaml.safe_load((SCRIPT_PATH.parents[1] / "workflows" / "update_data.yml").read_text())
+    (step,) = [s for job in workflow["jobs"].values() for s in job["steps"]
+               if "publish_hf_dataset.py" in s.get("run", "")]
+    return step
 
 
 def _run_main_on_export(monkeypatch, module, export_dir):
@@ -152,7 +191,8 @@ def test_main_refuses_an_export_without_rows(monkeypatch, tmp_path, shape):
     assert str(export_dir) in str(error.code)
 
 
-def test_main_refuses_without_hf_token(monkeypatch, capsys):
+def test_main_refuses_without_hf_token(monkeypatch):
+    """A missing secret is a failed publish, not a skipped one."""
     module = _load_module()
 
     class ExplodingHfApi:
@@ -162,9 +202,11 @@ def test_main_refuses_without_hf_token(monkeypatch, capsys):
     monkeypatch.setattr(module, "HfApi", ExplodingHfApi)
     monkeypatch.delenv("HF_TOKEN", raising=False)
 
-    module.main()
+    with pytest.raises(SystemExit) as exit_info:
+        module.main()
 
-    assert "HF_TOKEN" in capsys.readouterr().out
+    assert exit_info.value.code not in (0, None)
+    assert "HF_TOKEN" in str(exit_info.value.code)
 
 
 def test_published_csv_holds_intent_rows_only(tmp_path):

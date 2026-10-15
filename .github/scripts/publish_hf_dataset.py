@@ -1,47 +1,31 @@
 #!/usr/bin/env python3
-"""Publish the intent CSV and the intents corpus to Hugging Face.
+"""Publish the daily intents build to the ``localize-daily`` branch of ``OpenVoiceOS/ovos-intents``.
 
-Both come from one export of ovos-localize's skill data
-(``ovos-localize-export-intents``), which reads every skill file once and
-fails when the corpus and the CSV are not equivalent. This script uploads
-what that export wrote and nothing else:
+The build comes from one export of ovos-localize's skill data
+(``ovos-localize-export-intents``): ``{lang}/train.jsonl``, ``{lang}/test.jsonl``,
+``manifest.json`` and the card generated from it.
 
-* ``ovos_localize_intents.csv`` to ``OpenVoiceOS/ovos-localize-intents``: one
-  row per expanded template of a skill's ``.intent`` file (OVOS-INTENT-2
-  §4.1). Any ``data/datasets/`` tree left in that repo is deleted in the same
-  commit, so the dataset holds intent training data only.
-* the ``ovos-intents`` tree to ``OpenVoiceOS/ovos-intents``: ``{lang}/train.jsonl``,
-  ``{lang}/test.jsonl``, ``manifest.json`` and the card generated from it.
-  Every other file in that repo except ``.gitattributes`` is deleted in the
-  same commit, so each run replaces the split files in full.
+The published ``ovos-intents`` corpus on ``main`` is built by ovos-m2v-pipeline,
+with its own layout and labels, so this script never writes ``main`` and never
+touches a tag. It writes one branch, ``localize-daily``, and it only adds or
+replaces files there: it never deletes one, because the dataset is add-only.
+The branch is created on the first run from the repository's first commit, so
+it holds the localize build and not a copy of the corpus on ``main``.
 
-The ovos-localize-intents README is left untouched: this repo carries no card
-template for it.
-
-An export that holds no CSV row or no corpus row is refused before the Hub is
-contacted: replacing a dataset in full from an empty tree would delete it.
+An export that holds no row is refused before the Hub is contacted. A missing
+``HF_TOKEN`` and every Hub error exit non-zero, so the run that called this
+turns red.
 """
 import os
 import sys
 from pathlib import Path
 
-from huggingface_hub import CommitOperationAdd, CommitOperationDelete, HfApi
+from huggingface_hub import CommitOperationAdd, HfApi
 
-CSV_REPO_ID = "OpenVoiceOS/ovos-localize-intents"
 CSV_PATH_IN_REPO = "ovos_localize_intents.csv"
-STALE_PREFIX_IN_REPO = "data/datasets/"
 CORPUS_REPO_ID = "OpenVoiceOS/ovos-intents"
 CORPUS_DIR = "ovos-intents"
-KEEP_IN_CORPUS_REPO = {".gitattributes"}
-
-
-def csv_operations(export_dir: Path, remote_files: list) -> list:
-    """Upload the CSV and delete any ``data/datasets/`` tree in the same commit."""
-    operations = [CommitOperationAdd(path_in_repo=CSV_PATH_IN_REPO,
-                                     path_or_fileobj=str(export_dir / CSV_PATH_IN_REPO))]
-    if any(name.startswith(STALE_PREFIX_IN_REPO) for name in remote_files):
-        operations.append(CommitOperationDelete(path_in_repo=STALE_PREFIX_IN_REPO, is_folder=True))
-    return operations
+BRANCH = "localize-daily"
 
 
 def export_rows(export_dir: Path) -> tuple:
@@ -58,22 +42,38 @@ def export_rows(export_dir: Path) -> tuple:
     return csv_rows, corpus_rows
 
 
-def corpus_operations(export_dir: Path, remote_files: list) -> list:
-    """Upload the corpus tree and delete every remote file it does not hold."""
+def corpus_operations(export_dir: Path) -> list:
+    """Upload every file of the corpus tree. Nothing is ever deleted."""
     corpus_dir = export_dir / CORPUS_DIR
     local = sorted(p.relative_to(corpus_dir).as_posix() for p in corpus_dir.rglob("*") if p.is_file())
-    operations = [CommitOperationAdd(path_in_repo=name, path_or_fileobj=str(corpus_dir / name))
-                  for name in local]
-    operations += [CommitOperationDelete(path_in_repo=name)
-                   for name in sorted(set(remote_files) - set(local) - KEEP_IN_CORPUS_REPO)]
-    return operations
+    return [CommitOperationAdd(path_in_repo=name, path_or_fileobj=str(corpus_dir / name)) for name in local]
+
+
+def publish(api: HfApi, export_dir: Path, message: str, description: str) -> int:
+    """Create the branch if it is missing, then commit the build to it.
+
+    Returns:
+        The number of files added or replaced.
+    """
+    first_commit = api.list_repo_commits(repo_id=CORPUS_REPO_ID, repo_type="dataset")[-1].commit_id
+    api.create_branch(repo_id=CORPUS_REPO_ID, repo_type="dataset", branch=BRANCH,
+                      revision=first_commit, exist_ok=True)
+    operations = corpus_operations(export_dir)
+    api.create_commit(
+        repo_id=CORPUS_REPO_ID,
+        repo_type="dataset",
+        revision=BRANCH,
+        operations=operations,
+        commit_message=message,
+        commit_description=description,
+    )
+    return len(operations)
 
 
 def main() -> None:
     token = os.environ.get("HF_TOKEN", "")
     if not token:
-        print("HF_TOKEN is not set; refusing to publish.")
-        return
+        sys.exit("HF_TOKEN is not set; refusing to publish.")
 
     run_id = os.environ.get("GITHUB_RUN_ID", "unknown")
     server_url = os.environ.get("GITHUB_SERVER_URL", "https://github.com")
@@ -85,20 +85,14 @@ def main() -> None:
     csv_rows, corpus_rows = export_rows(export_dir)
     if not csv_rows or not corpus_rows:
         sys.exit(f"{export_dir} holds {csv_rows} CSV rows and {corpus_rows} corpus rows; "
-                 "refusing to publish an empty export, which would delete the published datasets.")
+                 "refusing to publish an empty export.")
 
-    api = HfApi(token=token)
-    for repo_id, build in ((CSV_REPO_ID, csv_operations), (CORPUS_REPO_ID, corpus_operations)):
-        operations = build(export_dir, api.list_repo_files(repo_id=repo_id, repo_type="dataset"))
-        api.create_commit(
-            repo_id=repo_id,
-            repo_type="dataset",
-            operations=operations,
-            commit_message=f"chore: refresh from {repository} run {run_id}",
-            commit_description=run_url,
-        )
-        added = sum(isinstance(op, CommitOperationAdd) for op in operations)
-        print(f"published {repo_id}: {added} files added, {len(operations) - added} deleted")
+    try:
+        added = publish(HfApi(token=token), export_dir,
+                        f"chore: refresh from {repository} run {run_id}", run_url)
+    except Exception as error:
+        sys.exit(f"FAILED {CORPUS_REPO_ID}@{BRANCH}: {type(error).__name__}: {error}")
+    print(f"published {CORPUS_REPO_ID}@{BRANCH}: {added} files added or replaced, none deleted")
 
 
 if __name__ == "__main__":

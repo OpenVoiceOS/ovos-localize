@@ -61,15 +61,14 @@ python -m http.server 8000
 | `data/dataset.tsv` | Unified intent/dialog/voc dataset for ML training |
 | `data/datasets/` | JSONL training corpora, one file per language and task (see [docs/index.md](docs/index.md#open-data-ml-datasets)) |
 
-The intent rows are published daily to
-[`OpenVoiceOS/ovos-localize-intents`](https://huggingface.co/datasets/OpenVoiceOS/ovos-localize-intents)
-on the Hugging Face Hub, as one CSV built from `.intent` files only. The same
-run publishes the intents corpus for training and evaluating intent models to
-[`OpenVoiceOS/ovos-intents`](https://huggingface.co/datasets/OpenVoiceOS/ovos-intents):
+The intents corpus for training and evaluating intent models is published daily
+to the `localize-daily` branch of
+[`OpenVoiceOS/ovos-intents`](https://huggingface.co/datasets/OpenVoiceOS/ovos-intents/tree/localize-daily):
 the skills' `.intent` lines expanded and slot-filled as the train split, their
 end-to-end golden utterances as the test split, labelled `<skill_id>:<intent_name>`.
-Both come from one read of `data/skills/`, and the export fails when the two
-disagree on the set of intents. A third dataset,
+The dataset's `main` branch is built by ovos-m2v-pipeline and is not written from here.
+The export also writes a flat CSV of the same intents from the same read of
+`data/skills/`, and it fails when the two disagree on the set of intents. A third dataset,
 [`OpenVoiceOS/ovos-localize-intents-translated`](https://huggingface.co/datasets/OpenVoiceOS/ovos-localize-intents-translated),
 fills the intents a language has no human translation for with machine
 translation from `scripts/fill_intents_translated.py`. It is training data,

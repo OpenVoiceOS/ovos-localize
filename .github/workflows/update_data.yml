@@ -65,25 +65,17 @@ jobs:
         timeout-minutes: 20
         run: ovos-localize-export-intents --skills data/skills --out "${RUNNER_TEMP}/intents-export"
 
-      # Publishes ovos_localize_intents.csv to OpenVoiceOS/ovos-localize-intents
-      # (deleting any data/datasets/ tree there in the same commit) and the
-      # corpus tree to OpenVoiceOS/ovos-intents (deleting every file the
-      # export did not write). Requires an HF_TOKEN Actions secret with write
-      # access to both datasets; skips quietly if unset so a missing secret
-      # never reddens the daily refresh, and an HF outage can't either since
-      # the step is non-fatal.
+      # Publishes the corpus tree to the localize-daily branch of
+      # OpenVoiceOS/ovos-intents, add-only, creating the branch on the first
+      # run. main belongs to ovos-m2v-pipeline and is never written. Requires
+      # an HF_TOKEN Actions secret with write access to that dataset. A
+      # missing secret or a failed publish fails the run.
       - name: Publish intent datasets to Hugging Face
         if: always() && steps.export_intents.outcome == 'success'
-        continue-on-error: true
         timeout-minutes: 15
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           GITHUB_RUN_ID: ${{ github.run_id }}
           GITHUB_SERVER_URL: ${{ github.server_url }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-        run: |
-          if [ -z "${HF_TOKEN}" ]; then
-            echo "HF_TOKEN secret is not set; skipping Hugging Face publish."
-            exit 0
-          fi
-          python .github/scripts/publish_hf_dataset.py
+        run: python .github/scripts/publish_hf_dataset.py
