@@ -1,8 +1,8 @@
 # Changelog
 
-## [0.1.0a34](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a34) (2026-10-15)
+## [0.1.0a35](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a35) (2026-10-15)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a32...0.1.0a34)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a32...0.1.0a35)
 
 **Merged pull requests:**
 
