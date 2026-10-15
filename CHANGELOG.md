@@ -1,8 +1,24 @@
 # Changelog
 
+## [0.1.0a33](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a33) (2026-10-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a32...0.1.0a33)
+
+**Merged pull requests:**
+
+- fix: a failed intents export fails the daily refresh [\#711](https://github.com/OpenVoiceOS/ovos-localize/pull/711) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.0a32](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a32) (2026-10-15)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a28...0.1.0a32)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a31...0.1.0a32)
+
+## [0.1.0a31](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a31) (2026-10-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a30...0.1.0a31)
+
+## [0.1.0a30](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a30) (2026-10-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a28...0.1.0a30)
 
 **Merged pull requests:**
 
@@ -156,15 +172,15 @@
 
 ## [0.1.0a11](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a11) (2026-08-26)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a10...0.1.0a11)
-
-## [0.1.0a10](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a10) (2026-08-26)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a9...0.1.0a10)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a9...0.1.0a11)
 
 ## [0.1.0a9](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a9) (2026-08-26)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a8...0.1.0a9)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a10...0.1.0a9)
+
+## [0.1.0a10](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a10) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a8...0.1.0a10)
 
 ## [0.1.0a8](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a8) (2026-08-26)
 
@@ -257,7 +273,6 @@
 - feat\(ci\): poll merged locale-fix PRs and auto-refresh data [\#213](https://github.com/OpenVoiceOS/ovos-localize/pull/213) ([JarbasAl](https://github.com/JarbasAl))
 - feat\(i18n\): Kabyle \(kab\) support — human-first, no MT suggestions \(\#208\) [\#211](https://github.com/OpenVoiceOS/ovos-localize/pull/211) ([JarbasAl](https://github.com/JarbasAl))
 - feat\(i18n\): enable kab \(Kabyle\) [\#209](https://github.com/OpenVoiceOS/ovos-localize/pull/209) ([github-actions[bot]](https://github.com/apps/github-actions))
-- docs: standardize NGI0 Commons Fund attribution [\#206](https://github.com/OpenVoiceOS/ovos-localize/pull/206) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
