@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.0a29](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a29) (2026-10-15)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a28...0.1.0a29)
+
+**Merged pull requests:**
+
+- fix: close a submission whose text is already in the target branch [\#697](https://github.com/OpenVoiceOS/ovos-localize/pull/697) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.1.0a28](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a28) (2026-10-15)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a27...0.1.0a28)
