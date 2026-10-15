@@ -1,12 +1,14 @@
 # Changelog
 
-## [0.1.0a33](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a33) (2026-10-15)
+## [0.1.0a34](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a34) (2026-10-15)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a32...0.1.0a33)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a32...0.1.0a34)
 
 **Merged pull requests:**
 
 - fix: a failed intents export fails the daily refresh [\#711](https://github.com/OpenVoiceOS/ovos-localize/pull/711) ([JarbasAl](https://github.com/JarbasAl))
+- fix: track ovos-color-parser again [\#709](https://github.com/OpenVoiceOS/ovos-localize/pull/709) ([JarbasAl](https://github.com/JarbasAl))
+- ci: regenerate the locale rules table in the data sync [\#688](https://github.com/OpenVoiceOS/ovos-localize/pull/688) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
 
 ## [0.1.0a32](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a32) (2026-10-15)
 
@@ -272,7 +274,6 @@
 - feat\(a11y\): accessibility baseline — skip link, landmarks, route-change focus [\#215](https://github.com/OpenVoiceOS/ovos-localize/pull/215) ([JarbasAl](https://github.com/JarbasAl))
 - feat\(ci\): poll merged locale-fix PRs and auto-refresh data [\#213](https://github.com/OpenVoiceOS/ovos-localize/pull/213) ([JarbasAl](https://github.com/JarbasAl))
 - feat\(i18n\): Kabyle \(kab\) support — human-first, no MT suggestions \(\#208\) [\#211](https://github.com/OpenVoiceOS/ovos-localize/pull/211) ([JarbasAl](https://github.com/JarbasAl))
-- feat\(i18n\): enable kab \(Kabyle\) [\#209](https://github.com/OpenVoiceOS/ovos-localize/pull/209) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 
 
