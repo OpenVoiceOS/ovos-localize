@@ -269,6 +269,23 @@ jobs:
           ref: ${{ steps.base.outputs.branch }}
           token: ${{ steps.app-token.outputs.token }}
 
+      # The issue carries the path as the page composed it on the day of the
+      # submission. A re-run after the skill renamed the resource would add a
+      # file under the old name that the skill never loads
+      # (ovos-skill-laugh#137 added Stop.voc after #133 renamed it to
+      # stop.voc), so the path is placed in the tree just checked out. The
+      # branch, the commit and the pull request are named after the file
+      # that is written, not after the key the page sent.
+      - name: Resolve the path on the target branch
+        id: target
+        env:
+          FILE_PATH: ${{ steps.parse.outputs.file_path }}
+          FILE_KEY: ${{ steps.parse.outputs.file_key }}
+        run: |
+          RESOLVED="$(ovos-localize-resolve-target-path "$FILE_PATH" --file-key "$FILE_KEY" --repo-root .)"
+          echo "file_path=$RESOLVED" >> "$GITHUB_OUTPUT"
+          echo "file_key=$(basename "$RESOLVED")" >> "$GITHUB_OUTPUT"
+
       - name: Create branch and commit
         id: commit
         env:
@@ -276,9 +293,9 @@ jobs:
           ORG: ${{ steps.parse.outputs.org }}
           REPO: ${{ steps.parse.outputs.repo }}
           BASE: ${{ steps.base.outputs.branch }}
-          FILE_PATH: ${{ steps.parse.outputs.file_path }}
+          FILE_PATH: ${{ steps.target.outputs.file_path }}
           LANG: ${{ steps.parse.outputs.lang }}
-          FILE_KEY: ${{ steps.parse.outputs.file_key }}
+          FILE_KEY: ${{ steps.target.outputs.file_key }}
           AUTHOR: ${{ steps.parse.outputs.author }}
           CONTENT_B64: ${{ steps.parse.outputs.content_b64 }}
         run: |
@@ -351,8 +368,8 @@ jobs:
           BASE: ${{ steps.base.outputs.branch }}
           HEAD_BRANCH: ${{ steps.commit.outputs.branch_name }}
           LANG: ${{ steps.parse.outputs.lang }}
-          FILE_KEY: ${{ steps.parse.outputs.file_key }}
-          FILE_PATH: ${{ steps.parse.outputs.file_path }}
+          FILE_KEY: ${{ steps.target.outputs.file_key }}
+          FILE_PATH: ${{ steps.target.outputs.file_path }}
           AUTHOR: ${{ steps.parse.outputs.author }}
           ISSUE: ${{ matrix.issue }}
         run: |
@@ -385,7 +402,7 @@ jobs:
           ORG: ${{ steps.parse.outputs.org }}
           REPO: ${{ steps.parse.outputs.repo }}
           BASE: ${{ steps.base.outputs.branch }}
-          FILE_PATH: ${{ steps.parse.outputs.file_path }}
+          FILE_PATH: ${{ steps.target.outputs.file_path }}
           PR_URL: ${{ steps.pr.outputs.pr_url }}
         with:
           script: |
