@@ -1,12 +1,14 @@
-"""The browse publish commits a finished data build or nothing.
+"""The browse publish and the intents export use a finished data build or nothing.
 
 ``generate_data.py`` writes each skill's file as it scans it and the
 aggregates after the loop, so a build that dies part way leaves a tree that
 is neither the previous data nor the new. "Publish browse data" commits
 ``data/**``. It must still run when only the locale table step fails, and
-never after a failed or cancelled data build.
+never after a failed or cancelled data build. "Export intent datasets" reads
+``data/skills`` and feeds the Hugging Face publish, so the same holds for it:
+it runs whatever the steps between did, and never on a half-written tree.
 
-The step's ``if:`` is evaluated here on each combination of outcomes.
+Each step's ``if:`` is evaluated here on combinations of outcomes.
 """
 import re
 from pathlib import Path
@@ -27,13 +29,13 @@ def _step(name: str) -> dict:
     return step
 
 
-def _runs(outcomes: dict) -> bool:
-    """Whether "Publish browse data" runs, given the earlier steps' outcomes.
+def _runs(name: str, outcomes: dict) -> bool:
+    """Whether the step called *name* runs, given the earlier steps' outcomes.
 
     A step with no ``if:`` runs on ``success()``, which is false once any
     earlier step failed.
     """
-    expr = _step("Publish browse data").get("if", "success()")
+    expr = _step(name).get("if", "success()")
     expr = re.sub(r"^\$\{\{\s*|\s*\}\}$", "", expr.strip())
     expr = expr.replace("always()", "True").replace("&&", " and ").replace("||", " or ")
     expr = expr.replace("success()", repr(all(v == "success" for v in outcomes.values())))
@@ -53,4 +55,17 @@ def test_the_data_build_has_the_id_the_condition_reads():
     ("cancelled", "skipped", False),
 ])
 def test_the_browse_publish_follows_the_data_build(generate, table, expected):
-    assert _runs({"generate_data": generate, "locale_table": table}) is expected
+    assert _runs("Publish browse data", {"generate_data": generate, "locale_table": table}) is expected
+
+
+@pytest.mark.parametrize("generate, between, expected", [
+    ("success", "success", True),
+    ("success", "failure", True),
+    ("failure", "skipped", False),
+    ("cancelled", "skipped", False),
+])
+def test_the_intents_export_follows_the_data_build(generate, between, expected):
+    """The steps between are the browse publish, the ML datasets build, which
+    may fail by design, and the corpora publish."""
+    outcomes = {"generate_data": generate, "ml_datasets": between, "publish_corpora": between}
+    assert _runs("Export intent datasets", outcomes) is expected

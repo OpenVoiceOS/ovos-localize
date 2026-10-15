@@ -72,10 +72,12 @@ jobs:
       # The intent CSV and the intents corpus come from one read of
       # data/skills. The export fails when the corpus and the CSV are not
       # equivalent, or when train and test overlap, and then nothing is
-      # published and the run fails.
+      # published and the run fails. It runs whatever the steps between
+      # did, but never after a failed or cancelled data build, whose
+      # data/skills tree is half written.
       - name: Export intent datasets
         id: export_intents
-        if: always()
+        if: always() && steps.generate_data.outcome == 'success'
         timeout-minutes: 20
         run: ovos-localize-export-intents --skills data/skills --out "${RUNNER_TEMP}/intents-export"
 
