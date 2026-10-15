@@ -94,22 +94,27 @@ from datasets import load_dataset
 dataset = load_dataset("json", data_files="https://openvoiceos.github.io/ovos-localize/data/datasets/classification/en-US.jsonl")
 ```
 
-`update_data.yml` also publishes the intent rows to the
-[`OpenVoiceOS/ovos-localize-intents`](https://huggingface.co/datasets/OpenVoiceOS/ovos-localize-intents)
-dataset repo on every run. That dataset holds intent training data only: one
-flat CSV, `ovos_localize_intents.csv`, with the `lang,domain,intent,sentence`
-columns and one row for each expanded template of a `.intent` file. The `.voc`
-rows of the classification corpus and the other corpora stay on this site.
-Each run replaces the dataset in full. The step needs an `HF_TOKEN` Actions
-secret with write access to that dataset. Without the secret the step is
-skipped and the Hub copy is left as it was last published.
-
 ### The intents corpus
 
-The same step publishes
-[`OpenVoiceOS/ovos-intents`](https://huggingface.co/datasets/OpenVoiceOS/ovos-intents),
-the corpus for training and evaluating intent models. `ovos-localize-export-intents`
-reads `data/skills/` once and writes both the CSV above and the corpus:
+`update_data.yml` publishes the corpus for training and evaluating intent
+models to the `localize-daily` branch of
+[`OpenVoiceOS/ovos-intents`](https://huggingface.co/datasets/OpenVoiceOS/ovos-intents/tree/localize-daily)
+on every run. The dataset's `main` branch and its tags hold the corpus that
+ovos-m2v-pipeline builds, with its own layout and labels, and this repository
+never writes them. The branch is created on the first run from the dataset's
+first commit, so it holds only this build. Each run adds or replaces files on
+the branch and never deletes one, because the dataset is add-only: a file the
+export stops writing stays on the branch until someone removes it by hand.
+
+The step needs an `HF_TOKEN` Actions secret with write access to
+`OpenVoiceOS/ovos-intents`. A missing secret, or any error from the Hub, fails
+the run.
+
+`ovos-localize-export-intents` reads `data/skills/` once and writes the corpus
+and a flat CSV, `ovos_localize_intents.csv`, with the
+`lang,domain,intent,sentence` columns and one row for each expanded template of
+a `.intent` file. The CSV is a check on the corpus and is not published. The
+corpus holds:
 
 - `{lang}/train.jsonl`: every `.intent` line of every skill, expanded. `<name>`
   expands from `name.voc` and `{name}` fills from `name.entity` of the same
@@ -132,7 +137,7 @@ rows, or when train and test overlap.
 [`OpenVoiceOS/ovos-localize-intents-translated`](https://huggingface.co/datasets/OpenVoiceOS/ovos-localize-intents-translated)
 holds the `.intent` patterns a language has no human translation for,
 machine-translated from `en-US`. It has the same `lang,domain,intent,sentence`
-schema as the flat CSV of `ovos-localize-intents`.
+schema as the flat CSV that `ovos-localize-export-intents` writes.
 
 It never repeats an intent the human dataset already covers for that
 language.
