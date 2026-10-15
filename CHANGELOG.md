@@ -1,11 +1,14 @@
 # Changelog
 
-## [0.1.0a29](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a29) (2026-10-15)
+## [0.1.0a30](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a30) (2026-10-15)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a28...0.1.0a29)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-localize/compare/0.1.0a28...0.1.0a30)
 
 **Merged pull requests:**
 
+- fix: run the unit tests when a workflow file they read changes [\#710](https://github.com/OpenVoiceOS/ovos-localize/pull/710) ([JarbasAl](https://github.com/JarbasAl))
+- fix: publish the daily intents build to a localize-daily branch, add-only [\#708](https://github.com/OpenVoiceOS/ovos-localize/pull/708) ([JarbasAl](https://github.com/JarbasAl))
+- fix: write a translation to the resource's current name on the target branch [\#707](https://github.com/OpenVoiceOS/ovos-localize/pull/707) ([JarbasAl](https://github.com/JarbasAl))
 - fix: close a submission whose text is already in the target branch [\#697](https://github.com/OpenVoiceOS/ovos-localize/pull/697) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
 
 ## [0.1.0a28](https://github.com/OpenVoiceOS/ovos-localize/tree/0.1.0a28) (2026-10-15)
@@ -255,7 +258,6 @@
 - feat\(i18n\): Kabyle \(kab\) support — human-first, no MT suggestions \(\#208\) [\#211](https://github.com/OpenVoiceOS/ovos-localize/pull/211) ([JarbasAl](https://github.com/JarbasAl))
 - feat\(i18n\): enable kab \(Kabyle\) [\#209](https://github.com/OpenVoiceOS/ovos-localize/pull/209) ([github-actions[bot]](https://github.com/apps/github-actions))
 - docs: standardize NGI0 Commons Fund attribution [\#206](https://github.com/OpenVoiceOS/ovos-localize/pull/206) ([JarbasAl](https://github.com/JarbasAl))
-- docs: NLnet/NGI0 funding attribution [\#205](https://github.com/OpenVoiceOS/ovos-localize/pull/205) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
