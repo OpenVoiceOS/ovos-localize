@@ -2519,7 +2519,22 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
         : isCreateMode
           ? `Create a new ${fileKey} file. Add example values, one per line.`
           : (FILE_TYPE_HELP[fileData.type] || 'Translate this file to your language.');
-      const isJsonFile = !isCreateMode && (fileData.type === 'skill.json' || fileData.type === 'settingsmeta' || fileData.type === 'resource_json');
+      // T-4500: the file's own data decides this, not a list of type names.
+      // A .json resource is indexed under whatever type the generator gives
+      // it, and word_connectors.json is typed `word_connectors`, after its
+      // own name. It missed this list, so the translator got a free-line box
+      // for a flat JSON object and typed one value per line — that payload is
+      // ovos-workshop#659, two bare lines over a file whose keys are `and`
+      // and `or`. Every JSON-backed file in the index carries the two marks
+      // that matter, and no line-based file carries either: its file_path
+      // ends with .json, and every entry carries the key it fills. The names
+      // stay as a fallback for a file with no lang data to read.
+      const JSON_FILE_TYPES = ['skill.json', 'settingsmeta', 'resource_json'];
+      const looksLikeJsonResource = (fd) => Object.values(fd.langs || {}).some(ld =>
+        (ld.file_path || '').endsWith('.json')
+        || ((ld.entries || []).length > 0 && (ld.entries || []).every(e => e.key != null)));
+      const isJsonFile = !isCreateMode
+        && (JSON_FILE_TYPES.includes(fileData.type) || looksLikeJsonResource(fileData));
       const hasExpansion = isCreateMode ? false : ['intent', 'voc', 'dialog'].includes(fileData.type);
       const isHumanFirstLang = isHumanFirst(lang);
 
