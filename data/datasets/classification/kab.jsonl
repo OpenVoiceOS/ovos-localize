@@ -315,9 +315,6 @@
 {"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "all_day.voc", "text": "ass kamel"}
 {"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "all_day.voc", "text": "kra yekka wass"}
 {"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "and.voc", "text": "akked"}
-{"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "calendar.voc", "text": "awitay"}
-{"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "calendar.voc", "text": "iwitayen"}
-{"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "calendar.voc", "text": "calendrier"}
 {"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "calendar_list.intent", "text": "anwa awitayen yellan"}
 {"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "calendar_list.intent", "text": "sken-iyi-d afran n iwitayen"}
 {"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "calendar_list.intent", "text": "anta tuffɣa n iwitayen i yellan"}
@@ -359,9 +356,6 @@
 {"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "bɣiɣ {schedkind}-inu ad yeṭṭef tlatin n tedqiqin"}
 {"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "bɣiɣ {schedkind}-inu ad yeṭṭef xemsa n tedqiqin"}
 {"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "intent", "intent": "change_until.intent", "text": "ssenqes tanzagt n {schedkind}-inu"}
-{"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "choice.voc", "text": "yella"}
-{"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "choice.voc", "text": "afran"}
-{"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "choice.voc", "text": "fren"}
 {"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "create.voc", "text": "rnu"}
 {"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "create.voc", "text": "snulfu-d"}
 {"lang": "kab", "skill": "ovos-skill-alerts", "file_type": "voc", "intent": "create.voc", "text": "sɛiɣ"}
@@ -6181,30 +6175,75 @@
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "anwa aseggas ara yilin d aseggas n useqbeṛ"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "init-iyi-d melmi ara d-yas aseggas n useqbeṛ"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "melmi ara d-yeḍru useggas n useqbeṛ i d-iteddun"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "acḥal i d-yeqqim ar {date}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "acḥal i d-yeqqim ar {date} ma ulac aɣilif"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "melmi ara yili {date}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "acḥal n wussan i d-yeqqimen ar {date}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "acḥal n lweqt i d-yeqqimen ar {date}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "acḥal n wussan i d-yeqqimen ɣer {date}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "question_word.voc", "text": "anwa"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "question_word.voc", "text": "acu"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "question_word.voc", "text": "dacu"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "question_word.voc", "text": "acu-t"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "question_word.voc", "text": "dacu-t"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "acḥal i d-yeqqim ar {date:date}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "acḥal i d-yeqqim ar {date:date} ma ulac aɣilif"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "melmi ara yili {date:date}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "acḥal n wussan i d-yeqqimen ar {date:date}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "acḥal n lweqt i d-yeqqimen ar {date:date}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "acḥal n wussan i d-yeqqimen ɣer {date:date}"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "acḥal n wussan i yellan gar {start} d {end}"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "acḥal n wussan seg {start} ar {end}"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "ini-yi-d amḍan n wussan seg {start} ar {end}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "anwa wass n dduṛt i yellan {date}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "anwa wass n dduṛt i yellan {date} ma ulac aɣilif"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "d acu-t wass i yellan {date}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "init-iyi-d anwa wass i yellan {date}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "anwa wass n dduṛt ara yilin {date}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "{date} yeɣli-d d {weekday}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "{date} d {weekday}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "{date} yella d {weekday}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "{date} ad yili d {weekday}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "ass n {date} ad yili d {weekday}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "ass n {date} yella d {weekday}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "bɣiɣ ad ẓreɣ anwa wass n umalas ay d {date}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "bɣiɣ ad ẓreɣ anwa wass n umalas ay yella {date}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "bɣiɣ ad ẓreɣ anwa wass ay d {date}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "bɣiɣ ad ẓreɣ anwa wass ay yella {date}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "anwa wass n dduṛt i yellan {date:date}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "anwa wass n dduṛt i yellan {date:date} ma ulac aɣilif"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "d acu-t wass i yellan {date:date}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "init-iyi-d anwa wass i yellan {date:date}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "anwa wass n dduṛt ara yilin {date:date}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "deg wass n lǧemɛa i nella?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "deg wass n letnayen i nella?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "deg wass n ssebt i nella?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "deg wass n lḥedd i nella?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "deg wass n lexmis i nella?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "deg wass n ttlata i nella?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "deg wass n larebɛa i nella?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "tzemreḍ ad iyi-d-tiniḍ anwa n wass n ddurt ideg i nella?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "tzemreḍ ad iyi-d-tiniḍ anwa ass ideg i nella?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "teẓriḍ anwa n wass n ddurt ideg i nella?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "teẓriḍ anwa ass ideg i nella?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "d lǧemɛa?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "d letnayen?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "d ssebt?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "d lḥedd?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "d lexmis?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "d ttlata?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "d larebɛa?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "d lǧemɛa ass-a?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "d letnayen ass-a?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "d ssebt ass-a?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "d lḥedd ass-a?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "d lexmis ass-a?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "d ttlata ass-a?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "d larebɛa ass-a?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "ass-a d lǧemɛa?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "ass-a d letnayen?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "ass-a d ssebt?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "ass-a d lḥedd?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "ass-a d lexmis?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "ass-a d ttlata?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "ass-a d larebɛa?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "ini-yi-d anwa n wass n ddurt ideg i nella."}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "ini-yi-d anwa ass ideg i nella."}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "anwa n wass n ddurt ideg i nella?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "anwa n wass n ddurt i d ass-a?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "anwa ass ideg i nella?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "anwa ass i d ass-a?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "ass-a dacu-t?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "ini-yi-d ass n dduṛt"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "{date:date} yeɣli-d d {weekday}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "{date:date} d {weekday}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "{date:date} yella d {weekday}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "{date:date} ad yili d {weekday}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "ass n {date:date} ad yili d {weekday}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "ass n {date:date} yella d {weekday}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "bɣiɣ ad ẓreɣ anwa wass n umalas ay d {date:date}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "bɣiɣ ad ẓreɣ anwa wass n umalas ay yella {date:date}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "bɣiɣ ad ẓreɣ anwa wass ay d {date:date}"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "bɣiɣ ad ẓreɣ anwa wass ay yella {date:date}"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "tzemreḍ ad iyi-d-tiniḍ dacu n wass ideg i nella?"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "tzemreḍ ad iyi-d-tiniḍ d acu n wazemz ideg i nella?"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "tzemreḍ ad iyi-d-tiniḍ dacu n wass n wayyur ideg i nella?"}
@@ -7160,47 +7199,6 @@
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {number:offset} tesdidin"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {number:offset} tesint"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "acḥal ara tuɣal ssaɛa mbaɛd {number:offset} yesragen deg {location}"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "deg wass n lǧemɛa i nella?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "deg wass n letnayen i nella?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "deg wass n ssebt i nella?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "deg wass n lḥedd i nella?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "deg wass n lexmis i nella?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "deg wass n ttlata i nella?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "deg wass n larebɛa i nella?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "tzemreḍ ad iyi-d-tiniḍ anwa n wass n ddurt ideg i nella?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "tzemreḍ ad iyi-d-tiniḍ anwa ass ideg i nella?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "teẓriḍ anwa n wass n ddurt ideg i nella?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "teẓriḍ anwa ass ideg i nella?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "d lǧemɛa?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "d letnayen?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "d ssebt?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "d lḥedd?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "d lexmis?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "d ttlata?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "d larebɛa?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "d lǧemɛa ass-a?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "d letnayen ass-a?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "d ssebt ass-a?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "d lḥedd ass-a?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "d lexmis ass-a?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "d ttlata ass-a?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "d larebɛa ass-a?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "ass-a d lǧemɛa?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "ass-a d letnayen?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "ass-a d ssebt?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "ass-a d lḥedd?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "ass-a d lexmis?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "ass-a d ttlata?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "ass-a d larebɛa?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "ini-yi-d anwa n wass n ddurt ideg i nella."}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "ini-yi-d anwa ass ideg i nella."}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "anwa n wass n ddurt ideg i nella?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "anwa n wass n ddurt i d ass-a?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "anwa ass ideg i nella?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "anwa ass i d ass-a?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "dacu-t wass-a?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "ass-a dacu-t?"}
-{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "ini-yi-d ass n dduṛt"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "aseggas amiran"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "aseggas-a"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "ini-yi-d dacu-t useggas"}
@@ -7220,6 +7218,8 @@
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "anwa n useggas i d wa?"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "anwa n useggas i newweḍ tura?"}
 {"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "dacu n useggas i d ass-a?"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "yes_no_indicator.voc", "text": "d"}
+{"lang": "kab", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "yes_no_indicator.voc", "text": "deg wass"}
 {"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "births_in_history.intent", "text": "anwi i d-ilulen ass-a ?"}
 {"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "births_in_history.intent", "text": "anwi i d-ilulen ass-a deg umezruy?"}
 {"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "births_in_history.intent", "text": "anwi i d-ilulen ass-agi ?"}
@@ -7354,6 +7354,95 @@
 {"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "anti tidyanin i d-yeǧǧan later deg wazemz-a deg umezruy?"}
 {"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "ḥku-yi-d ayen i yeḍran am wass-a deg umezruy"}
 {"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "ḥku-yi-d ayen i yeḍran deg ass n {date} deg umezruy"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "acu i d-yeḍran ass am wass-a deg umezruy"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "efk-iyi-d tadyant n taggara n dduṛt-a"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "efk-iyi-d tadyant n uzekka"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "efk-iyi-d tadyant n wass-a"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "efk-iyi-d tadyant n yiḍelli"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "efk-iyi-d taqsiṭ n taggara n dduṛt-a"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "efk-iyi-d taqsiṭ n uzekka"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "efk-iyi-d taqsiṭ n wass-a"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "efk-iyi-d taqsiṭ n yiḍelli"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tadyant n taggara n dduṛt-a"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tadyant n uzekka"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tadyant n wass-a"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tadyant n yiḍelli"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "taqsiṭ n taggara n dduṛt-a"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "taqsiṭ n uzekka"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "taqsiṭ n wass-a"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "taqsiṭ n yiḍelli"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tadyant n wass {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "taqsiṭ n wass {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tadyant n ctembeṛ {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tadyant n dujembeṛ {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tadyant n fuṛar {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tadyant n mayyu {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tadyant n meɣres {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tadyant n tubeṛ {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tadyant n wambeṛ {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tadyant n yebrir {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tadyant n yennayer {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tadyant n yulyu {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tadyant n yunyu {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tadyant n ɣuct {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "taqsiṭ n ctembeṛ {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "taqsiṭ n dujembeṛ {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "taqsiṭ n fuṛar {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "taqsiṭ n mayyu {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "taqsiṭ n meɣres {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "taqsiṭ n tubeṛ {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "taqsiṭ n wambeṛ {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "taqsiṭ n yebrir {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "taqsiṭ n yennayer {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "taqsiṭ n yulyu {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "taqsiṭ n yunyu {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "taqsiṭ n ɣuct {date}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "bɣiɣ tadyant ɣef uzekka"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "bɣiɣ tadyant ɣef wass-a"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "bɣiɣ tadyant ɣef yiḍelli"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tesɛiḍ tadyant n uzekka"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tesɛiḍ tadyant n wass-a"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "tesɛiḍ tadyant n yiḍelli"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "acu d-yeḍran deg {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "acu d-yeḍran deg useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "acu i d-yeḍran deg {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "acu i d-yeḍran deg useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "d acu d-yeḍran deg {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "d acu d-yeḍran deg useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "d acu i d-yeḍran deg {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "d acu i d-yeḍran deg useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "ayen d-yeḍran deg {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "ayen d-yeḍran deg useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "ayen i d-yeḍran deg {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "ayen i d-yeḍran deg useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "ayen yeḍran {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "ayen yeḍran deg {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "kra ɣef {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "kra ɣef useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "ini-yi-d kra ɣef {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "ini-yi-d kra ɣef useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "efk-iyi-d kra ɣef {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "efk-iyi-d kra ɣef useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "tadyant n {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "taqsiṭ n {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "tadyant n useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "taqsiṭ n useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "ini-yi-d tadyant n {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "ini-yi-d tadyant n useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "ini-yi-d taqsiṭ n {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "efk-iyi-d taqsiṭ n {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "ini-yi-d taqsiṭ n useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "efk-iyi-d tadyant n {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "efk-iyi-d tadyant n useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "efk-iyi-d taqsiṭ n useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "yiwet n tedyant ɣef useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "yiwet n teqsiṭ ɣef useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "ini-yi-d yiwet n tedyant ɣef useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "ini-yi-d yiwet n teqsiṭ ɣef useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "efk-iyi-d yiwet n tedyant ɣef useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "efk-iyi-d yiwet n teqsiṭ ɣef useggas {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "ineḍruyen n {number:year}"}
+{"lang": "kab", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "ineḍruyen n useggas {number:year}"}
 {"lang": "kab", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "misc_blacklist.voc", "text": "tignawt"}
 {"lang": "kab", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "misc_blacklist.voc", "text": "urar ccna"}
 {"lang": "kab", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "misc_blacklist.voc", "text": "urar"}

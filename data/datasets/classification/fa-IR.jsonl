@@ -2638,26 +2638,49 @@
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "کدام سال، سال کبیسه بعدی است"}
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "بگو سال کبیسه بعدی کی خواهد بود"}
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "next_leap_year.intent", "text": "چه زمانی سال کبیسه بعدی می‌رسد"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "چقدر تا {date} مانده است"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "چقدر تا {date} مانده است لطفا"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "چند روز تا {date} مانده"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "{date} چه زمانی است"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "چقدر زمان تا {date} باقی مانده"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "question_word.voc", "text": "چه"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "question_word.voc", "text": "کدام"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "question_word.voc", "text": "چند"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "چقدر تا {date:date} مانده است"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "چقدر تا {date:date} مانده است لطفا"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "چند روز تا {date:date} مانده"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "{date:date} چه زمانی است"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "چقدر زمان تا {date:date} باقی مانده"}
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "بین {start} و {end} چند روز فاصله است"}
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "روزهای بین {start} و {end} را بشمار"}
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "چند روز {start} را از {end} جدا می‌کند"}
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "time_until.intent", "text": "تعداد روزهای {start} تا {end} را حساب کن"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "{date} چه روزی از هفته است"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "{date} چه روزی از هفته است لطفا"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "بگو {date} چه روزی است"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "روز هفته برای {date} کدام است"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "{date} چندشنبه است"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "آیا {date} روز {weekday} است"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "آیا {date} روز {weekday} است لطفا"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "{date} روز {weekday} می‌شود"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "{date} روز {weekday} بود"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "{date} برابر با {weekday} است"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_matches_date.intent", "text": "{date} روز {weekday} هست یا نه"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "{date:date} چه روزی از هفته است"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "{date:date} چه روزی از هفته است لطفا"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "بگو {date:date} چه روزی است"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "روز هفته برای {date:date} کدام است"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "{date:date} چندشنبه است"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "امروز جمعه هست"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "امروز شنبه هست"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "امروز یک‌شنبه هست"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "امروز دوشنبه هست"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "امروز سه‌شنبه هست"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "امروز چهارشنبه هست"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "امروز پنج‌شنبه هست"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "الآن توی جمعه هستیم"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "الآن توی شنبه هستیم"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "الآن توی یک‌شنبه هستیم"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "الآن توی دوشنبه هستیم"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "الآن توی سه‌شنبه هستیم"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "الآن توی چهارشنبه هستیم"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "الآن توی پنج‌شنبه هستیم"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "الآن چند شنبه هست"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "امروز چه روزی از هفته هست"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "بهم بگو الآن چند شنبه هست"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "بهم بگو امروز چند شنبه هست"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "چند شنبه هستیم"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "چند شنبه هست"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "آیا {date:date} روز {weekday} است"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "آیا {date:date} روز {weekday} است لطفا"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "{date:date} روز {weekday} می‌شود"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "{date:date} روز {weekday} بود"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "{date:date} برابر با {weekday} است"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "weekday_for_date.intent", "text": "{date:date} روز {weekday} هست یا نه"}
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "امروز چندم است"}
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "امروز چندم است لطفا"}
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_day_is_it.intent", "text": "امروز چه روزی از ماه است"}
@@ -2724,26 +2747,6 @@
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "{number:offset} ساعت بعد از الان کیه"}
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "نیم ساعت دیگه ساعت چنده"}
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_time_will_it_be.intent", "text": "چند دقیقه دیگه ساعت چند میشه"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "امروز جمعه هست"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "امروز شنبه هست"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "امروز یک‌شنبه هست"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "امروز دوشنبه هست"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "امروز سه‌شنبه هست"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "امروز چهارشنبه هست"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "امروز پنج‌شنبه هست"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "الآن توی جمعه هستیم"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "الآن توی شنبه هستیم"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "الآن توی یک‌شنبه هستیم"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "الآن توی دوشنبه هستیم"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "الآن توی سه‌شنبه هستیم"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "الآن توی چهارشنبه هستیم"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "الآن توی پنج‌شنبه هستیم"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "الآن چند شنبه هست"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "امروز چه روزی از هفته هست"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "بهم بگو الآن چند شنبه هست"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "بهم بگو امروز چند شنبه هست"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "چند شنبه هستیم"}
-{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_weekday_is_it.intent", "text": "چند شنبه هست"}
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "امسال"}
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "سال فعلی"}
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "چه سالی هست"}
@@ -2754,6 +2757,88 @@
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "سال حال حاضر چه سالی هست"}
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "امروز توی چه سالی هست"}
 {"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "intent", "intent": "what_year_is_it.intent", "text": "الآن توی چه سالی هستیم"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "yes_no_indicator.voc", "text": "آیا"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "yes_no_indicator.voc", "text": "امروز"}
+{"lang": "fa-IR", "skill": "ovos-skill-date-time", "file_type": "voc", "intent": "yes_no_indicator.voc", "text": "الآن"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "حقایق امروز"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "تریوی در مورد امروز"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "کنجکاوی امروز"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "واقعیت امروز"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "حقایق مربوط به تاریخ {date}"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "تریوی در مورد تاریخ {date}"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "کنجکاوی در مورد تاریخ {date}"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "حقایق برای تاریخ {date}"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "واقعیت در مورد ژانویه {date}"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "تریوی در ماه ژانویه {date}"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "واقعیت در ماه ژانویه {date}"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "تریوی برای ماه ژانویه {date}"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "در مورد امروز یک نکته جالب بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "در مورد امروز یک واقعیت بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "در مورد دیروز یک نکته جالب بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "در مورد دیروز یک واقعیت بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "در مورد فردا یک نکته جالب بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "در مورد فردا یک واقعیت بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "درباره امروز یک نکته جالب بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "درباره امروز یک واقعیت بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "درباره دیروز یک نکته جالب بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "درباره دیروز یک واقعیت بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "درباره فردا یک نکته جالب بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "درباره فردا یک واقعیت بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت در مورد {date} آوریل بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت در مورد {date} اوت بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت در مورد {date} اکتبر بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت در مورد {date} دسامبر بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت در مورد {date} سپتامبر بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت در مورد {date} فوریه بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت در مورد {date} مارس بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت در مورد {date} مه بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت در مورد {date} نوامبر بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت در مورد {date} ژانویه بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت در مورد {date} ژوئن بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت در مورد {date} ژوئیه بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت درباره {date} آوریل بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت درباره {date} اوت بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت درباره {date} اکتبر بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت درباره {date} دسامبر بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت درباره {date} سپتامبر بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت درباره {date} فوریه بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت درباره {date} مارس بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت درباره {date} مه بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت درباره {date} نوامبر بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت درباره {date} ژانویه بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت درباره {date} ژوئن بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "یک واقعیت درباره {date} ژوئیه بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "در این روز در تاریخ چه اتفاقی افتاده"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "در این روز در تاریخ چه رخ داده"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "در چنین روزی در تاریخ چه اتفاقی افتاده"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "today_in_history.intent", "text": "در چنین روزی در تاریخ چه رخ داده"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "voc", "intent": "year_bc.voc", "text": "قبل از میلاد"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "واقعیت در مورد سال {number:year}"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "تریوی در مورد سال {number:year}"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "کنجکاوی در مورد سال {number:year}"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "سال واقعیت {number:year}"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "سال تریوی {number:year}"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "یک نکته جالب درباره سال {number:year} بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "یک واقعیت جالب درباره سال {number:year} بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "در سال {number:year} چه اتفاقی افتاد"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "در سال {number:year} چه رخ داد"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "در مورد سال {number:year} یه نکته جالب بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "در مورد سال {number:year} یک واقعیت بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "درباره سال {number:year} یه نکته جالب بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "درباره سال {number:year} یک واقعیت بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "یه نکته در مورد سال {number:year} بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "یه نکته درباره سال {number:year} بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "یه واقعیت در مورد سال {number:year} بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "یه واقعیت درباره سال {number:year} بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "یک نکته در مورد سال {number:year} بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "یک نکته درباره سال {number:year} بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "یک واقعیت در مورد سال {number:year} بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "یک واقعیت درباره سال {number:year} بگو"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "واقعیت در مورد سال {number:year} قبل از میلاد"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "تریوی در مورد سال {number:year} قبل از میلاد"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "کنجکاوی در مورد سال {number:year} قبل از میلاد"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "سال واقعیت {number:year} قبل از میلاد"}
+{"lang": "fa-IR", "skill": "ovos-skill-days-in-history", "file_type": "intent", "intent": "year_in_history.intent", "text": "سال تریوی {number:year} قبل از میلاد"}
 {"lang": "fa-IR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "misc_blacklist.voc", "text": "آب و هوا"}
 {"lang": "fa-IR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "misc_blacklist.voc", "text": "پیش بینی"}
 {"lang": "fa-IR", "skill": "ovos-skill-ddg", "file_type": "voc", "intent": "misc_blacklist.voc", "text": "به من یادآوری کن"}
