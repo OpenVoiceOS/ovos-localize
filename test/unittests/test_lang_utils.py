@@ -45,10 +45,10 @@ class TestNormalizeLangCode:
         assert normalize_lang_code("en-US") == "en-US"
 
     def test_bare_code(self) -> None:
-        """Bare codes are expanded to full BCP-47 via EXPLICIT_MAPPING."""
+        """Bare codes are expanded to their default region."""
         assert normalize_lang_code("da") == "da-DK"
-        assert normalize_lang_code("en") == "en-US"
-        assert normalize_lang_code("pt") == "pt-BR"
+        assert normalize_lang_code("en") == "en-GB"
+        assert normalize_lang_code("pt") == "pt-PT"
 
     def test_mixed_case(self) -> None:
         """pt-br → pt-BR."""
@@ -70,13 +70,38 @@ class TestNormalizeLangCode:
         assert normalize_lang_code("gl") == "gl-ES"
         assert normalize_lang_code("it") == "it-IT"
         assert normalize_lang_code("nl") == "nl-NL"
-        assert normalize_lang_code("pt") == "pt-BR"
+        assert normalize_lang_code("pt") == "pt-PT"
         assert normalize_lang_code("eu") == "eu-ES"
         assert normalize_lang_code("eu-EU") == "eu-ES"
         assert normalize_lang_code("es-LM") == "es-419"
         # Case insensitive
         assert normalize_lang_code("CA") == "ca-ES"
         assert normalize_lang_code("EU-eu") == "eu-ES"
+
+    def test_bare_directory_means_its_default_region(self) -> None:
+        """A bare directory is the region where the language first appeared
+        and is still spoken: Portuguese is pt-PT and English is en-GB."""
+        assert normalize_lang_code("pt") == "pt-PT"
+        assert normalize_lang_code("PT") == "pt-PT"
+        assert normalize_lang_code("en") == "en-GB"
+        assert normalize_lang_code("EN") == "en-GB"
+        assert normalize_lang_code("en-EN") == "en-GB"
+
+    @pytest.mark.parametrize("bare,expected", [
+        ("az", "az-AZ"), ("ca", "ca-ES"), ("cs", "cs-CZ"), ("da", "da-DK"),
+        ("de", "de-DE"), ("el", "el-GR"), ("en", "en-GB"), ("es", "es-ES"),
+        ("eu", "eu-ES"), ("fa", "fa-IR"), ("fi", "fi-FI"), ("fr", "fr-FR"),
+        ("gl", "gl-ES"), ("he", "he-IL"), ("hi", "hi-IN"), ("hu", "hu-HU"),
+        ("id", "id-ID"), ("it", "it-IT"), ("ja", "ja-JP"), ("ko", "ko-KR"),
+        ("lt", "lt-LT"), ("nb", "nb-NO"), ("nl", "nl-NL"), ("nn", "nn-NO"),
+        ("pl", "pl-PL"), ("pt", "pt-PT"), ("ro", "ro-RO"), ("ru", "ru-RU"),
+        ("sk", "sk-SK"), ("sl", "sl-SI"), ("sv", "sv-SE"), ("th", "th-TH"),
+        ("tr", "tr-TR"), ("uk", "uk-UA"), ("vi", "vi-VN"), ("zh", "zh-CN"),
+        ("no", "nb-NO"), ("jp", "ja-JP"),
+    ])
+    def test_every_bare_directory_expansion(self, bare: str, expected: str) -> None:
+        """The full set of bare directory names the platform expands."""
+        assert normalize_lang_code(bare) == expected
 
     def test_kabyle_stays_bare(self) -> None:
         """Kabyle (kab) has no commonly-used region subtag — normalization

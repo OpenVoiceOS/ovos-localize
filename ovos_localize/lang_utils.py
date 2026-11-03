@@ -7,54 +7,27 @@ tag distance. Provides display names for the SPA frontend.
 from collections.abc import Iterable
 
 import langcodes
-from ovos_spec_tools.language import lang_distance
+from ovos_spec_tools.language import lang_distance, with_default_region
 
-# Explicit normalization for OVOS specific usage
-# needed for skills that don't provide full lang-code
-# ideally this should be fixed skill side
+# Bare locale directory names that the platform tracks under a region. Each
+# one expands to its default region, the region where the language first
+# appeared and is still spoken (``with_default_region``): ``pt`` is ``pt-PT``
+# and ``en`` is ``en-GB``. A language that is not in this set, such as
+# ``kab``, stays bare.
+REGIONED_BARE_CODES = frozenset({
+    "az", "ca", "cs", "da", "de", "el", "en", "es", "eu", "fa", "fi", "fr",
+    "gl", "he", "hi", "hu", "id", "it", "ja", "ko", "lt", "nb", "nl", "nn",
+    "pl", "pt", "ro", "ru", "sk", "sl", "sv", "th", "tr", "uk", "vi", "zh",
+})
+
+# Aliases and common mistakes in OVOS locale directory names, which no rule
+# derives. Ideally these are fixed skill side.
 EXPLICIT_MAPPING = {
-    "da": "da-DK",
-    "cs": "cs-CZ",
-    "hu": "hu-HU",
-    "pl": "pl-PL",
-    "ru": "ru-RU",
-    "sv": "sv-SE",
-    "ca": "ca-ES",
-    "de": "de-DE",
-    "en": "en-US",
-    "es": "es-ES",
-    "fa": "fa-IR",
     "fa-FA": "fa-IR",
-    "fr": "fr-FR",
-    "gl": "gl-ES",
-    "it": "it-IT",
-    "nl": "nl-NL",
-    "pt": "pt-BR",
-    "eu": "eu-ES",
     "eu-EU": "eu-ES",
     "es-LM": "es-419",
-    "az": "az-AZ",
-    "tr": "tr-TR",
-    "uk": "uk-UA",
-    "lt": "lt-LT",
-    "nb": "nb-NO",
     "no": "nb-NO",  # Standardizing generic 'no' to Bokmål
-    "nn": "nn-NO",
-    "fi": "fi-FI",
-    "el": "el-GR",
-    "he": "he-IL",
-    "hi": "hi-IN",
-    "id": "id-ID",
-    "ja": "ja-JP",
-    "ko": "ko-KR",
-    "ro": "ro-RO",
-    "sk": "sk-SK",
-    "sl": "sl-SI",
-    "th": "th-TH",
-    "vi": "vi-VN",
-    "zh": "zh-CN",
-    # Common redundancy fixes
-    "en-EN": "en-US",
+    "en-EN": "en-GB",  # a bare 'en' written with a region
     "en-UK": "en-GB",
     "fr-FA": "fr-FR",
     "jp": "ja-JP",    # 'jp' is a common mistake for 'ja'
@@ -64,7 +37,8 @@ EXPLICIT_MAPPING = {
 def normalize_lang_code(code: str) -> str:
     """Normalize a language code to canonical BCP-47 form.
 
-    Uses an explicit mapping for common OVOS aliases, then falls back
+    Uses an explicit mapping for common OVOS aliases, then expands a bare
+    code in ``REGIONED_BARE_CODES`` to its default region, then falls back
     to ``langcodes`` for BCP-47 standardization.
 
     Args:
@@ -84,6 +58,9 @@ def normalize_lang_code(code: str) -> str:
     for k, v in EXPLICIT_MAPPING.items():
         if k.lower() == code.lower():
             return v
+
+    if code.lower() in REGIONED_BARE_CODES:
+        return with_default_region(code.lower())
 
     try:
         tag = langcodes.Language.get(code)
