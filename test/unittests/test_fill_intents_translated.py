@@ -375,3 +375,16 @@ def test_status_prints_the_plan_without_a_translator(tmp_path, capsys):
     out = capsys.readouterr().out
     assert "en-US intents: 3" in out
     assert "fr-FR: gaps=3 published=0 (0 rows) remaining=3 templates=4 checkpointed=0" in out
+
+
+def test_load_sources_reads_a_bare_english_tree_as_the_source(tmp_path):
+    """An intent whose only English is en-GB (a bare locale/en) is still a gap source."""
+    d = tmp_path / "skills"
+    d.mkdir()
+    _skill(d / "ner.json", "simple_NER", {
+        "ner.intent": {"an": ["o tiempo"], "en-GB": ["what is {thing}"]},
+        "both.intent": {"en-GB": ["colour"], "en-US": ["color"]},
+    })
+    src = load_sources(d)
+    assert src[("simple_NER", "ner.intent")] == {"lines": ["what is {thing}"], "have": {"an", "en-GB"}}
+    assert src[("simple_NER", "both.intent")]["lines"] == ["color"]

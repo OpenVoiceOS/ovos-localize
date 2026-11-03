@@ -3,6 +3,7 @@
 import pytest
 
 from ovos_localize.lang_utils import (
+    english_source_lang,
     is_rtl,
     lang_display_name,
     lang_display_name_native,
@@ -252,3 +253,22 @@ class TestRtlListParity:
         assert match, "index.html no longer declares RTL_LANGS"
         js = set(re.findall(r"'([a-z]{2,3})'", match.group(1)))
         assert js == set(lang_utils._RTL_LANGS)
+
+
+class TestEnglishSourceLang:
+    """English is found by its language subtag, with en-US first."""
+
+    def test_en_us_wins_over_other_regions(self) -> None:
+        assert english_source_lang(["ast", "en-GB", "en-US", "de-DE"]) == "en-US"
+
+    def test_any_english_region_serves_without_en_us(self) -> None:
+        assert english_source_lang(["ast", "an", "en-GB", "de-DE"]) == "en-GB"
+        assert english_source_lang(["de-DE", "en-AU"]) == "en-AU"
+
+    def test_no_english(self) -> None:
+        assert english_source_lang(["de-DE", "es-ES"]) is None
+        assert english_source_lang([]) is None
+
+    def test_subtag_not_prefix(self) -> None:
+        """``eng``-like or ``en``-prefixed tags of other languages are not English."""
+        assert english_source_lang(["eno", "enm-GB"]) is None

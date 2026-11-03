@@ -212,3 +212,22 @@ def canonical_lang_spelling(tag: str) -> str:
         return langcodes.Language.get(tag.strip()).to_tag()
     except (langcodes.tag_parser.LanguageTagError, LookupError, ValueError):
         return tag.strip()
+
+
+def english_source_lang(langs: Iterable[str]) -> str | None:
+    """Return the English language to compare translations against.
+
+    ``en-US`` comes first. Otherwise the first tag whose language subtag is
+    ``en`` wins, so a repository whose only English tree is a bare
+    ``locale/en`` (``en-GB``) still has a source.
+
+    Args:
+        langs: Language tags, for example the languages of one locale file.
+
+    Returns:
+        The English tag, or ``None`` when no tag is English.
+    """
+    langs = list(langs)
+    if "en-US" in langs:
+        return "en-US"
+    return next((lang for lang in langs if lang.split("-")[0].lower() == "en"), None)
