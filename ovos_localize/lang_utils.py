@@ -7,6 +7,7 @@ tag distance. Provides display names for the SPA frontend.
 from collections.abc import Iterable
 
 import langcodes
+from ovos_spec_tools.language import lang_distance
 
 # Explicit normalization for OVOS specific usage
 # needed for skills that don't provide full lang-code
@@ -98,8 +99,10 @@ def merge_equivalent_langs(
 ) -> dict[str, str]:
     """Build a mapping that merges equivalent language codes.
 
-    Codes within ``max_distance`` of each other (using ``langcodes.tag_distance``)
-    are merged to a single representative.
+    Codes within ``max_distance`` of each other (using
+    ``ovos_spec_tools.language.lang_distance``) are merged to a single
+    representative. A code with no region is measured from its default
+    region, so ``pt`` merges into ``pt-PT`` and never into ``pt-BR``.
 
     With ``max_distance=0`` (default), only truly equivalent codes merge:
     ``da`` and ``da-DK`` (distance 0) merge, but ``sv-FI`` and ``sv-SE``
@@ -134,7 +137,7 @@ def merge_equivalent_langs(
         for canon in canonical.values():
             if canon == code:
                 continue
-            dist = langcodes.tag_distance(code, canon)
+            dist = lang_distance(code, canon)
             if dist <= max_distance:
                 canonical[code] = canon
                 merged = True

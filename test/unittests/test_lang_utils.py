@@ -171,6 +171,23 @@ class TestCanonicalCodeWins:
         assert merged["an-ES"] == "an"
         assert merged["ast-ES"] == "ast"
 
+    def test_bare_pt_merges_into_pt_pt(self) -> None:
+        """A bare tag means its default region: Portuguese is pt-PT."""
+        merged = merge_equivalent_langs(["pt", "pt-BR", "pt-PT"])
+        assert merged["pt"] == "pt-PT"
+        assert merged["pt-BR"] == "pt-BR"
+
+    def test_bare_en_merges_into_en_gb(self) -> None:
+        """A bare tag means its default region: English is en-GB."""
+        merged = merge_equivalent_langs(["en", "en-US", "en-GB"])
+        assert merged["en"] == "en-GB"
+        assert merged["en-US"] == "en-US"
+
+    def test_bare_en_stays_apart_from_en_us(self) -> None:
+        """en-US is not what en means, so the two never merge."""
+        merged = merge_equivalent_langs(["en", "en-US"])
+        assert merged["en"] == "en"
+
     def test_mirandese_region_is_not_equivalent(self) -> None:
         """``mwl`` and ``mwl-PT`` are distance 4, so they never merge -- the
         enabled-code preference must not force unrelated tags together."""

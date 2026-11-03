@@ -18,7 +18,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-import langcodes
+from ovos_spec_tools.language import lang_distance
 
 from ovos_localize.locale_rules import (
     BAD_SPELLING,
@@ -124,8 +124,10 @@ class TestRuleContent(unittest.TestCase):
         self.assertEqual([], RULES["tags"]["kab-dz"]["rivals"])
 
     def test_a_language_with_two_regions_may_not(self):
+        # A bare pt means pt-PT, so it is a rival of pt-BR and not of pt-PT.
         self.assertFalse(RULES["tags"]["pt-br"]["bare_ok"])
-        self.assertEqual(["pt-AO", "pt-PT"], RULES["tags"]["pt-br"]["rivals"])
+        self.assertEqual(["pt", "pt-AO", "pt-PT"], RULES["tags"]["pt-br"]["rivals"])
+        self.assertEqual(["pt-AO", "pt-BR"], RULES["tags"]["pt-pt"]["rivals"])
 
     def test_a_bare_tag_that_does_not_mean_the_region_may_not(self):
         # sw is not Kenya, so locale/sw is not sw-KE's home.
@@ -242,10 +244,38 @@ class TestPageAgreesWithGuard(unittest.TestCase):
                         if one == other:
                             continue
                         self.assertEqual(
-                            0, langcodes.tag_distance(one, other),
+                            0, lang_distance(one, other),
                             f"{ref}: {one} and {other} are different languages "
                             f"and both are written to {path}",
                         )
+
+
+class TestBareTagMeansItsDefaultRegion(unittest.TestCase):
+    """A tag with no region means the region where the language first
+    appeared and is still spoken: ``en`` is ``en-GB`` and ``pt`` is
+    ``pt-PT``. The directory of a bare tag is that region's home."""
+
+    def test_bare_pt_is_a_rival_of_pt_br_and_not_of_pt_pt(self):
+        rules = build_locale_rules(["pt", "pt-BR", "pt-PT"])["tags"]
+        self.assertEqual(["pt", "pt-PT"], rules["pt-br"]["rivals"])
+        self.assertEqual(["pt-BR"], rules["pt-pt"]["rivals"])
+
+    def test_bare_en_is_a_rival_of_en_us_and_not_of_en_gb(self):
+        rules = build_locale_rules(["en", "en-GB", "en-US"])["tags"]
+        self.assertEqual(["en", "en-GB"], rules["en-us"]["rivals"])
+        self.assertEqual(["en-US"], rules["en-gb"]["rivals"])
+
+    def test_only_the_default_region_may_take_the_bare_directory(self):
+        self.assertTrue(build_locale_rules(["pt", "pt-PT"])["tags"]["pt-pt"]["bare_ok"])
+        self.assertFalse(build_locale_rules(["pt", "pt-BR"])["tags"]["pt-br"]["bare_ok"])
+        self.assertTrue(build_locale_rules(["en", "en-GB"])["tags"]["en-gb"]["bare_ok"])
+        self.assertFalse(build_locale_rules(["en", "en-US"])["tags"]["en-us"]["bare_ok"])
+
+    def test_the_guard_keeps_en_us_out_of_the_bare_english_directory(self):
+        us = build_locale_rules(["en", "en-US"])
+        self.assertEqual(REGION_COLLISION, check_path_lang("locale/en/x.voc", "en-US", us)[0])
+        gb = build_locale_rules(["en", "en-GB"])
+        self.assertEqual(OK, check_path_lang("locale/en/x.voc", "en-GB", gb)[0])
 
 
 class TestBuildIsDeterministic(unittest.TestCase):

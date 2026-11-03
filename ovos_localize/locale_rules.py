@@ -33,7 +33,7 @@ what this module builds, so the page can never read a stale rule.
 import json
 from collections.abc import Iterable
 
-import langcodes
+from ovos_spec_tools.language import lang_distance
 
 from ovos_localize.lang_utils import canonical_lang_spelling
 
@@ -61,22 +61,19 @@ def _primary(tag: str) -> str:
 
 def _same_language(one: str, other: str) -> bool:
     """Tell if two tags name the same language for translation purposes."""
-    try:
-        return langcodes.tag_distance(one, other) == 0
-    except (langcodes.tag_parser.LanguageTagError, LookupError):
-        return False
+    return lang_distance(one, other) == 0
 
 
 def _bare_means(tag: str) -> bool:
     """Tell if the region-less form of ``tag`` already means ``tag``.
 
-    ``kab`` means ``kab-DZ`` and ``fr`` means ``fr-FR``; ``sw`` does not mean
-    ``sw-KE``. ``langcodes`` answers this from CLDR's default region.
+    ``kab`` means ``kab-DZ``, ``fr`` means ``fr-FR`` and ``pt`` means
+    ``pt-PT``; ``sw`` does not mean ``sw-KE`` and ``pt`` does not mean
+    ``pt-BR``. ``ovos_spec_tools.language`` answers this from the default
+    region of the bare tag, the region where the language first appeared and
+    is still spoken.
     """
-    try:
-        return langcodes.tag_distance(_primary(tag), tag) == 0
-    except (langcodes.tag_parser.LanguageTagError, LookupError):
-        return False
+    return lang_distance(_primary(tag), tag) == 0
 
 
 def build_locale_rules(tags: Iterable[str]) -> dict:
