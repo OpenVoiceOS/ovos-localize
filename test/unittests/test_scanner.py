@@ -98,8 +98,10 @@ class TestScanLocaleDirectory:
         files, bad = scan_locale_directory(str(locale))
         assert "en" in bad
         assert "en-US" not in bad
-        # Both files should still be present and normalised to en-US
-        assert all(f.lang == "en-US" for f in files)
+        # A bare en directory is en-GB, the default region of English; the
+        # en-US file keeps its own region.
+        assert {Path(f.relative_path).parent.name: f.lang for f in files} == {
+            "en": "en-GB", "en-US": "en-US"}
 
     def test_kabyle_bare_code_not_flagged_as_bad(self, tmp_path: Path) -> None:
         """kab has no commonly-used region subtag and normalizes to itself

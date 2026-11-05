@@ -3,6 +3,7 @@
 import pytest
 
 from ovos_localize.lang_utils import (
+    english_source_lang,
     is_rtl,
     lang_display_name,
     lang_display_name_native,
@@ -45,10 +46,10 @@ class TestNormalizeLangCode:
         assert normalize_lang_code("en-US") == "en-US"
 
     def test_bare_code(self) -> None:
-        """Bare codes are expanded to full BCP-47 via EXPLICIT_MAPPING."""
+        """Bare codes are expanded to their default region."""
         assert normalize_lang_code("da") == "da-DK"
-        assert normalize_lang_code("en") == "en-US"
-        assert normalize_lang_code("pt") == "pt-BR"
+        assert normalize_lang_code("en") == "en-GB"
+        assert normalize_lang_code("pt") == "pt-PT"
 
     def test_mixed_case(self) -> None:
         """pt-br → pt-BR."""
@@ -70,13 +71,38 @@ class TestNormalizeLangCode:
         assert normalize_lang_code("gl") == "gl-ES"
         assert normalize_lang_code("it") == "it-IT"
         assert normalize_lang_code("nl") == "nl-NL"
-        assert normalize_lang_code("pt") == "pt-BR"
+        assert normalize_lang_code("pt") == "pt-PT"
         assert normalize_lang_code("eu") == "eu-ES"
         assert normalize_lang_code("eu-EU") == "eu-ES"
         assert normalize_lang_code("es-LM") == "es-419"
         # Case insensitive
         assert normalize_lang_code("CA") == "ca-ES"
         assert normalize_lang_code("EU-eu") == "eu-ES"
+
+    def test_bare_directory_means_its_default_region(self) -> None:
+        """A bare directory is the region where the language first appeared
+        and is still spoken: Portuguese is pt-PT and English is en-GB."""
+        assert normalize_lang_code("pt") == "pt-PT"
+        assert normalize_lang_code("PT") == "pt-PT"
+        assert normalize_lang_code("en") == "en-GB"
+        assert normalize_lang_code("EN") == "en-GB"
+        assert normalize_lang_code("en-EN") == "en-GB"
+
+    @pytest.mark.parametrize("bare,expected", [
+        ("az", "az-AZ"), ("ca", "ca-ES"), ("cs", "cs-CZ"), ("da", "da-DK"),
+        ("de", "de-DE"), ("el", "el-GR"), ("en", "en-GB"), ("es", "es-ES"),
+        ("eu", "eu-ES"), ("fa", "fa-IR"), ("fi", "fi-FI"), ("fr", "fr-FR"),
+        ("gl", "gl-ES"), ("he", "he-IL"), ("hi", "hi-IN"), ("hu", "hu-HU"),
+        ("id", "id-ID"), ("it", "it-IT"), ("ja", "ja-JP"), ("ko", "ko-KR"),
+        ("lt", "lt-LT"), ("nb", "nb-NO"), ("nl", "nl-NL"), ("nn", "nn-NO"),
+        ("pl", "pl-PL"), ("pt", "pt-PT"), ("ro", "ro-RO"), ("ru", "ru-RU"),
+        ("sk", "sk-SK"), ("sl", "sl-SI"), ("sv", "sv-SE"), ("th", "th-TH"),
+        ("tr", "tr-TR"), ("uk", "uk-UA"), ("vi", "vi-VN"), ("zh", "zh-CN"),
+        ("no", "nb-NO"), ("jp", "ja-JP"),
+    ])
+    def test_every_bare_directory_expansion(self, bare: str, expected: str) -> None:
+        """The full set of bare directory names the platform expands."""
+        assert normalize_lang_code(bare) == expected
 
     def test_kabyle_stays_bare(self) -> None:
         """Kabyle (kab) has no commonly-used region subtag — normalization
@@ -171,6 +197,23 @@ class TestCanonicalCodeWins:
         assert merged["an-ES"] == "an"
         assert merged["ast-ES"] == "ast"
 
+    def test_bare_pt_merges_into_pt_pt(self) -> None:
+        """A bare tag means its default region: Portuguese is pt-PT."""
+        merged = merge_equivalent_langs(["pt", "pt-BR", "pt-PT"])
+        assert merged["pt"] == "pt-PT"
+        assert merged["pt-BR"] == "pt-BR"
+
+    def test_bare_en_merges_into_en_gb(self) -> None:
+        """A bare tag means its default region: English is en-GB."""
+        merged = merge_equivalent_langs(["en", "en-US", "en-GB"])
+        assert merged["en"] == "en-GB"
+        assert merged["en-US"] == "en-US"
+
+    def test_bare_en_stays_apart_from_en_us(self) -> None:
+        """en-US is not what en means, so the two never merge."""
+        merged = merge_equivalent_langs(["en", "en-US"])
+        assert merged["en"] == "en"
+
     def test_mirandese_region_is_not_equivalent(self) -> None:
         """``mwl`` and ``mwl-PT`` are distance 4, so they never merge -- the
         enabled-code preference must not force unrelated tags together."""
@@ -210,3 +253,22 @@ class TestRtlListParity:
         assert match, "index.html no longer declares RTL_LANGS"
         js = set(re.findall(r"'([a-z]{2,3})'", match.group(1)))
         assert js == set(lang_utils._RTL_LANGS)
+
+
+class TestEnglishSourceLang:
+    """English is found by its language subtag, with en-US first."""
+
+    def test_en_us_wins_over_other_regions(self) -> None:
+        assert english_source_lang(["ast", "en-GB", "en-US", "de-DE"]) == "en-US"
+
+    def test_any_english_region_serves_without_en_us(self) -> None:
+        assert english_source_lang(["ast", "an", "en-GB", "de-DE"]) == "en-GB"
+        assert english_source_lang(["de-DE", "en-AU"]) == "en-AU"
+
+    def test_no_english(self) -> None:
+        assert english_source_lang(["de-DE", "es-ES"]) is None
+        assert english_source_lang([]) is None
+
+    def test_subtag_not_prefix(self) -> None:
+        """``eng``-like or ``en``-prefixed tags of other languages are not English."""
+        assert english_source_lang(["eno", "enm-GB"]) is None
