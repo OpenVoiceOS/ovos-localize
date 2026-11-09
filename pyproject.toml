@@ -8,14 +8,13 @@ dynamic = ["version"]
 description = "GitHub-native translation platform for OpenVoiceOS locale files with contextual cues from skill source code"
 license = "Apache-2.0"
 license-files = ["LICENSE"]
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 authors = [
     {name = "OpenVoiceOS", email = "devs@openvoiceos.org"}
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Topic :: Software Development :: Localization",
@@ -23,6 +22,7 @@ classifiers = [
 dependencies = [
     "langcodes>=3.3",
     "language_data>=1.1",
+    "ovos-spec-tools>=1.17.0a1",
     "PyYAML",
 ]
 
@@ -41,7 +41,6 @@ server = [
     "itsdangerous>=2.1",
 ]
 corpus = [
-    "ovos-spec-tools>=1.11.2a1",
     "ovos-number-parser>=0.20.0a1",
     "ovos-date-parser>=0.31.0a1",
     "ovos-color-parser>=0.12.1a1",
@@ -53,7 +52,6 @@ dev = [
     "pytest-cov>=4.0",
     "hypothesis>=6.0",
     "huggingface_hub>=0.30",
-    "ovos-spec-tools>=1.11.2a1",
     "ovos-number-parser>=0.20.0a1",
     "ovos-date-parser>=0.31.0a1",
     "ovos-color-parser>=0.12.1a1",

@@ -69,3 +69,30 @@ class TestValidateRepo:
         captured = capsys.readouterr()
         data = json.loads(captured.out)
         assert isinstance(data, list)
+
+    def test_a_bare_english_tree_is_still_the_source(self, tmp_path: Path, capsys) -> None:
+        """A bare ``locale/en`` (en-GB) is the source the translations are checked against."""
+        import json
+        locale = tmp_path / "locale"
+        (locale / "en").mkdir(parents=True)
+        (locale / "de").mkdir(parents=True)
+        (locale / "en" / "time.intent").write_text("what time is it in {location}\n")
+        (locale / "de" / "time.intent").write_text("wie spät ist es\n")
+        assert validate_repo(str(tmp_path), report_format="json") == 1
+        issues = json.loads(capsys.readouterr().out)
+        errors = [(i["file"], i["rule"]) for i in issues if i["severity"] == "error"]
+        assert errors == [("locale/de/time.intent", "intent.missing_slots")]
+
+    def test_en_us_is_the_source_over_other_english_regions(self, tmp_path: Path, capsys) -> None:
+        """With en-US and en-GB both present, a translation is checked against en-US."""
+        import json
+        locale = tmp_path / "locale"
+        for d in ("en-us", "en-gb", "de-de"):
+            (locale / d).mkdir(parents=True)
+        (locale / "en-us" / "time.intent").write_text("what time is it in {location}\n")
+        (locale / "en-gb" / "time.intent").write_text("what is the time\n")
+        (locale / "de-de" / "time.intent").write_text("wie spät ist es\n")
+        validate_repo(str(tmp_path), report_format="json")
+        issues = json.loads(capsys.readouterr().out)
+        flagged = sorted(i["file"] for i in issues if i["rule"] == "intent.missing_slots")
+        assert flagged == ["locale/de-de/time.intent", "locale/en-gb/time.intent"]
