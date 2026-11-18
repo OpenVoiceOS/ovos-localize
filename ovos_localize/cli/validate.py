@@ -38,11 +38,13 @@ def validate_repo(repo_path: str, report_format: str = "text") -> int:
         print("No locale files found.")
         return 0
 
-    # Group by base_name to find source (en-us) files
+    # The source (en-us) of each file is the en-us file with the same file
+    # name, extension included: hello.intent and hello.dialog are two files,
+    # and keying them by base_name alone made one the other's "source"
     sources = {}
     for sf in scanned_files:
         if sf.lang == "en-US" and sf.parsed:
-            sources[sf.base_name] = sf.parsed
+            sources[Path(sf.relative_path).name] = sf.parsed
 
     total_errors = 0
     total_warnings = 0
@@ -52,7 +54,7 @@ def validate_repo(repo_path: str, report_format: str = "text") -> int:
         if not sf.parsed:
             continue
 
-        source = sources.get(sf.base_name)
+        source = sources.get(Path(sf.relative_path).name)
         issues = validate_file(sf.parsed, source)
 
         for issue in issues:
