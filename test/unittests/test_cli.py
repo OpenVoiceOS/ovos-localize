@@ -37,6 +37,19 @@ class TestValidateRepo:
         (de / "greeting.dialog").write_text("Hallo\n")
         assert validate_repo(str(tmp_path)) == 1
 
+    def test_intent_and_dialog_with_the_same_name(self, tmp_path: Path) -> None:
+        """An .intent and a .dialog sharing a name are each checked against their own source."""
+        locale = tmp_path / "locale"
+        en = locale / "en-us"
+        da = locale / "da-dk"
+        en.mkdir(parents=True)
+        da.mkdir(parents=True)
+        (en / "air.intent").write_text("how is the air\nwhat is the air like\n")
+        (en / "air.dialog").write_text("The air is {level}.\nRight now the air is {level}.\n")
+        (da / "air.intent").write_text("hvordan er luften\nhvordan er luften nu\n")
+        (da / "air.dialog").write_text("Luften er {level}.\nLige nu er luften {level}.\n")
+        assert validate_repo(str(tmp_path)) == 0
+
     def test_text_format(self, tmp_path: Path, capsys) -> None:
         """Text format prints readable output."""
         en = tmp_path / "locale" / "en-us"
