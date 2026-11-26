@@ -337298,6 +337298,7 @@ da-DK	chronologia	clock_meridiem_am.voc	formiddagen
 de-DE	chronologia	clock_meridiem_am.voc	vormittags
 de-DE	chronologia	clock_meridiem_am.voc	morgens
 de-DE	chronologia	clock_meridiem_am.voc	früh
+de-DE	chronologia	clock_meridiem_am.voc	vormittag
 el-GR	chronologia	clock_meridiem_am.voc	π.μ.
 el-GR	chronologia	clock_meridiem_am.voc	π. μ.
 el-GR	chronologia	clock_meridiem_am.voc	πμ
@@ -337412,6 +337413,7 @@ az-AZ	chronologia	clock_meridiem_night.voc	gecə
 ca-ES	chronologia	clock_meridiem_night.voc	nit
 da-DK	chronologia	clock_meridiem_night.voc	natten
 el-GR	chronologia	clock_meridiem_night.voc	νύχτα
+en-US	chronologia	clock_meridiem_night.voc	tonight
 es-ES	chronologia	clock_meridiem_night.voc	noche
 fa-IR	chronologia	clock_meridiem_night.voc	شب
 fi-FI	chronologia	clock_meridiem_night.voc	yöllä
@@ -337425,6 +337427,7 @@ id-ID	chronologia	clock_meridiem_night.voc	malam
 kab	chronologia	clock_meridiem_night.voc	n yiḍ
 ms	chronologia	clock_meridiem_night.voc	malam
 nl-NL	chronologia	clock_meridiem_night.voc	nachts
+nl-NL	chronologia	clock_meridiem_night.voc	vannacht
 oc	chronologia	clock_meridiem_night.voc	nuèch
 oc	chronologia	clock_meridiem_night.voc	nuèit
 oc	chronologia	clock_meridiem_night.voc	nèit
@@ -337476,6 +337479,8 @@ da-DK	chronologia	clock_meridiem_pm.voc	eftermiddagen
 da-DK	chronologia	clock_meridiem_pm.voc	aftenen
 de-DE	chronologia	clock_meridiem_pm.voc	nachmittags
 de-DE	chronologia	clock_meridiem_pm.voc	abends
+de-DE	chronologia	clock_meridiem_pm.voc	abend
+de-DE	chronologia	clock_meridiem_pm.voc	nachmittag
 el-GR	chronologia	clock_meridiem_pm.voc	μ.μ.
 el-GR	chronologia	clock_meridiem_pm.voc	μ. μ.
 el-GR	chronologia	clock_meridiem_pm.voc	μμ
@@ -342470,6 +342475,9 @@ fil	chronologia	marker_mag.voc	mag
 pt-BR	chronologia	marker_manner_noun.voc	forma
 pt-BR	chronologia	marker_manner_noun.voc	maneira
 pt-BR	chronologia	marker_manner_noun.voc	modo
+de-DE	chronologia	marker_meridiem_after_deixis.voc	abend
+de-DE	chronologia	marker_meridiem_after_deixis.voc	nachmittag
+de-DE	chronologia	marker_meridiem_after_deixis.voc	vormittag
 en-US	chronologia	marker_miltime_zone.voc	zulu
 en-US	chronologia	marker_miltime_zone.voc	z
 en-US	chronologia	marker_miltime_zone.voc	local
@@ -344228,7 +344236,15 @@ uk-UA	chronologia	marker_this.voc	цих
 uk-UA	chronologia	marker_this.voc	цими
 gl-ES	chronologia	marker_this_not_weekday.voc	neste
 gl-ES	chronologia	marker_this_not_weekday.voc	nesta
+ca-ES	chronologia	marker_thisdeixis.voc	aquesta
+de-DE	chronologia	marker_thisdeixis.voc	heute
 en-US	chronologia	marker_thisdeixis.voc	this
+es-ES	chronologia	marker_thisdeixis.voc	esta
+fr-FR	chronologia	marker_thisdeixis.voc	ce
+fr-FR	chronologia	marker_thisdeixis.voc	cet
+gl-ES	chronologia	marker_thisdeixis.voc	esta
+pt-BR	chronologia	marker_thisdeixis.voc	esta
+pt-BR	chronologia	marker_thisdeixis.voc	hoje à
 en-US	chronologia	marker_time.voc	time
 ar	chronologia	marker_to.voc	إلى
 ar	chronologia	marker_to.voc	الى
@@ -445251,23 +445267,32 @@ pt-PT	ovos-media-classifier	visual_story.intent	<lead_watch> an animated story t
 pt-PT	ovos-media-classifier	visual_story.intent	<lead_watch> do you have the webtoon {visual_story_title}
 pt-PT	ovos-media-classifier	visual_story.intent	<lead_watch> got any visual stories
 pt-PT	ovos-media-classifier	visual_story.intent	<lead_watch> a visual story to wind down with
-en-US	ovos-spec-tools	Bad-Name.intent	whatever
-en-US	ovos-spec-tools	adjacent.intent	set {hours}{minutes}
-en-US	ovos-spec-tools	colors.voc	the color {shade}
-en-US	ovos-spec-tools	good.intent	play {query}
-en-US	ovos-spec-tools	good.intent	put on {query}
-en-US	ovos-spec-tools	good.voc	yes
-en-US	ovos-spec-tools	good.voc	yeah
-en-US	ovos-spec-tools	good.voc	of course
-en-US	ovos-spec-tools	good.voc	sure
-en-US	ovos-spec-tools	menu.intent	show menu
-en-US	ovos-spec-tools	refs.intent	<undefined_voc> {name}
-en-US	ovos-spec-tools	repeat.intent	{x} and {x}
-en-US	ovos-spec-tools	single_branch.intent	press button
-kab	ovos-spec-tools	single_branch.intent	sit ɣef tqeffalt
-kab	ovos-spec-tools	single_branch.intent	tekki ɣef tqeffalt
-en-US	ovos-spec-tools	unbalanced.intent	turn (on|off the lights
-kab	ovos-spec-tools	unbalanced.intent	cɛel tafat
-kab	ovos-spec-tools	unbalanced.intent	sens tafat
+en-US	ovos-spec-tools	agenda.dialog	your next event is on {weekday}.
+kab	ovos-spec-tools	agenda.dialog	tadyant-ik i d-iteddun ha-tt-an ad tt-ili ass n {weekday}.
+en-US	ovos-spec-tools	greet.intent	<greeting>
+en-US	ovos-spec-tools	greet.intent	<greeting> there
+kab	ovos-spec-tools	greet.intent	<greeting>
+kab	ovos-spec-tools	greet.intent	<greeting> dinna
+en-US	ovos-spec-tools	greeting.voc	hello
+en-US	ovos-spec-tools	greeting.voc	hi
+en-US	ovos-spec-tools	greeting.voc	hey
+kab	ovos-spec-tools	greeting.voc	azul
+kab	ovos-spec-tools	greeting.voc	ṣaḥit a
+en-US	ovos-spec-tools	play.intent	play {query}
+en-US	ovos-spec-tools	play.intent	put on {query}
+en-US	ovos-spec-tools	play.intent	i want to hear {query}
+en-US	ovos-spec-tools	play.intent	i want to listen to {query}
+kab	ovos-spec-tools	play.intent	sɛeddi-d {query}
+kab	ovos-spec-tools	play.intent	urar {query}
+kab	ovos-spec-tools	play.intent	bɣiq ad as-hesseɣ i {query}
+kab	ovos-spec-tools	play.intent	bɣiq ad as-sleɣ i {query}
+kab	ovos-spec-tools	play.intent	bɣiq ad sleɣ i {query}
+en-US	ovos-spec-tools	weather.dialog	it is {temperature} degrees.
+en-US	ovos-spec-tools	weather.dialog	right now it's {temperature} degrees out.
+en-US	ovos-spec-tools	weather.dialog	at the moment {temperature} degrees.
+en-US	ovos-spec-tools	weather.dialog	currently {temperature} degrees.
+kab	ovos-spec-tools	weather.dialog	tura {temperature} n tfesniwin.
+kab	ovos-spec-tools	weather.dialog	akka tura tewweḍ {temperature} n tfesniwin.
+kab	ovos-spec-tools	weather.dialog	akka tura {temperature} n tfesniwin.
 en-US	pyhtmx-gui-client	pyhtmx.intent	demo time
 en-US	pyhtmx-gui-client	pyhtmx.intent	htmx test
