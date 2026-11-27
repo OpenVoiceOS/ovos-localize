@@ -311,9 +311,9 @@ Early versions of the "Report" button encoded the full findings table into the G
 
 ### 10.2 BCP-47 Is Not Universally Followed
 
-Of 57 skills scanned, 109 bare language code directories were found — locale directories named `eu`, `da`, `ca` rather than `eu-ES`, `da-DK`, `ca-ES`. These are unambiguous in the OVOS community context but cause problems for tools that expect full BCP-47 codes. The `EXPLICIT_MAPPING` dictionary in `lang_utils.py` handles 15+ normalizations; the `fix_lang_code` workflow automates the rename.
+Of 57 skills scanned, 109 bare language code directories were found — locale directories named `eu`, `da`, `ca` rather than `eu-ES`, `da-DK`, `ca-ES`. These are unambiguous in the OVOS community context but cause problems for tools that expect full BCP-47 codes. `normalize_lang_code` in `lang_utils.py` handles these normalizations; the `fix_lang_code` workflow automates the rename.
 
-Some codes are context-dependent: `pt` normalises to `pt-BR` (the dominant OVOS Portuguese locale), but `pt-PT` is preserved as distinct. `es-LM` (a non-standard Latin American code used in some older skill repos) normalises to `es-419` (the correct BCP-47 form). `fa-FA` normalises to `fa-IR`.
+A bare code normalises to its default region, the region where the language first appeared and is still spoken: `pt` normalises to `pt-PT` and `en` to `en-GB`, and `pt-BR` and `en-US` stay distinct. `es-LM` (a non-standard Latin American code used in some older skill repos) normalises to `es-419` (the correct BCP-47 form). `fa-FA` normalises to `fa-IR`.
 
 ### 10.3 Branch Naming Is Not Standardised
 

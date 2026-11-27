@@ -8,6 +8,7 @@ import json
 import sys
 from pathlib import Path
 
+from ovos_localize.lang_utils import english_source_lang
 from ovos_localize.sync.github import scan_locale_directory
 from ovos_localize.validators.rules import validate_file
 
@@ -38,11 +39,16 @@ def validate_repo(repo_path: str, report_format: str = "text") -> int:
         print("No locale files found.")
         return 0
 
-    # Group by base_name to find source (en-us) files
-    sources = {}
+    # Each file is checked against its English sibling, en-US first.
+    parsed_by_name: dict[str, dict] = {}
     for sf in scanned_files:
-        if sf.lang == "en-US" and sf.parsed:
-            sources[sf.base_name] = sf.parsed
+        if sf.parsed:
+            parsed_by_name.setdefault(sf.base_name, {})[sf.lang] = sf.parsed
+    sources = {}
+    for base_name, by_lang in parsed_by_name.items():
+        source_lang = english_source_lang(by_lang)
+        if source_lang:
+            sources[base_name] = by_lang[source_lang]
 
     total_errors = 0
     total_warnings = 0

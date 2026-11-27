@@ -2,8 +2,9 @@
 """Gap-fill the intents-translated dataset with the linguonnx MT helper.
 
 Reads the parsed skills under ``data/skills/`` and finds every ``.intent``
-file that has ``en-US`` entries but no entries for a target locale. Each
-such ``(locale, skill, intent)`` pair is a gap. A gap already present in
+file that has English entries (``en-US`` first, else any English region)
+but no entries for a target locale. Each such ``(locale, skill, intent)``
+pair is a gap. A gap already present in
 the published ``ovos_localize_intents_translated.csv`` counts as done and
 is kept as-is; the rest are translated line by line with
 ``translate_linguonnx.translate_lines`` (slots masked, groups split,
@@ -41,6 +42,7 @@ from ovos_localize.bracket_expansion import (  # noqa: E402
     clean_text,
     expand_template_cached,
 )
+from ovos_localize.lang_utils import english_source_lang  # noqa: E402
 from translate_linguonnx import _translate_line  # noqa: E402
 
 try:
@@ -61,7 +63,7 @@ CSV_COLUMNS = ("lang", "domain", "intent", "sentence")
 
 
 def load_sources(skills_dir: Path) -> dict[tuple[str, str], dict]:
-    """Map (skill, intent file) to en-US template lines and the locales that have entries."""
+    """Map (skill, intent file) to English template lines and the locales that have entries."""
     out = {}
     for path in sorted(skills_dir.glob("*.json")):
         data = json.loads(path.read_text(encoding="utf-8"))
@@ -70,7 +72,7 @@ def load_sources(skills_dir: Path) -> dict[tuple[str, str], dict]:
             if finfo.get("type") != "intent" or not fname.endswith(".intent"):
                 continue
             langs = finfo.get("langs", {}) or {}
-            en = langs.get("en-US") or {}
+            en = langs.get(english_source_lang(langs)) or {}
             lines = [e.get("text", "").strip() for e in en.get("entries", [])]
             lines = [l for l in lines if l and not l.startswith("#")]
             if not lines:

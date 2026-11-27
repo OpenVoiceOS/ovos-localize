@@ -68,11 +68,11 @@ class ScanResult:
         locale_files: All discovered locale files.
         languages: Set of discovered language codes.
         bad_lang_codes: Raw locale directory names that normalisation would
-            rename (e.g. ``"en"`` becomes ``"en-US"``).  Codes that already
-            normalise to themselves are correct and are not listed: some
-            languages are legitimately region-less, such as Kabyle.  The
-            listed ones are handled automatically but should be fixed in the
-            upstream skill repo.
+            rename (e.g. ``"en"`` becomes its default region ``"en-GB"``).
+            Codes that already normalise to themselves are correct and are
+            not listed: some languages are legitimately region-less, such as
+            Kabyle.  The listed ones are handled automatically but should be
+            fixed in the upstream skill repo.
         branch: The branch actually checked out.  Repos differ -- OVOS uses
             ``dev``, others use ``main`` or ``master`` -- and translation
             submissions must target the branch that exists.
@@ -165,8 +165,9 @@ def scan_locale_directory(
     Returns:
         Tuple of (list of ScannedFile objects, list of bad raw lang codes).
         A "bad" lang code is one that normalisation would rename (e.g.
-        ``"en"`` becomes ``"en-US"``).  A region-less code that normalises to
-        itself, such as Kabyle, is correct and is not reported.
+        ``"en"`` becomes its default region ``"en-GB"``).  A region-less code
+        that normalises to itself, such as Kabyle, is correct and is not
+        reported.
     """
     locale_path = Path(locale_dir)
     if not locale_path.is_dir():
@@ -192,10 +193,11 @@ def scan_locale_directory(
         lang = normalize_lang_code(raw_lang)
 
         # A bare code (no region subtag) is only "bad" when normalization
-        # actually changes it — i.e. OVOS's EXPLICIT_MAPPING or langcodes
-        # itself considers it deficient (e.g. "da" -> "da-DK"). A macro-
-        # language that is legitimately region-less in BCP-47 (e.g. "kab"
-        # for Kabyle) normalizes to itself and must not be flagged.
+        # actually changes it: EXPLICIT_MAPPING, the default region of a code
+        # in REGIONED_BARE_CODES, or langcodes itself (e.g. "da" -> "da-DK",
+        # "en" -> "en-GB"). A language that is legitimately region-less
+        # in BCP-47 (e.g. "kab" for Kabyle) normalizes to itself and must not
+        # be flagged.
         if "-" not in raw_lang and lang != raw_lang and raw_lang not in seen_bad:
             bad_codes.append(raw_lang)
             seen_bad.add(raw_lang)
