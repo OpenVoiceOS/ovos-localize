@@ -18,6 +18,7 @@
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "daypart_formiddag_da.voc", "text": "formiddag"}
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "daypart_formiddag_da.voc", "text": "formiddagen"}
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "daypart_morgen_da.voc", "text": "morgenen"}
+{"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "daypart_morgen_da.voc", "text": "morgen"}
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "daypart_nat_da.voc", "text": "nat"}
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "daypart_nat_da.voc", "text": "natten"}
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "marker_ad.voc", "text": "efter kristus"}
@@ -56,9 +57,11 @@
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "marker_future.voc", "text": "om"}
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "marker_half.voc", "text": "halvdel"}
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "marker_half.voc", "text": "halvdelen"}
+{"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "marker_holiday_cue.voc", "text": "på"}
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "marker_in.voc", "text": "om"}
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "marker_indef.voc", "text": "en"}
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "marker_indef.voc", "text": "et"}
+{"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "marker_indef_daypart.voc", "text": "en"}
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "marker_last.voc", "text": "sidste"}
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "marker_last.voc", "text": "forrige"}
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "marker_month_word.voc", "text": "måned"}
@@ -134,7 +137,6 @@
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "named_day_0.voc", "text": "idag"}
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "named_day_0.voc", "text": "i dag"}
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "named_day_1.voc", "text": "imorgen"}
-{"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "named_day_1.voc", "text": "morgen"}
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "named_day_1.voc", "text": "i morgen"}
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "named_day_2.voc", "text": "overmorgen"}
 {"lang": "da-DK", "skill": "chronologia", "file_type": "voc", "intent": "named_day_2.voc", "text": "iovermorgen"}
@@ -22561,6 +22563,65 @@
 {"lang": "da-DK", "skill": "ovos-media-classifier", "file_type": "intent", "intent": "visual_story.intent", "text": "<lead_read> tegneserier graphic novels tak"}
 {"lang": "da-DK", "skill": "ovos-media-classifier", "file_type": "intent", "intent": "visual_story.intent", "text": "jeg vil have noget som en tegneserie men med bevægelse"}
 {"lang": "da-DK", "skill": "ovos-media-classifier", "file_type": "intent", "intent": "visual_story.intent", "text": "jeg vil have noget som en tegneserie men med bevægelse tak"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "like.intent", "text": "jeg kan lide denne sang"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "like.intent", "text": "synes godt om dette nummer"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "like.intent", "text": "tilføj det her til mine favoritter"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "like.intent", "text": "gør dette nummer til favorit"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "like.intent", "text": "gem denne sang"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "like.intent", "text": "denne sang er en favorit"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "like.intent", "text": "synes godt om det her"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "like.intent", "text": "jeg elsker denne sang"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "like.intent", "text": "tilføj denne sang til mine likes"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "like.intent", "text": "marker det her som favorit"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "like.intent", "text": "giv denne sang et like"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "like.intent", "text": "sæt dette nummer på mine favoritter"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_off.intent", "text": "stop med at gentage denne sang"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_off.intent", "text": "sluk for gentag"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_off.intent", "text": "deaktiver gentag"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_off.intent", "text": "gentag fra"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_off.intent", "text": "sluk gentag"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_off.intent", "text": "gentag ikke denne sang"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_off.intent", "text": "stop gentagelse"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_off.intent", "text": "stop med at gentage"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_off.intent", "text": "sluk for gentagelse"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_off.intent", "text": "tag den af gentag"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_off.intent", "text": "stop løkken"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_on.intent", "text": "sæt den på gentag"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_on.intent", "text": "tænd for gentag"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_on.intent", "text": "aktiver gentag"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_on.intent", "text": "gentag til"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_on.intent", "text": "tænd gentag"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_on.intent", "text": "sæt det her på gentag"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_track.intent", "text": "gentag denne sang"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_track.intent", "text": "gentag dette nummer"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_track.intent", "text": "gentag det her"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_track.intent", "text": "bliv ved med at spille denne sang"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_track.intent", "text": "spil denne sang igen og igen"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "repeat_track.intent", "text": "spil dette nummer igen og igen"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_backward.intent", "text": "spol 30 sekunder tilbage"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_backward.intent", "text": "spol et minut tilbage"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_backward.intent", "text": "spol tilbage"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_backward.intent", "text": "spol 10 sekunder tilbage"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_backward.intent", "text": "hop tilbage"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_backward.intent", "text": "hop to minutter tilbage"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_backward.intent", "text": "spol lidt tilbage"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_backward.intent", "text": "spol 20 sekunder tilbage"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_backward.intent", "text": "hop et minut tilbage"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_backward.intent", "text": "gå 15 sekunder tilbage"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_backward.intent", "text": "spol tilbage et minut"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_backward.intent", "text": "gå tilbage"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_forward.intent", "text": "spol 30 sekunder frem"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_forward.intent", "text": "spol et minut frem"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_forward.intent", "text": "spol frem"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_forward.intent", "text": "spol 10 sekunder frem"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_forward.intent", "text": "hop frem"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_forward.intent", "text": "hop to minutter frem"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_forward.intent", "text": "spol lidt frem"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_forward.intent", "text": "spol 20 sekunder frem"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_forward.intent", "text": "hop et minut frem"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_forward.intent", "text": "gå 15 sekunder frem"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_forward.intent", "text": "spol frem et minut"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "seek_forward.intent", "text": "gå frem"}
 {"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "shuffle_off.intent", "text": "sluk for bland"}
 {"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "shuffle_off.intent", "text": "deaktiver bland"}
 {"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "shuffle_off.intent", "text": "bland-tilstand fra"}
@@ -22579,6 +22640,18 @@
 {"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "shuffle_on.intent", "text": "sæt den på bland"}
 {"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "shuffle_on.intent", "text": "bland sange"}
 {"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "shuffle_on.intent", "text": "tænd for blanding"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "unlike.intent", "text": "jeg kan ikke lide denne sang"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "unlike.intent", "text": "synes ikke om dette nummer"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "unlike.intent", "text": "fjern det her fra mine favoritter"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "unlike.intent", "text": "fjern dette nummer fra favoritter"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "unlike.intent", "text": "fjern denne sang fra mine likes"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "unlike.intent", "text": "denne sang er ikke en favorit"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "unlike.intent", "text": "synes ikke om det her"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "unlike.intent", "text": "fjern like fra denne sang"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "unlike.intent", "text": "tag det her af mine favoritter"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "unlike.intent", "text": "fjern dette nummer fra mine likes"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "unlike.intent", "text": "fjern denne sang fra favoritter"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "unlike.intent", "text": "tag like af dette nummer"}
 {"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_album.intent", "text": "hvilket album er det her"}
 {"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_album.intent", "text": "hvilket album er denne sang fra"}
 {"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_album.intent", "text": "hvad hedder dette album"}
@@ -22599,6 +22672,27 @@
 {"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_artist.intent", "text": "hvem er sangeren"}
 {"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_artist.intent", "text": "hvem er kunstneren bag denne sang"}
 {"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_artist.intent", "text": "hvilken kunstner er det her"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_next.intent", "text": "hvad er det næste"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_next.intent", "text": "hvad kommer der nu"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_next.intent", "text": "hvad spiller efter det her"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_next.intent", "text": "hvad er den næste sang"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_next.intent", "text": "hvad spiller der bagefter"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_next.intent", "text": "fortæl mig hvad der er næste i køen"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_next.intent", "text": "hvilken sang kommer nu"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_next.intent", "text": "hvad kommer bagefter"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_next.intent", "text": "hvad spiller næste gang"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_next.intent", "text": "hvilken sang er den næste"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_next.intent", "text": "hvad er det næste nummer"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_shuffle.intent", "text": "er bland slået til"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_shuffle.intent", "text": "er bland aktiveret"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_shuffle.intent", "text": "blander du"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_shuffle.intent", "text": "er playlisten blandet"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_shuffle.intent", "text": "er bland-tilstand til"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_shuffle.intent", "text": "er jeg i bland-tilstand"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_shuffle.intent", "text": "er musikken blandet"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_shuffle.intent", "text": "er bland til eller fra"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_shuffle.intent", "text": "fortæl mig om bland er slået til"}
+{"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_shuffle.intent", "text": "er blanding slået til"}
 {"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_song.intent", "text": "hvilken sang er det her"}
 {"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_song.intent", "text": "hvad er denne sang"}
 {"lang": "da-DK", "skill": "ovos-media", "file_type": "intent", "intent": "what_song.intent", "text": "hvilken sang spiller"}
@@ -36532,10 +36626,6 @@
 {"lang": "da-DK", "skill": "ovos-skill-ip", "file_type": "intent", "intent": "wifi_signal.intent", "text": "hvordan er wifi"}
 {"lang": "da-DK", "skill": "ovos-skill-ip", "file_type": "intent", "intent": "wifi_signal.intent", "text": "hvor stærk er forbindelsen til wifi"}
 {"lang": "da-DK", "skill": "ovos-skill-ip", "file_type": "intent", "intent": "wifi_signal.intent", "text": "hvordan er dækningen på wifi"}
-{"lang": "da-DK", "skill": "ovos-skill-iss-location", "file_type": "voc", "intent": "iss.voc", "text": "i s s"}
-{"lang": "da-DK", "skill": "ovos-skill-iss-location", "file_type": "voc", "intent": "iss.voc", "text": "iss"}
-{"lang": "da-DK", "skill": "ovos-skill-iss-location", "file_type": "voc", "intent": "iss.voc", "text": "international rumstation"}
-{"lang": "da-DK", "skill": "ovos-skill-iss-location", "file_type": "voc", "intent": "iss.voc", "text": "rumstation"}
 {"lang": "da-DK", "skill": "ovos-skill-iss-location", "file_type": "intent", "intent": "number_iss.intent", "text": "hvor mange mennesker er der om bord på iss"}
 {"lang": "da-DK", "skill": "ovos-skill-iss-location", "file_type": "intent", "intent": "number_iss.intent", "text": "hvor mange mennesker er der om bord på den internationale rumstation"}
 {"lang": "da-DK", "skill": "ovos-skill-iss-location", "file_type": "intent", "intent": "number_iss.intent", "text": "hvor mange astronauter er der på iss"}
@@ -36654,10 +36744,6 @@
 {"lang": "da-DK", "skill": "ovos-skill-iss-location", "file_type": "intent", "intent": "where_iss.intent", "text": "placeringen af ​​iss"}
 {"lang": "da-DK", "skill": "ovos-skill-iss-location", "file_type": "intent", "intent": "where_iss.intent", "text": "placeringen af ​​den internationale rumstation"}
 {"lang": "da-DK", "skill": "ovos-skill-iss-location", "file_type": "intent", "intent": "where_iss.intent", "text": "placeringen af ​​den internationale rumstationen"}
-{"lang": "da-DK", "skill": "ovos-skill-iss-location", "file_type": "voc", "intent": "who.voc", "text": "who"}
-{"lang": "da-DK", "skill": "ovos-skill-iss-location", "file_type": "voc", "intent": "who.voc", "text": "mennesker"}
-{"lang": "da-DK", "skill": "ovos-skill-iss-location", "file_type": "voc", "intent": "who.voc", "text": "person"}
-{"lang": "da-DK", "skill": "ovos-skill-iss-location", "file_type": "voc", "intent": "who.voc", "text": "personer"}
 {"lang": "da-DK", "skill": "ovos-skill-iss-location", "file_type": "intent", "intent": "who_iss.intent", "text": "hvem er om bord på iss"}
 {"lang": "da-DK", "skill": "ovos-skill-iss-location", "file_type": "intent", "intent": "who_iss.intent", "text": "hvem er om bord på den internationale rumstation"}
 {"lang": "da-DK", "skill": "ovos-skill-iss-location", "file_type": "intent", "intent": "who_iss.intent", "text": "hvem er i rummet lige nu"}
