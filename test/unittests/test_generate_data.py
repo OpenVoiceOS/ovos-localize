@@ -299,3 +299,48 @@ class TestBranchPropagation:
         scan.branch = "main"
         skill = build_skill_json(scan, "TestOrg", "test-skill")
         assert build_repos_json([skill])[0]["branch"] == "main"
+
+
+class TestSourceLanguage:
+    """en-US is the source whenever a skill ships it.
+
+    A skill that deletes an en-US resource and leaves its translations behind
+    gives the other locales more files than en-US. Choosing the source by file
+    count then measured en-US against another locale and listed the leftovers
+    as files en-US had to add.
+    """
+
+    @staticmethod
+    def _scan(tmp_path: Path):
+        locale = tmp_path / "locale"
+        for lang in ("en-US", "de-DE"):
+            (locale / lang).mkdir(parents=True)
+            (locale / lang / "hello.intent").write_text("hello\n" if lang == "en-US" else "hallo\n")
+            (locale / lang / "alarm.voc").write_text("alarm\n" if lang == "en-US" else "wecker\n")
+        # Translations of two vocabularies that en-US no longer ships.
+        (locale / "de-DE" / "calendar.voc").write_text("kalender\n")
+        (locale / "de-DE" / "script.voc").write_text("skript\n")
+        return RepoScanner(str(tmp_path / "repos")).scan(str(tmp_path))
+
+    def test_en_us_is_the_source_when_outnumbered(self, tmp_path: Path) -> None:
+        skill = build_skill_json(self._scan(tmp_path), "TestOrg", "test-skill")
+        assert skill["source_lang"] == "en-US"
+
+    def test_most_files_wins_without_en_us(self, tmp_path: Path) -> None:
+        locale = tmp_path / "locale"
+        (locale / "pt-PT").mkdir(parents=True)
+        (locale / "pt-PT" / "a.voc").write_text("a\n")
+        (locale / "pt-PT" / "b.voc").write_text("b\n")
+        (locale / "gl-ES").mkdir(parents=True)
+        (locale / "gl-ES" / "a.voc").write_text("a\n")
+        scan = RepoScanner(str(tmp_path / "repos")).scan(str(tmp_path))
+        assert build_skill_json(scan, "TestOrg", "test-skill")["source_lang"] == "pt-PT"
+
+    def test_coverage_ignores_files_missing_from_the_source(self, tmp_path: Path) -> None:
+        skill = build_skill_json(self._scan(tmp_path), "TestOrg", "test-skill")
+        matrix = build_coverage_json([skill])["matrix"]["test-skill"]
+        # Every source file is translated in de-DE, so both locales are
+        # complete, and the two leftover vocabularies count for neither.
+        assert matrix["en-US"]["combined_pct"] == 100.0
+        assert matrix["de-DE"]["voc_pct"] == 100.0
+        assert matrix["de-DE"]["combined_pct"] == 100.0

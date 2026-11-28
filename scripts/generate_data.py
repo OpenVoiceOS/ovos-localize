@@ -147,7 +147,7 @@ def _make_edit_url(org: str, repo: str, relative_path: str, branch: str = "dev")
 
 
 def _detect_source_lang(skill: dict[str, Any]) -> str:
-    """Detect the source language for a skill (the one with the most files).
+    """Detect the source language for a skill (see :func:`_pick_source_lang`).
 
     Args:
         skill: Per-skill JSON dict with a ``files`` key.
@@ -159,10 +159,18 @@ def _detect_source_lang(skill: dict[str, Any]) -> str:
     for fd in skill["files"].values():
         for lang in fd["langs"]:
             lang_counts[lang] = lang_counts.get(lang, 0) + 1
-    if not lang_counts:
+    return _pick_source_lang(lang_counts)
+
+
+def _pick_source_lang(lang_counts: dict[str, int]) -> str:
+    """Return en-US when the skill ships it, else the locale with the most files.
+
+    Counting files alone lets translations of resources that en-US deleted
+    outnumber en-US and take the source role away from it.
+    """
+    if not lang_counts or "en-US" in lang_counts:
         return "en-US"
-    # Prefer en-US when tied
-    return max(lang_counts, key=lambda k: (lang_counts[k], k == "en-US"))
+    return max(sorted(lang_counts), key=lang_counts.__getitem__)
 
 
 def _compute_file_coverage(
@@ -225,8 +233,7 @@ def build_skill_json(
     for f in scan.locale_files:
         files_by_lang.setdefault(f.lang, []).append(f)
 
-    # Determine source language (most files, prefer en-US when tied)
-    source_lang = max(files_by_lang, key=lambda k: (len(files_by_lang[k]), k == "en-US")) if files_by_lang else "en-US"
+    source_lang = _pick_source_lang({lang: len(files) for lang, files in files_by_lang.items()})
 
     # Build source file lookup for validation
     sources: dict[tuple[str, str], ParsedFile] = {}
@@ -310,6 +317,7 @@ def build_skill_json(
         "bad_lang_codes": scan.bad_lang_codes,
         "locale_dir": scan.locale_dir,
         "branch": branch,
+        "source_lang": source_lang,
         **read_skill_source(repo_path, repo),
         "files": files_json,
     }
@@ -366,6 +374,9 @@ def build_coverage_json(all_skills: list[dict[str, Any]]) -> dict[str, Any]:
         type_counts: dict[str, dict[str, int]] = {}
         source_counts: dict[str, int] = {}
         for file_key, file_data in skill["files"].items():
+            # A file the source does not ship has nothing to be translated from.
+            if source_lang not in file_data["langs"]:
+                continue
             ft = file_data["type"]
             for lang, lang_data in file_data["langs"].items():
                 type_counts.setdefault(ft, {}).setdefault(lang, 0)

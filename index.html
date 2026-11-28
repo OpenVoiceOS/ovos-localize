@@ -2347,6 +2347,17 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
     // =========================================================================
     // SKILL DETAIL
     // =========================================================================
+    // Mirrors _pick_source_lang in scripts/generate_data.py, for data built
+    // before the skill files carried source_lang.
+    function pickSourceLang(skill) {
+      const counts = {};
+      for (const fd of Object.values(skill.files)) {
+        for (const l of Object.keys(fd.langs)) counts[l] = (counts[l] || 0) + 1;
+      }
+      if (!Object.keys(counts).length || counts['en-US']) return 'en-US';
+      return Object.keys(counts).sort().reduce((a, b) => counts[b] > counts[a] ? b : a);
+    }
+
     async function renderSkillDetail(el, skillId, activeLang) {
       const skill = await fetchSkill(skillId);
       const allSkillLangs = skill.languages;
@@ -2354,15 +2365,19 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
       const tabLangs = userLangs.length > 0 ? allSkillLangs.filter(l => userLangs.includes(l)) : allSkillLangs;
       if (!tabLangs.includes(activeLang) && allSkillLangs.includes(activeLang)) tabLangs.push(activeLang);
 
-      const enFileCount = Object.values(skill.files).filter(fd => fd.langs['en-US']).length;
+      // A file the source language does not ship has nothing to translate
+      // from: it counts for no language and is never offered as missing.
+      const srcLang = skill.source_lang || pickSourceLang(skill);
+      const sourceFiles = Object.values(skill.files).filter(fd => fd.langs[srcLang]);
+      const enFileCount = sourceFiles.length;
 
       // Stats for active language
-      const translated = Object.values(skill.files).filter(fd => fd.langs[activeLang]).length;
+      const translated = sourceFiles.filter(fd => fd.langs[activeLang]).length;
       const missing = enFileCount - translated;
       const pct = enFileCount ? (translated / enFileCount * 100) : 0;
-      const totalErrors = Object.values(skill.files).reduce((s, fd) =>
+      const totalErrors = sourceFiles.reduce((s, fd) =>
         s + (fd.langs[activeLang]?.validation?.filter(v => v.severity === 'error').length || 0), 0);
-      const totalWarnings = Object.values(skill.files).reduce((s, fd) =>
+      const totalWarnings = sourceFiles.reduce((s, fd) =>
         s + (fd.langs[activeLang]?.validation?.filter(v => v.severity === 'warning').length || 0), 0);
 
       el.innerHTML = `
@@ -2387,7 +2402,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
           <!-- Language tabs -->
           <div class="flex flex-wrap gap-1 mb-6 border-b border-ovos-card pb-3">
             ${tabLangs.map(l => {
-              const lPct = enFileCount ? (Object.values(skill.files).filter(fd => fd.langs[l]).length / enFileCount * 100) : 0;
+              const lPct = enFileCount ? (sourceFiles.filter(fd => fd.langs[l]).length / enFileCount * 100) : 0;
               const isActive = l === activeLang;
               return `<a href="#/skill/${skillId}/${l}" class="px-3 py-1.5 rounded-lg text-sm hover:no-underline ${isActive ? 'bg-ovos-accent text-white font-bold' : 'bg-ovos-card text-ovos-muted hover:bg-ovos-hover'}">${l} <span class="text-xs opacity-70">${lPct.toFixed(0)}%</span></a>`;
             }).join('')}
@@ -2416,9 +2431,9 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
 
           <!-- File list for this language -->
           <div class="space-y-2">
-            ${Object.entries(skill.files).map(([fileKey, fileData]) => {
+            ${Object.entries(skill.files).filter(([, fileData]) => fileData.langs[srcLang] || fileData.langs[activeLang] || activeLang === srcLang).map(([fileKey, fileData]) => {
               const ld = fileData.langs[activeLang];
-              const enLd = fileData.langs['en-US'];
+              const enLd = fileData.langs[srcLang];
               const exists = !!ld;
               const errs = ld?.validation?.filter(v => v.severity === 'error').length || 0;
               const warns = ld?.validation?.filter(v => v.severity === 'warning').length || 0;
@@ -2428,7 +2443,8 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
 
               // Status badge
               let statusBadge;
-              if (!exists) statusBadge = '<span class="badge badge-red">missing — click to add</span>';
+              if (!enLd) statusBadge = `<span class="badge badge-gray">not in ${srcLang}</span>`;
+              else if (!exists) statusBadge = '<span class="badge badge-red">missing — click to add</span>';
               else if (errs > 0) statusBadge = `<span class="badge badge-red">${errs} error${errs>1?'s':''}</span>`;
               else if (warns > 0) statusBadge = `<span class="badge badge-amber">${warns} warning${warns>1?'s':''}</span>`;
               else statusBadge = '<span class="badge badge-green">ok</span>';
@@ -2458,7 +2474,7 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
                   </div>
                   <div class="text-right flex-shrink-0 text-xs text-ovos-muted">
                     ${exists ? `${lineCount} lines` : ''}
-                    ${enLineCount ? `<br><span class="text-ovos-muted">en: ${enLineCount}</span>` : ''}
+                    ${enLineCount ? `<br><span class="text-ovos-muted">${srcLang}: ${enLineCount}</span>` : ''}
                   </div>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#737373" stroke-width="2" class="flex-shrink-0"><path d="m9 18 6-6-6-6"/></svg>
                 </div>
@@ -2526,8 +2542,9 @@ ds = load_dataset("json", data_files=f"{BASE}/slot_filling/en-US.jsonl")</pre>
       // Source language
       const availableSrcLangs = isCreateMode ? [] : Object.keys(fileData.langs).filter(l => l !== lang);
       const storedSrc = localStorage.getItem('ovos_src_lang');
+      const skillSrc = skill.source_lang || pickSourceLang(skill);
       const defaultSrc = (storedSrc && availableSrcLangs.includes(storedSrc)) ? storedSrc
-        : availableSrcLangs.includes('en-US') ? 'en-US'
+        : availableSrcLangs.includes(skillSrc) ? skillSrc
         : availableSrcLangs[0] || lang;
       const srcLang = defaultSrc;
       const srcData = isCreateMode ? null : fileData?.langs?.[srcLang];
